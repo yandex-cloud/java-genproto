@@ -80,37 +80,6 @@ public final class CaptchaServiceGrpc {
     return getGetSecretKeyMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest,
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> getListMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "List",
-      requestType = yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.class,
-      responseType = yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest,
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> getListMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> getListMethod;
-    if ((getListMethod = CaptchaServiceGrpc.getListMethod) == null) {
-      synchronized (CaptchaServiceGrpc.class) {
-        if ((getListMethod = CaptchaServiceGrpc.getListMethod) == null) {
-          CaptchaServiceGrpc.getListMethod = getListMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CaptchaServiceMethodDescriptorSupplier("List"))
-              .build();
-        }
-      }
-    }
-    return getListMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -140,6 +109,37 @@ public final class CaptchaServiceGrpc {
       }
     }
     return getCreateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+    if ((getDeleteMethod = CaptchaServiceGrpc.getDeleteMethod) == null) {
+      synchronized (CaptchaServiceGrpc.class) {
+        if ((getDeleteMethod = CaptchaServiceGrpc.getDeleteMethod) == null) {
+          CaptchaServiceGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CaptchaServiceMethodDescriptorSupplier("Delete"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest,
@@ -173,35 +173,35 @@ public final class CaptchaServiceGrpc {
     return getUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest,
+      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Delete",
-      requestType = yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.class,
-      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.class,
+      responseType = yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
-    if ((getDeleteMethod = CaptchaServiceGrpc.getDeleteMethod) == null) {
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest,
+      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> getListMethod;
+    if ((getListMethod = CaptchaServiceGrpc.getListMethod) == null) {
       synchronized (CaptchaServiceGrpc.class) {
-        if ((getDeleteMethod = CaptchaServiceGrpc.getDeleteMethod) == null) {
-          CaptchaServiceGrpc.getDeleteMethod = getDeleteMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+        if ((getListMethod = CaptchaServiceGrpc.getListMethod) == null) {
+          CaptchaServiceGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.getDefaultInstance()))
+                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-              .setSchemaDescriptor(new CaptchaServiceMethodDescriptorSupplier("Delete"))
+                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CaptchaServiceMethodDescriptorSupplier("List"))
               .build();
         }
       }
     }
-    return getDeleteMethod;
+    return getListMethod;
   }
 
   /**
@@ -277,22 +277,22 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Captcha resources in the specified folder.
-     * </pre>
-     */
-    public void list(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates a captcha in the specified folder using the data specified in the request.
      * </pre>
      */
     public void create(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified captcha.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -307,12 +307,12 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified captcha.
+     * Retrieves the list of Captcha resources in the specified folder.
      * </pre>
      */
-    public void delete(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    public void list(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -332,19 +332,19 @@ public final class CaptchaServiceGrpc {
                 yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey>(
                   this, METHODID_GET_SECRET_KEY)))
           .addMethod(
-            getListMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest,
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse>(
-                  this, METHODID_LIST)))
-          .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE)))
           .addMethod(
             getUpdateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -353,12 +353,12 @@ public final class CaptchaServiceGrpc {
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
-            getDeleteMethod(),
+            getListMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest,
-                yandex.cloud.api.operation.OperationOuterClass.Operation>(
-                  this, METHODID_DELETE)))
+                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest,
+                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse>(
+                  this, METHODID_LIST)))
           .build();
     }
   }
@@ -404,17 +404,6 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Captcha resources in the specified folder.
-     * </pre>
-     */
-    public void list(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates a captcha in the specified folder using the data specified in the request.
      * </pre>
      */
@@ -422,6 +411,17 @@ public final class CaptchaServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified captcha.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -437,13 +437,13 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified captcha.
+     * Retrieves the list of Captcha resources in the specified folder.
      * </pre>
      */
-    public void delete(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+    public void list(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -486,22 +486,22 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Captcha resources in the specified folder.
-     * </pre>
-     */
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse list(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Creates a captcha in the specified folder using the data specified in the request.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified captcha.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
@@ -516,12 +516,12 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified captcha.
+     * Retrieves the list of Captcha resources in the specified folder.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request) {
+    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse list(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteMethod(), getCallOptions(), request);
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
@@ -566,17 +566,6 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Captcha resources in the specified folder.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> list(
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Creates a captcha in the specified folder using the data specified in the request.
      * </pre>
      */
@@ -584,6 +573,17 @@ public final class CaptchaServiceGrpc {
         yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified captcha.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
+        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
     /**
@@ -599,22 +599,22 @@ public final class CaptchaServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified captcha.
+     * Retrieves the list of Captcha resources in the specified folder.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse> list(
+        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_GET_SECRET_KEY = 1;
-  private static final int METHODID_LIST = 2;
-  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_CREATE = 2;
+  private static final int METHODID_DELETE = 3;
   private static final int METHODID_UPDATE = 4;
-  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_LIST = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -641,21 +641,21 @@ public final class CaptchaServiceGrpc {
           serviceImpl.getSecretKey((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey>) responseObserver);
           break;
-        case METHODID_LIST:
-          serviceImpl.list((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse>) responseObserver);
-          break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_UPDATE:
           serviceImpl.update((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
-        case METHODID_DELETE:
-          serviceImpl.delete((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -720,10 +720,10 @@ public final class CaptchaServiceGrpc {
               .setSchemaDescriptor(new CaptchaServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getGetSecretKeyMethod())
-              .addMethod(getListMethod())
               .addMethod(getCreateMethod())
-              .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getUpdateMethod())
+              .addMethod(getListMethod())
               .build();
         }
       }

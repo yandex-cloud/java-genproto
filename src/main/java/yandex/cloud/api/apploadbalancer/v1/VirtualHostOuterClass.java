@@ -12527,7 +12527,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
      * @return The httpHeader.
      */
     java.lang.String getHttpHeader();
@@ -12536,7 +12536,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
      * @return The bytes for httpHeader.
      */
     com.google.protobuf.ByteString
@@ -12547,7 +12547,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
      * @return The issuerHeaderName.
      */
     java.lang.String getIssuerHeaderName();
@@ -12556,7 +12556,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
      * @return The bytes for issuerHeaderName.
      */
     com.google.protobuf.ByteString
@@ -12567,7 +12567,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
      * @return The subjectHeaderName.
      */
     java.lang.String getSubjectHeaderName();
@@ -12576,7 +12576,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
      * @return The bytes for subjectHeaderName.
      */
     com.google.protobuf.ByteString
@@ -12687,7 +12687,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
      * @return The httpHeader.
      */
     @java.lang.Override
@@ -12708,7 +12708,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
      * @return The bytes for httpHeader.
      */
     @java.lang.Override
@@ -12733,7 +12733,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
      * @return The issuerHeaderName.
      */
     @java.lang.Override
@@ -12754,7 +12754,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
      * @return The bytes for issuerHeaderName.
      */
     @java.lang.Override
@@ -12779,7 +12779,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
      * @return The subjectHeaderName.
      */
     @java.lang.Override
@@ -12800,7 +12800,7 @@ public final class VirtualHostOuterClass {
      * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
      * </pre>
      *
-     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
      * @return The bytes for subjectHeaderName.
      */
     @java.lang.Override
@@ -13160,7 +13160,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
        * @return The httpHeader.
        */
       public java.lang.String getHttpHeader() {
@@ -13180,7 +13180,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
        * @return The bytes for httpHeader.
        */
       public com.google.protobuf.ByteString
@@ -13201,7 +13201,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
        * @param value The httpHeader to set.
        * @return This builder for chaining.
        */
@@ -13220,7 +13220,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHttpHeader() {
@@ -13234,7 +13234,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert|)"];</code>
        * @param value The bytes for httpHeader to set.
        * @return This builder for chaining.
        */
@@ -13256,7 +13256,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
        * @return The issuerHeaderName.
        */
       public java.lang.String getIssuerHeaderName() {
@@ -13276,7 +13276,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
        * @return The bytes for issuerHeaderName.
        */
       public com.google.protobuf.ByteString
@@ -13297,7 +13297,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
        * @param value The issuerHeaderName to set.
        * @return This builder for chaining.
        */
@@ -13316,7 +13316,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuerHeaderName() {
@@ -13330,7 +13330,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn|)"];</code>
        * @param value The bytes for issuerHeaderName to set.
        * @return This builder for chaining.
        */
@@ -13352,7 +13352,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
        * @return The subjectHeaderName.
        */
       public java.lang.String getSubjectHeaderName() {
@@ -13372,7 +13372,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
        * @return The bytes for subjectHeaderName.
        */
       public com.google.protobuf.ByteString
@@ -13393,7 +13393,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
        * @param value The subjectHeaderName to set.
        * @return This builder for chaining.
        */
@@ -13412,7 +13412,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSubjectHeaderName() {
@@ -13426,7 +13426,7 @@ public final class VirtualHostOuterClass {
        * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
        * </pre>
        *
-       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn|)"];</code>
        * @param value The bytes for subjectHeaderName to set.
        * @return This builder for chaining.
        */
@@ -31650,88 +31650,88 @@ public final class VirtualHostOuterClass {
       "1.RouteOptions\022 \n\030disable_security_profi" +
       "le\030\005 \001(\010\022]\n\032client_certificate_forward\030\006" +
       " \001(\01329.yandex.cloud.apploadbalancer.v1.C" +
-      "lientCertificateForwardB\r\n\005route\022\004\300\3011\001\"\265" +
-      "\002\n\030ClientCertificateForward\022K\n\013http_head" +
-      "er\030\001 \001(\tB6\362\30712(?i:ssl-client-cert|client" +
-      "-cert|x-ssl-client-cert)\022c\n\022issuer_heade" +
-      "r_name\030\002 \001(\tBG\362\3071C(?i:ssl-client-issuer-" +
-      "dn|client-cert-issuer|x-ssl-client-issue" +
-      "r-dn)\022g\n\023subject_header_name\030\003 \001(\tBJ\362\3071F" +
-      "(?i:ssl-client-subject-dn|client-cert-su" +
-      "bject|x-ssl-client-subject-dn)\"\265\002\n\tHttpR" +
-      "oute\022>\n\005match\030\001 \001(\0132/.yandex.cloud.applo" +
-      "adbalancer.v1.HttpRouteMatch\022A\n\005route\030\002 " +
-      "\001(\01320.yandex.cloud.apploadbalancer.v1.Ht" +
-      "tpRouteActionH\000\022C\n\010redirect\030\003 \001(\0132/.yand" +
-      "ex.cloud.apploadbalancer.v1.RedirectActi" +
-      "onH\000\022P\n\017direct_response\030\004 \001(\01325.yandex.c" +
-      "loud.apploadbalancer.v1.DirectResponseAc" +
-      "tionH\000B\016\n\006action\022\004\300\3011\001\"\364\001\n\tGrpcRoute\022>\n\005" +
-      "match\030\001 \001(\0132/.yandex.cloud.apploadbalanc" +
-      "er.v1.GrpcRouteMatch\022A\n\005route\030\002 \001(\01320.ya" +
-      "ndex.cloud.apploadbalancer.v1.GrpcRouteA" +
-      "ctionH\000\022T\n\017status_response\030\003 \001(\01329.yande" +
-      "x.cloud.apploadbalancer.v1.GrpcStatusRes" +
-      "ponseActionH\000B\016\n\006action\022\004\300\3011\001\"}\n\024HttpRou" +
-      "teHeaderMatch\022(\n\004name\030\001 \001(\tB\032\212\3101\0051-256\362\307" +
-      "1\r[-0-9a-zA-Z]+\022;\n\005value\030\002 \001(\0132,.yandex." +
-      "cloud.apploadbalancer.v1.StringMatch\"\202\001\n" +
-      "\030HttpRouteQueryParamMatch\022)\n\004name\030\001 \001(\tB" +
-      "\033\212\3101\0051-256\362\3071\016[-_0-9a-zA-Z]+\022;\n\005value\030\002 " +
-      "\001(\0132,.yandex.cloud.apploadbalancer.v1.St" +
-      "ringMatch\"\222\002\n\016HttpRouteMatch\022\023\n\013http_met" +
-      "hod\030\001 \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud.a" +
-      "pploadbalancer.v1.StringMatch\022P\n\007headers" +
-      "\030\003 \003(\01325.yandex.cloud.apploadbalancer.v1" +
-      ".HttpRouteHeaderMatchB\010\202\3101\004<=32\022]\n\020query" +
-      "_parameters\030\004 \003(\01329.yandex.cloud.appload" +
-      "balancer.v1.HttpRouteQueryParamMatchB\010\202\310" +
-      "1\004<=32\"L\n\016GrpcRouteMatch\022:\n\004fqmn\030\001 \001(\0132," +
-      ".yandex.cloud.apploadbalancer.v1.StringM" +
-      "atch\"b\n\013StringMatch\022\025\n\013exact_match\030\001 \001(\t" +
-      "H\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013regex_matc" +
-      "h\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectAct" +
-      "ion\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014replace_h" +
-      "ost\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014repla" +
-      "ce_path\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\tH" +
-      "\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresponse_code" +
-      "\030\007 \001(\0162D.yandex.cloud.apploadbalancer.v1" +
-      ".RedirectAction.RedirectResponseCode\"w\n\024" +
-      "RedirectResponseCode\022\025\n\021MOVED_PERMANENTL" +
-      "Y\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPORA" +
-      "RY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006\n" +
-      "\004path\"k\n\024DirectResponseAction\022\033\n\006status\030" +
-      "\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yande" +
-      "x.cloud.apploadbalancer.v1.Payload\"\202\002\n\030G" +
-      "rpcStatusResponseAction\022P\n\006status\030\001 \001(\0162" +
-      "@.yandex.cloud.apploadbalancer.v1.GrpcSt" +
-      "atusResponseAction.Status\"\223\001\n\006Status\022\006\n\002" +
-      "OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND\020" +
-      "\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUTHENTICA" +
-      "TED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022\017" +
-      "\n\013UNAVAILABLE\020\007\"\235\003\n\017HttpRouteAction\022\036\n\020b" +
-      "ackend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030\002" +
-      " \001(\0132\031.google.protobuf.Duration\022/\n\014idle_" +
-      "timeout\030\003 \001(\0132\031.google.protobuf.Duration" +
-      "\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_re" +
-      "write\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025\n" +
-      "\rupgrade_types\030\007 \003(\t\022>\n\nrate_limit\030\010 \001(\013" +
-      "2*.yandex.cloud.apploadbalancer.v1.RateL" +
-      "imit\022O\n\rregex_rewrite\030\t \001(\01328.yandex.clo" +
-      "ud.apploadbalancer.v1.RegexMatchAndSubst" +
-      "ituteB\030\n\026host_rewrite_specifier\"<\n\027Regex" +
-      "MatchAndSubstitute\022\r\n\005regex\030\001 \001(\t\022\022\n\nsub" +
-      "stitute\030\002 \001(\t\"\241\002\n\017GrpcRouteAction\022\036\n\020bac" +
-      "kend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout" +
-      "\030\002 \001(\0132\031.google.protobuf.Duration\022/\n\014idl" +
-      "e_timeout\030\003 \001(\0132\031.google.protobuf.Durati" +
-      "on\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_" +
-      "rewrite\030\005 \001(\010H\000\022>\n\nrate_limit\030\006 \001(\0132*.ya" +
-      "ndex.cloud.apploadbalancer.v1.RateLimitB" +
-      "\030\n\026host_rewrite_specifierBz\n#yandex.clou" +
-      "d.api.apploadbalancer.v1ZSgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/applo" +
-      "adbalancer/v1;apploadbalancerb\006proto3"
+      "lientCertificateForwardB\r\n\005route\022\004\300\3011\001\"\270" +
+      "\002\n\030ClientCertificateForward\022L\n\013http_head" +
+      "er\030\001 \001(\tB7\362\30713(?i:ssl-client-cert|client" +
+      "-cert|x-ssl-client-cert|)\022d\n\022issuer_head" +
+      "er_name\030\002 \001(\tBH\362\3071D(?i:ssl-client-issuer" +
+      "-dn|client-cert-issuer|x-ssl-client-issu" +
+      "er-dn|)\022h\n\023subject_header_name\030\003 \001(\tBK\362\307" +
+      "1G(?i:ssl-client-subject-dn|client-cert-" +
+      "subject|x-ssl-client-subject-dn|)\"\265\002\n\tHt" +
+      "tpRoute\022>\n\005match\030\001 \001(\0132/.yandex.cloud.ap" +
+      "ploadbalancer.v1.HttpRouteMatch\022A\n\005route" +
+      "\030\002 \001(\01320.yandex.cloud.apploadbalancer.v1" +
+      ".HttpRouteActionH\000\022C\n\010redirect\030\003 \001(\0132/.y" +
+      "andex.cloud.apploadbalancer.v1.RedirectA" +
+      "ctionH\000\022P\n\017direct_response\030\004 \001(\01325.yande" +
+      "x.cloud.apploadbalancer.v1.DirectRespons" +
+      "eActionH\000B\016\n\006action\022\004\300\3011\001\"\364\001\n\tGrpcRoute\022" +
+      ">\n\005match\030\001 \001(\0132/.yandex.cloud.apploadbal" +
+      "ancer.v1.GrpcRouteMatch\022A\n\005route\030\002 \001(\01320" +
+      ".yandex.cloud.apploadbalancer.v1.GrpcRou" +
+      "teActionH\000\022T\n\017status_response\030\003 \001(\01329.ya" +
+      "ndex.cloud.apploadbalancer.v1.GrpcStatus" +
+      "ResponseActionH\000B\016\n\006action\022\004\300\3011\001\"}\n\024Http" +
+      "RouteHeaderMatch\022(\n\004name\030\001 \001(\tB\032\212\3101\0051-25" +
+      "6\362\3071\r[-0-9a-zA-Z]+\022;\n\005value\030\002 \001(\0132,.yand" +
+      "ex.cloud.apploadbalancer.v1.StringMatch\"" +
+      "\202\001\n\030HttpRouteQueryParamMatch\022)\n\004name\030\001 \001" +
+      "(\tB\033\212\3101\0051-256\362\3071\016[-_0-9a-zA-Z]+\022;\n\005value" +
+      "\030\002 \001(\0132,.yandex.cloud.apploadbalancer.v1" +
+      ".StringMatch\"\222\002\n\016HttpRouteMatch\022\023\n\013http_" +
+      "method\030\001 \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.clou" +
+      "d.apploadbalancer.v1.StringMatch\022P\n\007head" +
+      "ers\030\003 \003(\01325.yandex.cloud.apploadbalancer" +
+      ".v1.HttpRouteHeaderMatchB\010\202\3101\004<=32\022]\n\020qu" +
+      "ery_parameters\030\004 \003(\01329.yandex.cloud.appl" +
+      "oadbalancer.v1.HttpRouteQueryParamMatchB" +
+      "\010\202\3101\004<=32\"L\n\016GrpcRouteMatch\022:\n\004fqmn\030\001 \001(" +
+      "\0132,.yandex.cloud.apploadbalancer.v1.Stri" +
+      "ngMatch\"b\n\013StringMatch\022\025\n\013exact_match\030\001 " +
+      "\001(\tH\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013regex_m" +
+      "atch\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016Redirect" +
+      "Action\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014replac" +
+      "e_host\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014re" +
+      "place_path\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001" +
+      "(\tH\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresponse_c" +
+      "ode\030\007 \001(\0162D.yandex.cloud.apploadbalancer" +
+      ".v1.RedirectAction.RedirectResponseCode\"" +
+      "w\n\024RedirectResponseCode\022\025\n\021MOVED_PERMANE" +
+      "NTLY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMP" +
+      "ORARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004" +
+      "B\006\n\004path\"k\n\024DirectResponseAction\022\033\n\006stat" +
+      "us\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.ya" +
+      "ndex.cloud.apploadbalancer.v1.Payload\"\202\002" +
+      "\n\030GrpcStatusResponseAction\022P\n\006status\030\001 \001" +
+      "(\0162@.yandex.cloud.apploadbalancer.v1.Grp" +
+      "cStatusResponseAction.Status\"\223\001\n\006Status\022" +
+      "\006\n\002OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOU" +
+      "ND\020\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUTHENT" +
+      "ICATED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020" +
+      "\006\022\017\n\013UNAVAILABLE\020\007\"\235\003\n\017HttpRouteAction\022\036" +
+      "\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeou" +
+      "t\030\002 \001(\0132\031.google.protobuf.Duration\022/\n\014id" +
+      "le_timeout\030\003 \001(\0132\031.google.protobuf.Durat" +
+      "ion\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host" +
+      "_rewrite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t" +
+      "\022\025\n\rupgrade_types\030\007 \003(\t\022>\n\nrate_limit\030\010 " +
+      "\001(\0132*.yandex.cloud.apploadbalancer.v1.Ra" +
+      "teLimit\022O\n\rregex_rewrite\030\t \001(\01328.yandex." +
+      "cloud.apploadbalancer.v1.RegexMatchAndSu" +
+      "bstituteB\030\n\026host_rewrite_specifier\"<\n\027Re" +
+      "gexMatchAndSubstitute\022\r\n\005regex\030\001 \001(\t\022\022\n\n" +
+      "substitute\030\002 \001(\t\"\241\002\n\017GrpcRouteAction\022\036\n\020" +
+      "backend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_time" +
+      "out\030\002 \001(\0132\031.google.protobuf.Duration\022/\n\014" +
+      "idle_timeout\030\003 \001(\0132\031.google.protobuf.Dur" +
+      "ation\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_ho" +
+      "st_rewrite\030\005 \001(\010H\000\022>\n\nrate_limit\030\006 \001(\0132*" +
+      ".yandex.cloud.apploadbalancer.v1.RateLim" +
+      "itB\030\n\026host_rewrite_specifierBz\n#yandex.c" +
+      "loud.api.apploadbalancer.v1ZSgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ap" +
+      "ploadbalancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

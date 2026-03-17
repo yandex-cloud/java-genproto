@@ -12799,7 +12799,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -12807,7 +12807,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -12822,7 +12822,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -12831,7 +12831,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -12842,7 +12842,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -13084,7 +13084,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -13106,7 +13106,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -13118,7 +13118,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -13135,7 +13135,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -13887,7 +13887,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -13909,7 +13909,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -13921,7 +13921,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -13938,7 +13938,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -13963,7 +13963,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -13986,7 +13986,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -14005,7 +14005,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -14130,7 +14130,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -14138,7 +14138,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -14153,7 +14153,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -14162,7 +14162,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -14173,7 +14173,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -14415,7 +14415,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -14437,7 +14437,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -14449,7 +14449,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -14466,7 +14466,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -15218,7 +15218,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -15240,7 +15240,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -15252,7 +15252,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -15269,7 +15269,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -15294,7 +15294,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -15317,7 +15317,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -15336,7 +15336,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -15461,7 +15461,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -15469,7 +15469,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -15484,7 +15484,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -15493,7 +15493,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -15504,7 +15504,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -15746,7 +15746,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -15768,7 +15768,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -15780,7 +15780,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -15797,7 +15797,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -16549,7 +16549,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -16571,7 +16571,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -16583,7 +16583,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -16600,7 +16600,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -16625,7 +16625,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -16648,7 +16648,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -16667,7 +16667,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -16792,7 +16792,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -16800,7 +16800,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -16815,7 +16815,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -16824,7 +16824,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -16835,7 +16835,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -17077,7 +17077,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -17099,7 +17099,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -17111,7 +17111,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -17128,7 +17128,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -17880,7 +17880,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -17902,7 +17902,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -17914,7 +17914,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -17931,7 +17931,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -17956,7 +17956,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -17979,7 +17979,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -17998,7 +17998,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -21316,7 +21316,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -21324,7 +21324,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -21339,7 +21339,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -21348,7 +21348,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -21359,7 +21359,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -21550,7 +21550,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -21572,7 +21572,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -21584,7 +21584,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -21601,7 +21601,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -22168,7 +22168,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -22190,7 +22190,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -22202,7 +22202,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -22219,7 +22219,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -22244,7 +22244,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -22267,7 +22267,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -22286,7 +22286,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -25604,7 +25604,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -25612,7 +25612,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -25627,7 +25627,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -25636,7 +25636,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -25647,7 +25647,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -25838,7 +25838,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -25860,7 +25860,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -25872,7 +25872,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -25889,7 +25889,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -26456,7 +26456,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -26478,7 +26478,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -26490,7 +26490,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -26507,7 +26507,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -26532,7 +26532,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -26555,7 +26555,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -26574,7 +26574,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -26645,7 +26645,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -26653,7 +26653,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -26668,7 +26668,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -26677,7 +26677,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -26688,7 +26688,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -26828,7 +26828,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -26850,7 +26850,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -26862,7 +26862,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -26879,7 +26879,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -27261,7 +27261,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -27283,7 +27283,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -27295,7 +27295,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -27312,7 +27312,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -27337,7 +27337,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -27360,7 +27360,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -27379,7 +27379,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -27450,7 +27450,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -27458,7 +27458,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -27473,7 +27473,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -27482,7 +27482,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -27493,7 +27493,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -27633,7 +27633,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -27655,7 +27655,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -27667,7 +27667,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -27684,7 +27684,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -28066,7 +28066,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -28088,7 +28088,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -28100,7 +28100,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -28117,7 +28117,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -28142,7 +28142,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -28165,7 +28165,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -28184,7 +28184,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -30036,7 +30036,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -30044,7 +30044,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -30059,7 +30059,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -30068,7 +30068,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -30079,7 +30079,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -30270,7 +30270,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -30292,7 +30292,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -30304,7 +30304,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -30321,7 +30321,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -30888,7 +30888,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -30910,7 +30910,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -30922,7 +30922,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -30939,7 +30939,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -30964,7 +30964,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -30987,7 +30987,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -31006,7 +31006,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -32858,7 +32858,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -32866,7 +32866,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -32881,7 +32881,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -32890,7 +32890,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -32901,7 +32901,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -33092,7 +33092,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -33114,7 +33114,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -33126,7 +33126,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -33143,7 +33143,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -33710,7 +33710,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -33732,7 +33732,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -33744,7 +33744,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -33761,7 +33761,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -33786,7 +33786,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -33809,7 +33809,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -33828,7 +33828,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -36960,7 +36960,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -36968,7 +36968,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -36983,7 +36983,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -36992,7 +36992,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -37003,7 +37003,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -37194,7 +37194,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -37216,7 +37216,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -37228,7 +37228,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -37245,7 +37245,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -37812,7 +37812,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -37834,7 +37834,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -37846,7 +37846,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -37863,7 +37863,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -37888,7 +37888,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -37911,7 +37911,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -37930,7 +37930,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -41248,7 +41248,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -41256,7 +41256,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -41271,7 +41271,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -41280,7 +41280,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -41291,7 +41291,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -41482,7 +41482,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -41504,7 +41504,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -41516,7 +41516,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -41533,7 +41533,7 @@ public final class CatalogOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -42100,7 +42100,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -42122,7 +42122,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -42134,7 +42134,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -42151,7 +42151,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -42176,7 +42176,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -42199,7 +42199,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -42218,7 +42218,7 @@ public final class CatalogOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -42623,194 +42623,195 @@ public final class CatalogOuterClass {
       "ernalS3FileSystem\022\034\n\016aws_access_key\030\001 \001(" +
       "\tB\004\350\3071\001\022\034\n\016aws_secret_key\030\002 \001(\tB\004\350\3071\001\022\032\n" +
       "\014aws_endpoint\030\003 \001(\tB\004\350\3071\001\022\030\n\naws_region\030" +
-      "\004 \001(\tB\004\350\3071\001B\014\n\004type\022\004\300\3011\001\"\363\002\n\rHiveConnec" +
+      "\004 \001(\tB\004\350\3071\001B\014\n\004type\022\004\300\3011\001\"\364\002\n\rHiveConnec" +
       "tor\0229\n\tmetastore\030\001 \001(\0132 .yandex.cloud.tr" +
       "ino.v1.MetastoreB\004\350\3071\001\022;\n\nfilesystem\030\002 \001" +
       "(\0132!.yandex.cloud.trino.v1.FileSystemB\004\350" +
-      "\3071\001\022\254\001\n\025additional_properties\030\003 \003(\0132>.ya" +
+      "\3071\001\022\255\001\n\025additional_properties\030\003 \003(\0132>.ya" +
       "ndex.cloud.trino.v1.HiveConnector.Additi" +
-      "onalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362" +
-      "\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022" +
-      "\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalProperti" +
-      "esEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "\371\002\n\020IcebergConnector\0229\n\tmetastore\030\001 \001(\0132" +
-      " .yandex.cloud.trino.v1.MetastoreB\004\350\3071\001\022" +
-      ";\n\nfilesystem\030\002 \001(\0132!.yandex.cloud.trino" +
-      ".v1.FileSystemB\004\350\3071\001\022\257\001\n\025additional_prop" +
-      "erties\030\003 \003(\0132A.yandex.cloud.trino.v1.Ice" +
-      "bergConnector.AdditionalPropertiesEntryB" +
-      "M\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/" +
-      "_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;" +
-      "\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\375\002\n\022DeltaLakeConnect" +
-      "or\0229\n\tmetastore\030\001 \001(\0132 .yandex.cloud.tri" +
-      "no.v1.MetastoreB\004\350\3071\001\022;\n\nfilesystem\030\002 \001(" +
-      "\0132!.yandex.cloud.trino.v1.FileSystemB\004\350\307" +
-      "1\001\022\261\001\n\025additional_properties\030\003 \003(\0132C.yan" +
-      "dex.cloud.trino.v1.DeltaLakeConnector.Ad" +
-      "ditionalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=" +
-      "128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262" +
-      "\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalProp" +
-      "ertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"\363\002\n\rHudiConnector\0229\n\tmetastore\030\001 \001(\013" +
+      "onalPropertiesEntryBN\202\3101\005<=256\212\3101\005<=128\362" +
+      "\3071\026[-_0-9a-zA-Z.,:\\/_ *]*\262\3101\007\032\0051-128\262\3101\023" +
+      "\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalPropert" +
+      "iesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"\372\002\n\020IcebergConnector\0229\n\tmetastore\030\001 \001(\013" +
       "2 .yandex.cloud.trino.v1.MetastoreB\004\350\3071\001" +
       "\022;\n\nfilesystem\030\002 \001(\0132!.yandex.cloud.trin" +
-      "o.v1.FileSystemB\004\350\3071\001\022\254\001\n\025additional_pro" +
-      "perties\030\003 \003(\0132>.yandex.cloud.trino.v1.Hu" +
-      "diConnector.AdditionalPropertiesEntryBM\202" +
-      "\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ " +
-      "]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031" +
-      "AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\340\005\n\024PostgresqlConnecti" +
-      "on\022K\n\non_premise\030\001 \001(\01325.yandex.cloud.tr" +
-      "ino.v1.PostgresqlConnection.OnPremiseH\000\022" +
-      "[\n\022connection_manager\030\002 \001(\0132=.yandex.clo" +
-      "ud.trino.v1.PostgresqlConnection.Connect" +
-      "ionManagerH\000\032\246\001\n\tOnPremise\022E\n\016connection" +
-      "_url\030\001 \001(\tB-\350\3071\001\362\3071%^jdbc:postgresql://(" +
-      "?:.+:\\d+)/(?:.*)$\0221\n\tuser_name\030\002 \001(\tB\036\350\307" +
-      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password" +
-      "\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\346\002\n\021ConnectionMana" +
-      "ger\022#\n\rconnection_id\030\001 \001(\tB\014\350\3071\001\212\3101\0041-50" +
-      "\0220\n\010database\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022\274\001\n\025connection_properties\030\003 \003" +
-      "(\0132W.yandex.cloud.trino.v1.PostgresqlCon" +
-      "nection.ConnectionManager.ConnectionProp" +
-      "ertiesEntryBD\202\3101\005<=256\212\3101\005<=128\362\3071\024[-_0-" +
-      "9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\013\022\t[a-zA-Z]" +
-      "*\032;\n\031ConnectionPropertiesEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\310\002\n" +
-      "\023PostgresqlConnector\022?\n\nconnection\030\001 \001(\013" +
-      "2+.yandex.cloud.trino.v1.PostgresqlConne" +
-      "ction\022\262\001\n\025additional_properties\030\002 \003(\0132D." +
-      "yandex.cloud.trino.v1.PostgresqlConnecto" +
-      "r.AdditionalPropertiesEntryBM\202\3101\005<=256\212\310" +
-      "1\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-" +
-      "128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Additional" +
-      "PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"\341\005\n\024ClickhouseConnection\022K\n\non_p" +
-      "remise\030\001 \001(\01325.yandex.cloud.trino.v1.Cli" +
-      "ckhouseConnection.OnPremiseH\000\022[\n\022connect" +
-      "ion_manager\030\002 \001(\0132=.yandex.cloud.trino.v" +
-      "1.ClickhouseConnection.ConnectionManager" +
-      "H\000\032\246\001\n\tOnPremise\022E\n\016connection_url\030\001 \001(\t" +
-      "B-\350\3071\001\362\3071%^jdbc:clickhouse://(?:.+:\\d+)/" +
-      "(?:.*)$\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63" +
-      "\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password\030\003 \001(\tB\r\350\307" +
-      "1\001\212\3101\0050-128\032\347\002\n\021ConnectionManager\022#\n\rcon" +
-      "nection_id\030\001 \001(\tB\014\350\3071\001\212\3101\0041-50\0220\n\010databa" +
-      "se\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
-      "\022\275\001\n\025connection_properties\030\003 \003(\0132W.yande" +
-      "x.cloud.trino.v1.ClickhouseConnection.Co" +
-      "nnectionManager.ConnectionPropertiesEntr" +
-      "yBE\202\3101\005<=256\212\3101\005<=128\362\3071\024[-_0-9a-zA-Z.,:" +
-      "\\/_]*\262\3101\007\032\0051-128\262\3101\014\022\n[a-zA-Z_]*\032;\n\031Conn" +
-      "ectionPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\310\002\n\023Clickhou" +
-      "seConnector\022?\n\nconnection\030\001 \001(\0132+.yandex" +
-      ".cloud.trino.v1.ClickhouseConnection\022\262\001\n" +
-      "\025additional_properties\030\002 \003(\0132D.yandex.cl" +
-      "oud.trino.v1.ClickhouseConnector.Additio" +
-      "nalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\307" +
-      "1\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021" +
-      "[a-z][-_0-9a-z.]*\032;\n\031AdditionalPropertie" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\373" +
-      "\001\n\rTPCHConnector\022\254\001\n\025additional_properti" +
-      "es\030\001 \003(\0132>.yandex.cloud.trino.v1.TPCHCon" +
-      "nector.AdditionalPropertiesEntryBM\202\3101\005<=" +
-      "256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101" +
-      "\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Addit" +
-      "ionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\375\001\n\016TPCDSConnector\022\255\001\n\025addi" +
-      "tional_properties\030\001 \003(\0132?.yandex.cloud.t" +
-      "rino.v1.TPCDSConnector.AdditionalPropert" +
-      "iesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-" +
-      "zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-" +
-      "9a-z.]*\032;\n\031AdditionalPropertiesEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\202\002\n\020OracleC" +
-      "onnection\022G\n\non_premise\030\001 \001(\01321.yandex.c" +
-      "loud.trino.v1.OracleConnection.OnPremise" +
-      "H\000\032\226\001\n\tOnPremise\0225\n\016connection_url\030\001 \001(\t" +
-      "B\035\350\3071\001\362\3071\025^jdbc:oracle:(?s:.*)$\0221\n\tuser_" +
-      "name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
-      "]*\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128B\014\n\004t" +
-      "ype\022\004\300\3011\001\"\274\002\n\017OracleConnector\022;\n\nconnect" +
-      "ion\030\001 \001(\0132\'.yandex.cloud.trino.v1.Oracle" +
-      "Connection\022\256\001\n\025additional_properties\030\002 \003" +
-      "(\0132@.yandex.cloud.trino.v1.OracleConnect" +
-      "or.AdditionalPropertiesEntryBM\202\3101\005<=256\212" +
-      "\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051" +
-      "-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Additiona" +
-      "lPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\213\002\n\023SQLServerConnection\022J\n\non_p" +
-      "remise\030\001 \001(\01324.yandex.cloud.trino.v1.SQL" +
-      "ServerConnection.OnPremiseH\000\032\231\001\n\tOnPremi" +
-      "se\0228\n\016connection_url\030\001 \001(\tB \350\3071\001\362\3071\030^jdb" +
-      "c:sqlserver:(?s:.*)$\0221\n\tuser_name\030\002 \001(\tB" +
-      "\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010passw" +
-      "ord\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128B\014\n\004type\022\004\300\3011\001\"\305" +
-      "\002\n\022SQLServerConnector\022>\n\nconnection\030\001 \001(" +
-      "\0132*.yandex.cloud.trino.v1.SQLServerConne" +
-      "ction\022\261\001\n\025additional_properties\030\002 \003(\0132C." +
-      "yandex.cloud.trino.v1.SQLServerConnector" +
-      ".AdditionalPropertiesEntryBM\202\3101\005<=256\212\3101" +
-      "\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-1" +
+      "o.v1.FileSystemB\004\350\3071\001\022\260\001\n\025additional_pro" +
+      "perties\030\003 \003(\0132A.yandex.cloud.trino.v1.Ic" +
+      "ebergConnector.AdditionalPropertiesEntry" +
+      "BN\202\3101\005<=256\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.,:\\" +
+      "/_ *]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*" +
+      "\032;\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\376\002\n\022DeltaLakeConne" +
+      "ctor\0229\n\tmetastore\030\001 \001(\0132 .yandex.cloud.t" +
+      "rino.v1.MetastoreB\004\350\3071\001\022;\n\nfilesystem\030\002 " +
+      "\001(\0132!.yandex.cloud.trino.v1.FileSystemB\004" +
+      "\350\3071\001\022\262\001\n\025additional_properties\030\003 \003(\0132C.y" +
+      "andex.cloud.trino.v1.DeltaLakeConnector." +
+      "AdditionalPropertiesEntryBN\202\3101\005<=256\212\3101\005" +
+      "<=128\362\3071\026[-_0-9a-zA-Z.,:\\/_ *]*\262\3101\007\032\0051-1" +
       "28\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalP" +
       "ropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"\227\005\n\017MysqlConnection\022F\n\non_premise" +
-      "\030\001 \001(\01320.yandex.cloud.trino.v1.MysqlConn" +
-      "ection.OnPremiseH\000\022V\n\022connection_manager" +
-      "\030\002 \001(\01328.yandex.cloud.trino.v1.MysqlConn" +
-      "ection.ConnectionManagerH\000\032\242\001\n\tOnPremise" +
-      "\022A\n\016connection_url\030\001 \001(\tB)\350\3071\001\362\3071!^jdbc:" +
-      "mysql://(?:.+:\\d+)(?:/?.*)$\0221\n\tuser_name" +
-      "\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037" +
-      "\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\260\002\n\021Conn" +
-      "ectionManager\022#\n\rconnection_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\0041-50\022\270\001\n\025connection_properties\030\002 \003" +
-      "(\0132R.yandex.cloud.trino.v1.MysqlConnecti" +
+      "(\t:\0028\001\"\364\002\n\rHudiConnector\0229\n\tmetastore\030\001 " +
+      "\001(\0132 .yandex.cloud.trino.v1.MetastoreB\004\350" +
+      "\3071\001\022;\n\nfilesystem\030\002 \001(\0132!.yandex.cloud.t" +
+      "rino.v1.FileSystemB\004\350\3071\001\022\255\001\n\025additional_" +
+      "properties\030\003 \003(\0132>.yandex.cloud.trino.v1" +
+      ".HudiConnector.AdditionalPropertiesEntry" +
+      "BN\202\3101\005<=256\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.,:\\" +
+      "/_ *]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*" +
+      "\032;\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\340\005\n\024PostgresqlConn" +
+      "ection\022K\n\non_premise\030\001 \001(\01325.yandex.clou" +
+      "d.trino.v1.PostgresqlConnection.OnPremis" +
+      "eH\000\022[\n\022connection_manager\030\002 \001(\0132=.yandex" +
+      ".cloud.trino.v1.PostgresqlConnection.Con" +
+      "nectionManagerH\000\032\246\001\n\tOnPremise\022E\n\016connec" +
+      "tion_url\030\001 \001(\tB-\350\3071\001\362\3071%^jdbc:postgresql" +
+      "://(?:.+:\\d+)/(?:.*)$\0221\n\tuser_name\030\002 \001(\t" +
+      "B\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010pass" +
+      "word\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\346\002\n\021Connection" +
+      "Manager\022#\n\rconnection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "1-50\0220\n\010database\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016" +
+      "[a-zA-Z0-9_-]*\022\274\001\n\025connection_properties" +
+      "\030\003 \003(\0132W.yandex.cloud.trino.v1.Postgresq" +
+      "lConnection.ConnectionManager.Connection" +
+      "PropertiesEntryBD\202\3101\005<=256\212\3101\005<=128\362\3071\024[" +
+      "-_0-9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\013\022\t[a-z" +
+      "A-Z]*\032;\n\031ConnectionPropertiesEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001" +
+      "\"\311\002\n\023PostgresqlConnector\022?\n\nconnection\030\001" +
+      " \001(\0132+.yandex.cloud.trino.v1.PostgresqlC" +
+      "onnection\022\263\001\n\025additional_properties\030\002 \003(" +
+      "\0132D.yandex.cloud.trino.v1.PostgresqlConn" +
+      "ector.AdditionalPropertiesEntryBN\202\3101\005<=2" +
+      "56\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.,:\\/_ *]*\262\3101" +
+      "\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Addit" +
+      "ionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"\341\005\n\024ClickhouseConnection\022K\n" +
+      "\non_premise\030\001 \001(\01325.yandex.cloud.trino.v" +
+      "1.ClickhouseConnection.OnPremiseH\000\022[\n\022co" +
+      "nnection_manager\030\002 \001(\0132=.yandex.cloud.tr" +
+      "ino.v1.ClickhouseConnection.ConnectionMa" +
+      "nagerH\000\032\246\001\n\tOnPremise\022E\n\016connection_url\030" +
+      "\001 \001(\tB-\350\3071\001\362\3071%^jdbc:clickhouse://(?:.+:" +
+      "\\d+)/(?:.*)$\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101" +
+      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password\030\003 \001(" +
+      "\tB\r\350\3071\001\212\3101\0050-128\032\347\002\n\021ConnectionManager\022#" +
+      "\n\rconnection_id\030\001 \001(\tB\014\350\3071\001\212\3101\0041-50\0220\n\010d" +
+      "atabase\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
+      "9_-]*\022\275\001\n\025connection_properties\030\003 \003(\0132W." +
+      "yandex.cloud.trino.v1.ClickhouseConnecti" +
       "on.ConnectionManager.ConnectionPropertie" +
       "sEntryBE\202\3101\005<=256\212\3101\005<=128\362\3071\024[-_0-9a-zA" +
       "-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\014\022\n[a-zA-Z_]*\032;\n" +
       "\031ConnectionPropertiesEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\271\002\n\016Mys" +
-      "qlConnector\022:\n\nconnection\030\001 \001(\0132&.yandex" +
-      ".cloud.trino.v1.MysqlConnection\022\255\001\n\025addi" +
-      "tional_properties\030\002 \003(\0132?.yandex.cloud.t" +
-      "rino.v1.MysqlConnector.AdditionalPropert" +
-      "iesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-" +
-      "zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-" +
-      "9a-z.]*\032;\n\031AdditionalPropertiesEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\334\005\n\023Greenpl" +
-      "umConnection\022J\n\non_premise\030\001 \001(\01324.yande" +
-      "x.cloud.trino.v1.GreenplumConnection.OnP" +
-      "remiseH\000\022Z\n\022connection_manager\030\002 \001(\0132<.y" +
-      "andex.cloud.trino.v1.GreenplumConnection" +
-      ".ConnectionManagerH\000\032\246\001\n\tOnPremise\022E\n\016co" +
-      "nnection_url\030\001 \001(\tB-\350\3071\001\362\3071%^jdbc:postgr" +
-      "esql://(?:.+:\\d+)/(?:.*)$\0221\n\tuser_name\030\002" +
-      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010" +
-      "password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\345\002\n\021Connec" +
-      "tionManager\022#\n\rconnection_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\0041-50\0220\n\010database\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63" +
-      "\362\3071\016[a-zA-Z0-9_-]*\022\273\001\n\025connection_proper" +
-      "ties\030\003 \003(\0132V.yandex.cloud.trino.v1.Green" +
-      "plumConnection.ConnectionManager.Connect" +
-      "ionPropertiesEntryBD\202\3101\005<=256\212\3101\005<=128\362\307" +
-      "1\024[-_0-9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\013\022\t[" +
-      "a-zA-Z]*\032;\n\031ConnectionPropertiesEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300" +
-      "\3011\001\"\305\002\n\022GreenplumConnector\022>\n\nconnection" +
-      "\030\001 \001(\0132*.yandex.cloud.trino.v1.Greenplum" +
-      "Connection\022\261\001\n\025additional_properties\030\002 \003" +
-      "(\0132C.yandex.cloud.trino.v1.GreenplumConn" +
-      "ector.AdditionalPropertiesEntryBM\202\3101\005<=2" +
-      "56\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007" +
-      "\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Additi" +
-      "onalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud.api.trino.v1" +
-      "Z?github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/trino/v1;trinob\006proto3"
+      "\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\311\002\n\023Cli" +
+      "ckhouseConnector\022?\n\nconnection\030\001 \001(\0132+.y" +
+      "andex.cloud.trino.v1.ClickhouseConnectio" +
+      "n\022\263\001\n\025additional_properties\030\002 \003(\0132D.yand" +
+      "ex.cloud.trino.v1.ClickhouseConnector.Ad" +
+      "ditionalPropertiesEntryBN\202\3101\005<=256\212\3101\005<=" +
+      "128\362\3071\026[-_0-9a-zA-Z.,:\\/_ *]*\262\3101\007\032\0051-128" +
+      "\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalPro" +
+      "pertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"\374\001\n\rTPCHConnector\022\255\001\n\025additional_pr" +
+      "operties\030\001 \003(\0132>.yandex.cloud.trino.v1.T" +
+      "PCHConnector.AdditionalPropertiesEntryBN" +
+      "\202\3101\005<=256\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.,:\\/_" +
+      " *]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;" +
+      "\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\376\001\n\016TPCDSConnector\022\256" +
+      "\001\n\025additional_properties\030\001 \003(\0132?.yandex." +
+      "cloud.trino.v1.TPCDSConnector.Additional" +
+      "PropertiesEntryBN\202\3101\005<=256\212\3101\005<=128\362\3071\026[" +
+      "-_0-9a-zA-Z.,:\\/_ *]*\262\3101\007\032\0051-128\262\3101\023\022\021[a" +
+      "-z][-_0-9a-z.]*\032;\n\031AdditionalPropertiesE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\202\002\n" +
+      "\020OracleConnection\022G\n\non_premise\030\001 \001(\01321." +
+      "yandex.cloud.trino.v1.OracleConnection.O" +
+      "nPremiseH\000\032\226\001\n\tOnPremise\0225\n\016connection_u" +
+      "rl\030\001 \001(\tB\035\350\3071\001\362\3071\025^jdbc:oracle:(?s:.*)$\022" +
+      "1\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-" +
+      "128B\014\n\004type\022\004\300\3011\001\"\275\002\n\017OracleConnector\022;\n" +
+      "\nconnection\030\001 \001(\0132\'.yandex.cloud.trino.v" +
+      "1.OracleConnection\022\257\001\n\025additional_proper" +
+      "ties\030\002 \003(\0132@.yandex.cloud.trino.v1.Oracl" +
+      "eConnector.AdditionalPropertiesEntryBN\202\310" +
+      "1\005<=256\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.,:\\/_ *" +
+      "]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031" +
+      "AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"\213\002\n\023SQLServerConnectio" +
+      "n\022J\n\non_premise\030\001 \001(\01324.yandex.cloud.tri" +
+      "no.v1.SQLServerConnection.OnPremiseH\000\032\231\001" +
+      "\n\tOnPremise\0228\n\016connection_url\030\001 \001(\tB \350\3071" +
+      "\001\362\3071\030^jdbc:sqlserver:(?s:.*)$\0221\n\tuser_na" +
+      "me\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
+      "\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128B\014\n\004typ" +
+      "e\022\004\300\3011\001\"\306\002\n\022SQLServerConnector\022>\n\nconnec" +
+      "tion\030\001 \001(\0132*.yandex.cloud.trino.v1.SQLSe" +
+      "rverConnection\022\262\001\n\025additional_properties" +
+      "\030\002 \003(\0132C.yandex.cloud.trino.v1.SQLServer" +
+      "Connector.AdditionalPropertiesEntryBN\202\3101" +
+      "\005<=256\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.,:\\/_ *]" +
+      "*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031A" +
+      "dditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"\227\005\n\017MysqlConnection\022F\n\n" +
+      "on_premise\030\001 \001(\01320.yandex.cloud.trino.v1" +
+      ".MysqlConnection.OnPremiseH\000\022V\n\022connecti" +
+      "on_manager\030\002 \001(\01328.yandex.cloud.trino.v1" +
+      ".MysqlConnection.ConnectionManagerH\000\032\242\001\n" +
+      "\tOnPremise\022A\n\016connection_url\030\001 \001(\tB)\350\3071\001" +
+      "\362\3071!^jdbc:mysql://(?:.+:\\d+)(?:/?.*)$\0221\n" +
+      "\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-" +
+      "Z0-9_-]*\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-12" +
+      "8\032\260\002\n\021ConnectionManager\022#\n\rconnection_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\0041-50\022\270\001\n\025connection_prop" +
+      "erties\030\002 \003(\0132R.yandex.cloud.trino.v1.Mys" +
+      "qlConnection.ConnectionManager.Connectio" +
+      "nPropertiesEntryBE\202\3101\005<=256\212\3101\005<=128\362\3071\024" +
+      "[-_0-9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\014\022\n[a-" +
+      "zA-Z_]*\032;\n\031ConnectionPropertiesEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\301" +
+      "1\001\"\272\002\n\016MysqlConnector\022:\n\nconnection\030\001 \001(" +
+      "\0132&.yandex.cloud.trino.v1.MysqlConnectio" +
+      "n\022\256\001\n\025additional_properties\030\002 \003(\0132?.yand" +
+      "ex.cloud.trino.v1.MysqlConnector.Additio" +
+      "nalPropertiesEntryBN\202\3101\005<=256\212\3101\005<=128\362\307" +
+      "1\026[-_0-9a-zA-Z.,:\\/_ *]*\262\3101\007\032\0051-128\262\3101\023\022" +
+      "\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalProperti" +
+      "esEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\334\005\n\023GreenplumConnection\022J\n\non_premise\030\001 " +
+      "\001(\01324.yandex.cloud.trino.v1.GreenplumCon" +
+      "nection.OnPremiseH\000\022Z\n\022connection_manage" +
+      "r\030\002 \001(\0132<.yandex.cloud.trino.v1.Greenplu" +
+      "mConnection.ConnectionManagerH\000\032\246\001\n\tOnPr" +
+      "emise\022E\n\016connection_url\030\001 \001(\tB-\350\3071\001\362\3071%^" +
+      "jdbc:postgresql://(?:.+:\\d+)/(?:.*)$\0221\n\t" +
+      "user_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z" +
+      "0-9_-]*\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128" +
+      "\032\345\002\n\021ConnectionManager\022#\n\rconnection_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\0041-50\0220\n\010database\030\002 \001(\tB\036\350" +
+      "\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\273\001\n\025connec" +
+      "tion_properties\030\003 \003(\0132V.yandex.cloud.tri" +
+      "no.v1.GreenplumConnection.ConnectionMana" +
+      "ger.ConnectionPropertiesEntryBD\202\3101\005<=256" +
+      "\212\3101\005<=128\362\3071\024[-_0-9a-zA-Z.,:\\/_]*\262\3101\007\032\0051" +
+      "-128\262\3101\013\022\t[a-zA-Z]*\032;\n\031ConnectionPropert" +
+      "iesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "B\014\n\004type\022\004\300\3011\001\"\306\002\n\022GreenplumConnector\022>\n" +
+      "\nconnection\030\001 \001(\0132*.yandex.cloud.trino.v" +
+      "1.GreenplumConnection\022\262\001\n\025additional_pro" +
+      "perties\030\002 \003(\0132C.yandex.cloud.trino.v1.Gr" +
+      "eenplumConnector.AdditionalPropertiesEnt" +
+      "ryBN\202\3101\005<=256\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.," +
+      ":\\/_ *]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z." +
+      "]*\032;\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud." +
+      "api.trino.v1Z?github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/trino/v1;trinob\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

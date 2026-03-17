@@ -152,6 +152,42 @@ public final class Opensearch {
      */
     com.google.protobuf.ByteString
         getReindexRemoteWhitelistBytes();
+
+    /**
+     * <pre>
+     * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+     * Default value: **4kb**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+     * @return Whether the httpMaxInitialLineLength field is set.
+     */
+    boolean hasHttpMaxInitialLineLength();
+    /**
+     * <pre>
+     * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+     * Default value: **4kb**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+     * @return The httpMaxInitialLineLength.
+     */
+    com.google.protobuf.StringValue getHttpMaxInitialLineLength();
+    /**
+     * <pre>
+     * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+     * Default value: **4kb**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getHttpMaxInitialLineLengthOrBuilder();
   }
   /**
    * <pre>
@@ -240,6 +276,19 @@ public final class Opensearch {
               java.lang.String s = input.readStringRequireUtf8();
 
               reindexRemoteWhitelist_ = s;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (httpMaxInitialLineLength_ != null) {
+                subBuilder = httpMaxInitialLineLength_.toBuilder();
+              }
+              httpMaxInitialLineLength_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(httpMaxInitialLineLength_);
+                httpMaxInitialLineLength_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -483,6 +532,53 @@ public final class Opensearch {
       }
     }
 
+    public static final int HTTP_MAX_INITIAL_LINE_LENGTH_FIELD_NUMBER = 8;
+    private com.google.protobuf.StringValue httpMaxInitialLineLength_;
+    /**
+     * <pre>
+     * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+     * Default value: **4kb**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+     * @return Whether the httpMaxInitialLineLength field is set.
+     */
+    @java.lang.Override
+    public boolean hasHttpMaxInitialLineLength() {
+      return httpMaxInitialLineLength_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+     * Default value: **4kb**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+     * @return The httpMaxInitialLineLength.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getHttpMaxInitialLineLength() {
+      return httpMaxInitialLineLength_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : httpMaxInitialLineLength_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+     * Default value: **4kb**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getHttpMaxInitialLineLengthOrBuilder() {
+      return getHttpMaxInitialLineLength();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -509,6 +605,9 @@ public final class Opensearch {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexRemoteWhitelist_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reindexRemoteWhitelist_);
       }
+      if (httpMaxInitialLineLength_ != null) {
+        output.writeMessage(8, getHttpMaxInitialLineLength());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -531,6 +630,10 @@ public final class Opensearch {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexRemoteWhitelist_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, reindexRemoteWhitelist_);
+      }
+      if (httpMaxInitialLineLength_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getHttpMaxInitialLineLength());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -561,6 +664,11 @@ public final class Opensearch {
       }
       if (!getReindexRemoteWhitelist()
           .equals(other.getReindexRemoteWhitelist())) return false;
+      if (hasHttpMaxInitialLineLength() != other.hasHttpMaxInitialLineLength()) return false;
+      if (hasHttpMaxInitialLineLength()) {
+        if (!getHttpMaxInitialLineLength()
+            .equals(other.getHttpMaxInitialLineLength())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -584,6 +692,10 @@ public final class Opensearch {
       }
       hash = (37 * hash) + REINDEX_REMOTE_WHITELIST_FIELD_NUMBER;
       hash = (53 * hash) + getReindexRemoteWhitelist().hashCode();
+      if (hasHttpMaxInitialLineLength()) {
+        hash = (37 * hash) + HTTP_MAX_INITIAL_LINE_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + getHttpMaxInitialLineLength().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -737,6 +849,12 @@ public final class Opensearch {
         }
         reindexRemoteWhitelist_ = "";
 
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          httpMaxInitialLineLength_ = null;
+        } else {
+          httpMaxInitialLineLength_ = null;
+          httpMaxInitialLineLengthBuilder_ = null;
+        }
         return this;
       }
 
@@ -775,6 +893,11 @@ public final class Opensearch {
           result.searchMaxBuckets_ = searchMaxBucketsBuilder_.build();
         }
         result.reindexRemoteWhitelist_ = reindexRemoteWhitelist_;
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          result.httpMaxInitialLineLength_ = httpMaxInitialLineLength_;
+        } else {
+          result.httpMaxInitialLineLength_ = httpMaxInitialLineLengthBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -836,6 +959,9 @@ public final class Opensearch {
         if (!other.getReindexRemoteWhitelist().isEmpty()) {
           reindexRemoteWhitelist_ = other.reindexRemoteWhitelist_;
           onChanged();
+        }
+        if (other.hasHttpMaxInitialLineLength()) {
+          mergeHttpMaxInitialLineLength(other.getHttpMaxInitialLineLength());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1482,6 +1608,188 @@ public final class Opensearch {
         reindexRemoteWhitelist_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.StringValue httpMaxInitialLineLength_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> httpMaxInitialLineLengthBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       * @return Whether the httpMaxInitialLineLength field is set.
+       */
+      public boolean hasHttpMaxInitialLineLength() {
+        return httpMaxInitialLineLengthBuilder_ != null || httpMaxInitialLineLength_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       * @return The httpMaxInitialLineLength.
+       */
+      public com.google.protobuf.StringValue getHttpMaxInitialLineLength() {
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          return httpMaxInitialLineLength_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : httpMaxInitialLineLength_;
+        } else {
+          return httpMaxInitialLineLengthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       */
+      public Builder setHttpMaxInitialLineLength(com.google.protobuf.StringValue value) {
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          httpMaxInitialLineLength_ = value;
+          onChanged();
+        } else {
+          httpMaxInitialLineLengthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       */
+      public Builder setHttpMaxInitialLineLength(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          httpMaxInitialLineLength_ = builderForValue.build();
+          onChanged();
+        } else {
+          httpMaxInitialLineLengthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       */
+      public Builder mergeHttpMaxInitialLineLength(com.google.protobuf.StringValue value) {
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          if (httpMaxInitialLineLength_ != null) {
+            httpMaxInitialLineLength_ =
+              com.google.protobuf.StringValue.newBuilder(httpMaxInitialLineLength_).mergeFrom(value).buildPartial();
+          } else {
+            httpMaxInitialLineLength_ = value;
+          }
+          onChanged();
+        } else {
+          httpMaxInitialLineLengthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       */
+      public Builder clearHttpMaxInitialLineLength() {
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          httpMaxInitialLineLength_ = null;
+          onChanged();
+        } else {
+          httpMaxInitialLineLength_ = null;
+          httpMaxInitialLineLengthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       */
+      public com.google.protobuf.StringValue.Builder getHttpMaxInitialLineLengthBuilder() {
+        
+        onChanged();
+        return getHttpMaxInitialLineLengthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getHttpMaxInitialLineLengthOrBuilder() {
+        if (httpMaxInitialLineLengthBuilder_ != null) {
+          return httpMaxInitialLineLengthBuilder_.getMessageOrBuilder();
+        } else {
+          return httpMaxInitialLineLength_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : httpMaxInitialLineLength_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum length allowed for HTTP URLs in the initial request line. URLs exceeding this limit will be rejected. Default is **4kb**.
+       * Default value: **4kb**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/network-settings/#advanced-http-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue http_max_initial_line_length = 8 [json_name = "http_max_initial_line_length"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getHttpMaxInitialLineLengthFieldBuilder() {
+        if (httpMaxInitialLineLengthBuilder_ == null) {
+          httpMaxInitialLineLengthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getHttpMaxInitialLineLength(),
+                  getParentForChildren(),
+                  isClean());
+          httpMaxInitialLineLength_ = null;
+        }
+        return httpMaxInitialLineLengthBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2765,26 +3073,28 @@ public final class Opensearch {
       "\n6yandex/cloud/mdb/opensearch/v1/config/" +
       "opensearch.proto\022%yandex.cloud.mdb.opens" +
       "earch.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\275" +
-      "\002\n\021OpenSearchConfig2\022Y\n\020max_clause_count" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\245" +
+      "\003\n\021OpenSearchConfig2\022Y\n\020max_clause_count" +
       "\030\003 \001(\0132\033.google.protobuf.Int64ValueB\020\372\3071" +
       "\0141-2147483647R\020max_clause_count\0222\n\024field" +
       "data_cache_size\030\004 \001(\tR\024fielddata_cache_s" +
       "ize\022]\n\022search_max_buckets\030\005 \001(\0132\033.google" +
       ".protobuf.Int64ValueB\020\372\3071\0140-2147483647R\022" +
       "search_max_buckets\022:\n\030reindex_remote_whi" +
-      "telist\030\006 \001(\tR\030reindex_remote_whitelist\"\221" +
-      "\002\n\024OpenSearchConfigSet2\022X\n\020effective_con" +
-      "fig\030\001 \001(\01328.yandex.cloud.mdb.opensearch." +
-      "v1.config.OpenSearchConfig2B\004\350\3071\001\022M\n\013use" +
-      "r_config\030\002 \001(\01328.yandex.cloud.mdb.opense" +
-      "arch.v1.config.OpenSearchConfig2\022P\n\016defa" +
-      "ult_config\030\003 \001(\01328.yandex.cloud.mdb.open" +
-      "search.v1.config.OpenSearchConfig2Bz\n\"ya" +
-      "ndex.cloud.api.mdb.opensearch.v1ZTgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/opensearch/v1/config;opensearchb\006" +
-      "proto3"
+      "telist\030\006 \001(\tR\030reindex_remote_whitelist\022`" +
+      "\n\034http_max_initial_line_length\030\010 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueR\034http_max_ini" +
+      "tial_line_lengthJ\004\010\007\020\010\"\221\002\n\024OpenSearchCon" +
+      "figSet2\022X\n\020effective_config\030\001 \001(\01328.yand" +
+      "ex.cloud.mdb.opensearch.v1.config.OpenSe" +
+      "archConfig2B\004\350\3071\001\022M\n\013user_config\030\002 \001(\01328" +
+      ".yandex.cloud.mdb.opensearch.v1.config.O" +
+      "penSearchConfig2\022P\n\016default_config\030\003 \001(\013" +
+      "28.yandex.cloud.mdb.opensearch.v1.config" +
+      ".OpenSearchConfig2Bz\n\"yandex.cloud.api.m" +
+      "db.opensearch.v1ZTgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/opensearc" +
+      "h/v1/config;opensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2797,7 +3107,7 @@ public final class Opensearch {
     internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfig2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfig2_descriptor,
-        new java.lang.String[] { "MaxClauseCount", "FielddataCacheSize", "SearchMaxBuckets", "ReindexRemoteWhitelist", });
+        new java.lang.String[] { "MaxClauseCount", "FielddataCacheSize", "SearchMaxBuckets", "ReindexRemoteWhitelist", "HttpMaxInitialLineLength", });
     internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfigSet2_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfigSet2_fieldAccessorTable = new

@@ -433,6 +433,321 @@ public final class TransferOuterClass {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.TransferStatus)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval}
+   */
+  public enum RegularSnapshotScheduleInterval
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_UNSPECIFIED = 0;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_UNSPECIFIED(0),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN = 2;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN(2),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_30MIN = 3;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_30MIN(3),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR = 4;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR(4),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_2HOUR = 5;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_2HOUR(5),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_3HOUR = 6;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_3HOUR(6),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_6HOUR = 7;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_6HOUR(7),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_8HOUR = 8;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_8HOUR(8),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_12HOUR = 9;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_12HOUR(9),
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_DAY = 10;</code>
+     */
+    REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_DAY(10),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_UNSPECIFIED = 0;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN = 2;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN_VALUE = 2;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_30MIN = 3;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_30MIN_VALUE = 3;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR = 4;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR_VALUE = 4;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_2HOUR = 5;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_2HOUR_VALUE = 5;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_3HOUR = 6;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_3HOUR_VALUE = 6;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_6HOUR = 7;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_6HOUR_VALUE = 7;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_8HOUR = 8;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_8HOUR_VALUE = 8;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_12HOUR = 9;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_12HOUR_VALUE = 9;
+    /**
+     * <code>REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_DAY = 10;</code>
+     */
+    public static final int REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_DAY_VALUE = 10;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RegularSnapshotScheduleInterval valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static RegularSnapshotScheduleInterval forNumber(int value) {
+      switch (value) {
+        case 0: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_UNSPECIFIED;
+        case 2: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN;
+        case 3: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_30MIN;
+        case 4: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR;
+        case 5: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_2HOUR;
+        case 6: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_3HOUR;
+        case 7: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_6HOUR;
+        case 8: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_8HOUR;
+        case 9: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_12HOUR;
+        case 10: return REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_DAY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RegularSnapshotScheduleInterval>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RegularSnapshotScheduleInterval> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RegularSnapshotScheduleInterval>() {
+            public RegularSnapshotScheduleInterval findValueByNumber(int number) {
+              return RegularSnapshotScheduleInterval.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final RegularSnapshotScheduleInterval[] VALUES = values();
+
+    public static RegularSnapshotScheduleInterval valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RegularSnapshotScheduleInterval(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval)
+  }
+
+  /**
+   * Protobuf enum {@code yandex.cloud.datatransfer.v1.Flavor}
+   */
+  public enum Flavor
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>FLAVOR_UNSPECIFIED = 0;</code>
+     */
+    FLAVOR_UNSPECIFIED(0),
+    /**
+     * <code>SMALL = 1;</code>
+     */
+    SMALL(1),
+    /**
+     * <code>MEDIUM = 2;</code>
+     */
+    MEDIUM(2),
+    /**
+     * <code>LARGE = 3;</code>
+     */
+    LARGE(3),
+    /**
+     * <code>TINY = 4;</code>
+     */
+    TINY(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>FLAVOR_UNSPECIFIED = 0;</code>
+     */
+    public static final int FLAVOR_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>SMALL = 1;</code>
+     */
+    public static final int SMALL_VALUE = 1;
+    /**
+     * <code>MEDIUM = 2;</code>
+     */
+    public static final int MEDIUM_VALUE = 2;
+    /**
+     * <code>LARGE = 3;</code>
+     */
+    public static final int LARGE_VALUE = 3;
+    /**
+     * <code>TINY = 4;</code>
+     */
+    public static final int TINY_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Flavor valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Flavor forNumber(int value) {
+      switch (value) {
+        case 0: return FLAVOR_UNSPECIFIED;
+        case 1: return SMALL;
+        case 2: return MEDIUM;
+        case 3: return LARGE;
+        case 4: return TINY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Flavor>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Flavor> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Flavor>() {
+            public Flavor findValueByNumber(int number) {
+              return Flavor.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final Flavor[] VALUES = values();
+
+    public static Flavor valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Flavor(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.Flavor)
+  }
+
   public interface TransferOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.Transfer)
       com.google.protobuf.MessageOrBuilder {
@@ -627,6 +942,36 @@ public final class TransferOuterClass {
      */
     com.google.protobuf.ByteString
         getWarningBytes();
+
+    /**
+     * <pre>
+     * Regular snapshots for the transfer, applicable only if transfer type is
+     * SNAPSHOT_ONLY
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+     * @return Whether the regularSnapshot field is set.
+     */
+    boolean hasRegularSnapshot();
+    /**
+     * <pre>
+     * Regular snapshots for the transfer, applicable only if transfer type is
+     * SNAPSHOT_ONLY
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+     * @return The regularSnapshot.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot();
+    /**
+     * <pre>
+     * Regular snapshots for the transfer, applicable only if transfer type is
+     * SNAPSHOT_ONLY
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder();
 
     /**
      * <pre>
@@ -852,6 +1197,19 @@ public final class TransferOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               warning_ = s;
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder subBuilder = null;
+              if (regularSnapshot_ != null) {
+                subBuilder = regularSnapshot_.toBuilder();
+              }
+              regularSnapshot_ = input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(regularSnapshot_);
+                regularSnapshot_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 138: {
@@ -1359,6 +1717,47 @@ public final class TransferOuterClass {
       }
     }
 
+    public static final int REGULAR_SNAPSHOT_FIELD_NUMBER = 16;
+    private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot regularSnapshot_;
+    /**
+     * <pre>
+     * Regular snapshots for the transfer, applicable only if transfer type is
+     * SNAPSHOT_ONLY
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+     * @return Whether the regularSnapshot field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegularSnapshot() {
+      return regularSnapshot_ != null;
+    }
+    /**
+     * <pre>
+     * Regular snapshots for the transfer, applicable only if transfer type is
+     * SNAPSHOT_ONLY
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+     * @return The regularSnapshot.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot() {
+      return regularSnapshot_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+    }
+    /**
+     * <pre>
+     * Regular snapshots for the transfer, applicable only if transfer type is
+     * SNAPSHOT_ONLY
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder() {
+      return getRegularSnapshot();
+    }
+
     public static final int TRANSFORMATION_FIELD_NUMBER = 17;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation transformation_;
     /**
@@ -1522,6 +1921,9 @@ public final class TransferOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(warning_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, warning_);
       }
+      if (regularSnapshot_ != null) {
+        output.writeMessage(16, getRegularSnapshot());
+      }
       if (transformation_ != null) {
         output.writeMessage(17, getTransformation());
       }
@@ -1588,6 +1990,10 @@ public final class TransferOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(warning_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, warning_);
       }
+      if (regularSnapshot_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getRegularSnapshot());
+      }
       if (transformation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getTransformation());
@@ -1648,6 +2054,11 @@ public final class TransferOuterClass {
       if (type_ != other.type_) return false;
       if (!getWarning()
           .equals(other.getWarning())) return false;
+      if (hasRegularSnapshot() != other.hasRegularSnapshot()) return false;
+      if (hasRegularSnapshot()) {
+        if (!getRegularSnapshot()
+            .equals(other.getRegularSnapshot())) return false;
+      }
       if (hasTransformation() != other.hasTransformation()) return false;
       if (hasTransformation()) {
         if (!getTransformation()
@@ -1706,6 +2117,10 @@ public final class TransferOuterClass {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + WARNING_FIELD_NUMBER;
       hash = (53 * hash) + getWarning().hashCode();
+      if (hasRegularSnapshot()) {
+        hash = (37 * hash) + REGULAR_SNAPSHOT_FIELD_NUMBER;
+        hash = (53 * hash) + getRegularSnapshot().hashCode();
+      }
       if (hasTransformation()) {
         hash = (37 * hash) + TRANSFORMATION_FIELD_NUMBER;
         hash = (53 * hash) + getTransformation().hashCode();
@@ -1913,6 +2328,12 @@ public final class TransferOuterClass {
 
         warning_ = "";
 
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = null;
+        } else {
+          regularSnapshot_ = null;
+          regularSnapshotBuilder_ = null;
+        }
         if (transformationBuilder_ == null) {
           transformation_ = null;
         } else {
@@ -1984,6 +2405,11 @@ public final class TransferOuterClass {
         result.status_ = status_;
         result.type_ = type_;
         result.warning_ = warning_;
+        if (regularSnapshotBuilder_ == null) {
+          result.regularSnapshot_ = regularSnapshot_;
+        } else {
+          result.regularSnapshot_ = regularSnapshotBuilder_.build();
+        }
         if (transformationBuilder_ == null) {
           result.transformation_ = transformation_;
         } else {
@@ -2084,6 +2510,9 @@ public final class TransferOuterClass {
         if (!other.getWarning().isEmpty()) {
           warning_ = other.warning_;
           onChanged();
+        }
+        if (other.hasRegularSnapshot()) {
+          mergeRegularSnapshot(other.getRegularSnapshot());
         }
         if (other.hasTransformation()) {
           mergeTransformation(other.getTransformation());
@@ -3182,6 +3611,170 @@ public final class TransferOuterClass {
         warning_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot regularSnapshot_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder> regularSnapshotBuilder_;
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       * @return Whether the regularSnapshot field is set.
+       */
+      public boolean hasRegularSnapshot() {
+        return regularSnapshotBuilder_ != null || regularSnapshot_ != null;
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       * @return The regularSnapshot.
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot() {
+        if (regularSnapshotBuilder_ == null) {
+          return regularSnapshot_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+        } else {
+          return regularSnapshotBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       */
+      public Builder setRegularSnapshot(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot value) {
+        if (regularSnapshotBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          regularSnapshot_ = value;
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       */
+      public Builder setRegularSnapshot(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder builderForValue) {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = builderForValue.build();
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       */
+      public Builder mergeRegularSnapshot(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot value) {
+        if (regularSnapshotBuilder_ == null) {
+          if (regularSnapshot_ != null) {
+            regularSnapshot_ =
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.newBuilder(regularSnapshot_).mergeFrom(value).buildPartial();
+          } else {
+            regularSnapshot_ = value;
+          }
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       */
+      public Builder clearRegularSnapshot() {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = null;
+          onChanged();
+        } else {
+          regularSnapshot_ = null;
+          regularSnapshotBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder getRegularSnapshotBuilder() {
+        
+        onChanged();
+        return getRegularSnapshotFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder() {
+        if (regularSnapshotBuilder_ != null) {
+          return regularSnapshotBuilder_.getMessageOrBuilder();
+        } else {
+          return regularSnapshot_ == null ?
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+        }
+      }
+      /**
+       * <pre>
+       * Regular snapshots for the transfer, applicable only if transfer type is
+       * SNAPSHOT_ONLY
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder> 
+          getRegularSnapshotFieldBuilder() {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder>(
+                  getRegularSnapshot(),
+                  getParentForChildren(),
+                  isClean());
+          regularSnapshot_ = null;
+        }
+        return regularSnapshotBuilder_;
       }
 
       private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation transformation_;
@@ -5022,6 +5615,4665 @@ public final class TransferOuterClass {
 
   }
 
+  public interface RegularSnapshotOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.RegularSnapshot)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+     * @return Whether the settings field is set.
+     */
+    boolean hasSettings();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+     * @return The settings.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings getSettings();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+     * @return Whether the disabled field is set.
+     */
+    boolean hasDisabled();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+     * @return The disabled.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled getDisabled();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabledOrBuilder getDisabledOrBuilder();
+
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.ModeCase getModeCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshot}
+   */
+  public static final class RegularSnapshot extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.RegularSnapshot)
+      RegularSnapshotOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegularSnapshot.newBuilder() to construct.
+    private RegularSnapshot(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegularSnapshot() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegularSnapshot();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegularSnapshot(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder subBuilder = null;
+              if (modeCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_).toBuilder();
+              }
+              mode_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_);
+                mode_ = subBuilder.buildPartial();
+              }
+              modeCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder subBuilder = null;
+              if (modeCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_).toBuilder();
+              }
+              mode_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_);
+                mode_ = subBuilder.buildPartial();
+              }
+              modeCase_ = 4;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder.class);
+    }
+
+    private int modeCase_ = 0;
+    private java.lang.Object mode_;
+    public enum ModeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SETTINGS(3),
+      DISABLED(4),
+      MODE_NOT_SET(0);
+      private final int value;
+      private ModeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ModeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ModeCase forNumber(int value) {
+        switch (value) {
+          case 3: return SETTINGS;
+          case 4: return DISABLED;
+          case 0: return MODE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ModeCase
+    getModeCase() {
+      return ModeCase.forNumber(
+          modeCase_);
+    }
+
+    public static final int SETTINGS_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+     * @return Whether the settings field is set.
+     */
+    @java.lang.Override
+    public boolean hasSettings() {
+      return modeCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+     * @return The settings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings getSettings() {
+      if (modeCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_;
+      }
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettingsOrBuilder getSettingsOrBuilder() {
+      if (modeCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_;
+      }
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance();
+    }
+
+    public static final int DISABLED_FIELD_NUMBER = 4;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+     * @return Whether the disabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasDisabled() {
+      return modeCase_ == 4;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+     * @return The disabled.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled getDisabled() {
+      if (modeCase_ == 4) {
+         return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_;
+      }
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabledOrBuilder getDisabledOrBuilder() {
+      if (modeCase_ == 4) {
+         return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_;
+      }
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (modeCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_);
+      }
+      if (modeCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (modeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_);
+      }
+      if (modeCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot other = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot) obj;
+
+      if (!getModeCase().equals(other.getModeCase())) return false;
+      switch (modeCase_) {
+        case 3:
+          if (!getSettings()
+              .equals(other.getSettings())) return false;
+          break;
+        case 4:
+          if (!getDisabled()
+              .equals(other.getDisabled())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (modeCase_) {
+        case 3:
+          hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getSettings().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + DISABLED_FIELD_NUMBER;
+          hash = (53 * hash) + getDisabled().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshot}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.RegularSnapshot)
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        modeCase_ = 0;
+        mode_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot build() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot buildPartial() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot(this);
+        if (modeCase_ == 3) {
+          if (settingsBuilder_ == null) {
+            result.mode_ = mode_;
+          } else {
+            result.mode_ = settingsBuilder_.build();
+          }
+        }
+        if (modeCase_ == 4) {
+          if (disabledBuilder_ == null) {
+            result.mode_ = mode_;
+          } else {
+            result.mode_ = disabledBuilder_.build();
+          }
+        }
+        result.modeCase_ = modeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot other) {
+        if (other == yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance()) return this;
+        switch (other.getModeCase()) {
+          case SETTINGS: {
+            mergeSettings(other.getSettings());
+            break;
+          }
+          case DISABLED: {
+            mergeDisabled(other.getDisabled());
+            break;
+          }
+          case MODE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int modeCase_ = 0;
+      private java.lang.Object mode_;
+      public ModeCase
+          getModeCase() {
+        return ModeCase.forNumber(
+            modeCase_);
+      }
+
+      public Builder clearMode() {
+        modeCase_ = 0;
+        mode_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettingsOrBuilder> settingsBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       * @return Whether the settings field is set.
+       */
+      @java.lang.Override
+      public boolean hasSettings() {
+        return modeCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       * @return The settings.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings getSettings() {
+        if (settingsBuilder_ == null) {
+          if (modeCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_;
+          }
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance();
+        } else {
+          if (modeCase_ == 3) {
+            return settingsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       */
+      public Builder setSettings(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings value) {
+        if (settingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mode_ = value;
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(value);
+        }
+        modeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       */
+      public Builder setSettings(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder builderForValue) {
+        if (settingsBuilder_ == null) {
+          mode_ = builderForValue.build();
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(builderForValue.build());
+        }
+        modeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       */
+      public Builder mergeSettings(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings value) {
+        if (settingsBuilder_ == null) {
+          if (modeCase_ == 3 &&
+              mode_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance()) {
+            mode_ = yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.newBuilder((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            mode_ = value;
+          }
+          onChanged();
+        } else {
+          if (modeCase_ == 3) {
+            settingsBuilder_.mergeFrom(value);
+          }
+          settingsBuilder_.setMessage(value);
+        }
+        modeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       */
+      public Builder clearSettings() {
+        if (settingsBuilder_ == null) {
+          if (modeCase_ == 3) {
+            modeCase_ = 0;
+            mode_ = null;
+            onChanged();
+          }
+        } else {
+          if (modeCase_ == 3) {
+            modeCase_ = 0;
+            mode_ = null;
+          }
+          settingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder getSettingsBuilder() {
+        return getSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettingsOrBuilder getSettingsOrBuilder() {
+        if ((modeCase_ == 3) && (settingsBuilder_ != null)) {
+          return settingsBuilder_.getMessageOrBuilder();
+        } else {
+          if (modeCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_;
+          }
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings settings = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettingsOrBuilder> 
+          getSettingsFieldBuilder() {
+        if (settingsBuilder_ == null) {
+          if (!(modeCase_ == 3)) {
+            mode_ = yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance();
+          }
+          settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettingsOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) mode_,
+                  getParentForChildren(),
+                  isClean());
+          mode_ = null;
+        }
+        modeCase_ = 3;
+        onChanged();;
+        return settingsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabledOrBuilder> disabledBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       * @return Whether the disabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasDisabled() {
+        return modeCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       * @return The disabled.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled getDisabled() {
+        if (disabledBuilder_ == null) {
+          if (modeCase_ == 4) {
+            return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_;
+          }
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance();
+        } else {
+          if (modeCase_ == 4) {
+            return disabledBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       */
+      public Builder setDisabled(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled value) {
+        if (disabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mode_ = value;
+          onChanged();
+        } else {
+          disabledBuilder_.setMessage(value);
+        }
+        modeCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       */
+      public Builder setDisabled(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder builderForValue) {
+        if (disabledBuilder_ == null) {
+          mode_ = builderForValue.build();
+          onChanged();
+        } else {
+          disabledBuilder_.setMessage(builderForValue.build());
+        }
+        modeCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       */
+      public Builder mergeDisabled(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled value) {
+        if (disabledBuilder_ == null) {
+          if (modeCase_ == 4 &&
+              mode_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance()) {
+            mode_ = yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.newBuilder((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            mode_ = value;
+          }
+          onChanged();
+        } else {
+          if (modeCase_ == 4) {
+            disabledBuilder_.mergeFrom(value);
+          }
+          disabledBuilder_.setMessage(value);
+        }
+        modeCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       */
+      public Builder clearDisabled() {
+        if (disabledBuilder_ == null) {
+          if (modeCase_ == 4) {
+            modeCase_ = 0;
+            mode_ = null;
+            onChanged();
+          }
+        } else {
+          if (modeCase_ == 4) {
+            modeCase_ = 0;
+            mode_ = null;
+          }
+          disabledBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder getDisabledBuilder() {
+        return getDisabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabledOrBuilder getDisabledOrBuilder() {
+        if ((modeCase_ == 4) && (disabledBuilder_ != null)) {
+          return disabledBuilder_.getMessageOrBuilder();
+        } else {
+          if (modeCase_ == 4) {
+            return (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_;
+          }
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotDisabled disabled = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabledOrBuilder> 
+          getDisabledFieldBuilder() {
+        if (disabledBuilder_ == null) {
+          if (!(modeCase_ == 4)) {
+            mode_ = yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance();
+          }
+          disabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabledOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) mode_,
+                  getParentForChildren(),
+                  isClean());
+          mode_ = null;
+        }
+        modeCase_ = 4;
+        onChanged();;
+        return disabledBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.RegularSnapshot)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.RegularSnapshot)
+    private static final yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegularSnapshot>
+        PARSER = new com.google.protobuf.AbstractParser<RegularSnapshot>() {
+      @java.lang.Override
+      public RegularSnapshot parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegularSnapshot(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegularSnapshot> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegularSnapshot> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegularSnapshotDisabledOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.RegularSnapshotDisabled)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * Regular snapshot disabled
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshotDisabled}
+   */
+  public static final class RegularSnapshotDisabled extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.RegularSnapshotDisabled)
+      RegularSnapshotDisabledOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegularSnapshotDisabled.newBuilder() to construct.
+    private RegularSnapshotDisabled(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegularSnapshotDisabled() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegularSnapshotDisabled();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegularSnapshotDisabled(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled other = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Regular snapshot disabled
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshotDisabled}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.RegularSnapshotDisabled)
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabledOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled build() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled buildPartial() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled other) {
+        if (other == yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.RegularSnapshotDisabled)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.RegularSnapshotDisabled)
+    private static final yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegularSnapshotDisabled>
+        PARSER = new com.google.protobuf.AbstractParser<RegularSnapshotDisabled>() {
+      @java.lang.Override
+      public RegularSnapshotDisabled parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegularSnapshotDisabled(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegularSnapshotDisabled> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegularSnapshotDisabled> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotDisabled getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegularSnapshotSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.RegularSnapshotSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * User predefined periods to schedule regular snapshots:
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+     * @return The enum numeric value on the wire for schedule.
+     */
+    int getScheduleValue();
+    /**
+     * <pre>
+     * User predefined periods to schedule regular snapshots:
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+     * @return The schedule.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval getSchedule();
+
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable> 
+        getTablesList();
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable getTables(int index);
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    int getTablesCount();
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder> 
+        getTablesOrBuilderList();
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder getTablesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+     * The used cron expression format is 5 columns specifying the execution time
+     * (minute, hour, day, month, day of the week), 
+     * they can contain a numeric list separated by commas, a range of numbers
+     * separated by a hyphen, symbols * or /.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>string cron_expression = 3;</code>
+     * @return The cronExpression.
+     */
+    java.lang.String getCronExpression();
+    /**
+     * <pre>
+     * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+     * The used cron expression format is 5 columns specifying the execution time
+     * (minute, hour, day, month, day of the week), 
+     * they can contain a numeric list separated by commas, a range of numbers
+     * separated by a hyphen, symbols * or /.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>string cron_expression = 3;</code>
+     * @return The bytes for cronExpression.
+     */
+    com.google.protobuf.ByteString
+        getCronExpressionBytes();
+
+    /**
+     * <pre>
+     * Wait for transaction completion time, in seconds
+     * Set load delay time to insure that current transactions on source are completed
+     * and thus full data is visible for snapshot. 
+     * This may be useful if source cannot guarantee that cursor values grows
+     * monotonically - 
+     * due to transaction race or well-known problem that serial id sequence does not
+     * actually guarantee the order
+     * </pre>
+     *
+     * <code>int64 increment_delay_seconds = 4;</code>
+     * @return The incrementDelaySeconds.
+     */
+    long getIncrementDelaySeconds();
+
+    /**
+     * <pre>
+     * Regular snapshot retries, only for cloud installation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+     * @return Whether the retryConfig field is set.
+     */
+    boolean hasRetryConfig();
+    /**
+     * <pre>
+     * Regular snapshot retries, only for cloud installation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+     * @return The retryConfig.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig getRetryConfig();
+    /**
+     * <pre>
+     * Regular snapshot retries, only for cloud installation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfigOrBuilder getRetryConfigOrBuilder();
+  }
+  /**
+   * <pre>
+   * Regular snapshot settings
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshotSettings}
+   */
+  public static final class RegularSnapshotSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.RegularSnapshotSettings)
+      RegularSnapshotSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegularSnapshotSettings.newBuilder() to construct.
+    private RegularSnapshotSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegularSnapshotSettings() {
+      schedule_ = 0;
+      tables_ = java.util.Collections.emptyList();
+      cronExpression_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegularSnapshotSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegularSnapshotSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              schedule_ = rawValue;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tables_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tables_.add(
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cronExpression_ = s;
+              break;
+            }
+            case 32: {
+
+              incrementDelaySeconds_ = input.readInt64();
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder subBuilder = null;
+              if (retryConfig_ != null) {
+                subBuilder = retryConfig_.toBuilder();
+              }
+              retryConfig_ = input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(retryConfig_);
+                retryConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tables_ = java.util.Collections.unmodifiableList(tables_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder.class);
+    }
+
+    public interface RetryConfigOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Number of attempts to retry regular snapshot in case of failure. Applicable only
+       * for cloud installation.
+       * </pre>
+       *
+       * <code>int64 max_attempts = 1;</code>
+       * @return The maxAttempts.
+       */
+      long getMaxAttempts();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig}
+     */
+    public static final class RetryConfig extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig)
+        RetryConfigOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RetryConfig.newBuilder() to construct.
+      private RetryConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RetryConfig() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RetryConfig();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RetryConfig(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                maxAttempts_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder.class);
+      }
+
+      public static final int MAX_ATTEMPTS_FIELD_NUMBER = 1;
+      private long maxAttempts_;
+      /**
+       * <pre>
+       * Number of attempts to retry regular snapshot in case of failure. Applicable only
+       * for cloud installation.
+       * </pre>
+       *
+       * <code>int64 max_attempts = 1;</code>
+       * @return The maxAttempts.
+       */
+      @java.lang.Override
+      public long getMaxAttempts() {
+        return maxAttempts_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (maxAttempts_ != 0L) {
+          output.writeInt64(1, maxAttempts_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (maxAttempts_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, maxAttempts_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig other = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig) obj;
+
+        if (getMaxAttempts()
+            != other.getMaxAttempts()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + MAX_ATTEMPTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMaxAttempts());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig)
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfigOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          maxAttempts_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig getDefaultInstanceForType() {
+          return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig build() {
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig buildPartial() {
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig(this);
+          result.maxAttempts_ = maxAttempts_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig) {
+            return mergeFrom((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig other) {
+          if (other == yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.getDefaultInstance()) return this;
+          if (other.getMaxAttempts() != 0L) {
+            setMaxAttempts(other.getMaxAttempts());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long maxAttempts_ ;
+        /**
+         * <pre>
+         * Number of attempts to retry regular snapshot in case of failure. Applicable only
+         * for cloud installation.
+         * </pre>
+         *
+         * <code>int64 max_attempts = 1;</code>
+         * @return The maxAttempts.
+         */
+        @java.lang.Override
+        public long getMaxAttempts() {
+          return maxAttempts_;
+        }
+        /**
+         * <pre>
+         * Number of attempts to retry regular snapshot in case of failure. Applicable only
+         * for cloud installation.
+         * </pre>
+         *
+         * <code>int64 max_attempts = 1;</code>
+         * @param value The maxAttempts to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMaxAttempts(long value) {
+          
+          maxAttempts_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of attempts to retry regular snapshot in case of failure. Applicable only
+         * for cloud installation.
+         * </pre>
+         *
+         * <code>int64 max_attempts = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMaxAttempts() {
+          
+          maxAttempts_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig)
+      private static final yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig();
+      }
+
+      public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RetryConfig>
+          PARSER = new com.google.protobuf.AbstractParser<RetryConfig>() {
+        @java.lang.Override
+        public RetryConfig parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RetryConfig(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RetryConfig> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RetryConfig> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int SCHEDULE_FIELD_NUMBER = 1;
+    private int schedule_;
+    /**
+     * <pre>
+     * User predefined periods to schedule regular snapshots:
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+     * @return The enum numeric value on the wire for schedule.
+     */
+    @java.lang.Override public int getScheduleValue() {
+      return schedule_;
+    }
+    /**
+     * <pre>
+     * User predefined periods to schedule regular snapshots:
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+     * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+     * @return The schedule.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval getSchedule() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval result = yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval.valueOf(schedule_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval.UNRECOGNIZED : result;
+    }
+
+    public static final int TABLES_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable> tables_;
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable> getTablesList() {
+      return tables_;
+    }
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder> 
+        getTablesOrBuilderList() {
+      return tables_;
+    }
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    @java.lang.Override
+    public int getTablesCount() {
+      return tables_.size();
+    }
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable getTables(int index) {
+      return tables_.get(index);
+    }
+    /**
+     * <pre>
+     * Incremental tables configuration for regular snapshot. 
+     * If not empty, each snapshot will copy only data changed since last snapshot
+     * based on cursor column value.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder getTablesOrBuilder(
+        int index) {
+      return tables_.get(index);
+    }
+
+    public static final int CRON_EXPRESSION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object cronExpression_;
+    /**
+     * <pre>
+     * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+     * The used cron expression format is 5 columns specifying the execution time
+     * (minute, hour, day, month, day of the week), 
+     * they can contain a numeric list separated by commas, a range of numbers
+     * separated by a hyphen, symbols * or /.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>string cron_expression = 3;</code>
+     * @return The cronExpression.
+     */
+    @java.lang.Override
+    public java.lang.String getCronExpression() {
+      java.lang.Object ref = cronExpression_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cronExpression_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+     * The used cron expression format is 5 columns specifying the execution time
+     * (minute, hour, day, month, day of the week), 
+     * they can contain a numeric list separated by commas, a range of numbers
+     * separated by a hyphen, symbols * or /.
+     * only one of schedule or cron_expression should be set
+     * </pre>
+     *
+     * <code>string cron_expression = 3;</code>
+     * @return The bytes for cronExpression.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCronExpressionBytes() {
+      java.lang.Object ref = cronExpression_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cronExpression_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INCREMENT_DELAY_SECONDS_FIELD_NUMBER = 4;
+    private long incrementDelaySeconds_;
+    /**
+     * <pre>
+     * Wait for transaction completion time, in seconds
+     * Set load delay time to insure that current transactions on source are completed
+     * and thus full data is visible for snapshot. 
+     * This may be useful if source cannot guarantee that cursor values grows
+     * monotonically - 
+     * due to transaction race or well-known problem that serial id sequence does not
+     * actually guarantee the order
+     * </pre>
+     *
+     * <code>int64 increment_delay_seconds = 4;</code>
+     * @return The incrementDelaySeconds.
+     */
+    @java.lang.Override
+    public long getIncrementDelaySeconds() {
+      return incrementDelaySeconds_;
+    }
+
+    public static final int RETRY_CONFIG_FIELD_NUMBER = 5;
+    private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig retryConfig_;
+    /**
+     * <pre>
+     * Regular snapshot retries, only for cloud installation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+     * @return Whether the retryConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetryConfig() {
+      return retryConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Regular snapshot retries, only for cloud installation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+     * @return The retryConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig getRetryConfig() {
+      return retryConfig_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.getDefaultInstance() : retryConfig_;
+    }
+    /**
+     * <pre>
+     * Regular snapshot retries, only for cloud installation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfigOrBuilder getRetryConfigOrBuilder() {
+      return getRetryConfig();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (schedule_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval.REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, schedule_);
+      }
+      for (int i = 0; i < tables_.size(); i++) {
+        output.writeMessage(2, tables_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cronExpression_);
+      }
+      if (incrementDelaySeconds_ != 0L) {
+        output.writeInt64(4, incrementDelaySeconds_);
+      }
+      if (retryConfig_ != null) {
+        output.writeMessage(5, getRetryConfig());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (schedule_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval.REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, schedule_);
+      }
+      for (int i = 0; i < tables_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tables_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cronExpression_);
+      }
+      if (incrementDelaySeconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, incrementDelaySeconds_);
+      }
+      if (retryConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getRetryConfig());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings other = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) obj;
+
+      if (schedule_ != other.schedule_) return false;
+      if (!getTablesList()
+          .equals(other.getTablesList())) return false;
+      if (!getCronExpression()
+          .equals(other.getCronExpression())) return false;
+      if (getIncrementDelaySeconds()
+          != other.getIncrementDelaySeconds()) return false;
+      if (hasRetryConfig() != other.hasRetryConfig()) return false;
+      if (hasRetryConfig()) {
+        if (!getRetryConfig()
+            .equals(other.getRetryConfig())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
+      hash = (53 * hash) + schedule_;
+      if (getTablesCount() > 0) {
+        hash = (37 * hash) + TABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getTablesList().hashCode();
+      }
+      hash = (37 * hash) + CRON_EXPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCronExpression().hashCode();
+      hash = (37 * hash) + INCREMENT_DELAY_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIncrementDelaySeconds());
+      if (hasRetryConfig()) {
+        hash = (37 * hash) + RETRY_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getRetryConfig().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Regular snapshot settings
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.RegularSnapshotSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.RegularSnapshotSettings)
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTablesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        schedule_ = 0;
+
+        if (tablesBuilder_ == null) {
+          tables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          tablesBuilder_.clear();
+        }
+        cronExpression_ = "";
+
+        incrementDelaySeconds_ = 0L;
+
+        if (retryConfigBuilder_ == null) {
+          retryConfig_ = null;
+        } else {
+          retryConfig_ = null;
+          retryConfigBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings build() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings buildPartial() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings(this);
+        int from_bitField0_ = bitField0_;
+        result.schedule_ = schedule_;
+        if (tablesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            tables_ = java.util.Collections.unmodifiableList(tables_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.tables_ = tables_;
+        } else {
+          result.tables_ = tablesBuilder_.build();
+        }
+        result.cronExpression_ = cronExpression_;
+        result.incrementDelaySeconds_ = incrementDelaySeconds_;
+        if (retryConfigBuilder_ == null) {
+          result.retryConfig_ = retryConfig_;
+        } else {
+          result.retryConfig_ = retryConfigBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings other) {
+        if (other == yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.getDefaultInstance()) return this;
+        if (other.schedule_ != 0) {
+          setScheduleValue(other.getScheduleValue());
+        }
+        if (tablesBuilder_ == null) {
+          if (!other.tables_.isEmpty()) {
+            if (tables_.isEmpty()) {
+              tables_ = other.tables_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTablesIsMutable();
+              tables_.addAll(other.tables_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tables_.isEmpty()) {
+            if (tablesBuilder_.isEmpty()) {
+              tablesBuilder_.dispose();
+              tablesBuilder_ = null;
+              tables_ = other.tables_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              tablesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTablesFieldBuilder() : null;
+            } else {
+              tablesBuilder_.addAllMessages(other.tables_);
+            }
+          }
+        }
+        if (!other.getCronExpression().isEmpty()) {
+          cronExpression_ = other.cronExpression_;
+          onChanged();
+        }
+        if (other.getIncrementDelaySeconds() != 0L) {
+          setIncrementDelaySeconds(other.getIncrementDelaySeconds());
+        }
+        if (other.hasRetryConfig()) {
+          mergeRetryConfig(other.getRetryConfig());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int schedule_ = 0;
+      /**
+       * <pre>
+       * User predefined periods to schedule regular snapshots:
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+       * @return The enum numeric value on the wire for schedule.
+       */
+      @java.lang.Override public int getScheduleValue() {
+        return schedule_;
+      }
+      /**
+       * <pre>
+       * User predefined periods to schedule regular snapshots:
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+       * @param value The enum numeric value on the wire for schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScheduleValue(int value) {
+        
+        schedule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User predefined periods to schedule regular snapshots:
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+       * @return The schedule.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval getSchedule() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval result = yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval.valueOf(schedule_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * User predefined periods to schedule regular snapshots:
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+       * @param value The schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchedule(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotScheduleInterval value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        schedule_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User predefined periods to schedule regular snapshots:
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_15MIN,
+       * REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_HOUR, etc.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotScheduleInterval schedule = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchedule() {
+        
+        schedule_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable> tables_ =
+        java.util.Collections.emptyList();
+      private void ensureTablesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tables_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable>(tables_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder> tablesBuilder_;
+
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable> getTablesList() {
+        if (tablesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tables_);
+        } else {
+          return tablesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public int getTablesCount() {
+        if (tablesBuilder_ == null) {
+          return tables_.size();
+        } else {
+          return tablesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable getTables(int index) {
+        if (tablesBuilder_ == null) {
+          return tables_.get(index);
+        } else {
+          return tablesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder setTables(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable value) {
+        if (tablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTablesIsMutable();
+          tables_.set(index, value);
+          onChanged();
+        } else {
+          tablesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder setTables(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder builderForValue) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tablesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder addTables(yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable value) {
+        if (tablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTablesIsMutable();
+          tables_.add(value);
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder addTables(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable value) {
+        if (tablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTablesIsMutable();
+          tables_.add(index, value);
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder addTables(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder builderForValue) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder addTables(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder builderForValue) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder addAllTables(
+          java.lang.Iterable<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable> values) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tables_);
+          onChanged();
+        } else {
+          tablesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder clearTables() {
+        if (tablesBuilder_ == null) {
+          tables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          tablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public Builder removeTables(int index) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.remove(index);
+          onChanged();
+        } else {
+          tablesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder getTablesBuilder(
+          int index) {
+        return getTablesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder getTablesOrBuilder(
+          int index) {
+        if (tablesBuilder_ == null) {
+          return tables_.get(index);  } else {
+          return tablesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder> 
+           getTablesOrBuilderList() {
+        if (tablesBuilder_ != null) {
+          return tablesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tables_);
+        }
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder addTablesBuilder() {
+        return getTablesFieldBuilder().addBuilder(
+            yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder addTablesBuilder(
+          int index) {
+        return getTablesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Incremental tables configuration for regular snapshot. 
+       * If not empty, each snapshot will copy only data changed since last snapshot
+       * based on cursor column value.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.IncrementalTable tables = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder> 
+           getTablesBuilderList() {
+        return getTablesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder> 
+          getTablesFieldBuilder() {
+        if (tablesBuilder_ == null) {
+          tablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder>(
+                  tables_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tables_ = null;
+        }
+        return tablesBuilder_;
+      }
+
+      private java.lang.Object cronExpression_ = "";
+      /**
+       * <pre>
+       * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+       * The used cron expression format is 5 columns specifying the execution time
+       * (minute, hour, day, month, day of the week), 
+       * they can contain a numeric list separated by commas, a range of numbers
+       * separated by a hyphen, symbols * or /.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>string cron_expression = 3;</code>
+       * @return The cronExpression.
+       */
+      public java.lang.String getCronExpression() {
+        java.lang.Object ref = cronExpression_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cronExpression_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+       * The used cron expression format is 5 columns specifying the execution time
+       * (minute, hour, day, month, day of the week), 
+       * they can contain a numeric list separated by commas, a range of numbers
+       * separated by a hyphen, symbols * or /.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>string cron_expression = 3;</code>
+       * @return The bytes for cronExpression.
+       */
+      public com.google.protobuf.ByteString
+          getCronExpressionBytes() {
+        java.lang.Object ref = cronExpression_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cronExpression_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+       * The used cron expression format is 5 columns specifying the execution time
+       * (minute, hour, day, month, day of the week), 
+       * they can contain a numeric list separated by commas, a range of numbers
+       * separated by a hyphen, symbols * or /.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>string cron_expression = 3;</code>
+       * @param value The cronExpression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronExpression(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cronExpression_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+       * The used cron expression format is 5 columns specifying the execution time
+       * (minute, hour, day, month, day of the week), 
+       * they can contain a numeric list separated by commas, a range of numbers
+       * separated by a hyphen, symbols * or /.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>string cron_expression = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCronExpression() {
+        
+        cronExpression_ = getDefaultInstance().getCronExpression();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Use a cron expression to schedule transfer regular snapshots in UTC time. 
+       * The used cron expression format is 5 columns specifying the execution time
+       * (minute, hour, day, month, day of the week), 
+       * they can contain a numeric list separated by commas, a range of numbers
+       * separated by a hyphen, symbols * or /.
+       * only one of schedule or cron_expression should be set
+       * </pre>
+       *
+       * <code>string cron_expression = 3;</code>
+       * @param value The bytes for cronExpression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCronExpressionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cronExpression_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long incrementDelaySeconds_ ;
+      /**
+       * <pre>
+       * Wait for transaction completion time, in seconds
+       * Set load delay time to insure that current transactions on source are completed
+       * and thus full data is visible for snapshot. 
+       * This may be useful if source cannot guarantee that cursor values grows
+       * monotonically - 
+       * due to transaction race or well-known problem that serial id sequence does not
+       * actually guarantee the order
+       * </pre>
+       *
+       * <code>int64 increment_delay_seconds = 4;</code>
+       * @return The incrementDelaySeconds.
+       */
+      @java.lang.Override
+      public long getIncrementDelaySeconds() {
+        return incrementDelaySeconds_;
+      }
+      /**
+       * <pre>
+       * Wait for transaction completion time, in seconds
+       * Set load delay time to insure that current transactions on source are completed
+       * and thus full data is visible for snapshot. 
+       * This may be useful if source cannot guarantee that cursor values grows
+       * monotonically - 
+       * due to transaction race or well-known problem that serial id sequence does not
+       * actually guarantee the order
+       * </pre>
+       *
+       * <code>int64 increment_delay_seconds = 4;</code>
+       * @param value The incrementDelaySeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncrementDelaySeconds(long value) {
+        
+        incrementDelaySeconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Wait for transaction completion time, in seconds
+       * Set load delay time to insure that current transactions on source are completed
+       * and thus full data is visible for snapshot. 
+       * This may be useful if source cannot guarantee that cursor values grows
+       * monotonically - 
+       * due to transaction race or well-known problem that serial id sequence does not
+       * actually guarantee the order
+       * </pre>
+       *
+       * <code>int64 increment_delay_seconds = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncrementDelaySeconds() {
+        
+        incrementDelaySeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig retryConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfigOrBuilder> retryConfigBuilder_;
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       * @return Whether the retryConfig field is set.
+       */
+      public boolean hasRetryConfig() {
+        return retryConfigBuilder_ != null || retryConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       * @return The retryConfig.
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig getRetryConfig() {
+        if (retryConfigBuilder_ == null) {
+          return retryConfig_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.getDefaultInstance() : retryConfig_;
+        } else {
+          return retryConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       */
+      public Builder setRetryConfig(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig value) {
+        if (retryConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          retryConfig_ = value;
+          onChanged();
+        } else {
+          retryConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       */
+      public Builder setRetryConfig(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder builderForValue) {
+        if (retryConfigBuilder_ == null) {
+          retryConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          retryConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       */
+      public Builder mergeRetryConfig(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig value) {
+        if (retryConfigBuilder_ == null) {
+          if (retryConfig_ != null) {
+            retryConfig_ =
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.newBuilder(retryConfig_).mergeFrom(value).buildPartial();
+          } else {
+            retryConfig_ = value;
+          }
+          onChanged();
+        } else {
+          retryConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       */
+      public Builder clearRetryConfig() {
+        if (retryConfigBuilder_ == null) {
+          retryConfig_ = null;
+          onChanged();
+        } else {
+          retryConfig_ = null;
+          retryConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder getRetryConfigBuilder() {
+        
+        onChanged();
+        return getRetryConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfigOrBuilder getRetryConfigOrBuilder() {
+        if (retryConfigBuilder_ != null) {
+          return retryConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return retryConfig_ == null ?
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.getDefaultInstance() : retryConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Regular snapshot retries, only for cloud installation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshotSettings.RetryConfig retry_config = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfigOrBuilder> 
+          getRetryConfigFieldBuilder() {
+        if (retryConfigBuilder_ == null) {
+          retryConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfig.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings.RetryConfigOrBuilder>(
+                  getRetryConfig(),
+                  getParentForChildren(),
+                  isClean());
+          retryConfig_ = null;
+        }
+        return retryConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.RegularSnapshotSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.RegularSnapshotSettings)
+    private static final yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegularSnapshotSettings>
+        PARSER = new com.google.protobuf.AbstractParser<RegularSnapshotSettings>() {
+      @java.lang.Override
+      public RegularSnapshotSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegularSnapshotSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegularSnapshotSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegularSnapshotSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IncrementalTableOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.IncrementalTable)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string table_namespace = 1;</code>
+     * @return The tableNamespace.
+     */
+    java.lang.String getTableNamespace();
+    /**
+     * <code>string table_namespace = 1;</code>
+     * @return The bytes for tableNamespace.
+     */
+    com.google.protobuf.ByteString
+        getTableNamespaceBytes();
+
+    /**
+     * <code>string table_name = 2;</code>
+     * @return The tableName.
+     */
+    java.lang.String getTableName();
+    /**
+     * <code>string table_name = 2;</code>
+     * @return The bytes for tableName.
+     */
+    com.google.protobuf.ByteString
+        getTableNameBytes();
+
+    /**
+     * <code>string cursor_column = 3;</code>
+     * @return The cursorColumn.
+     */
+    java.lang.String getCursorColumn();
+    /**
+     * <code>string cursor_column = 3;</code>
+     * @return The bytes for cursorColumn.
+     */
+    com.google.protobuf.ByteString
+        getCursorColumnBytes();
+
+    /**
+     * <code>string initial_state = 4;</code>
+     * @return The initialState.
+     */
+    java.lang.String getInitialState();
+    /**
+     * <code>string initial_state = 4;</code>
+     * @return The bytes for initialState.
+     */
+    com.google.protobuf.ByteString
+        getInitialStateBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.IncrementalTable}
+   */
+  public static final class IncrementalTable extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.IncrementalTable)
+      IncrementalTableOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IncrementalTable.newBuilder() to construct.
+    private IncrementalTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IncrementalTable() {
+      tableNamespace_ = "";
+      tableName_ = "";
+      cursorColumn_ = "";
+      initialState_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IncrementalTable();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IncrementalTable(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tableNamespace_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tableName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cursorColumn_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              initialState_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder.class);
+    }
+
+    public static final int TABLE_NAMESPACE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tableNamespace_;
+    /**
+     * <code>string table_namespace = 1;</code>
+     * @return The tableNamespace.
+     */
+    @java.lang.Override
+    public java.lang.String getTableNamespace() {
+      java.lang.Object ref = tableNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tableNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string table_namespace = 1;</code>
+     * @return The bytes for tableNamespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTableNamespaceBytes() {
+      java.lang.Object ref = tableNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tableNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TABLE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object tableName_;
+    /**
+     * <code>string table_name = 2;</code>
+     * @return The tableName.
+     */
+    @java.lang.Override
+    public java.lang.String getTableName() {
+      java.lang.Object ref = tableName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tableName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string table_name = 2;</code>
+     * @return The bytes for tableName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
+      java.lang.Object ref = tableName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tableName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURSOR_COLUMN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object cursorColumn_;
+    /**
+     * <code>string cursor_column = 3;</code>
+     * @return The cursorColumn.
+     */
+    @java.lang.Override
+    public java.lang.String getCursorColumn() {
+      java.lang.Object ref = cursorColumn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cursorColumn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cursor_column = 3;</code>
+     * @return The bytes for cursorColumn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCursorColumnBytes() {
+      java.lang.Object ref = cursorColumn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cursorColumn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INITIAL_STATE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object initialState_;
+    /**
+     * <code>string initial_state = 4;</code>
+     * @return The initialState.
+     */
+    @java.lang.Override
+    public java.lang.String getInitialState() {
+      java.lang.Object ref = initialState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        initialState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string initial_state = 4;</code>
+     * @return The bytes for initialState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInitialStateBytes() {
+      java.lang.Object ref = initialState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        initialState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableNamespace_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tableNamespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tableName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cursorColumn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cursorColumn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialState_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, initialState_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableNamespace_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tableNamespace_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tableName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cursorColumn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cursorColumn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialState_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, initialState_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable other = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable) obj;
+
+      if (!getTableNamespace()
+          .equals(other.getTableNamespace())) return false;
+      if (!getTableName()
+          .equals(other.getTableName())) return false;
+      if (!getCursorColumn()
+          .equals(other.getCursorColumn())) return false;
+      if (!getInitialState()
+          .equals(other.getInitialState())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TABLE_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getTableNamespace().hashCode();
+      hash = (37 * hash) + TABLE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTableName().hashCode();
+      hash = (37 * hash) + CURSOR_COLUMN_FIELD_NUMBER;
+      hash = (53 * hash) + getCursorColumn().hashCode();
+      hash = (37 * hash) + INITIAL_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getInitialState().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.IncrementalTable}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.IncrementalTable)
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTableOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tableNamespace_ = "";
+
+        tableName_ = "";
+
+        cursorColumn_ = "";
+
+        initialState_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable build() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable buildPartial() {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable(this);
+        result.tableNamespace_ = tableNamespace_;
+        result.tableName_ = tableName_;
+        result.cursorColumn_ = cursorColumn_;
+        result.initialState_ = initialState_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable other) {
+        if (other == yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable.getDefaultInstance()) return this;
+        if (!other.getTableNamespace().isEmpty()) {
+          tableNamespace_ = other.tableNamespace_;
+          onChanged();
+        }
+        if (!other.getTableName().isEmpty()) {
+          tableName_ = other.tableName_;
+          onChanged();
+        }
+        if (!other.getCursorColumn().isEmpty()) {
+          cursorColumn_ = other.cursorColumn_;
+          onChanged();
+        }
+        if (!other.getInitialState().isEmpty()) {
+          initialState_ = other.initialState_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tableNamespace_ = "";
+      /**
+       * <code>string table_namespace = 1;</code>
+       * @return The tableNamespace.
+       */
+      public java.lang.String getTableNamespace() {
+        java.lang.Object ref = tableNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tableNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string table_namespace = 1;</code>
+       * @return The bytes for tableNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getTableNamespaceBytes() {
+        java.lang.Object ref = tableNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tableNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string table_namespace = 1;</code>
+       * @param value The tableNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tableNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_namespace = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTableNamespace() {
+        
+        tableNamespace_ = getDefaultInstance().getTableNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_namespace = 1;</code>
+       * @param value The bytes for tableNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tableNamespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tableName_ = "";
+      /**
+       * <code>string table_name = 2;</code>
+       * @return The tableName.
+       */
+      public java.lang.String getTableName() {
+        java.lang.Object ref = tableName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tableName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string table_name = 2;</code>
+       * @return The bytes for tableName.
+       */
+      public com.google.protobuf.ByteString
+          getTableNameBytes() {
+        java.lang.Object ref = tableName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tableName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string table_name = 2;</code>
+       * @param value The tableName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tableName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTableName() {
+        
+        tableName_ = getDefaultInstance().getTableName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_name = 2;</code>
+       * @param value The bytes for tableName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tableName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cursorColumn_ = "";
+      /**
+       * <code>string cursor_column = 3;</code>
+       * @return The cursorColumn.
+       */
+      public java.lang.String getCursorColumn() {
+        java.lang.Object ref = cursorColumn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cursorColumn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cursor_column = 3;</code>
+       * @return The bytes for cursorColumn.
+       */
+      public com.google.protobuf.ByteString
+          getCursorColumnBytes() {
+        java.lang.Object ref = cursorColumn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cursorColumn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cursor_column = 3;</code>
+       * @param value The cursorColumn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCursorColumn(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cursorColumn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cursor_column = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCursorColumn() {
+        
+        cursorColumn_ = getDefaultInstance().getCursorColumn();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cursor_column = 3;</code>
+       * @param value The bytes for cursorColumn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCursorColumnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cursorColumn_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object initialState_ = "";
+      /**
+       * <code>string initial_state = 4;</code>
+       * @return The initialState.
+       */
+      public java.lang.String getInitialState() {
+        java.lang.Object ref = initialState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          initialState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string initial_state = 4;</code>
+       * @return The bytes for initialState.
+       */
+      public com.google.protobuf.ByteString
+          getInitialStateBytes() {
+        java.lang.Object ref = initialState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initialState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string initial_state = 4;</code>
+       * @param value The initialState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        initialState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string initial_state = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialState() {
+        
+        initialState_ = getDefaultInstance().getInitialState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string initial_state = 4;</code>
+       * @param value The bytes for initialState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        initialState_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.IncrementalTable)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.IncrementalTable)
+    private static final yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IncrementalTable>
+        PARSER = new com.google.protobuf.AbstractParser<IncrementalTable>() {
+      @java.lang.Override
+      public IncrementalTable parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IncrementalTable(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IncrementalTable> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IncrementalTable> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.IncrementalTable getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface YcRuntimeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.YcRuntime)
       com.google.protobuf.MessageOrBuilder {
@@ -5035,6 +10287,17 @@ public final class TransferOuterClass {
      * @return The jobCount.
      */
     long getJobCount();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+     * @return The enum numeric value on the wire for flavor.
+     */
+    int getFlavorValue();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+     * @return The flavor.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor getFlavor();
 
     /**
      * <pre>
@@ -5080,6 +10343,7 @@ public final class TransferOuterClass {
       super(builder);
     }
     private YcRuntime() {
+      flavor_ = 0;
     }
 
     @java.lang.Override
@@ -5115,6 +10379,12 @@ public final class TransferOuterClass {
             case 8: {
 
               jobCount_ = input.readInt64();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              flavor_ = rawValue;
               break;
             }
             case 66: {
@@ -5177,6 +10447,25 @@ public final class TransferOuterClass {
       return jobCount_;
     }
 
+    public static final int FLAVOR_FIELD_NUMBER = 2;
+    private int flavor_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+     * @return The enum numeric value on the wire for flavor.
+     */
+    @java.lang.Override public int getFlavorValue() {
+      return flavor_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+     * @return The flavor.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor getFlavor() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor result = yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor.valueOf(flavor_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor.UNRECOGNIZED : result;
+    }
+
     public static final int UPLOAD_SHARD_PARAMS_FIELD_NUMBER = 8;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams uploadShardParams_;
     /**
@@ -5232,6 +10521,9 @@ public final class TransferOuterClass {
       if (jobCount_ != 0L) {
         output.writeInt64(1, jobCount_);
       }
+      if (flavor_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor.FLAVOR_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, flavor_);
+      }
       if (uploadShardParams_ != null) {
         output.writeMessage(8, getUploadShardParams());
       }
@@ -5247,6 +10539,10 @@ public final class TransferOuterClass {
       if (jobCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, jobCount_);
+      }
+      if (flavor_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor.FLAVOR_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, flavor_);
       }
       if (uploadShardParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -5269,6 +10565,7 @@ public final class TransferOuterClass {
 
       if (getJobCount()
           != other.getJobCount()) return false;
+      if (flavor_ != other.flavor_) return false;
       if (hasUploadShardParams() != other.hasUploadShardParams()) return false;
       if (hasUploadShardParams()) {
         if (!getUploadShardParams()
@@ -5288,6 +10585,8 @@ public final class TransferOuterClass {
       hash = (37 * hash) + JOB_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getJobCount());
+      hash = (37 * hash) + FLAVOR_FIELD_NUMBER;
+      hash = (53 * hash) + flavor_;
       if (hasUploadShardParams()) {
         hash = (37 * hash) + UPLOAD_SHARD_PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getUploadShardParams().hashCode();
@@ -5431,6 +10730,8 @@ public final class TransferOuterClass {
         super.clear();
         jobCount_ = 0L;
 
+        flavor_ = 0;
+
         if (uploadShardParamsBuilder_ == null) {
           uploadShardParams_ = null;
         } else {
@@ -5464,6 +10765,7 @@ public final class TransferOuterClass {
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.YcRuntime buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferOuterClass.YcRuntime result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.YcRuntime(this);
         result.jobCount_ = jobCount_;
+        result.flavor_ = flavor_;
         if (uploadShardParamsBuilder_ == null) {
           result.uploadShardParams_ = uploadShardParams_;
         } else {
@@ -5519,6 +10821,9 @@ public final class TransferOuterClass {
         if (other == yandex.cloud.api.datatransfer.v1.TransferOuterClass.YcRuntime.getDefaultInstance()) return this;
         if (other.getJobCount() != 0L) {
           setJobCount(other.getJobCount());
+        }
+        if (other.flavor_ != 0) {
+          setFlavorValue(other.getFlavorValue());
         }
         if (other.hasUploadShardParams()) {
           mergeUploadShardParams(other.getUploadShardParams());
@@ -5591,6 +10896,60 @@ public final class TransferOuterClass {
       public Builder clearJobCount() {
         
         jobCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int flavor_ = 0;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+       * @return The enum numeric value on the wire for flavor.
+       */
+      @java.lang.Override public int getFlavorValue() {
+        return flavor_;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+       * @param value The enum numeric value on the wire for flavor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlavorValue(int value) {
+        
+        flavor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+       * @return The flavor.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor getFlavor() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor result = yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor.valueOf(flavor_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+       * @param value The flavor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlavor(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Flavor value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        flavor_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.Flavor flavor = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlavor() {
+        
+        flavor_ = 0;
         onChanged();
         return this;
       }
@@ -24794,6 +30153,31 @@ public final class TransferOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_ShardingUploadParams_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_YcRuntime_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24900,7 +30284,7 @@ public final class TransferOuterClass {
       "\n+yandex/cloud/datatransfer/v1/transfer." +
       "proto\022\034yandex.cloud.datatransfer.v1\032+yan" +
       "dex/cloud/datatransfer/v1/endpoint.proto" +
-      "\"\370\005\n\010Transfer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
+      "\"\273\006\n\010Transfer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
       "B\n\006labels\030\006 \003(\01322.yandex.cloud.datatrans" +
       "fer.v1.Transfer.LabelsEntry\0226\n\006source\030\007 " +
@@ -24911,95 +30295,129 @@ public final class TransferOuterClass {
       "tatus\030\n \001(\0162,.yandex.cloud.datatransfer." +
       "v1.TransferStatus\0228\n\004type\030\014 \001(\0162*.yandex" +
       ".cloud.datatransfer.v1.TransferType\022\017\n\007w" +
-      "arning\030\017 \001(\t\022D\n\016transformation\030\021 \001(\0132,.y" +
-      "andex.cloud.datatransfer.v1.Transformati" +
-      "on\022?\n\014data_objects\030\023 \001(\0132).yandex.cloud." +
-      "datatransfer.v1.DataObjects\022\021\n\tprestable" +
-      "\030\026 \001(\010\022B\n\023replication_runtime\030\030 \001(\0132%.ya" +
-      "ndex.cloud.datatransfer.v1.Runtime\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001J\004\010\003\020\004J\004\010\013\020\014J\004\010\r\020\017J\004\010\020\020\021J\004\010\022\020\023J\004\010\024\020\026J\004\010" +
-      "\027\020\030\"Y\n\007Runtime\022=\n\nyc_runtime\030\004 \001(\0132\'.yan" +
-      "dex.cloud.datatransfer.v1.YcRuntimeH\000B\t\n" +
-      "\007runtimeJ\004\010\001\020\004\"@\n\024ShardingUploadParams\022\021" +
-      "\n\tjob_count\030\001 \001(\003\022\025\n\rprocess_count\030\002 \001(\003" +
-      "\"u\n\tYcRuntime\022\021\n\tjob_count\030\001 \001(\003\022O\n\023uplo" +
-      "ad_shard_params\030\010 \001(\01322.yandex.cloud.dat" +
-      "atransfer.v1.ShardingUploadParamsJ\004\010\002\020\010\"" +
-      "m\n\014MaskFunction\022L\n\022mask_function_hash\030\001 " +
-      "\001(\0132..yandex.cloud.datatransfer.v1.MaskF" +
-      "unctionHashH\000B\017\n\rmask_function\"-\n\020MaskFu" +
-      "nctionHash\022\031\n\021user_defined_salt\030\001 \001(\t\">\n" +
-      "\014TablesFilter\022\026\n\016include_tables\030\001 \003(\t\022\026\n" +
-      "\016exclude_tables\030\002 \003(\t\"A\n\rColumnsFilter\022\027" +
-      "\n\017include_columns\030\001 \003(\t\022\027\n\017exclude_colum" +
-      "ns\030\002 \003(\t\"\241\001\n\024MaskFieldTransformer\022:\n\006tab" +
-      "les\030\001 \001(\0132*.yandex.cloud.datatransfer.v1" +
-      ".TablesFilter\022\017\n\007columns\030\002 \003(\t\022<\n\010functi" +
-      "on\030\003 \001(\0132*.yandex.cloud.datatransfer.v1." +
-      "MaskFunction\"\224\001\n\030FilterColumnsTransforme" +
+      "arning\030\017 \001(\t\022G\n\020regular_snapshot\030\020 \001(\0132-" +
+      ".yandex.cloud.datatransfer.v1.RegularSna" +
+      "pshot\022D\n\016transformation\030\021 \001(\0132,.yandex.c" +
+      "loud.datatransfer.v1.Transformation\022?\n\014d" +
+      "ata_objects\030\023 \001(\0132).yandex.cloud.datatra" +
+      "nsfer.v1.DataObjects\022\021\n\tprestable\030\026 \001(\010\022" +
+      "B\n\023replication_runtime\030\030 \001(\0132%.yandex.cl" +
+      "oud.datatransfer.v1.Runtime\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\003\020\004" +
+      "J\004\010\013\020\014J\004\010\r\020\017J\004\010\022\020\023J\004\010\024\020\026J\004\010\027\020\030\"Y\n\007Runtim" +
+      "e\022=\n\nyc_runtime\030\004 \001(\0132\'.yandex.cloud.dat" +
+      "atransfer.v1.YcRuntimeH\000B\t\n\007runtimeJ\004\010\001\020" +
+      "\004\"@\n\024ShardingUploadParams\022\021\n\tjob_count\030\001" +
+      " \001(\003\022\025\n\rprocess_count\030\002 \001(\003\"\265\001\n\017RegularS" +
+      "napshot\022I\n\010settings\030\003 \001(\01325.yandex.cloud" +
+      ".datatransfer.v1.RegularSnapshotSettings" +
+      "H\000\022I\n\010disabled\030\004 \001(\01325.yandex.cloud.data" +
+      "transfer.v1.RegularSnapshotDisabledH\000B\006\n" +
+      "\004modeJ\004\010\001\020\003\"\031\n\027RegularSnapshotDisabled\"\342" +
+      "\002\n\027RegularSnapshotSettings\022O\n\010schedule\030\001" +
+      " \001(\0162=.yandex.cloud.datatransfer.v1.Regu" +
+      "larSnapshotScheduleInterval\022>\n\006tables\030\002 " +
+      "\003(\0132..yandex.cloud.datatransfer.v1.Incre" +
+      "mentalTable\022\027\n\017cron_expression\030\003 \001(\t\022\037\n\027" +
+      "increment_delay_seconds\030\004 \001(\003\022W\n\014retry_c" +
+      "onfig\030\005 \001(\0132A.yandex.cloud.datatransfer." +
+      "v1.RegularSnapshotSettings.RetryConfig\032#" +
+      "\n\013RetryConfig\022\024\n\014max_attempts\030\001 \001(\003\"m\n\020I" +
+      "ncrementalTable\022\027\n\017table_namespace\030\001 \001(\t" +
+      "\022\022\n\ntable_name\030\002 \001(\t\022\025\n\rcursor_column\030\003 " +
+      "\001(\t\022\025\n\rinitial_state\030\004 \001(\t\"\253\001\n\tYcRuntime" +
+      "\022\021\n\tjob_count\030\001 \001(\003\0224\n\006flavor\030\002 \001(\0162$.ya" +
+      "ndex.cloud.datatransfer.v1.Flavor\022O\n\023upl" +
+      "oad_shard_params\030\010 \001(\01322.yandex.cloud.da" +
+      "tatransfer.v1.ShardingUploadParamsJ\004\010\003\020\010" +
+      "\"m\n\014MaskFunction\022L\n\022mask_function_hash\030\001" +
+      " \001(\0132..yandex.cloud.datatransfer.v1.Mask" +
+      "FunctionHashH\000B\017\n\rmask_function\"-\n\020MaskF" +
+      "unctionHash\022\031\n\021user_defined_salt\030\001 \001(\t\">" +
+      "\n\014TablesFilter\022\026\n\016include_tables\030\001 \003(\t\022\026" +
+      "\n\016exclude_tables\030\002 \003(\t\"A\n\rColumnsFilter\022" +
+      "\027\n\017include_columns\030\001 \003(\t\022\027\n\017exclude_colu" +
+      "mns\030\002 \003(\t\"\241\001\n\024MaskFieldTransformer\022:\n\006ta" +
+      "bles\030\001 \001(\0132*.yandex.cloud.datatransfer.v" +
+      "1.TablesFilter\022\017\n\007columns\030\002 \003(\t\022<\n\010funct" +
+      "ion\030\003 \001(\0132*.yandex.cloud.datatransfer.v1" +
+      ".MaskFunction\"\224\001\n\030FilterColumnsTransform" +
+      "er\022:\n\006tables\030\001 \001(\0132*.yandex.cloud.datatr" +
+      "ansfer.v1.TablesFilter\022<\n\007columns\030\002 \001(\0132" +
+      "+.yandex.cloud.datatransfer.v1.ColumnsFi" +
+      "lter\")\n\005Table\022\022\n\nname_space\030\001 \001(\t\022\014\n\004nam" +
+      "e\030\002 \001(\t\"\200\001\n\013RenameTable\022:\n\roriginal_name" +
+      "\030\001 \001(\0132#.yandex.cloud.datatransfer.v1.Ta" +
+      "ble\0225\n\010new_name\030\002 \001(\0132#.yandex.cloud.dat" +
+      "atransfer.v1.Table\"[\n\027RenameTablesTransf" +
+      "ormer\022@\n\rrename_tables\030\001 \003(\0132).yandex.cl" +
+      "oud.datatransfer.v1.RenameTable\"h\n\034Repla" +
+      "cePrimaryKeyTransformer\022:\n\006tables\030\001 \001(\0132" +
+      "*.yandex.cloud.datatransfer.v1.TablesFil" +
+      "ter\022\014\n\004keys\030\002 \003(\t\"\217\001\n\023ToStringTransforme" +
       "r\022:\n\006tables\030\001 \001(\0132*.yandex.cloud.datatra" +
       "nsfer.v1.TablesFilter\022<\n\007columns\030\002 \001(\0132+" +
       ".yandex.cloud.datatransfer.v1.ColumnsFil" +
-      "ter\")\n\005Table\022\022\n\nname_space\030\001 \001(\t\022\014\n\004name" +
-      "\030\002 \001(\t\"\200\001\n\013RenameTable\022:\n\roriginal_name\030" +
-      "\001 \001(\0132#.yandex.cloud.datatransfer.v1.Tab" +
-      "le\0225\n\010new_name\030\002 \001(\0132#.yandex.cloud.data" +
-      "transfer.v1.Table\"[\n\027RenameTablesTransfo" +
-      "rmer\022@\n\rrename_tables\030\001 \003(\0132).yandex.clo" +
-      "ud.datatransfer.v1.RenameTable\"h\n\034Replac" +
-      "ePrimaryKeyTransformer\022:\n\006tables\030\001 \001(\0132*" +
-      ".yandex.cloud.datatransfer.v1.TablesFilt" +
-      "er\022\014\n\004keys\030\002 \003(\t\"\217\001\n\023ToStringTransformer" +
-      "\022:\n\006tables\030\001 \001(\0132*.yandex.cloud.datatran" +
-      "sfer.v1.TablesFilter\022<\n\007columns\030\002 \001(\0132+." +
-      "yandex.cloud.datatransfer.v1.ColumnsFilt" +
-      "er\"\036\n\034SharderTransformerTypeRandom\"\216\002\n\022S" +
-      "harderTransformer\022:\n\006tables\030\001 \001(\0132*.yand" +
-      "ex.cloud.datatransfer.v1.TablesFilter\022>\n" +
-      "\007columns\030\002 \001(\0132+.yandex.cloud.datatransf" +
-      "er.v1.ColumnsFilterH\000\022L\n\006random\030\004 \001(\0132:." +
-      "yandex.cloud.datatransfer.v1.SharderTran" +
-      "sformerTypeRandomH\000\022\024\n\014shards_count\030\003 \001(" +
-      "\003B\030\n\026sharderTransformerType\"y\n\030TableSpli" +
-      "tterTransformer\022:\n\006tables\030\001 \001(\0132*.yandex" +
-      ".cloud.datatransfer.v1.TablesFilter\022\017\n\007c" +
-      "olumns\030\002 \003(\t\022\020\n\010splitter\030\003 \001(\t\"x\n\025Filter" +
-      "RowsTransformer\022:\n\006tables\030\001 \001(\0132*.yandex" +
-      ".cloud.datatransfer.v1.TablesFilter\022\022\n\006f" +
-      "ilter\030\002 \001(\tB\002\030\001\022\017\n\007filters\030\003 \003(\t\"\306\005\n\013Tra" +
-      "nsformer\022H\n\nmask_field\030\001 \001(\01322.yandex.cl" +
-      "oud.datatransfer.v1.MaskFieldTransformer" +
-      "H\000\022P\n\016filter_columns\030\002 \001(\01326.yandex.clou" +
-      "d.datatransfer.v1.FilterColumnsTransform" +
-      "erH\000\022N\n\rrename_tables\030\004 \001(\01325.yandex.clo" +
-      "ud.datatransfer.v1.RenameTablesTransform" +
-      "erH\000\022Y\n\023replace_primary_key\030\006 \001(\0132:.yand" +
-      "ex.cloud.datatransfer.v1.ReplacePrimaryK" +
-      "eyTransformerH\000\022N\n\021convert_to_string\030\007 \001" +
-      "(\01321.yandex.cloud.datatransfer.v1.ToStri" +
-      "ngTransformerH\000\022O\n\023sharder_transformer\030\t" +
-      " \001(\01320.yandex.cloud.datatransfer.v1.Shar" +
-      "derTransformerH\000\022\\\n\032table_splitter_trans" +
-      "former\030\r \001(\01326.yandex.cloud.datatransfer" +
-      ".v1.TableSplitterTransformerH\000\022J\n\013filter" +
-      "_rows\030\016 \001(\01323.yandex.cloud.datatransfer." +
-      "v1.FilterRowsTransformerH\000B\r\n\013transforme" +
-      "rJ\004\010\003\020\004J\004\010\005\020\006J\004\010\010\020\tJ\004\010\n\020\r\"Q\n\016Transformat" +
-      "ion\022?\n\014transformers\030\001 \003(\0132).yandex.cloud" +
-      ".datatransfer.v1.Transformer\"&\n\013DataObje" +
-      "cts\022\027\n\017include_objects\030\001 \003(\t*p\n\014Transfer" +
-      "Type\022\035\n\031TRANSFER_TYPE_UNSPECIFIED\020\000\022\032\n\026S" +
-      "NAPSHOT_AND_INCREMENT\020\001\022\021\n\rSNAPSHOT_ONLY" +
-      "\020\002\022\022\n\016INCREMENT_ONLY\020\003*\266\001\n\016TransferStatu" +
-      "s\022\037\n\033TRANSFER_STATUS_UNSPECIFIED\020\000\022\014\n\010CR" +
-      "EATING\020\001\022\013\n\007CREATED\020\002\022\013\n\007RUNNING\020\003\022\014\n\010ST" +
-      "OPPING\020\004\022\013\n\007STOPPED\020\005\022\t\n\005ERROR\020\006\022\020\n\014SNAP" +
-      "SHOTTING\020\007\022\010\n\004DONE\020\010\022\n\n\006PAUSED\020\t\022\r\n\tPREP" +
-      "ARING\020\nBq\n yandex.cloud.api.datatransfer" +
-      ".v1ZMgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/datatransfer/v1;datatransf" +
-      "erb\006proto3"
+      "ter\"\036\n\034SharderTransformerTypeRandom\"\216\002\n\022" +
+      "SharderTransformer\022:\n\006tables\030\001 \001(\0132*.yan" +
+      "dex.cloud.datatransfer.v1.TablesFilter\022>" +
+      "\n\007columns\030\002 \001(\0132+.yandex.cloud.datatrans" +
+      "fer.v1.ColumnsFilterH\000\022L\n\006random\030\004 \001(\0132:" +
+      ".yandex.cloud.datatransfer.v1.SharderTra" +
+      "nsformerTypeRandomH\000\022\024\n\014shards_count\030\003 \001" +
+      "(\003B\030\n\026sharderTransformerType\"y\n\030TableSpl" +
+      "itterTransformer\022:\n\006tables\030\001 \001(\0132*.yande" +
+      "x.cloud.datatransfer.v1.TablesFilter\022\017\n\007" +
+      "columns\030\002 \003(\t\022\020\n\010splitter\030\003 \001(\t\"x\n\025Filte" +
+      "rRowsTransformer\022:\n\006tables\030\001 \001(\0132*.yande" +
+      "x.cloud.datatransfer.v1.TablesFilter\022\022\n\006" +
+      "filter\030\002 \001(\tB\002\030\001\022\017\n\007filters\030\003 \003(\t\"\306\005\n\013Tr" +
+      "ansformer\022H\n\nmask_field\030\001 \001(\01322.yandex.c" +
+      "loud.datatransfer.v1.MaskFieldTransforme" +
+      "rH\000\022P\n\016filter_columns\030\002 \001(\01326.yandex.clo" +
+      "ud.datatransfer.v1.FilterColumnsTransfor" +
+      "merH\000\022N\n\rrename_tables\030\004 \001(\01325.yandex.cl" +
+      "oud.datatransfer.v1.RenameTablesTransfor" +
+      "merH\000\022Y\n\023replace_primary_key\030\006 \001(\0132:.yan" +
+      "dex.cloud.datatransfer.v1.ReplacePrimary" +
+      "KeyTransformerH\000\022N\n\021convert_to_string\030\007 " +
+      "\001(\01321.yandex.cloud.datatransfer.v1.ToStr" +
+      "ingTransformerH\000\022O\n\023sharder_transformer\030" +
+      "\t \001(\01320.yandex.cloud.datatransfer.v1.Sha" +
+      "rderTransformerH\000\022\\\n\032table_splitter_tran" +
+      "sformer\030\r \001(\01326.yandex.cloud.datatransfe" +
+      "r.v1.TableSplitterTransformerH\000\022J\n\013filte" +
+      "r_rows\030\016 \001(\01323.yandex.cloud.datatransfer" +
+      ".v1.FilterRowsTransformerH\000B\r\n\013transform" +
+      "erJ\004\010\003\020\004J\004\010\005\020\006J\004\010\010\020\tJ\004\010\n\020\r\"Q\n\016Transforma" +
+      "tion\022?\n\014transformers\030\001 \003(\0132).yandex.clou" +
+      "d.datatransfer.v1.Transformer\"&\n\013DataObj" +
+      "ects\022\027\n\017include_objects\030\001 \003(\t*p\n\014Transfe" +
+      "rType\022\035\n\031TRANSFER_TYPE_UNSPECIFIED\020\000\022\032\n\026" +
+      "SNAPSHOT_AND_INCREMENT\020\001\022\021\n\rSNAPSHOT_ONL" +
+      "Y\020\002\022\022\n\016INCREMENT_ONLY\020\003*\266\001\n\016TransferStat" +
+      "us\022\037\n\033TRANSFER_STATUS_UNSPECIFIED\020\000\022\014\n\010C" +
+      "REATING\020\001\022\013\n\007CREATED\020\002\022\013\n\007RUNNING\020\003\022\014\n\010S" +
+      "TOPPING\020\004\022\013\n\007STOPPED\020\005\022\t\n\005ERROR\020\006\022\020\n\014SNA" +
+      "PSHOTTING\020\007\022\010\n\004DONE\020\010\022\n\n\006PAUSED\020\t\022\r\n\tPRE" +
+      "PARING\020\n*\361\003\n\037RegularSnapshotScheduleInte" +
+      "rval\0222\n.REGULAR_SNAPSHOT_SCHEDULE_INTERV" +
+      "AL_UNSPECIFIED\020\000\022,\n(REGULAR_SNAPSHOT_SCH" +
+      "EDULE_INTERVAL_15MIN\020\002\022,\n(REGULAR_SNAPSH" +
+      "OT_SCHEDULE_INTERVAL_30MIN\020\003\022+\n\'REGULAR_" +
+      "SNAPSHOT_SCHEDULE_INTERVAL_HOUR\020\004\022,\n(REG" +
+      "ULAR_SNAPSHOT_SCHEDULE_INTERVAL_2HOUR\020\005\022" +
+      ",\n(REGULAR_SNAPSHOT_SCHEDULE_INTERVAL_3H" +
+      "OUR\020\006\022,\n(REGULAR_SNAPSHOT_SCHEDULE_INTER" +
+      "VAL_6HOUR\020\007\022,\n(REGULAR_SNAPSHOT_SCHEDULE" +
+      "_INTERVAL_8HOUR\020\010\022-\n)REGULAR_SNAPSHOT_SC" +
+      "HEDULE_INTERVAL_12HOUR\020\t\022*\n&REGULAR_SNAP" +
+      "SHOT_SCHEDULE_INTERVAL_DAY\020\n*L\n\006Flavor\022\026" +
+      "\n\022FLAVOR_UNSPECIFIED\020\000\022\t\n\005SMALL\020\001\022\n\n\006MED" +
+      "IUM\020\002\022\t\n\005LARGE\020\003\022\010\n\004TINY\020\004Bq\n yandex.clo" +
+      "ud.api.datatransfer.v1ZMgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/datatra" +
+      "nsfer/v1;datatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25011,7 +30429,7 @@ public final class TransferOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_Transfer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "Labels", "Source", "Target", "Runtime", "Status", "Type", "Warning", "Transformation", "DataObjects", "Prestable", "ReplicationRuntime", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "Labels", "Source", "Target", "Runtime", "Status", "Type", "Warning", "RegularSnapshot", "Transformation", "DataObjects", "Prestable", "ReplicationRuntime", });
     internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_fieldAccessorTable = new
@@ -25030,116 +30448,146 @@ public final class TransferOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_ShardingUploadParams_descriptor,
         new java.lang.String[] { "JobCount", "ProcessCount", });
-    internal_static_yandex_cloud_datatransfer_v1_YcRuntime_descriptor =
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_RegularSnapshot_descriptor,
+        new java.lang.String[] { "Settings", "Disabled", "Mode", });
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotDisabled_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_descriptor,
+        new java.lang.String[] { "Schedule", "Tables", "CronExpression", "IncrementDelaySeconds", "RetryConfig", });
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_descriptor =
+      internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_RegularSnapshotSettings_RetryConfig_descriptor,
+        new java.lang.String[] { "MaxAttempts", });
+    internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_IncrementalTable_descriptor,
+        new java.lang.String[] { "TableNamespace", "TableName", "CursorColumn", "InitialState", });
+    internal_static_yandex_cloud_datatransfer_v1_YcRuntime_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_datatransfer_v1_YcRuntime_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_YcRuntime_descriptor,
-        new java.lang.String[] { "JobCount", "UploadShardParams", });
+        new java.lang.String[] { "JobCount", "Flavor", "UploadShardParams", });
     internal_static_yandex_cloud_datatransfer_v1_MaskFunction_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_datatransfer_v1_MaskFunction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_MaskFunction_descriptor,
         new java.lang.String[] { "MaskFunctionHash", "MaskFunction", });
     internal_static_yandex_cloud_datatransfer_v1_MaskFunctionHash_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_datatransfer_v1_MaskFunctionHash_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_MaskFunctionHash_descriptor,
         new java.lang.String[] { "UserDefinedSalt", });
     internal_static_yandex_cloud_datatransfer_v1_TablesFilter_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_datatransfer_v1_TablesFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_TablesFilter_descriptor,
         new java.lang.String[] { "IncludeTables", "ExcludeTables", });
     internal_static_yandex_cloud_datatransfer_v1_ColumnsFilter_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_datatransfer_v1_ColumnsFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_ColumnsFilter_descriptor,
         new java.lang.String[] { "IncludeColumns", "ExcludeColumns", });
     internal_static_yandex_cloud_datatransfer_v1_MaskFieldTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_datatransfer_v1_MaskFieldTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_MaskFieldTransformer_descriptor,
         new java.lang.String[] { "Tables", "Columns", "Function", });
     internal_static_yandex_cloud_datatransfer_v1_FilterColumnsTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_datatransfer_v1_FilterColumnsTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_FilterColumnsTransformer_descriptor,
         new java.lang.String[] { "Tables", "Columns", });
     internal_static_yandex_cloud_datatransfer_v1_Table_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_datatransfer_v1_Table_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_Table_descriptor,
         new java.lang.String[] { "NameSpace", "Name", });
     internal_static_yandex_cloud_datatransfer_v1_RenameTable_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_datatransfer_v1_RenameTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_RenameTable_descriptor,
         new java.lang.String[] { "OriginalName", "NewName", });
     internal_static_yandex_cloud_datatransfer_v1_RenameTablesTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_datatransfer_v1_RenameTablesTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_RenameTablesTransformer_descriptor,
         new java.lang.String[] { "RenameTables", });
     internal_static_yandex_cloud_datatransfer_v1_ReplacePrimaryKeyTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_datatransfer_v1_ReplacePrimaryKeyTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_ReplacePrimaryKeyTransformer_descriptor,
         new java.lang.String[] { "Tables", "Keys", });
     internal_static_yandex_cloud_datatransfer_v1_ToStringTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_datatransfer_v1_ToStringTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_ToStringTransformer_descriptor,
         new java.lang.String[] { "Tables", "Columns", });
     internal_static_yandex_cloud_datatransfer_v1_SharderTransformerTypeRandom_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_datatransfer_v1_SharderTransformerTypeRandom_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_SharderTransformerTypeRandom_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_datatransfer_v1_SharderTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_datatransfer_v1_SharderTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_SharderTransformer_descriptor,
         new java.lang.String[] { "Tables", "Columns", "Random", "ShardsCount", "SharderTransformerType", });
     internal_static_yandex_cloud_datatransfer_v1_TableSplitterTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_datatransfer_v1_TableSplitterTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_TableSplitterTransformer_descriptor,
         new java.lang.String[] { "Tables", "Columns", "Splitter", });
     internal_static_yandex_cloud_datatransfer_v1_FilterRowsTransformer_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_datatransfer_v1_FilterRowsTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_FilterRowsTransformer_descriptor,
         new java.lang.String[] { "Tables", "Filter", "Filters", });
     internal_static_yandex_cloud_datatransfer_v1_Transformer_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_datatransfer_v1_Transformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_Transformer_descriptor,
         new java.lang.String[] { "MaskField", "FilterColumns", "RenameTables", "ReplacePrimaryKey", "ConvertToString", "SharderTransformer", "TableSplitterTransformer", "FilterRows", "Transformer", });
     internal_static_yandex_cloud_datatransfer_v1_Transformation_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_datatransfer_v1_Transformation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_Transformation_descriptor,
         new java.lang.String[] { "Transformers", });
     internal_static_yandex_cloud_datatransfer_v1_DataObjects_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_datatransfer_v1_DataObjects_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_DataObjects_descriptor,

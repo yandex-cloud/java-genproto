@@ -178,6 +178,33 @@ public final class ConnectorOuterClass {
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3SinkSpecOrBuilder getConnectorConfigS3SinkOrBuilder();
 
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return Whether the connectorConfigIcebergSink field is set.
+     */
+    boolean hasConnectorConfigIcebergSink();
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return The connectorConfigIcebergSink.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec getConnectorConfigIcebergSink();
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpecOrBuilder getConnectorConfigIcebergSinkOrBuilder();
+
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec.ConnectorConfigCase getConnectorConfigCase();
   }
   /**
@@ -292,6 +319,20 @@ public final class ConnectorOuterClass {
               connectorConfigCase_ = 11;
               break;
             }
+            case 98: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder subBuilder = null;
+              if (connectorConfigCase_ == 12) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_).toBuilder();
+              }
+              connectorConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_);
+                connectorConfig_ = subBuilder.buildPartial();
+              }
+              connectorConfigCase_ = 12;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -343,6 +384,7 @@ public final class ConnectorOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTOR_CONFIG_MIRRORMAKER(10),
       CONNECTOR_CONFIG_S3_SINK(11),
+      CONNECTOR_CONFIG_ICEBERG_SINK(12),
       CONNECTORCONFIG_NOT_SET(0);
       private final int value;
       private ConnectorConfigCase(int value) {
@@ -362,6 +404,7 @@ public final class ConnectorOuterClass {
         switch (value) {
           case 10: return CONNECTOR_CONFIG_MIRRORMAKER;
           case 11: return CONNECTOR_CONFIG_S3_SINK;
+          case 12: return CONNECTOR_CONFIG_ICEBERG_SINK;
           case 0: return CONNECTORCONFIG_NOT_SET;
           default: return null;
         }
@@ -648,6 +691,49 @@ public final class ConnectorOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3SinkSpec.getDefaultInstance();
     }
 
+    public static final int CONNECTOR_CONFIG_ICEBERG_SINK_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return Whether the connectorConfigIcebergSink field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectorConfigIcebergSink() {
+      return connectorConfigCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return The connectorConfigIcebergSink.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec getConnectorConfigIcebergSink() {
+      if (connectorConfigCase_ == 12) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpecOrBuilder getConnectorConfigIcebergSinkOrBuilder() {
+      if (connectorConfigCase_ == 12) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -679,6 +765,9 @@ public final class ConnectorOuterClass {
       }
       if (connectorConfigCase_ == 11) {
         output.writeMessage(11, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3SinkSpec) connectorConfig_);
+      }
+      if (connectorConfigCase_ == 12) {
+        output.writeMessage(12, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_);
       }
       unknownFields.writeTo(output);
     }
@@ -714,6 +803,10 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3SinkSpec) connectorConfig_);
       }
+      if (connectorConfigCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -748,6 +841,10 @@ public final class ConnectorOuterClass {
           if (!getConnectorConfigS3Sink()
               .equals(other.getConnectorConfigS3Sink())) return false;
           break;
+        case 12:
+          if (!getConnectorConfigIcebergSink()
+              .equals(other.getConnectorConfigIcebergSink())) return false;
+          break;
         case 0:
         default:
       }
@@ -780,6 +877,10 @@ public final class ConnectorOuterClass {
         case 11:
           hash = (37 * hash) + CONNECTOR_CONFIG_S3_SINK_FIELD_NUMBER;
           hash = (53 * hash) + getConnectorConfigS3Sink().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + CONNECTOR_CONFIG_ICEBERG_SINK_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectorConfigIcebergSink().hashCode();
           break;
         case 0:
         default:
@@ -1004,6 +1105,13 @@ public final class ConnectorOuterClass {
             result.connectorConfig_ = connectorConfigS3SinkBuilder_.build();
           }
         }
+        if (connectorConfigCase_ == 12) {
+          if (connectorConfigIcebergSinkBuilder_ == null) {
+            result.connectorConfig_ = connectorConfig_;
+          } else {
+            result.connectorConfig_ = connectorConfigIcebergSinkBuilder_.build();
+          }
+        }
         result.connectorConfigCase_ = connectorConfigCase_;
         onBuilt();
         return result;
@@ -1069,6 +1177,10 @@ public final class ConnectorOuterClass {
           }
           case CONNECTOR_CONFIG_S3_SINK: {
             mergeConnectorConfigS3Sink(other.getConnectorConfigS3Sink());
+            break;
+          }
+          case CONNECTOR_CONFIG_ICEBERG_SINK: {
+            mergeConnectorConfigIcebergSink(other.getConnectorConfigIcebergSink());
             break;
           }
           case CONNECTORCONFIG_NOT_SET: {
@@ -1890,6 +2002,183 @@ public final class ConnectorOuterClass {
         onChanged();;
         return connectorConfigS3SinkBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpecOrBuilder> connectorConfigIcebergSinkBuilder_;
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       * @return Whether the connectorConfigIcebergSink field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectorConfigIcebergSink() {
+        return connectorConfigCase_ == 12;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       * @return The connectorConfigIcebergSink.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec getConnectorConfigIcebergSink() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            return connectorConfigIcebergSinkBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder setConnectorConfigIcebergSink(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec value) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectorConfig_ = value;
+          onChanged();
+        } else {
+          connectorConfigIcebergSinkBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder setConnectorConfigIcebergSink(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder builderForValue) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          connectorConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectorConfigIcebergSinkBuilder_.setMessage(builderForValue.build());
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder mergeConnectorConfigIcebergSink(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec value) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12 &&
+              connectorConfig_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance()) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            connectorConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigIcebergSinkBuilder_.mergeFrom(value);
+          }
+          connectorConfigIcebergSinkBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder clearConnectorConfigIcebergSink() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+          }
+          connectorConfigIcebergSinkBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder getConnectorConfigIcebergSinkBuilder() {
+        return getConnectorConfigIcebergSinkFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpecOrBuilder getConnectorConfigIcebergSinkOrBuilder() {
+        if ((connectorConfigCase_ == 12) && (connectorConfigIcebergSinkBuilder_ != null)) {
+          return connectorConfigIcebergSinkBuilder_.getMessageOrBuilder();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpecOrBuilder> 
+          getConnectorConfigIcebergSinkFieldBuilder() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (!(connectorConfigCase_ == 12)) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance();
+          }
+          connectorConfigIcebergSinkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpecOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) connectorConfig_,
+                  getParentForChildren(),
+                  isClean());
+          connectorConfig_ = null;
+        }
+        connectorConfigCase_ = 12;
+        onChanged();;
+        return connectorConfigIcebergSinkBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2087,6 +2376,33 @@ public final class ConnectorOuterClass {
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigS3SinkSpecOrBuilder getConnectorConfigS3SinkOrBuilder();
 
+    /**
+     * <pre>
+     * Update specification for Iceberg Sink Connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return Whether the connectorConfigIcebergSink field is set.
+     */
+    boolean hasConnectorConfigIcebergSink();
+    /**
+     * <pre>
+     * Update specification for Iceberg Sink Connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return The connectorConfigIcebergSink.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec getConnectorConfigIcebergSink();
+    /**
+     * <pre>
+     * Update specification for Iceberg Sink Connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpecOrBuilder getConnectorConfigIcebergSinkOrBuilder();
+
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.ConnectorConfigCase getConnectorConfigCase();
   }
   /**
@@ -2189,6 +2505,20 @@ public final class ConnectorOuterClass {
               connectorConfigCase_ = 11;
               break;
             }
+            case 98: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder subBuilder = null;
+              if (connectorConfigCase_ == 12) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_).toBuilder();
+              }
+              connectorConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_);
+                connectorConfig_ = subBuilder.buildPartial();
+              }
+              connectorConfigCase_ = 12;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2240,6 +2570,7 @@ public final class ConnectorOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTOR_CONFIG_MIRRORMAKER(10),
       CONNECTOR_CONFIG_S3_SINK(11),
+      CONNECTOR_CONFIG_ICEBERG_SINK(12),
       CONNECTORCONFIG_NOT_SET(0);
       private final int value;
       private ConnectorConfigCase(int value) {
@@ -2259,6 +2590,7 @@ public final class ConnectorOuterClass {
         switch (value) {
           case 10: return CONNECTOR_CONFIG_MIRRORMAKER;
           case 11: return CONNECTOR_CONFIG_S3_SINK;
+          case 12: return CONNECTOR_CONFIG_ICEBERG_SINK;
           case 0: return CONNECTORCONFIG_NOT_SET;
           default: return null;
         }
@@ -2499,6 +2831,49 @@ public final class ConnectorOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigS3SinkSpec.getDefaultInstance();
     }
 
+    public static final int CONNECTOR_CONFIG_ICEBERG_SINK_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * Update specification for Iceberg Sink Connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return Whether the connectorConfigIcebergSink field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectorConfigIcebergSink() {
+      return connectorConfigCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Update specification for Iceberg Sink Connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     * @return The connectorConfigIcebergSink.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec getConnectorConfigIcebergSink() {
+      if (connectorConfigCase_ == 12) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Update specification for Iceberg Sink Connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpecOrBuilder getConnectorConfigIcebergSinkOrBuilder() {
+      if (connectorConfigCase_ == 12) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2527,6 +2902,9 @@ public final class ConnectorOuterClass {
       }
       if (connectorConfigCase_ == 11) {
         output.writeMessage(11, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigS3SinkSpec) connectorConfig_);
+      }
+      if (connectorConfigCase_ == 12) {
+        output.writeMessage(12, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_);
       }
       unknownFields.writeTo(output);
     }
@@ -2558,6 +2936,10 @@ public final class ConnectorOuterClass {
       if (connectorConfigCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigS3SinkSpec) connectorConfig_);
+      }
+      if (connectorConfigCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2591,6 +2973,10 @@ public final class ConnectorOuterClass {
           if (!getConnectorConfigS3Sink()
               .equals(other.getConnectorConfigS3Sink())) return false;
           break;
+        case 12:
+          if (!getConnectorConfigIcebergSink()
+              .equals(other.getConnectorConfigIcebergSink())) return false;
+          break;
         case 0:
         default:
       }
@@ -2621,6 +3007,10 @@ public final class ConnectorOuterClass {
         case 11:
           hash = (37 * hash) + CONNECTOR_CONFIG_S3_SINK_FIELD_NUMBER;
           hash = (53 * hash) + getConnectorConfigS3Sink().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + CONNECTOR_CONFIG_ICEBERG_SINK_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectorConfigIcebergSink().hashCode();
           break;
         case 0:
         default:
@@ -2837,6 +3227,13 @@ public final class ConnectorOuterClass {
             result.connectorConfig_ = connectorConfigS3SinkBuilder_.build();
           }
         }
+        if (connectorConfigCase_ == 12) {
+          if (connectorConfigIcebergSinkBuilder_ == null) {
+            result.connectorConfig_ = connectorConfig_;
+          } else {
+            result.connectorConfig_ = connectorConfigIcebergSinkBuilder_.build();
+          }
+        }
         result.connectorConfigCase_ = connectorConfigCase_;
         onBuilt();
         return result;
@@ -2898,6 +3295,10 @@ public final class ConnectorOuterClass {
           }
           case CONNECTOR_CONFIG_S3_SINK: {
             mergeConnectorConfigS3Sink(other.getConnectorConfigS3Sink());
+            break;
+          }
+          case CONNECTOR_CONFIG_ICEBERG_SINK: {
+            mergeConnectorConfigIcebergSink(other.getConnectorConfigIcebergSink());
             break;
           }
           case CONNECTORCONFIG_NOT_SET: {
@@ -3622,6 +4023,183 @@ public final class ConnectorOuterClass {
         connectorConfigCase_ = 11;
         onChanged();;
         return connectorConfigS3SinkBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpecOrBuilder> connectorConfigIcebergSinkBuilder_;
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       * @return Whether the connectorConfigIcebergSink field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectorConfigIcebergSink() {
+        return connectorConfigCase_ == 12;
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       * @return The connectorConfigIcebergSink.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec getConnectorConfigIcebergSink() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            return connectorConfigIcebergSinkBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder setConnectorConfigIcebergSink(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec value) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectorConfig_ = value;
+          onChanged();
+        } else {
+          connectorConfigIcebergSinkBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder setConnectorConfigIcebergSink(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder builderForValue) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          connectorConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectorConfigIcebergSinkBuilder_.setMessage(builderForValue.build());
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder mergeConnectorConfigIcebergSink(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec value) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12 &&
+              connectorConfig_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance()) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            connectorConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigIcebergSinkBuilder_.mergeFrom(value);
+          }
+          connectorConfigIcebergSinkBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder clearConnectorConfigIcebergSink() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+          }
+          connectorConfigIcebergSinkBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder getConnectorConfigIcebergSinkBuilder() {
+        return getConnectorConfigIcebergSinkFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpecOrBuilder getConnectorConfigIcebergSinkOrBuilder() {
+        if ((connectorConfigCase_ == 12) && (connectorConfigIcebergSinkBuilder_ != null)) {
+          return connectorConfigIcebergSinkBuilder_.getMessageOrBuilder();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Update specification for Iceberg Sink Connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec connector_config_iceberg_sink = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpecOrBuilder> 
+          getConnectorConfigIcebergSinkFieldBuilder() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (!(connectorConfigCase_ == 12)) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance();
+          }
+          connectorConfigIcebergSinkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpecOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) connectorConfig_,
+                  getParentForChildren(),
+                  isClean());
+          connectorConfig_ = null;
+        }
+        connectorConfigCase_ = 12;
+        onChanged();;
+        return connectorConfigIcebergSinkBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10777,11 +11355,19 @@ public final class ConnectorOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bucketName.
      */
     java.lang.String getBucketName();
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bytes for bucketName.
      */
@@ -10789,16 +11375,28 @@ public final class ConnectorOuterClass {
         getBucketNameBytes();
 
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
      * @return Whether the externalS3 field is set.
      */
     boolean hasExternalS3();
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
      * @return The externalS3.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec getExternalS3();
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpecOrBuilder getExternalS3OrBuilder();
@@ -10952,6 +11550,10 @@ public final class ConnectorOuterClass {
     public static final int BUCKET_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object bucketName_;
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bucketName.
      */
@@ -10969,6 +11571,10 @@ public final class ConnectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bytes for bucketName.
      */
@@ -10989,6 +11595,10 @@ public final class ConnectorOuterClass {
 
     public static final int EXTERNAL_S3_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
      * @return Whether the externalS3 field is set.
      */
@@ -10997,6 +11607,10 @@ public final class ConnectorOuterClass {
       return storageCase_ == 2;
     }
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
      * @return The externalS3.
      */
@@ -11008,6 +11622,10 @@ public final class ConnectorOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
      */
     @java.lang.Override
@@ -11387,6 +12005,10 @@ public final class ConnectorOuterClass {
 
       private java.lang.Object bucketName_ = "";
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @return The bucketName.
        */
@@ -11403,6 +12025,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @return The bytes for bucketName.
        */
@@ -11420,6 +12046,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @param value The bucketName to set.
        * @return This builder for chaining.
@@ -11435,6 +12065,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @return This builder for chaining.
        */
@@ -11445,6 +12079,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @param value The bytes for bucketName to set.
        * @return This builder for chaining.
@@ -11464,6 +12102,10 @@ public final class ConnectorOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpecOrBuilder> externalS3Builder_;
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        * @return Whether the externalS3 field is set.
        */
@@ -11472,6 +12114,10 @@ public final class ConnectorOuterClass {
         return storageCase_ == 2;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        * @return The externalS3.
        */
@@ -11490,6 +12136,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        */
       public Builder setExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec value) {
@@ -11506,6 +12156,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        */
       public Builder setExternalS3(
@@ -11520,6 +12174,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        */
       public Builder mergeExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec value) {
@@ -11542,6 +12200,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        */
       public Builder clearExternalS3() {
@@ -11561,12 +12223,20 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec.Builder getExternalS3Builder() {
         return getExternalS3FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        */
       @java.lang.Override
@@ -11581,6 +12251,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3StorageSpec external_s3 = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11659,11 +12333,19 @@ public final class ConnectorOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The bytes for accessKeyId.
      */
@@ -11671,11 +12353,19 @@ public final class ConnectorOuterClass {
         getAccessKeyIdBytes();
 
     /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
      * <code>string secret_access_key = 2;</code>
      * @return The secretAccessKey.
      */
     java.lang.String getSecretAccessKey();
     /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
      * <code>string secret_access_key = 2;</code>
      * @return The bytes for secretAccessKey.
      */
@@ -11683,11 +12373,19 @@ public final class ConnectorOuterClass {
         getSecretAccessKeyBytes();
 
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 3;</code>
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 3;</code>
      * @return The bytes for endpoint.
      */
@@ -11696,7 +12394,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Default is 'us-east-1'.
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 4;</code>
@@ -11705,7 +12403,7 @@ public final class ConnectorOuterClass {
     java.lang.String getRegion();
     /**
      * <pre>
-     * Default is 'us-east-1'.
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 4;</code>
@@ -11822,6 +12520,10 @@ public final class ConnectorOuterClass {
     public static final int ACCESS_KEY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object accessKeyId_;
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The accessKeyId.
      */
@@ -11839,6 +12541,10 @@ public final class ConnectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The bytes for accessKeyId.
      */
@@ -11860,6 +12566,10 @@ public final class ConnectorOuterClass {
     public static final int SECRET_ACCESS_KEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object secretAccessKey_;
     /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
      * <code>string secret_access_key = 2;</code>
      * @return The secretAccessKey.
      */
@@ -11877,6 +12587,10 @@ public final class ConnectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
      * <code>string secret_access_key = 2;</code>
      * @return The bytes for secretAccessKey.
      */
@@ -11898,6 +12612,10 @@ public final class ConnectorOuterClass {
     public static final int ENDPOINT_FIELD_NUMBER = 3;
     private volatile java.lang.Object endpoint_;
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 3;</code>
      * @return The endpoint.
      */
@@ -11915,6 +12633,10 @@ public final class ConnectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 3;</code>
      * @return The bytes for endpoint.
      */
@@ -11937,7 +12659,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object region_;
     /**
      * <pre>
-     * Default is 'us-east-1'.
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 4;</code>
@@ -11958,7 +12680,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Default is 'us-east-1'.
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 4;</code>
@@ -12334,6 +13056,10 @@ public final class ConnectorOuterClass {
 
       private java.lang.Object accessKeyId_ = "";
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @return The accessKeyId.
        */
@@ -12350,6 +13076,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @return The bytes for accessKeyId.
        */
@@ -12367,6 +13097,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @param value The accessKeyId to set.
        * @return This builder for chaining.
@@ -12382,6 +13116,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -12392,6 +13130,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @param value The bytes for accessKeyId to set.
        * @return This builder for chaining.
@@ -12410,6 +13152,10 @@ public final class ConnectorOuterClass {
 
       private java.lang.Object secretAccessKey_ = "";
       /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
        * <code>string secret_access_key = 2;</code>
        * @return The secretAccessKey.
        */
@@ -12426,6 +13172,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
        * <code>string secret_access_key = 2;</code>
        * @return The bytes for secretAccessKey.
        */
@@ -12443,6 +13193,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
        * <code>string secret_access_key = 2;</code>
        * @param value The secretAccessKey to set.
        * @return This builder for chaining.
@@ -12458,6 +13212,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
        * <code>string secret_access_key = 2;</code>
        * @return This builder for chaining.
        */
@@ -12468,6 +13226,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
        * <code>string secret_access_key = 2;</code>
        * @param value The bytes for secretAccessKey to set.
        * @return This builder for chaining.
@@ -12486,6 +13248,10 @@ public final class ConnectorOuterClass {
 
       private java.lang.Object endpoint_ = "";
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 3;</code>
        * @return The endpoint.
        */
@@ -12502,6 +13268,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 3;</code>
        * @return The bytes for endpoint.
        */
@@ -12519,6 +13289,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 3;</code>
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -12534,6 +13308,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 3;</code>
        * @return This builder for chaining.
        */
@@ -12544,6 +13322,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 3;</code>
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -12563,7 +13345,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object region_ = "";
       /**
        * <pre>
-       * Default is 'us-east-1'.
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 4;</code>
@@ -12583,7 +13365,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'.
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 4;</code>
@@ -12604,7 +13386,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'.
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 4;</code>
@@ -12623,7 +13405,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'.
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 4;</code>
@@ -12637,7 +13419,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'.
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 4;</code>
@@ -12703,6 +13485,11801 @@ public final class ConnectorOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConnectorConfigIcebergSinkSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return Whether the topics field is set.
+     */
+    boolean hasTopics();
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The topics.
+     */
+    java.lang.String getTopics();
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The bytes for topics.
+     */
+    com.google.protobuf.ByteString
+        getTopicsBytes();
+
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return Whether the topicsRegex field is set.
+     */
+    boolean hasTopicsRegex();
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The topicsRegex.
+     */
+    java.lang.String getTopicsRegex();
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The bytes for topicsRegex.
+     */
+    com.google.protobuf.ByteString
+        getTopicsRegexBytes();
+
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return Whether the metastoreConnection field is set.
+     */
+    boolean hasMetastoreConnection();
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return The metastoreConnection.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getMetastoreConnection();
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder getMetastoreConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return Whether the s3Connection field is set.
+     */
+    boolean hasS3Connection();
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return The s3Connection.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getS3Connection();
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder getS3ConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+     * @return Whether the staticTables field is set.
+     */
+    boolean hasStaticTables();
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+     * @return The staticTables.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec getStaticTables();
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpecOrBuilder getStaticTablesOrBuilder();
+
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+     * @return Whether the dynamicTables field is set.
+     */
+    boolean hasDynamicTables();
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+     * @return The dynamicTables.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec getDynamicTables();
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpecOrBuilder getDynamicTablesOrBuilder();
+
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+     * @return Whether the tablesConfig field is set.
+     */
+    boolean hasTablesConfig();
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+     * @return The tablesConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getTablesConfig();
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder getTablesConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+     * @return Whether the controlConfig field is set.
+     */
+    boolean hasControlConfig();
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+     * @return The controlConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getControlConfig();
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder getControlConfigOrBuilder();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.TopicsSourceCase getTopicsSourceCase();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.TableRoutingCase getTableRoutingCase();
+  }
+  /**
+   * <pre>
+   * Specification for Kafka Iceberg Sink Connector.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec}
+   */
+  public static final class ConnectorConfigIcebergSinkSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec)
+      ConnectorConfigIcebergSinkSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConnectorConfigIcebergSinkSpec.newBuilder() to construct.
+    private ConnectorConfigIcebergSinkSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConnectorConfigIcebergSinkSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectorConfigIcebergSinkSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectorConfigIcebergSinkSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              topicsSourceCase_ = 1;
+              topicsSource_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              topicsSourceCase_ = 2;
+              topicsSource_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder subBuilder = null;
+              if (metastoreConnection_ != null) {
+                subBuilder = metastoreConnection_.toBuilder();
+              }
+              metastoreConnection_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metastoreConnection_);
+                metastoreConnection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder subBuilder = null;
+              if (s3Connection_ != null) {
+                subBuilder = s3Connection_.toBuilder();
+              }
+              s3Connection_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(s3Connection_);
+                s3Connection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder subBuilder = null;
+              if (tableRoutingCase_ == 7) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_).toBuilder();
+              }
+              tableRouting_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_);
+                tableRouting_ = subBuilder.buildPartial();
+              }
+              tableRoutingCase_ = 7;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder subBuilder = null;
+              if (tableRoutingCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_).toBuilder();
+              }
+              tableRouting_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_);
+                tableRouting_ = subBuilder.buildPartial();
+              }
+              tableRoutingCase_ = 8;
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder subBuilder = null;
+              if (tablesConfig_ != null) {
+                subBuilder = tablesConfig_.toBuilder();
+              }
+              tablesConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tablesConfig_);
+                tablesConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder subBuilder = null;
+              if (controlConfig_ != null) {
+                subBuilder = controlConfig_.toBuilder();
+              }
+              controlConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(controlConfig_);
+                controlConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder.class);
+    }
+
+    private int topicsSourceCase_ = 0;
+    private java.lang.Object topicsSource_;
+    public enum TopicsSourceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TOPICS(1),
+      TOPICS_REGEX(2),
+      TOPICSSOURCE_NOT_SET(0);
+      private final int value;
+      private TopicsSourceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TopicsSourceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TopicsSourceCase forNumber(int value) {
+        switch (value) {
+          case 1: return TOPICS;
+          case 2: return TOPICS_REGEX;
+          case 0: return TOPICSSOURCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TopicsSourceCase
+    getTopicsSourceCase() {
+      return TopicsSourceCase.forNumber(
+          topicsSourceCase_);
+    }
+
+    private int tableRoutingCase_ = 0;
+    private java.lang.Object tableRouting_;
+    public enum TableRoutingCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      STATIC_TABLES(7),
+      DYNAMIC_TABLES(8),
+      TABLEROUTING_NOT_SET(0);
+      private final int value;
+      private TableRoutingCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TableRoutingCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TableRoutingCase forNumber(int value) {
+        switch (value) {
+          case 7: return STATIC_TABLES;
+          case 8: return DYNAMIC_TABLES;
+          case 0: return TABLEROUTING_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TableRoutingCase
+    getTableRoutingCase() {
+      return TableRoutingCase.forNumber(
+          tableRoutingCase_);
+    }
+
+    public static final int TOPICS_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return Whether the topics field is set.
+     */
+    public boolean hasTopics() {
+      return topicsSourceCase_ == 1;
+    }
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The topics.
+     */
+    public java.lang.String getTopics() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 1) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (topicsSourceCase_ == 1) {
+          topicsSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The bytes for topics.
+     */
+    public com.google.protobuf.ByteString
+        getTopicsBytes() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 1) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (topicsSourceCase_ == 1) {
+          topicsSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPICS_REGEX_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return Whether the topicsRegex field is set.
+     */
+    public boolean hasTopicsRegex() {
+      return topicsSourceCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The topicsRegex.
+     */
+    public java.lang.String getTopicsRegex() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 2) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (topicsSourceCase_ == 2) {
+          topicsSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The bytes for topicsRegex.
+     */
+    public com.google.protobuf.ByteString
+        getTopicsRegexBytes() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 2) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (topicsSourceCase_ == 2) {
+          topicsSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METASTORE_CONNECTION_FIELD_NUMBER = 3;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec metastoreConnection_;
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return Whether the metastoreConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetastoreConnection() {
+      return metastoreConnection_ != null;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return The metastoreConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getMetastoreConnection() {
+      return metastoreConnection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance() : metastoreConnection_;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder getMetastoreConnectionOrBuilder() {
+      return getMetastoreConnection();
+    }
+
+    public static final int S3_CONNECTION_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec s3Connection_;
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return Whether the s3Connection field is set.
+     */
+    @java.lang.Override
+    public boolean hasS3Connection() {
+      return s3Connection_ != null;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return The s3Connection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getS3Connection() {
+      return s3Connection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance() : s3Connection_;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder getS3ConnectionOrBuilder() {
+      return getS3Connection();
+    }
+
+    public static final int STATIC_TABLES_FIELD_NUMBER = 7;
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+     * @return Whether the staticTables field is set.
+     */
+    @java.lang.Override
+    public boolean hasStaticTables() {
+      return tableRoutingCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+     * @return The staticTables.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec getStaticTables() {
+      if (tableRoutingCase_ == 7) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpecOrBuilder getStaticTablesOrBuilder() {
+      if (tableRoutingCase_ == 7) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance();
+    }
+
+    public static final int DYNAMIC_TABLES_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+     * @return Whether the dynamicTables field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicTables() {
+      return tableRoutingCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+     * @return The dynamicTables.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec getDynamicTables() {
+      if (tableRoutingCase_ == 8) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpecOrBuilder getDynamicTablesOrBuilder() {
+      if (tableRoutingCase_ == 8) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance();
+    }
+
+    public static final int TABLES_CONFIG_FIELD_NUMBER = 9;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec tablesConfig_;
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+     * @return Whether the tablesConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasTablesConfig() {
+      return tablesConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+     * @return The tablesConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getTablesConfig() {
+      return tablesConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance() : tablesConfig_;
+    }
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder getTablesConfigOrBuilder() {
+      return getTablesConfig();
+    }
+
+    public static final int CONTROL_CONFIG_FIELD_NUMBER = 10;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec controlConfig_;
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+     * @return Whether the controlConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlConfig() {
+      return controlConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+     * @return The controlConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getControlConfig() {
+      return controlConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance() : controlConfig_;
+    }
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder getControlConfigOrBuilder() {
+      return getControlConfig();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (topicsSourceCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicsSource_);
+      }
+      if (topicsSourceCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicsSource_);
+      }
+      if (metastoreConnection_ != null) {
+        output.writeMessage(3, getMetastoreConnection());
+      }
+      if (s3Connection_ != null) {
+        output.writeMessage(4, getS3Connection());
+      }
+      if (tableRoutingCase_ == 7) {
+        output.writeMessage(7, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_);
+      }
+      if (tableRoutingCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_);
+      }
+      if (tablesConfig_ != null) {
+        output.writeMessage(9, getTablesConfig());
+      }
+      if (controlConfig_ != null) {
+        output.writeMessage(10, getControlConfig());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (topicsSourceCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, topicsSource_);
+      }
+      if (topicsSourceCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicsSource_);
+      }
+      if (metastoreConnection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetastoreConnection());
+      }
+      if (s3Connection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getS3Connection());
+      }
+      if (tableRoutingCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_);
+      }
+      if (tableRoutingCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_);
+      }
+      if (tablesConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getTablesConfig());
+      }
+      if (controlConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getControlConfig());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) obj;
+
+      if (hasMetastoreConnection() != other.hasMetastoreConnection()) return false;
+      if (hasMetastoreConnection()) {
+        if (!getMetastoreConnection()
+            .equals(other.getMetastoreConnection())) return false;
+      }
+      if (hasS3Connection() != other.hasS3Connection()) return false;
+      if (hasS3Connection()) {
+        if (!getS3Connection()
+            .equals(other.getS3Connection())) return false;
+      }
+      if (hasTablesConfig() != other.hasTablesConfig()) return false;
+      if (hasTablesConfig()) {
+        if (!getTablesConfig()
+            .equals(other.getTablesConfig())) return false;
+      }
+      if (hasControlConfig() != other.hasControlConfig()) return false;
+      if (hasControlConfig()) {
+        if (!getControlConfig()
+            .equals(other.getControlConfig())) return false;
+      }
+      if (!getTopicsSourceCase().equals(other.getTopicsSourceCase())) return false;
+      switch (topicsSourceCase_) {
+        case 1:
+          if (!getTopics()
+              .equals(other.getTopics())) return false;
+          break;
+        case 2:
+          if (!getTopicsRegex()
+              .equals(other.getTopicsRegex())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getTableRoutingCase().equals(other.getTableRoutingCase())) return false;
+      switch (tableRoutingCase_) {
+        case 7:
+          if (!getStaticTables()
+              .equals(other.getStaticTables())) return false;
+          break;
+        case 8:
+          if (!getDynamicTables()
+              .equals(other.getDynamicTables())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetastoreConnection()) {
+        hash = (37 * hash) + METASTORE_CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getMetastoreConnection().hashCode();
+      }
+      if (hasS3Connection()) {
+        hash = (37 * hash) + S3_CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getS3Connection().hashCode();
+      }
+      if (hasTablesConfig()) {
+        hash = (37 * hash) + TABLES_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getTablesConfig().hashCode();
+      }
+      if (hasControlConfig()) {
+        hash = (37 * hash) + CONTROL_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getControlConfig().hashCode();
+      }
+      switch (topicsSourceCase_) {
+        case 1:
+          hash = (37 * hash) + TOPICS_FIELD_NUMBER;
+          hash = (53 * hash) + getTopics().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + TOPICS_REGEX_FIELD_NUMBER;
+          hash = (53 * hash) + getTopicsRegex().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      switch (tableRoutingCase_) {
+        case 7:
+          hash = (37 * hash) + STATIC_TABLES_FIELD_NUMBER;
+          hash = (53 * hash) + getStaticTables().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + DYNAMIC_TABLES_FIELD_NUMBER;
+          hash = (53 * hash) + getDynamicTables().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specification for Kafka Iceberg Sink Connector.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = null;
+        } else {
+          metastoreConnection_ = null;
+          metastoreConnectionBuilder_ = null;
+        }
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = null;
+        } else {
+          s3Connection_ = null;
+          s3ConnectionBuilder_ = null;
+        }
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = null;
+        } else {
+          tablesConfig_ = null;
+          tablesConfigBuilder_ = null;
+        }
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = null;
+        } else {
+          controlConfig_ = null;
+          controlConfigBuilder_ = null;
+        }
+        topicsSourceCase_ = 0;
+        topicsSource_ = null;
+        tableRoutingCase_ = 0;
+        tableRouting_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec(this);
+        if (topicsSourceCase_ == 1) {
+          result.topicsSource_ = topicsSource_;
+        }
+        if (topicsSourceCase_ == 2) {
+          result.topicsSource_ = topicsSource_;
+        }
+        if (metastoreConnectionBuilder_ == null) {
+          result.metastoreConnection_ = metastoreConnection_;
+        } else {
+          result.metastoreConnection_ = metastoreConnectionBuilder_.build();
+        }
+        if (s3ConnectionBuilder_ == null) {
+          result.s3Connection_ = s3Connection_;
+        } else {
+          result.s3Connection_ = s3ConnectionBuilder_.build();
+        }
+        if (tableRoutingCase_ == 7) {
+          if (staticTablesBuilder_ == null) {
+            result.tableRouting_ = tableRouting_;
+          } else {
+            result.tableRouting_ = staticTablesBuilder_.build();
+          }
+        }
+        if (tableRoutingCase_ == 8) {
+          if (dynamicTablesBuilder_ == null) {
+            result.tableRouting_ = tableRouting_;
+          } else {
+            result.tableRouting_ = dynamicTablesBuilder_.build();
+          }
+        }
+        if (tablesConfigBuilder_ == null) {
+          result.tablesConfig_ = tablesConfig_;
+        } else {
+          result.tablesConfig_ = tablesConfigBuilder_.build();
+        }
+        if (controlConfigBuilder_ == null) {
+          result.controlConfig_ = controlConfig_;
+        } else {
+          result.controlConfig_ = controlConfigBuilder_.build();
+        }
+        result.topicsSourceCase_ = topicsSourceCase_;
+        result.tableRoutingCase_ = tableRoutingCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance()) return this;
+        if (other.hasMetastoreConnection()) {
+          mergeMetastoreConnection(other.getMetastoreConnection());
+        }
+        if (other.hasS3Connection()) {
+          mergeS3Connection(other.getS3Connection());
+        }
+        if (other.hasTablesConfig()) {
+          mergeTablesConfig(other.getTablesConfig());
+        }
+        if (other.hasControlConfig()) {
+          mergeControlConfig(other.getControlConfig());
+        }
+        switch (other.getTopicsSourceCase()) {
+          case TOPICS: {
+            topicsSourceCase_ = 1;
+            topicsSource_ = other.topicsSource_;
+            onChanged();
+            break;
+          }
+          case TOPICS_REGEX: {
+            topicsSourceCase_ = 2;
+            topicsSource_ = other.topicsSource_;
+            onChanged();
+            break;
+          }
+          case TOPICSSOURCE_NOT_SET: {
+            break;
+          }
+        }
+        switch (other.getTableRoutingCase()) {
+          case STATIC_TABLES: {
+            mergeStaticTables(other.getStaticTables());
+            break;
+          }
+          case DYNAMIC_TABLES: {
+            mergeDynamicTables(other.getDynamicTables());
+            break;
+          }
+          case TABLEROUTING_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int topicsSourceCase_ = 0;
+      private java.lang.Object topicsSource_;
+      public TopicsSourceCase
+          getTopicsSourceCase() {
+        return TopicsSourceCase.forNumber(
+            topicsSourceCase_);
+      }
+
+      public Builder clearTopicsSource() {
+        topicsSourceCase_ = 0;
+        topicsSource_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int tableRoutingCase_ = 0;
+      private java.lang.Object tableRouting_;
+      public TableRoutingCase
+          getTableRoutingCase() {
+        return TableRoutingCase.forNumber(
+            tableRoutingCase_);
+      }
+
+      public Builder clearTableRouting() {
+        tableRoutingCase_ = 0;
+        tableRouting_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return Whether the topics field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopics() {
+        return topicsSourceCase_ == 1;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return The topics.
+       */
+      @java.lang.Override
+      public java.lang.String getTopics() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 1) {
+          ref = topicsSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (topicsSourceCase_ == 1) {
+            topicsSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return The bytes for topics.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTopicsBytes() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 1) {
+          ref = topicsSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (topicsSourceCase_ == 1) {
+            topicsSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @param value The topics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopics(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  topicsSourceCase_ = 1;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopics() {
+        if (topicsSourceCase_ == 1) {
+          topicsSourceCase_ = 0;
+          topicsSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @param value The bytes for topics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        topicsSourceCase_ = 1;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return Whether the topicsRegex field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopicsRegex() {
+        return topicsSourceCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return The topicsRegex.
+       */
+      @java.lang.Override
+      public java.lang.String getTopicsRegex() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 2) {
+          ref = topicsSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (topicsSourceCase_ == 2) {
+            topicsSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return The bytes for topicsRegex.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTopicsRegexBytes() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 2) {
+          ref = topicsSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (topicsSourceCase_ == 2) {
+            topicsSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @param value The topicsRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsRegex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  topicsSourceCase_ = 2;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicsRegex() {
+        if (topicsSourceCase_ == 2) {
+          topicsSourceCase_ = 0;
+          topicsSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @param value The bytes for topicsRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsRegexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        topicsSourceCase_ = 2;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec metastoreConnection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder> metastoreConnectionBuilder_;
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       * @return Whether the metastoreConnection field is set.
+       */
+      public boolean hasMetastoreConnection() {
+        return metastoreConnectionBuilder_ != null || metastoreConnection_ != null;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       * @return The metastoreConnection.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getMetastoreConnection() {
+        if (metastoreConnectionBuilder_ == null) {
+          return metastoreConnection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance() : metastoreConnection_;
+        } else {
+          return metastoreConnectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder setMetastoreConnection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec value) {
+        if (metastoreConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metastoreConnection_ = value;
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder setMetastoreConnection(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder builderForValue) {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = builderForValue.build();
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder mergeMetastoreConnection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec value) {
+        if (metastoreConnectionBuilder_ == null) {
+          if (metastoreConnection_ != null) {
+            metastoreConnection_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.newBuilder(metastoreConnection_).mergeFrom(value).buildPartial();
+          } else {
+            metastoreConnection_ = value;
+          }
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder clearMetastoreConnection() {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = null;
+          onChanged();
+        } else {
+          metastoreConnection_ = null;
+          metastoreConnectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder getMetastoreConnectionBuilder() {
+        
+        onChanged();
+        return getMetastoreConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder getMetastoreConnectionOrBuilder() {
+        if (metastoreConnectionBuilder_ != null) {
+          return metastoreConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          return metastoreConnection_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance() : metastoreConnection_;
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder> 
+          getMetastoreConnectionFieldBuilder() {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder>(
+                  getMetastoreConnection(),
+                  getParentForChildren(),
+                  isClean());
+          metastoreConnection_ = null;
+        }
+        return metastoreConnectionBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec s3Connection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder> s3ConnectionBuilder_;
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       * @return Whether the s3Connection field is set.
+       */
+      public boolean hasS3Connection() {
+        return s3ConnectionBuilder_ != null || s3Connection_ != null;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       * @return The s3Connection.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getS3Connection() {
+        if (s3ConnectionBuilder_ == null) {
+          return s3Connection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance() : s3Connection_;
+        } else {
+          return s3ConnectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder setS3Connection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec value) {
+        if (s3ConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          s3Connection_ = value;
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder setS3Connection(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder builderForValue) {
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder mergeS3Connection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec value) {
+        if (s3ConnectionBuilder_ == null) {
+          if (s3Connection_ != null) {
+            s3Connection_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.newBuilder(s3Connection_).mergeFrom(value).buildPartial();
+          } else {
+            s3Connection_ = value;
+          }
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder clearS3Connection() {
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = null;
+          onChanged();
+        } else {
+          s3Connection_ = null;
+          s3ConnectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder getS3ConnectionBuilder() {
+        
+        onChanged();
+        return getS3ConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder getS3ConnectionOrBuilder() {
+        if (s3ConnectionBuilder_ != null) {
+          return s3ConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          return s3Connection_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance() : s3Connection_;
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder> 
+          getS3ConnectionFieldBuilder() {
+        if (s3ConnectionBuilder_ == null) {
+          s3ConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder>(
+                  getS3Connection(),
+                  getParentForChildren(),
+                  isClean());
+          s3Connection_ = null;
+        }
+        return s3ConnectionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpecOrBuilder> staticTablesBuilder_;
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       * @return Whether the staticTables field is set.
+       */
+      @java.lang.Override
+      public boolean hasStaticTables() {
+        return tableRoutingCase_ == 7;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       * @return The staticTables.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec getStaticTables() {
+        if (staticTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 7) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance();
+        } else {
+          if (tableRoutingCase_ == 7) {
+            return staticTablesBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       */
+      public Builder setStaticTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec value) {
+        if (staticTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableRouting_ = value;
+          onChanged();
+        } else {
+          staticTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       */
+      public Builder setStaticTables(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder builderForValue) {
+        if (staticTablesBuilder_ == null) {
+          tableRouting_ = builderForValue.build();
+          onChanged();
+        } else {
+          staticTablesBuilder_.setMessage(builderForValue.build());
+        }
+        tableRoutingCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       */
+      public Builder mergeStaticTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec value) {
+        if (staticTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 7 &&
+              tableRouting_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance()) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tableRouting_ = value;
+          }
+          onChanged();
+        } else {
+          if (tableRoutingCase_ == 7) {
+            staticTablesBuilder_.mergeFrom(value);
+          }
+          staticTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       */
+      public Builder clearStaticTables() {
+        if (staticTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 7) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+            onChanged();
+          }
+        } else {
+          if (tableRoutingCase_ == 7) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+          }
+          staticTablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder getStaticTablesBuilder() {
+        return getStaticTablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpecOrBuilder getStaticTablesOrBuilder() {
+        if ((tableRoutingCase_ == 7) && (staticTablesBuilder_ != null)) {
+          return staticTablesBuilder_.getMessageOrBuilder();
+        } else {
+          if (tableRoutingCase_ == 7) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTablesSpec static_tables = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpecOrBuilder> 
+          getStaticTablesFieldBuilder() {
+        if (staticTablesBuilder_ == null) {
+          if (!(tableRoutingCase_ == 7)) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance();
+          }
+          staticTablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpecOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) tableRouting_,
+                  getParentForChildren(),
+                  isClean());
+          tableRouting_ = null;
+        }
+        tableRoutingCase_ = 7;
+        onChanged();;
+        return staticTablesBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpecOrBuilder> dynamicTablesBuilder_;
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       * @return Whether the dynamicTables field is set.
+       */
+      @java.lang.Override
+      public boolean hasDynamicTables() {
+        return tableRoutingCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       * @return The dynamicTables.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec getDynamicTables() {
+        if (dynamicTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 8) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance();
+        } else {
+          if (tableRoutingCase_ == 8) {
+            return dynamicTablesBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       */
+      public Builder setDynamicTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec value) {
+        if (dynamicTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableRouting_ = value;
+          onChanged();
+        } else {
+          dynamicTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       */
+      public Builder setDynamicTables(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder builderForValue) {
+        if (dynamicTablesBuilder_ == null) {
+          tableRouting_ = builderForValue.build();
+          onChanged();
+        } else {
+          dynamicTablesBuilder_.setMessage(builderForValue.build());
+        }
+        tableRoutingCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       */
+      public Builder mergeDynamicTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec value) {
+        if (dynamicTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 8 &&
+              tableRouting_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance()) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tableRouting_ = value;
+          }
+          onChanged();
+        } else {
+          if (tableRoutingCase_ == 8) {
+            dynamicTablesBuilder_.mergeFrom(value);
+          }
+          dynamicTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       */
+      public Builder clearDynamicTables() {
+        if (dynamicTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 8) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+            onChanged();
+          }
+        } else {
+          if (tableRoutingCase_ == 8) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+          }
+          dynamicTablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder getDynamicTablesBuilder() {
+        return getDynamicTablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpecOrBuilder getDynamicTablesOrBuilder() {
+        if ((tableRoutingCase_ == 8) && (dynamicTablesBuilder_ != null)) {
+          return dynamicTablesBuilder_.getMessageOrBuilder();
+        } else {
+          if (tableRoutingCase_ == 8) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTablesSpec dynamic_tables = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpecOrBuilder> 
+          getDynamicTablesFieldBuilder() {
+        if (dynamicTablesBuilder_ == null) {
+          if (!(tableRoutingCase_ == 8)) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance();
+          }
+          dynamicTablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpecOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) tableRouting_,
+                  getParentForChildren(),
+                  isClean());
+          tableRouting_ = null;
+        }
+        tableRoutingCase_ = 8;
+        onChanged();;
+        return dynamicTablesBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec tablesConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder> tablesConfigBuilder_;
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       * @return Whether the tablesConfig field is set.
+       */
+      public boolean hasTablesConfig() {
+        return tablesConfigBuilder_ != null || tablesConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       * @return The tablesConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getTablesConfig() {
+        if (tablesConfigBuilder_ == null) {
+          return tablesConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance() : tablesConfig_;
+        } else {
+          return tablesConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       */
+      public Builder setTablesConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec value) {
+        if (tablesConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tablesConfig_ = value;
+          onChanged();
+        } else {
+          tablesConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       */
+      public Builder setTablesConfig(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder builderForValue) {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          tablesConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       */
+      public Builder mergeTablesConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec value) {
+        if (tablesConfigBuilder_ == null) {
+          if (tablesConfig_ != null) {
+            tablesConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.newBuilder(tablesConfig_).mergeFrom(value).buildPartial();
+          } else {
+            tablesConfig_ = value;
+          }
+          onChanged();
+        } else {
+          tablesConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       */
+      public Builder clearTablesConfig() {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = null;
+          onChanged();
+        } else {
+          tablesConfig_ = null;
+          tablesConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder getTablesConfigBuilder() {
+        
+        onChanged();
+        return getTablesConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder getTablesConfigOrBuilder() {
+        if (tablesConfigBuilder_ != null) {
+          return tablesConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return tablesConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance() : tablesConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder> 
+          getTablesConfigFieldBuilder() {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder>(
+                  getTablesConfig(),
+                  getParentForChildren(),
+                  isClean());
+          tablesConfig_ = null;
+        }
+        return tablesConfigBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec controlConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder> controlConfigBuilder_;
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       * @return Whether the controlConfig field is set.
+       */
+      public boolean hasControlConfig() {
+        return controlConfigBuilder_ != null || controlConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       * @return The controlConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getControlConfig() {
+        if (controlConfigBuilder_ == null) {
+          return controlConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance() : controlConfig_;
+        } else {
+          return controlConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       */
+      public Builder setControlConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec value) {
+        if (controlConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          controlConfig_ = value;
+          onChanged();
+        } else {
+          controlConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       */
+      public Builder setControlConfig(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder builderForValue) {
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          controlConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       */
+      public Builder mergeControlConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec value) {
+        if (controlConfigBuilder_ == null) {
+          if (controlConfig_ != null) {
+            controlConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.newBuilder(controlConfig_).mergeFrom(value).buildPartial();
+          } else {
+            controlConfig_ = value;
+          }
+          onChanged();
+        } else {
+          controlConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       */
+      public Builder clearControlConfig() {
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = null;
+          onChanged();
+        } else {
+          controlConfig_ = null;
+          controlConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder getControlConfigBuilder() {
+        
+        onChanged();
+        return getControlConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder getControlConfigOrBuilder() {
+        if (controlConfigBuilder_ != null) {
+          return controlConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return controlConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance() : controlConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder> 
+          getControlConfigFieldBuilder() {
+        if (controlConfigBuilder_ == null) {
+          controlConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder>(
+                  getControlConfig(),
+                  getParentForChildren(),
+                  isClean());
+          controlConfig_ = null;
+        }
+        return controlConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSinkSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConnectorConfigIcebergSinkSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ConnectorConfigIcebergSinkSpec>() {
+      @java.lang.Override
+      public ConnectorConfigIcebergSinkSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConnectorConfigIcebergSinkSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConnectorConfigIcebergSinkSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConnectorConfigIcebergSinkSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateConnectorConfigIcebergSinkSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return Whether the topics field is set.
+     */
+    boolean hasTopics();
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The topics.
+     */
+    java.lang.String getTopics();
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The bytes for topics.
+     */
+    com.google.protobuf.ByteString
+        getTopicsBytes();
+
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return Whether the topicsRegex field is set.
+     */
+    boolean hasTopicsRegex();
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The topicsRegex.
+     */
+    java.lang.String getTopicsRegex();
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The bytes for topicsRegex.
+     */
+    com.google.protobuf.ByteString
+        getTopicsRegexBytes();
+
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return Whether the metastoreConnection field is set.
+     */
+    boolean hasMetastoreConnection();
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return The metastoreConnection.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getMetastoreConnection();
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder getMetastoreConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return Whether the s3Connection field is set.
+     */
+    boolean hasS3Connection();
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return The s3Connection.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getS3Connection();
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder getS3ConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+     * @return Whether the tablesConfig field is set.
+     */
+    boolean hasTablesConfig();
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+     * @return The tablesConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getTablesConfig();
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder getTablesConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+     * @return Whether the controlConfig field is set.
+     */
+    boolean hasControlConfig();
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+     * @return The controlConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getControlConfig();
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder getControlConfigOrBuilder();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.TopicsSourceCase getTopicsSourceCase();
+  }
+  /**
+   * <pre>
+   * Specification for update Kafka Iceberg Sink Connector.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec}
+   */
+  public static final class UpdateConnectorConfigIcebergSinkSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec)
+      UpdateConnectorConfigIcebergSinkSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateConnectorConfigIcebergSinkSpec.newBuilder() to construct.
+    private UpdateConnectorConfigIcebergSinkSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateConnectorConfigIcebergSinkSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateConnectorConfigIcebergSinkSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateConnectorConfigIcebergSinkSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              topicsSourceCase_ = 1;
+              topicsSource_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              topicsSourceCase_ = 2;
+              topicsSource_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder subBuilder = null;
+              if (metastoreConnection_ != null) {
+                subBuilder = metastoreConnection_.toBuilder();
+              }
+              metastoreConnection_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metastoreConnection_);
+                metastoreConnection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder subBuilder = null;
+              if (s3Connection_ != null) {
+                subBuilder = s3Connection_.toBuilder();
+              }
+              s3Connection_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(s3Connection_);
+                s3Connection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder subBuilder = null;
+              if (tablesConfig_ != null) {
+                subBuilder = tablesConfig_.toBuilder();
+              }
+              tablesConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tablesConfig_);
+                tablesConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder subBuilder = null;
+              if (controlConfig_ != null) {
+                subBuilder = controlConfig_.toBuilder();
+              }
+              controlConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(controlConfig_);
+                controlConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder.class);
+    }
+
+    private int topicsSourceCase_ = 0;
+    private java.lang.Object topicsSource_;
+    public enum TopicsSourceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TOPICS(1),
+      TOPICS_REGEX(2),
+      TOPICSSOURCE_NOT_SET(0);
+      private final int value;
+      private TopicsSourceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TopicsSourceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TopicsSourceCase forNumber(int value) {
+        switch (value) {
+          case 1: return TOPICS;
+          case 2: return TOPICS_REGEX;
+          case 0: return TOPICSSOURCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TopicsSourceCase
+    getTopicsSourceCase() {
+      return TopicsSourceCase.forNumber(
+          topicsSourceCase_);
+    }
+
+    public static final int TOPICS_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return Whether the topics field is set.
+     */
+    public boolean hasTopics() {
+      return topicsSourceCase_ == 1;
+    }
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The topics.
+     */
+    public java.lang.String getTopics() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 1) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (topicsSourceCase_ == 1) {
+          topicsSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The bytes for topics.
+     */
+    public com.google.protobuf.ByteString
+        getTopicsBytes() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 1) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (topicsSourceCase_ == 1) {
+          topicsSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPICS_REGEX_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return Whether the topicsRegex field is set.
+     */
+    public boolean hasTopicsRegex() {
+      return topicsSourceCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The topicsRegex.
+     */
+    public java.lang.String getTopicsRegex() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 2) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (topicsSourceCase_ == 2) {
+          topicsSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The bytes for topicsRegex.
+     */
+    public com.google.protobuf.ByteString
+        getTopicsRegexBytes() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 2) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (topicsSourceCase_ == 2) {
+          topicsSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METASTORE_CONNECTION_FIELD_NUMBER = 3;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec metastoreConnection_;
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return Whether the metastoreConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetastoreConnection() {
+      return metastoreConnection_ != null;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     * @return The metastoreConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getMetastoreConnection() {
+      return metastoreConnection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance() : metastoreConnection_;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder getMetastoreConnectionOrBuilder() {
+      return getMetastoreConnection();
+    }
+
+    public static final int S3_CONNECTION_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec s3Connection_;
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return Whether the s3Connection field is set.
+     */
+    @java.lang.Override
+    public boolean hasS3Connection() {
+      return s3Connection_ != null;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     * @return The s3Connection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getS3Connection() {
+      return s3Connection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance() : s3Connection_;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder getS3ConnectionOrBuilder() {
+      return getS3Connection();
+    }
+
+    public static final int TABLES_CONFIG_FIELD_NUMBER = 5;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec tablesConfig_;
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+     * @return Whether the tablesConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasTablesConfig() {
+      return tablesConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+     * @return The tablesConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getTablesConfig() {
+      return tablesConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance() : tablesConfig_;
+    }
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder getTablesConfigOrBuilder() {
+      return getTablesConfig();
+    }
+
+    public static final int CONTROL_CONFIG_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec controlConfig_;
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+     * @return Whether the controlConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlConfig() {
+      return controlConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+     * @return The controlConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getControlConfig() {
+      return controlConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance() : controlConfig_;
+    }
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder getControlConfigOrBuilder() {
+      return getControlConfig();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (topicsSourceCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicsSource_);
+      }
+      if (topicsSourceCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicsSource_);
+      }
+      if (metastoreConnection_ != null) {
+        output.writeMessage(3, getMetastoreConnection());
+      }
+      if (s3Connection_ != null) {
+        output.writeMessage(4, getS3Connection());
+      }
+      if (tablesConfig_ != null) {
+        output.writeMessage(5, getTablesConfig());
+      }
+      if (controlConfig_ != null) {
+        output.writeMessage(6, getControlConfig());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (topicsSourceCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, topicsSource_);
+      }
+      if (topicsSourceCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicsSource_);
+      }
+      if (metastoreConnection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetastoreConnection());
+      }
+      if (s3Connection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getS3Connection());
+      }
+      if (tablesConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getTablesConfig());
+      }
+      if (controlConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getControlConfig());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) obj;
+
+      if (hasMetastoreConnection() != other.hasMetastoreConnection()) return false;
+      if (hasMetastoreConnection()) {
+        if (!getMetastoreConnection()
+            .equals(other.getMetastoreConnection())) return false;
+      }
+      if (hasS3Connection() != other.hasS3Connection()) return false;
+      if (hasS3Connection()) {
+        if (!getS3Connection()
+            .equals(other.getS3Connection())) return false;
+      }
+      if (hasTablesConfig() != other.hasTablesConfig()) return false;
+      if (hasTablesConfig()) {
+        if (!getTablesConfig()
+            .equals(other.getTablesConfig())) return false;
+      }
+      if (hasControlConfig() != other.hasControlConfig()) return false;
+      if (hasControlConfig()) {
+        if (!getControlConfig()
+            .equals(other.getControlConfig())) return false;
+      }
+      if (!getTopicsSourceCase().equals(other.getTopicsSourceCase())) return false;
+      switch (topicsSourceCase_) {
+        case 1:
+          if (!getTopics()
+              .equals(other.getTopics())) return false;
+          break;
+        case 2:
+          if (!getTopicsRegex()
+              .equals(other.getTopicsRegex())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetastoreConnection()) {
+        hash = (37 * hash) + METASTORE_CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getMetastoreConnection().hashCode();
+      }
+      if (hasS3Connection()) {
+        hash = (37 * hash) + S3_CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getS3Connection().hashCode();
+      }
+      if (hasTablesConfig()) {
+        hash = (37 * hash) + TABLES_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getTablesConfig().hashCode();
+      }
+      if (hasControlConfig()) {
+        hash = (37 * hash) + CONTROL_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getControlConfig().hashCode();
+      }
+      switch (topicsSourceCase_) {
+        case 1:
+          hash = (37 * hash) + TOPICS_FIELD_NUMBER;
+          hash = (53 * hash) + getTopics().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + TOPICS_REGEX_FIELD_NUMBER;
+          hash = (53 * hash) + getTopicsRegex().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specification for update Kafka Iceberg Sink Connector.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = null;
+        } else {
+          metastoreConnection_ = null;
+          metastoreConnectionBuilder_ = null;
+        }
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = null;
+        } else {
+          s3Connection_ = null;
+          s3ConnectionBuilder_ = null;
+        }
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = null;
+        } else {
+          tablesConfig_ = null;
+          tablesConfigBuilder_ = null;
+        }
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = null;
+        } else {
+          controlConfig_ = null;
+          controlConfigBuilder_ = null;
+        }
+        topicsSourceCase_ = 0;
+        topicsSource_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec(this);
+        if (topicsSourceCase_ == 1) {
+          result.topicsSource_ = topicsSource_;
+        }
+        if (topicsSourceCase_ == 2) {
+          result.topicsSource_ = topicsSource_;
+        }
+        if (metastoreConnectionBuilder_ == null) {
+          result.metastoreConnection_ = metastoreConnection_;
+        } else {
+          result.metastoreConnection_ = metastoreConnectionBuilder_.build();
+        }
+        if (s3ConnectionBuilder_ == null) {
+          result.s3Connection_ = s3Connection_;
+        } else {
+          result.s3Connection_ = s3ConnectionBuilder_.build();
+        }
+        if (tablesConfigBuilder_ == null) {
+          result.tablesConfig_ = tablesConfig_;
+        } else {
+          result.tablesConfig_ = tablesConfigBuilder_.build();
+        }
+        if (controlConfigBuilder_ == null) {
+          result.controlConfig_ = controlConfig_;
+        } else {
+          result.controlConfig_ = controlConfigBuilder_.build();
+        }
+        result.topicsSourceCase_ = topicsSourceCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance()) return this;
+        if (other.hasMetastoreConnection()) {
+          mergeMetastoreConnection(other.getMetastoreConnection());
+        }
+        if (other.hasS3Connection()) {
+          mergeS3Connection(other.getS3Connection());
+        }
+        if (other.hasTablesConfig()) {
+          mergeTablesConfig(other.getTablesConfig());
+        }
+        if (other.hasControlConfig()) {
+          mergeControlConfig(other.getControlConfig());
+        }
+        switch (other.getTopicsSourceCase()) {
+          case TOPICS: {
+            topicsSourceCase_ = 1;
+            topicsSource_ = other.topicsSource_;
+            onChanged();
+            break;
+          }
+          case TOPICS_REGEX: {
+            topicsSourceCase_ = 2;
+            topicsSource_ = other.topicsSource_;
+            onChanged();
+            break;
+          }
+          case TOPICSSOURCE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int topicsSourceCase_ = 0;
+      private java.lang.Object topicsSource_;
+      public TopicsSourceCase
+          getTopicsSourceCase() {
+        return TopicsSourceCase.forNumber(
+            topicsSourceCase_);
+      }
+
+      public Builder clearTopicsSource() {
+        topicsSourceCase_ = 0;
+        topicsSource_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return Whether the topics field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopics() {
+        return topicsSourceCase_ == 1;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return The topics.
+       */
+      @java.lang.Override
+      public java.lang.String getTopics() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 1) {
+          ref = topicsSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (topicsSourceCase_ == 1) {
+            topicsSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return The bytes for topics.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTopicsBytes() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 1) {
+          ref = topicsSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (topicsSourceCase_ == 1) {
+            topicsSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @param value The topics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopics(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  topicsSourceCase_ = 1;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopics() {
+        if (topicsSourceCase_ == 1) {
+          topicsSourceCase_ = 0;
+          topicsSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @param value The bytes for topics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        topicsSourceCase_ = 1;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return Whether the topicsRegex field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopicsRegex() {
+        return topicsSourceCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return The topicsRegex.
+       */
+      @java.lang.Override
+      public java.lang.String getTopicsRegex() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 2) {
+          ref = topicsSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (topicsSourceCase_ == 2) {
+            topicsSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return The bytes for topicsRegex.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTopicsRegexBytes() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 2) {
+          ref = topicsSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (topicsSourceCase_ == 2) {
+            topicsSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @param value The topicsRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsRegex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  topicsSourceCase_ = 2;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicsRegex() {
+        if (topicsSourceCase_ == 2) {
+          topicsSourceCase_ = 0;
+          topicsSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @param value The bytes for topicsRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsRegexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        topicsSourceCase_ = 2;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec metastoreConnection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder> metastoreConnectionBuilder_;
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       * @return Whether the metastoreConnection field is set.
+       */
+      public boolean hasMetastoreConnection() {
+        return metastoreConnectionBuilder_ != null || metastoreConnection_ != null;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       * @return The metastoreConnection.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getMetastoreConnection() {
+        if (metastoreConnectionBuilder_ == null) {
+          return metastoreConnection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance() : metastoreConnection_;
+        } else {
+          return metastoreConnectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder setMetastoreConnection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec value) {
+        if (metastoreConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metastoreConnection_ = value;
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder setMetastoreConnection(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder builderForValue) {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = builderForValue.build();
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder mergeMetastoreConnection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec value) {
+        if (metastoreConnectionBuilder_ == null) {
+          if (metastoreConnection_ != null) {
+            metastoreConnection_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.newBuilder(metastoreConnection_).mergeFrom(value).buildPartial();
+          } else {
+            metastoreConnection_ = value;
+          }
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public Builder clearMetastoreConnection() {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = null;
+          onChanged();
+        } else {
+          metastoreConnection_ = null;
+          metastoreConnectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder getMetastoreConnectionBuilder() {
+        
+        onChanged();
+        return getMetastoreConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder getMetastoreConnectionOrBuilder() {
+        if (metastoreConnectionBuilder_ != null) {
+          return metastoreConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          return metastoreConnection_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance() : metastoreConnection_;
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec metastore_connection = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder> 
+          getMetastoreConnectionFieldBuilder() {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder>(
+                  getMetastoreConnection(),
+                  getParentForChildren(),
+                  isClean());
+          metastoreConnection_ = null;
+        }
+        return metastoreConnectionBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec s3Connection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder> s3ConnectionBuilder_;
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       * @return Whether the s3Connection field is set.
+       */
+      public boolean hasS3Connection() {
+        return s3ConnectionBuilder_ != null || s3Connection_ != null;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       * @return The s3Connection.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getS3Connection() {
+        if (s3ConnectionBuilder_ == null) {
+          return s3Connection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance() : s3Connection_;
+        } else {
+          return s3ConnectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder setS3Connection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec value) {
+        if (s3ConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          s3Connection_ = value;
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder setS3Connection(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder builderForValue) {
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder mergeS3Connection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec value) {
+        if (s3ConnectionBuilder_ == null) {
+          if (s3Connection_ != null) {
+            s3Connection_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.newBuilder(s3Connection_).mergeFrom(value).buildPartial();
+          } else {
+            s3Connection_ = value;
+          }
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public Builder clearS3Connection() {
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = null;
+          onChanged();
+        } else {
+          s3Connection_ = null;
+          s3ConnectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder getS3ConnectionBuilder() {
+        
+        onChanged();
+        return getS3ConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder getS3ConnectionOrBuilder() {
+        if (s3ConnectionBuilder_ != null) {
+          return s3ConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          return s3Connection_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance() : s3Connection_;
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec s3_connection = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder> 
+          getS3ConnectionFieldBuilder() {
+        if (s3ConnectionBuilder_ == null) {
+          s3ConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder>(
+                  getS3Connection(),
+                  getParentForChildren(),
+                  isClean());
+          s3Connection_ = null;
+        }
+        return s3ConnectionBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec tablesConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder> tablesConfigBuilder_;
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       * @return Whether the tablesConfig field is set.
+       */
+      public boolean hasTablesConfig() {
+        return tablesConfigBuilder_ != null || tablesConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       * @return The tablesConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getTablesConfig() {
+        if (tablesConfigBuilder_ == null) {
+          return tablesConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance() : tablesConfig_;
+        } else {
+          return tablesConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       */
+      public Builder setTablesConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec value) {
+        if (tablesConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tablesConfig_ = value;
+          onChanged();
+        } else {
+          tablesConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       */
+      public Builder setTablesConfig(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder builderForValue) {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          tablesConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       */
+      public Builder mergeTablesConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec value) {
+        if (tablesConfigBuilder_ == null) {
+          if (tablesConfig_ != null) {
+            tablesConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.newBuilder(tablesConfig_).mergeFrom(value).buildPartial();
+          } else {
+            tablesConfig_ = value;
+          }
+          onChanged();
+        } else {
+          tablesConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       */
+      public Builder clearTablesConfig() {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = null;
+          onChanged();
+        } else {
+          tablesConfig_ = null;
+          tablesConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder getTablesConfigBuilder() {
+        
+        onChanged();
+        return getTablesConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder getTablesConfigOrBuilder() {
+        if (tablesConfigBuilder_ != null) {
+          return tablesConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return tablesConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance() : tablesConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec tables_config = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder> 
+          getTablesConfigFieldBuilder() {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder>(
+                  getTablesConfig(),
+                  getParentForChildren(),
+                  isClean());
+          tablesConfig_ = null;
+        }
+        return tablesConfigBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec controlConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder> controlConfigBuilder_;
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       * @return Whether the controlConfig field is set.
+       */
+      public boolean hasControlConfig() {
+        return controlConfigBuilder_ != null || controlConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       * @return The controlConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getControlConfig() {
+        if (controlConfigBuilder_ == null) {
+          return controlConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance() : controlConfig_;
+        } else {
+          return controlConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       */
+      public Builder setControlConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec value) {
+        if (controlConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          controlConfig_ = value;
+          onChanged();
+        } else {
+          controlConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       */
+      public Builder setControlConfig(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder builderForValue) {
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          controlConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       */
+      public Builder mergeControlConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec value) {
+        if (controlConfigBuilder_ == null) {
+          if (controlConfig_ != null) {
+            controlConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.newBuilder(controlConfig_).mergeFrom(value).buildPartial();
+          } else {
+            controlConfig_ = value;
+          }
+          onChanged();
+        } else {
+          controlConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       */
+      public Builder clearControlConfig() {
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = null;
+          onChanged();
+        } else {
+          controlConfig_ = null;
+          controlConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder getControlConfigBuilder() {
+        
+        onChanged();
+        return getControlConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder getControlConfigOrBuilder() {
+        if (controlConfigBuilder_ != null) {
+          return controlConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return controlConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance() : controlConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControlSpec control_config = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder> 
+          getControlConfigFieldBuilder() {
+        if (controlConfigBuilder_ == null) {
+          controlConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder>(
+                  getControlConfig(),
+                  getParentForChildren(),
+                  isClean());
+          controlConfig_ = null;
+        }
+        return controlConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorConfigIcebergSinkSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateConnectorConfigIcebergSinkSpec>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateConnectorConfigIcebergSinkSpec>() {
+      @java.lang.Override
+      public UpdateConnectorConfigIcebergSinkSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateConnectorConfigIcebergSinkSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateConnectorConfigIcebergSinkSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateConnectorConfigIcebergSinkSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StaticTablesSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.StaticTablesSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @return A list containing the tables.
+     */
+    java.util.List<java.lang.String>
+        getTablesList();
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @return The count of tables.
+     */
+    int getTablesCount();
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @param index The index of the element to return.
+     * @return The tables at the given index.
+     */
+    java.lang.String getTables(int index);
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tables at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTablesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.StaticTablesSpec}
+   */
+  public static final class StaticTablesSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.StaticTablesSpec)
+      StaticTablesSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StaticTablesSpec.newBuilder() to construct.
+    private StaticTablesSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StaticTablesSpec() {
+      tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StaticTablesSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StaticTablesSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tables_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tables_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tables_ = tables_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder.class);
+    }
+
+    public static final int TABLES_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList tables_;
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @return A list containing the tables.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTablesList() {
+      return tables_;
+    }
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @return The count of tables.
+     */
+    public int getTablesCount() {
+      return tables_.size();
+    }
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @param index The index of the element to return.
+     * @return The tables at the given index.
+     */
+    public java.lang.String getTables(int index) {
+      return tables_.get(index);
+    }
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>repeated string tables = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tables at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTablesBytes(int index) {
+      return tables_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < tables_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tables_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tables_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tables_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTablesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) obj;
+
+      if (!getTablesList()
+          .equals(other.getTablesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTablesCount() > 0) {
+        hash = (37 * hash) + TABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getTablesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.StaticTablesSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.StaticTablesSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          tables_ = tables_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.tables_ = tables_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance()) return this;
+        if (!other.tables_.isEmpty()) {
+          if (tables_.isEmpty()) {
+            tables_ = other.tables_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTablesIsMutable();
+            tables_.addAll(other.tables_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTablesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tables_ = new com.google.protobuf.LazyStringArrayList(tables_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @return A list containing the tables.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTablesList() {
+        return tables_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @return The count of tables.
+       */
+      public int getTablesCount() {
+        return tables_.size();
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @param index The index of the element to return.
+       * @return The tables at the given index.
+       */
+      public java.lang.String getTables(int index) {
+        return tables_.get(index);
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tables at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTablesBytes(int index) {
+        return tables_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The tables to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTables(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTablesIsMutable();
+        tables_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @param value The tables to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTables(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTablesIsMutable();
+        tables_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @param values The tables to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTables(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTablesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tables_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTables() {
+        tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>repeated string tables = 1;</code>
+       * @param value The bytes of the tables to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTablesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTablesIsMutable();
+        tables_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.StaticTablesSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.StaticTablesSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StaticTablesSpec>
+        PARSER = new com.google.protobuf.AbstractParser<StaticTablesSpec>() {
+      @java.lang.Override
+      public StaticTablesSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StaticTablesSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StaticTablesSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StaticTablesSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DynamicTablesSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.DynamicTablesSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The routeField.
+     */
+    java.lang.String getRouteField();
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The bytes for routeField.
+     */
+    com.google.protobuf.ByteString
+        getRouteFieldBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.DynamicTablesSpec}
+   */
+  public static final class DynamicTablesSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.DynamicTablesSpec)
+      DynamicTablesSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DynamicTablesSpec.newBuilder() to construct.
+    private DynamicTablesSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DynamicTablesSpec() {
+      routeField_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DynamicTablesSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DynamicTablesSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              routeField_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder.class);
+    }
+
+    public static final int ROUTE_FIELD_FIELD_NUMBER = 1;
+    private volatile java.lang.Object routeField_;
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The routeField.
+     */
+    @java.lang.Override
+    public java.lang.String getRouteField() {
+      java.lang.Object ref = routeField_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        routeField_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The bytes for routeField.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRouteFieldBytes() {
+      java.lang.Object ref = routeField_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        routeField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeField_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, routeField_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeField_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, routeField_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) obj;
+
+      if (!getRouteField()
+          .equals(other.getRouteField())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROUTE_FIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getRouteField().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.DynamicTablesSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.DynamicTablesSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        routeField_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec(this);
+        result.routeField_ = routeField_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec.getDefaultInstance()) return this;
+        if (!other.getRouteField().isEmpty()) {
+          routeField_ = other.routeField_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object routeField_ = "";
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @return The routeField.
+       */
+      public java.lang.String getRouteField() {
+        java.lang.Object ref = routeField_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          routeField_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @return The bytes for routeField.
+       */
+      public com.google.protobuf.ByteString
+          getRouteFieldBytes() {
+        java.lang.Object ref = routeField_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          routeField_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @param value The routeField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRouteField(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        routeField_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRouteField() {
+        
+        routeField_ = getDefaultInstance().getRouteField();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @param value The bytes for routeField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRouteFieldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        routeField_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.DynamicTablesSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.DynamicTablesSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DynamicTablesSpec>
+        PARSER = new com.google.protobuf.AbstractParser<DynamicTablesSpec>() {
+      @java.lang.Override
+      public DynamicTablesSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DynamicTablesSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DynamicTablesSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DynamicTablesSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MetastoreConnectionSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The catalogUri.
+     */
+    java.lang.String getCatalogUri();
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The bytes for catalogUri.
+     */
+    com.google.protobuf.ByteString
+        getCatalogUriBytes();
+
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The warehouse.
+     */
+    java.lang.String getWarehouse();
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The bytes for warehouse.
+     */
+    com.google.protobuf.ByteString
+        getWarehouseBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec}
+   */
+  public static final class MetastoreConnectionSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec)
+      MetastoreConnectionSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MetastoreConnectionSpec.newBuilder() to construct.
+    private MetastoreConnectionSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MetastoreConnectionSpec() {
+      catalogUri_ = "";
+      warehouse_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MetastoreConnectionSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MetastoreConnectionSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              catalogUri_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              warehouse_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder.class);
+    }
+
+    public static final int CATALOG_URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object catalogUri_;
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The catalogUri.
+     */
+    @java.lang.Override
+    public java.lang.String getCatalogUri() {
+      java.lang.Object ref = catalogUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        catalogUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The bytes for catalogUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCatalogUriBytes() {
+      java.lang.Object ref = catalogUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        catalogUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WAREHOUSE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object warehouse_;
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The warehouse.
+     */
+    @java.lang.Override
+    public java.lang.String getWarehouse() {
+      java.lang.Object ref = warehouse_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        warehouse_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The bytes for warehouse.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWarehouseBytes() {
+      java.lang.Object ref = warehouse_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        warehouse_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(catalogUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, catalogUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(warehouse_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, warehouse_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(catalogUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, catalogUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(warehouse_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, warehouse_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec) obj;
+
+      if (!getCatalogUri()
+          .equals(other.getCatalogUri())) return false;
+      if (!getWarehouse()
+          .equals(other.getWarehouse())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CATALOG_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getCatalogUri().hashCode();
+      hash = (37 * hash) + WAREHOUSE_FIELD_NUMBER;
+      hash = (53 * hash) + getWarehouse().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        catalogUri_ = "";
+
+        warehouse_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec(this);
+        result.catalogUri_ = catalogUri_;
+        result.warehouse_ = warehouse_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec.getDefaultInstance()) return this;
+        if (!other.getCatalogUri().isEmpty()) {
+          catalogUri_ = other.catalogUri_;
+          onChanged();
+        }
+        if (!other.getWarehouse().isEmpty()) {
+          warehouse_ = other.warehouse_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object catalogUri_ = "";
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @return The catalogUri.
+       */
+      public java.lang.String getCatalogUri() {
+        java.lang.Object ref = catalogUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          catalogUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @return The bytes for catalogUri.
+       */
+      public com.google.protobuf.ByteString
+          getCatalogUriBytes() {
+        java.lang.Object ref = catalogUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          catalogUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @param value The catalogUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCatalogUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        catalogUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCatalogUri() {
+        
+        catalogUri_ = getDefaultInstance().getCatalogUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @param value The bytes for catalogUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCatalogUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        catalogUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object warehouse_ = "";
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @return The warehouse.
+       */
+      public java.lang.String getWarehouse() {
+        java.lang.Object ref = warehouse_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          warehouse_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @return The bytes for warehouse.
+       */
+      public com.google.protobuf.ByteString
+          getWarehouseBytes() {
+        java.lang.Object ref = warehouse_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          warehouse_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @param value The warehouse to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWarehouse(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        warehouse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWarehouse() {
+        
+        warehouse_ = getDefaultInstance().getWarehouse();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @param value The bytes for warehouse to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWarehouseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        warehouse_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.MetastoreConnectionSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MetastoreConnectionSpec>
+        PARSER = new com.google.protobuf.AbstractParser<MetastoreConnectionSpec>() {
+      @java.lang.Override
+      public MetastoreConnectionSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MetastoreConnectionSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MetastoreConnectionSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MetastoreConnectionSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IcebergS3ConnectionSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+     * @return Whether the externalS3 field is set.
+     */
+    boolean hasExternalS3();
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+     * @return The externalS3.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec getExternalS3();
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpecOrBuilder getExternalS3OrBuilder();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.StorageCase getStorageCase();
+  }
+  /**
+   * <pre>
+   * Specification for IcebergS3Connection -
+   * settings of connection to AWS-compatible S3 storage, that
+   * are target of Kafka Iceberg-connectors.
+   * YC Object Storage is AWS-compatible.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec}
+   */
+  public static final class IcebergS3ConnectionSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec)
+      IcebergS3ConnectionSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IcebergS3ConnectionSpec.newBuilder() to construct.
+    private IcebergS3ConnectionSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IcebergS3ConnectionSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IcebergS3ConnectionSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IcebergS3ConnectionSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder subBuilder = null;
+              if (storageCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_).toBuilder();
+              }
+              storage_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_);
+                storage_ = subBuilder.buildPartial();
+              }
+              storageCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder.class);
+    }
+
+    private int storageCase_ = 0;
+    private java.lang.Object storage_;
+    public enum StorageCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      EXTERNAL_S3(1),
+      STORAGE_NOT_SET(0);
+      private final int value;
+      private StorageCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static StorageCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static StorageCase forNumber(int value) {
+        switch (value) {
+          case 1: return EXTERNAL_S3;
+          case 0: return STORAGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public StorageCase
+    getStorageCase() {
+      return StorageCase.forNumber(
+          storageCase_);
+    }
+
+    public static final int EXTERNAL_S3_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+     * @return Whether the externalS3 field is set.
+     */
+    @java.lang.Override
+    public boolean hasExternalS3() {
+      return storageCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+     * @return The externalS3.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec getExternalS3() {
+      if (storageCase_ == 1) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpecOrBuilder getExternalS3OrBuilder() {
+      if (storageCase_ == 1) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (storageCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (storageCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec) obj;
+
+      if (!getStorageCase().equals(other.getStorageCase())) return false;
+      switch (storageCase_) {
+        case 1:
+          if (!getExternalS3()
+              .equals(other.getExternalS3())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (storageCase_) {
+        case 1:
+          hash = (37 * hash) + EXTERNAL_S3_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalS3().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specification for IcebergS3Connection -
+     * settings of connection to AWS-compatible S3 storage, that
+     * are target of Kafka Iceberg-connectors.
+     * YC Object Storage is AWS-compatible.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        storageCase_ = 0;
+        storage_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec(this);
+        if (storageCase_ == 1) {
+          if (externalS3Builder_ == null) {
+            result.storage_ = storage_;
+          } else {
+            result.storage_ = externalS3Builder_.build();
+          }
+        }
+        result.storageCase_ = storageCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec.getDefaultInstance()) return this;
+        switch (other.getStorageCase()) {
+          case EXTERNAL_S3: {
+            mergeExternalS3(other.getExternalS3());
+            break;
+          }
+          case STORAGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int storageCase_ = 0;
+      private java.lang.Object storage_;
+      public StorageCase
+          getStorageCase() {
+        return StorageCase.forNumber(
+            storageCase_);
+      }
+
+      public Builder clearStorage() {
+        storageCase_ = 0;
+        storage_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpecOrBuilder> externalS3Builder_;
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       * @return Whether the externalS3 field is set.
+       */
+      @java.lang.Override
+      public boolean hasExternalS3() {
+        return storageCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       * @return The externalS3.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec getExternalS3() {
+        if (externalS3Builder_ == null) {
+          if (storageCase_ == 1) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance();
+        } else {
+          if (storageCase_ == 1) {
+            return externalS3Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       */
+      public Builder setExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec value) {
+        if (externalS3Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          storage_ = value;
+          onChanged();
+        } else {
+          externalS3Builder_.setMessage(value);
+        }
+        storageCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       */
+      public Builder setExternalS3(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder builderForValue) {
+        if (externalS3Builder_ == null) {
+          storage_ = builderForValue.build();
+          onChanged();
+        } else {
+          externalS3Builder_.setMessage(builderForValue.build());
+        }
+        storageCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       */
+      public Builder mergeExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec value) {
+        if (externalS3Builder_ == null) {
+          if (storageCase_ == 1 &&
+              storage_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance()) {
+            storage_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            storage_ = value;
+          }
+          onChanged();
+        } else {
+          if (storageCase_ == 1) {
+            externalS3Builder_.mergeFrom(value);
+          }
+          externalS3Builder_.setMessage(value);
+        }
+        storageCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       */
+      public Builder clearExternalS3() {
+        if (externalS3Builder_ == null) {
+          if (storageCase_ == 1) {
+            storageCase_ = 0;
+            storage_ = null;
+            onChanged();
+          }
+        } else {
+          if (storageCase_ == 1) {
+            storageCase_ = 0;
+            storage_ = null;
+          }
+          externalS3Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder getExternalS3Builder() {
+        return getExternalS3FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpecOrBuilder getExternalS3OrBuilder() {
+        if ((storageCase_ == 1) && (externalS3Builder_ != null)) {
+          return externalS3Builder_.getMessageOrBuilder();
+        } else {
+          if (storageCase_ == 1) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec external_s3 = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpecOrBuilder> 
+          getExternalS3FieldBuilder() {
+        if (externalS3Builder_ == null) {
+          if (!(storageCase_ == 1)) {
+            storage_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance();
+          }
+          externalS3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpecOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) storage_,
+                  getParentForChildren(),
+                  isClean());
+          storage_ = null;
+        }
+        storageCase_ = 1;
+        onChanged();;
+        return externalS3Builder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.IcebergS3ConnectionSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IcebergS3ConnectionSpec>
+        PARSER = new com.google.protobuf.AbstractParser<IcebergS3ConnectionSpec>() {
+      @java.lang.Override
+      public IcebergS3ConnectionSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IcebergS3ConnectionSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IcebergS3ConnectionSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IcebergS3ConnectionSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExternalIcebergS3StorageSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
+     */
+    java.lang.String getAccessKeyId();
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyIdBytes();
+
+    /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
+     * <code>string secret_access_key = 2;</code>
+     * @return The secretAccessKey.
+     */
+    java.lang.String getSecretAccessKey();
+    /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
+     * <code>string secret_access_key = 2;</code>
+     * @return The bytes for secretAccessKey.
+     */
+    com.google.protobuf.ByteString
+        getSecretAccessKeyBytes();
+
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 3;</code>
+     * @return The endpoint.
+     */
+    java.lang.String getEndpoint();
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 3;</code>
+     * @return The bytes for endpoint.
+     */
+    com.google.protobuf.ByteString
+        getEndpointBytes();
+
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 4;</code>
+     * @return The region.
+     */
+    java.lang.String getRegion();
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 4;</code>
+     * @return The bytes for region.
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec}
+   */
+  public static final class ExternalIcebergS3StorageSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec)
+      ExternalIcebergS3StorageSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ExternalIcebergS3StorageSpec.newBuilder() to construct.
+    private ExternalIcebergS3StorageSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExternalIcebergS3StorageSpec() {
+      accessKeyId_ = "";
+      secretAccessKey_ = "";
+      endpoint_ = "";
+      region_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalIcebergS3StorageSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ExternalIcebergS3StorageSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessKeyId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretAccessKey_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              endpoint_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              region_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder.class);
+    }
+
+    public static final int ACCESS_KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accessKeyId_;
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessKeyId() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessKeyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessKeyIdBytes() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKeyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_ACCESS_KEY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object secretAccessKey_;
+    /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
+     * <code>string secret_access_key = 2;</code>
+     * @return The secretAccessKey.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretAccessKey() {
+      java.lang.Object ref = secretAccessKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretAccessKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Secret access key for the AWS access key.
+     * </pre>
+     *
+     * <code>string secret_access_key = 2;</code>
+     * @return The bytes for secretAccessKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretAccessKeyBytes() {
+      java.lang.Object ref = secretAccessKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretAccessKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object endpoint_;
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 3;</code>
+     * @return The endpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpoint() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 3;</code>
+     * @return The bytes for endpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointBytes() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object region_;
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 4;</code>
+     * @return The region.
+     */
+    @java.lang.Override
+    public java.lang.String getRegion() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        region_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 4;</code>
+     * @return The bytes for region.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        region_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretAccessKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretAccessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, endpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, region_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretAccessKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretAccessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, endpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, region_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) obj;
+
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (!getSecretAccessKey()
+          .equals(other.getSecretAccessKey())) return false;
+      if (!getEndpoint()
+          .equals(other.getEndpoint())) return false;
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCESS_KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessKeyId().hashCode();
+      hash = (37 * hash) + SECRET_ACCESS_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretAccessKey().hashCode();
+      hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoint().hashCode();
+      hash = (37 * hash) + REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getRegion().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accessKeyId_ = "";
+
+        secretAccessKey_ = "";
+
+        endpoint_ = "";
+
+        region_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec(this);
+        result.accessKeyId_ = accessKeyId_;
+        result.secretAccessKey_ = secretAccessKey_;
+        result.endpoint_ = endpoint_;
+        result.region_ = region_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec.getDefaultInstance()) return this;
+        if (!other.getAccessKeyId().isEmpty()) {
+          accessKeyId_ = other.accessKeyId_;
+          onChanged();
+        }
+        if (!other.getSecretAccessKey().isEmpty()) {
+          secretAccessKey_ = other.secretAccessKey_;
+          onChanged();
+        }
+        if (!other.getEndpoint().isEmpty()) {
+          endpoint_ = other.endpoint_;
+          onChanged();
+        }
+        if (!other.getRegion().isEmpty()) {
+          region_ = other.region_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object accessKeyId_ = "";
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @return The accessKeyId.
+       */
+      public java.lang.String getAccessKeyId() {
+        java.lang.Object ref = accessKeyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessKeyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @return The bytes for accessKeyId.
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyIdBytes() {
+        java.lang.Object ref = accessKeyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessKeyId() {
+        
+        accessKeyId_ = getDefaultInstance().getAccessKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secretAccessKey_ = "";
+      /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
+       * <code>string secret_access_key = 2;</code>
+       * @return The secretAccessKey.
+       */
+      public java.lang.String getSecretAccessKey() {
+        java.lang.Object ref = secretAccessKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretAccessKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
+       * <code>string secret_access_key = 2;</code>
+       * @return The bytes for secretAccessKey.
+       */
+      public com.google.protobuf.ByteString
+          getSecretAccessKeyBytes() {
+        java.lang.Object ref = secretAccessKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretAccessKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
+       * <code>string secret_access_key = 2;</code>
+       * @param value The secretAccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretAccessKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretAccessKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
+       * <code>string secret_access_key = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretAccessKey() {
+        
+        secretAccessKey_ = getDefaultInstance().getSecretAccessKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secret access key for the AWS access key.
+       * </pre>
+       *
+       * <code>string secret_access_key = 2;</code>
+       * @param value The bytes for secretAccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretAccessKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretAccessKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endpoint_ = "";
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 3;</code>
+       * @return The endpoint.
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 3;</code>
+       * @return The bytes for endpoint.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 3;</code>
+       * @param value The endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpoint() {
+        
+        endpoint_ = getDefaultInstance().getEndpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 3;</code>
+       * @param value The bytes for endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object region_ = "";
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 4;</code>
+       * @return The region.
+       */
+      public java.lang.String getRegion() {
+        java.lang.Object ref = region_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          region_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 4;</code>
+       * @return The bytes for region.
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 4;</code>
+       * @param value The region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegion() {
+        
+        region_ = getDefaultInstance().getRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 4;</code>
+       * @param value The bytes for region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3StorageSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExternalIcebergS3StorageSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ExternalIcebergS3StorageSpec>() {
+      @java.lang.Override
+      public ExternalIcebergS3StorageSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ExternalIcebergS3StorageSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExternalIcebergS3StorageSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExternalIcebergS3StorageSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IcebergTablesConfigSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The defaultCommitBranch.
+     */
+    java.lang.String getDefaultCommitBranch();
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The bytes for defaultCommitBranch.
+     */
+    com.google.protobuf.ByteString
+        getDefaultCommitBranchBytes();
+
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The defaultIdColumns.
+     */
+    java.lang.String getDefaultIdColumns();
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The bytes for defaultIdColumns.
+     */
+    com.google.protobuf.ByteString
+        getDefaultIdColumnsBytes();
+
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The defaultPartitionBy.
+     */
+    java.lang.String getDefaultPartitionBy();
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The bytes for defaultPartitionBy.
+     */
+    com.google.protobuf.ByteString
+        getDefaultPartitionByBytes();
+
+    /**
+     * <pre>
+     * Enable automatic schema evolution.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool evolve_schema_enabled = 4;</code>
+     * @return The evolveSchemaEnabled.
+     */
+    boolean getEvolveSchemaEnabled();
+
+    /**
+     * <pre>
+     * Force all columns to be nullable (optional).
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_force_optional = 5;</code>
+     * @return The schemaForceOptional.
+     */
+    boolean getSchemaForceOptional();
+
+    /**
+     * <pre>
+     * Enable case-insensitive field name matching.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_case_insensitive = 6;</code>
+     * @return The schemaCaseInsensitive.
+     */
+    boolean getSchemaCaseInsensitive();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec}
+   */
+  public static final class IcebergTablesConfigSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec)
+      IcebergTablesConfigSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IcebergTablesConfigSpec.newBuilder() to construct.
+    private IcebergTablesConfigSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IcebergTablesConfigSpec() {
+      defaultCommitBranch_ = "";
+      defaultIdColumns_ = "";
+      defaultPartitionBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IcebergTablesConfigSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IcebergTablesConfigSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultCommitBranch_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultIdColumns_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultPartitionBy_ = s;
+              break;
+            }
+            case 32: {
+
+              evolveSchemaEnabled_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              schemaForceOptional_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              schemaCaseInsensitive_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder.class);
+    }
+
+    public static final int DEFAULT_COMMIT_BRANCH_FIELD_NUMBER = 1;
+    private volatile java.lang.Object defaultCommitBranch_;
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The defaultCommitBranch.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultCommitBranch() {
+      java.lang.Object ref = defaultCommitBranch_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultCommitBranch_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The bytes for defaultCommitBranch.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultCommitBranchBytes() {
+      java.lang.Object ref = defaultCommitBranch_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultCommitBranch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_ID_COLUMNS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object defaultIdColumns_;
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The defaultIdColumns.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultIdColumns() {
+      java.lang.Object ref = defaultIdColumns_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultIdColumns_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The bytes for defaultIdColumns.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultIdColumnsBytes() {
+      java.lang.Object ref = defaultIdColumns_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultIdColumns_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_PARTITION_BY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object defaultPartitionBy_;
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The defaultPartitionBy.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultPartitionBy() {
+      java.lang.Object ref = defaultPartitionBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultPartitionBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The bytes for defaultPartitionBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultPartitionByBytes() {
+      java.lang.Object ref = defaultPartitionBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultPartitionBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVOLVE_SCHEMA_ENABLED_FIELD_NUMBER = 4;
+    private boolean evolveSchemaEnabled_;
+    /**
+     * <pre>
+     * Enable automatic schema evolution.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool evolve_schema_enabled = 4;</code>
+     * @return The evolveSchemaEnabled.
+     */
+    @java.lang.Override
+    public boolean getEvolveSchemaEnabled() {
+      return evolveSchemaEnabled_;
+    }
+
+    public static final int SCHEMA_FORCE_OPTIONAL_FIELD_NUMBER = 5;
+    private boolean schemaForceOptional_;
+    /**
+     * <pre>
+     * Force all columns to be nullable (optional).
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_force_optional = 5;</code>
+     * @return The schemaForceOptional.
+     */
+    @java.lang.Override
+    public boolean getSchemaForceOptional() {
+      return schemaForceOptional_;
+    }
+
+    public static final int SCHEMA_CASE_INSENSITIVE_FIELD_NUMBER = 6;
+    private boolean schemaCaseInsensitive_;
+    /**
+     * <pre>
+     * Enable case-insensitive field name matching.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_case_insensitive = 6;</code>
+     * @return The schemaCaseInsensitive.
+     */
+    @java.lang.Override
+    public boolean getSchemaCaseInsensitive() {
+      return schemaCaseInsensitive_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCommitBranch_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, defaultCommitBranch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultIdColumns_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, defaultIdColumns_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultPartitionBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultPartitionBy_);
+      }
+      if (evolveSchemaEnabled_ != false) {
+        output.writeBool(4, evolveSchemaEnabled_);
+      }
+      if (schemaForceOptional_ != false) {
+        output.writeBool(5, schemaForceOptional_);
+      }
+      if (schemaCaseInsensitive_ != false) {
+        output.writeBool(6, schemaCaseInsensitive_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCommitBranch_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, defaultCommitBranch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultIdColumns_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, defaultIdColumns_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultPartitionBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultPartitionBy_);
+      }
+      if (evolveSchemaEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, evolveSchemaEnabled_);
+      }
+      if (schemaForceOptional_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, schemaForceOptional_);
+      }
+      if (schemaCaseInsensitive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, schemaCaseInsensitive_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec) obj;
+
+      if (!getDefaultCommitBranch()
+          .equals(other.getDefaultCommitBranch())) return false;
+      if (!getDefaultIdColumns()
+          .equals(other.getDefaultIdColumns())) return false;
+      if (!getDefaultPartitionBy()
+          .equals(other.getDefaultPartitionBy())) return false;
+      if (getEvolveSchemaEnabled()
+          != other.getEvolveSchemaEnabled()) return false;
+      if (getSchemaForceOptional()
+          != other.getSchemaForceOptional()) return false;
+      if (getSchemaCaseInsensitive()
+          != other.getSchemaCaseInsensitive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_COMMIT_BRANCH_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultCommitBranch().hashCode();
+      hash = (37 * hash) + DEFAULT_ID_COLUMNS_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultIdColumns().hashCode();
+      hash = (37 * hash) + DEFAULT_PARTITION_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultPartitionBy().hashCode();
+      hash = (37 * hash) + EVOLVE_SCHEMA_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEvolveSchemaEnabled());
+      hash = (37 * hash) + SCHEMA_FORCE_OPTIONAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSchemaForceOptional());
+      hash = (37 * hash) + SCHEMA_CASE_INSENSITIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSchemaCaseInsensitive());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        defaultCommitBranch_ = "";
+
+        defaultIdColumns_ = "";
+
+        defaultPartitionBy_ = "";
+
+        evolveSchemaEnabled_ = false;
+
+        schemaForceOptional_ = false;
+
+        schemaCaseInsensitive_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec(this);
+        result.defaultCommitBranch_ = defaultCommitBranch_;
+        result.defaultIdColumns_ = defaultIdColumns_;
+        result.defaultPartitionBy_ = defaultPartitionBy_;
+        result.evolveSchemaEnabled_ = evolveSchemaEnabled_;
+        result.schemaForceOptional_ = schemaForceOptional_;
+        result.schemaCaseInsensitive_ = schemaCaseInsensitive_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec.getDefaultInstance()) return this;
+        if (!other.getDefaultCommitBranch().isEmpty()) {
+          defaultCommitBranch_ = other.defaultCommitBranch_;
+          onChanged();
+        }
+        if (!other.getDefaultIdColumns().isEmpty()) {
+          defaultIdColumns_ = other.defaultIdColumns_;
+          onChanged();
+        }
+        if (!other.getDefaultPartitionBy().isEmpty()) {
+          defaultPartitionBy_ = other.defaultPartitionBy_;
+          onChanged();
+        }
+        if (other.getEvolveSchemaEnabled() != false) {
+          setEvolveSchemaEnabled(other.getEvolveSchemaEnabled());
+        }
+        if (other.getSchemaForceOptional() != false) {
+          setSchemaForceOptional(other.getSchemaForceOptional());
+        }
+        if (other.getSchemaCaseInsensitive() != false) {
+          setSchemaCaseInsensitive(other.getSchemaCaseInsensitive());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object defaultCommitBranch_ = "";
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @return The defaultCommitBranch.
+       */
+      public java.lang.String getDefaultCommitBranch() {
+        java.lang.Object ref = defaultCommitBranch_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultCommitBranch_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @return The bytes for defaultCommitBranch.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultCommitBranchBytes() {
+        java.lang.Object ref = defaultCommitBranch_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultCommitBranch_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @param value The defaultCommitBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCommitBranch(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultCommitBranch_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultCommitBranch() {
+        
+        defaultCommitBranch_ = getDefaultInstance().getDefaultCommitBranch();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @param value The bytes for defaultCommitBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCommitBranchBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultCommitBranch_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultIdColumns_ = "";
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @return The defaultIdColumns.
+       */
+      public java.lang.String getDefaultIdColumns() {
+        java.lang.Object ref = defaultIdColumns_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultIdColumns_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @return The bytes for defaultIdColumns.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultIdColumnsBytes() {
+        java.lang.Object ref = defaultIdColumns_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultIdColumns_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @param value The defaultIdColumns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultIdColumns(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultIdColumns_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultIdColumns() {
+        
+        defaultIdColumns_ = getDefaultInstance().getDefaultIdColumns();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @param value The bytes for defaultIdColumns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultIdColumnsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultIdColumns_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultPartitionBy_ = "";
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @return The defaultPartitionBy.
+       */
+      public java.lang.String getDefaultPartitionBy() {
+        java.lang.Object ref = defaultPartitionBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultPartitionBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @return The bytes for defaultPartitionBy.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultPartitionByBytes() {
+        java.lang.Object ref = defaultPartitionBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultPartitionBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @param value The defaultPartitionBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultPartitionBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultPartitionBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultPartitionBy() {
+        
+        defaultPartitionBy_ = getDefaultInstance().getDefaultPartitionBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @param value The bytes for defaultPartitionBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultPartitionByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultPartitionBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean evolveSchemaEnabled_ ;
+      /**
+       * <pre>
+       * Enable automatic schema evolution.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool evolve_schema_enabled = 4;</code>
+       * @return The evolveSchemaEnabled.
+       */
+      @java.lang.Override
+      public boolean getEvolveSchemaEnabled() {
+        return evolveSchemaEnabled_;
+      }
+      /**
+       * <pre>
+       * Enable automatic schema evolution.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool evolve_schema_enabled = 4;</code>
+       * @param value The evolveSchemaEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvolveSchemaEnabled(boolean value) {
+        
+        evolveSchemaEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable automatic schema evolution.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool evolve_schema_enabled = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvolveSchemaEnabled() {
+        
+        evolveSchemaEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean schemaForceOptional_ ;
+      /**
+       * <pre>
+       * Force all columns to be nullable (optional).
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_force_optional = 5;</code>
+       * @return The schemaForceOptional.
+       */
+      @java.lang.Override
+      public boolean getSchemaForceOptional() {
+        return schemaForceOptional_;
+      }
+      /**
+       * <pre>
+       * Force all columns to be nullable (optional).
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_force_optional = 5;</code>
+       * @param value The schemaForceOptional to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaForceOptional(boolean value) {
+        
+        schemaForceOptional_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Force all columns to be nullable (optional).
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_force_optional = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaForceOptional() {
+        
+        schemaForceOptional_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean schemaCaseInsensitive_ ;
+      /**
+       * <pre>
+       * Enable case-insensitive field name matching.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_case_insensitive = 6;</code>
+       * @return The schemaCaseInsensitive.
+       */
+      @java.lang.Override
+      public boolean getSchemaCaseInsensitive() {
+        return schemaCaseInsensitive_;
+      }
+      /**
+       * <pre>
+       * Enable case-insensitive field name matching.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_case_insensitive = 6;</code>
+       * @param value The schemaCaseInsensitive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaCaseInsensitive(boolean value) {
+        
+        schemaCaseInsensitive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable case-insensitive field name matching.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_case_insensitive = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaCaseInsensitive() {
+        
+        schemaCaseInsensitive_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.IcebergTablesConfigSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IcebergTablesConfigSpec>
+        PARSER = new com.google.protobuf.AbstractParser<IcebergTablesConfigSpec>() {
+      @java.lang.Override
+      public IcebergTablesConfigSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IcebergTablesConfigSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IcebergTablesConfigSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IcebergTablesConfigSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IcebergControlSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.IcebergControlSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The groupIdPrefix.
+     */
+    java.lang.String getGroupIdPrefix();
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The bytes for groupIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdPrefixBytes();
+
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return Whether the commitIntervalMs field is set.
+     */
+    boolean hasCommitIntervalMs();
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return The commitIntervalMs.
+     */
+    com.google.protobuf.Int64Value getCommitIntervalMs();
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCommitIntervalMsOrBuilder();
+
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return Whether the commitTimeoutMs field is set.
+     */
+    boolean hasCommitTimeoutMs();
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return The commitTimeoutMs.
+     */
+    com.google.protobuf.Int64Value getCommitTimeoutMs();
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCommitTimeoutMsOrBuilder();
+
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return Whether the commitThreads field is set.
+     */
+    boolean hasCommitThreads();
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return The commitThreads.
+     */
+    com.google.protobuf.Int64Value getCommitThreads();
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCommitThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The transactionalPrefix.
+     */
+    java.lang.String getTransactionalPrefix();
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The bytes for transactionalPrefix.
+     */
+    com.google.protobuf.ByteString
+        getTransactionalPrefixBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergControlSpec}
+   */
+  public static final class IcebergControlSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.IcebergControlSpec)
+      IcebergControlSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IcebergControlSpec.newBuilder() to construct.
+    private IcebergControlSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IcebergControlSpec() {
+      groupIdPrefix_ = "";
+      transactionalPrefix_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IcebergControlSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IcebergControlSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupIdPrefix_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (commitIntervalMs_ != null) {
+                subBuilder = commitIntervalMs_.toBuilder();
+              }
+              commitIntervalMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(commitIntervalMs_);
+                commitIntervalMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (commitTimeoutMs_ != null) {
+                subBuilder = commitTimeoutMs_.toBuilder();
+              }
+              commitTimeoutMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(commitTimeoutMs_);
+                commitTimeoutMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (commitThreads_ != null) {
+                subBuilder = commitThreads_.toBuilder();
+              }
+              commitThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(commitThreads_);
+                commitThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              transactionalPrefix_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder.class);
+    }
+
+    public static final int GROUP_ID_PREFIX_FIELD_NUMBER = 1;
+    private volatile java.lang.Object groupIdPrefix_;
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The groupIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupIdPrefix() {
+      java.lang.Object ref = groupIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The bytes for groupIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdPrefixBytes() {
+      java.lang.Object ref = groupIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMIT_INTERVAL_MS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value commitIntervalMs_;
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return Whether the commitIntervalMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommitIntervalMs() {
+      return commitIntervalMs_ != null;
+    }
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return The commitIntervalMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCommitIntervalMs() {
+      return commitIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitIntervalMs_;
+    }
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCommitIntervalMsOrBuilder() {
+      return getCommitIntervalMs();
+    }
+
+    public static final int COMMIT_TIMEOUT_MS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value commitTimeoutMs_;
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return Whether the commitTimeoutMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommitTimeoutMs() {
+      return commitTimeoutMs_ != null;
+    }
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return The commitTimeoutMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCommitTimeoutMs() {
+      return commitTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitTimeoutMs_;
+    }
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCommitTimeoutMsOrBuilder() {
+      return getCommitTimeoutMs();
+    }
+
+    public static final int COMMIT_THREADS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value commitThreads_;
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return Whether the commitThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommitThreads() {
+      return commitThreads_ != null;
+    }
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return The commitThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCommitThreads() {
+      return commitThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitThreads_;
+    }
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCommitThreadsOrBuilder() {
+      return getCommitThreads();
+    }
+
+    public static final int TRANSACTIONAL_PREFIX_FIELD_NUMBER = 5;
+    private volatile java.lang.Object transactionalPrefix_;
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The transactionalPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getTransactionalPrefix() {
+      java.lang.Object ref = transactionalPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transactionalPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The bytes for transactionalPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransactionalPrefixBytes() {
+      java.lang.Object ref = transactionalPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transactionalPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupIdPrefix_);
+      }
+      if (commitIntervalMs_ != null) {
+        output.writeMessage(2, getCommitIntervalMs());
+      }
+      if (commitTimeoutMs_ != null) {
+        output.writeMessage(3, getCommitTimeoutMs());
+      }
+      if (commitThreads_ != null) {
+        output.writeMessage(4, getCommitThreads());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionalPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, transactionalPrefix_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupIdPrefix_);
+      }
+      if (commitIntervalMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCommitIntervalMs());
+      }
+      if (commitTimeoutMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCommitTimeoutMs());
+      }
+      if (commitThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCommitThreads());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionalPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, transactionalPrefix_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec) obj;
+
+      if (!getGroupIdPrefix()
+          .equals(other.getGroupIdPrefix())) return false;
+      if (hasCommitIntervalMs() != other.hasCommitIntervalMs()) return false;
+      if (hasCommitIntervalMs()) {
+        if (!getCommitIntervalMs()
+            .equals(other.getCommitIntervalMs())) return false;
+      }
+      if (hasCommitTimeoutMs() != other.hasCommitTimeoutMs()) return false;
+      if (hasCommitTimeoutMs()) {
+        if (!getCommitTimeoutMs()
+            .equals(other.getCommitTimeoutMs())) return false;
+      }
+      if (hasCommitThreads() != other.hasCommitThreads()) return false;
+      if (hasCommitThreads()) {
+        if (!getCommitThreads()
+            .equals(other.getCommitThreads())) return false;
+      }
+      if (!getTransactionalPrefix()
+          .equals(other.getTransactionalPrefix())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupIdPrefix().hashCode();
+      if (hasCommitIntervalMs()) {
+        hash = (37 * hash) + COMMIT_INTERVAL_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommitIntervalMs().hashCode();
+      }
+      if (hasCommitTimeoutMs()) {
+        hash = (37 * hash) + COMMIT_TIMEOUT_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommitTimeoutMs().hashCode();
+      }
+      if (hasCommitThreads()) {
+        hash = (37 * hash) + COMMIT_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommitThreads().hashCode();
+      }
+      hash = (37 * hash) + TRANSACTIONAL_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionalPrefix().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergControlSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.IcebergControlSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groupIdPrefix_ = "";
+
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMs_ = null;
+        } else {
+          commitIntervalMs_ = null;
+          commitIntervalMsBuilder_ = null;
+        }
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMs_ = null;
+        } else {
+          commitTimeoutMs_ = null;
+          commitTimeoutMsBuilder_ = null;
+        }
+        if (commitThreadsBuilder_ == null) {
+          commitThreads_ = null;
+        } else {
+          commitThreads_ = null;
+          commitThreadsBuilder_ = null;
+        }
+        transactionalPrefix_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec(this);
+        result.groupIdPrefix_ = groupIdPrefix_;
+        if (commitIntervalMsBuilder_ == null) {
+          result.commitIntervalMs_ = commitIntervalMs_;
+        } else {
+          result.commitIntervalMs_ = commitIntervalMsBuilder_.build();
+        }
+        if (commitTimeoutMsBuilder_ == null) {
+          result.commitTimeoutMs_ = commitTimeoutMs_;
+        } else {
+          result.commitTimeoutMs_ = commitTimeoutMsBuilder_.build();
+        }
+        if (commitThreadsBuilder_ == null) {
+          result.commitThreads_ = commitThreads_;
+        } else {
+          result.commitThreads_ = commitThreadsBuilder_.build();
+        }
+        result.transactionalPrefix_ = transactionalPrefix_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec.getDefaultInstance()) return this;
+        if (!other.getGroupIdPrefix().isEmpty()) {
+          groupIdPrefix_ = other.groupIdPrefix_;
+          onChanged();
+        }
+        if (other.hasCommitIntervalMs()) {
+          mergeCommitIntervalMs(other.getCommitIntervalMs());
+        }
+        if (other.hasCommitTimeoutMs()) {
+          mergeCommitTimeoutMs(other.getCommitTimeoutMs());
+        }
+        if (other.hasCommitThreads()) {
+          mergeCommitThreads(other.getCommitThreads());
+        }
+        if (!other.getTransactionalPrefix().isEmpty()) {
+          transactionalPrefix_ = other.transactionalPrefix_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object groupIdPrefix_ = "";
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @return The groupIdPrefix.
+       */
+      public java.lang.String getGroupIdPrefix() {
+        java.lang.Object ref = groupIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @return The bytes for groupIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdPrefixBytes() {
+        java.lang.Object ref = groupIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @param value The groupIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupIdPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupIdPrefix() {
+        
+        groupIdPrefix_ = getDefaultInstance().getGroupIdPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @param value The bytes for groupIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupIdPrefix_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value commitIntervalMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> commitIntervalMsBuilder_;
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       * @return Whether the commitIntervalMs field is set.
+       */
+      public boolean hasCommitIntervalMs() {
+        return commitIntervalMsBuilder_ != null || commitIntervalMs_ != null;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       * @return The commitIntervalMs.
+       */
+      public com.google.protobuf.Int64Value getCommitIntervalMs() {
+        if (commitIntervalMsBuilder_ == null) {
+          return commitIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitIntervalMs_;
+        } else {
+          return commitIntervalMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder setCommitIntervalMs(com.google.protobuf.Int64Value value) {
+        if (commitIntervalMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commitIntervalMs_ = value;
+          onChanged();
+        } else {
+          commitIntervalMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder setCommitIntervalMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          commitIntervalMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder mergeCommitIntervalMs(com.google.protobuf.Int64Value value) {
+        if (commitIntervalMsBuilder_ == null) {
+          if (commitIntervalMs_ != null) {
+            commitIntervalMs_ =
+              com.google.protobuf.Int64Value.newBuilder(commitIntervalMs_).mergeFrom(value).buildPartial();
+          } else {
+            commitIntervalMs_ = value;
+          }
+          onChanged();
+        } else {
+          commitIntervalMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder clearCommitIntervalMs() {
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMs_ = null;
+          onChanged();
+        } else {
+          commitIntervalMs_ = null;
+          commitIntervalMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCommitIntervalMsBuilder() {
+        
+        onChanged();
+        return getCommitIntervalMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCommitIntervalMsOrBuilder() {
+        if (commitIntervalMsBuilder_ != null) {
+          return commitIntervalMsBuilder_.getMessageOrBuilder();
+        } else {
+          return commitIntervalMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : commitIntervalMs_;
+        }
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCommitIntervalMsFieldBuilder() {
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCommitIntervalMs(),
+                  getParentForChildren(),
+                  isClean());
+          commitIntervalMs_ = null;
+        }
+        return commitIntervalMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value commitTimeoutMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> commitTimeoutMsBuilder_;
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       * @return Whether the commitTimeoutMs field is set.
+       */
+      public boolean hasCommitTimeoutMs() {
+        return commitTimeoutMsBuilder_ != null || commitTimeoutMs_ != null;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       * @return The commitTimeoutMs.
+       */
+      public com.google.protobuf.Int64Value getCommitTimeoutMs() {
+        if (commitTimeoutMsBuilder_ == null) {
+          return commitTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitTimeoutMs_;
+        } else {
+          return commitTimeoutMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder setCommitTimeoutMs(com.google.protobuf.Int64Value value) {
+        if (commitTimeoutMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commitTimeoutMs_ = value;
+          onChanged();
+        } else {
+          commitTimeoutMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder setCommitTimeoutMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          commitTimeoutMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder mergeCommitTimeoutMs(com.google.protobuf.Int64Value value) {
+        if (commitTimeoutMsBuilder_ == null) {
+          if (commitTimeoutMs_ != null) {
+            commitTimeoutMs_ =
+              com.google.protobuf.Int64Value.newBuilder(commitTimeoutMs_).mergeFrom(value).buildPartial();
+          } else {
+            commitTimeoutMs_ = value;
+          }
+          onChanged();
+        } else {
+          commitTimeoutMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder clearCommitTimeoutMs() {
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMs_ = null;
+          onChanged();
+        } else {
+          commitTimeoutMs_ = null;
+          commitTimeoutMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCommitTimeoutMsBuilder() {
+        
+        onChanged();
+        return getCommitTimeoutMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCommitTimeoutMsOrBuilder() {
+        if (commitTimeoutMsBuilder_ != null) {
+          return commitTimeoutMsBuilder_.getMessageOrBuilder();
+        } else {
+          return commitTimeoutMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : commitTimeoutMs_;
+        }
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCommitTimeoutMsFieldBuilder() {
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCommitTimeoutMs(),
+                  getParentForChildren(),
+                  isClean());
+          commitTimeoutMs_ = null;
+        }
+        return commitTimeoutMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value commitThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> commitThreadsBuilder_;
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       * @return Whether the commitThreads field is set.
+       */
+      public boolean hasCommitThreads() {
+        return commitThreadsBuilder_ != null || commitThreads_ != null;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       * @return The commitThreads.
+       */
+      public com.google.protobuf.Int64Value getCommitThreads() {
+        if (commitThreadsBuilder_ == null) {
+          return commitThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitThreads_;
+        } else {
+          return commitThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder setCommitThreads(com.google.protobuf.Int64Value value) {
+        if (commitThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commitThreads_ = value;
+          onChanged();
+        } else {
+          commitThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder setCommitThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (commitThreadsBuilder_ == null) {
+          commitThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          commitThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder mergeCommitThreads(com.google.protobuf.Int64Value value) {
+        if (commitThreadsBuilder_ == null) {
+          if (commitThreads_ != null) {
+            commitThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(commitThreads_).mergeFrom(value).buildPartial();
+          } else {
+            commitThreads_ = value;
+          }
+          onChanged();
+        } else {
+          commitThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder clearCommitThreads() {
+        if (commitThreadsBuilder_ == null) {
+          commitThreads_ = null;
+          onChanged();
+        } else {
+          commitThreads_ = null;
+          commitThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCommitThreadsBuilder() {
+        
+        onChanged();
+        return getCommitThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCommitThreadsOrBuilder() {
+        if (commitThreadsBuilder_ != null) {
+          return commitThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return commitThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : commitThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCommitThreadsFieldBuilder() {
+        if (commitThreadsBuilder_ == null) {
+          commitThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCommitThreads(),
+                  getParentForChildren(),
+                  isClean());
+          commitThreads_ = null;
+        }
+        return commitThreadsBuilder_;
+      }
+
+      private java.lang.Object transactionalPrefix_ = "";
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @return The transactionalPrefix.
+       */
+      public java.lang.String getTransactionalPrefix() {
+        java.lang.Object ref = transactionalPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transactionalPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @return The bytes for transactionalPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getTransactionalPrefixBytes() {
+        java.lang.Object ref = transactionalPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transactionalPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @param value The transactionalPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionalPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        transactionalPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionalPrefix() {
+        
+        transactionalPrefix_ = getDefaultInstance().getTransactionalPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @param value The bytes for transactionalPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionalPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        transactionalPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.IcebergControlSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.IcebergControlSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IcebergControlSpec>
+        PARSER = new com.google.protobuf.AbstractParser<IcebergControlSpec>() {
+      @java.lang.Override
+      public IcebergControlSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IcebergControlSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IcebergControlSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IcebergControlSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12930,6 +25507,33 @@ public final class ConnectorOuterClass {
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3SinkOrBuilder getConnectorConfigS3SinkOrBuilder();
 
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+     * @return Whether the connectorConfigIcebergSink field is set.
+     */
+    boolean hasConnectorConfigIcebergSink();
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+     * @return The connectorConfigIcebergSink.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink getConnectorConfigIcebergSink();
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkOrBuilder getConnectorConfigIcebergSinkOrBuilder();
+
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.ConnectorConfigCase getConnectorConfigCase();
   }
   /**
@@ -13058,6 +25662,20 @@ public final class ConnectorOuterClass {
                 connectorConfig_ = subBuilder.buildPartial();
               }
               connectorConfigCase_ = 11;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder subBuilder = null;
+              if (connectorConfigCase_ == 12) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_).toBuilder();
+              }
+              connectorConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_);
+                connectorConfig_ = subBuilder.buildPartial();
+              }
+              connectorConfigCase_ = 12;
               break;
             }
             default: {
@@ -13410,6 +26028,7 @@ public final class ConnectorOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTOR_CONFIG_MIRRORMAKER(10),
       CONNECTOR_CONFIG_S3_SINK(11),
+      CONNECTOR_CONFIG_ICEBERG_SINK(12),
       CONNECTORCONFIG_NOT_SET(0);
       private final int value;
       private ConnectorConfigCase(int value) {
@@ -13429,6 +26048,7 @@ public final class ConnectorOuterClass {
         switch (value) {
           case 10: return CONNECTOR_CONFIG_MIRRORMAKER;
           case 11: return CONNECTOR_CONFIG_S3_SINK;
+          case 12: return CONNECTOR_CONFIG_ICEBERG_SINK;
           case 0: return CONNECTORCONFIG_NOT_SET;
           default: return null;
         }
@@ -13815,6 +26435,49 @@ public final class ConnectorOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3Sink.getDefaultInstance();
     }
 
+    public static final int CONNECTOR_CONFIG_ICEBERG_SINK_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+     * @return Whether the connectorConfigIcebergSink field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectorConfigIcebergSink() {
+      return connectorConfigCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+     * @return The connectorConfigIcebergSink.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink getConnectorConfigIcebergSink() {
+      if (connectorConfigCase_ == 12) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of Iceberg Sink connector.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkOrBuilder getConnectorConfigIcebergSinkOrBuilder() {
+      if (connectorConfigCase_ == 12) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13855,6 +26518,9 @@ public final class ConnectorOuterClass {
       }
       if (connectorConfigCase_ == 11) {
         output.writeMessage(11, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3Sink) connectorConfig_);
+      }
+      if (connectorConfigCase_ == 12) {
+        output.writeMessage(12, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_);
       }
       unknownFields.writeTo(output);
     }
@@ -13901,6 +26567,10 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigS3Sink) connectorConfig_);
       }
+      if (connectorConfigCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13938,6 +26608,10 @@ public final class ConnectorOuterClass {
         case 11:
           if (!getConnectorConfigS3Sink()
               .equals(other.getConnectorConfigS3Sink())) return false;
+          break;
+        case 12:
+          if (!getConnectorConfigIcebergSink()
+              .equals(other.getConnectorConfigIcebergSink())) return false;
           break;
         case 0:
         default:
@@ -13977,6 +26651,10 @@ public final class ConnectorOuterClass {
         case 11:
           hash = (37 * hash) + CONNECTOR_CONFIG_S3_SINK_FIELD_NUMBER;
           hash = (53 * hash) + getConnectorConfigS3Sink().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + CONNECTOR_CONFIG_ICEBERG_SINK_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectorConfigIcebergSink().hashCode();
           break;
         case 0:
         default:
@@ -14205,6 +26883,13 @@ public final class ConnectorOuterClass {
             result.connectorConfig_ = connectorConfigS3SinkBuilder_.build();
           }
         }
+        if (connectorConfigCase_ == 12) {
+          if (connectorConfigIcebergSinkBuilder_ == null) {
+            result.connectorConfig_ = connectorConfig_;
+          } else {
+            result.connectorConfig_ = connectorConfigIcebergSinkBuilder_.build();
+          }
+        }
         result.connectorConfigCase_ = connectorConfigCase_;
         onBuilt();
         return result;
@@ -14280,6 +26965,10 @@ public final class ConnectorOuterClass {
           }
           case CONNECTOR_CONFIG_S3_SINK: {
             mergeConnectorConfigS3Sink(other.getConnectorConfigS3Sink());
+            break;
+          }
+          case CONNECTOR_CONFIG_ICEBERG_SINK: {
+            mergeConnectorConfigIcebergSink(other.getConnectorConfigIcebergSink());
             break;
           }
           case CONNECTORCONFIG_NOT_SET: {
@@ -15344,6 +28033,183 @@ public final class ConnectorOuterClass {
         connectorConfigCase_ = 11;
         onChanged();;
         return connectorConfigS3SinkBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkOrBuilder> connectorConfigIcebergSinkBuilder_;
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       * @return Whether the connectorConfigIcebergSink field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectorConfigIcebergSink() {
+        return connectorConfigCase_ == 12;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       * @return The connectorConfigIcebergSink.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink getConnectorConfigIcebergSink() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            return connectorConfigIcebergSinkBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder setConnectorConfigIcebergSink(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink value) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectorConfig_ = value;
+          onChanged();
+        } else {
+          connectorConfigIcebergSinkBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder setConnectorConfigIcebergSink(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder builderForValue) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          connectorConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectorConfigIcebergSinkBuilder_.setMessage(builderForValue.build());
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder mergeConnectorConfigIcebergSink(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink value) {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12 &&
+              connectorConfig_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance()) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            connectorConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigIcebergSinkBuilder_.mergeFrom(value);
+          }
+          connectorConfigIcebergSinkBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       */
+      public Builder clearConnectorConfigIcebergSink() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (connectorConfigCase_ == 12) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+          }
+          connectorConfigIcebergSinkBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder getConnectorConfigIcebergSinkBuilder() {
+        return getConnectorConfigIcebergSinkFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkOrBuilder getConnectorConfigIcebergSinkOrBuilder() {
+        if ((connectorConfigCase_ == 12) && (connectorConfigIcebergSinkBuilder_ != null)) {
+          return connectorConfigIcebergSinkBuilder_.getMessageOrBuilder();
+        } else {
+          if (connectorConfigCase_ == 12) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of Iceberg Sink connector.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink connector_config_iceberg_sink = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkOrBuilder> 
+          getConnectorConfigIcebergSinkFieldBuilder() {
+        if (connectorConfigIcebergSinkBuilder_ == null) {
+          if (!(connectorConfigCase_ == 12)) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance();
+          }
+          connectorConfigIcebergSinkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) connectorConfig_,
+                  getParentForChildren(),
+                  isClean());
+          connectorConfig_ = null;
+        }
+        connectorConfigCase_ = 12;
+        onChanged();;
+        return connectorConfigIcebergSinkBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -20982,11 +33848,19 @@ public final class ConnectorOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bucketName.
      */
     java.lang.String getBucketName();
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bytes for bucketName.
      */
@@ -20994,16 +33868,28 @@ public final class ConnectorOuterClass {
         getBucketNameBytes();
 
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
      * @return Whether the externalS3 field is set.
      */
     boolean hasExternalS3();
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
      * @return The externalS3.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3Storage getExternalS3();
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageOrBuilder getExternalS3OrBuilder();
@@ -21157,6 +34043,10 @@ public final class ConnectorOuterClass {
     public static final int BUCKET_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object bucketName_;
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bucketName.
      */
@@ -21174,6 +34064,10 @@ public final class ConnectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the bucket.
+     * </pre>
+     *
      * <code>string bucket_name = 1;</code>
      * @return The bytes for bucketName.
      */
@@ -21194,6 +34088,10 @@ public final class ConnectorOuterClass {
 
     public static final int EXTERNAL_S3_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
      * @return Whether the externalS3 field is set.
      */
@@ -21202,6 +34100,10 @@ public final class ConnectorOuterClass {
       return storageCase_ == 2;
     }
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
      * @return The externalS3.
      */
@@ -21213,6 +34115,10 @@ public final class ConnectorOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3Storage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
      */
     @java.lang.Override
@@ -21592,6 +34498,10 @@ public final class ConnectorOuterClass {
 
       private java.lang.Object bucketName_ = "";
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @return The bucketName.
        */
@@ -21608,6 +34518,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @return The bytes for bucketName.
        */
@@ -21625,6 +34539,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @param value The bucketName to set.
        * @return This builder for chaining.
@@ -21640,6 +34558,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @return This builder for chaining.
        */
@@ -21650,6 +34572,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the bucket.
+       * </pre>
+       *
        * <code>string bucket_name = 1;</code>
        * @param value The bytes for bucketName to set.
        * @return This builder for chaining.
@@ -21669,6 +34595,10 @@ public final class ConnectorOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3Storage, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3Storage.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3StorageOrBuilder> externalS3Builder_;
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        * @return Whether the externalS3 field is set.
        */
@@ -21677,6 +34607,10 @@ public final class ConnectorOuterClass {
         return storageCase_ == 2;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        * @return The externalS3.
        */
@@ -21695,6 +34629,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        */
       public Builder setExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3Storage value) {
@@ -21711,6 +34649,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        */
       public Builder setExternalS3(
@@ -21725,6 +34667,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        */
       public Builder mergeExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3Storage value) {
@@ -21747,6 +34693,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        */
       public Builder clearExternalS3() {
@@ -21766,12 +34716,20 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalS3Storage.Builder getExternalS3Builder() {
         return getExternalS3FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        */
       @java.lang.Override
@@ -21786,6 +34744,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalS3Storage external_s3 = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21864,11 +34826,19 @@ public final class ConnectorOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The bytes for accessKeyId.
      */
@@ -21876,11 +34846,19 @@ public final class ConnectorOuterClass {
         getAccessKeyIdBytes();
 
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 2;</code>
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 2;</code>
      * @return The bytes for endpoint.
      */
@@ -21889,7 +34867,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Default is 'us-east-1'
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 3;</code>
@@ -21898,7 +34876,7 @@ public final class ConnectorOuterClass {
     java.lang.String getRegion();
     /**
      * <pre>
-     * Default is 'us-east-1'
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 3;</code>
@@ -22008,6 +34986,10 @@ public final class ConnectorOuterClass {
     public static final int ACCESS_KEY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object accessKeyId_;
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The accessKeyId.
      */
@@ -22025,6 +35007,10 @@ public final class ConnectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
      * <code>string access_key_id = 1;</code>
      * @return The bytes for accessKeyId.
      */
@@ -22046,6 +35032,10 @@ public final class ConnectorOuterClass {
     public static final int ENDPOINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object endpoint_;
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 2;</code>
      * @return The endpoint.
      */
@@ -22063,6 +35053,10 @@ public final class ConnectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
      * <code>string endpoint = 2;</code>
      * @return The bytes for endpoint.
      */
@@ -22085,7 +35079,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object region_;
     /**
      * <pre>
-     * Default is 'us-east-1'
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 3;</code>
@@ -22106,7 +35100,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Default is 'us-east-1'
+     * AWS region. Default is 'us-east-1'.
      * </pre>
      *
      * <code>string region = 3;</code>
@@ -22465,6 +35459,10 @@ public final class ConnectorOuterClass {
 
       private java.lang.Object accessKeyId_ = "";
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @return The accessKeyId.
        */
@@ -22481,6 +35479,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @return The bytes for accessKeyId.
        */
@@ -22498,6 +35500,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @param value The accessKeyId to set.
        * @return This builder for chaining.
@@ -22513,6 +35519,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -22523,6 +35533,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
        * <code>string access_key_id = 1;</code>
        * @param value The bytes for accessKeyId to set.
        * @return This builder for chaining.
@@ -22541,6 +35555,10 @@ public final class ConnectorOuterClass {
 
       private java.lang.Object endpoint_ = "";
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 2;</code>
        * @return The endpoint.
        */
@@ -22557,6 +35575,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 2;</code>
        * @return The bytes for endpoint.
        */
@@ -22574,6 +35596,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 2;</code>
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -22589,6 +35615,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 2;</code>
        * @return This builder for chaining.
        */
@@ -22599,6 +35629,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
        * <code>string endpoint = 2;</code>
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -22618,7 +35652,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object region_ = "";
       /**
        * <pre>
-       * Default is 'us-east-1'
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 3;</code>
@@ -22638,7 +35672,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 3;</code>
@@ -22659,7 +35693,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 3;</code>
@@ -22678,7 +35712,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 3;</code>
@@ -22692,7 +35726,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Default is 'us-east-1'
+       * AWS region. Default is 'us-east-1'.
        * </pre>
        *
        * <code>string region = 3;</code>
@@ -22763,6 +35797,9474 @@ public final class ConnectorOuterClass {
 
   }
 
+  public interface ConnectorConfigIcebergSinkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return Whether the topics field is set.
+     */
+    boolean hasTopics();
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The topics.
+     */
+    java.lang.String getTopics();
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The bytes for topics.
+     */
+    com.google.protobuf.ByteString
+        getTopicsBytes();
+
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return Whether the topicsRegex field is set.
+     */
+    boolean hasTopicsRegex();
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The topicsRegex.
+     */
+    java.lang.String getTopicsRegex();
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The bytes for topicsRegex.
+     */
+    com.google.protobuf.ByteString
+        getTopicsRegexBytes();
+
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+     * @return Whether the metastoreConnection field is set.
+     */
+    boolean hasMetastoreConnection();
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+     * @return The metastoreConnection.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection getMetastoreConnection();
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionOrBuilder getMetastoreConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+     * @return Whether the s3Connection field is set.
+     */
+    boolean hasS3Connection();
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+     * @return The s3Connection.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection getS3Connection();
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionOrBuilder getS3ConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+     * @return Whether the staticTables field is set.
+     */
+    boolean hasStaticTables();
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+     * @return The staticTables.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables getStaticTables();
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesOrBuilder getStaticTablesOrBuilder();
+
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+     * @return Whether the dynamicTables field is set.
+     */
+    boolean hasDynamicTables();
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+     * @return The dynamicTables.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables getDynamicTables();
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesOrBuilder getDynamicTablesOrBuilder();
+
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+     * @return Whether the tablesConfig field is set.
+     */
+    boolean hasTablesConfig();
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+     * @return The tablesConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig getTablesConfig();
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigOrBuilder getTablesConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+     * @return Whether the controlConfig field is set.
+     */
+    boolean hasControlConfig();
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+     * @return The controlConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl getControlConfig();
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlOrBuilder getControlConfigOrBuilder();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.TopicsSourceCase getTopicsSourceCase();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.TableRoutingCase getTableRoutingCase();
+  }
+  /**
+   * <pre>
+   * Resource for Kafka Iceberg Sink Connector.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink}
+   */
+  public static final class ConnectorConfigIcebergSink extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink)
+      ConnectorConfigIcebergSinkOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConnectorConfigIcebergSink.newBuilder() to construct.
+    private ConnectorConfigIcebergSink(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConnectorConfigIcebergSink() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectorConfigIcebergSink();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectorConfigIcebergSink(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              topicsSourceCase_ = 1;
+              topicsSource_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              topicsSourceCase_ = 2;
+              topicsSource_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder subBuilder = null;
+              if (metastoreConnection_ != null) {
+                subBuilder = metastoreConnection_.toBuilder();
+              }
+              metastoreConnection_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metastoreConnection_);
+                metastoreConnection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder subBuilder = null;
+              if (s3Connection_ != null) {
+                subBuilder = s3Connection_.toBuilder();
+              }
+              s3Connection_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(s3Connection_);
+                s3Connection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder subBuilder = null;
+              if (tableRoutingCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_).toBuilder();
+              }
+              tableRouting_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_);
+                tableRouting_ = subBuilder.buildPartial();
+              }
+              tableRoutingCase_ = 5;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder subBuilder = null;
+              if (tableRoutingCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_).toBuilder();
+              }
+              tableRouting_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_);
+                tableRouting_ = subBuilder.buildPartial();
+              }
+              tableRoutingCase_ = 6;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder subBuilder = null;
+              if (tablesConfig_ != null) {
+                subBuilder = tablesConfig_.toBuilder();
+              }
+              tablesConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tablesConfig_);
+                tablesConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder subBuilder = null;
+              if (controlConfig_ != null) {
+                subBuilder = controlConfig_.toBuilder();
+              }
+              controlConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(controlConfig_);
+                controlConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder.class);
+    }
+
+    private int topicsSourceCase_ = 0;
+    private java.lang.Object topicsSource_;
+    public enum TopicsSourceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TOPICS(1),
+      TOPICS_REGEX(2),
+      TOPICSSOURCE_NOT_SET(0);
+      private final int value;
+      private TopicsSourceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TopicsSourceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TopicsSourceCase forNumber(int value) {
+        switch (value) {
+          case 1: return TOPICS;
+          case 2: return TOPICS_REGEX;
+          case 0: return TOPICSSOURCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TopicsSourceCase
+    getTopicsSourceCase() {
+      return TopicsSourceCase.forNumber(
+          topicsSourceCase_);
+    }
+
+    private int tableRoutingCase_ = 0;
+    private java.lang.Object tableRouting_;
+    public enum TableRoutingCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      STATIC_TABLES(5),
+      DYNAMIC_TABLES(6),
+      TABLEROUTING_NOT_SET(0);
+      private final int value;
+      private TableRoutingCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TableRoutingCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TableRoutingCase forNumber(int value) {
+        switch (value) {
+          case 5: return STATIC_TABLES;
+          case 6: return DYNAMIC_TABLES;
+          case 0: return TABLEROUTING_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TableRoutingCase
+    getTableRoutingCase() {
+      return TableRoutingCase.forNumber(
+          tableRoutingCase_);
+    }
+
+    public static final int TOPICS_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return Whether the topics field is set.
+     */
+    public boolean hasTopics() {
+      return topicsSourceCase_ == 1;
+    }
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The topics.
+     */
+    public java.lang.String getTopics() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 1) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (topicsSourceCase_ == 1) {
+          topicsSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * List of Kafka topics, separated by ','.
+     * </pre>
+     *
+     * <code>string topics = 1;</code>
+     * @return The bytes for topics.
+     */
+    public com.google.protobuf.ByteString
+        getTopicsBytes() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 1) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (topicsSourceCase_ == 1) {
+          topicsSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPICS_REGEX_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return Whether the topicsRegex field is set.
+     */
+    public boolean hasTopicsRegex() {
+      return topicsSourceCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The topicsRegex.
+     */
+    public java.lang.String getTopicsRegex() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 2) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (topicsSourceCase_ == 2) {
+          topicsSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Regex of Kafka topics.
+     * </pre>
+     *
+     * <code>string topics_regex = 2;</code>
+     * @return The bytes for topicsRegex.
+     */
+    public com.google.protobuf.ByteString
+        getTopicsRegexBytes() {
+      java.lang.Object ref = "";
+      if (topicsSourceCase_ == 2) {
+        ref = topicsSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (topicsSourceCase_ == 2) {
+          topicsSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METASTORE_CONNECTION_FIELD_NUMBER = 3;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection metastoreConnection_;
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+     * @return Whether the metastoreConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetastoreConnection() {
+      return metastoreConnection_ != null;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+     * @return The metastoreConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection getMetastoreConnection() {
+      return metastoreConnection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.getDefaultInstance() : metastoreConnection_;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to Managed Hive Metastore.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionOrBuilder getMetastoreConnectionOrBuilder() {
+      return getMetastoreConnection();
+    }
+
+    public static final int S3_CONNECTION_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection s3Connection_;
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+     * @return Whether the s3Connection field is set.
+     */
+    @java.lang.Override
+    public boolean hasS3Connection() {
+      return s3Connection_ != null;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+     * @return The s3Connection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection getS3Connection() {
+      return s3Connection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.getDefaultInstance() : s3Connection_;
+    }
+    /**
+     * <pre>
+     * Credentials for connecting to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionOrBuilder getS3ConnectionOrBuilder() {
+      return getS3Connection();
+    }
+
+    public static final int STATIC_TABLES_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+     * @return Whether the staticTables field is set.
+     */
+    @java.lang.Override
+    public boolean hasStaticTables() {
+      return tableRoutingCase_ == 5;
+    }
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+     * @return The staticTables.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables getStaticTables() {
+      if (tableRoutingCase_ == 5) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Static table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesOrBuilder getStaticTablesOrBuilder() {
+      if (tableRoutingCase_ == 5) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance();
+    }
+
+    public static final int DYNAMIC_TABLES_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+     * @return Whether the dynamicTables field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicTables() {
+      return tableRoutingCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+     * @return The dynamicTables.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables getDynamicTables() {
+      if (tableRoutingCase_ == 6) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Dynamic table routing
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesOrBuilder getDynamicTablesOrBuilder() {
+      if (tableRoutingCase_ == 6) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance();
+    }
+
+    public static final int TABLES_CONFIG_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig tablesConfig_;
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+     * @return Whether the tablesConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasTablesConfig() {
+      return tablesConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+     * @return The tablesConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig getTablesConfig() {
+      return tablesConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.getDefaultInstance() : tablesConfig_;
+    }
+    /**
+     * <pre>
+     * Optional table settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigOrBuilder getTablesConfigOrBuilder() {
+      return getTablesConfig();
+    }
+
+    public static final int CONTROL_CONFIG_FIELD_NUMBER = 8;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl controlConfig_;
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+     * @return Whether the controlConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlConfig() {
+      return controlConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+     * @return The controlConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl getControlConfig() {
+      return controlConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.getDefaultInstance() : controlConfig_;
+    }
+    /**
+     * <pre>
+     * Optional control settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlOrBuilder getControlConfigOrBuilder() {
+      return getControlConfig();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (topicsSourceCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicsSource_);
+      }
+      if (topicsSourceCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicsSource_);
+      }
+      if (metastoreConnection_ != null) {
+        output.writeMessage(3, getMetastoreConnection());
+      }
+      if (s3Connection_ != null) {
+        output.writeMessage(4, getS3Connection());
+      }
+      if (tableRoutingCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_);
+      }
+      if (tableRoutingCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_);
+      }
+      if (tablesConfig_ != null) {
+        output.writeMessage(7, getTablesConfig());
+      }
+      if (controlConfig_ != null) {
+        output.writeMessage(8, getControlConfig());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (topicsSourceCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, topicsSource_);
+      }
+      if (topicsSourceCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicsSource_);
+      }
+      if (metastoreConnection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetastoreConnection());
+      }
+      if (s3Connection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getS3Connection());
+      }
+      if (tableRoutingCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_);
+      }
+      if (tableRoutingCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_);
+      }
+      if (tablesConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTablesConfig());
+      }
+      if (controlConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getControlConfig());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) obj;
+
+      if (hasMetastoreConnection() != other.hasMetastoreConnection()) return false;
+      if (hasMetastoreConnection()) {
+        if (!getMetastoreConnection()
+            .equals(other.getMetastoreConnection())) return false;
+      }
+      if (hasS3Connection() != other.hasS3Connection()) return false;
+      if (hasS3Connection()) {
+        if (!getS3Connection()
+            .equals(other.getS3Connection())) return false;
+      }
+      if (hasTablesConfig() != other.hasTablesConfig()) return false;
+      if (hasTablesConfig()) {
+        if (!getTablesConfig()
+            .equals(other.getTablesConfig())) return false;
+      }
+      if (hasControlConfig() != other.hasControlConfig()) return false;
+      if (hasControlConfig()) {
+        if (!getControlConfig()
+            .equals(other.getControlConfig())) return false;
+      }
+      if (!getTopicsSourceCase().equals(other.getTopicsSourceCase())) return false;
+      switch (topicsSourceCase_) {
+        case 1:
+          if (!getTopics()
+              .equals(other.getTopics())) return false;
+          break;
+        case 2:
+          if (!getTopicsRegex()
+              .equals(other.getTopicsRegex())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getTableRoutingCase().equals(other.getTableRoutingCase())) return false;
+      switch (tableRoutingCase_) {
+        case 5:
+          if (!getStaticTables()
+              .equals(other.getStaticTables())) return false;
+          break;
+        case 6:
+          if (!getDynamicTables()
+              .equals(other.getDynamicTables())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetastoreConnection()) {
+        hash = (37 * hash) + METASTORE_CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getMetastoreConnection().hashCode();
+      }
+      if (hasS3Connection()) {
+        hash = (37 * hash) + S3_CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getS3Connection().hashCode();
+      }
+      if (hasTablesConfig()) {
+        hash = (37 * hash) + TABLES_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getTablesConfig().hashCode();
+      }
+      if (hasControlConfig()) {
+        hash = (37 * hash) + CONTROL_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getControlConfig().hashCode();
+      }
+      switch (topicsSourceCase_) {
+        case 1:
+          hash = (37 * hash) + TOPICS_FIELD_NUMBER;
+          hash = (53 * hash) + getTopics().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + TOPICS_REGEX_FIELD_NUMBER;
+          hash = (53 * hash) + getTopicsRegex().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      switch (tableRoutingCase_) {
+        case 5:
+          hash = (37 * hash) + STATIC_TABLES_FIELD_NUMBER;
+          hash = (53 * hash) + getStaticTables().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + DYNAMIC_TABLES_FIELD_NUMBER;
+          hash = (53 * hash) + getDynamicTables().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Resource for Kafka Iceberg Sink Connector.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = null;
+        } else {
+          metastoreConnection_ = null;
+          metastoreConnectionBuilder_ = null;
+        }
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = null;
+        } else {
+          s3Connection_ = null;
+          s3ConnectionBuilder_ = null;
+        }
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = null;
+        } else {
+          tablesConfig_ = null;
+          tablesConfigBuilder_ = null;
+        }
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = null;
+        } else {
+          controlConfig_ = null;
+          controlConfigBuilder_ = null;
+        }
+        topicsSourceCase_ = 0;
+        topicsSource_ = null;
+        tableRoutingCase_ = 0;
+        tableRouting_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink(this);
+        if (topicsSourceCase_ == 1) {
+          result.topicsSource_ = topicsSource_;
+        }
+        if (topicsSourceCase_ == 2) {
+          result.topicsSource_ = topicsSource_;
+        }
+        if (metastoreConnectionBuilder_ == null) {
+          result.metastoreConnection_ = metastoreConnection_;
+        } else {
+          result.metastoreConnection_ = metastoreConnectionBuilder_.build();
+        }
+        if (s3ConnectionBuilder_ == null) {
+          result.s3Connection_ = s3Connection_;
+        } else {
+          result.s3Connection_ = s3ConnectionBuilder_.build();
+        }
+        if (tableRoutingCase_ == 5) {
+          if (staticTablesBuilder_ == null) {
+            result.tableRouting_ = tableRouting_;
+          } else {
+            result.tableRouting_ = staticTablesBuilder_.build();
+          }
+        }
+        if (tableRoutingCase_ == 6) {
+          if (dynamicTablesBuilder_ == null) {
+            result.tableRouting_ = tableRouting_;
+          } else {
+            result.tableRouting_ = dynamicTablesBuilder_.build();
+          }
+        }
+        if (tablesConfigBuilder_ == null) {
+          result.tablesConfig_ = tablesConfig_;
+        } else {
+          result.tablesConfig_ = tablesConfigBuilder_.build();
+        }
+        if (controlConfigBuilder_ == null) {
+          result.controlConfig_ = controlConfig_;
+        } else {
+          result.controlConfig_ = controlConfigBuilder_.build();
+        }
+        result.topicsSourceCase_ = topicsSourceCase_;
+        result.tableRoutingCase_ = tableRoutingCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance()) return this;
+        if (other.hasMetastoreConnection()) {
+          mergeMetastoreConnection(other.getMetastoreConnection());
+        }
+        if (other.hasS3Connection()) {
+          mergeS3Connection(other.getS3Connection());
+        }
+        if (other.hasTablesConfig()) {
+          mergeTablesConfig(other.getTablesConfig());
+        }
+        if (other.hasControlConfig()) {
+          mergeControlConfig(other.getControlConfig());
+        }
+        switch (other.getTopicsSourceCase()) {
+          case TOPICS: {
+            topicsSourceCase_ = 1;
+            topicsSource_ = other.topicsSource_;
+            onChanged();
+            break;
+          }
+          case TOPICS_REGEX: {
+            topicsSourceCase_ = 2;
+            topicsSource_ = other.topicsSource_;
+            onChanged();
+            break;
+          }
+          case TOPICSSOURCE_NOT_SET: {
+            break;
+          }
+        }
+        switch (other.getTableRoutingCase()) {
+          case STATIC_TABLES: {
+            mergeStaticTables(other.getStaticTables());
+            break;
+          }
+          case DYNAMIC_TABLES: {
+            mergeDynamicTables(other.getDynamicTables());
+            break;
+          }
+          case TABLEROUTING_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int topicsSourceCase_ = 0;
+      private java.lang.Object topicsSource_;
+      public TopicsSourceCase
+          getTopicsSourceCase() {
+        return TopicsSourceCase.forNumber(
+            topicsSourceCase_);
+      }
+
+      public Builder clearTopicsSource() {
+        topicsSourceCase_ = 0;
+        topicsSource_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int tableRoutingCase_ = 0;
+      private java.lang.Object tableRouting_;
+      public TableRoutingCase
+          getTableRoutingCase() {
+        return TableRoutingCase.forNumber(
+            tableRoutingCase_);
+      }
+
+      public Builder clearTableRouting() {
+        tableRoutingCase_ = 0;
+        tableRouting_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return Whether the topics field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopics() {
+        return topicsSourceCase_ == 1;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return The topics.
+       */
+      @java.lang.Override
+      public java.lang.String getTopics() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 1) {
+          ref = topicsSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (topicsSourceCase_ == 1) {
+            topicsSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return The bytes for topics.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTopicsBytes() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 1) {
+          ref = topicsSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (topicsSourceCase_ == 1) {
+            topicsSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @param value The topics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopics(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  topicsSourceCase_ = 1;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopics() {
+        if (topicsSourceCase_ == 1) {
+          topicsSourceCase_ = 0;
+          topicsSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Kafka topics, separated by ','.
+       * </pre>
+       *
+       * <code>string topics = 1;</code>
+       * @param value The bytes for topics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        topicsSourceCase_ = 1;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return Whether the topicsRegex field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopicsRegex() {
+        return topicsSourceCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return The topicsRegex.
+       */
+      @java.lang.Override
+      public java.lang.String getTopicsRegex() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 2) {
+          ref = topicsSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (topicsSourceCase_ == 2) {
+            topicsSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return The bytes for topicsRegex.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTopicsRegexBytes() {
+        java.lang.Object ref = "";
+        if (topicsSourceCase_ == 2) {
+          ref = topicsSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (topicsSourceCase_ == 2) {
+            topicsSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @param value The topicsRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsRegex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  topicsSourceCase_ = 2;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicsRegex() {
+        if (topicsSourceCase_ == 2) {
+          topicsSourceCase_ = 0;
+          topicsSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Regex of Kafka topics.
+       * </pre>
+       *
+       * <code>string topics_regex = 2;</code>
+       * @param value The bytes for topicsRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicsRegexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        topicsSourceCase_ = 2;
+        topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection metastoreConnection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionOrBuilder> metastoreConnectionBuilder_;
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       * @return Whether the metastoreConnection field is set.
+       */
+      public boolean hasMetastoreConnection() {
+        return metastoreConnectionBuilder_ != null || metastoreConnection_ != null;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       * @return The metastoreConnection.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection getMetastoreConnection() {
+        if (metastoreConnectionBuilder_ == null) {
+          return metastoreConnection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.getDefaultInstance() : metastoreConnection_;
+        } else {
+          return metastoreConnectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       */
+      public Builder setMetastoreConnection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection value) {
+        if (metastoreConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metastoreConnection_ = value;
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       */
+      public Builder setMetastoreConnection(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder builderForValue) {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = builderForValue.build();
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       */
+      public Builder mergeMetastoreConnection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection value) {
+        if (metastoreConnectionBuilder_ == null) {
+          if (metastoreConnection_ != null) {
+            metastoreConnection_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.newBuilder(metastoreConnection_).mergeFrom(value).buildPartial();
+          } else {
+            metastoreConnection_ = value;
+          }
+          onChanged();
+        } else {
+          metastoreConnectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       */
+      public Builder clearMetastoreConnection() {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnection_ = null;
+          onChanged();
+        } else {
+          metastoreConnection_ = null;
+          metastoreConnectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder getMetastoreConnectionBuilder() {
+        
+        onChanged();
+        return getMetastoreConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionOrBuilder getMetastoreConnectionOrBuilder() {
+        if (metastoreConnectionBuilder_ != null) {
+          return metastoreConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          return metastoreConnection_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.getDefaultInstance() : metastoreConnection_;
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to Managed Hive Metastore.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MetastoreConnection metastore_connection = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionOrBuilder> 
+          getMetastoreConnectionFieldBuilder() {
+        if (metastoreConnectionBuilder_ == null) {
+          metastoreConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionOrBuilder>(
+                  getMetastoreConnection(),
+                  getParentForChildren(),
+                  isClean());
+          metastoreConnection_ = null;
+        }
+        return metastoreConnectionBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection s3Connection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionOrBuilder> s3ConnectionBuilder_;
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       * @return Whether the s3Connection field is set.
+       */
+      public boolean hasS3Connection() {
+        return s3ConnectionBuilder_ != null || s3Connection_ != null;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       * @return The s3Connection.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection getS3Connection() {
+        if (s3ConnectionBuilder_ == null) {
+          return s3Connection_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.getDefaultInstance() : s3Connection_;
+        } else {
+          return s3ConnectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       */
+      public Builder setS3Connection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection value) {
+        if (s3ConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          s3Connection_ = value;
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       */
+      public Builder setS3Connection(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder builderForValue) {
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       */
+      public Builder mergeS3Connection(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection value) {
+        if (s3ConnectionBuilder_ == null) {
+          if (s3Connection_ != null) {
+            s3Connection_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.newBuilder(s3Connection_).mergeFrom(value).buildPartial();
+          } else {
+            s3Connection_ = value;
+          }
+          onChanged();
+        } else {
+          s3ConnectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       */
+      public Builder clearS3Connection() {
+        if (s3ConnectionBuilder_ == null) {
+          s3Connection_ = null;
+          onChanged();
+        } else {
+          s3Connection_ = null;
+          s3ConnectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder getS3ConnectionBuilder() {
+        
+        onChanged();
+        return getS3ConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionOrBuilder getS3ConnectionOrBuilder() {
+        if (s3ConnectionBuilder_ != null) {
+          return s3ConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          return s3Connection_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.getDefaultInstance() : s3Connection_;
+        }
+      }
+      /**
+       * <pre>
+       * Credentials for connecting to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergS3Connection s3_connection = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionOrBuilder> 
+          getS3ConnectionFieldBuilder() {
+        if (s3ConnectionBuilder_ == null) {
+          s3ConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionOrBuilder>(
+                  getS3Connection(),
+                  getParentForChildren(),
+                  isClean());
+          s3Connection_ = null;
+        }
+        return s3ConnectionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesOrBuilder> staticTablesBuilder_;
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       * @return Whether the staticTables field is set.
+       */
+      @java.lang.Override
+      public boolean hasStaticTables() {
+        return tableRoutingCase_ == 5;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       * @return The staticTables.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables getStaticTables() {
+        if (staticTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 5) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance();
+        } else {
+          if (tableRoutingCase_ == 5) {
+            return staticTablesBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       */
+      public Builder setStaticTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables value) {
+        if (staticTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableRouting_ = value;
+          onChanged();
+        } else {
+          staticTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       */
+      public Builder setStaticTables(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder builderForValue) {
+        if (staticTablesBuilder_ == null) {
+          tableRouting_ = builderForValue.build();
+          onChanged();
+        } else {
+          staticTablesBuilder_.setMessage(builderForValue.build());
+        }
+        tableRoutingCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       */
+      public Builder mergeStaticTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables value) {
+        if (staticTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 5 &&
+              tableRouting_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance()) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tableRouting_ = value;
+          }
+          onChanged();
+        } else {
+          if (tableRoutingCase_ == 5) {
+            staticTablesBuilder_.mergeFrom(value);
+          }
+          staticTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       */
+      public Builder clearStaticTables() {
+        if (staticTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 5) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+            onChanged();
+          }
+        } else {
+          if (tableRoutingCase_ == 5) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+          }
+          staticTablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder getStaticTablesBuilder() {
+        return getStaticTablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesOrBuilder getStaticTablesOrBuilder() {
+        if ((tableRoutingCase_ == 5) && (staticTablesBuilder_ != null)) {
+          return staticTablesBuilder_.getMessageOrBuilder();
+        } else {
+          if (tableRoutingCase_ == 5) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Static table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.StaticTables static_tables = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesOrBuilder> 
+          getStaticTablesFieldBuilder() {
+        if (staticTablesBuilder_ == null) {
+          if (!(tableRoutingCase_ == 5)) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance();
+          }
+          staticTablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) tableRouting_,
+                  getParentForChildren(),
+                  isClean());
+          tableRouting_ = null;
+        }
+        tableRoutingCase_ = 5;
+        onChanged();;
+        return staticTablesBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesOrBuilder> dynamicTablesBuilder_;
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       * @return Whether the dynamicTables field is set.
+       */
+      @java.lang.Override
+      public boolean hasDynamicTables() {
+        return tableRoutingCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       * @return The dynamicTables.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables getDynamicTables() {
+        if (dynamicTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 6) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance();
+        } else {
+          if (tableRoutingCase_ == 6) {
+            return dynamicTablesBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       */
+      public Builder setDynamicTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables value) {
+        if (dynamicTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableRouting_ = value;
+          onChanged();
+        } else {
+          dynamicTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       */
+      public Builder setDynamicTables(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder builderForValue) {
+        if (dynamicTablesBuilder_ == null) {
+          tableRouting_ = builderForValue.build();
+          onChanged();
+        } else {
+          dynamicTablesBuilder_.setMessage(builderForValue.build());
+        }
+        tableRoutingCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       */
+      public Builder mergeDynamicTables(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables value) {
+        if (dynamicTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 6 &&
+              tableRouting_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance()) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tableRouting_ = value;
+          }
+          onChanged();
+        } else {
+          if (tableRoutingCase_ == 6) {
+            dynamicTablesBuilder_.mergeFrom(value);
+          }
+          dynamicTablesBuilder_.setMessage(value);
+        }
+        tableRoutingCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       */
+      public Builder clearDynamicTables() {
+        if (dynamicTablesBuilder_ == null) {
+          if (tableRoutingCase_ == 6) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+            onChanged();
+          }
+        } else {
+          if (tableRoutingCase_ == 6) {
+            tableRoutingCase_ = 0;
+            tableRouting_ = null;
+          }
+          dynamicTablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder getDynamicTablesBuilder() {
+        return getDynamicTablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesOrBuilder getDynamicTablesOrBuilder() {
+        if ((tableRoutingCase_ == 6) && (dynamicTablesBuilder_ != null)) {
+          return dynamicTablesBuilder_.getMessageOrBuilder();
+        } else {
+          if (tableRoutingCase_ == 6) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Dynamic table routing
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DynamicTables dynamic_tables = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesOrBuilder> 
+          getDynamicTablesFieldBuilder() {
+        if (dynamicTablesBuilder_ == null) {
+          if (!(tableRoutingCase_ == 6)) {
+            tableRouting_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance();
+          }
+          dynamicTablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) tableRouting_,
+                  getParentForChildren(),
+                  isClean());
+          tableRouting_ = null;
+        }
+        tableRoutingCase_ = 6;
+        onChanged();;
+        return dynamicTablesBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig tablesConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigOrBuilder> tablesConfigBuilder_;
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       * @return Whether the tablesConfig field is set.
+       */
+      public boolean hasTablesConfig() {
+        return tablesConfigBuilder_ != null || tablesConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       * @return The tablesConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig getTablesConfig() {
+        if (tablesConfigBuilder_ == null) {
+          return tablesConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.getDefaultInstance() : tablesConfig_;
+        } else {
+          return tablesConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       */
+      public Builder setTablesConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig value) {
+        if (tablesConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tablesConfig_ = value;
+          onChanged();
+        } else {
+          tablesConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       */
+      public Builder setTablesConfig(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder builderForValue) {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          tablesConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       */
+      public Builder mergeTablesConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig value) {
+        if (tablesConfigBuilder_ == null) {
+          if (tablesConfig_ != null) {
+            tablesConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.newBuilder(tablesConfig_).mergeFrom(value).buildPartial();
+          } else {
+            tablesConfig_ = value;
+          }
+          onChanged();
+        } else {
+          tablesConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       */
+      public Builder clearTablesConfig() {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfig_ = null;
+          onChanged();
+        } else {
+          tablesConfig_ = null;
+          tablesConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder getTablesConfigBuilder() {
+        
+        onChanged();
+        return getTablesConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigOrBuilder getTablesConfigOrBuilder() {
+        if (tablesConfigBuilder_ != null) {
+          return tablesConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return tablesConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.getDefaultInstance() : tablesConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional table settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergTablesConfig tables_config = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigOrBuilder> 
+          getTablesConfigFieldBuilder() {
+        if (tablesConfigBuilder_ == null) {
+          tablesConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigOrBuilder>(
+                  getTablesConfig(),
+                  getParentForChildren(),
+                  isClean());
+          tablesConfig_ = null;
+        }
+        return tablesConfigBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl controlConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlOrBuilder> controlConfigBuilder_;
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       * @return Whether the controlConfig field is set.
+       */
+      public boolean hasControlConfig() {
+        return controlConfigBuilder_ != null || controlConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       * @return The controlConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl getControlConfig() {
+        if (controlConfigBuilder_ == null) {
+          return controlConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.getDefaultInstance() : controlConfig_;
+        } else {
+          return controlConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       */
+      public Builder setControlConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl value) {
+        if (controlConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          controlConfig_ = value;
+          onChanged();
+        } else {
+          controlConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       */
+      public Builder setControlConfig(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder builderForValue) {
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          controlConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       */
+      public Builder mergeControlConfig(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl value) {
+        if (controlConfigBuilder_ == null) {
+          if (controlConfig_ != null) {
+            controlConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.newBuilder(controlConfig_).mergeFrom(value).buildPartial();
+          } else {
+            controlConfig_ = value;
+          }
+          onChanged();
+        } else {
+          controlConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       */
+      public Builder clearControlConfig() {
+        if (controlConfigBuilder_ == null) {
+          controlConfig_ = null;
+          onChanged();
+        } else {
+          controlConfig_ = null;
+          controlConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder getControlConfigBuilder() {
+        
+        onChanged();
+        return getControlConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlOrBuilder getControlConfigOrBuilder() {
+        if (controlConfigBuilder_ != null) {
+          return controlConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return controlConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.getDefaultInstance() : controlConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional control settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.IcebergControl control_config = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlOrBuilder> 
+          getControlConfigFieldBuilder() {
+        if (controlConfigBuilder_ == null) {
+          controlConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlOrBuilder>(
+                  getControlConfig(),
+                  getParentForChildren(),
+                  isClean());
+          controlConfig_ = null;
+        }
+        return controlConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.ConnectorConfigIcebergSink)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConnectorConfigIcebergSink>
+        PARSER = new com.google.protobuf.AbstractParser<ConnectorConfigIcebergSink>() {
+      @java.lang.Override
+      public ConnectorConfigIcebergSink parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConnectorConfigIcebergSink(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConnectorConfigIcebergSink> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConnectorConfigIcebergSink> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StaticTablesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.StaticTables)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>string tables = 1;</code>
+     * @return The tables.
+     */
+    java.lang.String getTables();
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>string tables = 1;</code>
+     * @return The bytes for tables.
+     */
+    com.google.protobuf.ByteString
+        getTablesBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.StaticTables}
+   */
+  public static final class StaticTables extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.StaticTables)
+      StaticTablesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StaticTables.newBuilder() to construct.
+    private StaticTables(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StaticTables() {
+      tables_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StaticTables();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StaticTables(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tables_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder.class);
+    }
+
+    public static final int TABLES_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tables_;
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>string tables = 1;</code>
+     * @return The tables.
+     */
+    @java.lang.Override
+    public java.lang.String getTables() {
+      java.lang.Object ref = tables_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tables_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * List of tables, separated by ','.
+     * </pre>
+     *
+     * <code>string tables = 1;</code>
+     * @return The bytes for tables.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTablesBytes() {
+      java.lang.Object ref = tables_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tables_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tables_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tables_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tables_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tables_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) obj;
+
+      if (!getTables()
+          .equals(other.getTables())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TABLES_FIELD_NUMBER;
+      hash = (53 * hash) + getTables().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.StaticTables}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.StaticTables)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tables_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables(this);
+        result.tables_ = tables_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables.getDefaultInstance()) return this;
+        if (!other.getTables().isEmpty()) {
+          tables_ = other.tables_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tables_ = "";
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>string tables = 1;</code>
+       * @return The tables.
+       */
+      public java.lang.String getTables() {
+        java.lang.Object ref = tables_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tables_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>string tables = 1;</code>
+       * @return The bytes for tables.
+       */
+      public com.google.protobuf.ByteString
+          getTablesBytes() {
+        java.lang.Object ref = tables_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tables_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>string tables = 1;</code>
+       * @param value The tables to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTables(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tables_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>string tables = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTables() {
+        
+        tables_ = getDefaultInstance().getTables();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tables, separated by ','.
+       * </pre>
+       *
+       * <code>string tables = 1;</code>
+       * @param value The bytes for tables to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTablesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tables_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.StaticTables)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.StaticTables)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StaticTables>
+        PARSER = new com.google.protobuf.AbstractParser<StaticTables>() {
+      @java.lang.Override
+      public StaticTables parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StaticTables(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StaticTables> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StaticTables> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTables getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DynamicTablesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.DynamicTables)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The routeField.
+     */
+    java.lang.String getRouteField();
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The bytes for routeField.
+     */
+    com.google.protobuf.ByteString
+        getRouteFieldBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.DynamicTables}
+   */
+  public static final class DynamicTables extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.DynamicTables)
+      DynamicTablesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DynamicTables.newBuilder() to construct.
+    private DynamicTables(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DynamicTables() {
+      routeField_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DynamicTables();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DynamicTables(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              routeField_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder.class);
+    }
+
+    public static final int ROUTE_FIELD_FIELD_NUMBER = 1;
+    private volatile java.lang.Object routeField_;
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The routeField.
+     */
+    @java.lang.Override
+    public java.lang.String getRouteField() {
+      java.lang.Object ref = routeField_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        routeField_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Field in the message to define the target table
+     * The iceberg.tables.dynamic-enabled field is set to true
+     * </pre>
+     *
+     * <code>string route_field = 1;</code>
+     * @return The bytes for routeField.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRouteFieldBytes() {
+      java.lang.Object ref = routeField_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        routeField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeField_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, routeField_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeField_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, routeField_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) obj;
+
+      if (!getRouteField()
+          .equals(other.getRouteField())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROUTE_FIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getRouteField().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.DynamicTables}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.DynamicTables)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTablesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        routeField_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables(this);
+        result.routeField_ = routeField_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables.getDefaultInstance()) return this;
+        if (!other.getRouteField().isEmpty()) {
+          routeField_ = other.routeField_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object routeField_ = "";
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @return The routeField.
+       */
+      public java.lang.String getRouteField() {
+        java.lang.Object ref = routeField_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          routeField_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @return The bytes for routeField.
+       */
+      public com.google.protobuf.ByteString
+          getRouteFieldBytes() {
+        java.lang.Object ref = routeField_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          routeField_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @param value The routeField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRouteField(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        routeField_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRouteField() {
+        
+        routeField_ = getDefaultInstance().getRouteField();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field in the message to define the target table
+       * The iceberg.tables.dynamic-enabled field is set to true
+       * </pre>
+       *
+       * <code>string route_field = 1;</code>
+       * @param value The bytes for routeField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRouteFieldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        routeField_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.DynamicTables)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.DynamicTables)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DynamicTables>
+        PARSER = new com.google.protobuf.AbstractParser<DynamicTables>() {
+      @java.lang.Override
+      public DynamicTables parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DynamicTables(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DynamicTables> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DynamicTables> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.DynamicTables getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MetastoreConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.MetastoreConnection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The catalogUri.
+     */
+    java.lang.String getCatalogUri();
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The bytes for catalogUri.
+     */
+    com.google.protobuf.ByteString
+        getCatalogUriBytes();
+
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The warehouse.
+     */
+    java.lang.String getWarehouse();
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The bytes for warehouse.
+     */
+    com.google.protobuf.ByteString
+        getWarehouseBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.MetastoreConnection}
+   */
+  public static final class MetastoreConnection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.MetastoreConnection)
+      MetastoreConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MetastoreConnection.newBuilder() to construct.
+    private MetastoreConnection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MetastoreConnection() {
+      catalogUri_ = "";
+      warehouse_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MetastoreConnection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MetastoreConnection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              catalogUri_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              warehouse_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder.class);
+    }
+
+    public static final int CATALOG_URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object catalogUri_;
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The catalogUri.
+     */
+    @java.lang.Override
+    public java.lang.String getCatalogUri() {
+      java.lang.Object ref = catalogUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        catalogUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Thrift URI of Hive Metastore
+     * Format: "thrift://host:9083"
+     * </pre>
+     *
+     * <code>string catalog_uri = 1;</code>
+     * @return The bytes for catalogUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCatalogUriBytes() {
+      java.lang.Object ref = catalogUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        catalogUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WAREHOUSE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object warehouse_;
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The warehouse.
+     */
+    @java.lang.Override
+    public java.lang.String getWarehouse() {
+      java.lang.Object ref = warehouse_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        warehouse_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Warehouse root directory in S3
+     * Format: "s3a://bucket-name/path/to/warehouse"
+     * Can be any path within the bucket, not necessarily "/warehouse"
+     * </pre>
+     *
+     * <code>string warehouse = 2;</code>
+     * @return The bytes for warehouse.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWarehouseBytes() {
+      java.lang.Object ref = warehouse_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        warehouse_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(catalogUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, catalogUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(warehouse_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, warehouse_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(catalogUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, catalogUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(warehouse_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, warehouse_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection) obj;
+
+      if (!getCatalogUri()
+          .equals(other.getCatalogUri())) return false;
+      if (!getWarehouse()
+          .equals(other.getWarehouse())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CATALOG_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getCatalogUri().hashCode();
+      hash = (37 * hash) + WAREHOUSE_FIELD_NUMBER;
+      hash = (53 * hash) + getWarehouse().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.MetastoreConnection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.MetastoreConnection)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        catalogUri_ = "";
+
+        warehouse_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection(this);
+        result.catalogUri_ = catalogUri_;
+        result.warehouse_ = warehouse_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection.getDefaultInstance()) return this;
+        if (!other.getCatalogUri().isEmpty()) {
+          catalogUri_ = other.catalogUri_;
+          onChanged();
+        }
+        if (!other.getWarehouse().isEmpty()) {
+          warehouse_ = other.warehouse_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object catalogUri_ = "";
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @return The catalogUri.
+       */
+      public java.lang.String getCatalogUri() {
+        java.lang.Object ref = catalogUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          catalogUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @return The bytes for catalogUri.
+       */
+      public com.google.protobuf.ByteString
+          getCatalogUriBytes() {
+        java.lang.Object ref = catalogUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          catalogUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @param value The catalogUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCatalogUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        catalogUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCatalogUri() {
+        
+        catalogUri_ = getDefaultInstance().getCatalogUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Thrift URI of Hive Metastore
+       * Format: "thrift://host:9083"
+       * </pre>
+       *
+       * <code>string catalog_uri = 1;</code>
+       * @param value The bytes for catalogUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCatalogUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        catalogUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object warehouse_ = "";
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @return The warehouse.
+       */
+      public java.lang.String getWarehouse() {
+        java.lang.Object ref = warehouse_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          warehouse_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @return The bytes for warehouse.
+       */
+      public com.google.protobuf.ByteString
+          getWarehouseBytes() {
+        java.lang.Object ref = warehouse_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          warehouse_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @param value The warehouse to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWarehouse(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        warehouse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWarehouse() {
+        
+        warehouse_ = getDefaultInstance().getWarehouse();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Warehouse root directory in S3
+       * Format: "s3a://bucket-name/path/to/warehouse"
+       * Can be any path within the bucket, not necessarily "/warehouse"
+       * </pre>
+       *
+       * <code>string warehouse = 2;</code>
+       * @param value The bytes for warehouse to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWarehouseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        warehouse_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.MetastoreConnection)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.MetastoreConnection)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MetastoreConnection>
+        PARSER = new com.google.protobuf.AbstractParser<MetastoreConnection>() {
+      @java.lang.Override
+      public MetastoreConnection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MetastoreConnection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MetastoreConnection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MetastoreConnection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IcebergS3ConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.IcebergS3Connection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+     * @return Whether the externalS3 field is set.
+     */
+    boolean hasExternalS3();
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+     * @return The externalS3.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage getExternalS3();
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageOrBuilder getExternalS3OrBuilder();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.StorageCase getStorageCase();
+  }
+  /**
+   * <pre>
+   * Resource for IcebergS3Connection -
+   * settings of connection to AWS-compatible S3 storage, that
+   * are target of Kafka Iceberg-connectors.
+   * YC Object Storage is AWS-compatible.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergS3Connection}
+   */
+  public static final class IcebergS3Connection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.IcebergS3Connection)
+      IcebergS3ConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IcebergS3Connection.newBuilder() to construct.
+    private IcebergS3Connection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IcebergS3Connection() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IcebergS3Connection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IcebergS3Connection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder subBuilder = null;
+              if (storageCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_).toBuilder();
+              }
+              storage_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_);
+                storage_ = subBuilder.buildPartial();
+              }
+              storageCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder.class);
+    }
+
+    private int storageCase_ = 0;
+    private java.lang.Object storage_;
+    public enum StorageCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      EXTERNAL_S3(1),
+      STORAGE_NOT_SET(0);
+      private final int value;
+      private StorageCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static StorageCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static StorageCase forNumber(int value) {
+        switch (value) {
+          case 1: return EXTERNAL_S3;
+          case 0: return STORAGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public StorageCase
+    getStorageCase() {
+      return StorageCase.forNumber(
+          storageCase_);
+    }
+
+    public static final int EXTERNAL_S3_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+     * @return Whether the externalS3 field is set.
+     */
+    @java.lang.Override
+    public boolean hasExternalS3() {
+      return storageCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+     * @return The externalS3.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage getExternalS3() {
+      if (storageCase_ == 1) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for connection to S3 storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageOrBuilder getExternalS3OrBuilder() {
+      if (storageCase_ == 1) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (storageCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (storageCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection) obj;
+
+      if (!getStorageCase().equals(other.getStorageCase())) return false;
+      switch (storageCase_) {
+        case 1:
+          if (!getExternalS3()
+              .equals(other.getExternalS3())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (storageCase_) {
+        case 1:
+          hash = (37 * hash) + EXTERNAL_S3_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalS3().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Resource for IcebergS3Connection -
+     * settings of connection to AWS-compatible S3 storage, that
+     * are target of Kafka Iceberg-connectors.
+     * YC Object Storage is AWS-compatible.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergS3Connection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.IcebergS3Connection)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3ConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        storageCase_ = 0;
+        storage_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection(this);
+        if (storageCase_ == 1) {
+          if (externalS3Builder_ == null) {
+            result.storage_ = storage_;
+          } else {
+            result.storage_ = externalS3Builder_.build();
+          }
+        }
+        result.storageCase_ = storageCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection.getDefaultInstance()) return this;
+        switch (other.getStorageCase()) {
+          case EXTERNAL_S3: {
+            mergeExternalS3(other.getExternalS3());
+            break;
+          }
+          case STORAGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int storageCase_ = 0;
+      private java.lang.Object storage_;
+      public StorageCase
+          getStorageCase() {
+        return StorageCase.forNumber(
+            storageCase_);
+      }
+
+      public Builder clearStorage() {
+        storageCase_ = 0;
+        storage_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageOrBuilder> externalS3Builder_;
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       * @return Whether the externalS3 field is set.
+       */
+      @java.lang.Override
+      public boolean hasExternalS3() {
+        return storageCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       * @return The externalS3.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage getExternalS3() {
+        if (externalS3Builder_ == null) {
+          if (storageCase_ == 1) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance();
+        } else {
+          if (storageCase_ == 1) {
+            return externalS3Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       */
+      public Builder setExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage value) {
+        if (externalS3Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          storage_ = value;
+          onChanged();
+        } else {
+          externalS3Builder_.setMessage(value);
+        }
+        storageCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       */
+      public Builder setExternalS3(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder builderForValue) {
+        if (externalS3Builder_ == null) {
+          storage_ = builderForValue.build();
+          onChanged();
+        } else {
+          externalS3Builder_.setMessage(builderForValue.build());
+        }
+        storageCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       */
+      public Builder mergeExternalS3(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage value) {
+        if (externalS3Builder_ == null) {
+          if (storageCase_ == 1 &&
+              storage_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance()) {
+            storage_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            storage_ = value;
+          }
+          onChanged();
+        } else {
+          if (storageCase_ == 1) {
+            externalS3Builder_.mergeFrom(value);
+          }
+          externalS3Builder_.setMessage(value);
+        }
+        storageCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       */
+      public Builder clearExternalS3() {
+        if (externalS3Builder_ == null) {
+          if (storageCase_ == 1) {
+            storageCase_ = 0;
+            storage_ = null;
+            onChanged();
+          }
+        } else {
+          if (storageCase_ == 1) {
+            storageCase_ = 0;
+            storage_ = null;
+          }
+          externalS3Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder getExternalS3Builder() {
+        return getExternalS3FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageOrBuilder getExternalS3OrBuilder() {
+        if ((storageCase_ == 1) && (externalS3Builder_ != null)) {
+          return externalS3Builder_.getMessageOrBuilder();
+        } else {
+          if (storageCase_ == 1) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for connection to S3 storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage external_s3 = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageOrBuilder> 
+          getExternalS3FieldBuilder() {
+        if (externalS3Builder_ == null) {
+          if (!(storageCase_ == 1)) {
+            storage_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance();
+          }
+          externalS3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) storage_,
+                  getParentForChildren(),
+                  isClean());
+          storage_ = null;
+        }
+        storageCase_ = 1;
+        onChanged();;
+        return externalS3Builder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.IcebergS3Connection)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.IcebergS3Connection)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IcebergS3Connection>
+        PARSER = new com.google.protobuf.AbstractParser<IcebergS3Connection>() {
+      @java.lang.Override
+      public IcebergS3Connection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IcebergS3Connection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IcebergS3Connection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IcebergS3Connection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergS3Connection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExternalIcebergS3StorageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
+     */
+    java.lang.String getAccessKeyId();
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyIdBytes();
+
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 2;</code>
+     * @return The endpoint.
+     */
+    java.lang.String getEndpoint();
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 2;</code>
+     * @return The bytes for endpoint.
+     */
+    com.google.protobuf.ByteString
+        getEndpointBytes();
+
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 3;</code>
+     * @return The region.
+     */
+    java.lang.String getRegion();
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 3;</code>
+     * @return The bytes for region.
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage}
+   */
+  public static final class ExternalIcebergS3Storage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage)
+      ExternalIcebergS3StorageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ExternalIcebergS3Storage.newBuilder() to construct.
+    private ExternalIcebergS3Storage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExternalIcebergS3Storage() {
+      accessKeyId_ = "";
+      endpoint_ = "";
+      region_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalIcebergS3Storage();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ExternalIcebergS3Storage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessKeyId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              endpoint_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              region_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder.class);
+    }
+
+    public static final int ACCESS_KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accessKeyId_;
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessKeyId() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessKeyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the AWS access key.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessKeyIdBytes() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKeyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object endpoint_;
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 2;</code>
+     * @return The endpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpoint() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * S3 endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 2;</code>
+     * @return The bytes for endpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointBytes() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object region_;
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 3;</code>
+     * @return The region.
+     */
+    @java.lang.Override
+    public java.lang.String getRegion() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        region_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * AWS region. Default is 'us-east-1'.
+     * </pre>
+     *
+     * <code>string region = 3;</code>
+     * @return The bytes for region.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        region_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, endpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, region_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, endpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(region_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, region_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) obj;
+
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (!getEndpoint()
+          .equals(other.getEndpoint())) return false;
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCESS_KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessKeyId().hashCode();
+      hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoint().hashCode();
+      hash = (37 * hash) + REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getRegion().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3StorageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accessKeyId_ = "";
+
+        endpoint_ = "";
+
+        region_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage(this);
+        result.accessKeyId_ = accessKeyId_;
+        result.endpoint_ = endpoint_;
+        result.region_ = region_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage.getDefaultInstance()) return this;
+        if (!other.getAccessKeyId().isEmpty()) {
+          accessKeyId_ = other.accessKeyId_;
+          onChanged();
+        }
+        if (!other.getEndpoint().isEmpty()) {
+          endpoint_ = other.endpoint_;
+          onChanged();
+        }
+        if (!other.getRegion().isEmpty()) {
+          region_ = other.region_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object accessKeyId_ = "";
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @return The accessKeyId.
+       */
+      public java.lang.String getAccessKeyId() {
+        java.lang.Object ref = accessKeyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessKeyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @return The bytes for accessKeyId.
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyIdBytes() {
+        java.lang.Object ref = accessKeyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessKeyId() {
+        
+        accessKeyId_ = getDefaultInstance().getAccessKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AWS access key.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endpoint_ = "";
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 2;</code>
+       * @return The endpoint.
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 2;</code>
+       * @return The bytes for endpoint.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 2;</code>
+       * @param value The endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpoint() {
+        
+        endpoint_ = getDefaultInstance().getEndpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 2;</code>
+       * @param value The bytes for endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object region_ = "";
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 3;</code>
+       * @return The region.
+       */
+      public java.lang.String getRegion() {
+        java.lang.Object ref = region_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          region_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 3;</code>
+       * @return The bytes for region.
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 3;</code>
+       * @param value The region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegion() {
+        
+        region_ = getDefaultInstance().getRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AWS region. Default is 'us-east-1'.
+       * </pre>
+       *
+       * <code>string region = 3;</code>
+       * @param value The bytes for region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.ExternalIcebergS3Storage)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExternalIcebergS3Storage>
+        PARSER = new com.google.protobuf.AbstractParser<ExternalIcebergS3Storage>() {
+      @java.lang.Override
+      public ExternalIcebergS3Storage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ExternalIcebergS3Storage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExternalIcebergS3Storage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExternalIcebergS3Storage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalIcebergS3Storage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IcebergTablesConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.IcebergTablesConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The defaultCommitBranch.
+     */
+    java.lang.String getDefaultCommitBranch();
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The bytes for defaultCommitBranch.
+     */
+    com.google.protobuf.ByteString
+        getDefaultCommitBranchBytes();
+
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The defaultIdColumns.
+     */
+    java.lang.String getDefaultIdColumns();
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The bytes for defaultIdColumns.
+     */
+    com.google.protobuf.ByteString
+        getDefaultIdColumnsBytes();
+
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The defaultPartitionBy.
+     */
+    java.lang.String getDefaultPartitionBy();
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The bytes for defaultPartitionBy.
+     */
+    com.google.protobuf.ByteString
+        getDefaultPartitionByBytes();
+
+    /**
+     * <pre>
+     * Enable automatic schema evolution.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool evolve_schema_enabled = 4;</code>
+     * @return The evolveSchemaEnabled.
+     */
+    boolean getEvolveSchemaEnabled();
+
+    /**
+     * <pre>
+     * Force all columns to be nullable (optional).
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_force_optional = 5;</code>
+     * @return The schemaForceOptional.
+     */
+    boolean getSchemaForceOptional();
+
+    /**
+     * <pre>
+     * Enable case-insensitive field name matching.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_case_insensitive = 6;</code>
+     * @return The schemaCaseInsensitive.
+     */
+    boolean getSchemaCaseInsensitive();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergTablesConfig}
+   */
+  public static final class IcebergTablesConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.IcebergTablesConfig)
+      IcebergTablesConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IcebergTablesConfig.newBuilder() to construct.
+    private IcebergTablesConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IcebergTablesConfig() {
+      defaultCommitBranch_ = "";
+      defaultIdColumns_ = "";
+      defaultPartitionBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IcebergTablesConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IcebergTablesConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultCommitBranch_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultIdColumns_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultPartitionBy_ = s;
+              break;
+            }
+            case 32: {
+
+              evolveSchemaEnabled_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              schemaForceOptional_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              schemaCaseInsensitive_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder.class);
+    }
+
+    public static final int DEFAULT_COMMIT_BRANCH_FIELD_NUMBER = 1;
+    private volatile java.lang.Object defaultCommitBranch_;
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The defaultCommitBranch.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultCommitBranch() {
+      java.lang.Object ref = defaultCommitBranch_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultCommitBranch_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Default Git-like branch name for Iceberg commits.
+     * Default: "main"
+     * </pre>
+     *
+     * <code>string default_commit_branch = 1;</code>
+     * @return The bytes for defaultCommitBranch.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultCommitBranchBytes() {
+      java.lang.Object ref = defaultCommitBranch_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultCommitBranch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_ID_COLUMNS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object defaultIdColumns_;
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The defaultIdColumns.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultIdColumns() {
+      java.lang.Object ref = defaultIdColumns_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultIdColumns_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * List of columns used as identifiers for upsert operations, separated by ','.
+     * </pre>
+     *
+     * <code>string default_id_columns = 2;</code>
+     * @return The bytes for defaultIdColumns.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultIdColumnsBytes() {
+      java.lang.Object ref = defaultIdColumns_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultIdColumns_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_PARTITION_BY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object defaultPartitionBy_;
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The defaultPartitionBy.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultPartitionBy() {
+      java.lang.Object ref = defaultPartitionBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultPartitionBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Comma-separated list of columns or transform expressions for table partitioning.
+     * Defines physical data layout for query optimization.
+     * Examples:
+     *   - "date"
+     *   - "year,month"
+     *   - "year(timestamp),month(timestamp)"
+     *   - "days(timestamp)"
+     *   - "bucket(16,user_id)"
+     * </pre>
+     *
+     * <code>string default_partition_by = 3;</code>
+     * @return The bytes for defaultPartitionBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultPartitionByBytes() {
+      java.lang.Object ref = defaultPartitionBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultPartitionBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVOLVE_SCHEMA_ENABLED_FIELD_NUMBER = 4;
+    private boolean evolveSchemaEnabled_;
+    /**
+     * <pre>
+     * Enable automatic schema evolution.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool evolve_schema_enabled = 4;</code>
+     * @return The evolveSchemaEnabled.
+     */
+    @java.lang.Override
+    public boolean getEvolveSchemaEnabled() {
+      return evolveSchemaEnabled_;
+    }
+
+    public static final int SCHEMA_FORCE_OPTIONAL_FIELD_NUMBER = 5;
+    private boolean schemaForceOptional_;
+    /**
+     * <pre>
+     * Force all columns to be nullable (optional).
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_force_optional = 5;</code>
+     * @return The schemaForceOptional.
+     */
+    @java.lang.Override
+    public boolean getSchemaForceOptional() {
+      return schemaForceOptional_;
+    }
+
+    public static final int SCHEMA_CASE_INSENSITIVE_FIELD_NUMBER = 6;
+    private boolean schemaCaseInsensitive_;
+    /**
+     * <pre>
+     * Enable case-insensitive field name matching.
+     * Default: false
+     * </pre>
+     *
+     * <code>bool schema_case_insensitive = 6;</code>
+     * @return The schemaCaseInsensitive.
+     */
+    @java.lang.Override
+    public boolean getSchemaCaseInsensitive() {
+      return schemaCaseInsensitive_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCommitBranch_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, defaultCommitBranch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultIdColumns_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, defaultIdColumns_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultPartitionBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultPartitionBy_);
+      }
+      if (evolveSchemaEnabled_ != false) {
+        output.writeBool(4, evolveSchemaEnabled_);
+      }
+      if (schemaForceOptional_ != false) {
+        output.writeBool(5, schemaForceOptional_);
+      }
+      if (schemaCaseInsensitive_ != false) {
+        output.writeBool(6, schemaCaseInsensitive_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCommitBranch_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, defaultCommitBranch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultIdColumns_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, defaultIdColumns_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultPartitionBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultPartitionBy_);
+      }
+      if (evolveSchemaEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, evolveSchemaEnabled_);
+      }
+      if (schemaForceOptional_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, schemaForceOptional_);
+      }
+      if (schemaCaseInsensitive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, schemaCaseInsensitive_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig) obj;
+
+      if (!getDefaultCommitBranch()
+          .equals(other.getDefaultCommitBranch())) return false;
+      if (!getDefaultIdColumns()
+          .equals(other.getDefaultIdColumns())) return false;
+      if (!getDefaultPartitionBy()
+          .equals(other.getDefaultPartitionBy())) return false;
+      if (getEvolveSchemaEnabled()
+          != other.getEvolveSchemaEnabled()) return false;
+      if (getSchemaForceOptional()
+          != other.getSchemaForceOptional()) return false;
+      if (getSchemaCaseInsensitive()
+          != other.getSchemaCaseInsensitive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_COMMIT_BRANCH_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultCommitBranch().hashCode();
+      hash = (37 * hash) + DEFAULT_ID_COLUMNS_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultIdColumns().hashCode();
+      hash = (37 * hash) + DEFAULT_PARTITION_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultPartitionBy().hashCode();
+      hash = (37 * hash) + EVOLVE_SCHEMA_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEvolveSchemaEnabled());
+      hash = (37 * hash) + SCHEMA_FORCE_OPTIONAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSchemaForceOptional());
+      hash = (37 * hash) + SCHEMA_CASE_INSENSITIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSchemaCaseInsensitive());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergTablesConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.IcebergTablesConfig)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        defaultCommitBranch_ = "";
+
+        defaultIdColumns_ = "";
+
+        defaultPartitionBy_ = "";
+
+        evolveSchemaEnabled_ = false;
+
+        schemaForceOptional_ = false;
+
+        schemaCaseInsensitive_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig(this);
+        result.defaultCommitBranch_ = defaultCommitBranch_;
+        result.defaultIdColumns_ = defaultIdColumns_;
+        result.defaultPartitionBy_ = defaultPartitionBy_;
+        result.evolveSchemaEnabled_ = evolveSchemaEnabled_;
+        result.schemaForceOptional_ = schemaForceOptional_;
+        result.schemaCaseInsensitive_ = schemaCaseInsensitive_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig.getDefaultInstance()) return this;
+        if (!other.getDefaultCommitBranch().isEmpty()) {
+          defaultCommitBranch_ = other.defaultCommitBranch_;
+          onChanged();
+        }
+        if (!other.getDefaultIdColumns().isEmpty()) {
+          defaultIdColumns_ = other.defaultIdColumns_;
+          onChanged();
+        }
+        if (!other.getDefaultPartitionBy().isEmpty()) {
+          defaultPartitionBy_ = other.defaultPartitionBy_;
+          onChanged();
+        }
+        if (other.getEvolveSchemaEnabled() != false) {
+          setEvolveSchemaEnabled(other.getEvolveSchemaEnabled());
+        }
+        if (other.getSchemaForceOptional() != false) {
+          setSchemaForceOptional(other.getSchemaForceOptional());
+        }
+        if (other.getSchemaCaseInsensitive() != false) {
+          setSchemaCaseInsensitive(other.getSchemaCaseInsensitive());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object defaultCommitBranch_ = "";
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @return The defaultCommitBranch.
+       */
+      public java.lang.String getDefaultCommitBranch() {
+        java.lang.Object ref = defaultCommitBranch_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultCommitBranch_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @return The bytes for defaultCommitBranch.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultCommitBranchBytes() {
+        java.lang.Object ref = defaultCommitBranch_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultCommitBranch_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @param value The defaultCommitBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCommitBranch(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultCommitBranch_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultCommitBranch() {
+        
+        defaultCommitBranch_ = getDefaultInstance().getDefaultCommitBranch();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default Git-like branch name for Iceberg commits.
+       * Default: "main"
+       * </pre>
+       *
+       * <code>string default_commit_branch = 1;</code>
+       * @param value The bytes for defaultCommitBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCommitBranchBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultCommitBranch_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultIdColumns_ = "";
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @return The defaultIdColumns.
+       */
+      public java.lang.String getDefaultIdColumns() {
+        java.lang.Object ref = defaultIdColumns_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultIdColumns_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @return The bytes for defaultIdColumns.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultIdColumnsBytes() {
+        java.lang.Object ref = defaultIdColumns_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultIdColumns_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @param value The defaultIdColumns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultIdColumns(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultIdColumns_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultIdColumns() {
+        
+        defaultIdColumns_ = getDefaultInstance().getDefaultIdColumns();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of columns used as identifiers for upsert operations, separated by ','.
+       * </pre>
+       *
+       * <code>string default_id_columns = 2;</code>
+       * @param value The bytes for defaultIdColumns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultIdColumnsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultIdColumns_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultPartitionBy_ = "";
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @return The defaultPartitionBy.
+       */
+      public java.lang.String getDefaultPartitionBy() {
+        java.lang.Object ref = defaultPartitionBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultPartitionBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @return The bytes for defaultPartitionBy.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultPartitionByBytes() {
+        java.lang.Object ref = defaultPartitionBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultPartitionBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @param value The defaultPartitionBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultPartitionBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultPartitionBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultPartitionBy() {
+        
+        defaultPartitionBy_ = getDefaultInstance().getDefaultPartitionBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Comma-separated list of columns or transform expressions for table partitioning.
+       * Defines physical data layout for query optimization.
+       * Examples:
+       *   - "date"
+       *   - "year,month"
+       *   - "year(timestamp),month(timestamp)"
+       *   - "days(timestamp)"
+       *   - "bucket(16,user_id)"
+       * </pre>
+       *
+       * <code>string default_partition_by = 3;</code>
+       * @param value The bytes for defaultPartitionBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultPartitionByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultPartitionBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean evolveSchemaEnabled_ ;
+      /**
+       * <pre>
+       * Enable automatic schema evolution.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool evolve_schema_enabled = 4;</code>
+       * @return The evolveSchemaEnabled.
+       */
+      @java.lang.Override
+      public boolean getEvolveSchemaEnabled() {
+        return evolveSchemaEnabled_;
+      }
+      /**
+       * <pre>
+       * Enable automatic schema evolution.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool evolve_schema_enabled = 4;</code>
+       * @param value The evolveSchemaEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvolveSchemaEnabled(boolean value) {
+        
+        evolveSchemaEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable automatic schema evolution.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool evolve_schema_enabled = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvolveSchemaEnabled() {
+        
+        evolveSchemaEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean schemaForceOptional_ ;
+      /**
+       * <pre>
+       * Force all columns to be nullable (optional).
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_force_optional = 5;</code>
+       * @return The schemaForceOptional.
+       */
+      @java.lang.Override
+      public boolean getSchemaForceOptional() {
+        return schemaForceOptional_;
+      }
+      /**
+       * <pre>
+       * Force all columns to be nullable (optional).
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_force_optional = 5;</code>
+       * @param value The schemaForceOptional to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaForceOptional(boolean value) {
+        
+        schemaForceOptional_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Force all columns to be nullable (optional).
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_force_optional = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaForceOptional() {
+        
+        schemaForceOptional_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean schemaCaseInsensitive_ ;
+      /**
+       * <pre>
+       * Enable case-insensitive field name matching.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_case_insensitive = 6;</code>
+       * @return The schemaCaseInsensitive.
+       */
+      @java.lang.Override
+      public boolean getSchemaCaseInsensitive() {
+        return schemaCaseInsensitive_;
+      }
+      /**
+       * <pre>
+       * Enable case-insensitive field name matching.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_case_insensitive = 6;</code>
+       * @param value The schemaCaseInsensitive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaCaseInsensitive(boolean value) {
+        
+        schemaCaseInsensitive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable case-insensitive field name matching.
+       * Default: false
+       * </pre>
+       *
+       * <code>bool schema_case_insensitive = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaCaseInsensitive() {
+        
+        schemaCaseInsensitive_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.IcebergTablesConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.IcebergTablesConfig)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IcebergTablesConfig>
+        PARSER = new com.google.protobuf.AbstractParser<IcebergTablesConfig>() {
+      @java.lang.Override
+      public IcebergTablesConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IcebergTablesConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IcebergTablesConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IcebergTablesConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergTablesConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IcebergControlOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.IcebergControl)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The groupIdPrefix.
+     */
+    java.lang.String getGroupIdPrefix();
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The bytes for groupIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdPrefixBytes();
+
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return Whether the commitIntervalMs field is set.
+     */
+    boolean hasCommitIntervalMs();
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return The commitIntervalMs.
+     */
+    com.google.protobuf.Int64Value getCommitIntervalMs();
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCommitIntervalMsOrBuilder();
+
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return Whether the commitTimeoutMs field is set.
+     */
+    boolean hasCommitTimeoutMs();
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return The commitTimeoutMs.
+     */
+    com.google.protobuf.Int64Value getCommitTimeoutMs();
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCommitTimeoutMsOrBuilder();
+
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return Whether the commitThreads field is set.
+     */
+    boolean hasCommitThreads();
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return The commitThreads.
+     */
+    com.google.protobuf.Int64Value getCommitThreads();
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCommitThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The transactionalPrefix.
+     */
+    java.lang.String getTransactionalPrefix();
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The bytes for transactionalPrefix.
+     */
+    com.google.protobuf.ByteString
+        getTransactionalPrefixBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergControl}
+   */
+  public static final class IcebergControl extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.IcebergControl)
+      IcebergControlOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IcebergControl.newBuilder() to construct.
+    private IcebergControl(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IcebergControl() {
+      groupIdPrefix_ = "";
+      transactionalPrefix_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IcebergControl();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IcebergControl(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupIdPrefix_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (commitIntervalMs_ != null) {
+                subBuilder = commitIntervalMs_.toBuilder();
+              }
+              commitIntervalMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(commitIntervalMs_);
+                commitIntervalMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (commitTimeoutMs_ != null) {
+                subBuilder = commitTimeoutMs_.toBuilder();
+              }
+              commitTimeoutMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(commitTimeoutMs_);
+                commitTimeoutMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (commitThreads_ != null) {
+                subBuilder = commitThreads_.toBuilder();
+              }
+              commitThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(commitThreads_);
+                commitThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              transactionalPrefix_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder.class);
+    }
+
+    public static final int GROUP_ID_PREFIX_FIELD_NUMBER = 1;
+    private volatile java.lang.Object groupIdPrefix_;
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The groupIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupIdPrefix() {
+      java.lang.Object ref = groupIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Consumer group ID prefix for control topic.
+     * Default: "cg-control"
+     * </pre>
+     *
+     * <code>string group_id_prefix = 1;</code>
+     * @return The bytes for groupIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdPrefixBytes() {
+      java.lang.Object ref = groupIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMIT_INTERVAL_MS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value commitIntervalMs_;
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return Whether the commitIntervalMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommitIntervalMs() {
+      return commitIntervalMs_ != null;
+    }
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     * @return The commitIntervalMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCommitIntervalMs() {
+      return commitIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitIntervalMs_;
+    }
+    /**
+     * <pre>
+     * Interval between commits in milliseconds.
+     * Default: 300000 (5 minutes)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCommitIntervalMsOrBuilder() {
+      return getCommitIntervalMs();
+    }
+
+    public static final int COMMIT_TIMEOUT_MS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value commitTimeoutMs_;
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return Whether the commitTimeoutMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommitTimeoutMs() {
+      return commitTimeoutMs_ != null;
+    }
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     * @return The commitTimeoutMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCommitTimeoutMs() {
+      return commitTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitTimeoutMs_;
+    }
+    /**
+     * <pre>
+     * Commit operation timeout in milliseconds.
+     * Default: 30000 (30 seconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCommitTimeoutMsOrBuilder() {
+      return getCommitTimeoutMs();
+    }
+
+    public static final int COMMIT_THREADS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value commitThreads_;
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return Whether the commitThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommitThreads() {
+      return commitThreads_ != null;
+    }
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     * @return The commitThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCommitThreads() {
+      return commitThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitThreads_;
+    }
+    /**
+     * <pre>
+     * Number of threads for commit operations.
+     * Default: cores * 2
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCommitThreadsOrBuilder() {
+      return getCommitThreads();
+    }
+
+    public static final int TRANSACTIONAL_PREFIX_FIELD_NUMBER = 5;
+    private volatile java.lang.Object transactionalPrefix_;
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The transactionalPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getTransactionalPrefix() {
+      java.lang.Object ref = transactionalPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transactionalPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Prefix for transactional operations.
+     * Default: ""
+     * </pre>
+     *
+     * <code>string transactional_prefix = 5;</code>
+     * @return The bytes for transactionalPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransactionalPrefixBytes() {
+      java.lang.Object ref = transactionalPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transactionalPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupIdPrefix_);
+      }
+      if (commitIntervalMs_ != null) {
+        output.writeMessage(2, getCommitIntervalMs());
+      }
+      if (commitTimeoutMs_ != null) {
+        output.writeMessage(3, getCommitTimeoutMs());
+      }
+      if (commitThreads_ != null) {
+        output.writeMessage(4, getCommitThreads());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionalPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, transactionalPrefix_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupIdPrefix_);
+      }
+      if (commitIntervalMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCommitIntervalMs());
+      }
+      if (commitTimeoutMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCommitTimeoutMs());
+      }
+      if (commitThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCommitThreads());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionalPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, transactionalPrefix_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl) obj;
+
+      if (!getGroupIdPrefix()
+          .equals(other.getGroupIdPrefix())) return false;
+      if (hasCommitIntervalMs() != other.hasCommitIntervalMs()) return false;
+      if (hasCommitIntervalMs()) {
+        if (!getCommitIntervalMs()
+            .equals(other.getCommitIntervalMs())) return false;
+      }
+      if (hasCommitTimeoutMs() != other.hasCommitTimeoutMs()) return false;
+      if (hasCommitTimeoutMs()) {
+        if (!getCommitTimeoutMs()
+            .equals(other.getCommitTimeoutMs())) return false;
+      }
+      if (hasCommitThreads() != other.hasCommitThreads()) return false;
+      if (hasCommitThreads()) {
+        if (!getCommitThreads()
+            .equals(other.getCommitThreads())) return false;
+      }
+      if (!getTransactionalPrefix()
+          .equals(other.getTransactionalPrefix())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupIdPrefix().hashCode();
+      if (hasCommitIntervalMs()) {
+        hash = (37 * hash) + COMMIT_INTERVAL_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommitIntervalMs().hashCode();
+      }
+      if (hasCommitTimeoutMs()) {
+        hash = (37 * hash) + COMMIT_TIMEOUT_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommitTimeoutMs().hashCode();
+      }
+      if (hasCommitThreads()) {
+        hash = (37 * hash) + COMMIT_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommitThreads().hashCode();
+      }
+      hash = (37 * hash) + TRANSACTIONAL_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionalPrefix().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.IcebergControl}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.IcebergControl)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControlOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groupIdPrefix_ = "";
+
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMs_ = null;
+        } else {
+          commitIntervalMs_ = null;
+          commitIntervalMsBuilder_ = null;
+        }
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMs_ = null;
+        } else {
+          commitTimeoutMs_ = null;
+          commitTimeoutMsBuilder_ = null;
+        }
+        if (commitThreadsBuilder_ == null) {
+          commitThreads_ = null;
+        } else {
+          commitThreads_ = null;
+          commitThreadsBuilder_ = null;
+        }
+        transactionalPrefix_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl(this);
+        result.groupIdPrefix_ = groupIdPrefix_;
+        if (commitIntervalMsBuilder_ == null) {
+          result.commitIntervalMs_ = commitIntervalMs_;
+        } else {
+          result.commitIntervalMs_ = commitIntervalMsBuilder_.build();
+        }
+        if (commitTimeoutMsBuilder_ == null) {
+          result.commitTimeoutMs_ = commitTimeoutMs_;
+        } else {
+          result.commitTimeoutMs_ = commitTimeoutMsBuilder_.build();
+        }
+        if (commitThreadsBuilder_ == null) {
+          result.commitThreads_ = commitThreads_;
+        } else {
+          result.commitThreads_ = commitThreadsBuilder_.build();
+        }
+        result.transactionalPrefix_ = transactionalPrefix_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl.getDefaultInstance()) return this;
+        if (!other.getGroupIdPrefix().isEmpty()) {
+          groupIdPrefix_ = other.groupIdPrefix_;
+          onChanged();
+        }
+        if (other.hasCommitIntervalMs()) {
+          mergeCommitIntervalMs(other.getCommitIntervalMs());
+        }
+        if (other.hasCommitTimeoutMs()) {
+          mergeCommitTimeoutMs(other.getCommitTimeoutMs());
+        }
+        if (other.hasCommitThreads()) {
+          mergeCommitThreads(other.getCommitThreads());
+        }
+        if (!other.getTransactionalPrefix().isEmpty()) {
+          transactionalPrefix_ = other.transactionalPrefix_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object groupIdPrefix_ = "";
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @return The groupIdPrefix.
+       */
+      public java.lang.String getGroupIdPrefix() {
+        java.lang.Object ref = groupIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @return The bytes for groupIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdPrefixBytes() {
+        java.lang.Object ref = groupIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @param value The groupIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupIdPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupIdPrefix() {
+        
+        groupIdPrefix_ = getDefaultInstance().getGroupIdPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Consumer group ID prefix for control topic.
+       * Default: "cg-control"
+       * </pre>
+       *
+       * <code>string group_id_prefix = 1;</code>
+       * @param value The bytes for groupIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupIdPrefix_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value commitIntervalMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> commitIntervalMsBuilder_;
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       * @return Whether the commitIntervalMs field is set.
+       */
+      public boolean hasCommitIntervalMs() {
+        return commitIntervalMsBuilder_ != null || commitIntervalMs_ != null;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       * @return The commitIntervalMs.
+       */
+      public com.google.protobuf.Int64Value getCommitIntervalMs() {
+        if (commitIntervalMsBuilder_ == null) {
+          return commitIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitIntervalMs_;
+        } else {
+          return commitIntervalMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder setCommitIntervalMs(com.google.protobuf.Int64Value value) {
+        if (commitIntervalMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commitIntervalMs_ = value;
+          onChanged();
+        } else {
+          commitIntervalMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder setCommitIntervalMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          commitIntervalMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder mergeCommitIntervalMs(com.google.protobuf.Int64Value value) {
+        if (commitIntervalMsBuilder_ == null) {
+          if (commitIntervalMs_ != null) {
+            commitIntervalMs_ =
+              com.google.protobuf.Int64Value.newBuilder(commitIntervalMs_).mergeFrom(value).buildPartial();
+          } else {
+            commitIntervalMs_ = value;
+          }
+          onChanged();
+        } else {
+          commitIntervalMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public Builder clearCommitIntervalMs() {
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMs_ = null;
+          onChanged();
+        } else {
+          commitIntervalMs_ = null;
+          commitIntervalMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCommitIntervalMsBuilder() {
+        
+        onChanged();
+        return getCommitIntervalMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCommitIntervalMsOrBuilder() {
+        if (commitIntervalMsBuilder_ != null) {
+          return commitIntervalMsBuilder_.getMessageOrBuilder();
+        } else {
+          return commitIntervalMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : commitIntervalMs_;
+        }
+      }
+      /**
+       * <pre>
+       * Interval between commits in milliseconds.
+       * Default: 300000 (5 minutes)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_interval_ms = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCommitIntervalMsFieldBuilder() {
+        if (commitIntervalMsBuilder_ == null) {
+          commitIntervalMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCommitIntervalMs(),
+                  getParentForChildren(),
+                  isClean());
+          commitIntervalMs_ = null;
+        }
+        return commitIntervalMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value commitTimeoutMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> commitTimeoutMsBuilder_;
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       * @return Whether the commitTimeoutMs field is set.
+       */
+      public boolean hasCommitTimeoutMs() {
+        return commitTimeoutMsBuilder_ != null || commitTimeoutMs_ != null;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       * @return The commitTimeoutMs.
+       */
+      public com.google.protobuf.Int64Value getCommitTimeoutMs() {
+        if (commitTimeoutMsBuilder_ == null) {
+          return commitTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitTimeoutMs_;
+        } else {
+          return commitTimeoutMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder setCommitTimeoutMs(com.google.protobuf.Int64Value value) {
+        if (commitTimeoutMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commitTimeoutMs_ = value;
+          onChanged();
+        } else {
+          commitTimeoutMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder setCommitTimeoutMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          commitTimeoutMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder mergeCommitTimeoutMs(com.google.protobuf.Int64Value value) {
+        if (commitTimeoutMsBuilder_ == null) {
+          if (commitTimeoutMs_ != null) {
+            commitTimeoutMs_ =
+              com.google.protobuf.Int64Value.newBuilder(commitTimeoutMs_).mergeFrom(value).buildPartial();
+          } else {
+            commitTimeoutMs_ = value;
+          }
+          onChanged();
+        } else {
+          commitTimeoutMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public Builder clearCommitTimeoutMs() {
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMs_ = null;
+          onChanged();
+        } else {
+          commitTimeoutMs_ = null;
+          commitTimeoutMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCommitTimeoutMsBuilder() {
+        
+        onChanged();
+        return getCommitTimeoutMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCommitTimeoutMsOrBuilder() {
+        if (commitTimeoutMsBuilder_ != null) {
+          return commitTimeoutMsBuilder_.getMessageOrBuilder();
+        } else {
+          return commitTimeoutMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : commitTimeoutMs_;
+        }
+      }
+      /**
+       * <pre>
+       * Commit operation timeout in milliseconds.
+       * Default: 30000 (30 seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_timeout_ms = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCommitTimeoutMsFieldBuilder() {
+        if (commitTimeoutMsBuilder_ == null) {
+          commitTimeoutMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCommitTimeoutMs(),
+                  getParentForChildren(),
+                  isClean());
+          commitTimeoutMs_ = null;
+        }
+        return commitTimeoutMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value commitThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> commitThreadsBuilder_;
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       * @return Whether the commitThreads field is set.
+       */
+      public boolean hasCommitThreads() {
+        return commitThreadsBuilder_ != null || commitThreads_ != null;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       * @return The commitThreads.
+       */
+      public com.google.protobuf.Int64Value getCommitThreads() {
+        if (commitThreadsBuilder_ == null) {
+          return commitThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitThreads_;
+        } else {
+          return commitThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder setCommitThreads(com.google.protobuf.Int64Value value) {
+        if (commitThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commitThreads_ = value;
+          onChanged();
+        } else {
+          commitThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder setCommitThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (commitThreadsBuilder_ == null) {
+          commitThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          commitThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder mergeCommitThreads(com.google.protobuf.Int64Value value) {
+        if (commitThreadsBuilder_ == null) {
+          if (commitThreads_ != null) {
+            commitThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(commitThreads_).mergeFrom(value).buildPartial();
+          } else {
+            commitThreads_ = value;
+          }
+          onChanged();
+        } else {
+          commitThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public Builder clearCommitThreads() {
+        if (commitThreadsBuilder_ == null) {
+          commitThreads_ = null;
+          onChanged();
+        } else {
+          commitThreads_ = null;
+          commitThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCommitThreadsBuilder() {
+        
+        onChanged();
+        return getCommitThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCommitThreadsOrBuilder() {
+        if (commitThreadsBuilder_ != null) {
+          return commitThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return commitThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : commitThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * Number of threads for commit operations.
+       * Default: cores * 2
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value commit_threads = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCommitThreadsFieldBuilder() {
+        if (commitThreadsBuilder_ == null) {
+          commitThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCommitThreads(),
+                  getParentForChildren(),
+                  isClean());
+          commitThreads_ = null;
+        }
+        return commitThreadsBuilder_;
+      }
+
+      private java.lang.Object transactionalPrefix_ = "";
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @return The transactionalPrefix.
+       */
+      public java.lang.String getTransactionalPrefix() {
+        java.lang.Object ref = transactionalPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transactionalPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @return The bytes for transactionalPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getTransactionalPrefixBytes() {
+        java.lang.Object ref = transactionalPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transactionalPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @param value The transactionalPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionalPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        transactionalPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionalPrefix() {
+        
+        transactionalPrefix_ = getDefaultInstance().getTransactionalPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Prefix for transactional operations.
+       * Default: ""
+       * </pre>
+       *
+       * <code>string transactional_prefix = 5;</code>
+       * @param value The bytes for transactionalPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionalPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        transactionalPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.IcebergControl)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.IcebergControl)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IcebergControl>
+        PARSER = new com.google.protobuf.AbstractParser<IcebergControl>() {
+      @java.lang.Override
+      public IcebergControl parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IcebergControl(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IcebergControl> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IcebergControl> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.IcebergControl getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_descriptor;
   private static final 
@@ -22824,6 +45326,51 @@ public final class ConnectorOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_ExternalS3StorageSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -22868,6 +45415,46 @@ public final class ConnectorOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_ExternalS3Storage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22879,7 +45466,7 @@ public final class ConnectorOuterClass {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/mdb/kafka/v1/connector.pr" +
       "oto\022\031yandex.cloud.mdb.kafka.v1\032\036google/p" +
-      "rotobuf/wrappers.proto\"\245\003\n\rConnectorSpec" +
+      "rotobuf/wrappers.proto\"\211\004\n\rConnectorSpec" +
       "\022\014\n\004name\030\001 \001(\t\022.\n\ttasks_max\030\002 \001(\0132\033.goog" +
       "le.protobuf.Int64Value\022L\n\nproperties\030\003 \003" +
       "(\01328.yandex.cloud.mdb.kafka.v1.Connector" +
@@ -22888,96 +45475,181 @@ public final class ConnectorOuterClass {
       "fka.v1.ConnectorConfigMirrorMakerSpecH\000\022" +
       "X\n\030connector_config_s3_sink\030\013 \001(\01324.yand" +
       "ex.cloud.mdb.kafka.v1.ConnectorConfigS3S" +
-      "inkSpecH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020connector_config" +
-      "J\004\010\004\020\n\"\251\003\n\023UpdateConnectorSpec\022.\n\ttasks_" +
-      "max\030\001 \001(\0132\033.google.protobuf.Int64Value\022R" +
-      "\n\nproperties\030\002 \003(\0132>.yandex.cloud.mdb.ka" +
-      "fka.v1.UpdateConnectorSpec.PropertiesEnt" +
-      "ry\022a\n\034connector_config_mirrormaker\030\n \001(\013" +
-      "29.yandex.cloud.mdb.kafka.v1.ConnectorCo" +
-      "nfigMirrorMakerSpecH\000\022^\n\030connector_confi" +
-      "g_s3_sink\030\013 \001(\0132:.yandex.cloud.mdb.kafka" +
-      ".v1.UpdateConnectorConfigS3SinkSpecH\000\0321\n" +
-      "\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001B\022\n\020connector_configJ\004\010\003\020\n\"\375\001\n\036C" +
-      "onnectorConfigMirrorMakerSpec\022H\n\016source_" +
-      "cluster\030\001 \001(\01320.yandex.cloud.mdb.kafka.v" +
-      "1.ClusterConnectionSpec\022H\n\016target_cluste" +
-      "r\030\002 \001(\01320.yandex.cloud.mdb.kafka.v1.Clus" +
-      "terConnectionSpec\022\016\n\006topics\030\003 \001(\t\0227\n\022rep" +
-      "lication_factor\030\004 \001(\0132\033.google.protobuf." +
-      "Int64Value\"\326\001\n\025ClusterConnectionSpec\022\r\n\005" +
-      "alias\030\001 \001(\t\022B\n\014this_cluster\030\002 \001(\0132*.yand" +
-      "ex.cloud.mdb.kafka.v1.ThisClusterSpecH\000\022" +
-      "T\n\020external_cluster\030\003 \001(\01328.yandex.cloud" +
-      ".mdb.kafka.v1.ExternalClusterConnectionS" +
-      "pecH\000B\024\n\022cluster_connection\"\021\n\017ThisClust" +
-      "erSpec\"\300\001\n\035ExternalClusterConnectionSpec" +
-      "\022\031\n\021bootstrap_servers\030\001 \001(\t\022\025\n\rsasl_user" +
-      "name\030\002 \001(\t\022\025\n\rsasl_password\030\003 \001(\t\022\026\n\016sas" +
-      "l_mechanism\030\004 \001(\t\022\031\n\021security_protocol\030\005" +
-      " \001(\t\022#\n\033ssl_truststore_certificates\030\006 \001(" +
-      "\t\"\305\001\n\031ConnectorConfigS3SinkSpec\022\016\n\006topic" +
-      "s\030\001 \001(\t\022\035\n\025file_compression_type\030\002 \001(\t\0225" +
-      "\n\020file_max_records\030\003 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022B\n\rs3_connection\030\004 \001(\0132+.y" +
-      "andex.cloud.mdb.kafka.v1.S3ConnectionSpe" +
-      "c\"\254\001\n\037UpdateConnectorConfigS3SinkSpec\022\016\n" +
-      "\006topics\030\001 \001(\t\0225\n\020file_max_records\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022B\n\rs3_conne" +
-      "ction\030\003 \001(\0132+.yandex.cloud.mdb.kafka.v1." +
-      "S3ConnectionSpec\"{\n\020S3ConnectionSpec\022\023\n\013" +
-      "bucket_name\030\001 \001(\t\022G\n\013external_s3\030\002 \001(\01320" +
-      ".yandex.cloud.mdb.kafka.v1.ExternalS3Sto" +
-      "rageSpecH\000B\t\n\007storage\"k\n\025ExternalS3Stora" +
-      "geSpec\022\025\n\raccess_key_id\030\001 \001(\t\022\031\n\021secret_" +
-      "access_key\030\002 \001(\t\022\020\n\010endpoint\030\003 \001(\t\022\016\n\006re" +
-      "gion\030\004 \001(\t\"\230\005\n\tConnector\022\014\n\004name\030\001 \001(\t\022." +
-      "\n\ttasks_max\030\002 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022H\n\nproperties\030\003 \003(\01324.yandex.clou" +
-      "d.mdb.kafka.v1.Connector.PropertiesEntry" +
-      "\022;\n\006health\030\004 \001(\0162+.yandex.cloud.mdb.kafk" +
-      "a.v1.Connector.Health\022;\n\006status\030\005 \001(\0162+." +
-      "yandex.cloud.mdb.kafka.v1.Connector.Stat" +
-      "us\022\022\n\ncluster_id\030\006 \001(\t\022]\n\034connector_conf" +
-      "ig_mirrormaker\030\n \001(\01325.yandex.cloud.mdb." +
-      "kafka.v1.ConnectorConfigMirrorMakerH\000\022T\n" +
-      "\030connector_config_s3_sink\030\013 \001(\01320.yandex" +
-      ".cloud.mdb.kafka.v1.ConnectorConfigS3Sin" +
-      "kH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"1\n\006Health\022\022\n\016HEALTH_UNKNO" +
-      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016S" +
-      "TATUS_UNKNOWN\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022" +
-      "\n\n\006PAUSED\020\003B\022\n\020connector_configJ\004\010\007\020\n\"\361\001" +
-      "\n\032ConnectorConfigMirrorMaker\022D\n\016source_c" +
-      "luster\030\001 \001(\0132,.yandex.cloud.mdb.kafka.v1" +
-      ".ClusterConnection\022D\n\016target_cluster\030\002 \001" +
-      "(\0132,.yandex.cloud.mdb.kafka.v1.ClusterCo" +
-      "nnection\022\016\n\006topics\030\003 \001(\t\0227\n\022replication_" +
-      "factor\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\"\312\001\n\021ClusterConnection\022\r\n\005alias\030\001 \001(\t\022>" +
-      "\n\014this_cluster\030\002 \001(\0132&.yandex.cloud.mdb." +
-      "kafka.v1.ThisClusterH\000\022P\n\020external_clust" +
-      "er\030\003 \001(\01324.yandex.cloud.mdb.kafka.v1.Ext" +
-      "ernalClusterConnectionH\000B\024\n\022cluster_conn" +
-      "ection\"\r\n\013ThisCluster\"\206\001\n\031ExternalCluste" +
-      "rConnection\022\031\n\021bootstrap_servers\030\001 \001(\t\022\025" +
-      "\n\rsasl_username\030\002 \001(\t\022\026\n\016sasl_mechanism\030" +
-      "\004 \001(\t\022\031\n\021security_protocol\030\005 \001(\tJ\004\010\003\020\004\"\275" +
-      "\001\n\025ConnectorConfigS3Sink\022\016\n\006topics\030\001 \001(\t" +
-      "\022\035\n\025file_compression_type\030\002 \001(\t\0225\n\020file_" +
-      "max_records\030\003 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022>\n\rs3_connection\030\004 \001(\0132\'.yandex.c" +
-      "loud.mdb.kafka.v1.S3Connection\"s\n\014S3Conn" +
-      "ection\022\023\n\013bucket_name\030\001 \001(\t\022C\n\013external_" +
-      "s3\030\002 \001(\0132,.yandex.cloud.mdb.kafka.v1.Ext" +
-      "ernalS3StorageH\000B\t\n\007storage\"L\n\021ExternalS" +
-      "3Storage\022\025\n\raccess_key_id\030\001 \001(\t\022\020\n\010endpo" +
-      "int\030\002 \001(\t\022\016\n\006region\030\003 \001(\tBd\n\035yandex.clou" +
-      "d.api.mdb.kafka.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/kafka/v" +
-      "1;kafkab\006proto3"
+      "inkSpecH\000\022b\n\035connector_config_iceberg_si" +
+      "nk\030\014 \001(\01329.yandex.cloud.mdb.kafka.v1.Con" +
+      "nectorConfigIcebergSinkSpecH\000\0321\n\017Propert" +
+      "iesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "B\022\n\020connector_configJ\004\010\004\020\n\"\223\004\n\023UpdateCon" +
+      "nectorSpec\022.\n\ttasks_max\030\001 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022R\n\nproperties\030\002 \003(\0132>" +
+      ".yandex.cloud.mdb.kafka.v1.UpdateConnect" +
+      "orSpec.PropertiesEntry\022a\n\034connector_conf" +
+      "ig_mirrormaker\030\n \001(\01329.yandex.cloud.mdb." +
+      "kafka.v1.ConnectorConfigMirrorMakerSpecH" +
+      "\000\022^\n\030connector_config_s3_sink\030\013 \001(\0132:.ya" +
+      "ndex.cloud.mdb.kafka.v1.UpdateConnectorC" +
+      "onfigS3SinkSpecH\000\022h\n\035connector_config_ic" +
+      "eberg_sink\030\014 \001(\0132?.yandex.cloud.mdb.kafk" +
+      "a.v1.UpdateConnectorConfigIcebergSinkSpe" +
+      "cH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\022\n\020connector_configJ\004\010\003\020\n" +
+      "\"\375\001\n\036ConnectorConfigMirrorMakerSpec\022H\n\016s" +
+      "ource_cluster\030\001 \001(\01320.yandex.cloud.mdb.k" +
+      "afka.v1.ClusterConnectionSpec\022H\n\016target_" +
+      "cluster\030\002 \001(\01320.yandex.cloud.mdb.kafka.v" +
+      "1.ClusterConnectionSpec\022\016\n\006topics\030\003 \001(\t\022" +
+      "7\n\022replication_factor\030\004 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\"\326\001\n\025ClusterConnectionSp" +
+      "ec\022\r\n\005alias\030\001 \001(\t\022B\n\014this_cluster\030\002 \001(\0132" +
+      "*.yandex.cloud.mdb.kafka.v1.ThisClusterS" +
+      "pecH\000\022T\n\020external_cluster\030\003 \001(\01328.yandex" +
+      ".cloud.mdb.kafka.v1.ExternalClusterConne" +
+      "ctionSpecH\000B\024\n\022cluster_connection\"\021\n\017Thi" +
+      "sClusterSpec\"\300\001\n\035ExternalClusterConnecti" +
+      "onSpec\022\031\n\021bootstrap_servers\030\001 \001(\t\022\025\n\rsas" +
+      "l_username\030\002 \001(\t\022\025\n\rsasl_password\030\003 \001(\t\022" +
+      "\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021security_prot" +
+      "ocol\030\005 \001(\t\022#\n\033ssl_truststore_certificate" +
+      "s\030\006 \001(\t\"\305\001\n\031ConnectorConfigS3SinkSpec\022\016\n" +
+      "\006topics\030\001 \001(\t\022\035\n\025file_compression_type\030\002" +
+      " \001(\t\0225\n\020file_max_records\030\003 \001(\0132\033.google." +
+      "protobuf.Int64Value\022B\n\rs3_connection\030\004 \001" +
+      "(\0132+.yandex.cloud.mdb.kafka.v1.S3Connect" +
+      "ionSpec\"\254\001\n\037UpdateConnectorConfigS3SinkS" +
+      "pec\022\016\n\006topics\030\001 \001(\t\0225\n\020file_max_records\030" +
+      "\002 \001(\0132\033.google.protobuf.Int64Value\022B\n\rs3" +
+      "_connection\030\003 \001(\0132+.yandex.cloud.mdb.kaf" +
+      "ka.v1.S3ConnectionSpec\"{\n\020S3ConnectionSp" +
+      "ec\022\023\n\013bucket_name\030\001 \001(\t\022G\n\013external_s3\030\002" +
+      " \001(\01320.yandex.cloud.mdb.kafka.v1.Externa" +
+      "lS3StorageSpecH\000B\t\n\007storage\"k\n\025ExternalS" +
+      "3StorageSpec\022\025\n\raccess_key_id\030\001 \001(\t\022\031\n\021s" +
+      "ecret_access_key\030\002 \001(\t\022\020\n\010endpoint\030\003 \001(\t" +
+      "\022\016\n\006region\030\004 \001(\t\"\257\004\n\036ConnectorConfigIceb" +
+      "ergSinkSpec\022\020\n\006topics\030\001 \001(\tH\000\022\026\n\014topics_" +
+      "regex\030\002 \001(\tH\000\022P\n\024metastore_connection\030\003 " +
+      "\001(\01322.yandex.cloud.mdb.kafka.v1.Metastor" +
+      "eConnectionSpec\022I\n\rs3_connection\030\004 \001(\01322" +
+      ".yandex.cloud.mdb.kafka.v1.IcebergS3Conn" +
+      "ectionSpec\022D\n\rstatic_tables\030\007 \001(\0132+.yand" +
+      "ex.cloud.mdb.kafka.v1.StaticTablesSpecH\001" +
+      "\022F\n\016dynamic_tables\030\010 \001(\0132,.yandex.cloud." +
+      "mdb.kafka.v1.DynamicTablesSpecH\001\022I\n\rtabl" +
+      "es_config\030\t \001(\01322.yandex.cloud.mdb.kafka" +
+      ".v1.IcebergTablesConfigSpec\022E\n\016control_c" +
+      "onfig\030\n \001(\0132-.yandex.cloud.mdb.kafka.v1." +
+      "IcebergControlSpecB\017\n\rtopics_sourceB\017\n\rt" +
+      "able_routingJ\004\010\005\020\007\"\220\003\n$UpdateConnectorCo" +
+      "nfigIcebergSinkSpec\022\020\n\006topics\030\001 \001(\tH\000\022\026\n" +
+      "\014topics_regex\030\002 \001(\tH\000\022P\n\024metastore_conne" +
+      "ction\030\003 \001(\01322.yandex.cloud.mdb.kafka.v1." +
+      "MetastoreConnectionSpec\022I\n\rs3_connection" +
+      "\030\004 \001(\01322.yandex.cloud.mdb.kafka.v1.Icebe" +
+      "rgS3ConnectionSpec\022I\n\rtables_config\030\005 \001(" +
+      "\01322.yandex.cloud.mdb.kafka.v1.IcebergTab" +
+      "lesConfigSpec\022E\n\016control_config\030\006 \001(\0132-." +
+      "yandex.cloud.mdb.kafka.v1.IcebergControl" +
+      "SpecB\017\n\rtopics_source\"\"\n\020StaticTablesSpe" +
+      "c\022\016\n\006tables\030\001 \003(\t\"(\n\021DynamicTablesSpec\022\023" +
+      "\n\013route_field\030\001 \001(\t\"A\n\027MetastoreConnecti" +
+      "onSpec\022\023\n\013catalog_uri\030\001 \001(\t\022\021\n\twarehouse" +
+      "\030\002 \001(\t\"t\n\027IcebergS3ConnectionSpec\022N\n\013ext" +
+      "ernal_s3\030\001 \001(\01327.yandex.cloud.mdb.kafka." +
+      "v1.ExternalIcebergS3StorageSpecH\000B\t\n\007sto" +
+      "rage\"r\n\034ExternalIcebergS3StorageSpec\022\025\n\r" +
+      "access_key_id\030\001 \001(\t\022\031\n\021secret_access_key" +
+      "\030\002 \001(\t\022\020\n\010endpoint\030\003 \001(\t\022\016\n\006region\030\004 \001(\t" +
+      "\"\321\001\n\027IcebergTablesConfigSpec\022\035\n\025default_" +
+      "commit_branch\030\001 \001(\t\022\032\n\022default_id_column" +
+      "s\030\002 \001(\t\022\034\n\024default_partition_by\030\003 \001(\t\022\035\n" +
+      "\025evolve_schema_enabled\030\004 \001(\010\022\035\n\025schema_f" +
+      "orce_optional\030\005 \001(\010\022\037\n\027schema_case_insen" +
+      "sitive\030\006 \001(\010\"\361\001\n\022IcebergControlSpec\022\027\n\017g" +
+      "roup_id_prefix\030\001 \001(\t\0227\n\022commit_interval_" +
+      "ms\030\002 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
+      "\021commit_timeout_ms\030\003 \001(\0132\033.google.protob" +
+      "uf.Int64Value\0223\n\016commit_threads\030\004 \001(\0132\033." +
+      "google.protobuf.Int64Value\022\034\n\024transactio" +
+      "nal_prefix\030\005 \001(\t\"\370\005\n\tConnector\022\014\n\004name\030\001" +
+      " \001(\t\022.\n\ttasks_max\030\002 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022H\n\nproperties\030\003 \003(\01324.yande" +
+      "x.cloud.mdb.kafka.v1.Connector.Propertie" +
+      "sEntry\022;\n\006health\030\004 \001(\0162+.yandex.cloud.md" +
+      "b.kafka.v1.Connector.Health\022;\n\006status\030\005 " +
+      "\001(\0162+.yandex.cloud.mdb.kafka.v1.Connecto" +
+      "r.Status\022\022\n\ncluster_id\030\006 \001(\t\022]\n\034connecto" +
+      "r_config_mirrormaker\030\n \001(\01325.yandex.clou" +
+      "d.mdb.kafka.v1.ConnectorConfigMirrorMake" +
+      "rH\000\022T\n\030connector_config_s3_sink\030\013 \001(\01320." +
+      "yandex.cloud.mdb.kafka.v1.ConnectorConfi" +
+      "gS3SinkH\000\022^\n\035connector_config_iceberg_si" +
+      "nk\030\014 \001(\01325.yandex.cloud.mdb.kafka.v1.Con" +
+      "nectorConfigIcebergSinkH\000\0321\n\017PropertiesE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\006" +
+      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
+      "\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\013\n" +
+      "\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020\003B\022\n\020con" +
+      "nector_configJ\004\010\007\020\n\"\361\001\n\032ConnectorConfigM" +
+      "irrorMaker\022D\n\016source_cluster\030\001 \001(\0132,.yan" +
+      "dex.cloud.mdb.kafka.v1.ClusterConnection" +
+      "\022D\n\016target_cluster\030\002 \001(\0132,.yandex.cloud." +
+      "mdb.kafka.v1.ClusterConnection\022\016\n\006topics" +
+      "\030\003 \001(\t\0227\n\022replication_factor\030\004 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\"\312\001\n\021ClusterConne" +
+      "ction\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002 \001" +
+      "(\0132&.yandex.cloud.mdb.kafka.v1.ThisClust" +
+      "erH\000\022P\n\020external_cluster\030\003 \001(\01324.yandex." +
+      "cloud.mdb.kafka.v1.ExternalClusterConnec" +
+      "tionH\000B\024\n\022cluster_connection\"\r\n\013ThisClus" +
+      "ter\"\206\001\n\031ExternalClusterConnection\022\031\n\021boo" +
+      "tstrap_servers\030\001 \001(\t\022\025\n\rsasl_username\030\002 " +
+      "\001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021security_" +
+      "protocol\030\005 \001(\tJ\004\010\003\020\004\"\275\001\n\025ConnectorConfig" +
+      "S3Sink\022\016\n\006topics\030\001 \001(\t\022\035\n\025file_compressi" +
+      "on_type\030\002 \001(\t\0225\n\020file_max_records\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022>\n\rs3_conne" +
+      "ction\030\004 \001(\0132\'.yandex.cloud.mdb.kafka.v1." +
+      "S3Connection\"s\n\014S3Connection\022\023\n\013bucket_n" +
+      "ame\030\001 \001(\t\022C\n\013external_s3\030\002 \001(\0132,.yandex." +
+      "cloud.mdb.kafka.v1.ExternalS3StorageH\000B\t" +
+      "\n\007storage\"L\n\021ExternalS3Storage\022\025\n\raccess" +
+      "_key_id\030\001 \001(\t\022\020\n\010endpoint\030\002 \001(\t\022\016\n\006regio" +
+      "n\030\003 \001(\t\"\215\004\n\032ConnectorConfigIcebergSink\022\020" +
+      "\n\006topics\030\001 \001(\tH\000\022\026\n\014topics_regex\030\002 \001(\tH\000" +
+      "\022L\n\024metastore_connection\030\003 \001(\0132..yandex." +
+      "cloud.mdb.kafka.v1.MetastoreConnection\022E" +
+      "\n\rs3_connection\030\004 \001(\0132..yandex.cloud.mdb" +
+      ".kafka.v1.IcebergS3Connection\022@\n\rstatic_" +
+      "tables\030\005 \001(\0132\'.yandex.cloud.mdb.kafka.v1" +
+      ".StaticTablesH\001\022B\n\016dynamic_tables\030\006 \001(\0132" +
+      "(.yandex.cloud.mdb.kafka.v1.DynamicTable" +
+      "sH\001\022E\n\rtables_config\030\007 \001(\0132..yandex.clou" +
+      "d.mdb.kafka.v1.IcebergTablesConfig\022A\n\016co" +
+      "ntrol_config\030\010 \001(\0132).yandex.cloud.mdb.ka" +
+      "fka.v1.IcebergControlB\017\n\rtopics_sourceB\017" +
+      "\n\rtable_routing\"\036\n\014StaticTables\022\016\n\006table" +
+      "s\030\001 \001(\t\"$\n\rDynamicTables\022\023\n\013route_field\030" +
+      "\001 \001(\t\"=\n\023MetastoreConnection\022\023\n\013catalog_" +
+      "uri\030\001 \001(\t\022\021\n\twarehouse\030\002 \001(\t\"l\n\023IcebergS" +
+      "3Connection\022J\n\013external_s3\030\001 \001(\01323.yande" +
+      "x.cloud.mdb.kafka.v1.ExternalIcebergS3St" +
+      "orageH\000B\t\n\007storage\"S\n\030ExternalIcebergS3S" +
+      "torage\022\025\n\raccess_key_id\030\001 \001(\t\022\020\n\010endpoin" +
+      "t\030\002 \001(\t\022\016\n\006region\030\003 \001(\t\"\315\001\n\023IcebergTable" +
+      "sConfig\022\035\n\025default_commit_branch\030\001 \001(\t\022\032" +
+      "\n\022default_id_columns\030\002 \001(\t\022\034\n\024default_pa" +
+      "rtition_by\030\003 \001(\t\022\035\n\025evolve_schema_enable" +
+      "d\030\004 \001(\010\022\035\n\025schema_force_optional\030\005 \001(\010\022\037" +
+      "\n\027schema_case_insensitive\030\006 \001(\010\"\355\001\n\016Iceb" +
+      "ergControl\022\027\n\017group_id_prefix\030\001 \001(\t\0227\n\022c" +
+      "ommit_interval_ms\030\002 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0226\n\021commit_timeout_ms\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0223\n\016commit_t" +
+      "hreads\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022\034\n\024transactional_prefix\030\005 \001(\tBd\n\035yande" +
+      "x.cloud.api.mdb.kafka.v1ZCgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/k" +
+      "afka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22989,7 +45661,7 @@ public final class ConnectorOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_descriptor,
-        new java.lang.String[] { "Name", "TasksMax", "Properties", "ConnectorConfigMirrormaker", "ConnectorConfigS3Sink", "ConnectorConfig", });
+        new java.lang.String[] { "Name", "TasksMax", "Properties", "ConnectorConfigMirrormaker", "ConnectorConfigS3Sink", "ConnectorConfigIcebergSink", "ConnectorConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_PropertiesEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_PropertiesEntry_fieldAccessorTable = new
@@ -23001,7 +45673,7 @@ public final class ConnectorOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor,
-        new java.lang.String[] { "TasksMax", "Properties", "ConnectorConfigMirrormaker", "ConnectorConfigS3Sink", "ConnectorConfig", });
+        new java.lang.String[] { "TasksMax", "Properties", "ConnectorConfigMirrormaker", "ConnectorConfigS3Sink", "ConnectorConfigIcebergSink", "ConnectorConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_fieldAccessorTable = new
@@ -23056,12 +45728,66 @@ public final class ConnectorOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ExternalS3StorageSpec_descriptor,
         new java.lang.String[] { "AccessKeyId", "SecretAccessKey", "Endpoint", "Region", });
-    internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor =
+    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_descriptor,
+        new java.lang.String[] { "Topics", "TopicsRegex", "MetastoreConnection", "S3Connection", "StaticTables", "DynamicTables", "TablesConfig", "ControlConfig", "TopicsSource", "TableRouting", });
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor,
+        new java.lang.String[] { "Topics", "TopicsRegex", "MetastoreConnection", "S3Connection", "TablesConfig", "ControlConfig", "TopicsSource", });
+    internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_descriptor,
+        new java.lang.String[] { "Tables", });
+    internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_DynamicTablesSpec_descriptor,
+        new java.lang.String[] { "RouteField", });
+    internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnectionSpec_descriptor,
+        new java.lang.String[] { "CatalogUri", "Warehouse", });
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3ConnectionSpec_descriptor,
+        new java.lang.String[] { "ExternalS3", "Storage", });
+    internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3StorageSpec_descriptor,
+        new java.lang.String[] { "AccessKeyId", "SecretAccessKey", "Endpoint", "Region", });
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfigSpec_descriptor,
+        new java.lang.String[] { "DefaultCommitBranch", "DefaultIdColumns", "DefaultPartitionBy", "EvolveSchemaEnabled", "SchemaForceOptional", "SchemaCaseInsensitive", });
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_IcebergControlSpec_descriptor,
+        new java.lang.String[] { "GroupIdPrefix", "CommitIntervalMs", "CommitTimeoutMs", "CommitThreads", "TransactionalPrefix", });
+    internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor =
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor,
-        new java.lang.String[] { "Name", "TasksMax", "Properties", "Health", "Status", "ClusterId", "ConnectorConfigMirrormaker", "ConnectorConfigS3Sink", "ConnectorConfig", });
+        new java.lang.String[] { "Name", "TasksMax", "Properties", "Health", "Status", "ClusterId", "ConnectorConfigMirrormaker", "ConnectorConfigS3Sink", "ConnectorConfigIcebergSink", "ConnectorConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_PropertiesEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_PropertiesEntry_fieldAccessorTable = new
@@ -23069,47 +45795,95 @@ public final class ConnectorOuterClass {
         internal_static_yandex_cloud_mdb_kafka_v1_Connector_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_descriptor,
         new java.lang.String[] { "SourceCluster", "TargetCluster", "Topics", "ReplicationFactor", });
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_descriptor,
         new java.lang.String[] { "Alias", "ThisCluster", "ExternalCluster", "ClusterConnection", });
     internal_static_yandex_cloud_mdb_kafka_v1_ThisCluster_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_mdb_kafka_v1_ThisCluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ThisCluster_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnection_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnection_descriptor,
         new java.lang.String[] { "BootstrapServers", "SaslUsername", "SaslMechanism", "SecurityProtocol", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigS3Sink_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigS3Sink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigS3Sink_descriptor,
         new java.lang.String[] { "Topics", "FileCompressionType", "FileMaxRecords", "S3Connection", });
     internal_static_yandex_cloud_mdb_kafka_v1_S3Connection_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_mdb_kafka_v1_S3Connection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_S3Connection_descriptor,
         new java.lang.String[] { "BucketName", "ExternalS3", "Storage", });
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalS3Storage_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalS3Storage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ExternalS3Storage_descriptor,
         new java.lang.String[] { "AccessKeyId", "Endpoint", "Region", });
+    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_descriptor,
+        new java.lang.String[] { "Topics", "TopicsRegex", "MetastoreConnection", "S3Connection", "StaticTables", "DynamicTables", "TablesConfig", "ControlConfig", "TopicsSource", "TableRouting", });
+    internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_descriptor,
+        new java.lang.String[] { "Tables", });
+    internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_DynamicTables_descriptor,
+        new java.lang.String[] { "RouteField", });
+    internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_MetastoreConnection_descriptor,
+        new java.lang.String[] { "CatalogUri", "Warehouse", });
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_IcebergS3Connection_descriptor,
+        new java.lang.String[] { "ExternalS3", "Storage", });
+    internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_ExternalIcebergS3Storage_descriptor,
+        new java.lang.String[] { "AccessKeyId", "Endpoint", "Region", });
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_IcebergTablesConfig_descriptor,
+        new java.lang.String[] { "DefaultCommitBranch", "DefaultIdColumns", "DefaultPartitionBy", "EvolveSchemaEnabled", "SchemaForceOptional", "SchemaCaseInsensitive", });
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_IcebergControl_descriptor,
+        new java.lang.String[] { "GroupIdPrefix", "CommitIntervalMs", "CommitTimeoutMs", "CommitThreads", "TransactionalPrefix", });
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

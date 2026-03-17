@@ -2530,10 +2530,18 @@ public final class Postgresql96 {
        */
       WAL_LEVEL_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Supports WAL archiving and physical replication.
+       * </pre>
+       *
        * <code>WAL_LEVEL_REPLICA = 1;</code>
        */
       WAL_LEVEL_REPLICA(1),
       /**
+       * <pre>
+       * Supports WAL archiving, physical replication, and logical decoding.
+       * </pre>
+       *
        * <code>WAL_LEVEL_LOGICAL = 2;</code>
        */
       WAL_LEVEL_LOGICAL(2),
@@ -2545,10 +2553,18 @@ public final class Postgresql96 {
        */
       public static final int WAL_LEVEL_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Supports WAL archiving and physical replication.
+       * </pre>
+       *
        * <code>WAL_LEVEL_REPLICA = 1;</code>
        */
       public static final int WAL_LEVEL_REPLICA_VALUE = 1;
       /**
+       * <pre>
+       * Supports WAL archiving, physical replication, and logical decoding.
+       * </pre>
+       *
        * <code>WAL_LEVEL_LOGICAL = 2;</code>
        */
       public static final int WAL_LEVEL_LOGICAL_VALUE = 2;
@@ -2647,22 +2663,46 @@ public final class Postgresql96 {
        */
       SYNCHRONOUS_COMMIT_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server. Default value.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
        */
       SYNCHRONOUS_COMMIT_ON(1),
       /**
+       * <pre>
+       * Success is reported to the client even if the data is not in WAL.
+       * There is no synchronous write operation, data may be loss in case of storage subsystem failure.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
        */
       SYNCHRONOUS_COMMIT_OFF(2),
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
+       * The transaction may be lost due to storage subsystem failure on the master server.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
        */
       SYNCHRONOUS_COMMIT_LOCAL(3),
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
+       * The transaction may be lost due to simultaneous storage subsystem failure on the master and operating system's failure on the synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
        */
       SYNCHRONOUS_COMMIT_REMOTE_WRITE(4),
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
+       * The transaction may be lost due to irrecoverably failure of both the master and its synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
        */
       SYNCHRONOUS_COMMIT_REMOTE_APPLY(5),
@@ -2674,22 +2714,46 @@ public final class Postgresql96 {
        */
       public static final int SYNCHRONOUS_COMMIT_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server. Default value.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_ON_VALUE = 1;
       /**
+       * <pre>
+       * Success is reported to the client even if the data is not in WAL.
+       * There is no synchronous write operation, data may be loss in case of storage subsystem failure.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_OFF_VALUE = 2;
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
+       * The transaction may be lost due to storage subsystem failure on the master server.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_LOCAL_VALUE = 3;
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
+       * The transaction may be lost due to simultaneous storage subsystem failure on the master and operating system's failure on the synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_REMOTE_WRITE_VALUE = 4;
       /**
+       * <pre>
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
+       * The transaction may be lost due to irrecoverably failure of both the master and its synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_REMOTE_APPLY_VALUE = 5;
@@ -2791,14 +2855,26 @@ public final class Postgresql96 {
        */
       CONSTRAINT_EXCLUSION_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Enable planner's use of constraints for all tables.
+       * </pre>
+       *
        * <code>CONSTRAINT_EXCLUSION_ON = 1;</code>
        */
       CONSTRAINT_EXCLUSION_ON(1),
       /**
+       * <pre>
+       * Disable planner's use of constraints for all tables
+       * </pre>
+       *
        * <code>CONSTRAINT_EXCLUSION_OFF = 2;</code>
        */
       CONSTRAINT_EXCLUSION_OFF(2),
       /**
+       * <pre>
+       * Only use constraints for child tables and UNION ALL clauses.
+       * </pre>
+       *
        * <code>CONSTRAINT_EXCLUSION_PARTITION = 3;</code>
        */
       CONSTRAINT_EXCLUSION_PARTITION(3),
@@ -2810,14 +2886,26 @@ public final class Postgresql96 {
        */
       public static final int CONSTRAINT_EXCLUSION_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Enable planner's use of constraints for all tables.
+       * </pre>
+       *
        * <code>CONSTRAINT_EXCLUSION_ON = 1;</code>
        */
       public static final int CONSTRAINT_EXCLUSION_ON_VALUE = 1;
       /**
+       * <pre>
+       * Disable planner's use of constraints for all tables
+       * </pre>
+       *
        * <code>CONSTRAINT_EXCLUSION_OFF = 2;</code>
        */
       public static final int CONSTRAINT_EXCLUSION_OFF_VALUE = 2;
       /**
+       * <pre>
+       * Only use constraints for child tables and UNION ALL clauses.
+       * </pre>
+       *
        * <code>CONSTRAINT_EXCLUSION_PARTITION = 3;</code>
        */
       public static final int CONSTRAINT_EXCLUSION_PARTITION_VALUE = 3;
@@ -2917,14 +3005,26 @@ public final class Postgresql96 {
        */
       FORCE_PARALLEL_MODE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Force parallel mode for all queries that can be executed safely in parallel.
+       * </pre>
+       *
        * <code>FORCE_PARALLEL_MODE_ON = 1;</code>
        */
       FORCE_PARALLEL_MODE_ON(1),
       /**
+       * <pre>
+       * Enable parallel mode only if it is expected to increase performance.
+       * </pre>
+       *
        * <code>FORCE_PARALLEL_MODE_OFF = 2;</code>
        */
       FORCE_PARALLEL_MODE_OFF(2),
       /**
+       * <pre>
+       * Equivalent to on, but generates output identical to the off state.
+       * </pre>
+       *
        * <code>FORCE_PARALLEL_MODE_REGRESS = 3;</code>
        */
       FORCE_PARALLEL_MODE_REGRESS(3),
@@ -2936,14 +3036,26 @@ public final class Postgresql96 {
        */
       public static final int FORCE_PARALLEL_MODE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Force parallel mode for all queries that can be executed safely in parallel.
+       * </pre>
+       *
        * <code>FORCE_PARALLEL_MODE_ON = 1;</code>
        */
       public static final int FORCE_PARALLEL_MODE_ON_VALUE = 1;
       /**
+       * <pre>
+       * Enable parallel mode only if it is expected to increase performance.
+       * </pre>
+       *
        * <code>FORCE_PARALLEL_MODE_OFF = 2;</code>
        */
       public static final int FORCE_PARALLEL_MODE_OFF_VALUE = 2;
       /**
+       * <pre>
+       * Equivalent to on, but generates output identical to the off state.
+       * </pre>
+       *
        * <code>FORCE_PARALLEL_MODE_REGRESS = 3;</code>
        */
       public static final int FORCE_PARALLEL_MODE_REGRESS_VALUE = 3;
@@ -3043,46 +3155,90 @@ public final class Postgresql96 {
        */
       LOG_LEVEL_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG5 = 1;</code>
        */
       LOG_LEVEL_DEBUG5(1),
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG4 = 2;</code>
        */
       LOG_LEVEL_DEBUG4(2),
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG3 = 3;</code>
        */
       LOG_LEVEL_DEBUG3(3),
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG2 = 4;</code>
        */
       LOG_LEVEL_DEBUG2(4),
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG1 = 5;</code>
        */
       LOG_LEVEL_DEBUG1(5),
       /**
+       * <pre>
+       * Reports information of interest to administrators, e.g., checkpoint activity.
+       * </pre>
+       *
        * <code>LOG_LEVEL_LOG = 6;</code>
        */
       LOG_LEVEL_LOG(6),
       /**
+       * <pre>
+       * Provides information that might be helpful to users, e.g., notice of truncation of long identifiers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_NOTICE = 7;</code>
        */
       LOG_LEVEL_NOTICE(7),
       /**
+       * <pre>
+       * Provides warnings of likely problems, e.g., COMMIT outside a transaction block.
+       * </pre>
+       *
        * <code>LOG_LEVEL_WARNING = 8;</code>
        */
       LOG_LEVEL_WARNING(8),
       /**
+       * <pre>
+       * Reports an error that caused the current command to abort.
+       * </pre>
+       *
        * <code>LOG_LEVEL_ERROR = 9;</code>
        */
       LOG_LEVEL_ERROR(9),
       /**
+       * <pre>
+       * Reports an error that caused the current session to abort.
+       * </pre>
+       *
        * <code>LOG_LEVEL_FATAL = 10;</code>
        */
       LOG_LEVEL_FATAL(10),
       /**
+       * <pre>
+       * Reports an error that caused all database sessions to abort.
+       * </pre>
+       *
        * <code>LOG_LEVEL_PANIC = 11;</code>
        */
       LOG_LEVEL_PANIC(11),
@@ -3094,46 +3250,90 @@ public final class Postgresql96 {
        */
       public static final int LOG_LEVEL_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG5 = 1;</code>
        */
       public static final int LOG_LEVEL_DEBUG5_VALUE = 1;
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG4 = 2;</code>
        */
       public static final int LOG_LEVEL_DEBUG4_VALUE = 2;
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG3 = 3;</code>
        */
       public static final int LOG_LEVEL_DEBUG3_VALUE = 3;
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG2 = 4;</code>
        */
       public static final int LOG_LEVEL_DEBUG2_VALUE = 4;
       /**
+       * <pre>
+       * Provides successively-more-detailed information for use by developers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_DEBUG1 = 5;</code>
        */
       public static final int LOG_LEVEL_DEBUG1_VALUE = 5;
       /**
+       * <pre>
+       * Reports information of interest to administrators, e.g., checkpoint activity.
+       * </pre>
+       *
        * <code>LOG_LEVEL_LOG = 6;</code>
        */
       public static final int LOG_LEVEL_LOG_VALUE = 6;
       /**
+       * <pre>
+       * Provides information that might be helpful to users, e.g., notice of truncation of long identifiers.
+       * </pre>
+       *
        * <code>LOG_LEVEL_NOTICE = 7;</code>
        */
       public static final int LOG_LEVEL_NOTICE_VALUE = 7;
       /**
+       * <pre>
+       * Provides warnings of likely problems, e.g., COMMIT outside a transaction block.
+       * </pre>
+       *
        * <code>LOG_LEVEL_WARNING = 8;</code>
        */
       public static final int LOG_LEVEL_WARNING_VALUE = 8;
       /**
+       * <pre>
+       * Reports an error that caused the current command to abort.
+       * </pre>
+       *
        * <code>LOG_LEVEL_ERROR = 9;</code>
        */
       public static final int LOG_LEVEL_ERROR_VALUE = 9;
       /**
+       * <pre>
+       * Reports an error that caused the current session to abort.
+       * </pre>
+       *
        * <code>LOG_LEVEL_FATAL = 10;</code>
        */
       public static final int LOG_LEVEL_FATAL_VALUE = 10;
       /**
+       * <pre>
+       * Reports an error that caused all database sessions to abort.
+       * </pre>
+       *
        * <code>LOG_LEVEL_PANIC = 11;</code>
        */
       public static final int LOG_LEVEL_PANIC_VALUE = 11;
@@ -3241,14 +3441,26 @@ public final class Postgresql96 {
        */
       LOG_ERROR_VERBOSITY_UNSPECIFIED(0),
       /**
+       * <pre>
+       * DETAIL, HINT, QUERY, and CONTEXT fields are excluded from the error message.
+       * </pre>
+       *
        * <code>LOG_ERROR_VERBOSITY_TERSE = 1;</code>
        */
       LOG_ERROR_VERBOSITY_TERSE(1),
       /**
+       * <pre>
+       * Default.
+       * </pre>
+       *
        * <code>LOG_ERROR_VERBOSITY_DEFAULT = 2;</code>
        */
       LOG_ERROR_VERBOSITY_DEFAULT(2),
       /**
+       * <pre>
+       * Error message includes the SQLSTATE error code, source filename, function name, and the line number where the error occurred.
+       * </pre>
+       *
        * <code>LOG_ERROR_VERBOSITY_VERBOSE = 3;</code>
        */
       LOG_ERROR_VERBOSITY_VERBOSE(3),
@@ -3260,14 +3472,26 @@ public final class Postgresql96 {
        */
       public static final int LOG_ERROR_VERBOSITY_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * DETAIL, HINT, QUERY, and CONTEXT fields are excluded from the error message.
+       * </pre>
+       *
        * <code>LOG_ERROR_VERBOSITY_TERSE = 1;</code>
        */
       public static final int LOG_ERROR_VERBOSITY_TERSE_VALUE = 1;
       /**
+       * <pre>
+       * Default.
+       * </pre>
+       *
        * <code>LOG_ERROR_VERBOSITY_DEFAULT = 2;</code>
        */
       public static final int LOG_ERROR_VERBOSITY_DEFAULT_VALUE = 2;
       /**
+       * <pre>
+       * Error message includes the SQLSTATE error code, source filename, function name, and the line number where the error occurred.
+       * </pre>
+       *
        * <code>LOG_ERROR_VERBOSITY_VERBOSE = 3;</code>
        */
       public static final int LOG_ERROR_VERBOSITY_VERBOSE_VALUE = 3;
@@ -3367,18 +3591,34 @@ public final class Postgresql96 {
        */
       LOG_STATEMENT_UNSPECIFIED(0),
       /**
+       * <pre>
+       * The filter is disabled, no SQL statements are logged.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_NONE = 1;</code>
        */
       LOG_STATEMENT_NONE(1),
       /**
+       * <pre>
+       * System logs DDL statements, e.g., CREATE, ALTER, DROP etc.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_DDL = 2;</code>
        */
       LOG_STATEMENT_DDL(2),
       /**
+       * <pre>
+       * System logs ddl-statements along with data modification commands, e.g., INSERT, UPDATE, etc.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_MOD = 3;</code>
        */
       LOG_STATEMENT_MOD(3),
       /**
+       * <pre>
+       * System logs all SQL statements.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_ALL = 4;</code>
        */
       LOG_STATEMENT_ALL(4),
@@ -3390,18 +3630,34 @@ public final class Postgresql96 {
        */
       public static final int LOG_STATEMENT_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * The filter is disabled, no SQL statements are logged.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_NONE = 1;</code>
        */
       public static final int LOG_STATEMENT_NONE_VALUE = 1;
       /**
+       * <pre>
+       * System logs DDL statements, e.g., CREATE, ALTER, DROP etc.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_DDL = 2;</code>
        */
       public static final int LOG_STATEMENT_DDL_VALUE = 2;
       /**
+       * <pre>
+       * System logs ddl-statements along with data modification commands, e.g., INSERT, UPDATE, etc.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_MOD = 3;</code>
        */
       public static final int LOG_STATEMENT_MOD_VALUE = 3;
       /**
+       * <pre>
+       * System logs all SQL statements.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_ALL = 4;</code>
        */
       public static final int LOG_STATEMENT_ALL_VALUE = 4;
@@ -3502,18 +3758,36 @@ public final class Postgresql96 {
        */
       TRANSACTION_ISOLATION_UNSPECIFIED(0),
       /**
+       * <pre>
+       * This level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
        */
       TRANSACTION_ISOLATION_READ_UNCOMMITTED(1),
       /**
+       * <pre>
+       * On this level query sees only data committed before the query began.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
        */
       TRANSACTION_ISOLATION_READ_COMMITTED(2),
       /**
+       * <pre>
+       * On this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
        */
       TRANSACTION_ISOLATION_REPEATABLE_READ(3),
       /**
+       * <pre>
+       * This level provides the strictest transaction isolation.
+       * All queries in the current transaction see only the rows that were fixed prior to execution of the first `SELECT` or `INSERT` query in this transaction.
+       * If read and write operations in a concurrent set of serializable transactions overlap and this may cause an inconsistency that is not possible during the serial transaction execution, then one of the transaction will be rolled back, triggering a serialization failure.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
        */
       TRANSACTION_ISOLATION_SERIALIZABLE(4),
@@ -3525,18 +3799,36 @@ public final class Postgresql96 {
        */
       public static final int TRANSACTION_ISOLATION_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * This level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
        */
       public static final int TRANSACTION_ISOLATION_READ_UNCOMMITTED_VALUE = 1;
       /**
+       * <pre>
+       * On this level query sees only data committed before the query began.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
        */
       public static final int TRANSACTION_ISOLATION_READ_COMMITTED_VALUE = 2;
       /**
+       * <pre>
+       * On this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
        */
       public static final int TRANSACTION_ISOLATION_REPEATABLE_READ_VALUE = 3;
       /**
+       * <pre>
+       * This level provides the strictest transaction isolation.
+       * All queries in the current transaction see only the rows that were fixed prior to execution of the first `SELECT` or `INSERT` query in this transaction.
+       * If read and write operations in a concurrent set of serializable transactions overlap and this may cause an inconsistency that is not possible during the serial transaction execution, then one of the transaction will be rolled back, triggering a serialization failure.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
        */
       public static final int TRANSACTION_ISOLATION_SERIALIZABLE_VALUE = 4;
@@ -3637,10 +3929,18 @@ public final class Postgresql96 {
        */
       BYTEA_OUTPUT_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Each byte is represented by two hexadecimal characters, e.g., 'SELECT '&#92;xDEADBEEF';'.
+       * </pre>
+       *
        * <code>BYTEA_OUTPUT_HEX = 1;</code>
        */
       BYTEA_OUTPUT_HEX(1),
       /**
+       * <pre>
+       * Standard PostgreSQL format with ASCII characters only.
+       * </pre>
+       *
        * <code>BYTEA_OUTPUT_ESCAPED = 2;</code>
        */
       BYTEA_OUTPUT_ESCAPED(2),
@@ -3652,10 +3952,18 @@ public final class Postgresql96 {
        */
       public static final int BYTEA_OUTPUT_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Each byte is represented by two hexadecimal characters, e.g., 'SELECT '&#92;xDEADBEEF';'.
+       * </pre>
+       *
        * <code>BYTEA_OUTPUT_HEX = 1;</code>
        */
       public static final int BYTEA_OUTPUT_HEX_VALUE = 1;
       /**
+       * <pre>
+       * Standard PostgreSQL format with ASCII characters only.
+       * </pre>
+       *
        * <code>BYTEA_OUTPUT_ESCAPED = 2;</code>
        */
       public static final int BYTEA_OUTPUT_ESCAPED_VALUE = 2;
@@ -3754,10 +4062,18 @@ public final class Postgresql96 {
        */
       XML_BINARY_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Base64 encoding.
+       * </pre>
+       *
        * <code>XML_BINARY_BASE64 = 1;</code>
        */
       XML_BINARY_BASE64(1),
       /**
+       * <pre>
+       * Hexadecimal encoding.
+       * </pre>
+       *
        * <code>XML_BINARY_HEX = 2;</code>
        */
       XML_BINARY_HEX(2),
@@ -3769,10 +4085,18 @@ public final class Postgresql96 {
        */
       public static final int XML_BINARY_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Base64 encoding.
+       * </pre>
+       *
        * <code>XML_BINARY_BASE64 = 1;</code>
        */
       public static final int XML_BINARY_BASE64_VALUE = 1;
       /**
+       * <pre>
+       * Hexadecimal encoding.
+       * </pre>
+       *
        * <code>XML_BINARY_HEX = 2;</code>
        */
       public static final int XML_BINARY_HEX_VALUE = 2;
@@ -3871,10 +4195,18 @@ public final class Postgresql96 {
        */
       XML_OPTION_UNSPECIFIED(0),
       /**
+       * <pre>
+       * XML document.
+       * </pre>
+       *
        * <code>XML_OPTION_DOCUMENT = 1;</code>
        */
       XML_OPTION_DOCUMENT(1),
       /**
+       * <pre>
+       * XML fragment.
+       * </pre>
+       *
        * <code>XML_OPTION_CONTENT = 2;</code>
        */
       XML_OPTION_CONTENT(2),
@@ -3886,10 +4218,18 @@ public final class Postgresql96 {
        */
       public static final int XML_OPTION_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * XML document.
+       * </pre>
+       *
        * <code>XML_OPTION_DOCUMENT = 1;</code>
        */
       public static final int XML_OPTION_DOCUMENT_VALUE = 1;
       /**
+       * <pre>
+       * XML fragment.
+       * </pre>
+       *
        * <code>XML_OPTION_CONTENT = 2;</code>
        */
       public static final int XML_OPTION_CONTENT_VALUE = 2;
@@ -3988,18 +4328,34 @@ public final class Postgresql96 {
        */
       BACKSLASH_QUOTE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Quotation mark can be represented as &#92;' (same as on).
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE = 1;</code>
        */
       BACKSLASH_QUOTE(1),
       /**
+       * <pre>
+       * Quotation mark can be represented as &#92;'.
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE_ON = 2;</code>
        */
       BACKSLASH_QUOTE_ON(2),
       /**
+       * <pre>
+       * Quotation mark can only be represented using the standard SQL syntax ''.
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE_OFF = 3;</code>
        */
       BACKSLASH_QUOTE_OFF(3),
       /**
+       * <pre>
+       * Representing a quotation mark as &#92;' is only permitted for client encodings where &#92; is not used for multibyte characters.
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE_SAFE_ENCODING = 4;</code>
        */
       BACKSLASH_QUOTE_SAFE_ENCODING(4),
@@ -4011,18 +4367,34 @@ public final class Postgresql96 {
        */
       public static final int BACKSLASH_QUOTE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Quotation mark can be represented as &#92;' (same as on).
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE = 1;</code>
        */
       public static final int BACKSLASH_QUOTE_VALUE = 1;
       /**
+       * <pre>
+       * Quotation mark can be represented as &#92;'.
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE_ON = 2;</code>
        */
       public static final int BACKSLASH_QUOTE_ON_VALUE = 2;
       /**
+       * <pre>
+       * Quotation mark can only be represented using the standard SQL syntax ''.
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE_OFF = 3;</code>
        */
       public static final int BACKSLASH_QUOTE_OFF_VALUE = 3;
       /**
+       * <pre>
+       * Representing a quotation mark as &#92;' is only permitted for client encodings where &#92; is not used for multibyte characters.
+       * </pre>
+       *
        * <code>BACKSLASH_QUOTE_SAFE_ENCODING = 4;</code>
        */
       public static final int BACKSLASH_QUOTE_SAFE_ENCODING_VALUE = 4;

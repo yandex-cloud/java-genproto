@@ -1523,7 +1523,7 @@ public final class Mysql84 {
      * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
      * @return Whether the mdbOfflineModeEnableLag field is set.
      */
     boolean hasMdbOfflineModeEnableLag();
@@ -1532,7 +1532,7 @@ public final class Mysql84 {
      * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
      * @return The mdbOfflineModeEnableLag.
      */
     com.google.protobuf.Int64Value getMdbOfflineModeEnableLag();
@@ -1541,7 +1541,7 @@ public final class Mysql84 {
      * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeEnableLagOrBuilder();
 
@@ -1551,7 +1551,7 @@ public final class Mysql84 {
      * Should be less than mdb_offline_mode_enable_lag.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
      * @return Whether the mdbOfflineModeDisableLag field is set.
      */
     boolean hasMdbOfflineModeDisableLag();
@@ -1561,7 +1561,7 @@ public final class Mysql84 {
      * Should be less than mdb_offline_mode_enable_lag.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
      * @return The mdbOfflineModeDisableLag.
      */
     com.google.protobuf.Int64Value getMdbOfflineModeDisableLag();
@@ -1571,7 +1571,7 @@ public final class Mysql84 {
      * Should be less than mdb_offline_mode_enable_lag.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeDisableLagOrBuilder();
 
@@ -7373,7 +7373,7 @@ public final class Mysql84 {
      * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
      * @return Whether the mdbOfflineModeEnableLag field is set.
      */
     @java.lang.Override
@@ -7385,7 +7385,7 @@ public final class Mysql84 {
      * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
      * @return The mdbOfflineModeEnableLag.
      */
     @java.lang.Override
@@ -7397,7 +7397,7 @@ public final class Mysql84 {
      * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeEnableLagOrBuilder() {
@@ -7412,7 +7412,7 @@ public final class Mysql84 {
      * Should be less than mdb_offline_mode_enable_lag.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
      * @return Whether the mdbOfflineModeDisableLag field is set.
      */
     @java.lang.Override
@@ -7425,7 +7425,7 @@ public final class Mysql84 {
      * Should be less than mdb_offline_mode_enable_lag.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
      * @return The mdbOfflineModeDisableLag.
      */
     @java.lang.Override
@@ -7438,7 +7438,7 @@ public final class Mysql84 {
      * Should be less than mdb_offline_mode_enable_lag.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeDisableLagOrBuilder() {
@@ -19806,7 +19806,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        * @return Whether the mdbOfflineModeEnableLag field is set.
        */
       public boolean hasMdbOfflineModeEnableLag() {
@@ -19817,7 +19817,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        * @return The mdbOfflineModeEnableLag.
        */
       public com.google.protobuf.Int64Value getMdbOfflineModeEnableLag() {
@@ -19832,7 +19832,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        */
       public Builder setMdbOfflineModeEnableLag(com.google.protobuf.Int64Value value) {
         if (mdbOfflineModeEnableLagBuilder_ == null) {
@@ -19852,7 +19852,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        */
       public Builder setMdbOfflineModeEnableLag(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -19870,7 +19870,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        */
       public Builder mergeMdbOfflineModeEnableLag(com.google.protobuf.Int64Value value) {
         if (mdbOfflineModeEnableLagBuilder_ == null) {
@@ -19892,7 +19892,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        */
       public Builder clearMdbOfflineModeEnableLag() {
         if (mdbOfflineModeEnableLagBuilder_ == null) {
@@ -19910,7 +19910,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMdbOfflineModeEnableLagBuilder() {
         
@@ -19922,7 +19922,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeEnableLagOrBuilder() {
         if (mdbOfflineModeEnableLagBuilder_ != null) {
@@ -19937,7 +19937,7 @@ public final class Mysql84 {
        * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "600-432000"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 53 [(.yandex.cloud.value) = "30-86400"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -19962,7 +19962,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        * @return Whether the mdbOfflineModeDisableLag field is set.
        */
       public boolean hasMdbOfflineModeDisableLag() {
@@ -19974,7 +19974,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        * @return The mdbOfflineModeDisableLag.
        */
       public com.google.protobuf.Int64Value getMdbOfflineModeDisableLag() {
@@ -19990,7 +19990,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        */
       public Builder setMdbOfflineModeDisableLag(com.google.protobuf.Int64Value value) {
         if (mdbOfflineModeDisableLagBuilder_ == null) {
@@ -20011,7 +20011,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        */
       public Builder setMdbOfflineModeDisableLag(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -20030,7 +20030,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        */
       public Builder mergeMdbOfflineModeDisableLag(com.google.protobuf.Int64Value value) {
         if (mdbOfflineModeDisableLagBuilder_ == null) {
@@ -20053,7 +20053,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        */
       public Builder clearMdbOfflineModeDisableLag() {
         if (mdbOfflineModeDisableLagBuilder_ == null) {
@@ -20072,7 +20072,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMdbOfflineModeDisableLagBuilder() {
         
@@ -20085,7 +20085,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeDisableLagOrBuilder() {
         if (mdbOfflineModeDisableLagBuilder_ != null) {
@@ -20101,7 +20101,7 @@ public final class Mysql84 {
        * Should be less than mdb_offline_mode_enable_lag.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "60-86400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 54 [(.yandex.cloud.value) = "10-86400"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -27191,7 +27191,7 @@ public final class Mysql84 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_4.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\244?\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\242?\n\016MysqlConf" +
       "ig8_4\022M\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\017\372\3071\013>=13421" +
       "7728\022C\n\017max_connections\030\002 \001(\0132\033.google.p" +
@@ -27284,126 +27284,126 @@ public final class Mysql84 {
       "ve_timeout\0303 \001(\0132\033.google.protobuf.Int64" +
       "ValueB\r\372\3071\t600-86400\022@\n\014wait_timeout\0304 \001" +
       "(\0132\033.google.protobuf.Int64ValueB\r\372\3071\t600" +
-      "-86400\022P\n\033mdb_offline_mode_enable_lag\0305 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\016\372\3071\n60" +
-      "0-432000\022O\n\034mdb_offline_mode_disable_lag" +
-      "\0306 \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071" +
-      "\01060-86400\022S\n\034range_optimizer_max_mem_siz" +
-      "e\0307 \001(\0132\033.google.protobuf.Int64ValueB\020\372\307" +
-      "1\01460-268435456\022Z\n innodb_online_alter_lo" +
-      "g_max_size\0308 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\023\372\3071\01760-107374182400\022G\n\030innodb_ft_" +
-      "min_token_size\0309 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\010\372\3071\0040-16\022H\n\030innodb_ft_max_tok" +
-      "en_size\030: \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\t\372\3071\00510-84\022D\n\026lower_case_table_names\030" +
-      "; \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      "0-1\0222\n\016slow_query_log\030< \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\022R\n slow_query_log_always" +
-      "_write_time\030= \001(\0132\034.google.protobuf.Doub" +
-      "leValueB\n\372\3071\0060-3600\022\\\n\022log_slow_rate_typ" +
-      "e\030> \001(\0162@.yandex.cloud.mdb.mysql.v1.conf" +
-      "ig.MysqlConfig8_4.LogSlowRateType\022D\n\023log" +
-      "_slow_rate_limit\030? \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\n\372\3071\0061-1000\022:\n\026log_slow_sp_s" +
-      "tatements\030@ \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022[\n\017log_slow_filter\030A \003(\0162B.yandex.cl" +
-      "oud.mdb.mysql.v1.config.MysqlConfig8_4.L" +
-      "ogSlowFilterType\022M\n\033mdb_priority_choice_" +
-      "max_lag\030B \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\013\372\3071\0070-86400\022B\n\020innodb_page_size\030C \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\013\372\3071\0071-65" +
-      "536\022F\n\026max_sp_recursion_depth\030D \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\t\372\3071\0050-255\022F\n\030i" +
-      "nnodb_compression_level\030E \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\007\372\3071\0030-9\022.\n\nautocommi" +
-      "t\030F \001(\0132\032.google.protobuf.BoolValue\0228\n\024i" +
-      "nnodb_status_output\030G \001(\0132\032.google.proto" +
-      "buf.BoolValue\0226\n\022innodb_strict_mode\030H \001(" +
-      "\0132\032.google.protobuf.BoolValue\022G\n#innodb_" +
-      "print_lock_wait_timeout_info\030I \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022A\n\023log_error_verb" +
-      "osity\030J \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\0032-3\022E\n\021max_digest_length\030K \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\r\372\3071\t1024-8192" +
-      "\022F\n\021lock_wait_timeout\030L \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\016\372\3071\n1-31536000\022K\n\027max_" +
-      "prepared_stmt_count\030M \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\r\372\3071\t0-4194304\022\030\n\020optimiz" +
-      "er_switch\030N \001(\t\022E\n\026optimizer_search_dept" +
-      "h\030O \001(\0132\033.google.protobuf.Int64ValueB\010\372\307" +
-      "1\0040-62\022,\n\010userstat\030P \001(\0132\032.google.protob" +
-      "uf.BoolValue\022I\n\022max_execution_time\030Q \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\020\372\3071\0140-429" +
-      "4967295\022Y\n\020audit_log_policy\030R \001(\0162?.yand" +
-      "ex.cloud.mdb.mysql.v1.config.MysqlConfig" +
-      "8_4.AuditLogPolicy\022J\n&replication_sender" +
-      "_observe_commit_only\030S \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022Q\n-replication_optimize_f" +
-      "or_static_plugin_config\030T \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022N\n\025innodb_lru_scan_dep" +
-      "th\030U \001(\0132\033.google.protobuf.Int64ValueB\022\372" +
-      "\3071\016100-4294967295\022;\n\027sql_require_primary" +
-      "_key\030V \001(\0132\032.google.protobuf.BoolValue\022=" +
-      "\n\031mdb_use_async_replication\030W \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022G\n\025mdb_async_allow" +
-      "ed_lag\030X \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\013\372\3071\0070-86400\0221\n\rmdb_force_ssl\030Y \001(\0132\032." +
-      "google.protobuf.BoolValue\022g\n\027innodb_chan" +
-      "ge_buffering\030Z \001(\0162F.yandex.cloud.mdb.my" +
-      "sql.v1.config.MysqlConfig8_4.InnodbChang" +
-      "eBuffering\022B\n\024max_write_lock_count\030[ \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=1\"\210" +
-      "\004\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023A" +
-      "LLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n" +
-      "\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HIGH_NO" +
-      "T_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_A" +
-      "UTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCA" +
-      "PES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n\027NO_" +
-      "UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n" +
-      "\022\023\n\017NO_ZERO_IN_DATE\020\013\022\026\n\022ONLY_FULL_GROUP" +
-      "_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PI" +
-      "PES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021ST" +
-      "RICT_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_TABLES" +
-      "\020\024\022\034\n\030TIME_TRUNCATE_FRACTIONAL\020\025\022\010\n\004ANSI" +
-      "\020\026\022\017\n\013TRADITIONAL\020\027\022\024\n\020NO_DIR_IN_CREATE\020" +
-      "\030\"\237\001\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIF" +
-      "IED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACH" +
-      "ING_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003" +
-      "\022\022\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AUT" +
-      "H\020\005\"x\n\024TransactionIsolation\022%\n!TRANSACTI" +
-      "ON_ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COMMI" +
-      "TTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZA" +
-      "BLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_IM" +
-      "AGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002" +
-      "\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SLA" +
-      "VE_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABA" +
-      "SE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateTy" +
-      "pe\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022\013" +
-      "\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilter" +
-      "Type\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFIED" +
-      "\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_" +
-      "TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESO" +
-      "RT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"^\n\016AuditLogPo" +
-      "licy\022 \n\034AUDIT_LOG_POLICY_UNSPECIFIED\020\000\022\007" +
-      "\n\003ALL\020\001\022\n\n\006LOGINS\020\002\022\013\n\007QUERIES\020\003\022\010\n\004NONE" +
-      "\020\004\"\226\002\n\025InnodbChangeBuffering\022\'\n#INNODB_C" +
-      "HANGE_BUFFERING_UNSPECIFIED\020\000\022 \n\034INNODB_" +
-      "CHANGE_BUFFERING_NONE\020\001\022#\n\037INNODB_CHANGE" +
-      "_BUFFERING_INSERTS\020\002\022#\n\037INNODB_CHANGE_BU" +
-      "FFERING_DELETES\020\003\022#\n\037INNODB_CHANGE_BUFFE" +
-      "RING_CHANGES\020\004\022\"\n\036INNODB_CHANGE_BUFFERIN" +
-      "G_PURGES\020\005\022\037\n\033INNODB_CHANGE_BUFFERING_AL" +
-      "L\020\006J\004\010\004\020\005\"\360\001\n\021MysqlConfigSet8_4\022J\n\020effec" +
-      "tive_config\030\001 \001(\01320.yandex.cloud.mdb.mys" +
-      "ql.v1.config.MysqlConfig8_4\022E\n\013user_conf" +
-      "ig\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.con" +
-      "fig.MysqlConfig8_4\022H\n\016default_config\030\003 \001" +
-      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
-      "sqlConfig8_4Br\n$yandex.cloud.api.mdb.mys" +
-      "ql.v1.configZJgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/mysql/v1/conf" +
-      "ig;mysqlb\006proto3"
+      "-86400\022N\n\033mdb_offline_mode_enable_lag\0305 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\014\372\3071\01030" +
+      "-86400\022O\n\034mdb_offline_mode_disable_lag\0306" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071\0101" +
+      "0-86400\022S\n\034range_optimizer_max_mem_size\030" +
+      "7 \001(\0132\033.google.protobuf.Int64ValueB\020\372\3071\014" +
+      "60-268435456\022Z\n innodb_online_alter_log_" +
+      "max_size\0308 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\023\372\3071\01760-107374182400\022G\n\030innodb_ft_mi" +
+      "n_token_size\0309 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\010\372\3071\0040-16\022H\n\030innodb_ft_max_token" +
+      "_size\030: \001(\0132\033.google.protobuf.Int64Value" +
+      "B\t\372\3071\00510-84\022D\n\026lower_case_table_names\030; " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\0030-" +
+      "1\0222\n\016slow_query_log\030< \001(\0132\032.google.proto" +
+      "buf.BoolValue\022R\n slow_query_log_always_w" +
+      "rite_time\030= \001(\0132\034.google.protobuf.Double" +
+      "ValueB\n\372\3071\0060-3600\022\\\n\022log_slow_rate_type\030" +
+      "> \001(\0162@.yandex.cloud.mdb.mysql.v1.config" +
+      ".MysqlConfig8_4.LogSlowRateType\022D\n\023log_s" +
+      "low_rate_limit\030? \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\n\372\3071\0061-1000\022:\n\026log_slow_sp_sta" +
+      "tements\030@ \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022[\n\017log_slow_filter\030A \003(\0162B.yandex.clou" +
+      "d.mdb.mysql.v1.config.MysqlConfig8_4.Log" +
+      "SlowFilterType\022M\n\033mdb_priority_choice_ma" +
+      "x_lag\030B \001(\0132\033.google.protobuf.Int64Value" +
+      "B\013\372\3071\0070-86400\022B\n\020innodb_page_size\030C \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\013\372\3071\0071-6553" +
+      "6\022F\n\026max_sp_recursion_depth\030D \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\t\372\3071\0050-255\022F\n\030inn" +
+      "odb_compression_level\030E \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\0030-9\022.\n\nautocommit\030" +
+      "F \001(\0132\032.google.protobuf.BoolValue\0228\n\024inn" +
+      "odb_status_output\030G \001(\0132\032.google.protobu" +
+      "f.BoolValue\0226\n\022innodb_strict_mode\030H \001(\0132" +
+      "\032.google.protobuf.BoolValue\022G\n#innodb_pr" +
+      "int_lock_wait_timeout_info\030I \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\022A\n\023log_error_verbos" +
+      "ity\030J \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\0032-3\022E\n\021max_digest_length\030K \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\r\372\3071\t1024-8192\022F" +
+      "\n\021lock_wait_timeout\030L \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\016\372\3071\n1-31536000\022K\n\027max_pr" +
+      "epared_stmt_count\030M \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\r\372\3071\t0-4194304\022\030\n\020optimizer" +
+      "_switch\030N \001(\t\022E\n\026optimizer_search_depth\030" +
+      "O \001(\0132\033.google.protobuf.Int64ValueB\010\372\3071\004" +
+      "0-62\022,\n\010userstat\030P \001(\0132\032.google.protobuf" +
+      ".BoolValue\022I\n\022max_execution_time\030Q \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\020\372\3071\0140-42949" +
+      "67295\022Y\n\020audit_log_policy\030R \001(\0162?.yandex" +
+      ".cloud.mdb.mysql.v1.config.MysqlConfig8_" +
+      "4.AuditLogPolicy\022J\n&replication_sender_o" +
+      "bserve_commit_only\030S \001(\0132\032.google.protob" +
+      "uf.BoolValue\022Q\n-replication_optimize_for" +
+      "_static_plugin_config\030T \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022N\n\025innodb_lru_scan_depth" +
+      "\030U \001(\0132\033.google.protobuf.Int64ValueB\022\372\3071" +
+      "\016100-4294967295\022;\n\027sql_require_primary_k" +
+      "ey\030V \001(\0132\032.google.protobuf.BoolValue\022=\n\031" +
+      "mdb_use_async_replication\030W \001(\0132\032.google" +
+      ".protobuf.BoolValue\022G\n\025mdb_async_allowed" +
+      "_lag\030X \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\013\372\3071\0070-86400\0221\n\rmdb_force_ssl\030Y \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022g\n\027innodb_change" +
+      "_buffering\030Z \001(\0162F.yandex.cloud.mdb.mysq" +
+      "l.v1.config.MysqlConfig8_4.InnodbChangeB" +
+      "uffering\022B\n\024max_write_lock_count\030[ \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=1\"\210\004\n" +
+      "\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALL" +
+      "OW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032E" +
+      "RROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_" +
+      "PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUT" +
+      "O_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPE" +
+      "S\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n\027NO_UN" +
+      "SIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023" +
+      "\n\017NO_ZERO_IN_DATE\020\013\022\026\n\022ONLY_FULL_GROUP_B" +
+      "Y\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPE" +
+      "S_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRI" +
+      "CT_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024" +
+      "\022\034\n\030TIME_TRUNCATE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026" +
+      "\022\017\n\013TRADITIONAL\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"" +
+      "\237\001\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIE" +
+      "D\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHIN" +
+      "G_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003\022\022" +
+      "\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AUTH\020" +
+      "\005\"x\n\024TransactionIsolation\022%\n!TRANSACTION" +
+      "_ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COMMITT" +
+      "ED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZABL" +
+      "E\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_IMAG" +
+      "E_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n" +
+      "\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SLAVE" +
+      "_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE" +
+      "\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateType" +
+      "\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007" +
+      "SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilterTy" +
+      "pe\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFIED\020\000" +
+      "\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TA" +
+      "BLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESORT" +
+      "\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"^\n\016AuditLogPoli" +
+      "cy\022 \n\034AUDIT_LOG_POLICY_UNSPECIFIED\020\000\022\007\n\003" +
+      "ALL\020\001\022\n\n\006LOGINS\020\002\022\013\n\007QUERIES\020\003\022\010\n\004NONE\020\004" +
+      "\"\226\002\n\025InnodbChangeBuffering\022\'\n#INNODB_CHA" +
+      "NGE_BUFFERING_UNSPECIFIED\020\000\022 \n\034INNODB_CH" +
+      "ANGE_BUFFERING_NONE\020\001\022#\n\037INNODB_CHANGE_B" +
+      "UFFERING_INSERTS\020\002\022#\n\037INNODB_CHANGE_BUFF" +
+      "ERING_DELETES\020\003\022#\n\037INNODB_CHANGE_BUFFERI" +
+      "NG_CHANGES\020\004\022\"\n\036INNODB_CHANGE_BUFFERING_" +
+      "PURGES\020\005\022\037\n\033INNODB_CHANGE_BUFFERING_ALL\020" +
+      "\006J\004\010\004\020\005\"\360\001\n\021MysqlConfigSet8_4\022J\n\020effecti" +
+      "ve_config\030\001 \001(\01320.yandex.cloud.mdb.mysql" +
+      ".v1.config.MysqlConfig8_4\022E\n\013user_config" +
+      "\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.confi" +
+      "g.MysqlConfig8_4\022H\n\016default_config\030\003 \001(\013" +
+      "20.yandex.cloud.mdb.mysql.v1.config.Mysq" +
+      "lConfig8_4Br\n$yandex.cloud.api.mdb.mysql" +
+      ".v1.configZJgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/mysql/v1/config" +
+      ";mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

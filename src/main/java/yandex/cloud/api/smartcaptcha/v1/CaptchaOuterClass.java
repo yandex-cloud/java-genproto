@@ -482,26 +482,6 @@ public final class CaptchaOuterClass {
 
     /**
      * <pre>
-     * ID of the captcha.
-     * </pre>
-     *
-     * <code>string id = 21;</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <pre>
-     * ID of the captcha.
-     * </pre>
-     *
-     * <code>string id = 21;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <pre>
      * ID of the folder that the captcha belongs to.
      * </pre>
      *
@@ -519,26 +499,6 @@ public final class CaptchaOuterClass {
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
-
-    /**
-     * <pre>
-     * ID of the cloud that the captcha belongs to.
-     * </pre>
-     *
-     * <code>string cloud_id = 12;</code>
-     * @return The cloudId.
-     */
-    java.lang.String getCloudId();
-    /**
-     * <pre>
-     * ID of the cloud that the captcha belongs to.
-     * </pre>
-     *
-     * <code>string cloud_id = 12;</code>
-     * @return The bytes for cloudId.
-     */
-    com.google.protobuf.ByteString
-        getCloudIdBytes();
 
     /**
      * <pre>
@@ -689,6 +649,26 @@ public final class CaptchaOuterClass {
 
     /**
      * <pre>
+     * ID of the cloud that the captcha belongs to.
+     * </pre>
+     *
+     * <code>string cloud_id = 12;</code>
+     * @return The cloudId.
+     */
+    java.lang.String getCloudId();
+    /**
+     * <pre>
+     * ID of the cloud that the captcha belongs to.
+     * </pre>
+     *
+     * <code>string cloud_id = 12;</code>
+     * @return The bytes for cloudId.
+     */
+    com.google.protobuf.ByteString
+        getCloudIdBytes();
+
+    /**
+     * <pre>
      * Determines that the captcha is currently in restricted mode, see [SmartCaptcha restricted mode](/docs/smartcaptcha/concepts/restricted-mode).
      * </pre>
      *
@@ -788,6 +768,26 @@ public final class CaptchaOuterClass {
      */
     yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * ID of the captcha.
+     * </pre>
+     *
+     * <code>string id = 21;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * ID of the captcha.
+     * </pre>
+     *
+     * <code>string id = 21;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
 
     /**
      * <pre>
@@ -912,17 +912,17 @@ public final class CaptchaOuterClass {
       super(builder);
     }
     private Captcha() {
-      id_ = "";
       folderId_ = "";
-      cloudId_ = "";
       clientKey_ = "";
       name_ = "";
       allowedSites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       complexity_ = 0;
       styleJson_ = "";
+      cloudId_ = "";
       preCheckType_ = 0;
       challengeType_ = 0;
       securityRules_ = java.util.Collections.emptyList();
+      id_ = "";
       overrideVariants_ = java.util.Collections.emptyList();
       description_ = "";
     }
@@ -1144,52 +1144,6 @@ public final class CaptchaOuterClass {
               yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 21;
-    private volatile java.lang.Object id_;
-    /**
-     * <pre>
-     * ID of the captcha.
-     * </pre>
-     *
-     * <code>string id = 21;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the captcha.
-     * </pre>
-     *
-     * <code>string id = 21;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
@@ -1230,52 +1184,6 @@ public final class CaptchaOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         folderId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CLOUD_ID_FIELD_NUMBER = 12;
-    private volatile java.lang.Object cloudId_;
-    /**
-     * <pre>
-     * ID of the cloud that the captcha belongs to.
-     * </pre>
-     *
-     * <code>string cloud_id = 12;</code>
-     * @return The cloudId.
-     */
-    @java.lang.Override
-    public java.lang.String getCloudId() {
-      java.lang.Object ref = cloudId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cloudId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the cloud that the captcha belongs to.
-     * </pre>
-     *
-     * <code>string cloud_id = 12;</code>
-     * @return The bytes for cloudId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCloudIdBytes() {
-      java.lang.Object ref = cloudId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cloudId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1536,6 +1444,52 @@ public final class CaptchaOuterClass {
       }
     }
 
+    public static final int CLOUD_ID_FIELD_NUMBER = 12;
+    private volatile java.lang.Object cloudId_;
+    /**
+     * <pre>
+     * ID of the cloud that the captcha belongs to.
+     * </pre>
+     *
+     * <code>string cloud_id = 12;</code>
+     * @return The cloudId.
+     */
+    @java.lang.Override
+    public java.lang.String getCloudId() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cloudId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cloud that the captcha belongs to.
+     * </pre>
+     *
+     * <code>string cloud_id = 12;</code>
+     * @return The bytes for cloudId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCloudIdBytes() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cloudId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int SUSPEND_FIELD_NUMBER = 13;
     private boolean suspend_;
     /**
@@ -1678,6 +1632,52 @@ public final class CaptchaOuterClass {
     public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index) {
       return securityRules_.get(index);
+    }
+
+    public static final int ID_FIELD_NUMBER = 21;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * ID of the captcha.
+     * </pre>
+     *
+     * <code>string id = 21;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the captcha.
+     * </pre>
+     *
+     * <code>string id = 21;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int DELETION_PROTECTION_FIELD_NUMBER = 22;
@@ -2062,12 +2062,8 @@ public final class CaptchaOuterClass {
       }
       yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
-      if (!getCloudId()
-          .equals(other.getCloudId())) return false;
       if (!getClientKey()
           .equals(other.getClientKey())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
@@ -2082,6 +2078,8 @@ public final class CaptchaOuterClass {
       if (complexity_ != other.complexity_) return false;
       if (!getStyleJson()
           .equals(other.getStyleJson())) return false;
+      if (!getCloudId()
+          .equals(other.getCloudId())) return false;
       if (getSuspend()
           != other.getSuspend()) return false;
       if (getTurnOffHostnameCheck()
@@ -2090,6 +2088,8 @@ public final class CaptchaOuterClass {
       if (challengeType_ != other.challengeType_) return false;
       if (!getSecurityRulesList()
           .equals(other.getSecurityRulesList())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
       if (!getOverrideVariantsList()
@@ -2111,12 +2111,8 @@ public final class CaptchaOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
-      hash = (37 * hash) + CLOUD_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCloudId().hashCode();
       hash = (37 * hash) + CLIENT_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getClientKey().hashCode();
       if (hasCreatedAt()) {
@@ -2133,6 +2129,8 @@ public final class CaptchaOuterClass {
       hash = (53 * hash) + complexity_;
       hash = (37 * hash) + STYLE_JSON_FIELD_NUMBER;
       hash = (53 * hash) + getStyleJson().hashCode();
+      hash = (37 * hash) + CLOUD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCloudId().hashCode();
       hash = (37 * hash) + SUSPEND_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSuspend());
@@ -2147,6 +2145,8 @@ public final class CaptchaOuterClass {
         hash = (37 * hash) + SECURITY_RULES_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityRulesList().hashCode();
       }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
@@ -2324,11 +2324,7 @@ public final class CaptchaOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
-
         folderId_ = "";
-
-        cloudId_ = "";
 
         clientKey_ = "";
 
@@ -2346,6 +2342,8 @@ public final class CaptchaOuterClass {
 
         styleJson_ = "";
 
+        cloudId_ = "";
+
         suspend_ = false;
 
         turnOffHostnameCheck_ = false;
@@ -2360,6 +2358,8 @@ public final class CaptchaOuterClass {
         } else {
           securityRulesBuilder_.clear();
         }
+        id_ = "";
+
         deletionProtection_ = false;
 
         if (overrideVariantsBuilder_ == null) {
@@ -2400,9 +2400,7 @@ public final class CaptchaOuterClass {
       public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha buildPartial() {
         yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha(this);
         int from_bitField0_ = bitField0_;
-        result.id_ = id_;
         result.folderId_ = folderId_;
-        result.cloudId_ = cloudId_;
         result.clientKey_ = clientKey_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
@@ -2417,6 +2415,7 @@ public final class CaptchaOuterClass {
         result.allowedSites_ = allowedSites_;
         result.complexity_ = complexity_;
         result.styleJson_ = styleJson_;
+        result.cloudId_ = cloudId_;
         result.suspend_ = suspend_;
         result.turnOffHostnameCheck_ = turnOffHostnameCheck_;
         result.preCheckType_ = preCheckType_;
@@ -2430,6 +2429,7 @@ public final class CaptchaOuterClass {
         } else {
           result.securityRules_ = securityRulesBuilder_.build();
         }
+        result.id_ = id_;
         result.deletionProtection_ = deletionProtection_;
         if (overrideVariantsBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
@@ -2492,16 +2492,8 @@ public final class CaptchaOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha other) {
         if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
-          onChanged();
-        }
-        if (!other.getCloudId().isEmpty()) {
-          cloudId_ = other.cloudId_;
           onChanged();
         }
         if (!other.getClientKey().isEmpty()) {
@@ -2530,6 +2522,10 @@ public final class CaptchaOuterClass {
         }
         if (!other.getStyleJson().isEmpty()) {
           styleJson_ = other.styleJson_;
+          onChanged();
+        }
+        if (!other.getCloudId().isEmpty()) {
+          cloudId_ = other.cloudId_;
           onChanged();
         }
         if (other.getSuspend() != false) {
@@ -2569,6 +2565,10 @@ public final class CaptchaOuterClass {
               securityRulesBuilder_.addAllMessages(other.securityRules_);
             }
           }
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
@@ -2637,102 +2637,6 @@ public final class CaptchaOuterClass {
         return this;
       }
       private int bitField0_;
-
-      private java.lang.Object id_ = "";
-      /**
-       * <pre>
-       * ID of the captcha.
-       * </pre>
-       *
-       * <code>string id = 21;</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the captcha.
-       * </pre>
-       *
-       * <code>string id = 21;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the captcha.
-       * </pre>
-       *
-       * <code>string id = 21;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the captcha.
-       * </pre>
-       *
-       * <code>string id = 21;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the captcha.
-       * </pre>
-       *
-       * <code>string id = 21;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
 
       private java.lang.Object folderId_ = "";
       /**
@@ -2826,102 +2730,6 @@ public final class CaptchaOuterClass {
   checkByteStringIsUtf8(value);
         
         folderId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cloudId_ = "";
-      /**
-       * <pre>
-       * ID of the cloud that the captcha belongs to.
-       * </pre>
-       *
-       * <code>string cloud_id = 12;</code>
-       * @return The cloudId.
-       */
-      public java.lang.String getCloudId() {
-        java.lang.Object ref = cloudId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cloudId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the cloud that the captcha belongs to.
-       * </pre>
-       *
-       * <code>string cloud_id = 12;</code>
-       * @return The bytes for cloudId.
-       */
-      public com.google.protobuf.ByteString
-          getCloudIdBytes() {
-        java.lang.Object ref = cloudId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cloudId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the cloud that the captcha belongs to.
-       * </pre>
-       *
-       * <code>string cloud_id = 12;</code>
-       * @param value The cloudId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCloudId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cloudId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the cloud that the captcha belongs to.
-       * </pre>
-       *
-       * <code>string cloud_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCloudId() {
-        
-        cloudId_ = getDefaultInstance().getCloudId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the cloud that the captcha belongs to.
-       * </pre>
-       *
-       * <code>string cloud_id = 12;</code>
-       * @param value The bytes for cloudId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCloudIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cloudId_ = value;
         onChanged();
         return this;
       }
@@ -3589,6 +3397,102 @@ public final class CaptchaOuterClass {
         return this;
       }
 
+      private java.lang.Object cloudId_ = "";
+      /**
+       * <pre>
+       * ID of the cloud that the captcha belongs to.
+       * </pre>
+       *
+       * <code>string cloud_id = 12;</code>
+       * @return The cloudId.
+       */
+      public java.lang.String getCloudId() {
+        java.lang.Object ref = cloudId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cloudId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud that the captcha belongs to.
+       * </pre>
+       *
+       * <code>string cloud_id = 12;</code>
+       * @return The bytes for cloudId.
+       */
+      public com.google.protobuf.ByteString
+          getCloudIdBytes() {
+        java.lang.Object ref = cloudId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cloudId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud that the captcha belongs to.
+       * </pre>
+       *
+       * <code>string cloud_id = 12;</code>
+       * @param value The cloudId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCloudId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud that the captcha belongs to.
+       * </pre>
+       *
+       * <code>string cloud_id = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCloudId() {
+        
+        cloudId_ = getDefaultInstance().getCloudId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud that the captcha belongs to.
+       * </pre>
+       *
+       * <code>string cloud_id = 12;</code>
+       * @param value The bytes for cloudId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCloudIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+
       private boolean suspend_ ;
       /**
        * <pre>
@@ -4133,6 +4037,102 @@ public final class CaptchaOuterClass {
           securityRules_ = null;
         }
         return securityRulesBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * ID of the captcha.
+       * </pre>
+       *
+       * <code>string id = 21;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the captcha.
+       * </pre>
+       *
+       * <code>string id = 21;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the captcha.
+       * </pre>
+       *
+       * <code>string id = 21;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the captcha.
+       * </pre>
+       *
+       * <code>string id = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the captcha.
+       * </pre>
+       *
+       * <code>string id = 21;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
       }
 
       private boolean deletionProtection_ ;
@@ -6007,618 +6007,6 @@ public final class CaptchaOuterClass {
 
   }
 
-  public interface CaptchaSecretKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-     * </pre>
-     *
-     * <code>string server_key = 1;</code>
-     * @return The serverKey.
-     */
-    java.lang.String getServerKey();
-    /**
-     * <pre>
-     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-     * </pre>
-     *
-     * <code>string server_key = 1;</code>
-     * @return The bytes for serverKey.
-     */
-    com.google.protobuf.ByteString
-        getServerKeyBytes();
-  }
-  /**
-   * <pre>
-   * CaptchaSecretKey object. Contains captcha data that need to keep in secret.
-   * </pre>
-   *
-   * Protobuf type {@code yandex.cloud.smartcaptcha.v1.CaptchaSecretKey}
-   */
-  public static final class CaptchaSecretKey extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
-      CaptchaSecretKeyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CaptchaSecretKey.newBuilder() to construct.
-    private CaptchaSecretKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CaptchaSecretKey() {
-      serverKey_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CaptchaSecretKey();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CaptchaSecretKey(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serverKey_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.Builder.class);
-    }
-
-    public static final int SERVER_KEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object serverKey_;
-    /**
-     * <pre>
-     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-     * </pre>
-     *
-     * <code>string server_key = 1;</code>
-     * @return The serverKey.
-     */
-    @java.lang.Override
-    public java.lang.String getServerKey() {
-      java.lang.Object ref = serverKey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serverKey_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-     * </pre>
-     *
-     * <code>string server_key = 1;</code>
-     * @return The bytes for serverKey.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServerKeyBytes() {
-      java.lang.Object ref = serverKey_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serverKey_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverKey_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serverKey_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverKey_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serverKey_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) obj;
-
-      if (!getServerKey()
-          .equals(other.getServerKey())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SERVER_KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getServerKey().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * CaptchaSecretKey object. Contains captcha data that need to keep in secret.
-     * </pre>
-     *
-     * Protobuf type {@code yandex.cloud.smartcaptcha.v1.CaptchaSecretKey}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKeyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        serverKey_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey(this);
-        result.serverKey_ = serverKey_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.getDefaultInstance()) return this;
-        if (!other.getServerKey().isEmpty()) {
-          serverKey_ = other.serverKey_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object serverKey_ = "";
-      /**
-       * <pre>
-       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-       * </pre>
-       *
-       * <code>string server_key = 1;</code>
-       * @return The serverKey.
-       */
-      public java.lang.String getServerKey() {
-        java.lang.Object ref = serverKey_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serverKey_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-       * </pre>
-       *
-       * <code>string server_key = 1;</code>
-       * @return The bytes for serverKey.
-       */
-      public com.google.protobuf.ByteString
-          getServerKeyBytes() {
-        java.lang.Object ref = serverKey_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serverKey_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-       * </pre>
-       *
-       * <code>string server_key = 1;</code>
-       * @param value The serverKey to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serverKey_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-       * </pre>
-       *
-       * <code>string server_key = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServerKey() {
-        
-        serverKey_ = getDefaultInstance().getServerKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
-       * </pre>
-       *
-       * <code>string server_key = 1;</code>
-       * @param value The bytes for serverKey to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serverKey_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey();
-    }
-
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<CaptchaSecretKey>
-        PARSER = new com.google.protobuf.AbstractParser<CaptchaSecretKey>() {
-      @java.lang.Override
-      public CaptchaSecretKey parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CaptchaSecretKey(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CaptchaSecretKey> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CaptchaSecretKey> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface SecurityRuleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.smartcaptcha.v1.SecurityRule)
       com.google.protobuf.MessageOrBuilder {
@@ -7963,7 +7351,7 @@ public final class CaptchaOuterClass {
 
     /**
      * <pre>
-     * Host where captcha placed.
+     * *AND* semantics implied.
      * </pre>
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -7972,7 +7360,7 @@ public final class CaptchaOuterClass {
     boolean hasHost();
     /**
      * <pre>
-     * Host where captcha placed.
+     * *AND* semantics implied.
      * </pre>
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -7981,7 +7369,7 @@ public final class CaptchaOuterClass {
     yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher getHost();
     /**
      * <pre>
-     * Host where captcha placed.
+     * *AND* semantics implied.
      * </pre>
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -10845,7 +10233,7 @@ public final class CaptchaOuterClass {
 
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -10854,7 +10242,7 @@ public final class CaptchaOuterClass {
           getQueriesList();
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -10862,7 +10250,7 @@ public final class CaptchaOuterClass {
       yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher getQueries(int index);
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -10870,7 +10258,7 @@ public final class CaptchaOuterClass {
       int getQueriesCount();
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -10879,7 +10267,7 @@ public final class CaptchaOuterClass {
           getQueriesOrBuilderList();
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11037,7 +10425,7 @@ public final class CaptchaOuterClass {
       private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher> queries_;
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11048,7 +10436,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11060,7 +10448,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11071,7 +10459,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11082,7 +10470,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * List of query matchers. AND semantics implied.
+       * *AND* semantics implied
        * </pre>
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11638,7 +11026,7 @@ public final class CaptchaOuterClass {
 
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11652,7 +11040,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11666,7 +11054,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11680,7 +11068,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11701,7 +11089,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11719,7 +11107,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11739,7 +11127,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11760,7 +11148,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11778,7 +11166,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11796,7 +11184,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11815,7 +11203,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11832,7 +11220,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11849,7 +11237,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11860,7 +11248,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11874,7 +11262,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11889,7 +11277,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11900,7 +11288,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -11912,7 +11300,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of query matchers. AND semantics implied.
+         * *AND* semantics implied
          * </pre>
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
@@ -13743,16 +13131,28 @@ public final class CaptchaOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * *AND* semantics implied.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        * @return Whether the ipRangesMatch field is set.
        */
       boolean hasIpRangesMatch();
       /**
+       * <pre>
+       * *AND* semantics implied.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        * @return The ipRangesMatch.
        */
       yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getIpRangesMatch();
       /**
+       * <pre>
+       * *AND* semantics implied.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        */
       yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder();
@@ -13938,6 +13338,10 @@ public final class CaptchaOuterClass {
       public static final int IP_RANGES_MATCH_FIELD_NUMBER = 1;
       private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher ipRangesMatch_;
       /**
+       * <pre>
+       * *AND* semantics implied.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        * @return Whether the ipRangesMatch field is set.
        */
@@ -13946,6 +13350,10 @@ public final class CaptchaOuterClass {
         return ipRangesMatch_ != null;
       }
       /**
+       * <pre>
+       * *AND* semantics implied.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        * @return The ipRangesMatch.
        */
@@ -13954,6 +13362,10 @@ public final class CaptchaOuterClass {
         return ipRangesMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesMatch_;
       }
       /**
+       * <pre>
+       * *AND* semantics implied.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        */
       @java.lang.Override
@@ -14452,6 +13864,10 @@ public final class CaptchaOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder> ipRangesMatchBuilder_;
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          * @return Whether the ipRangesMatch field is set.
          */
@@ -14459,6 +13875,10 @@ public final class CaptchaOuterClass {
           return ipRangesMatchBuilder_ != null || ipRangesMatch_ != null;
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          * @return The ipRangesMatch.
          */
@@ -14470,6 +13890,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         public Builder setIpRangesMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher value) {
@@ -14486,6 +13910,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         public Builder setIpRangesMatch(
@@ -14500,6 +13928,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         public Builder mergeIpRangesMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher value) {
@@ -14518,6 +13950,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         public Builder clearIpRangesMatch() {
@@ -14532,6 +13968,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder getIpRangesMatchBuilder() {
@@ -14540,6 +13980,10 @@ public final class CaptchaOuterClass {
           return getIpRangesMatchFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder() {
@@ -14551,6 +13995,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * *AND* semantics implied.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -14982,39 +14430,39 @@ public final class CaptchaOuterClass {
 
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @return A list containing the ipRanges.
        */
       java.util.List<java.lang.String>
           getIpRangesList();
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @return The count of ipRanges.
        */
       int getIpRangesCount();
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @param index The index of the element to return.
        * @return The ipRanges at the given index.
        */
       java.lang.String getIpRanges(int index);
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the ipRanges at the given index.
        */
@@ -15120,10 +14568,10 @@ public final class CaptchaOuterClass {
       private com.google.protobuf.LazyStringList ipRanges_;
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @return A list containing the ipRanges.
        */
       public com.google.protobuf.ProtocolStringList
@@ -15132,10 +14580,10 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @return The count of ipRanges.
        */
       public int getIpRangesCount() {
@@ -15143,10 +14591,10 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @param index The index of the element to return.
        * @return The ipRanges at the given index.
        */
@@ -15155,10 +14603,10 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * List of IP ranges. OR semantics implied.
+       * *OR* semantics implied.
        * </pre>
        *
-       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the ipRanges at the given index.
        */
@@ -15501,10 +14949,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @return A list containing the ipRanges.
          */
         public com.google.protobuf.ProtocolStringList
@@ -15513,10 +14961,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @return The count of ipRanges.
          */
         public int getIpRangesCount() {
@@ -15524,10 +14972,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @param index The index of the element to return.
          * @return The ipRanges at the given index.
          */
@@ -15536,10 +14984,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the ipRanges at the given index.
          */
@@ -15549,10 +14997,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @param index The index to set the value at.
          * @param value The ipRanges to set.
          * @return This builder for chaining.
@@ -15569,10 +15017,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @param value The ipRanges to add.
          * @return This builder for chaining.
          */
@@ -15588,10 +15036,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @param values The ipRanges to add.
          * @return This builder for chaining.
          */
@@ -15605,10 +15053,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @return This builder for chaining.
          */
         public Builder clearIpRanges() {
@@ -15619,10 +15067,10 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * List of IP ranges. OR semantics implied.
+         * *OR* semantics implied.
          * </pre>
          *
-         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+         * <code>repeated string ip_ranges = 1 [(.yandex.cloud.size) = "&lt;=10000", (.yandex.cloud.length) = "&gt;0"];</code>
          * @param value The bytes of the ipRanges to add.
          * @return This builder for chaining.
          */
@@ -15696,7 +15144,7 @@ public final class CaptchaOuterClass {
 
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -15706,7 +15154,7 @@ public final class CaptchaOuterClass {
           getLocationsList();
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -15715,7 +15163,7 @@ public final class CaptchaOuterClass {
       int getLocationsCount();
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -15725,7 +15173,7 @@ public final class CaptchaOuterClass {
       java.lang.String getLocations(int index);
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -15834,7 +15282,7 @@ public final class CaptchaOuterClass {
       private com.google.protobuf.LazyStringList locations_;
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -15846,7 +15294,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -15857,7 +15305,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -15869,7 +15317,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * ISO 3166-1 alpha 2. OR semantics implied.
+       * *OR semantics implied. ISO 3166-1 alpha 2
        * </pre>
        *
        * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16215,7 +15663,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16227,7 +15675,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16238,7 +15686,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16250,7 +15698,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16263,7 +15711,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16283,7 +15731,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16302,7 +15750,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16319,7 +15767,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16333,7 +15781,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * ISO 3166-1 alpha 2. OR semantics implied.
+         * *OR semantics implied. ISO 3166-1 alpha 2
          * </pre>
          *
          * <code>repeated string locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "2", (.yandex.cloud.unique) = true];</code>
@@ -16408,7 +15856,7 @@ public final class CaptchaOuterClass {
     private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher host_;
     /**
      * <pre>
-     * Host where captcha placed.
+     * *AND* semantics implied.
      * </pre>
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -16420,7 +15868,7 @@ public final class CaptchaOuterClass {
     }
     /**
      * <pre>
-     * Host where captcha placed.
+     * *AND* semantics implied.
      * </pre>
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -16432,7 +15880,7 @@ public final class CaptchaOuterClass {
     }
     /**
      * <pre>
-     * Host where captcha placed.
+     * *AND* semantics implied.
      * </pre>
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17019,7 +16467,7 @@ public final class CaptchaOuterClass {
           yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder> hostBuilder_;
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17030,7 +16478,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17045,7 +16493,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17065,7 +16513,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17083,7 +16531,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17105,7 +16553,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17123,7 +16571,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17135,7 +16583,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17150,7 +16598,7 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * Host where captcha placed.
+       * *AND* semantics implied.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
@@ -17843,6 +17291,618 @@ public final class CaptchaOuterClass {
 
   }
 
+  public interface CaptchaSecretKeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+     * </pre>
+     *
+     * <code>string server_key = 1;</code>
+     * @return The serverKey.
+     */
+    java.lang.String getServerKey();
+    /**
+     * <pre>
+     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+     * </pre>
+     *
+     * <code>string server_key = 1;</code>
+     * @return The bytes for serverKey.
+     */
+    com.google.protobuf.ByteString
+        getServerKeyBytes();
+  }
+  /**
+   * <pre>
+   * CaptchaSecretKey object. Contains captcha data that need to keep in secret.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.smartcaptcha.v1.CaptchaSecretKey}
+   */
+  public static final class CaptchaSecretKey extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
+      CaptchaSecretKeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CaptchaSecretKey.newBuilder() to construct.
+    private CaptchaSecretKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CaptchaSecretKey() {
+      serverKey_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CaptchaSecretKey();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CaptchaSecretKey(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serverKey_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.Builder.class);
+    }
+
+    public static final int SERVER_KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object serverKey_;
+    /**
+     * <pre>
+     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+     * </pre>
+     *
+     * <code>string server_key = 1;</code>
+     * @return The serverKey.
+     */
+    @java.lang.Override
+    public java.lang.String getServerKey() {
+      java.lang.Object ref = serverKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serverKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+     * </pre>
+     *
+     * <code>string server_key = 1;</code>
+     * @return The bytes for serverKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerKeyBytes() {
+      java.lang.Object ref = serverKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serverKey_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serverKey_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) obj;
+
+      if (!getServerKey()
+          .equals(other.getServerKey())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVER_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getServerKey().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CaptchaSecretKey object. Contains captcha data that need to keep in secret.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.smartcaptcha.v1.CaptchaSecretKey}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
+        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        serverKey_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey build() {
+        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey(this);
+        result.serverKey_ = serverKey_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.getDefaultInstance()) return this;
+        if (!other.getServerKey().isEmpty()) {
+          serverKey_ = other.serverKey_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object serverKey_ = "";
+      /**
+       * <pre>
+       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+       * </pre>
+       *
+       * <code>string server_key = 1;</code>
+       * @return The serverKey.
+       */
+      public java.lang.String getServerKey() {
+        java.lang.Object ref = serverKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serverKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+       * </pre>
+       *
+       * <code>string server_key = 1;</code>
+       * @return The bytes for serverKey.
+       */
+      public com.google.protobuf.ByteString
+          getServerKeyBytes() {
+        java.lang.Object ref = serverKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+       * </pre>
+       *
+       * <code>string server_key = 1;</code>
+       * @param value The serverKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serverKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+       * </pre>
+       *
+       * <code>string server_key = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerKey() {
+        
+        serverKey_ = getDefaultInstance().getServerKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Server key of the captcha, see [CAPTCHA keys](/docs/smartcaptcha/concepts/keys).
+       * </pre>
+       *
+       * <code>string server_key = 1;</code>
+       * @param value The bytes for serverKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serverKey_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
+    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey();
+    }
+
+    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CaptchaSecretKey>
+        PARSER = new com.google.protobuf.AbstractParser<CaptchaSecretKey>() {
+      @java.lang.Override
+      public CaptchaSecretKey parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CaptchaSecretKey(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CaptchaSecretKey> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CaptchaSecretKey> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor;
   private static final 
@@ -17858,11 +17918,6 @@ public final class CaptchaOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor;
   private static final 
@@ -17913,6 +17968,11 @@ public final class CaptchaOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17925,93 +17985,93 @@ public final class CaptchaOuterClass {
       "\n*yandex/cloud/smartcaptcha/v1/captcha.p" +
       "roto\022\034yandex.cloud.smartcaptcha.v1\032\037goog" +
       "le/protobuf/timestamp.proto\032\035yandex/clou" +
-      "d/validation.proto\"\232\007\n\007Captcha\022\n\n\002id\030\025 \001" +
-      "(\t\022\021\n\tfolder_id\030\002 \001(\t\022\020\n\010cloud_id\030\014 \001(\t\022" +
-      "\022\n\nclient_key\030\003 \001(\t\022.\n\ncreated_at\030\005 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\014\n\004name\030\007 \001(" +
-      "\t\022\025\n\rallowed_sites\030\010 \003(\t\022C\n\ncomplexity\030\t" +
-      " \001(\0162/.yandex.cloud.smartcaptcha.v1.Capt" +
-      "chaComplexity\022\022\n\nstyle_json\030\n \001(\t\022\017\n\007sus" +
-      "pend\030\r \001(\010\022\037\n\027turn_off_hostname_check\030\016 " +
-      "\001(\010\022I\n\016pre_check_type\030\020 \001(\01621.yandex.clo" +
-      "ud.smartcaptcha.v1.CaptchaPreCheckType\022J" +
-      "\n\016challenge_type\030\021 \001(\01622.yandex.cloud.sm" +
-      "artcaptcha.v1.CaptchaChallengeType\022B\n\016se" +
-      "curity_rules\030\023 \003(\0132*.yandex.cloud.smartc" +
-      "aptcha.v1.SecurityRule\022\033\n\023deletion_prote" +
+      "d/validation.proto\"\225\007\n\007Captcha\022\021\n\tfolder" +
+      "_id\030\002 \001(\t\022\022\n\nclient_key\030\003 \001(\t\022.\n\ncreated" +
+      "_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\014\n" +
+      "\004name\030\007 \001(\t\022\025\n\rallowed_sites\030\010 \003(\t\022C\n\nco" +
+      "mplexity\030\t \001(\0162/.yandex.cloud.smartcaptc" +
+      "ha.v1.CaptchaComplexity\022\022\n\nstyle_json\030\n " +
+      "\001(\t\022\020\n\010cloud_id\030\014 \001(\t\022\017\n\007suspend\030\r \001(\010\022\037" +
+      "\n\027turn_off_hostname_check\030\016 \001(\010\022I\n\016pre_c" +
+      "heck_type\030\020 \001(\01621.yandex.cloud.smartcapt" +
+      "cha.v1.CaptchaPreCheckType\022J\n\016challenge_" +
+      "type\030\021 \001(\01622.yandex.cloud.smartcaptcha.v" +
+      "1.CaptchaChallengeType\022B\n\016security_rules" +
+      "\030\023 \003(\0132*.yandex.cloud.smartcaptcha.v1.Se" +
+      "curityRule\022\n\n\002id\030\025 \001(\t\022\033\n\023deletion_prote" +
       "ction\030\026 \001(\010\022R\n\021override_variants\030\027 \003(\0132-" +
       ".yandex.cloud.smartcaptcha.v1.OverrideVa" +
       "riantB\010\202\3101\004<=32\022 \n\030disallow_data_process" +
       "ing\030\030 \001(\010\022\036\n\013description\030\031 \001(\tB\t\212\3101\005<=51" +
-      "2\022\202\001\n\006labels\030\032 \003(\01321.yandex.cloud.smartc" +
-      "aptcha.v1.Captcha.LabelsEntryB?\202\3101\004<=64\212" +
-      "\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a" +
-      "-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\001\020\002J\004\010\004\020\005J\004\010\006\020\007J" +
-      "\004\010\013\020\014J\004\010\017\020\020J\004\010\022\020\023J\004\010\024\020\025\"\303\002\n\017OverrideVari" +
-      "ant\0224\n\004uuid\030\001 \001(\tB&\362\3071\032[a-zA-Z0-9][a-zA-" +
-      "Z0-9-_.]*\212\3101\004<=64\022\036\n\013description\030\002 \001(\tB\t" +
-      "\212\3101\005<=512\022C\n\ncomplexity\030\003 \001(\0162/.yandex.c" +
-      "loud.smartcaptcha.v1.CaptchaComplexity\022I" +
-      "\n\016pre_check_type\030\004 \001(\01621.yandex.cloud.sm" +
-      "artcaptcha.v1.CaptchaPreCheckType\022J\n\016cha" +
-      "llenge_type\030\005 \001(\01622.yandex.cloud.smartca" +
-      "ptcha.v1.CaptchaChallengeType\"&\n\020Captcha" +
-      "SecretKey\022\022\n\nserver_key\030\001 \001(\t\"\351\001\n\014Securi" +
-      "tyRule\0228\n\004name\030\001 \001(\tB*\350\3071\001\212\3101\0041-50\362\3071\032[a" +
-      "-zA-Z0-9][a-zA-Z0-9-_.]*\022\036\n\010priority\030\002 \001" +
-      "(\003B\014\372\3071\0101-999999\022\036\n\013description\030\003 \001(\tB\t\212" +
-      "\3101\005<=512\022:\n\tcondition\030\004 \001(\0132\'.yandex.clo" +
-      "ud.smartcaptcha.v1.Condition\022\035\n\025override" +
-      "_variant_uuid\030\006 \001(\tJ\004\010\005\020\006\"\326\013\n\tCondition\022" +
-      "A\n\004host\030\001 \001(\01323.yandex.cloud.smartcaptch" +
-      "a.v1.Condition.HostMatcher\022?\n\003uri\030\002 \001(\0132" +
-      "2.yandex.cloud.smartcaptcha.v1.Condition" +
-      ".UriMatcher\022P\n\007headers\030\003 \003(\01325.yandex.cl" +
-      "oud.smartcaptcha.v1.Condition.HeaderMatc" +
-      "herB\010\202\3101\004<=20\022D\n\tsource_ip\030\004 \001(\01321.yande" +
-      "x.cloud.smartcaptcha.v1.Condition.IpMatc" +
-      "her\032\374\001\n\rStringMatcher\022 \n\013exact_match\030\001 \001" +
-      "(\tB\t\212\3101\0050-255H\000\022$\n\017exact_not_match\030\002 \001(\t" +
-      "B\t\212\3101\0050-255H\000\022!\n\014prefix_match\030\003 \001(\tB\t\212\3101" +
-      "\0050-255H\000\022%\n\020prefix_not_match\030\004 \001(\tB\t\212\3101\005" +
-      "0-255H\000\022%\n\020pire_regex_match\030\005 \001(\tB\t\212\3101\0050" +
-      "-255H\000\022)\n\024pire_regex_not_match\030\006 \001(\tB\t\212\310" +
-      "1\0050-255H\000B\007\n\005match\032]\n\013HostMatcher\022N\n\005hos" +
-      "ts\030\001 \003(\01325.yandex.cloud.smartcaptcha.v1." +
-      "Condition.StringMatcherB\010\202\3101\004<=20\032\242\001\n\nUr" +
-      "iMatcher\022C\n\004path\030\001 \001(\01325.yandex.cloud.sm" +
-      "artcaptcha.v1.Condition.StringMatcher\022O\n" +
-      "\007queries\030\002 \003(\01324.yandex.cloud.smartcaptc" +
-      "ha.v1.Condition.QueryMatcherB\010\202\3101\004<=20\032v" +
-      "\n\014QueryMatcher\022\032\n\003key\030\001 \001(\tB\r\350\3071\001\212\3101\0051-2" +
-      "55\022J\n\005value\030\002 \001(\01325.yandex.cloud.smartca" +
-      "ptcha.v1.Condition.StringMatcherB\004\350\3071\001\032x" +
-      "\n\rHeaderMatcher\022\033\n\004name\030\001 \001(\tB\r\350\3071\001\212\3101\0051" +
-      "-255\022J\n\005value\030\002 \001(\01325.yandex.cloud.smart" +
-      "captcha.v1.Condition.StringMatcherB\004\350\3071\001" +
-      "\032\317\002\n\tIpMatcher\022P\n\017ip_ranges_match\030\001 \001(\0132" +
-      "7.yandex.cloud.smartcaptcha.v1.Condition" +
-      ".IpRangesMatcher\022T\n\023ip_ranges_not_match\030" +
-      "\002 \001(\01327.yandex.cloud.smartcaptcha.v1.Con" +
-      "dition.IpRangesMatcher\022J\n\014geo_ip_match\030\003" +
-      " \001(\01324.yandex.cloud.smartcaptcha.v1.Cond" +
-      "ition.GeoIpMatcher\022N\n\020geo_ip_not_match\030\004" +
-      " \001(\01324.yandex.cloud.smartcaptcha.v1.Cond" +
-      "ition.GeoIpMatcher\0321\n\017IpRangesMatcher\022\036\n" +
-      "\tip_ranges\030\001 \003(\tB\013\202\3101\007<=10000\0323\n\014GeoIpMa" +
-      "tcher\022#\n\tlocations\030\001 \003(\tB\020\202\3101\003>=1\220\3101\001\212\3101" +
-      "\0012*g\n\021CaptchaComplexity\022\"\n\036CAPTCHA_COMPL" +
-      "EXITY_UNSPECIFIED\020\000\022\010\n\004EASY\020\001\022\n\n\006MEDIUM\020" +
-      "\002\022\010\n\004HARD\020\003\022\016\n\nFORCE_HARD\020\004*W\n\023CaptchaPr" +
-      "eCheckType\022&\n\"CAPTCHA_PRE_CHECK_TYPE_UNS" +
-      "PECIFIED\020\000\022\014\n\010CHECKBOX\020\001\022\n\n\006SLIDER\020\002*q\n\024" +
-      "CaptchaChallengeType\022&\n\"CAPTCHA_CHALLENG" +
-      "E_TYPE_UNSPECIFIED\020\000\022\016\n\nIMAGE_TEXT\020\001\022\017\n\013" +
-      "SILHOUETTES\020\002\022\020\n\014KALEIDOSCOPE\020\003Bq\n yande" +
-      "x.cloud.api.smartcaptcha.v1ZMgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/sm" +
-      "artcaptcha/v1;smartcaptchab\006proto3"
+      "2\022~\n\006labels\030\032 \003(\01321.yandex.cloud.smartca" +
+      "ptcha.v1.Captcha.LabelsEntryB;\212\3101\004<=63\262\310" +
+      "1\030\022\020[a-z][-_0-9a-z]*\032\0041-63\362\3071\013[-_0-9a-z]" +
+      "*\202\3101\004<=64\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001J\004\010\001\020\002J\004\010\004\020\005J\004\010\006\020\007J\004\010\013\020\014" +
+      "J\004\010\017\020\020J\004\010\022\020\023J\004\010\024\020\025\"\303\002\n\017OverrideVariant\0224" +
+      "\n\004uuid\030\001 \001(\tB&\212\3101\004<=64\362\3071\032[a-zA-Z0-9][a-" +
+      "zA-Z0-9-_.]*\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<" +
+      "=512\022C\n\ncomplexity\030\003 \001(\0162/.yandex.cloud." +
+      "smartcaptcha.v1.CaptchaComplexity\022I\n\016pre" +
+      "_check_type\030\004 \001(\01621.yandex.cloud.smartca" +
+      "ptcha.v1.CaptchaPreCheckType\022J\n\016challeng" +
+      "e_type\030\005 \001(\01622.yandex.cloud.smartcaptcha" +
+      ".v1.CaptchaChallengeType\"\351\001\n\014SecurityRul" +
+      "e\0228\n\004name\030\001 \001(\tB*\212\3101\0041-50\362\3071\032[a-zA-Z0-9]" +
+      "[a-zA-Z0-9-_.]*\350\3071\001\022\036\n\010priority\030\002 \001(\003B\014\372" +
+      "\3071\0101-999999\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
+      "512\022:\n\tcondition\030\004 \001(\0132\'.yandex.cloud.sm" +
+      "artcaptcha.v1.Condition\022\035\n\025override_vari" +
+      "ant_uuid\030\006 \001(\tJ\004\010\005\020\006\"\334\013\n\tCondition\022A\n\004ho" +
+      "st\030\001 \001(\01323.yandex.cloud.smartcaptcha.v1." +
+      "Condition.HostMatcher\022?\n\003uri\030\002 \001(\01322.yan" +
+      "dex.cloud.smartcaptcha.v1.Condition.UriM" +
+      "atcher\022P\n\007headers\030\003 \003(\01325.yandex.cloud.s" +
+      "martcaptcha.v1.Condition.HeaderMatcherB\010" +
+      "\202\3101\004<=20\022D\n\tsource_ip\030\004 \001(\01321.yandex.clo" +
+      "ud.smartcaptcha.v1.Condition.IpMatcher\032\374" +
+      "\001\n\rStringMatcher\022 \n\013exact_match\030\001 \001(\tB\t\212" +
+      "\3101\0050-255H\000\022$\n\017exact_not_match\030\002 \001(\tB\t\212\3101" +
+      "\0050-255H\000\022!\n\014prefix_match\030\003 \001(\tB\t\212\3101\0050-25" +
+      "5H\000\022%\n\020prefix_not_match\030\004 \001(\tB\t\212\3101\0050-255" +
+      "H\000\022%\n\020pire_regex_match\030\005 \001(\tB\t\212\3101\0050-255H" +
+      "\000\022)\n\024pire_regex_not_match\030\006 \001(\tB\t\212\3101\0050-2" +
+      "55H\000B\007\n\005match\032]\n\013HostMatcher\022N\n\005hosts\030\001 " +
+      "\003(\01325.yandex.cloud.smartcaptcha.v1.Condi" +
+      "tion.StringMatcherB\010\202\3101\004<=20\032\242\001\n\nUriMatc" +
+      "her\022C\n\004path\030\001 \001(\01325.yandex.cloud.smartca" +
+      "ptcha.v1.Condition.StringMatcher\022O\n\007quer" +
+      "ies\030\002 \003(\01324.yandex.cloud.smartcaptcha.v1" +
+      ".Condition.QueryMatcherB\010\202\3101\004<=20\032v\n\014Que" +
+      "ryMatcher\022\032\n\003key\030\001 \001(\tB\r\212\3101\0051-255\350\3071\001\022J\n" +
+      "\005value\030\002 \001(\01325.yandex.cloud.smartcaptcha" +
+      ".v1.Condition.StringMatcherB\004\350\3071\001\032x\n\rHea" +
+      "derMatcher\022\033\n\004name\030\001 \001(\tB\r\212\3101\0051-255\350\3071\001\022" +
+      "J\n\005value\030\002 \001(\01325.yandex.cloud.smartcaptc" +
+      "ha.v1.Condition.StringMatcherB\004\350\3071\001\032\317\002\n\t" +
+      "IpMatcher\022P\n\017ip_ranges_match\030\001 \001(\01327.yan" +
+      "dex.cloud.smartcaptcha.v1.Condition.IpRa" +
+      "ngesMatcher\022T\n\023ip_ranges_not_match\030\002 \001(\013" +
+      "27.yandex.cloud.smartcaptcha.v1.Conditio" +
+      "n.IpRangesMatcher\022J\n\014geo_ip_match\030\003 \001(\0132" +
+      "4.yandex.cloud.smartcaptcha.v1.Condition" +
+      ".GeoIpMatcher\022N\n\020geo_ip_not_match\030\004 \001(\0132" +
+      "4.yandex.cloud.smartcaptcha.v1.Condition" +
+      ".GeoIpMatcher\0327\n\017IpRangesMatcher\022$\n\tip_r" +
+      "anges\030\001 \003(\tB\021\212\3101\002>0\202\3101\007<=10000\0323\n\014GeoIpM" +
+      "atcher\022#\n\tlocations\030\001 \003(\tB\020\212\3101\0012\202\3101\003>=1\220" +
+      "\3101\001\"&\n\020CaptchaSecretKey\022\022\n\nserver_key\030\001 " +
+      "\001(\t*g\n\021CaptchaComplexity\022\"\n\036CAPTCHA_COMP" +
+      "LEXITY_UNSPECIFIED\020\000\022\010\n\004EASY\020\001\022\n\n\006MEDIUM" +
+      "\020\002\022\010\n\004HARD\020\003\022\016\n\nFORCE_HARD\020\004*W\n\023CaptchaP" +
+      "reCheckType\022&\n\"CAPTCHA_PRE_CHECK_TYPE_UN" +
+      "SPECIFIED\020\000\022\014\n\010CHECKBOX\020\001\022\n\n\006SLIDER\020\002*q\n" +
+      "\024CaptchaChallengeType\022&\n\"CAPTCHA_CHALLEN" +
+      "GE_TYPE_UNSPECIFIED\020\000\022\016\n\nIMAGE_TEXT\020\001\022\017\n" +
+      "\013SILHOUETTES\020\002\022\020\n\014KALEIDOSCOPE\020\003Bq\n yand" +
+      "ex.cloud.api.smartcaptcha.v1ZMgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/s" +
+      "martcaptcha/v1;smartcaptchab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18024,7 +18084,7 @@ public final class CaptchaOuterClass {
     internal_static_yandex_cloud_smartcaptcha_v1_Captcha_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CloudId", "ClientKey", "CreatedAt", "Name", "AllowedSites", "Complexity", "StyleJson", "Suspend", "TurnOffHostnameCheck", "PreCheckType", "ChallengeType", "SecurityRules", "DeletionProtection", "OverrideVariants", "DisallowDataProcessing", "Description", "Labels", });
+        new java.lang.String[] { "FolderId", "ClientKey", "CreatedAt", "Name", "AllowedSites", "Complexity", "StyleJson", "CloudId", "Suspend", "TurnOffHostnameCheck", "PreCheckType", "ChallengeType", "SecurityRules", "Id", "DeletionProtection", "OverrideVariants", "DisallowDataProcessing", "Description", "Labels", });
     internal_static_yandex_cloud_smartcaptcha_v1_Captcha_LabelsEntry_descriptor =
       internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_smartcaptcha_v1_Captcha_LabelsEntry_fieldAccessorTable = new
@@ -18037,20 +18097,14 @@ public final class CaptchaOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_descriptor,
         new java.lang.String[] { "Uuid", "Description", "Complexity", "PreCheckType", "ChallengeType", });
-    internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor,
-        new java.lang.String[] { "ServerKey", });
     internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor,
         new java.lang.String[] { "Name", "Priority", "Description", "Condition", "OverrideVariantUuid", });
     internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_smartcaptcha_v1_Condition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor,
@@ -18103,6 +18157,12 @@ public final class CaptchaOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_descriptor,
         new java.lang.String[] { "Locations", });
+    internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor,
+        new java.lang.String[] { "ServerKey", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

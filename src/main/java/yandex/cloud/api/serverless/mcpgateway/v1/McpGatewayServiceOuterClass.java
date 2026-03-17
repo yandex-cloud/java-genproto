@@ -2995,7 +2995,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     java.util.List<yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool> 
         getToolsList();
@@ -3004,7 +3004,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool getTools(int index);
     /**
@@ -3012,7 +3012,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     int getToolsCount();
     /**
@@ -3020,7 +3020,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpToolOrBuilder> 
         getToolsOrBuilderList();
@@ -3029,7 +3029,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpToolOrBuilder getToolsOrBuilder(
         int index);
@@ -3522,7 +3522,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool> getToolsList() {
@@ -3533,7 +3533,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpToolOrBuilder> 
@@ -3545,7 +3545,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     @java.lang.Override
     public int getToolsCount() {
@@ -3556,7 +3556,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool getTools(int index) {
@@ -3567,7 +3567,7 @@ public final class McpGatewayServiceOuterClass {
      * List of MCP tools.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpToolOrBuilder getToolsOrBuilder(
@@ -4708,7 +4708,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool> getToolsList() {
         if (toolsBuilder_ == null) {
@@ -4722,7 +4722,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public int getToolsCount() {
         if (toolsBuilder_ == null) {
@@ -4736,7 +4736,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool getTools(int index) {
         if (toolsBuilder_ == null) {
@@ -4750,7 +4750,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder setTools(
           int index, yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool value) {
@@ -4771,7 +4771,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder setTools(
           int index, yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool.Builder builderForValue) {
@@ -4789,7 +4789,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder addTools(yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool value) {
         if (toolsBuilder_ == null) {
@@ -4809,7 +4809,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder addTools(
           int index, yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool value) {
@@ -4830,7 +4830,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder addTools(
           yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool.Builder builderForValue) {
@@ -4848,7 +4848,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder addTools(
           int index, yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool.Builder builderForValue) {
@@ -4866,7 +4866,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder addAllTools(
           java.lang.Iterable<? extends yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool> values) {
@@ -4885,7 +4885,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder clearTools() {
         if (toolsBuilder_ == null) {
@@ -4902,7 +4902,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public Builder removeTools(int index) {
         if (toolsBuilder_ == null) {
@@ -4919,7 +4919,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool.Builder getToolsBuilder(
           int index) {
@@ -4930,7 +4930,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpToolOrBuilder getToolsOrBuilder(
           int index) {
@@ -4944,7 +4944,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpToolOrBuilder> 
            getToolsOrBuilderList() {
@@ -4959,7 +4959,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool.Builder addToolsBuilder() {
         return getToolsFieldBuilder().addBuilder(
@@ -4970,7 +4970,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool.Builder addToolsBuilder(
           int index) {
@@ -4982,7 +4982,7 @@ public final class McpGatewayServiceOuterClass {
        * List of MCP tools.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.serverless.mcpgateway.v1.McpTool tools = 5;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.mcpgateway.v1.McpGatewayOuterClass.McpTool.Builder> 
            getToolsBuilderList() {
@@ -13413,7 +13413,7 @@ public final class McpGatewayServiceOuterClass {
       "\001(\t\"}\n\026ListMcpGatewayResponse\022J\n\010gateway" +
       "s\030\001 \003(\01328.yandex.cloud.serverless.mcpgat" +
       "eway.v1.McpGatewayPreview\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\271\004\n\027CreateMcpGatewayRequest\022\027" +
+      "oken\030\002 \001(\t\"\261\004\n\027CreateMcpGatewayRequest\022\027" +
       "\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022?\n\004name\030\002 \001(\tB1\350" +
       "\3071\001\212\3101\005<=128\362\3071 |[a-z]([-a-z0-9]{0,61}[a" +
       "-z0-9])?\022 \n\013description\030\003 \001(\tB\013\212\3101\007<=655" +
@@ -13421,92 +13421,92 @@ public final class McpGatewayServiceOuterClass {
       "rless.mcpgateway.v1.CreateMcpGatewayRequ" +
       "est.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_" +
       "./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@" +
-      "0-9a-z]*\022E\n\005tools\030\005 \003(\0132..yandex.cloud.s" +
-      "erverless.mcpgateway.v1.McpToolB\006\202\3101\002>0\022" +
+      "0-9a-z]*\022=\n\005tools\030\005 \003(\0132..yandex.cloud.s" +
+      "erverless.mcpgateway.v1.McpTool\022F\n\013log_o" +
+      "ptions\030\006 \001(\01321.yandex.cloud.serverless.m" +
+      "cpgateway.v1.LogOptions\022\032\n\022service_accou" +
+      "nt_id\030\007 \001(\t\022\022\n\nnetwork_id\030\010 \001(\t\022\016\n\006publi" +
+      "c\030\t \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"Q\n\030CreateMcpGatewayMetada" +
+      "ta\022\034\n\016mcp_gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfold" +
+      "er_id\030\002 \001(\tB\004\350\3071\001\"\343\004\n\027UpdateMcpGatewayRe" +
+      "quest\022\034\n\016mcp_gateway_id\030\001 \001(\tB\004\350\3071\001\022;\n\004n" +
+      "ame\030\002 \001(\tB-\212\3101\005<=128\362\3071 |[a-z]([-a-z0-9]" +
+      "{0,61}[a-z0-9])?\022 \n\013description\030\003 \001(\tB\013\212" +
+      "\3101\007<=65536\022\243\001\n\006labels\030\004 \003(\0132J.yandex.clo" +
+      "ud.serverless.mcpgateway.v1.UpdateMcpGat" +
+      "ewayRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z" +
+      "][-_./\\@0-9a-z]*\022=\n\005tools\030\005 \003(\0132..yandex" +
+      ".cloud.serverless.mcpgateway.v1.McpTool\022" +
       "F\n\013log_options\030\006 \001(\01321.yandex.cloud.serv" +
       "erless.mcpgateway.v1.LogOptions\022\032\n\022servi" +
       "ce_account_id\030\007 \001(\t\022\022\n\nnetwork_id\030\010 \001(\t\022" +
-      "\016\n\006public\030\t \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"Q\n\030CreateMcpGatew" +
-      "ayMetadata\022\034\n\016mcp_gateway_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\"\343\004\n\027UpdateMcpG" +
-      "atewayRequest\022\034\n\016mcp_gateway_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022;\n\004name\030\002 \001(\tB-\212\3101\005<=128\362\3071 |[a-z]([" +
-      "-a-z0-9]{0,61}[a-z0-9])?\022 \n\013description\030" +
-      "\003 \001(\tB\013\212\3101\007<=65536\022\243\001\n\006labels\030\004 \003(\0132J.ya" +
-      "ndex.cloud.serverless.mcpgateway.v1.Upda" +
-      "teMcpGatewayRequest.LabelsEntryBG\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\310" +
-      "1\026\022\024[a-z][-_./\\@0-9a-z]*\022=\n\005tools\030\005 \003(\0132" +
-      "..yandex.cloud.serverless.mcpgateway.v1." +
-      "McpTool\022F\n\013log_options\030\006 \001(\01321.yandex.cl" +
-      "oud.serverless.mcpgateway.v1.LogOptions\022" +
-      "\032\n\022service_account_id\030\007 \001(\t\022\022\n\nnetwork_i" +
-      "d\030\010 \001(\t\022/\n\013update_mask\030\t \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\022\016\n\006public\030\n \001(\010\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "Q\n\030UpdateMcpGatewayMetadata\022\034\n\016mcp_gatew" +
-      "ay_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\307" +
-      "1\001\"7\n\027DeleteMcpGatewayRequest\022\034\n\016mcp_gat" +
-      "eway_id\030\001 \001(\tB\004\350\3071\001\"8\n\030DeleteMcpGatewayM" +
-      "etadata\022\034\n\016mcp_gateway_id\030\001 \001(\tB\004\350\3071\001\"\217\001" +
-      "\n\025ListOperationsRequest\022\034\n\016mcp_gateway_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-" +
-      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
-      "ilter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOperation" +
-      "sResponse\0225\n\noperations\030\001 \003(\0132!.yandex.c" +
-      "loud.operation.Operation\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t2\304\016\n\021McpGatewayService\022\252\001\n\003Get\022" +
-      ";.yandex.cloud.serverless.mcpgateway.v1." +
-      "GetMcpGatewayRequest\0321.yandex.cloud.serv" +
-      "erless.mcpgateway.v1.McpGateway\"3\202\323\344\223\002-\022" +
-      "+/mcpgateway/v1/mcpGateways/{mcp_gateway" +
-      "_id}\022\247\001\n\004List\022<.yandex.cloud.serverless." +
-      "mcpgateway.v1.ListMcpGatewayRequest\032=.ya" +
-      "ndex.cloud.serverless.mcpgateway.v1.List" +
-      "McpGatewayResponse\"\"\202\323\344\223\002\034\022\032/mcpgateway/" +
-      "v1/mcpGateways\022\274\001\n\006Create\022>.yandex.cloud" +
-      ".serverless.mcpgateway.v1.CreateMcpGatew" +
-      "ayRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"O\202\323\344\223\002\037\"\032/mcpgateway/v1/mcpGateways" +
-      ":\001*\262\322*&\n\030CreateMcpGatewayMetadata\022\nMcpGa" +
-      "teway\022\315\001\n\006Update\022>.yandex.cloud.serverle" +
-      "ss.mcpgateway.v1.UpdateMcpGatewayRequest" +
-      "\032!.yandex.cloud.operation.Operation\"`\202\323\344" +
-      "\223\00202+/mcpgateway/v1/mcpGateways/{mcp_gat" +
-      "eway_id}:\001*\262\322*&\n\030UpdateMcpGatewayMetadat" +
-      "a\022\nMcpGateway\022\325\001\n\006Delete\022>.yandex.cloud." +
-      "serverless.mcpgateway.v1.DeleteMcpGatewa" +
-      "yRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"h\202\323\344\223\002-*+/mcpgateway/v1/mcpGateways/" +
-      "{mcp_gateway_id}\262\322*1\n\030DeleteMcpGatewayMe" +
-      "tadata\022\025google.protobuf.Empty\022\315\001\n\016ListOp" +
-      "erations\022<.yandex.cloud.serverless.mcpga" +
-      "teway.v1.ListOperationsRequest\032=.yandex." +
-      "cloud.serverless.mcpgateway.v1.ListOpera" +
-      "tionsResponse\">\202\323\344\223\0028\0226/mcpgateway/v1/mc" +
-      "pGateways/{mcp_gateway_id}/operations\022\272\001" +
-      "\n\022ListAccessBindings\022..yandex.cloud.acce" +
-      "ss.ListAccessBindingsRequest\032/.yandex.cl" +
-      "oud.access.ListAccessBindingsResponse\"C\202" +
-      "\323\344\223\002=\022;/mcpgateway/v1/mcpGateways/{resou" +
-      "rce_id}:listAccessBindings\022\352\001\n\021SetAccess" +
-      "Bindings\022-.yandex.cloud.access.SetAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\202\001\202\323\344\223\002?\":/mcpgateway/v1/mcpG" +
-      "ateways/{resource_id}:setAccessBindings:" +
-      "\001*\262\322*9\n access.SetAccessBindingsMetadata" +
-      "\022\025google.protobuf.Empty\022\366\001\n\024UpdateAccess" +
-      "Bindings\0220.yandex.cloud.access.UpdateAcc" +
-      "essBindingsRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\210\001\202\323\344\223\002B2=/mcpgateway/v1/m" +
-      "cpGateways/{resource_id}:updateAccessBin" +
-      "dings:\001*\262\322*<\n#access.UpdateAccessBinding" +
-      "sMetadata\022\025google.protobuf.EmptyB\201\001\n)yan" +
-      "dex.cloud.api.serverless.mcpgateway.v1ZT" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/serverless/mcpgateway/v1;mcpgat" +
-      "ewayb\006proto3"
+      "/\n\013update_mask\030\t \001(\0132\032.google.protobuf.F" +
+      "ieldMask\022\016\n\006public\030\n \001(\010\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"Q\n\030Updat" +
+      "eMcpGatewayMetadata\022\034\n\016mcp_gateway_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\"7\n\027De" +
+      "leteMcpGatewayRequest\022\034\n\016mcp_gateway_id\030" +
+      "\001 \001(\tB\004\350\3071\001\"8\n\030DeleteMcpGatewayMetadata\022" +
+      "\034\n\016mcp_gateway_id\030\001 \001(\tB\004\350\3071\001\"\217\001\n\025ListOp" +
+      "erationsRequest\022\034\n\016mcp_gateway_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 " +
+      "\001(\tB\n\212\3101\006<=1000\"h\n\026ListOperationsRespons" +
+      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
+      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
+      "\t2\304\016\n\021McpGatewayService\022\252\001\n\003Get\022;.yandex" +
+      ".cloud.serverless.mcpgateway.v1.GetMcpGa" +
+      "tewayRequest\0321.yandex.cloud.serverless.m" +
+      "cpgateway.v1.McpGateway\"3\202\323\344\223\002-\022+/mcpgat" +
+      "eway/v1/mcpGateways/{mcp_gateway_id}\022\247\001\n" +
+      "\004List\022<.yandex.cloud.serverless.mcpgatew" +
+      "ay.v1.ListMcpGatewayRequest\032=.yandex.clo" +
+      "ud.serverless.mcpgateway.v1.ListMcpGatew" +
+      "ayResponse\"\"\202\323\344\223\002\034\022\032/mcpgateway/v1/mcpGa" +
+      "teways\022\274\001\n\006Create\022>.yandex.cloud.serverl" +
+      "ess.mcpgateway.v1.CreateMcpGatewayReques" +
+      "t\032!.yandex.cloud.operation.Operation\"O\202\323" +
+      "\344\223\002\037\"\032/mcpgateway/v1/mcpGateways:\001*\262\322*&\n" +
+      "\030CreateMcpGatewayMetadata\022\nMcpGateway\022\315\001" +
+      "\n\006Update\022>.yandex.cloud.serverless.mcpga" +
+      "teway.v1.UpdateMcpGatewayRequest\032!.yande" +
+      "x.cloud.operation.Operation\"`\202\323\344\223\00202+/mc" +
+      "pgateway/v1/mcpGateways/{mcp_gateway_id}" +
+      ":\001*\262\322*&\n\030UpdateMcpGatewayMetadata\022\nMcpGa" +
+      "teway\022\325\001\n\006Delete\022>.yandex.cloud.serverle" +
+      "ss.mcpgateway.v1.DeleteMcpGatewayRequest" +
+      "\032!.yandex.cloud.operation.Operation\"h\202\323\344" +
+      "\223\002-*+/mcpgateway/v1/mcpGateways/{mcp_gat" +
+      "eway_id}\262\322*1\n\030DeleteMcpGatewayMetadata\022\025" +
+      "google.protobuf.Empty\022\315\001\n\016ListOperations" +
+      "\022<.yandex.cloud.serverless.mcpgateway.v1" +
+      ".ListOperationsRequest\032=.yandex.cloud.se" +
+      "rverless.mcpgateway.v1.ListOperationsRes" +
+      "ponse\">\202\323\344\223\0028\0226/mcpgateway/v1/mcpGateway" +
+      "s/{mcp_gateway_id}/operations\022\272\001\n\022ListAc" +
+      "cessBindings\022..yandex.cloud.access.ListA" +
+      "ccessBindingsRequest\032/.yandex.cloud.acce" +
+      "ss.ListAccessBindingsResponse\"C\202\323\344\223\002=\022;/" +
+      "mcpgateway/v1/mcpGateways/{resource_id}:" +
+      "listAccessBindings\022\352\001\n\021SetAccessBindings" +
+      "\022-.yandex.cloud.access.SetAccessBindings" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\202\001\202\323\344\223\002?\":/mcpgateway/v1/mcpGateways/" +
+      "{resource_id}:setAccessBindings:\001*\262\322*9\n " +
+      "access.SetAccessBindingsMetadata\022\025google" +
+      ".protobuf.Empty\022\366\001\n\024UpdateAccessBindings" +
+      "\0220.yandex.cloud.access.UpdateAccessBindi" +
+      "ngsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\210\001\202\323\344\223\002B2=/mcpgateway/v1/mcpGatewa" +
+      "ys/{resource_id}:updateAccessBindings:\001*" +
+      "\262\322*<\n#access.UpdateAccessBindingsMetadat" +
+      "a\022\025google.protobuf.EmptyB\201\001\n)yandex.clou" +
+      "d.api.serverless.mcpgateway.v1ZTgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/serverless/mcpgateway/v1;mcpgatewayb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

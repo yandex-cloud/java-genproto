@@ -13712,7 +13712,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -13720,7 +13720,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -13735,7 +13735,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -13744,7 +13744,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -13755,7 +13755,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -14113,7 +14113,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -14135,7 +14135,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -14147,7 +14147,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -14164,7 +14164,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -14821,7 +14821,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -14843,7 +14843,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -14855,7 +14855,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -14872,7 +14872,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -14897,7 +14897,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -14920,7 +14920,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -14939,7 +14939,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -16929,7 +16929,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getAdditionalPropertiesCount();
     /**
@@ -16937,7 +16937,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsAdditionalProperties(
         java.lang.String key);
@@ -16952,7 +16952,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getAdditionalPropertiesMap();
@@ -16961,7 +16961,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrDefault(
@@ -16972,7 +16972,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getAdditionalPropertiesOrThrow(
@@ -17152,7 +17152,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -17174,7 +17174,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -17186,7 +17186,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -17203,7 +17203,7 @@ public final class ClusterOuterClass {
      * Additional properties.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -17653,7 +17653,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -17675,7 +17675,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -17687,7 +17687,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -17704,7 +17704,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -17729,7 +17729,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeAdditionalProperties(
@@ -17752,7 +17752,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putAdditionalProperties(
           java.lang.String key,
@@ -17771,7 +17771,7 @@ public final class ClusterOuterClass {
        * Additional properties.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; additional_properties = 1 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ *]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllAdditionalProperties(
@@ -19872,41 +19872,41 @@ public final class ClusterOuterClass {
       "Policy\022>\n\013fixed_scale\030\001 \001(\0132\'.yandex.clo" +
       "ud.trino.v1.FixedScalePolicyH\000\022<\n\nauto_s" +
       "cale\030\002 \001(\0132&.yandex.cloud.trino.v1.AutoS" +
-      "calePolicyH\000B\022\n\nscale_type\022\004\300\3011\001\"\323\003\n\021Ret" +
+      "calePolicyH\000B\022\n\nscale_type\022\004\300\3011\001\"\324\003\n\021Ret" +
       "ryPolicyConfig\022D\n\006policy\030\001 \001(\01624.yandex." +
       "cloud.trino.v1.RetryPolicyConfig.RetryPo" +
       "licy\022F\n\020exchange_manager\030\002 \001(\0132,.yandex." +
-      "cloud.trino.v1.ExchangeManagerConfig\022\260\001\n" +
+      "cloud.trino.v1.ExchangeManagerConfig\022\261\001\n" +
       "\025additional_properties\030\003 \003(\0132B.yandex.cl" +
       "oud.trino.v1.RetryPolicyConfig.Additiona" +
-      "lPropertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025" +
-      "[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a" +
-      "-z][-_0-9a-z.]*\032;\n\031AdditionalPropertiesE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\013" +
-      "RetryPolicy\022\034\n\030RETRY_POLICY_UNSPECIFIED\020" +
-      "\000\022\t\n\005QUERY\020\001\022\010\n\004TASK\020\002\"@\n\tTLSConfig\0223\n\024t" +
-      "rusted_certificates\030\001 \003(\tB\025\202\3101\003<=8\212\3101\006<=" +
-      "8192\220\3101\001\"\202\001\n\026ExchangeManagerStorage\022M\n\ns" +
-      "ervice_s3\030\001 \001(\01327.yandex.cloud.trino.v1." +
-      "ExchangeManagerStorage.ServiceS3H\000\032\013\n\tSe" +
-      "rviceS3B\014\n\004type\022\004\300\3011\001\"\313\002\n\025ExchangeManage" +
-      "rConfig\022\264\001\n\025additional_properties\030\001 \003(\0132" +
-      "F.yandex.cloud.trino.v1.ExchangeManagerC" +
-      "onfig.AdditionalPropertiesEntryBM\202\3101\005<=2" +
-      "56\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007" +
-      "\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\022>\n\007storag" +
-      "e\030\002 \001(\0132-.yandex.cloud.trino.v1.Exchange" +
-      "ManagerStorage\032;\n\031AdditionalPropertiesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\tR" +
-      "esources\022(\n\022resource_preset_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\",\n\020FixedScalePolicy\022\030\n\005count\030" +
-      "\001 \001(\003B\t\372\3071\0051-512\"M\n\017AutoScalePolicy\022\034\n\tm" +
-      "in_count\030\001 \001(\003B\t\372\3071\0050-512\022\034\n\tmax_count\030\002" +
-      " \001(\003B\t\372\3071\0051-512*?\n\006Health\022\022\n\016HEALTH_UNKN" +
-      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003" +
-      "B\\\n\031yandex.cloud.api.trino.v1Z?github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "trino/v1;trinob\006proto3"
+      "lPropertiesEntryBN\202\3101\005<=256\212\3101\005<=128\362\3071\026" +
+      "[-_0-9a-zA-Z.,:\\/_ *]*\262\3101\007\032\0051-128\262\3101\023\022\021[" +
+      "a-z][-_0-9a-z.]*\032;\n\031AdditionalProperties" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n" +
+      "\013RetryPolicy\022\034\n\030RETRY_POLICY_UNSPECIFIED" +
+      "\020\000\022\t\n\005QUERY\020\001\022\010\n\004TASK\020\002\"@\n\tTLSConfig\0223\n\024" +
+      "trusted_certificates\030\001 \003(\tB\025\202\3101\003<=8\212\3101\006<" +
+      "=8192\220\3101\001\"\202\001\n\026ExchangeManagerStorage\022M\n\n" +
+      "service_s3\030\001 \001(\01327.yandex.cloud.trino.v1" +
+      ".ExchangeManagerStorage.ServiceS3H\000\032\013\n\tS" +
+      "erviceS3B\014\n\004type\022\004\300\3011\001\"\314\002\n\025ExchangeManag" +
+      "erConfig\022\265\001\n\025additional_properties\030\001 \003(\013" +
+      "2F.yandex.cloud.trino.v1.ExchangeManager" +
+      "Config.AdditionalPropertiesEntryBN\202\3101\005<=" +
+      "256\212\3101\005<=128\362\3071\026[-_0-9a-zA-Z.,:\\/_ *]*\262\310" +
+      "1\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\022>\n\007stor" +
+      "age\030\002 \001(\0132-.yandex.cloud.trino.v1.Exchan" +
+      "geManagerStorage\032;\n\031AdditionalProperties" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n" +
+      "\tResources\022(\n\022resource_preset_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\",\n\020FixedScalePolicy\022\030\n\005coun" +
+      "t\030\001 \001(\003B\t\372\3071\0051-512\"M\n\017AutoScalePolicy\022\034\n" +
+      "\tmin_count\030\001 \001(\003B\t\372\3071\0050-512\022\034\n\tmax_count" +
+      "\030\002 \001(\003B\t\372\3071\0051-512*?\n\006Health\022\022\n\016HEALTH_UN" +
+      "KNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED" +
+      "\020\003B\\\n\031yandex.cloud.api.trino.v1Z?github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/trino/v1;trinob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -220,6 +220,21 @@ public final class TransferServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+     * @return Whether the regularSnapshot field is set.
+     */
+    boolean hasRegularSnapshot();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+     * @return The regularSnapshot.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder();
+
+    /**
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 10;</code>
      * @return Whether the transformation field is set.
      */
@@ -376,6 +391,19 @@ public final class TransferServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder subBuilder = null;
+              if (regularSnapshot_ != null) {
+                subBuilder = regularSnapshot_.toBuilder();
+              }
+              regularSnapshot_ = input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(regularSnapshot_);
+                regularSnapshot_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 82: {
@@ -851,6 +879,32 @@ public final class TransferServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int REGULAR_SNAPSHOT_FIELD_NUMBER = 9;
+    private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot regularSnapshot_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+     * @return Whether the regularSnapshot field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegularSnapshot() {
+      return regularSnapshot_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+     * @return The regularSnapshot.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot() {
+      return regularSnapshot_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder() {
+      return getRegularSnapshot();
+    }
+
     public static final int TRANSFORMATION_FIELD_NUMBER = 10;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation transformation_;
     /**
@@ -970,6 +1024,9 @@ public final class TransferServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           8);
+      if (regularSnapshot_ != null) {
+        output.writeMessage(9, getRegularSnapshot());
+      }
       if (transformation_ != null) {
         output.writeMessage(10, getTransformation());
       }
@@ -1021,6 +1078,10 @@ public final class TransferServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(8, labels__);
       }
+      if (regularSnapshot_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getRegularSnapshot());
+      }
       if (transformation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getTransformation());
@@ -1066,6 +1127,11 @@ public final class TransferServiceOuterClass {
           .equals(other.getName())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasRegularSnapshot() != other.hasRegularSnapshot()) return false;
+      if (hasRegularSnapshot()) {
+        if (!getRegularSnapshot()
+            .equals(other.getRegularSnapshot())) return false;
+      }
       if (hasTransformation() != other.hasTransformation()) return false;
       if (hasTransformation()) {
         if (!getTransformation()
@@ -1111,6 +1177,10 @@ public final class TransferServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasRegularSnapshot()) {
+        hash = (37 * hash) + REGULAR_SNAPSHOT_FIELD_NUMBER;
+        hash = (53 * hash) + getRegularSnapshot().hashCode();
       }
       if (hasTransformation()) {
         hash = (37 * hash) + TRANSFORMATION_FIELD_NUMBER;
@@ -1298,6 +1368,12 @@ public final class TransferServiceOuterClass {
         name_ = "";
 
         internalGetMutableLabels().clear();
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = null;
+        } else {
+          regularSnapshot_ = null;
+          regularSnapshotBuilder_ = null;
+        }
         if (transformationBuilder_ == null) {
           transformation_ = null;
         } else {
@@ -1356,6 +1432,11 @@ public final class TransferServiceOuterClass {
         result.name_ = name_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (regularSnapshotBuilder_ == null) {
+          result.regularSnapshot_ = regularSnapshot_;
+        } else {
+          result.regularSnapshot_ = regularSnapshotBuilder_.build();
+        }
         if (transformationBuilder_ == null) {
           result.transformation_ = transformation_;
         } else {
@@ -1447,6 +1528,9 @@ public final class TransferServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasRegularSnapshot()) {
+          mergeRegularSnapshot(other.getRegularSnapshot());
+        }
         if (other.hasTransformation()) {
           mergeTransformation(other.getTransformation());
         }
@@ -2332,6 +2416,125 @@ public final class TransferServiceOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot regularSnapshot_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder> regularSnapshotBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       * @return Whether the regularSnapshot field is set.
+       */
+      public boolean hasRegularSnapshot() {
+        return regularSnapshotBuilder_ != null || regularSnapshot_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       * @return The regularSnapshot.
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot() {
+        if (regularSnapshotBuilder_ == null) {
+          return regularSnapshot_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+        } else {
+          return regularSnapshotBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       */
+      public Builder setRegularSnapshot(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot value) {
+        if (regularSnapshotBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          regularSnapshot_ = value;
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       */
+      public Builder setRegularSnapshot(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder builderForValue) {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = builderForValue.build();
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       */
+      public Builder mergeRegularSnapshot(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot value) {
+        if (regularSnapshotBuilder_ == null) {
+          if (regularSnapshot_ != null) {
+            regularSnapshot_ =
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.newBuilder(regularSnapshot_).mergeFrom(value).buildPartial();
+          } else {
+            regularSnapshot_ = value;
+          }
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       */
+      public Builder clearRegularSnapshot() {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = null;
+          onChanged();
+        } else {
+          regularSnapshot_ = null;
+          regularSnapshotBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder getRegularSnapshotBuilder() {
+        
+        onChanged();
+        return getRegularSnapshotFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder() {
+        if (regularSnapshotBuilder_ != null) {
+          return regularSnapshotBuilder_.getMessageOrBuilder();
+        } else {
+          return regularSnapshot_ == null ?
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder> 
+          getRegularSnapshotFieldBuilder() {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder>(
+                  getRegularSnapshot(),
+                  getParentForChildren(),
+                  isClean());
+          regularSnapshot_ = null;
+        }
+        return regularSnapshotBuilder_;
       }
 
       private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation transformation_;
@@ -3499,6 +3702,21 @@ public final class TransferServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+     * @return Whether the regularSnapshot field is set.
+     */
+    boolean hasRegularSnapshot();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+     * @return The regularSnapshot.
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder();
+
+    /**
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 8;</code>
      * @return Whether the transformation field is set.
      */
@@ -3647,6 +3865,19 @@ public final class TransferServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder subBuilder = null;
+              if (regularSnapshot_ != null) {
+                subBuilder = regularSnapshot_.toBuilder();
+              }
+              regularSnapshot_ = input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(regularSnapshot_);
+                regularSnapshot_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 66: {
@@ -4055,6 +4286,32 @@ public final class TransferServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int REGULAR_SNAPSHOT_FIELD_NUMBER = 7;
+    private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot regularSnapshot_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+     * @return Whether the regularSnapshot field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegularSnapshot() {
+      return regularSnapshot_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+     * @return The regularSnapshot.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot() {
+      return regularSnapshot_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder() {
+      return getRegularSnapshot();
+    }
+
     public static final int TRANSFORMATION_FIELD_NUMBER = 8;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation transformation_;
     /**
@@ -4168,6 +4425,9 @@ public final class TransferServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
+      if (regularSnapshot_ != null) {
+        output.writeMessage(7, getRegularSnapshot());
+      }
       if (transformation_ != null) {
         output.writeMessage(8, getTransformation());
       }
@@ -4212,6 +4472,10 @@ public final class TransferServiceOuterClass {
             .build();
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
+      }
+      if (regularSnapshot_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getRegularSnapshot());
       }
       if (transformation_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -4258,6 +4522,11 @@ public final class TransferServiceOuterClass {
       }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasRegularSnapshot() != other.hasRegularSnapshot()) return false;
+      if (hasRegularSnapshot()) {
+        if (!getRegularSnapshot()
+            .equals(other.getRegularSnapshot())) return false;
+      }
       if (hasTransformation() != other.hasTransformation()) return false;
       if (hasTransformation()) {
         if (!getTransformation()
@@ -4301,6 +4570,10 @@ public final class TransferServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasRegularSnapshot()) {
+        hash = (37 * hash) + REGULAR_SNAPSHOT_FIELD_NUMBER;
+        hash = (53 * hash) + getRegularSnapshot().hashCode();
       }
       if (hasTransformation()) {
         hash = (37 * hash) + TRANSFORMATION_FIELD_NUMBER;
@@ -4488,6 +4761,12 @@ public final class TransferServiceOuterClass {
           updateMaskBuilder_ = null;
         }
         internalGetMutableLabels().clear();
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = null;
+        } else {
+          regularSnapshot_ = null;
+          regularSnapshotBuilder_ = null;
+        }
         if (transformationBuilder_ == null) {
           transformation_ = null;
         } else {
@@ -4548,6 +4827,11 @@ public final class TransferServiceOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (regularSnapshotBuilder_ == null) {
+          result.regularSnapshot_ = regularSnapshot_;
+        } else {
+          result.regularSnapshot_ = regularSnapshotBuilder_.build();
+        }
         if (transformationBuilder_ == null) {
           result.transformation_ = transformation_;
         } else {
@@ -4631,6 +4915,9 @@ public final class TransferServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasRegularSnapshot()) {
+          mergeRegularSnapshot(other.getRegularSnapshot());
+        }
         if (other.hasTransformation()) {
           mergeTransformation(other.getTransformation());
         }
@@ -5446,6 +5733,125 @@ public final class TransferServiceOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot regularSnapshot_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder> regularSnapshotBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       * @return Whether the regularSnapshot field is set.
+       */
+      public boolean hasRegularSnapshot() {
+        return regularSnapshotBuilder_ != null || regularSnapshot_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       * @return The regularSnapshot.
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot getRegularSnapshot() {
+        if (regularSnapshotBuilder_ == null) {
+          return regularSnapshot_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+        } else {
+          return regularSnapshotBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       */
+      public Builder setRegularSnapshot(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot value) {
+        if (regularSnapshotBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          regularSnapshot_ = value;
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       */
+      public Builder setRegularSnapshot(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder builderForValue) {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = builderForValue.build();
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       */
+      public Builder mergeRegularSnapshot(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot value) {
+        if (regularSnapshotBuilder_ == null) {
+          if (regularSnapshot_ != null) {
+            regularSnapshot_ =
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.newBuilder(regularSnapshot_).mergeFrom(value).buildPartial();
+          } else {
+            regularSnapshot_ = value;
+          }
+          onChanged();
+        } else {
+          regularSnapshotBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       */
+      public Builder clearRegularSnapshot() {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshot_ = null;
+          onChanged();
+        } else {
+          regularSnapshot_ = null;
+          regularSnapshotBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder getRegularSnapshotBuilder() {
+        
+        onChanged();
+        return getRegularSnapshotFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder getRegularSnapshotOrBuilder() {
+        if (regularSnapshotBuilder_ != null) {
+          return regularSnapshotBuilder_.getMessageOrBuilder();
+        } else {
+          return regularSnapshot_ == null ?
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.getDefaultInstance() : regularSnapshot_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.RegularSnapshot regular_snapshot = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder> 
+          getRegularSnapshotFieldBuilder() {
+        if (regularSnapshotBuilder_ == null) {
+          regularSnapshotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshot.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RegularSnapshotOrBuilder>(
+                  getRegularSnapshot(),
+                  getParentForChildren(),
+                  isClean());
+          regularSnapshot_ = null;
+        }
+        return regularSnapshotBuilder_;
       }
 
       private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation transformation_;
@@ -12833,7 +13239,7 @@ public final class TransferServiceOuterClass {
       "e/protobuf/field_mask.proto\032+yandex/clou" +
       "d/datatransfer/v1/transfer.proto\032 yandex" +
       "/cloud/api/operation.proto\032&yandex/cloud" +
-      "/operation/operation.proto\"\302\004\n\025CreateTra" +
+      "/operation/operation.proto\"\205\005\n\025CreateTra" +
       "nsferRequest\022\021\n\tsource_id\030\001 \001(\t\022\021\n\ttarge" +
       "t_id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolde" +
       "r_id\030\004 \001(\t\0226\n\007runtime\030\005 \001(\0132%.yandex.clo" +
@@ -12841,77 +13247,80 @@ public final class TransferServiceOuterClass {
       "2*.yandex.cloud.datatransfer.v1.Transfer" +
       "Type\022\014\n\004name\030\007 \001(\t\022O\n\006labels\030\010 \003(\0132?.yan" +
       "dex.cloud.datatransfer.v1.CreateTransfer" +
-      "Request.LabelsEntry\022D\n\016transformation\030\n " +
-      "\001(\0132,.yandex.cloud.datatransfer.v1.Trans" +
-      "formation\022?\n\014data_objects\030\014 \001(\0132).yandex" +
-      ".cloud.datatransfer.v1.DataObjects\022B\n\023re" +
-      "plication_runtime\030\020 \001(\0132%.yandex.cloud.d" +
-      "atatransfer.v1.Runtime\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\nJ\004\010\013\020" +
-      "\014J\004\010\r\020\020\"-\n\026CreateTransferMetadata\022\023\n\013tra" +
-      "nsfer_id\030\001 \001(\t\"\225\004\n\025UpdateTransferRequest" +
-      "\022\023\n\013transfer_id\030\001 \001(\t\022\023\n\013description\030\002 \001" +
-      "(\t\0226\n\007runtime\030\003 \001(\0132%.yandex.cloud.datat" +
-      "ransfer.v1.Runtime\022\014\n\004name\030\004 \001(\t\022/\n\013upda" +
-      "te_mask\030\005 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\022O\n\006labels\030\006 \003(\0132?.yandex.cloud.datatra" +
-      "nsfer.v1.UpdateTransferRequest.LabelsEnt" +
-      "ry\022D\n\016transformation\030\010 \001(\0132,.yandex.clou" +
-      "d.datatransfer.v1.Transformation\022?\n\014data" +
-      "_objects\030\n \001(\0132).yandex.cloud.datatransf" +
-      "er.v1.DataObjects\022B\n\023replication_runtime" +
-      "\030\014 \001(\0132%.yandex.cloud.datatransfer.v1.Ru" +
-      "ntime\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001J\004\010\007\020\010J\004\010\t\020\nJ\004\010\013\020\014\"-\n\026Update" +
-      "TransferMetadata\022\023\n\013transfer_id\030\001 \001(\t\",\n" +
-      "\025DeleteTransferRequest\022\023\n\013transfer_id\030\001 " +
-      "\001(\t\"-\n\026DeleteTransferMetadata\022\023\n\013transfe" +
-      "r_id\030\001 \001(\t\"V\n\024ListTransfersRequest\022\021\n\tfo" +
-      "lder_id\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\003\022\022\n\npage" +
-      "_token\030\004 \001(\tJ\004\010\001\020\002\"k\n\025ListTransfersRespo" +
-      "nse\0229\n\ttransfers\030\001 \003(\0132&.yandex.cloud.da" +
-      "tatransfer.v1.Transfer\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\")\n\022GetTransferRequest\022\023\n\013transfe" +
-      "r_id\030\001 \001(\t\"0\n\031DeactivateTransferRequest\022" +
-      "\023\n\013transfer_id\030\001 \001(\t\"1\n\032DeactivateTransf" +
-      "erMetadata\022\023\n\013transfer_id\030\001 \001(\t\".\n\027Activ" +
-      "ateTransferRequest\022\023\n\013transfer_id\030\001 \001(\t\"" +
-      "/\n\030ActivateTransferMetadata\022\023\n\013transfer_" +
-      "id\030\001 \001(\t2\335\t\n\017TransferService\022\237\001\n\006Create\022" +
-      "3.yandex.cloud.datatransfer.v1.CreateTra" +
-      "nsferRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"=\202\323\344\223\002\021\"\014/v1/transfer:\001*\262\322*\"\n\026Cr" +
-      "eateTransferMetadata\022\010Transfer\022\255\001\n\006Updat" +
-      "e\0223.yandex.cloud.datatransfer.v1.UpdateT" +
+      "Request.LabelsEntry\022G\n\020regular_snapshot\030" +
+      "\t \001(\0132-.yandex.cloud.datatransfer.v1.Reg" +
+      "ularSnapshot\022D\n\016transformation\030\n \001(\0132,.y" +
+      "andex.cloud.datatransfer.v1.Transformati" +
+      "on\022?\n\014data_objects\030\014 \001(\0132).yandex.cloud." +
+      "datatransfer.v1.DataObjects\022B\n\023replicati" +
+      "on_runtime\030\020 \001(\0132%.yandex.cloud.datatran" +
+      "sfer.v1.Runtime\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\013\020\014J\004\010\r\020\020\"-\n\026Cr" +
+      "eateTransferMetadata\022\023\n\013transfer_id\030\001 \001(" +
+      "\t\"\330\004\n\025UpdateTransferRequest\022\023\n\013transfer_" +
+      "id\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\0226\n\007runtime" +
+      "\030\003 \001(\0132%.yandex.cloud.datatransfer.v1.Ru" +
+      "ntime\022\014\n\004name\030\004 \001(\t\022/\n\013update_mask\030\005 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022O\n\006labels\030\006" +
+      " \003(\0132?.yandex.cloud.datatransfer.v1.Upda" +
+      "teTransferRequest.LabelsEntry\022G\n\020regular" +
+      "_snapshot\030\007 \001(\0132-.yandex.cloud.datatrans" +
+      "fer.v1.RegularSnapshot\022D\n\016transformation" +
+      "\030\010 \001(\0132,.yandex.cloud.datatransfer.v1.Tr" +
+      "ansformation\022?\n\014data_objects\030\n \001(\0132).yan" +
+      "dex.cloud.datatransfer.v1.DataObjects\022B\n" +
+      "\023replication_runtime\030\014 \001(\0132%.yandex.clou" +
+      "d.datatransfer.v1.Runtime\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\nJ\004" +
+      "\010\013\020\014\"-\n\026UpdateTransferMetadata\022\023\n\013transf" +
+      "er_id\030\001 \001(\t\",\n\025DeleteTransferRequest\022\023\n\013" +
+      "transfer_id\030\001 \001(\t\"-\n\026DeleteTransferMetad" +
+      "ata\022\023\n\013transfer_id\030\001 \001(\t\"V\n\024ListTransfer" +
+      "sRequest\022\021\n\tfolder_id\030\002 \001(\t\022\021\n\tpage_size" +
+      "\030\003 \001(\003\022\022\n\npage_token\030\004 \001(\tJ\004\010\001\020\002\"k\n\025List" +
+      "TransfersResponse\0229\n\ttransfers\030\001 \003(\0132&.y" +
+      "andex.cloud.datatransfer.v1.Transfer\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\")\n\022GetTransferRequ" +
+      "est\022\023\n\013transfer_id\030\001 \001(\t\"0\n\031DeactivateTr" +
+      "ansferRequest\022\023\n\013transfer_id\030\001 \001(\t\"1\n\032De" +
+      "activateTransferMetadata\022\023\n\013transfer_id\030" +
+      "\001 \001(\t\".\n\027ActivateTransferRequest\022\023\n\013tran" +
+      "sfer_id\030\001 \001(\t\"/\n\030ActivateTransferMetadat" +
+      "a\022\023\n\013transfer_id\030\001 \001(\t2\335\t\n\017TransferServi" +
+      "ce\022\237\001\n\006Create\0223.yandex.cloud.datatransfe" +
+      "r.v1.CreateTransferRequest\032!.yandex.clou" +
+      "d.operation.Operation\"=\202\323\344\223\002\021\"\014/v1/trans" +
+      "fer:\001*\262\322*\"\n\026CreateTransferMetadata\022\010Tran" +
+      "sfer\022\255\001\n\006Update\0223.yandex.cloud.datatrans" +
+      "fer.v1.UpdateTransferRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"K\202\323\344\223\002\0372\032/v1/tra" +
+      "nsfer/{transfer_id}:\001*\262\322*\"\n\026UpdateTransf" +
+      "erMetadata\022\010Transfer\022\267\001\n\006Delete\0223.yandex" +
+      ".cloud.datatransfer.v1.DeleteTransferReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "U\202\323\344\223\002\034*\032/v1/transfer/{transfer_id}\262\322*/\n" +
+      "\026DeleteTransferMetadata\022\025google.protobuf" +
+      ".Empty\022\227\001\n\004List\0222.yandex.cloud.datatrans" +
+      "fer.v1.ListTransfersRequest\0323.yandex.clo" +
+      "ud.datatransfer.v1.ListTransfersResponse" +
+      "\"&\202\323\344\223\002 \022\036/v1/transfers/list/{folder_id}" +
+      "\022\203\001\n\003Get\0220.yandex.cloud.datatransfer.v1." +
+      "GetTransferRequest\032&.yandex.cloud.datatr" +
+      "ansfer.v1.Transfer\"\"\202\323\344\223\002\034\022\032/v1/transfer" +
+      "/{transfer_id}\022\321\001\n\nDeactivate\0227.yandex.c" +
+      "loud.datatransfer.v1.DeactivateTransferR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"g\202\323\344\223\002*\"%/v1/transfer/{transfer_id}:de" +
+      "activate:\001*\262\322*3\n\032DeactivateTransferMetad" +
+      "ata\022\025google.protobuf.Empty\022\311\001\n\010Activate\022" +
+      "5.yandex.cloud.datatransfer.v1.ActivateT" +
       "ransferRequest\032!.yandex.cloud.operation." +
-      "Operation\"K\202\323\344\223\002\0372\032/v1/transfer/{transfe" +
-      "r_id}:\001*\262\322*\"\n\026UpdateTransferMetadata\022\010Tr" +
-      "ansfer\022\267\001\n\006Delete\0223.yandex.cloud.datatra" +
-      "nsfer.v1.DeleteTransferRequest\032!.yandex." +
-      "cloud.operation.Operation\"U\202\323\344\223\002\034*\032/v1/t" +
-      "ransfer/{transfer_id}\262\322*/\n\026DeleteTransfe" +
-      "rMetadata\022\025google.protobuf.Empty\022\227\001\n\004Lis" +
-      "t\0222.yandex.cloud.datatransfer.v1.ListTra" +
-      "nsfersRequest\0323.yandex.cloud.datatransfe" +
-      "r.v1.ListTransfersResponse\"&\202\323\344\223\002 \022\036/v1/" +
-      "transfers/list/{folder_id}\022\203\001\n\003Get\0220.yan" +
-      "dex.cloud.datatransfer.v1.GetTransferReq" +
-      "uest\032&.yandex.cloud.datatransfer.v1.Tran" +
-      "sfer\"\"\202\323\344\223\002\034\022\032/v1/transfer/{transfer_id}" +
-      "\022\321\001\n\nDeactivate\0227.yandex.cloud.datatrans" +
-      "fer.v1.DeactivateTransferRequest\032!.yande" +
-      "x.cloud.operation.Operation\"g\202\323\344\223\002*\"%/v1" +
-      "/transfer/{transfer_id}:deactivate:\001*\262\322*" +
-      "3\n\032DeactivateTransferMetadata\022\025google.pr" +
-      "otobuf.Empty\022\311\001\n\010Activate\0225.yandex.cloud" +
-      ".datatransfer.v1.ActivateTransferRequest" +
-      "\032!.yandex.cloud.operation.Operation\"c\202\323\344" +
-      "\223\002(\"#/v1/transfer/{transfer_id}:activate" +
-      ":\001*\262\322*1\n\030ActivateTransferMetadata\022\025googl" +
-      "e.protobuf.EmptyBq\n yandex.cloud.api.dat" +
-      "atransfer.v1ZMgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/datatransfer/v1;d" +
-      "atatransferb\006proto3"
+      "Operation\"c\202\323\344\223\002(\"#/v1/transfer/{transfe" +
+      "r_id}:activate:\001*\262\322*1\n\030ActivateTransferM" +
+      "etadata\022\025google.protobuf.EmptyBq\n yandex" +
+      ".cloud.api.datatransfer.v1ZMgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/dat" +
+      "atransfer/v1;datatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12927,7 +13336,7 @@ public final class TransferServiceOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor,
-        new java.lang.String[] { "SourceId", "TargetId", "Description", "FolderId", "Runtime", "Type", "Name", "Labels", "Transformation", "DataObjects", "ReplicationRuntime", });
+        new java.lang.String[] { "SourceId", "TargetId", "Description", "FolderId", "Runtime", "Type", "Name", "Labels", "RegularSnapshot", "Transformation", "DataObjects", "ReplicationRuntime", });
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_fieldAccessorTable = new
@@ -12945,7 +13354,7 @@ public final class TransferServiceOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor,
-        new java.lang.String[] { "TransferId", "Description", "Runtime", "Name", "UpdateMask", "Labels", "Transformation", "DataObjects", "ReplicationRuntime", });
+        new java.lang.String[] { "TransferId", "Description", "Runtime", "Name", "UpdateMask", "Labels", "RegularSnapshot", "Transformation", "DataObjects", "ReplicationRuntime", });
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_fieldAccessorTable = new

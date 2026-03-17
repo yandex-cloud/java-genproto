@@ -297,6 +297,68 @@ public final class MfaEnforcementServiceGrpc {
     return getListAudienceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateExcludedAudienceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateExcludedAudience",
+      requestType = yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateExcludedAudienceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateExcludedAudienceMethod;
+    if ((getUpdateExcludedAudienceMethod = MfaEnforcementServiceGrpc.getUpdateExcludedAudienceMethod) == null) {
+      synchronized (MfaEnforcementServiceGrpc.class) {
+        if ((getUpdateExcludedAudienceMethod = MfaEnforcementServiceGrpc.getUpdateExcludedAudienceMethod) == null) {
+          MfaEnforcementServiceGrpc.getUpdateExcludedAudienceMethod = getUpdateExcludedAudienceMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateExcludedAudience"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new MfaEnforcementServiceMethodDescriptorSupplier("UpdateExcludedAudience"))
+              .build();
+        }
+      }
+    }
+    return getUpdateExcludedAudienceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest,
+      yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse> getListExcludedAudienceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListExcludedAudience",
+      requestType = yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.class,
+      responseType = yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest,
+      yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse> getListExcludedAudienceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse> getListExcludedAudienceMethod;
+    if ((getListExcludedAudienceMethod = MfaEnforcementServiceGrpc.getListExcludedAudienceMethod) == null) {
+      synchronized (MfaEnforcementServiceGrpc.class) {
+        if ((getListExcludedAudienceMethod = MfaEnforcementServiceGrpc.getListExcludedAudienceMethod) == null) {
+          MfaEnforcementServiceGrpc.getListExcludedAudienceMethod = getListExcludedAudienceMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListExcludedAudience"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MfaEnforcementServiceMethodDescriptorSupplier("ListExcludedAudience"))
+              .build();
+        }
+      }
+    }
+    return getListExcludedAudienceMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -438,6 +500,26 @@ public final class MfaEnforcementServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAudienceMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * updates specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public void updateExcludedAudience(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateExcludedAudienceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * returns specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public void listExcludedAudience(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListExcludedAudienceMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -503,6 +585,20 @@ public final class MfaEnforcementServiceGrpc {
                 yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListAudienceRequest,
                 yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListAudienceResponse>(
                   this, METHODID_LIST_AUDIENCE)))
+          .addMethod(
+            getUpdateExcludedAudienceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_EXCLUDED_AUDIENCE)))
+          .addMethod(
+            getListExcludedAudienceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest,
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse>(
+                  this, METHODID_LIST_EXCLUDED_AUDIENCE)))
           .build();
     }
   }
@@ -622,6 +718,28 @@ public final class MfaEnforcementServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAudienceMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * updates specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public void updateExcludedAudience(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateExcludedAudienceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * returns specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public void listExcludedAudience(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListExcludedAudienceMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -729,6 +847,26 @@ public final class MfaEnforcementServiceGrpc {
     public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListAudienceResponse listAudience(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListAudienceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAudienceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * updates specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateExcludedAudience(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateExcludedAudienceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * returns specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse listExcludedAudience(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListExcludedAudienceMethod(), getCallOptions(), request);
     }
   }
 
@@ -847,6 +985,28 @@ public final class MfaEnforcementServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAudienceMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * updates specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateExcludedAudience(
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateExcludedAudienceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * returns specified MFA enforcement's excluded audience
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse> listExcludedAudience(
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListExcludedAudienceMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
@@ -858,6 +1018,8 @@ public final class MfaEnforcementServiceGrpc {
   private static final int METHODID_LIST = 6;
   private static final int METHODID_UPDATE_AUDIENCE = 7;
   private static final int METHODID_LIST_AUDIENCE = 8;
+  private static final int METHODID_UPDATE_EXCLUDED_AUDIENCE = 9;
+  private static final int METHODID_LIST_EXCLUDED_AUDIENCE = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -911,6 +1073,14 @@ public final class MfaEnforcementServiceGrpc {
         case METHODID_LIST_AUDIENCE:
           serviceImpl.listAudience((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListAudienceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListAudienceResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_EXCLUDED_AUDIENCE:
+          serviceImpl.updateExcludedAudience((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_EXCLUDED_AUDIENCE:
+          serviceImpl.listExcludedAudience((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -982,6 +1152,8 @@ public final class MfaEnforcementServiceGrpc {
               .addMethod(getListMethod())
               .addMethod(getUpdateAudienceMethod())
               .addMethod(getListAudienceMethod())
+              .addMethod(getUpdateExcludedAudienceMethod())
+              .addMethod(getListExcludedAudienceMethod())
               .build();
         }
       }

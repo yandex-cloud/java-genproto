@@ -40,7 +40,7 @@ public final class MfaEnforcementServiceOuterClass {
 
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -50,7 +50,7 @@ public final class MfaEnforcementServiceOuterClass {
     java.lang.String getAcrId();
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -62,7 +62,7 @@ public final class MfaEnforcementServiceOuterClass {
 
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -72,7 +72,7 @@ public final class MfaEnforcementServiceOuterClass {
     boolean hasTtl();
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -82,7 +82,7 @@ public final class MfaEnforcementServiceOuterClass {
     com.google.protobuf.Duration getTtl();
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -545,7 +545,7 @@ public final class MfaEnforcementServiceOuterClass {
     private volatile java.lang.Object acrId_;
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -567,7 +567,7 @@ public final class MfaEnforcementServiceOuterClass {
     }
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -593,7 +593,7 @@ public final class MfaEnforcementServiceOuterClass {
     private com.google.protobuf.Duration ttl_;
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -606,7 +606,7 @@ public final class MfaEnforcementServiceOuterClass {
     }
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -619,7 +619,7 @@ public final class MfaEnforcementServiceOuterClass {
     }
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -1383,7 +1383,7 @@ public final class MfaEnforcementServiceOuterClass {
       private java.lang.Object acrId_ = "";
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -1404,7 +1404,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -1426,7 +1426,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -1446,7 +1446,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -1461,7 +1461,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -1486,7 +1486,7 @@ public final class MfaEnforcementServiceOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> ttlBuilder_;
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1498,7 +1498,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1514,7 +1514,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1535,7 +1535,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1554,7 +1554,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1577,7 +1577,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1596,7 +1596,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1609,7 +1609,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -1625,7 +1625,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -3089,7 +3089,7 @@ public final class MfaEnforcementServiceOuterClass {
 
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -3099,7 +3099,7 @@ public final class MfaEnforcementServiceOuterClass {
     java.lang.String getAcrId();
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -3111,7 +3111,7 @@ public final class MfaEnforcementServiceOuterClass {
 
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -3121,7 +3121,7 @@ public final class MfaEnforcementServiceOuterClass {
     boolean hasTtl();
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -3131,7 +3131,7 @@ public final class MfaEnforcementServiceOuterClass {
     com.google.protobuf.Duration getTtl();
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -3634,7 +3634,7 @@ public final class MfaEnforcementServiceOuterClass {
     private volatile java.lang.Object acrId_;
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -3656,7 +3656,7 @@ public final class MfaEnforcementServiceOuterClass {
     }
     /**
      * <pre>
-     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+     * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
      * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
      * </pre>
      *
@@ -3682,7 +3682,7 @@ public final class MfaEnforcementServiceOuterClass {
     private com.google.protobuf.Duration ttl_;
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -3695,7 +3695,7 @@ public final class MfaEnforcementServiceOuterClass {
     }
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -3708,7 +3708,7 @@ public final class MfaEnforcementServiceOuterClass {
     }
     /**
      * <pre>
-     * the period during which the entered MFA factor will be considered valid and the 
+     * the period during which the entered MFA factor will be considered valid and the
      * corresponding acr will be regarded as satisfied
      * </pre>
      *
@@ -4540,7 +4540,7 @@ public final class MfaEnforcementServiceOuterClass {
       private java.lang.Object acrId_ = "";
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -4561,7 +4561,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -4583,7 +4583,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -4603,7 +4603,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -4618,7 +4618,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr', 
+       * acr id for the MFA enforcement. one of 'any-mfa' or 'phr',
        * specification https://yandex.cloud/en/docs/organization/concepts/mfa?utm_referrer=https%3A%2F%2Fa.yandex-team.ru%2F#mfa-factors
        * </pre>
        *
@@ -4643,7 +4643,7 @@ public final class MfaEnforcementServiceOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> ttlBuilder_;
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4655,7 +4655,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4671,7 +4671,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4692,7 +4692,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4711,7 +4711,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4734,7 +4734,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4753,7 +4753,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4766,7 +4766,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -4782,7 +4782,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * the period during which the entered MFA factor will be considered valid and the 
+       * the period during which the entered MFA factor will be considered valid and the
        * corresponding acr will be regarded as satisfied
        * </pre>
        *
@@ -10423,7 +10423,7 @@ public final class MfaEnforcementServiceOuterClass {
 
     /**
      * <pre>
-     * organization id 
+     * organization id
      * </pre>
      *
      * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10432,7 +10432,7 @@ public final class MfaEnforcementServiceOuterClass {
     java.lang.String getOrganizationId();
     /**
      * <pre>
-     * organization id 
+     * organization id
      * </pre>
      *
      * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10571,7 +10571,7 @@ public final class MfaEnforcementServiceOuterClass {
     private volatile java.lang.Object organizationId_;
     /**
      * <pre>
-     * organization id 
+     * organization id
      * </pre>
      *
      * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10592,7 +10592,7 @@ public final class MfaEnforcementServiceOuterClass {
     }
     /**
      * <pre>
-     * organization id 
+     * organization id
      * </pre>
      *
      * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11014,7 +11014,7 @@ public final class MfaEnforcementServiceOuterClass {
       private java.lang.Object organizationId_ = "";
       /**
        * <pre>
-       * organization id 
+       * organization id
        * </pre>
        *
        * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11034,7 +11034,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * organization id 
+       * organization id
        * </pre>
        *
        * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11055,7 +11055,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * organization id 
+       * organization id
        * </pre>
        *
        * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11074,7 +11074,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * organization id 
+       * organization id
        * </pre>
        *
        * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11088,7 +11088,7 @@ public final class MfaEnforcementServiceOuterClass {
       }
       /**
        * <pre>
-       * organization id 
+       * organization id
        * </pre>
        *
        * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18825,6 +18825,5554 @@ public final class MfaEnforcementServiceOuterClass {
 
   }
 
+  public interface UpdateExcludedAudienceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The mfaEnforcementId.
+     */
+    java.lang.String getMfaEnforcementId();
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes();
+
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> 
+        getAudienceDeltasList();
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta getAudienceDeltas(int index);
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    int getAudienceDeltasCount();
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+        getAudienceDeltasOrBuilderList();
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder getAudienceDeltasOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceRequest}
+   */
+  public static final class UpdateExcludedAudienceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceRequest)
+      UpdateExcludedAudienceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateExcludedAudienceRequest.newBuilder() to construct.
+    private UpdateExcludedAudienceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateExcludedAudienceRequest() {
+      mfaEnforcementId_ = "";
+      audienceDeltas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateExcludedAudienceRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateExcludedAudienceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mfaEnforcementId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                audienceDeltas_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              audienceDeltas_.add(
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          audienceDeltas_ = java.util.Collections.unmodifiableList(audienceDeltas_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.Builder.class);
+    }
+
+    public static final int MFA_ENFORCEMENT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object mfaEnforcementId_;
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The mfaEnforcementId.
+     */
+    @java.lang.Override
+    public java.lang.String getMfaEnforcementId() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mfaEnforcementId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mfaEnforcementId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUDIENCE_DELTAS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> audienceDeltas_;
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> getAudienceDeltasList() {
+      return audienceDeltas_;
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+        getAudienceDeltasOrBuilderList() {
+      return audienceDeltas_;
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    @java.lang.Override
+    public int getAudienceDeltasCount() {
+      return audienceDeltas_.size();
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta getAudienceDeltas(int index) {
+      return audienceDeltas_.get(index);
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder getAudienceDeltasOrBuilder(
+        int index) {
+      return audienceDeltas_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mfaEnforcementId_);
+      }
+      for (int i = 0; i < audienceDeltas_.size(); i++) {
+        output.writeMessage(2, audienceDeltas_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mfaEnforcementId_);
+      }
+      for (int i = 0; i < audienceDeltas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, audienceDeltas_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest other = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest) obj;
+
+      if (!getMfaEnforcementId()
+          .equals(other.getMfaEnforcementId())) return false;
+      if (!getAudienceDeltasList()
+          .equals(other.getAudienceDeltasList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MFA_ENFORCEMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMfaEnforcementId().hashCode();
+      if (getAudienceDeltasCount() > 0) {
+        hash = (37 * hash) + AUDIENCE_DELTAS_FIELD_NUMBER;
+        hash = (53 * hash) + getAudienceDeltasList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceRequest)
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAudienceDeltasFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mfaEnforcementId_ = "";
+
+        if (audienceDeltasBuilder_ == null) {
+          audienceDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          audienceDeltasBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest build() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest result = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.mfaEnforcementId_ = mfaEnforcementId_;
+        if (audienceDeltasBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            audienceDeltas_ = java.util.Collections.unmodifiableList(audienceDeltas_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.audienceDeltas_ = audienceDeltas_;
+        } else {
+          result.audienceDeltas_ = audienceDeltasBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest.getDefaultInstance()) return this;
+        if (!other.getMfaEnforcementId().isEmpty()) {
+          mfaEnforcementId_ = other.mfaEnforcementId_;
+          onChanged();
+        }
+        if (audienceDeltasBuilder_ == null) {
+          if (!other.audienceDeltas_.isEmpty()) {
+            if (audienceDeltas_.isEmpty()) {
+              audienceDeltas_ = other.audienceDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAudienceDeltasIsMutable();
+              audienceDeltas_.addAll(other.audienceDeltas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.audienceDeltas_.isEmpty()) {
+            if (audienceDeltasBuilder_.isEmpty()) {
+              audienceDeltasBuilder_.dispose();
+              audienceDeltasBuilder_ = null;
+              audienceDeltas_ = other.audienceDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              audienceDeltasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAudienceDeltasFieldBuilder() : null;
+            } else {
+              audienceDeltasBuilder_.addAllMessages(other.audienceDeltas_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mfaEnforcementId_ = "";
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The mfaEnforcementId.
+       */
+      public java.lang.String getMfaEnforcementId() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mfaEnforcementId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for mfaEnforcementId.
+       */
+      public com.google.protobuf.ByteString
+          getMfaEnforcementIdBytes() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mfaEnforcementId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMfaEnforcementId() {
+        
+        mfaEnforcementId_ = getDefaultInstance().getMfaEnforcementId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> audienceDeltas_ =
+        java.util.Collections.emptyList();
+      private void ensureAudienceDeltasIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          audienceDeltas_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta>(audienceDeltas_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> audienceDeltasBuilder_;
+
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> getAudienceDeltasList() {
+        if (audienceDeltasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(audienceDeltas_);
+        } else {
+          return audienceDeltasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public int getAudienceDeltasCount() {
+        if (audienceDeltasBuilder_ == null) {
+          return audienceDeltas_.size();
+        } else {
+          return audienceDeltasBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta getAudienceDeltas(int index) {
+        if (audienceDeltasBuilder_ == null) {
+          return audienceDeltas_.get(index);
+        } else {
+          return audienceDeltasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder setAudienceDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta value) {
+        if (audienceDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAudienceDeltasIsMutable();
+          audienceDeltas_.set(index, value);
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder setAudienceDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder builderForValue) {
+        if (audienceDeltasBuilder_ == null) {
+          ensureAudienceDeltasIsMutable();
+          audienceDeltas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder addAudienceDeltas(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta value) {
+        if (audienceDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAudienceDeltasIsMutable();
+          audienceDeltas_.add(value);
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder addAudienceDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta value) {
+        if (audienceDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAudienceDeltasIsMutable();
+          audienceDeltas_.add(index, value);
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder addAudienceDeltas(
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder builderForValue) {
+        if (audienceDeltasBuilder_ == null) {
+          ensureAudienceDeltasIsMutable();
+          audienceDeltas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder addAudienceDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder builderForValue) {
+        if (audienceDeltasBuilder_ == null) {
+          ensureAudienceDeltasIsMutable();
+          audienceDeltas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder addAllAudienceDeltas(
+          java.lang.Iterable<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> values) {
+        if (audienceDeltasBuilder_ == null) {
+          ensureAudienceDeltasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, audienceDeltas_);
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder clearAudienceDeltas() {
+        if (audienceDeltasBuilder_ == null) {
+          audienceDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public Builder removeAudienceDeltas(int index) {
+        if (audienceDeltasBuilder_ == null) {
+          ensureAudienceDeltasIsMutable();
+          audienceDeltas_.remove(index);
+          onChanged();
+        } else {
+          audienceDeltasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder getAudienceDeltasBuilder(
+          int index) {
+        return getAudienceDeltasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder getAudienceDeltasOrBuilder(
+          int index) {
+        if (audienceDeltasBuilder_ == null) {
+          return audienceDeltas_.get(index);  } else {
+          return audienceDeltasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+           getAudienceDeltasOrBuilderList() {
+        if (audienceDeltasBuilder_ != null) {
+          return audienceDeltasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(audienceDeltas_);
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder addAudienceDeltasBuilder() {
+        return getAudienceDeltasFieldBuilder().addBuilder(
+            yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder addAudienceDeltasBuilder(
+          int index) {
+        return getAudienceDeltasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta audience_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder> 
+           getAudienceDeltasBuilderList() {
+        return getAudienceDeltasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+          getAudienceDeltasFieldBuilder() {
+        if (audienceDeltasBuilder_ == null) {
+          audienceDeltasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder>(
+                  audienceDeltas_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          audienceDeltas_ = null;
+        }
+        return audienceDeltasBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateExcludedAudienceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateExcludedAudienceRequest>() {
+      @java.lang.Override
+      public UpdateExcludedAudienceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateExcludedAudienceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateExcludedAudienceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateExcludedAudienceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateExcludedAudienceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The mfaEnforcementId.
+     */
+    java.lang.String getMfaEnforcementId();
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes();
+
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> 
+        getEffectiveDeltasList();
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta getEffectiveDeltas(int index);
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    int getEffectiveDeltasCount();
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+        getEffectiveDeltasOrBuilderList();
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder getEffectiveDeltasOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceResponse}
+   */
+  public static final class UpdateExcludedAudienceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceResponse)
+      UpdateExcludedAudienceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateExcludedAudienceResponse.newBuilder() to construct.
+    private UpdateExcludedAudienceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateExcludedAudienceResponse() {
+      mfaEnforcementId_ = "";
+      effectiveDeltas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateExcludedAudienceResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateExcludedAudienceResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mfaEnforcementId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                effectiveDeltas_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              effectiveDeltas_.add(
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          effectiveDeltas_ = java.util.Collections.unmodifiableList(effectiveDeltas_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse.Builder.class);
+    }
+
+    public static final int MFA_ENFORCEMENT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object mfaEnforcementId_;
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The mfaEnforcementId.
+     */
+    @java.lang.Override
+    public java.lang.String getMfaEnforcementId() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mfaEnforcementId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mfaEnforcementId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EFFECTIVE_DELTAS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> effectiveDeltas_;
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> getEffectiveDeltasList() {
+      return effectiveDeltas_;
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+        getEffectiveDeltasOrBuilderList() {
+      return effectiveDeltas_;
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    @java.lang.Override
+    public int getEffectiveDeltasCount() {
+      return effectiveDeltas_.size();
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta getEffectiveDeltas(int index) {
+      return effectiveDeltas_.get(index);
+    }
+    /**
+     * <pre>
+     * updated MFA enforcement's excluded audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder getEffectiveDeltasOrBuilder(
+        int index) {
+      return effectiveDeltas_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mfaEnforcementId_);
+      }
+      for (int i = 0; i < effectiveDeltas_.size(); i++) {
+        output.writeMessage(2, effectiveDeltas_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mfaEnforcementId_);
+      }
+      for (int i = 0; i < effectiveDeltas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, effectiveDeltas_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse other = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse) obj;
+
+      if (!getMfaEnforcementId()
+          .equals(other.getMfaEnforcementId())) return false;
+      if (!getEffectiveDeltasList()
+          .equals(other.getEffectiveDeltasList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MFA_ENFORCEMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMfaEnforcementId().hashCode();
+      if (getEffectiveDeltasCount() > 0) {
+        hash = (37 * hash) + EFFECTIVE_DELTAS_FIELD_NUMBER;
+        hash = (53 * hash) + getEffectiveDeltasList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceResponse)
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEffectiveDeltasFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mfaEnforcementId_ = "";
+
+        if (effectiveDeltasBuilder_ == null) {
+          effectiveDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          effectiveDeltasBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse build() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse result = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.mfaEnforcementId_ = mfaEnforcementId_;
+        if (effectiveDeltasBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            effectiveDeltas_ = java.util.Collections.unmodifiableList(effectiveDeltas_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.effectiveDeltas_ = effectiveDeltas_;
+        } else {
+          result.effectiveDeltas_ = effectiveDeltasBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse.getDefaultInstance()) return this;
+        if (!other.getMfaEnforcementId().isEmpty()) {
+          mfaEnforcementId_ = other.mfaEnforcementId_;
+          onChanged();
+        }
+        if (effectiveDeltasBuilder_ == null) {
+          if (!other.effectiveDeltas_.isEmpty()) {
+            if (effectiveDeltas_.isEmpty()) {
+              effectiveDeltas_ = other.effectiveDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEffectiveDeltasIsMutable();
+              effectiveDeltas_.addAll(other.effectiveDeltas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.effectiveDeltas_.isEmpty()) {
+            if (effectiveDeltasBuilder_.isEmpty()) {
+              effectiveDeltasBuilder_.dispose();
+              effectiveDeltasBuilder_ = null;
+              effectiveDeltas_ = other.effectiveDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              effectiveDeltasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEffectiveDeltasFieldBuilder() : null;
+            } else {
+              effectiveDeltasBuilder_.addAllMessages(other.effectiveDeltas_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mfaEnforcementId_ = "";
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The mfaEnforcementId.
+       */
+      public java.lang.String getMfaEnforcementId() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mfaEnforcementId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for mfaEnforcementId.
+       */
+      public com.google.protobuf.ByteString
+          getMfaEnforcementIdBytes() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mfaEnforcementId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMfaEnforcementId() {
+        
+        mfaEnforcementId_ = getDefaultInstance().getMfaEnforcementId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> effectiveDeltas_ =
+        java.util.Collections.emptyList();
+      private void ensureEffectiveDeltasIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          effectiveDeltas_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta>(effectiveDeltas_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> effectiveDeltasBuilder_;
+
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> getEffectiveDeltasList() {
+        if (effectiveDeltasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(effectiveDeltas_);
+        } else {
+          return effectiveDeltasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public int getEffectiveDeltasCount() {
+        if (effectiveDeltasBuilder_ == null) {
+          return effectiveDeltas_.size();
+        } else {
+          return effectiveDeltasBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta getEffectiveDeltas(int index) {
+        if (effectiveDeltasBuilder_ == null) {
+          return effectiveDeltas_.get(index);
+        } else {
+          return effectiveDeltasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder setEffectiveDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta value) {
+        if (effectiveDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.set(index, value);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder setEffectiveDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder builderForValue) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder addEffectiveDeltas(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta value) {
+        if (effectiveDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(value);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder addEffectiveDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta value) {
+        if (effectiveDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(index, value);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder addEffectiveDeltas(
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder builderForValue) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder addEffectiveDeltas(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder builderForValue) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder addAllEffectiveDeltas(
+          java.lang.Iterable<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta> values) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, effectiveDeltas_);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder clearEffectiveDeltas() {
+        if (effectiveDeltasBuilder_ == null) {
+          effectiveDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public Builder removeEffectiveDeltas(int index) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.remove(index);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder getEffectiveDeltasBuilder(
+          int index) {
+        return getEffectiveDeltasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder getEffectiveDeltasOrBuilder(
+          int index) {
+        if (effectiveDeltasBuilder_ == null) {
+          return effectiveDeltas_.get(index);  } else {
+          return effectiveDeltasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+           getEffectiveDeltasOrBuilderList() {
+        if (effectiveDeltasBuilder_ != null) {
+          return effectiveDeltasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(effectiveDeltas_);
+        }
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder addEffectiveDeltasBuilder() {
+        return getEffectiveDeltasFieldBuilder().addBuilder(
+            yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder addEffectiveDeltasBuilder(
+          int index) {
+        return getEffectiveDeltasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * updated MFA enforcement's excluded audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.AudienceDelta effective_deltas = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder> 
+           getEffectiveDeltasBuilderList() {
+        return getEffectiveDeltasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder> 
+          getEffectiveDeltasFieldBuilder() {
+        if (effectiveDeltasBuilder_ == null) {
+          effectiveDeltasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDelta.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.AudienceDeltaOrBuilder>(
+                  effectiveDeltas_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          effectiveDeltas_ = null;
+        }
+        return effectiveDeltasBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceResponse)
+    private static final yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateExcludedAudienceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateExcludedAudienceResponse>() {
+      @java.lang.Override
+      public UpdateExcludedAudienceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateExcludedAudienceResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateExcludedAudienceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateExcludedAudienceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateExcludedAudienceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 2;</code>
+     * @return The mfaEnforcementId.
+     */
+    java.lang.String getMfaEnforcementId();
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 2;</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceMetadata}
+   */
+  public static final class UpdateExcludedAudienceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceMetadata)
+      UpdateExcludedAudienceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateExcludedAudienceMetadata.newBuilder() to construct.
+    private UpdateExcludedAudienceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateExcludedAudienceMetadata() {
+      mfaEnforcementId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateExcludedAudienceMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateExcludedAudienceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mfaEnforcementId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata.Builder.class);
+    }
+
+    public static final int MFA_ENFORCEMENT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object mfaEnforcementId_;
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 2;</code>
+     * @return The mfaEnforcementId.
+     */
+    @java.lang.Override
+    public java.lang.String getMfaEnforcementId() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mfaEnforcementId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 2;</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mfaEnforcementId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mfaEnforcementId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mfaEnforcementId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata other = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata) obj;
+
+      if (!getMfaEnforcementId()
+          .equals(other.getMfaEnforcementId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MFA_ENFORCEMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMfaEnforcementId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceMetadata)
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mfaEnforcementId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata result = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata(this);
+        result.mfaEnforcementId_ = mfaEnforcementId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata.getDefaultInstance()) return this;
+        if (!other.getMfaEnforcementId().isEmpty()) {
+          mfaEnforcementId_ = other.mfaEnforcementId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object mfaEnforcementId_ = "";
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 2;</code>
+       * @return The mfaEnforcementId.
+       */
+      public java.lang.String getMfaEnforcementId() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mfaEnforcementId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 2;</code>
+       * @return The bytes for mfaEnforcementId.
+       */
+      public com.google.protobuf.ByteString
+          getMfaEnforcementIdBytes() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mfaEnforcementId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 2;</code>
+       * @param value The mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMfaEnforcementId() {
+        
+        mfaEnforcementId_ = getDefaultInstance().getMfaEnforcementId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 2;</code>
+       * @param value The bytes for mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.UpdateExcludedAudienceMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateExcludedAudienceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateExcludedAudienceMetadata>() {
+      @java.lang.Override
+      public UpdateExcludedAudienceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateExcludedAudienceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateExcludedAudienceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateExcludedAudienceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.UpdateExcludedAudienceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListExcludedAudienceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListExcludedAudienceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The mfaEnforcementId.
+     */
+    java.lang.String getMfaEnforcementId();
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes();
+
+    /**
+     * <pre>
+     * the maximum number of results per page to return
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * page token
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * page token
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExcludedAudienceRequest}
+   */
+  public static final class ListExcludedAudienceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ListExcludedAudienceRequest)
+      ListExcludedAudienceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExcludedAudienceRequest.newBuilder() to construct.
+    private ListExcludedAudienceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExcludedAudienceRequest() {
+      mfaEnforcementId_ = "";
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExcludedAudienceRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExcludedAudienceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mfaEnforcementId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.Builder.class);
+    }
+
+    public static final int MFA_ENFORCEMENT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object mfaEnforcementId_;
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The mfaEnforcementId.
+     */
+    @java.lang.Override
+    public java.lang.String getMfaEnforcementId() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mfaEnforcementId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of the MFA enforcement
+     * </pre>
+     *
+     * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for mfaEnforcementId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMfaEnforcementIdBytes() {
+      java.lang.Object ref = mfaEnforcementId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mfaEnforcementId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * the maximum number of results per page to return
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * page token
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * page token
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mfaEnforcementId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mfaEnforcementId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mfaEnforcementId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest other = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest) obj;
+
+      if (!getMfaEnforcementId()
+          .equals(other.getMfaEnforcementId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MFA_ENFORCEMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMfaEnforcementId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExcludedAudienceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ListExcludedAudienceRequest)
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mfaEnforcementId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest build() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest result = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest(this);
+        result.mfaEnforcementId_ = mfaEnforcementId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest.getDefaultInstance()) return this;
+        if (!other.getMfaEnforcementId().isEmpty()) {
+          mfaEnforcementId_ = other.mfaEnforcementId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object mfaEnforcementId_ = "";
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The mfaEnforcementId.
+       */
+      public java.lang.String getMfaEnforcementId() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mfaEnforcementId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for mfaEnforcementId.
+       */
+      public com.google.protobuf.ByteString
+          getMfaEnforcementIdBytes() {
+        java.lang.Object ref = mfaEnforcementId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mfaEnforcementId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMfaEnforcementId() {
+        
+        mfaEnforcementId_ = getDefaultInstance().getMfaEnforcementId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the MFA enforcement
+       * </pre>
+       *
+       * <code>string mfa_enforcement_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for mfaEnforcementId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMfaEnforcementIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mfaEnforcementId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * the maximum number of results per page to return
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * the maximum number of results per page to return
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the maximum number of results per page to return
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * page token
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * page token
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * page token
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * page token
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * page token
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ListExcludedAudienceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ListExcludedAudienceRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExcludedAudienceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListExcludedAudienceRequest>() {
+      @java.lang.Override
+      public ListExcludedAudienceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExcludedAudienceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExcludedAudienceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExcludedAudienceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListExcludedAudienceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject> 
+        getSubjectsList();
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject getSubjects(int index);
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    int getSubjectsCount();
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder> 
+        getSubjectsOrBuilderList();
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder getSubjectsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * token to get the next page of results
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * token to get the next page of results
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse}
+   */
+  public static final class ListExcludedAudienceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse)
+      ListExcludedAudienceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExcludedAudienceResponse.newBuilder() to construct.
+    private ListExcludedAudienceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExcludedAudienceResponse() {
+      subjects_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExcludedAudienceResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExcludedAudienceResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                subjects_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              subjects_.add(
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          subjects_ = java.util.Collections.unmodifiableList(subjects_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Builder.class);
+    }
+
+    public interface SubjectOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * subject id
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      java.lang.String getId();
+      /**
+       * <pre>
+       * subject id
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      com.google.protobuf.ByteString
+          getIdBytes();
+
+      /**
+       * <pre>
+       * subject type
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @return The type.
+       */
+      java.lang.String getType();
+      /**
+       * <pre>
+       * subject type
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @return The bytes for type.
+       */
+      com.google.protobuf.ByteString
+          getTypeBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject}
+     */
+    public static final class Subject extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject)
+        SubjectOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Subject.newBuilder() to construct.
+      private Subject(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Subject() {
+        id_ = "";
+        type_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Subject();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Subject(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                id_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                type_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder.class);
+      }
+
+      public static final int ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object id_;
+      /**
+       * <pre>
+       * subject id
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * subject id
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TYPE_FIELD_NUMBER = 2;
+      private volatile java.lang.Object type_;
+      /**
+       * <pre>
+       * subject type
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * subject type
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @return The bytes for type.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject other = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject) obj;
+
+        if (!getId()
+            .equals(other.getId())) return false;
+        if (!getType()
+            .equals(other.getType())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getType().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject)
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          id_ = "";
+
+          type_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject getDefaultInstanceForType() {
+          return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject build() {
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject buildPartial() {
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject result = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject(this);
+          result.id_ = id_;
+          result.type_ = type_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject) {
+            return mergeFrom((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject other) {
+          if (other == yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.getDefaultInstance()) return this;
+          if (!other.getId().isEmpty()) {
+            id_ = other.id_;
+            onChanged();
+          }
+          if (!other.getType().isEmpty()) {
+            type_ = other.type_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object id_ = "";
+        /**
+         * <pre>
+         * subject id
+         * </pre>
+         *
+         * <code>string id = 1;</code>
+         * @return The id.
+         */
+        public java.lang.String getId() {
+          java.lang.Object ref = id_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            id_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * subject id
+         * </pre>
+         *
+         * <code>string id = 1;</code>
+         * @return The bytes for id.
+         */
+        public com.google.protobuf.ByteString
+            getIdBytes() {
+          java.lang.Object ref = id_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            id_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * subject id
+         * </pre>
+         *
+         * <code>string id = 1;</code>
+         * @param value The id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          id_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * subject id
+         * </pre>
+         *
+         * <code>string id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearId() {
+          
+          id_ = getDefaultInstance().getId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * subject id
+         * </pre>
+         *
+         * <code>string id = 1;</code>
+         * @param value The bytes for id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          id_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object type_ = "";
+        /**
+         * <pre>
+         * subject type
+         * </pre>
+         *
+         * <code>string type = 2;</code>
+         * @return The type.
+         */
+        public java.lang.String getType() {
+          java.lang.Object ref = type_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            type_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * subject type
+         * </pre>
+         *
+         * <code>string type = 2;</code>
+         * @return The bytes for type.
+         */
+        public com.google.protobuf.ByteString
+            getTypeBytes() {
+          java.lang.Object ref = type_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            type_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * subject type
+         * </pre>
+         *
+         * <code>string type = 2;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setType(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * subject type
+         * </pre>
+         *
+         * <code>string type = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearType() {
+          
+          type_ = getDefaultInstance().getType();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * subject type
+         * </pre>
+         *
+         * <code>string type = 2;</code>
+         * @param value The bytes for type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject)
+      private static final yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject();
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Subject>
+          PARSER = new com.google.protobuf.AbstractParser<Subject>() {
+        @java.lang.Override
+        public Subject parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Subject(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Subject> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Subject> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int SUBJECTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject> subjects_;
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject> getSubjectsList() {
+      return subjects_;
+    }
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder> 
+        getSubjectsOrBuilderList() {
+      return subjects_;
+    }
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    @java.lang.Override
+    public int getSubjectsCount() {
+      return subjects_.size();
+    }
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject getSubjects(int index) {
+      return subjects_.get(index);
+    }
+    /**
+     * <pre>
+     * MFA enforcement's audience
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder getSubjectsOrBuilder(
+        int index) {
+      return subjects_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * token to get the next page of results
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token to get the next page of results
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subjects_.size(); i++) {
+        output.writeMessage(1, subjects_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < subjects_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, subjects_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse other = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse) obj;
+
+      if (!getSubjectsList()
+          .equals(other.getSubjectsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubjectsCount() > 0) {
+        hash = (37 * hash) + SUBJECTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubjectsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse)
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.class, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubjectsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (subjectsBuilder_ == null) {
+          subjects_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          subjectsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse build() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse result = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (subjectsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            subjects_ = java.util.Collections.unmodifiableList(subjects_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.subjects_ = subjects_;
+        } else {
+          result.subjects_ = subjectsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.getDefaultInstance()) return this;
+        if (subjectsBuilder_ == null) {
+          if (!other.subjects_.isEmpty()) {
+            if (subjects_.isEmpty()) {
+              subjects_ = other.subjects_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSubjectsIsMutable();
+              subjects_.addAll(other.subjects_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.subjects_.isEmpty()) {
+            if (subjectsBuilder_.isEmpty()) {
+              subjectsBuilder_.dispose();
+              subjectsBuilder_ = null;
+              subjects_ = other.subjects_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              subjectsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSubjectsFieldBuilder() : null;
+            } else {
+              subjectsBuilder_.addAllMessages(other.subjects_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject> subjects_ =
+        java.util.Collections.emptyList();
+      private void ensureSubjectsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subjects_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject>(subjects_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder> subjectsBuilder_;
+
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject> getSubjectsList() {
+        if (subjectsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(subjects_);
+        } else {
+          return subjectsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public int getSubjectsCount() {
+        if (subjectsBuilder_ == null) {
+          return subjects_.size();
+        } else {
+          return subjectsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject getSubjects(int index) {
+        if (subjectsBuilder_ == null) {
+          return subjects_.get(index);
+        } else {
+          return subjectsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder setSubjects(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject value) {
+        if (subjectsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubjectsIsMutable();
+          subjects_.set(index, value);
+          onChanged();
+        } else {
+          subjectsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder setSubjects(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder builderForValue) {
+        if (subjectsBuilder_ == null) {
+          ensureSubjectsIsMutable();
+          subjects_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          subjectsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder addSubjects(yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject value) {
+        if (subjectsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubjectsIsMutable();
+          subjects_.add(value);
+          onChanged();
+        } else {
+          subjectsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder addSubjects(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject value) {
+        if (subjectsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubjectsIsMutable();
+          subjects_.add(index, value);
+          onChanged();
+        } else {
+          subjectsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder addSubjects(
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder builderForValue) {
+        if (subjectsBuilder_ == null) {
+          ensureSubjectsIsMutable();
+          subjects_.add(builderForValue.build());
+          onChanged();
+        } else {
+          subjectsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder addSubjects(
+          int index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder builderForValue) {
+        if (subjectsBuilder_ == null) {
+          ensureSubjectsIsMutable();
+          subjects_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          subjectsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder addAllSubjects(
+          java.lang.Iterable<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject> values) {
+        if (subjectsBuilder_ == null) {
+          ensureSubjectsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, subjects_);
+          onChanged();
+        } else {
+          subjectsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder clearSubjects() {
+        if (subjectsBuilder_ == null) {
+          subjects_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          subjectsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public Builder removeSubjects(int index) {
+        if (subjectsBuilder_ == null) {
+          ensureSubjectsIsMutable();
+          subjects_.remove(index);
+          onChanged();
+        } else {
+          subjectsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder getSubjectsBuilder(
+          int index) {
+        return getSubjectsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder getSubjectsOrBuilder(
+          int index) {
+        if (subjectsBuilder_ == null) {
+          return subjects_.get(index);  } else {
+          return subjectsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder> 
+           getSubjectsOrBuilderList() {
+        if (subjectsBuilder_ != null) {
+          return subjectsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(subjects_);
+        }
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder addSubjectsBuilder() {
+        return getSubjectsFieldBuilder().addBuilder(
+            yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder addSubjectsBuilder(
+          int index) {
+        return getSubjectsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * MFA enforcement's audience
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse.Subject subjects = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder> 
+           getSubjectsBuilderList() {
+        return getSubjectsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder> 
+          getSubjectsFieldBuilder() {
+        if (subjectsBuilder_ == null) {
+          subjectsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.Subject.Builder, yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse.SubjectOrBuilder>(
+                  subjects_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          subjects_ = null;
+        }
+        return subjectsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * token to get the next page of results
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token to get the next page of results
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token to get the next page of results
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token to get the next page of results
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token to get the next page of results
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ListExcludedAudienceResponse)
+    private static final yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExcludedAudienceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListExcludedAudienceResponse>() {
+      @java.lang.Override
+      public ListExcludedAudienceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExcludedAudienceResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExcludedAudienceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExcludedAudienceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.MfaEnforcementServiceOuterClass.ListExcludedAudienceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_CreateMfaEnforcementRequest_descriptor;
   private static final 
@@ -18925,6 +24473,36 @@ public final class MfaEnforcementServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_ListAudienceResponse_Subject_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19014,63 +24592,94 @@ public final class MfaEnforcementServiceOuterClass {
       "\001 \003(\0132A.yandex.cloud.organizationmanager" +
       ".v1.ListAudienceResponse.Subject\022\027\n\017next" +
       "_page_token\030\002 \001(\t\032#\n\007Subject\022\n\n\002id\030\001 \001(\t" +
-      "\022\014\n\004type\030\002 \001(\t2\237\020\n\025MfaEnforcementService" +
-      "\022\324\001\n\006Create\022@.yandex.cloud.organizationm" +
-      "anager.v1.CreateMfaEnforcementRequest\032!." +
-      "yandex.cloud.operation.Operation\"e\202\323\344\223\002-" +
-      "\"(/organization-manager/v1/mfaEnforcemen" +
-      "ts:\001*\262\322*.\n\034CreateMfaEnforcementMetadata\022" +
-      "\016MfaEnforcement\022\351\001\n\006Update\022@.yandex.clou" +
-      "d.organizationmanager.v1.UpdateMfaEnforc" +
+      "\022\014\n\004type\030\002 \001(\t\"\242\001\n\035UpdateExcludedAudienc" +
+      "eRequest\022(\n\022mfa_enforcement_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022W\n\017audience_deltas\030\002 \003(\01322.ya" +
+      "ndex.cloud.organizationmanager.v1.Audien" +
+      "ceDeltaB\n\202\3101\0061-1000\"\230\001\n\036UpdateExcludedAu" +
+      "dienceResponse\022(\n\022mfa_enforcement_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022L\n\020effective_deltas\030\002 \003" +
+      "(\01322.yandex.cloud.organizationmanager.v1" +
+      ".AudienceDelta\"<\n\036UpdateExcludedAudience" +
+      "Metadata\022\032\n\022mfa_enforcement_id\030\002 \001(\t\"\206\001\n" +
+      "\033ListExcludedAudienceRequest\022(\n\022mfa_enfo" +
+      "rcement_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(" +
+      "\tB\n\212\3101\006<=2000\"\271\001\n\034ListExcludedAudienceRe" +
+      "sponse\022[\n\010subjects\030\001 \003(\0132I.yandex.cloud." +
+      "organizationmanager.v1.ListExcludedAudie" +
+      "nceResponse.Subject\022\027\n\017next_page_token\030\002" +
+      " \001(\t\032#\n\007Subject\022\n\n\002id\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
+      "\t2\301\024\n\025MfaEnforcementService\022\324\001\n\006Create\022@" +
+      ".yandex.cloud.organizationmanager.v1.Cre" +
+      "ateMfaEnforcementRequest\032!.yandex.cloud." +
+      "operation.Operation\"e\202\323\344\223\002-\"(/organizati" +
+      "on-manager/v1/mfaEnforcements:\001*\262\322*.\n\034Cr" +
+      "eateMfaEnforcementMetadata\022\016MfaEnforceme" +
+      "nt\022\351\001\n\006Update\022@.yandex.cloud.organizatio" +
+      "nmanager.v1.UpdateMfaEnforcementRequest\032" +
+      "!.yandex.cloud.operation.Operation\"z\202\323\344\223" +
+      "\002B2=/organization-manager/v1/mfaEnforcem" +
+      "ents/{mfa_enforcement_id}:\001*\262\322*.\n\034Update" +
+      "MfaEnforcementMetadata\022\016MfaEnforcement\022\366" +
+      "\001\n\010Activate\022B.yandex.cloud.organizationm" +
+      "anager.v1.ActivateMfaEnforcementRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\202\001\202\323\344" +
+      "\223\002H2F/organization-manager/v1/mfaEnforce" +
+      "ments/{mfa_enforcement_id}:activate\262\322*0\n" +
+      "\036ActivateMfaEnforcementMetadata\022\016MfaEnfo" +
+      "rcement\022\376\001\n\nDeactivate\022D.yandex.cloud.or" +
+      "ganizationmanager.v1.DeactivateMfaEnforc" +
       "ementRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"z\202\323\344\223\002B2=/organization-manager/v" +
-      "1/mfaEnforcements/{mfa_enforcement_id}:\001" +
-      "*\262\322*.\n\034UpdateMfaEnforcementMetadata\022\016Mfa" +
-      "Enforcement\022\366\001\n\010Activate\022B.yandex.cloud." +
-      "organizationmanager.v1.ActivateMfaEnforc" +
-      "ementRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\202\001\202\323\344\223\002H2F/organization-manager/" +
+      "eration\"\206\001\202\323\344\223\002J2H/organization-manager/" +
       "v1/mfaEnforcements/{mfa_enforcement_id}:" +
-      "activate\262\322*0\n\036ActivateMfaEnforcementMeta" +
-      "data\022\016MfaEnforcement\022\376\001\n\nDeactivate\022D.ya" +
-      "ndex.cloud.organizationmanager.v1.Deacti" +
-      "vateMfaEnforcementRequest\032!.yandex.cloud" +
-      ".operation.Operation\"\206\001\202\323\344\223\002J2H/organiza" +
-      "tion-manager/v1/mfaEnforcements/{mfa_enf" +
-      "orcement_id}:deactivate\262\322*2\n DeactivateM" +
-      "faEnforcementMetadata\022\016MfaEnforcement\022\355\001" +
-      "\n\006Delete\022@.yandex.cloud.organizationmana" +
-      "ger.v1.DeleteMfaEnforcementRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"~\202\323\344\223\002?*=/" +
-      "organization-manager/v1/mfaEnforcements/" +
-      "{mfa_enforcement_id}\262\322*5\n\034DeleteMfaEnfor" +
-      "cementMetadata\022\025google.protobuf.Empty\022\300\001" +
-      "\n\003Get\022=.yandex.cloud.organizationmanager" +
-      ".v1.GetMfaEnforcementRequest\0323.yandex.cl" +
-      "oud.organizationmanager.v1.MfaEnforcemen" +
-      "t\"E\202\323\344\223\002?\022=/organization-manager/v1/mfaE" +
-      "nforcements/{mfa_enforcement_id}\022\273\001\n\004Lis" +
-      "t\022?.yandex.cloud.organizationmanager.v1." +
-      "ListMfaEnforcementsRequest\032@.yandex.clou" +
-      "d.organizationmanager.v1.ListMfaEnforcem" +
-      "entsResponse\"0\202\323\344\223\002*\022(/organization-mana" +
-      "ger/v1/mfaEnforcements\022\375\001\n\016UpdateAudienc" +
-      "e\022:.yandex.cloud.organizationmanager.v1." +
-      "UpdateAudienceRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\213\001\202\323\344\223\002Q2L/organization" +
+      "deactivate\262\322*2\n DeactivateMfaEnforcement" +
+      "Metadata\022\016MfaEnforcement\022\355\001\n\006Delete\022@.ya" +
+      "ndex.cloud.organizationmanager.v1.Delete" +
+      "MfaEnforcementRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"~\202\323\344\223\002?*=/organization-" +
+      "manager/v1/mfaEnforcements/{mfa_enforcem" +
+      "ent_id}\262\322*5\n\034DeleteMfaEnforcementMetadat" +
+      "a\022\025google.protobuf.Empty\022\300\001\n\003Get\022=.yande" +
+      "x.cloud.organizationmanager.v1.GetMfaEnf" +
+      "orcementRequest\0323.yandex.cloud.organizat" +
+      "ionmanager.v1.MfaEnforcement\"E\202\323\344\223\002?\022=/o" +
+      "rganization-manager/v1/mfaEnforcements/{" +
+      "mfa_enforcement_id}\022\273\001\n\004List\022?.yandex.cl" +
+      "oud.organizationmanager.v1.ListMfaEnforc" +
+      "ementsRequest\032@.yandex.cloud.organizatio" +
+      "nmanager.v1.ListMfaEnforcementsResponse\"" +
+      "0\202\323\344\223\002*\022(/organization-manager/v1/mfaEnf" +
+      "orcements\022\375\001\n\016UpdateAudience\022:.yandex.cl" +
+      "oud.organizationmanager.v1.UpdateAudienc" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\213\001\202\323\344\223\002Q2L/organization-manager/v1/m" +
+      "faEnforcements/{mfa_enforcement_id}:upda" +
+      "teAudience:\001*\262\322*0\n\026UpdateAudienceMetadat" +
+      "a\022\026UpdateAudienceResponse\022\327\001\n\014ListAudien" +
+      "ce\0228.yandex.cloud.organizationmanager.v1" +
+      ".ListAudienceRequest\0329.yandex.cloud.orga" +
+      "nizationmanager.v1.ListAudienceResponse\"" +
+      "R\202\323\344\223\002L\022J/organization-manager/v1/mfaEnf" +
+      "orcements/{mfa_enforcement_id}:listAudie" +
+      "nce\022\245\002\n\026UpdateExcludedAudience\022B.yandex." +
+      "cloud.organizationmanager.v1.UpdateExclu" +
+      "dedAudienceRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\243\001\202\323\344\223\002Y2T/organization-ma" +
+      "nager/v1/mfaEnforcements/{mfa_enforcemen" +
+      "t_id}:updateExcludedAudience:\001*\262\322*@\n\036Upd" +
+      "ateExcludedAudienceMetadata\022\036UpdateExclu" +
+      "dedAudienceResponse\022\367\001\n\024ListExcludedAudi" +
+      "ence\022@.yandex.cloud.organizationmanager." +
+      "v1.ListExcludedAudienceRequest\032A.yandex." +
+      "cloud.organizationmanager.v1.ListExclude" +
+      "dAudienceResponse\"Z\202\323\344\223\002T\022R/organization" +
       "-manager/v1/mfaEnforcements/{mfa_enforce" +
-      "ment_id}:updateAudience:\001*\262\322*0\n\026UpdateAu" +
-      "dienceMetadata\022\026UpdateAudienceResponse\022\327" +
-      "\001\n\014ListAudience\0228.yandex.cloud.organizat" +
-      "ionmanager.v1.ListAudienceRequest\0329.yand" +
-      "ex.cloud.organizationmanager.v1.ListAudi" +
-      "enceResponse\"R\202\323\344\223\002L\022J/organization-mana" +
-      "ger/v1/mfaEnforcements/{mfa_enforcement_" +
-      "id}:listAudienceB\206\001\n\'yandex.cloud.api.or" +
-      "ganizationmanager.v1Z[github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/organizat" +
-      "ionmanager/v1;organizationmanagerb\006proto" +
-      "3"
+      "ment_id}:listExcludedAudienceB\206\001\n\'yandex" +
+      ".cloud.api.organizationmanager.v1Z[githu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/organizationmanager/v1;organizationm" +
+      "anagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19203,6 +24812,42 @@ public final class MfaEnforcementServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_ListAudienceResponse_Subject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_ListAudienceResponse_Subject_descriptor,
+        new java.lang.String[] { "Id", "Type", });
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceRequest_descriptor,
+        new java.lang.String[] { "MfaEnforcementId", "AudienceDeltas", });
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceResponse_descriptor,
+        new java.lang.String[] { "MfaEnforcementId", "EffectiveDeltas", });
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_UpdateExcludedAudienceMetadata_descriptor,
+        new java.lang.String[] { "MfaEnforcementId", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceRequest_descriptor,
+        new java.lang.String[] { "MfaEnforcementId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_descriptor,
+        new java.lang.String[] { "Subjects", "NextPageToken", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ListExcludedAudienceResponse_Subject_descriptor,
         new java.lang.String[] { "Id", "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

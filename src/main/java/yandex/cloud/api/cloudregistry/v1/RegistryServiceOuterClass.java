@@ -2847,7 +2847,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getPropertiesCount();
     /**
@@ -2855,7 +2855,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsProperties(
         java.lang.String key);
@@ -2870,7 +2870,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getPropertiesMap();
@@ -2879,7 +2879,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getPropertiesOrDefault(
@@ -2890,7 +2890,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getPropertiesOrThrow(
@@ -3373,7 +3373,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -3395,7 +3395,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3407,7 +3407,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3424,7 +3424,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4525,7 +4525,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -4547,7 +4547,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4559,7 +4559,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4576,7 +4576,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4601,7 +4601,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeProperties(
@@ -4624,7 +4624,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putProperties(
           java.lang.String key,
@@ -4643,7 +4643,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 7 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllProperties(
@@ -5468,7 +5468,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getPropertiesCount();
     /**
@@ -5476,7 +5476,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsProperties(
         java.lang.String key);
@@ -5491,7 +5491,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getPropertiesMap();
@@ -5500,7 +5500,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getPropertiesOrDefault(
@@ -5511,7 +5511,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getPropertiesOrThrow(
@@ -5981,7 +5981,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -6003,7 +6003,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -6015,7 +6015,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -6032,7 +6032,7 @@ public final class RegistryServiceOuterClass {
      * Property names and values.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -7145,7 +7145,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -7167,7 +7167,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7179,7 +7179,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7196,7 +7196,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7221,7 +7221,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeProperties(
@@ -7244,7 +7244,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putProperties(
           java.lang.String key,
@@ -7263,7 +7263,7 @@ public final class RegistryServiceOuterClass {
        * Property names and values.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; properties = 6 [(.yandex.cloud.pattern) = "[-_.~!*&#92;'();/?:&#64;&amp;=+$,%#0-9a-zA-Z]+", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=255", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllProperties(
@@ -16409,7 +16409,7 @@ public final class RegistryServiceOuterClass {
       "\3101\005<=100\"n\n\026ListRegistriesResponse\022;\n\nre" +
       "gistries\030\001 \003(\0132\'.yandex.cloud.cloudregis" +
       "try.v1.Registry\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\257\005\n\025CreateRegistryRequest\022\037\n\tfolder_id\030" +
+      "\"\260\005\n\025CreateRegistryRequest\022\037\n\tfolder_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|" +
       "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\221\001\n\006labels\030" +
       "\003 \003(\0132@.yandex.cloud.cloudregistry.v1.Cr" +
@@ -16419,124 +16419,124 @@ public final class RegistryServiceOuterClass {
       "cloud.cloudregistry.v1.Registry.KindB\004\350\307" +
       "1\001\022@\n\004type\030\005 \001(\0162,.yandex.cloud.cloudreg" +
       "istry.v1.Registry.TypeB\004\350\3071\001\022\037\n\013descript" +
-      "ion\030\006 \001(\tB\n\212\3101\006<=1024\022\250\001\n\nproperties\030\007 \003" +
+      "ion\030\006 \001(\tB\n\212\3101\006<=1024\022\251\001\n\nproperties\030\007 \003" +
       "(\0132D.yandex.cloud.cloudregistry.v1.Creat" +
-      "eRegistryRequest.PropertiesEntryBN\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071![-_.~!*\'();/?:@&=+$,%#0-9a" +
-      "-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022\t[a-zA-Z]+\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "1\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"-\n\026CreateRegistryMetadata\022\023\n\013" +
-      "registry_id\030\001 \001(\t\"\336\004\n\025UpdateRegistryRequ" +
-      "est\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/" +
-      "\n\013update_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-" +
-      "9]{1,61}[a-z0-9]\022\221\001\n\006labels\030\004 \003(\0132@.yand" +
-      "ex.cloud.cloudregistry.v1.UpdateRegistry" +
-      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
-      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
-      "-z]*\022\037\n\013description\030\005 \001(\tB\n\212\3101\006<=1024\022\250\001" +
-      "\n\nproperties\030\006 \003(\0132D.yandex.cloud.cloudr" +
-      "egistry.v1.UpdateRegistryRequest.Propert" +
-      "iesEntryBN\202\3101\004<=64\212\3101\004<=63\362\3071![-_.~!*\'()" +
-      ";/?:@&=+$,%#0-9a-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022\t[" +
-      "a-zA-Z]+\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\0321\n\017PropertiesEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateRegi" +
-      "stryMetadata\022\023\n\013registry_id\030\001 \001(\t\":\n\025Del" +
-      "eteRegistryRequest\022!\n\013registry_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRegistryMetadata\022" +
-      "\023\n\013registry_id\030\001 \001(\t\"\201\001\n\027SetIpPermission" +
+      "eRegistryRequest.PropertiesEntryBO\202\3101\004<=" +
+      "64\212\3101\005<=255\362\3071![-_.~!*\'();/?:@&=+$,%#0-9" +
+      "a-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022\t[a-zA-Z]+\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"-\n\026CreateRegistryMetadata\022\023\n" +
+      "\013registry_id\030\001 \001(\t\"\337\004\n\025UpdateRegistryReq" +
+      "uest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
+      "ieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0" +
+      "-9]{1,61}[a-z0-9]\022\221\001\n\006labels\030\004 \003(\0132@.yan" +
+      "dex.cloud.cloudregistry.v1.UpdateRegistr" +
+      "yRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\307" +
+      "1\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
+      "a-z]*\022\037\n\013description\030\005 \001(\tB\n\212\3101\006<=1024\022\251" +
+      "\001\n\nproperties\030\006 \003(\0132D.yandex.cloud.cloud" +
+      "registry.v1.UpdateRegistryRequest.Proper" +
+      "tiesEntryBO\202\3101\004<=64\212\3101\005<=255\362\3071![-_.~!*\'" +
+      "();/?:@&=+$,%#0-9a-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022" +
+      "\t[a-zA-Z]+\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\0321\n\017PropertiesEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateRe" +
+      "gistryMetadata\022\023\n\013registry_id\030\001 \001(\t\":\n\025D" +
+      "eleteRegistryRequest\022!\n\013registry_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRegistryMetadat" +
+      "a\022\023\n\013registry_id\030\001 \001(\t\"\201\001\n\027SetIpPermissi" +
+      "onsRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022C\n\016ip_permissions\030\002 \003(\0132+.yandex.c" +
+      "loud.cloudregistry.v1.IpPermission\"\217\001\n\032U" +
+      "pdateIpPermissionsRequest\022!\n\013registry_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022N\n\024ip_permission_de" +
+      "ltas\030\002 \003(\01320.yandex.cloud.cloudregistry." +
+      "v1.IpPermissionDelta\"=\n\030ListIpPermission" +
       "sRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022C\n\016ip_permissions\030\002 \003(\0132+.yandex.clo" +
-      "ud.cloudregistry.v1.IpPermission\"\217\001\n\032Upd" +
-      "ateIpPermissionsRequest\022!\n\013registry_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022N\n\024ip_permission_delt" +
-      "as\030\002 \003(\01320.yandex.cloud.cloudregistry.v1" +
-      ".IpPermissionDelta\"=\n\030ListIpPermissionsR" +
-      "equest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\"]\n\031ListIpPermissionsResponse\022@\n\013permis" +
-      "sions\030\001 \003(\0132+.yandex.cloud.cloudregistry" +
-      ".v1.IpPermission\"/\n\030SetIpPermissionsMeta" +
-      "data\022\023\n\013registry_id\030\001 \001(\t\"2\n\033UpdateIpPer" +
-      "missionsMetadata\022\023\n\013registry_id\030\001 \001(\t\"\201\001" +
-      "\n\024ListArtifactsRequest\022\035\n\013registry_id\030\001 " +
-      "\001(\tB\010\212\3101\004<=50\022\014\n\004path\030\002 \001(\t\022\035\n\tpage_size" +
-      "\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t" +
-      "\212\3101\005<=100\"l\n\025ListArtifactsResponse\022:\n\tar" +
-      "tifacts\030\001 \003(\0132\'.yandex.cloud.cloudregist" +
-      "ry.v1.Artifact\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\213\025\n\017RegistryService\022\226\001\n\003Get\0221.yandex.clo" +
-      "ud.cloudregistry.v1.GetRegistryRequest\032\'" +
-      ".yandex.cloud.cloudregistry.v1.Registry\"" +
-      "3\202\323\344\223\002-\022+/cloud-registry/v1/registries/{" +
-      "registry_id}\022\232\001\n\004List\0224.yandex.cloud.clo" +
-      "udregistry.v1.ListRegistriesRequest\0325.ya" +
-      "ndex.cloud.cloudregistry.v1.ListRegistri" +
-      "esResponse\"%\202\323\344\223\002\037\022\035/cloud-registry/v1/r" +
-      "egistries\022\261\001\n\006Create\0224.yandex.cloud.clou" +
-      "dregistry.v1.CreateRegistryRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"N\202\323\344\223\002\"\"\035/" +
-      "cloud-registry/v1/registries:\001*\262\322*\"\n\026Cre" +
-      "ateRegistryMetadata\022\010Registry\022\277\001\n\006Update" +
-      "\0224.yandex.cloud.cloudregistry.v1.UpdateR" +
-      "egistryRequest\032!.yandex.cloud.operation." +
-      "Operation\"\\\202\323\344\223\00202+/cloud-registry/v1/re" +
-      "gistries/{registry_id}:\001*\262\322*\"\n\026UpdateReg" +
-      "istryMetadata\022\010Registry\022\311\001\n\006Delete\0224.yan" +
-      "dex.cloud.cloudregistry.v1.DeleteRegistr" +
-      "yRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"f\202\323\344\223\002-*+/cloud-registry/v1/registri" +
-      "es/{registry_id}\262\322*/\n\026DeleteRegistryMeta" +
-      "data\022\025google.protobuf.Empty\022\332\001\n\013ForceDel" +
-      "ete\0224.yandex.cloud.cloudregistry.v1.Dele" +
-      "teRegistryRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"r\202\323\344\223\0029\"7/cloud-registry/v1" +
-      "/registries/{registry_id}:forceDelete\262\322*" +
-      "/\n\026DeleteRegistryMetadata\022\025google.protob" +
-      "uf.Empty\022\275\001\n\022ListAccessBindings\022..yandex" +
-      ".cloud.access.ListAccessBindingsRequest\032" +
-      "/.yandex.cloud.access.ListAccessBindings" +
-      "Response\"F\202\323\344\223\002@\022>/cloud-registry/v1/reg" +
-      "istries/{resource_id}:listAccessBindings" +
-      "\022\355\001\n\021SetAccessBindings\022-.yandex.cloud.ac" +
-      "cess.SetAccessBindingsRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\205\001\202\323\344\223\002B\"=/clou" +
-      "d-registry/v1/registries/{resource_id}:s" +
-      "etAccessBindings:\001*\262\322*9\n access.SetAcces" +
-      "sBindingsMetadata\022\025google.protobuf.Empty" +
-      "\022\371\001\n\024UpdateAccessBindings\0220.yandex.cloud" +
-      ".access.UpdateAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\213\001\202\323\344\223\002E\"" +
-      "@/cloud-registry/v1/registries/{resource" +
-      "_id}:updateAccessBindings:\001*\262\322*<\n#access" +
-      ".UpdateAccessBindingsMetadata\022\025google.pr" +
-      "otobuf.Empty\022\315\001\n\021ListIpPermissions\0227.yan" +
-      "dex.cloud.cloudregistry.v1.ListIpPermiss" +
-      "ionsRequest\0328.yandex.cloud.cloudregistry" +
-      ".v1.ListIpPermissionsResponse\"E\202\323\344\223\002?\022=/" +
-      "cloud-registry/v1/registries/{registry_i" +
-      "d}:listIpPermissions\022\353\001\n\020SetIpPermission" +
-      "s\0226.yandex.cloud.cloudregistry.v1.SetIpP" +
-      "ermissionsRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"|\202\323\344\223\002A\"</cloud-registry/v1" +
-      "/registries/{registry_id}:setIpPermissio" +
-      "ns:\001*\262\322*1\n\030SetIpPermissionsMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\370\001\n\023UpdateIpPermissio" +
-      "ns\0229.yandex.cloud.cloudregistry.v1.Updat" +
-      "eIpPermissionsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\202\001\202\323\344\223\002D\"?/cloud-regist" +
-      "ry/v1/registries/{registry_id}:updateIpP" +
-      "ermissions:\001*\262\322*4\n\033UpdateIpPermissionsMe" +
-      "tadata\022\025google.protobuf.Empty\022\275\001\n\rListAr" +
-      "tifacts\0223.yandex.cloud.cloudregistry.v1." +
-      "ListArtifactsRequest\0324.yandex.cloud.clou" +
-      "dregistry.v1.ListArtifactsResponse\"A\202\323\344\223" +
-      "\002;\0229/cloud-registry/v1/registries/{regis" +
-      "try_id}:listArtifactsBt\n!yandex.cloud.ap" +
-      "i.cloudregistry.v1ZOgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/cloudregist" +
-      "ry/v1;cloudregistryb\006proto3"
+      "=50\"]\n\031ListIpPermissionsResponse\022@\n\013perm" +
+      "issions\030\001 \003(\0132+.yandex.cloud.cloudregist" +
+      "ry.v1.IpPermission\"/\n\030SetIpPermissionsMe" +
+      "tadata\022\023\n\013registry_id\030\001 \001(\t\"2\n\033UpdateIpP" +
+      "ermissionsMetadata\022\023\n\013registry_id\030\001 \001(\t\"" +
+      "\201\001\n\024ListArtifactsRequest\022\035\n\013registry_id\030" +
+      "\001 \001(\tB\010\212\3101\004<=50\022\014\n\004path\030\002 \001(\t\022\035\n\tpage_si" +
+      "ze\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\t" +
+      "B\t\212\3101\005<=100\"l\n\025ListArtifactsResponse\022:\n\t" +
+      "artifacts\030\001 \003(\0132\'.yandex.cloud.cloudregi" +
+      "stry.v1.Artifact\022\027\n\017next_page_token\030\002 \001(" +
+      "\t2\213\025\n\017RegistryService\022\226\001\n\003Get\0221.yandex.c" +
+      "loud.cloudregistry.v1.GetRegistryRequest" +
+      "\032\'.yandex.cloud.cloudregistry.v1.Registr" +
+      "y\"3\202\323\344\223\002-\022+/cloud-registry/v1/registries" +
+      "/{registry_id}\022\232\001\n\004List\0224.yandex.cloud.c" +
+      "loudregistry.v1.ListRegistriesRequest\0325." +
+      "yandex.cloud.cloudregistry.v1.ListRegist" +
+      "riesResponse\"%\202\323\344\223\002\037\022\035/cloud-registry/v1" +
+      "/registries\022\261\001\n\006Create\0224.yandex.cloud.cl" +
+      "oudregistry.v1.CreateRegistryRequest\032!.y" +
+      "andex.cloud.operation.Operation\"N\202\323\344\223\002\"\"" +
+      "\035/cloud-registry/v1/registries:\001*\262\322*\"\n\026C" +
+      "reateRegistryMetadata\022\010Registry\022\277\001\n\006Upda" +
+      "te\0224.yandex.cloud.cloudregistry.v1.Updat" +
+      "eRegistryRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\\\202\323\344\223\00202+/cloud-registry/v1/" +
+      "registries/{registry_id}:\001*\262\322*\"\n\026UpdateR" +
+      "egistryMetadata\022\010Registry\022\311\001\n\006Delete\0224.y" +
+      "andex.cloud.cloudregistry.v1.DeleteRegis" +
+      "tryRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"f\202\323\344\223\002-*+/cloud-registry/v1/regist" +
+      "ries/{registry_id}\262\322*/\n\026DeleteRegistryMe" +
+      "tadata\022\025google.protobuf.Empty\022\332\001\n\013ForceD" +
+      "elete\0224.yandex.cloud.cloudregistry.v1.De" +
+      "leteRegistryRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"r\202\323\344\223\0029\"7/cloud-registry/" +
+      "v1/registries/{registry_id}:forceDelete\262" +
+      "\322*/\n\026DeleteRegistryMetadata\022\025google.prot" +
+      "obuf.Empty\022\275\001\n\022ListAccessBindings\022..yand" +
+      "ex.cloud.access.ListAccessBindingsReques" +
+      "t\032/.yandex.cloud.access.ListAccessBindin" +
+      "gsResponse\"F\202\323\344\223\002@\022>/cloud-registry/v1/r" +
+      "egistries/{resource_id}:listAccessBindin" +
+      "gs\022\355\001\n\021SetAccessBindings\022-.yandex.cloud." +
+      "access.SetAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\205\001\202\323\344\223\002B\"=/cl" +
+      "oud-registry/v1/registries/{resource_id}" +
+      ":setAccessBindings:\001*\262\322*9\n access.SetAcc" +
+      "essBindingsMetadata\022\025google.protobuf.Emp" +
+      "ty\022\371\001\n\024UpdateAccessBindings\0220.yandex.clo" +
+      "ud.access.UpdateAccessBindingsRequest\032!." +
+      "yandex.cloud.operation.Operation\"\213\001\202\323\344\223\002" +
+      "E\"@/cloud-registry/v1/registries/{resour" +
+      "ce_id}:updateAccessBindings:\001*\262\322*<\n#acce" +
+      "ss.UpdateAccessBindingsMetadata\022\025google." +
+      "protobuf.Empty\022\315\001\n\021ListIpPermissions\0227.y" +
+      "andex.cloud.cloudregistry.v1.ListIpPermi" +
+      "ssionsRequest\0328.yandex.cloud.cloudregist" +
+      "ry.v1.ListIpPermissionsResponse\"E\202\323\344\223\002?\022" +
+      "=/cloud-registry/v1/registries/{registry" +
+      "_id}:listIpPermissions\022\353\001\n\020SetIpPermissi" +
+      "ons\0226.yandex.cloud.cloudregistry.v1.SetI" +
+      "pPermissionsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"|\202\323\344\223\002A\"</cloud-registry/" +
+      "v1/registries/{registry_id}:setIpPermiss" +
+      "ions:\001*\262\322*1\n\030SetIpPermissionsMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\370\001\n\023UpdateIpPermiss" +
+      "ions\0229.yandex.cloud.cloudregistry.v1.Upd" +
+      "ateIpPermissionsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\202\001\202\323\344\223\002D\"?/cloud-regi" +
+      "stry/v1/registries/{registry_id}:updateI" +
+      "pPermissions:\001*\262\322*4\n\033UpdateIpPermissions" +
+      "Metadata\022\025google.protobuf.Empty\022\275\001\n\rList" +
+      "Artifacts\0223.yandex.cloud.cloudregistry.v" +
+      "1.ListArtifactsRequest\0324.yandex.cloud.cl" +
+      "oudregistry.v1.ListArtifactsResponse\"A\202\323" +
+      "\344\223\002;\0229/cloud-registry/v1/registries/{reg" +
+      "istry_id}:listArtifactsBt\n!yandex.cloud." +
+      "api.cloudregistry.v1ZOgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/cloudregi" +
+      "stry/v1;cloudregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
