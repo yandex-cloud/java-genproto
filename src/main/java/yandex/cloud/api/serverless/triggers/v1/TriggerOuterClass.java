@@ -49,14 +49,26 @@ public final class TriggerOuterClass {
      */
     IOT_MESSAGE(4),
     /**
+     * <pre>
+     * The trigger is activated by messages from IoT Core broker.
+     * </pre>
+     *
      * <code>IOT_BROKER_MESSAGE = 12;</code>
      */
     IOT_BROKER_MESSAGE(12),
     /**
+     * <pre>
+     * The trigger is activated by Object Storage events.
+     * </pre>
+     *
      * <code>OBJECT_STORAGE = 5;</code>
      */
     OBJECT_STORAGE(5),
     /**
+     * <pre>
+     * The trigger is activated by Container Registry events.
+     * </pre>
+     *
      * <code>CONTAINER_REGISTRY = 6;</code>
      */
     CONTAINER_REGISTRY(6),
@@ -133,14 +145,26 @@ public final class TriggerOuterClass {
      */
     public static final int IOT_MESSAGE_VALUE = 4;
     /**
+     * <pre>
+     * The trigger is activated by messages from IoT Core broker.
+     * </pre>
+     *
      * <code>IOT_BROKER_MESSAGE = 12;</code>
      */
     public static final int IOT_BROKER_MESSAGE_VALUE = 12;
     /**
+     * <pre>
+     * The trigger is activated by Object Storage events.
+     * </pre>
+     *
      * <code>OBJECT_STORAGE = 5;</code>
      */
     public static final int OBJECT_STORAGE_VALUE = 5;
     /**
+     * <pre>
+     * The trigger is activated by Container Registry events.
+     * </pre>
+     *
      * <code>CONTAINER_REGISTRY = 6;</code>
      */
     public static final int CONTAINER_REGISTRY_VALUE = 6;
@@ -667,14 +691,26 @@ public final class TriggerOuterClass {
        */
       OBJECT_STORAGE_EVENT_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * An object was created.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_EVENT_TYPE_CREATE_OBJECT = 1;</code>
        */
       OBJECT_STORAGE_EVENT_TYPE_CREATE_OBJECT(1),
       /**
+       * <pre>
+       * An object was updated.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJECT = 2;</code>
        */
       OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJECT(2),
       /**
+       * <pre>
+       * An object was deleted.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_EVENT_TYPE_DELETE_OBJECT = 3;</code>
        */
       OBJECT_STORAGE_EVENT_TYPE_DELETE_OBJECT(3),
@@ -686,14 +722,26 @@ public final class TriggerOuterClass {
        */
       public static final int OBJECT_STORAGE_EVENT_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * An object was created.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_EVENT_TYPE_CREATE_OBJECT = 1;</code>
        */
       public static final int OBJECT_STORAGE_EVENT_TYPE_CREATE_OBJECT_VALUE = 1;
       /**
+       * <pre>
+       * An object was updated.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJECT = 2;</code>
        */
       public static final int OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJECT_VALUE = 2;
       /**
+       * <pre>
+       * An object was deleted.
+       * </pre>
+       *
        * <code>OBJECT_STORAGE_EVENT_TYPE_DELETE_OBJECT = 3;</code>
        */
       public static final int OBJECT_STORAGE_EVENT_TYPE_DELETE_OBJECT_VALUE = 3;
@@ -793,18 +841,34 @@ public final class TriggerOuterClass {
        */
       CONTAINER_REGISTRY_EVENT_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * An image was created.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE = 1;</code>
        */
       CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE(1),
       /**
+       * <pre>
+       * An image was deleted.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE = 2;</code>
        */
       CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE(2),
       /**
+       * <pre>
+       * An image tag was created.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_TAG = 3;</code>
        */
       CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_TAG(3),
       /**
+       * <pre>
+       * An image tag was deleted.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_TAG = 4;</code>
        */
       CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_TAG(4),
@@ -816,18 +880,34 @@ public final class TriggerOuterClass {
        */
       public static final int CONTAINER_REGISTRY_EVENT_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * An image was created.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE = 1;</code>
        */
       public static final int CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_VALUE = 1;
       /**
+       * <pre>
+       * An image was deleted.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE = 2;</code>
        */
       public static final int CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_VALUE = 2;
       /**
+       * <pre>
+       * An image tag was created.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_TAG = 3;</code>
        */
       public static final int CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_TAG_VALUE = 3;
       /**
+       * <pre>
+       * An image tag was deleted.
+       * </pre>
+       *
        * <code>CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_TAG = 4;</code>
        */
       public static final int CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_TAG_VALUE = 4;
@@ -928,10 +1008,18 @@ public final class TriggerOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * The trigger is active and will fire when the triggering event occurs.
+       * </pre>
+       *
        * <code>ACTIVE = 1;</code>
        */
       ACTIVE(1),
       /**
+       * <pre>
+       * The trigger is paused and will not fire when the triggering event occurs.
+       * </pre>
+       *
        * <code>PAUSED = 2;</code>
        */
       PAUSED(2),
@@ -943,10 +1031,18 @@ public final class TriggerOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * The trigger is active and will fire when the triggering event occurs.
+       * </pre>
+       *
        * <code>ACTIVE = 1;</code>
        */
       public static final int ACTIVE_VALUE = 1;
       /**
+       * <pre>
+       * The trigger is paused and will not fire when the triggering event occurs.
+       * </pre>
+       *
        * <code>PAUSED = 2;</code>
        */
       public static final int PAUSED_VALUE = 2;
@@ -1121,121 +1217,217 @@ public final class TriggerOuterClass {
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder getIotMessageOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a IoT Core Broker trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
        * @return Whether the iotBrokerMessage field is set.
        */
       boolean hasIotBrokerMessage();
       /**
+       * <pre>
+       * Rule for a IoT Core Broker trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
        * @return The iotBrokerMessage.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage getIotBrokerMessage();
       /**
+       * <pre>
+       * Rule for a IoT Core Broker trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessageOrBuilder getIotBrokerMessageOrBuilder();
 
       /**
+       * <pre>
+       * Rule for an Object Storage trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
        * @return Whether the objectStorage field is set.
        */
       boolean hasObjectStorage();
       /**
+       * <pre>
+       * Rule for an Object Storage trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
        * @return The objectStorage.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage getObjectStorage();
       /**
+       * <pre>
+       * Rule for an Object Storage trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageOrBuilder getObjectStorageOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a Container Registry trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
        * @return Whether the containerRegistry field is set.
        */
       boolean hasContainerRegistry();
       /**
+       * <pre>
+       * Rule for a Container Registry trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
        * @return The containerRegistry.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry getContainerRegistry();
       /**
+       * <pre>
+       * Rule for a Container Registry trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder getContainerRegistryOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a Cloud Logs trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
        * @return Whether the cloudLogs field is set.
        */
       boolean hasCloudLogs();
       /**
+       * <pre>
+       * Rule for a Cloud Logs trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
        * @return The cloudLogs.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs getCloudLogs();
       /**
+       * <pre>
+       * Rule for a Cloud Logs trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogsOrBuilder getCloudLogsOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a Logging trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
        * @return Whether the logging field is set.
        */
       boolean hasLogging();
       /**
+       * <pre>
+       * Rule for a Logging trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
        * @return The logging.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging getLogging();
       /**
+       * <pre>
+       * Rule for a Logging trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.LoggingOrBuilder getLoggingOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a Billing Budget trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
        * @return Whether the billingBudget field is set.
        */
       boolean hasBillingBudget();
       /**
+       * <pre>
+       * Rule for a Billing Budget trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
        * @return The billingBudget.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget getBillingBudget();
       /**
+       * <pre>
+       * Rule for a Billing Budget trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudgetOrBuilder getBillingBudgetOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a Data Stream trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
        * @return Whether the dataStream field is set.
        */
       boolean hasDataStream();
       /**
+       * <pre>
+       * Rule for a Data Stream trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
        * @return The dataStream.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDataStream();
       /**
+       * <pre>
+       * Rule for a Data Stream trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder getDataStreamOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a Mail trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
        * @return Whether the mail field is set.
        */
       boolean hasMail();
       /**
+       * <pre>
+       * Rule for a Mail trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
        * @return The mail.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail getMail();
       /**
+       * <pre>
+       * Rule for a Mail trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.MailOrBuilder getMailOrBuilder();
@@ -1667,6 +1859,10 @@ public final class TriggerOuterClass {
 
       public static final int IOT_BROKER_MESSAGE_FIELD_NUMBER = 14;
       /**
+       * <pre>
+       * Rule for a IoT Core Broker trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
        * @return Whether the iotBrokerMessage field is set.
        */
@@ -1675,6 +1871,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 14;
       }
       /**
+       * <pre>
+       * Rule for a IoT Core Broker trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
        * @return The iotBrokerMessage.
        */
@@ -1686,6 +1886,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a IoT Core Broker trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
        */
       @java.lang.Override
@@ -1698,6 +1902,10 @@ public final class TriggerOuterClass {
 
       public static final int OBJECT_STORAGE_FIELD_NUMBER = 5;
       /**
+       * <pre>
+       * Rule for an Object Storage trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
        * @return Whether the objectStorage field is set.
        */
@@ -1706,6 +1914,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 5;
       }
       /**
+       * <pre>
+       * Rule for an Object Storage trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
        * @return The objectStorage.
        */
@@ -1717,6 +1929,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for an Object Storage trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
        */
       @java.lang.Override
@@ -1729,6 +1945,10 @@ public final class TriggerOuterClass {
 
       public static final int CONTAINER_REGISTRY_FIELD_NUMBER = 6;
       /**
+       * <pre>
+       * Rule for a Container Registry trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
        * @return Whether the containerRegistry field is set.
        */
@@ -1737,6 +1957,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 6;
       }
       /**
+       * <pre>
+       * Rule for a Container Registry trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
        * @return The containerRegistry.
        */
@@ -1748,6 +1972,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a Container Registry trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
        */
       @java.lang.Override
@@ -1760,6 +1988,10 @@ public final class TriggerOuterClass {
 
       public static final int CLOUD_LOGS_FIELD_NUMBER = 9;
       /**
+       * <pre>
+       * Rule for a Cloud Logs trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
        * @return Whether the cloudLogs field is set.
        */
@@ -1768,6 +2000,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 9;
       }
       /**
+       * <pre>
+       * Rule for a Cloud Logs trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
        * @return The cloudLogs.
        */
@@ -1779,6 +2015,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a Cloud Logs trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
        */
       @java.lang.Override
@@ -1791,6 +2031,10 @@ public final class TriggerOuterClass {
 
       public static final int LOGGING_FIELD_NUMBER = 10;
       /**
+       * <pre>
+       * Rule for a Logging trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
        * @return Whether the logging field is set.
        */
@@ -1799,6 +2043,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 10;
       }
       /**
+       * <pre>
+       * Rule for a Logging trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
        * @return The logging.
        */
@@ -1810,6 +2058,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a Logging trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
        */
       @java.lang.Override
@@ -1822,6 +2074,10 @@ public final class TriggerOuterClass {
 
       public static final int BILLING_BUDGET_FIELD_NUMBER = 11;
       /**
+       * <pre>
+       * Rule for a Billing Budget trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
        * @return Whether the billingBudget field is set.
        */
@@ -1830,6 +2086,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 11;
       }
       /**
+       * <pre>
+       * Rule for a Billing Budget trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
        * @return The billingBudget.
        */
@@ -1841,6 +2101,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a Billing Budget trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
        */
       @java.lang.Override
@@ -1853,6 +2117,10 @@ public final class TriggerOuterClass {
 
       public static final int DATA_STREAM_FIELD_NUMBER = 12;
       /**
+       * <pre>
+       * Rule for a Data Stream trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
        * @return Whether the dataStream field is set.
        */
@@ -1861,6 +2129,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 12;
       }
       /**
+       * <pre>
+       * Rule for a Data Stream trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
        * @return The dataStream.
        */
@@ -1872,6 +2144,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a Data Stream trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
        */
       @java.lang.Override
@@ -1884,6 +2160,10 @@ public final class TriggerOuterClass {
 
       public static final int MAIL_FIELD_NUMBER = 13;
       /**
+       * <pre>
+       * Rule for a Mail trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
        * @return Whether the mail field is set.
        */
@@ -1892,6 +2172,10 @@ public final class TriggerOuterClass {
         return ruleCase_ == 13;
       }
       /**
+       * <pre>
+       * Rule for a Mail trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
        * @return The mail.
        */
@@ -1903,6 +2187,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a Mail trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
        */
       @java.lang.Override
@@ -3054,6 +3342,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessageOrBuilder> iotBrokerMessageBuilder_;
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          * @return Whether the iotBrokerMessage field is set.
          */
@@ -3062,6 +3354,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 14;
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          * @return The iotBrokerMessage.
          */
@@ -3080,6 +3376,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          */
         public Builder setIotBrokerMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage value) {
@@ -3096,6 +3396,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          */
         public Builder setIotBrokerMessage(
@@ -3110,6 +3414,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          */
         public Builder mergeIotBrokerMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage value) {
@@ -3132,6 +3440,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          */
         public Builder clearIotBrokerMessage() {
@@ -3151,12 +3463,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage.Builder getIotBrokerMessageBuilder() {
           return getIotBrokerMessageFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          */
         @java.lang.Override
@@ -3171,6 +3491,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a IoT Core Broker trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTBrokerMessage iot_broker_message = 14;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -3195,6 +3519,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageOrBuilder> objectStorageBuilder_;
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          * @return Whether the objectStorage field is set.
          */
@@ -3203,6 +3531,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 5;
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          * @return The objectStorage.
          */
@@ -3221,6 +3553,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
         public Builder setObjectStorage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage value) {
@@ -3237,6 +3573,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
         public Builder setObjectStorage(
@@ -3251,6 +3591,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
         public Builder mergeObjectStorage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage value) {
@@ -3273,6 +3617,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
         public Builder clearObjectStorage() {
@@ -3292,12 +3640,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.Builder getObjectStorageBuilder() {
           return getObjectStorageFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
         @java.lang.Override
@@ -3312,6 +3668,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for an Object Storage trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -3336,6 +3696,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder> containerRegistryBuilder_;
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          * @return Whether the containerRegistry field is set.
          */
@@ -3344,6 +3708,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 6;
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          * @return The containerRegistry.
          */
@@ -3362,6 +3730,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
         public Builder setContainerRegistry(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry value) {
@@ -3378,6 +3750,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
         public Builder setContainerRegistry(
@@ -3392,6 +3768,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
         public Builder mergeContainerRegistry(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry value) {
@@ -3414,6 +3794,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
         public Builder clearContainerRegistry() {
@@ -3433,12 +3817,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder getContainerRegistryBuilder() {
           return getContainerRegistryFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
         @java.lang.Override
@@ -3453,6 +3845,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Container Registry trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -3477,6 +3873,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogsOrBuilder> cloudLogsBuilder_;
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          * @return Whether the cloudLogs field is set.
          */
@@ -3485,6 +3885,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 9;
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          * @return The cloudLogs.
          */
@@ -3503,6 +3907,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
         public Builder setCloudLogs(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs value) {
@@ -3519,6 +3927,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
         public Builder setCloudLogs(
@@ -3533,6 +3945,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
         public Builder mergeCloudLogs(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs value) {
@@ -3555,6 +3971,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
         public Builder clearCloudLogs() {
@@ -3574,12 +3994,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs.Builder getCloudLogsBuilder() {
           return getCloudLogsFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
         @java.lang.Override
@@ -3594,6 +4022,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Cloud Logs trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -3618,6 +4050,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.LoggingOrBuilder> loggingBuilder_;
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          * @return Whether the logging field is set.
          */
@@ -3626,6 +4062,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 10;
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          * @return The logging.
          */
@@ -3644,6 +4084,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
         public Builder setLogging(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging value) {
@@ -3660,6 +4104,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
         public Builder setLogging(
@@ -3674,6 +4122,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
         public Builder mergeLogging(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging value) {
@@ -3696,6 +4148,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
         public Builder clearLogging() {
@@ -3715,12 +4171,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.Builder getLoggingBuilder() {
           return getLoggingFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
         @java.lang.Override
@@ -3735,6 +4199,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Logging trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -3759,6 +4227,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudgetOrBuilder> billingBudgetBuilder_;
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          * @return Whether the billingBudget field is set.
          */
@@ -3767,6 +4239,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 11;
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          * @return The billingBudget.
          */
@@ -3785,6 +4261,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
         public Builder setBillingBudget(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget value) {
@@ -3801,6 +4281,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
         public Builder setBillingBudget(
@@ -3815,6 +4299,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
         public Builder mergeBillingBudget(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget value) {
@@ -3837,6 +4325,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
         public Builder clearBillingBudget() {
@@ -3856,12 +4348,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget.Builder getBillingBudgetBuilder() {
           return getBillingBudgetFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
         @java.lang.Override
@@ -3876,6 +4376,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Billing Budget trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -3900,6 +4404,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder> dataStreamBuilder_;
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          * @return Whether the dataStream field is set.
          */
@@ -3908,6 +4416,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 12;
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          * @return The dataStream.
          */
@@ -3926,6 +4438,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
         public Builder setDataStream(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream value) {
@@ -3942,6 +4458,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
         public Builder setDataStream(
@@ -3956,6 +4476,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
         public Builder mergeDataStream(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream value) {
@@ -3978,6 +4502,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
         public Builder clearDataStream() {
@@ -3997,12 +4525,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder getDataStreamBuilder() {
           return getDataStreamFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
         @java.lang.Override
@@ -4017,6 +4553,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Data Stream trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -4041,6 +4581,10 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.MailOrBuilder> mailBuilder_;
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          * @return Whether the mail field is set.
          */
@@ -4049,6 +4593,10 @@ public final class TriggerOuterClass {
           return ruleCase_ == 13;
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          * @return The mail.
          */
@@ -4067,6 +4615,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          */
         public Builder setMail(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail value) {
@@ -4083,6 +4635,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          */
         public Builder setMail(
@@ -4097,6 +4653,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          */
         public Builder mergeMail(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail value) {
@@ -4119,6 +4679,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          */
         public Builder clearMail() {
@@ -4138,12 +4702,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail.Builder getMailBuilder() {
           return getMailFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          */
         @java.lang.Override
@@ -4158,6 +4730,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Mail trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Mail mail = 13;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -4280,27 +4856,29 @@ public final class TriggerOuterClass {
        * Instructions for invoking a function once.
        * </pre>
        *
-       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the invokeFunction field is set.
        */
-      boolean hasInvokeFunction();
+      @java.lang.Deprecated boolean hasInvokeFunction();
       /**
        * <pre>
        * Instructions for invoking a function once.
        * </pre>
        *
-       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
+       * @deprecated
        * @return The invokeFunction.
        */
-      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction();
+      @java.lang.Deprecated yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction();
       /**
        * <pre>
        * Instructions for invoking a function once.
        * </pre>
        *
-       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
        */
-      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder();
+      @java.lang.Deprecated yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder();
 
       /**
        * <pre>
@@ -4382,6 +4960,33 @@ public final class TriggerOuterClass {
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      boolean hasStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+       * @return The startWorkflow.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder();
 
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer.ActionCase getActionCase();
     }
@@ -4504,6 +5109,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 105;
                 break;
               }
+              case 850: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder subBuilder = null;
+                if (actionCase_ == 106) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 106;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -4541,10 +5160,11 @@ public final class TriggerOuterClass {
       public enum ActionCase
           implements com.google.protobuf.Internal.EnumLite,
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-        INVOKE_FUNCTION(101),
+        @java.lang.Deprecated INVOKE_FUNCTION(101),
         INVOKE_FUNCTION_WITH_RETRY(103),
         INVOKE_CONTAINER_WITH_RETRY(104),
         GATEWAY_WEBSOCKET_BROADCAST(105),
+        START_WORKFLOW(106),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -4566,6 +5186,7 @@ public final class TriggerOuterClass {
             case 103: return INVOKE_FUNCTION_WITH_RETRY;
             case 104: return INVOKE_CONTAINER_WITH_RETRY;
             case 105: return GATEWAY_WEBSOCKET_BROADCAST;
+            case 106: return START_WORKFLOW;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -4679,11 +5300,12 @@ public final class TriggerOuterClass {
        * Instructions for invoking a function once.
        * </pre>
        *
-       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the invokeFunction field is set.
        */
       @java.lang.Override
-      public boolean hasInvokeFunction() {
+      @java.lang.Deprecated public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
       /**
@@ -4691,11 +5313,12 @@ public final class TriggerOuterClass {
        * Instructions for invoking a function once.
        * </pre>
        *
-       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
+       * @deprecated
        * @return The invokeFunction.
        */
       @java.lang.Override
-      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
+      @java.lang.Deprecated public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) action_;
         }
@@ -4706,10 +5329,10 @@ public final class TriggerOuterClass {
        * Instructions for invoking a function once.
        * </pre>
        *
-       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) action_;
         }
@@ -4845,6 +5468,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
       }
 
+      public static final int START_WORKFLOW_FIELD_NUMBER = 106;
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 106;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+        if (actionCase_ == 106) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+        if (actionCase_ == 106) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4877,6 +5543,9 @@ public final class TriggerOuterClass {
         if (actionCase_ == 105) {
           output.writeMessage(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
+        if (actionCase_ == 106) {
+          output.writeMessage(106, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -4907,6 +5576,10 @@ public final class TriggerOuterClass {
         if (actionCase_ == 105) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
+        if (actionCase_ == 106) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(106, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -4945,6 +5618,10 @@ public final class TriggerOuterClass {
             if (!getGatewayWebsocketBroadcast()
                 .equals(other.getGatewayWebsocketBroadcast())) return false;
             break;
+          case 106:
+            if (!getStartWorkflow()
+                .equals(other.getStartWorkflow())) return false;
+            break;
           case 0:
           default:
         }
@@ -4979,6 +5656,10 @@ public final class TriggerOuterClass {
           case 105:
             hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
             hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+            break;
+          case 106:
+            hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+            hash = (53 * hash) + getStartWorkflow().hashCode();
             break;
           case 0:
           default:
@@ -5182,6 +5863,13 @@ public final class TriggerOuterClass {
               result.action_ = gatewayWebsocketBroadcastBuilder_.build();
             }
           }
+          if (actionCase_ == 106) {
+            if (startWorkflowBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = startWorkflowBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -5254,6 +5942,10 @@ public final class TriggerOuterClass {
             }
             case GATEWAY_WEBSOCKET_BROADCAST: {
               mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
+              break;
+            }
+            case START_WORKFLOW: {
+              mergeStartWorkflow(other.getStartWorkflow());
               break;
             }
             case ACTION_NOT_SET: {
@@ -5503,11 +6195,12 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
+         * @deprecated
          * @return Whether the invokeFunction field is set.
          */
         @java.lang.Override
-        public boolean hasInvokeFunction() {
+        @java.lang.Deprecated public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
         /**
@@ -5515,11 +6208,12 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
+         * @deprecated
          * @return The invokeFunction.
          */
         @java.lang.Override
-        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
+        @java.lang.Deprecated public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
               return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) action_;
@@ -5537,9 +6231,9 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
          */
-        public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
+        @java.lang.Deprecated public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
           if (invokeFunctionBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -5557,9 +6251,9 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
          */
-        public Builder setInvokeFunction(
+        @java.lang.Deprecated public Builder setInvokeFunction(
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder builderForValue) {
           if (invokeFunctionBuilder_ == null) {
             action_ = builderForValue.build();
@@ -5575,9 +6269,9 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
          */
-        public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
+        @java.lang.Deprecated public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101 &&
                 action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.getDefaultInstance()) {
@@ -5601,9 +6295,9 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
          */
-        public Builder clearInvokeFunction() {
+        @java.lang.Deprecated public Builder clearInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
               actionCase_ = 0;
@@ -5624,9 +6318,9 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
          */
-        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder getInvokeFunctionBuilder() {
+        @java.lang.Deprecated public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder getInvokeFunctionBuilder() {
           return getInvokeFunctionFieldBuilder().getBuilder();
         }
         /**
@@ -5634,10 +6328,10 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
          */
         @java.lang.Override
-        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
+        @java.lang.Deprecated public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
           } else {
@@ -5652,7 +6346,7 @@ public final class TriggerOuterClass {
          * Instructions for invoking a function once.
          * </pre>
          *
-         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101 [deprecated = true];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder> 
@@ -6203,6 +6897,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return gatewayWebsocketBroadcastBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> startWorkflowBuilder_;
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         * @return Whether the startWorkflow field is set.
+         */
+        @java.lang.Override
+        public boolean hasStartWorkflow() {
+          return actionCase_ == 106;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         * @return The startWorkflow.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 106) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          } else {
+            if (actionCase_ == 106) {
+              return startWorkflowBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         */
+        public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 106;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         */
+        public Builder setStartWorkflow(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder builderForValue) {
+          if (startWorkflowBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 106;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         */
+        public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 106 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 106) {
+              startWorkflowBuilder_.mergeFrom(value);
+            }
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 106;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         */
+        public Builder clearStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 106) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 106) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            startWorkflowBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder getStartWorkflowBuilder() {
+          return getStartWorkflowFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+          if ((actionCase_ == 106) && (startWorkflowBuilder_ != null)) {
+            return startWorkflowBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 106) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 106;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> 
+            getStartWorkflowFieldBuilder() {
+          if (startWorkflowBuilder_ == null) {
+            if (!(actionCase_ == 106)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+            }
+            startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 106;
+          onChanged();;
+          return startWorkflowBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6435,6 +7306,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for starting a workflow once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      boolean hasStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+       * @return The startWorkflow.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce getStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnceOrBuilder getStartWorkflowOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue.ActionCase getActionCase();
     }
     /**
@@ -6568,6 +7466,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 103;
                 break;
               }
+              case 834: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder subBuilder = null;
+                if (actionCase_ == 104) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 104;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -6608,6 +7520,7 @@ public final class TriggerOuterClass {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         GATEWAY_WEBSOCKET_BROADCAST(103),
+        START_WORKFLOW(104),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -6628,6 +7541,7 @@ public final class TriggerOuterClass {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
             case 103: return GATEWAY_WEBSOCKET_BROADCAST;
+            case 104: return START_WORKFLOW;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -6940,6 +7854,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
       }
 
+      public static final int START_WORKFLOW_FIELD_NUMBER = 104;
+      /**
+       * <pre>
+       * Instructions for starting a workflow once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 104;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce getStartWorkflow() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnceOrBuilder getStartWorkflowOrBuilder() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -6975,6 +7932,9 @@ public final class TriggerOuterClass {
         if (actionCase_ == 103) {
           output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
+        if (actionCase_ == 104) {
+          output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -7009,6 +7969,10 @@ public final class TriggerOuterClass {
         if (actionCase_ == 103) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
+        if (actionCase_ == 104) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -7053,6 +8017,10 @@ public final class TriggerOuterClass {
             if (!getGatewayWebsocketBroadcast()
                 .equals(other.getGatewayWebsocketBroadcast())) return false;
             break;
+          case 104:
+            if (!getStartWorkflow()
+                .equals(other.getStartWorkflow())) return false;
+            break;
           case 0:
           default:
         }
@@ -7091,6 +8059,10 @@ public final class TriggerOuterClass {
           case 103:
             hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
             hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+            break;
+          case 104:
+            hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+            hash = (53 * hash) + getStartWorkflow().hashCode();
             break;
           case 0:
           default:
@@ -7309,6 +8281,13 @@ public final class TriggerOuterClass {
               result.action_ = gatewayWebsocketBroadcastBuilder_.build();
             }
           }
+          if (actionCase_ == 104) {
+            if (startWorkflowBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = startWorkflowBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -7383,6 +8362,10 @@ public final class TriggerOuterClass {
             }
             case GATEWAY_WEBSOCKET_BROADCAST: {
               mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
+              break;
+            }
+            case START_WORKFLOW: {
+              mergeStartWorkflow(other.getStartWorkflow());
               break;
             }
             case ACTION_NOT_SET: {
@@ -8464,6 +9447,183 @@ public final class TriggerOuterClass {
           actionCase_ = 103;
           onChanged();;
           return gatewayWebsocketBroadcastBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnceOrBuilder> startWorkflowBuilder_;
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         * @return Whether the startWorkflow field is set.
+         */
+        @java.lang.Override
+        public boolean hasStartWorkflow() {
+          return actionCase_ == 104;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         * @return The startWorkflow.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce getStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance();
+          } else {
+            if (actionCase_ == 104) {
+              return startWorkflowBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         */
+        public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce value) {
+          if (startWorkflowBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         */
+        public Builder setStartWorkflow(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder builderForValue) {
+          if (startWorkflowBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         */
+        public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce value) {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 104) {
+              startWorkflowBuilder_.mergeFrom(value);
+            }
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         */
+        public Builder clearStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            startWorkflowBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder getStartWorkflowBuilder() {
+          return getStartWorkflowFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnceOrBuilder getStartWorkflowOrBuilder() {
+          if ((actionCase_ == 104) && (startWorkflowBuilder_ != null)) {
+            return startWorkflowBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowOnce start_workflow = 104;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnceOrBuilder> 
+            getStartWorkflowFieldBuilder() {
+          if (startWorkflowBuilder_ == null) {
+            if (!(actionCase_ == 104)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance();
+            }
+            startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnceOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 104;
+          onChanged();;
+          return startWorkflowBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -12923,6 +14083,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      boolean hasStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return The startWorkflow.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.ActionCase getActionCase();
     }
     /**
@@ -13071,6 +14258,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 103;
                 break;
               }
+              case 834: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder subBuilder = null;
+                if (actionCase_ == 104) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 104;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -13114,6 +14315,7 @@ public final class TriggerOuterClass {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         GATEWAY_WEBSOCKET_BROADCAST(103),
+        START_WORKFLOW(104),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -13134,6 +14336,7 @@ public final class TriggerOuterClass {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
             case 103: return GATEWAY_WEBSOCKET_BROADCAST;
+            case 104: return START_WORKFLOW;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -13532,6 +14735,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
       }
 
+      public static final int START_WORKFLOW_FIELD_NUMBER = 104;
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 104;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -13574,6 +14820,9 @@ public final class TriggerOuterClass {
         }
         if (actionCase_ == 103) {
           output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
+        if (actionCase_ == 104) {
+          output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
         }
         unknownFields.writeTo(output);
       }
@@ -13621,6 +14870,10 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
+        if (actionCase_ == 104) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -13662,6 +14915,10 @@ public final class TriggerOuterClass {
             if (!getGatewayWebsocketBroadcast()
                 .equals(other.getGatewayWebsocketBroadcast())) return false;
             break;
+          case 104:
+            if (!getStartWorkflow()
+                .equals(other.getStartWorkflow())) return false;
+            break;
           case 0:
           default:
         }
@@ -13702,6 +14959,10 @@ public final class TriggerOuterClass {
           case 103:
             hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
             hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+            break;
+          case 104:
+            hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+            hash = (53 * hash) + getStartWorkflow().hashCode();
             break;
           case 0:
           default:
@@ -13916,6 +15177,13 @@ public final class TriggerOuterClass {
               result.action_ = gatewayWebsocketBroadcastBuilder_.build();
             }
           }
+          if (actionCase_ == 104) {
+            if (startWorkflowBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = startWorkflowBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -14001,6 +15269,10 @@ public final class TriggerOuterClass {
             }
             case GATEWAY_WEBSOCKET_BROADCAST: {
               mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
+              break;
+            }
+            case START_WORKFLOW: {
+              mergeStartWorkflow(other.getStartWorkflow());
               break;
             }
             case ACTION_NOT_SET: {
@@ -15213,6 +16485,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return gatewayWebsocketBroadcastBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> startWorkflowBuilder_;
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         * @return Whether the startWorkflow field is set.
+         */
+        @java.lang.Override
+        public boolean hasStartWorkflow() {
+          return actionCase_ == 104;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         * @return The startWorkflow.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          } else {
+            if (actionCase_ == 104) {
+              return startWorkflowBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder setStartWorkflow(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder builderForValue) {
+          if (startWorkflowBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 104) {
+              startWorkflowBuilder_.mergeFrom(value);
+            }
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder clearStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            startWorkflowBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder getStartWorkflowBuilder() {
+          return getStartWorkflowFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+          if ((actionCase_ == 104) && (startWorkflowBuilder_ != null)) {
+            return startWorkflowBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> 
+            getStartWorkflowFieldBuilder() {
+          if (startWorkflowBuilder_ == null) {
+            if (!(actionCase_ == 104)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+            }
+            startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 104;
+          onChanged();;
+          return startWorkflowBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15487,6 +16936,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      boolean hasStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return The startWorkflow.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.ActionCase getActionCase();
     }
     /**
@@ -15635,6 +17111,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 103;
                 break;
               }
+              case 834: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder subBuilder = null;
+                if (actionCase_ == 104) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 104;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -15678,6 +17168,7 @@ public final class TriggerOuterClass {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         GATEWAY_WEBSOCKET_BROADCAST(103),
+        START_WORKFLOW(104),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -15698,6 +17189,7 @@ public final class TriggerOuterClass {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
             case 103: return GATEWAY_WEBSOCKET_BROADCAST;
+            case 104: return START_WORKFLOW;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -16096,6 +17588,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
       }
 
+      public static final int START_WORKFLOW_FIELD_NUMBER = 104;
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 104;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -16138,6 +17673,9 @@ public final class TriggerOuterClass {
         }
         if (actionCase_ == 103) {
           output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
+        if (actionCase_ == 104) {
+          output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
         }
         unknownFields.writeTo(output);
       }
@@ -16185,6 +17723,10 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
+        if (actionCase_ == 104) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -16226,6 +17768,10 @@ public final class TriggerOuterClass {
             if (!getGatewayWebsocketBroadcast()
                 .equals(other.getGatewayWebsocketBroadcast())) return false;
             break;
+          case 104:
+            if (!getStartWorkflow()
+                .equals(other.getStartWorkflow())) return false;
+            break;
           case 0:
           default:
         }
@@ -16266,6 +17812,10 @@ public final class TriggerOuterClass {
           case 103:
             hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
             hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+            break;
+          case 104:
+            hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+            hash = (53 * hash) + getStartWorkflow().hashCode();
             break;
           case 0:
           default:
@@ -16480,6 +18030,13 @@ public final class TriggerOuterClass {
               result.action_ = gatewayWebsocketBroadcastBuilder_.build();
             }
           }
+          if (actionCase_ == 104) {
+            if (startWorkflowBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = startWorkflowBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -16565,6 +18122,10 @@ public final class TriggerOuterClass {
             }
             case GATEWAY_WEBSOCKET_BROADCAST: {
               mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
+              break;
+            }
+            case START_WORKFLOW: {
+              mergeStartWorkflow(other.getStartWorkflow());
               break;
             }
             case ACTION_NOT_SET: {
@@ -17777,6 +19338,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return gatewayWebsocketBroadcastBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> startWorkflowBuilder_;
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         * @return Whether the startWorkflow field is set.
+         */
+        @java.lang.Override
+        public boolean hasStartWorkflow() {
+          return actionCase_ == 104;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         * @return The startWorkflow.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          } else {
+            if (actionCase_ == 104) {
+              return startWorkflowBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder setStartWorkflow(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder builderForValue) {
+          if (startWorkflowBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 104) {
+              startWorkflowBuilder_.mergeFrom(value);
+            }
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public Builder clearStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            startWorkflowBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder getStartWorkflowBuilder() {
+          return getStartWorkflowFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+          if ((actionCase_ == 104) && (startWorkflowBuilder_ != null)) {
+            return startWorkflowBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 104;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> 
+            getStartWorkflowFieldBuilder() {
+          if (startWorkflowBuilder_ == null) {
+            if (!(actionCase_ == 104)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+            }
+            startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 104;
+          onChanged();;
+          return startWorkflowBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17959,6 +19697,10 @@ public final class TriggerOuterClass {
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs.ActionCase getActionCase();
     }
     /**
+     * <pre>
+     * Deprecated. Use Logging instead.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs}
      */
     public static final class CloudLogs extends
@@ -18523,6 +20265,10 @@ public final class TriggerOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Deprecated. Use Logging instead.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs}
        */
       public static final class Builder extends
@@ -19473,23 +21219,39 @@ public final class TriggerOuterClass {
           getLogGroupIdBytes();
 
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return A list containing the resourceType.
        */
       java.util.List<java.lang.String>
           getResourceTypeList();
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return The count of resourceType.
        */
       int getResourceTypeCount();
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the element to return.
        * @return The resourceType at the given index.
        */
       java.lang.String getResourceType(int index);
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the resourceType at the given index.
@@ -19498,23 +21260,39 @@ public final class TriggerOuterClass {
           getResourceTypeBytes(int index);
 
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return A list containing the resourceId.
        */
       java.util.List<java.lang.String>
           getResourceIdList();
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return The count of resourceId.
        */
       int getResourceIdCount();
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the element to return.
        * @return The resourceId at the given index.
        */
       java.lang.String getResourceId(int index);
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the resourceId at the given index.
@@ -19523,23 +21301,39 @@ public final class TriggerOuterClass {
           getResourceIdBytes(int index);
 
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return A list containing the streamName.
        */
       java.util.List<java.lang.String>
           getStreamNameList();
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return The count of streamName.
        */
       int getStreamNameCount();
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the element to return.
        * @return The streamName at the given index.
        */
       java.lang.String getStreamName(int index);
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the streamName at the given index.
@@ -19548,28 +21342,48 @@ public final class TriggerOuterClass {
           getStreamNameBytes(int index);
 
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @return A list containing the levels.
        */
       java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList();
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @return The count of levels.
        */
       int getLevelsCount();
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @param index The index of the element to return.
        * @return The levels at the given index.
        */
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index);
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @return A list containing the enum numeric values on the wire for levels.
        */
       java.util.List<java.lang.Integer>
       getLevelsValueList();
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of levels at the given index.
@@ -19683,6 +21497,33 @@ public final class TriggerOuterClass {
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      boolean hasStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return The startWorkflow.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow();
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder();
 
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.ActionCase getActionCase();
     }
@@ -19848,6 +21689,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 104;
                 break;
               }
+              case 842: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder subBuilder = null;
+                if (actionCase_ == 105) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 105;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -19900,6 +21755,7 @@ public final class TriggerOuterClass {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(103),
         GATEWAY_WEBSOCKET_BROADCAST(104),
+        START_WORKFLOW(105),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -19920,6 +21776,7 @@ public final class TriggerOuterClass {
             case 101: return INVOKE_FUNCTION;
             case 103: return INVOKE_CONTAINER;
             case 104: return GATEWAY_WEBSOCKET_BROADCAST;
+            case 105: return START_WORKFLOW;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -19984,6 +21841,10 @@ public final class TriggerOuterClass {
       public static final int RESOURCE_TYPE_FIELD_NUMBER = 3;
       private com.google.protobuf.LazyStringList resourceType_;
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return A list containing the resourceType.
        */
@@ -19992,6 +21853,10 @@ public final class TriggerOuterClass {
         return resourceType_;
       }
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return The count of resourceType.
        */
@@ -19999,6 +21864,10 @@ public final class TriggerOuterClass {
         return resourceType_.size();
       }
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the element to return.
        * @return The resourceType at the given index.
@@ -20007,6 +21876,10 @@ public final class TriggerOuterClass {
         return resourceType_.get(index);
       }
       /**
+       * <pre>
+       * Resource types to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the resourceType at the given index.
@@ -20019,6 +21892,10 @@ public final class TriggerOuterClass {
       public static final int RESOURCE_ID_FIELD_NUMBER = 4;
       private com.google.protobuf.LazyStringList resourceId_;
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return A list containing the resourceId.
        */
@@ -20027,6 +21904,10 @@ public final class TriggerOuterClass {
         return resourceId_;
       }
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return The count of resourceId.
        */
@@ -20034,6 +21915,10 @@ public final class TriggerOuterClass {
         return resourceId_.size();
       }
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the element to return.
        * @return The resourceId at the given index.
@@ -20042,6 +21927,10 @@ public final class TriggerOuterClass {
         return resourceId_.get(index);
       }
       /**
+       * <pre>
+       * Resource IDs to filter log events.
+       * </pre>
+       *
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the resourceId at the given index.
@@ -20054,6 +21943,10 @@ public final class TriggerOuterClass {
       public static final int STREAM_NAME_FIELD_NUMBER = 7;
       private com.google.protobuf.LazyStringList streamName_;
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return A list containing the streamName.
        */
@@ -20062,6 +21955,10 @@ public final class TriggerOuterClass {
         return streamName_;
       }
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @return The count of streamName.
        */
@@ -20069,6 +21966,10 @@ public final class TriggerOuterClass {
         return streamName_.size();
       }
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the element to return.
        * @return The streamName at the given index.
@@ -20077,6 +21978,10 @@ public final class TriggerOuterClass {
         return streamName_.get(index);
       }
       /**
+       * <pre>
+       * Stream names to filter log events.
+       * </pre>
+       *
        * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the streamName at the given index.
@@ -20099,6 +22004,10 @@ public final class TriggerOuterClass {
                 }
               };
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @return A list containing the levels.
        */
@@ -20108,6 +22017,10 @@ public final class TriggerOuterClass {
             java.lang.Integer, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level>(levels_, levels_converter_);
       }
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @return The count of levels.
        */
@@ -20116,6 +22029,10 @@ public final class TriggerOuterClass {
         return levels_.size();
       }
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @param index The index of the element to return.
        * @return The levels at the given index.
@@ -20125,6 +22042,10 @@ public final class TriggerOuterClass {
         return levels_converter_.convert(levels_.get(index));
       }
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @return A list containing the enum numeric values on the wire for levels.
        */
@@ -20134,6 +22055,10 @@ public final class TriggerOuterClass {
         return levels_;
       }
       /**
+       * <pre>
+       * Logging levels to filter log events.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of levels at the given index.
@@ -20311,6 +22236,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
       }
 
+      public static final int START_WORKFLOW_FIELD_NUMBER = 105;
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 105;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+        if (actionCase_ == 105) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+        if (actionCase_ == 105) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -20356,6 +22324,9 @@ public final class TriggerOuterClass {
         }
         if (actionCase_ == 104) {
           output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
+        if (actionCase_ == 105) {
+          output.writeMessage(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
         }
         unknownFields.writeTo(output);
       }
@@ -20421,6 +22392,10 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
+        if (actionCase_ == 105) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -20463,6 +22438,10 @@ public final class TriggerOuterClass {
           case 104:
             if (!getGatewayWebsocketBroadcast()
                 .equals(other.getGatewayWebsocketBroadcast())) return false;
+            break;
+          case 105:
+            if (!getStartWorkflow()
+                .equals(other.getStartWorkflow())) return false;
             break;
           case 0:
           default:
@@ -20512,6 +22491,10 @@ public final class TriggerOuterClass {
           case 104:
             hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
             hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+            break;
+          case 105:
+            hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+            hash = (53 * hash) + getStartWorkflow().hashCode();
             break;
           case 0:
           default:
@@ -20741,6 +22724,13 @@ public final class TriggerOuterClass {
               result.action_ = gatewayWebsocketBroadcastBuilder_.build();
             }
           }
+          if (actionCase_ == 105) {
+            if (startWorkflowBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = startWorkflowBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -20848,6 +22838,10 @@ public final class TriggerOuterClass {
             }
             case GATEWAY_WEBSOCKET_BROADCAST: {
               mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
+              break;
+            }
+            case START_WORKFLOW: {
+              mergeStartWorkflow(other.getStartWorkflow());
               break;
             }
             case ACTION_NOT_SET: {
@@ -21003,6 +22997,10 @@ public final class TriggerOuterClass {
            }
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return A list containing the resourceType.
          */
@@ -21011,6 +23009,10 @@ public final class TriggerOuterClass {
           return resourceType_.getUnmodifiableView();
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return The count of resourceType.
          */
@@ -21018,6 +23020,10 @@ public final class TriggerOuterClass {
           return resourceType_.size();
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index of the element to return.
          * @return The resourceType at the given index.
@@ -21026,6 +23032,10 @@ public final class TriggerOuterClass {
           return resourceType_.get(index);
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the resourceType at the given index.
@@ -21035,6 +23045,10 @@ public final class TriggerOuterClass {
           return resourceType_.getByteString(index);
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index to set the value at.
          * @param value The resourceType to set.
@@ -21051,6 +23065,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param value The resourceType to add.
          * @return This builder for chaining.
@@ -21066,6 +23084,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param values The resourceType to add.
          * @return This builder for chaining.
@@ -21079,6 +23101,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return This builder for chaining.
          */
@@ -21089,6 +23115,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource types to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param value The bytes of the resourceType to add.
          * @return This builder for chaining.
@@ -21113,6 +23143,10 @@ public final class TriggerOuterClass {
            }
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return A list containing the resourceId.
          */
@@ -21121,6 +23155,10 @@ public final class TriggerOuterClass {
           return resourceId_.getUnmodifiableView();
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return The count of resourceId.
          */
@@ -21128,6 +23166,10 @@ public final class TriggerOuterClass {
           return resourceId_.size();
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index of the element to return.
          * @return The resourceId at the given index.
@@ -21136,6 +23178,10 @@ public final class TriggerOuterClass {
           return resourceId_.get(index);
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the resourceId at the given index.
@@ -21145,6 +23191,10 @@ public final class TriggerOuterClass {
           return resourceId_.getByteString(index);
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index to set the value at.
          * @param value The resourceId to set.
@@ -21161,6 +23211,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param value The resourceId to add.
          * @return This builder for chaining.
@@ -21176,6 +23230,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param values The resourceId to add.
          * @return This builder for chaining.
@@ -21189,6 +23247,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return This builder for chaining.
          */
@@ -21199,6 +23261,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Resource IDs to filter log events.
+         * </pre>
+         *
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param value The bytes of the resourceId to add.
          * @return This builder for chaining.
@@ -21223,6 +23289,10 @@ public final class TriggerOuterClass {
            }
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return A list containing the streamName.
          */
@@ -21231,6 +23301,10 @@ public final class TriggerOuterClass {
           return streamName_.getUnmodifiableView();
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return The count of streamName.
          */
@@ -21238,6 +23312,10 @@ public final class TriggerOuterClass {
           return streamName_.size();
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index of the element to return.
          * @return The streamName at the given index.
@@ -21246,6 +23324,10 @@ public final class TriggerOuterClass {
           return streamName_.get(index);
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the streamName at the given index.
@@ -21255,6 +23337,10 @@ public final class TriggerOuterClass {
           return streamName_.getByteString(index);
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param index The index to set the value at.
          * @param value The streamName to set.
@@ -21271,6 +23357,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param value The streamName to add.
          * @return This builder for chaining.
@@ -21286,6 +23376,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param values The streamName to add.
          * @return This builder for chaining.
@@ -21299,6 +23393,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @return This builder for chaining.
          */
@@ -21309,6 +23407,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Stream names to filter log events.
+         * </pre>
+         *
          * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
          * @param value The bytes of the streamName to add.
          * @return This builder for chaining.
@@ -21334,6 +23436,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @return A list containing the levels.
          */
@@ -21342,6 +23448,10 @@ public final class TriggerOuterClass {
               java.lang.Integer, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level>(levels_, levels_converter_);
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @return The count of levels.
          */
@@ -21349,6 +23459,10 @@ public final class TriggerOuterClass {
           return levels_.size();
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param index The index of the element to return.
          * @return The levels at the given index.
@@ -21357,6 +23471,10 @@ public final class TriggerOuterClass {
           return levels_converter_.convert(levels_.get(index));
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param index The index to set the value at.
          * @param value The levels to set.
@@ -21373,6 +23491,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param value The levels to add.
          * @return This builder for chaining.
@@ -21387,6 +23509,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param values The levels to add.
          * @return This builder for chaining.
@@ -21401,6 +23527,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @return This builder for chaining.
          */
@@ -21411,6 +23541,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @return A list containing the enum numeric values on the wire for levels.
          */
@@ -21419,6 +23553,10 @@ public final class TriggerOuterClass {
           return java.util.Collections.unmodifiableList(levels_);
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of levels at the given index.
@@ -21427,6 +23565,10 @@ public final class TriggerOuterClass {
           return levels_.get(index);
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of levels at the given index.
@@ -21440,6 +23582,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param value The enum numeric value on the wire for levels to add.
          * @return This builder for chaining.
@@ -21451,6 +23597,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Logging levels to filter log events.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
          * @param values The enum numeric values on the wire for levels to add.
          * @return This builder for chaining.
@@ -22149,6 +24299,183 @@ public final class TriggerOuterClass {
           actionCase_ = 104;
           onChanged();;
           return gatewayWebsocketBroadcastBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> startWorkflowBuilder_;
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         * @return Whether the startWorkflow field is set.
+         */
+        @java.lang.Override
+        public boolean hasStartWorkflow() {
+          return actionCase_ == 105;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         * @return The startWorkflow.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 105) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          } else {
+            if (actionCase_ == 105) {
+              return startWorkflowBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         */
+        public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 105;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         */
+        public Builder setStartWorkflow(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder builderForValue) {
+          if (startWorkflowBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            startWorkflowBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 105;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         */
+        public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 105 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 105) {
+              startWorkflowBuilder_.mergeFrom(value);
+            }
+            startWorkflowBuilder_.setMessage(value);
+          }
+          actionCase_ = 105;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         */
+        public Builder clearStartWorkflow() {
+          if (startWorkflowBuilder_ == null) {
+            if (actionCase_ == 105) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 105) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            startWorkflowBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder getStartWorkflowBuilder() {
+          return getStartWorkflowFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+          if ((actionCase_ == 105) && (startWorkflowBuilder_ != null)) {
+            return startWorkflowBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 105) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for starting a workflow with retry.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> 
+            getStartWorkflowFieldBuilder() {
+          if (startWorkflowBuilder_ == null) {
+            if (!(actionCase_ == 105)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+            }
+            startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 105;
+          onChanged();;
+          return startWorkflowBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -29038,16 +31365,2146 @@ public final class TriggerOuterClass {
 
   }
 
+  public interface StartWorkflowOnceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.StartWorkflowOnce)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The workflowId.
+     */
+    java.lang.String getWorkflowId();
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for workflowId.
+     */
+    com.google.protobuf.ByteString
+        getWorkflowIdBytes();
+
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+  }
+  /**
+   * <pre>
+   * A single workflow invocation.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.StartWorkflowOnce}
+   */
+  public static final class StartWorkflowOnce extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.StartWorkflowOnce)
+      StartWorkflowOnceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartWorkflowOnce.newBuilder() to construct.
+    private StartWorkflowOnce(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartWorkflowOnce() {
+      workflowId_ = "";
+      serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartWorkflowOnce();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartWorkflowOnce(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              workflowId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder.class);
+    }
+
+    public static final int WORKFLOW_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object workflowId_;
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The workflowId.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkflowId() {
+      java.lang.Object ref = workflowId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workflowId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for workflowId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkflowIdBytes() {
+      java.lang.Object ref = workflowId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workflowId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workflowId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceAccountId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workflowId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceAccountId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) obj;
+
+      if (!getWorkflowId()
+          .equals(other.getWorkflowId())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WORKFLOW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkflowId().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A single workflow invocation.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.StartWorkflowOnce}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.StartWorkflowOnce)
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        workflowId_ = "";
+
+        serviceAccountId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce(this);
+        result.workflowId_ = workflowId_;
+        result.serviceAccountId_ = serviceAccountId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce.getDefaultInstance()) return this;
+        if (!other.getWorkflowId().isEmpty()) {
+          workflowId_ = other.workflowId_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object workflowId_ = "";
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The workflowId.
+       */
+      public java.lang.String getWorkflowId() {
+        java.lang.Object ref = workflowId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workflowId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for workflowId.
+       */
+      public com.google.protobuf.ByteString
+          getWorkflowIdBytes() {
+        java.lang.Object ref = workflowId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workflowId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The workflowId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkflowId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        workflowId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkflowId() {
+        
+        workflowId_ = getDefaultInstance().getWorkflowId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for workflowId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkflowIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        workflowId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.StartWorkflowOnce)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.StartWorkflowOnce)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartWorkflowOnce>
+        PARSER = new com.google.protobuf.AbstractParser<StartWorkflowOnce>() {
+      @java.lang.Override
+      public StartWorkflowOnce parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartWorkflowOnce(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartWorkflowOnce> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartWorkflowOnce> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowOnce getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartWorkflowWithRetryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The workflowId.
+     */
+    java.lang.String getWorkflowId();
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for workflowId.
+     */
+    com.google.protobuf.ByteString
+        getWorkflowIdBytes();
+
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+     * @return Whether the retrySettings field is set.
+     */
+    boolean hasRetrySettings();
+    /**
+     * <pre>
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+     * @return The retrySettings.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings();
+    /**
+     * <pre>
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder getRetrySettingsOrBuilder();
+
+    /**
+     * <pre>
+     * DLQ policy (no value means discarding a message).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+     * @return Whether the deadLetterQueue field is set.
+     */
+    boolean hasDeadLetterQueue();
+    /**
+     * <pre>
+     * DLQ policy (no value means discarding a message).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+     * @return The deadLetterQueue.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue();
+    /**
+     * <pre>
+     * DLQ policy (no value means discarding a message).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder getDeadLetterQueueOrBuilder();
+  }
+  /**
+   * <pre>
+   * A workflow invocation with retries.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry}
+   */
+  public static final class StartWorkflowWithRetry extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry)
+      StartWorkflowWithRetryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartWorkflowWithRetry.newBuilder() to construct.
+    private StartWorkflowWithRetry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartWorkflowWithRetry() {
+      workflowId_ = "";
+      serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartWorkflowWithRetry();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartWorkflowWithRetry(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              workflowId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder subBuilder = null;
+              if (retrySettings_ != null) {
+                subBuilder = retrySettings_.toBuilder();
+              }
+              retrySettings_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(retrySettings_);
+                retrySettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder subBuilder = null;
+              if (deadLetterQueue_ != null) {
+                subBuilder = deadLetterQueue_.toBuilder();
+              }
+              deadLetterQueue_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deadLetterQueue_);
+                deadLetterQueue_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder.class);
+    }
+
+    public static final int WORKFLOW_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object workflowId_;
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The workflowId.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkflowId() {
+      java.lang.Object ref = workflowId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workflowId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the workflow to start.
+     * </pre>
+     *
+     * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for workflowId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkflowIdBytes() {
+      java.lang.Object ref = workflowId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workflowId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account which has permission to start the workflow.
+     * </pre>
+     *
+     * <code>string service_account_id = 2;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RETRY_SETTINGS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings retrySettings_;
+    /**
+     * <pre>
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+     * @return Whether the retrySettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetrySettings() {
+      return retrySettings_ != null;
+    }
+    /**
+     * <pre>
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+     * @return The retrySettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings() {
+      return retrySettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.getDefaultInstance() : retrySettings_;
+    }
+    /**
+     * <pre>
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder getRetrySettingsOrBuilder() {
+      return getRetrySettings();
+    }
+
+    public static final int DEAD_LETTER_QUEUE_FIELD_NUMBER = 4;
+    private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage deadLetterQueue_;
+    /**
+     * <pre>
+     * DLQ policy (no value means discarding a message).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+     * @return Whether the deadLetterQueue field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeadLetterQueue() {
+      return deadLetterQueue_ != null;
+    }
+    /**
+     * <pre>
+     * DLQ policy (no value means discarding a message).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+     * @return The deadLetterQueue.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue() {
+      return deadLetterQueue_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.getDefaultInstance() : deadLetterQueue_;
+    }
+    /**
+     * <pre>
+     * DLQ policy (no value means discarding a message).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder getDeadLetterQueueOrBuilder() {
+      return getDeadLetterQueue();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workflowId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceAccountId_);
+      }
+      if (retrySettings_ != null) {
+        output.writeMessage(3, getRetrySettings());
+      }
+      if (deadLetterQueue_ != null) {
+        output.writeMessage(4, getDeadLetterQueue());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workflowId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceAccountId_);
+      }
+      if (retrySettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRetrySettings());
+      }
+      if (deadLetterQueue_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDeadLetterQueue());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) obj;
+
+      if (!getWorkflowId()
+          .equals(other.getWorkflowId())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (hasRetrySettings() != other.hasRetrySettings()) return false;
+      if (hasRetrySettings()) {
+        if (!getRetrySettings()
+            .equals(other.getRetrySettings())) return false;
+      }
+      if (hasDeadLetterQueue() != other.hasDeadLetterQueue()) return false;
+      if (hasDeadLetterQueue()) {
+        if (!getDeadLetterQueue()
+            .equals(other.getDeadLetterQueue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WORKFLOW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkflowId().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      if (hasRetrySettings()) {
+        hash = (37 * hash) + RETRY_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getRetrySettings().hashCode();
+      }
+      if (hasDeadLetterQueue()) {
+        hash = (37 * hash) + DEAD_LETTER_QUEUE_FIELD_NUMBER;
+        hash = (53 * hash) + getDeadLetterQueue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A workflow invocation with retries.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry)
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        workflowId_ = "";
+
+        serviceAccountId_ = "";
+
+        if (retrySettingsBuilder_ == null) {
+          retrySettings_ = null;
+        } else {
+          retrySettings_ = null;
+          retrySettingsBuilder_ = null;
+        }
+        if (deadLetterQueueBuilder_ == null) {
+          deadLetterQueue_ = null;
+        } else {
+          deadLetterQueue_ = null;
+          deadLetterQueueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry(this);
+        result.workflowId_ = workflowId_;
+        result.serviceAccountId_ = serviceAccountId_;
+        if (retrySettingsBuilder_ == null) {
+          result.retrySettings_ = retrySettings_;
+        } else {
+          result.retrySettings_ = retrySettingsBuilder_.build();
+        }
+        if (deadLetterQueueBuilder_ == null) {
+          result.deadLetterQueue_ = deadLetterQueue_;
+        } else {
+          result.deadLetterQueue_ = deadLetterQueueBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) return this;
+        if (!other.getWorkflowId().isEmpty()) {
+          workflowId_ = other.workflowId_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (other.hasRetrySettings()) {
+          mergeRetrySettings(other.getRetrySettings());
+        }
+        if (other.hasDeadLetterQueue()) {
+          mergeDeadLetterQueue(other.getDeadLetterQueue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object workflowId_ = "";
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The workflowId.
+       */
+      public java.lang.String getWorkflowId() {
+        java.lang.Object ref = workflowId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workflowId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for workflowId.
+       */
+      public com.google.protobuf.ByteString
+          getWorkflowIdBytes() {
+        java.lang.Object ref = workflowId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workflowId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The workflowId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkflowId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        workflowId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkflowId() {
+        
+        workflowId_ = getDefaultInstance().getWorkflowId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the workflow to start.
+       * </pre>
+       *
+       * <code>string workflow_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for workflowId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkflowIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        workflowId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to start the workflow.
+       * </pre>
+       *
+       * <code>string service_account_id = 2;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings retrySettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder> retrySettingsBuilder_;
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       * @return Whether the retrySettings field is set.
+       */
+      public boolean hasRetrySettings() {
+        return retrySettingsBuilder_ != null || retrySettings_ != null;
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       * @return The retrySettings.
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings() {
+        if (retrySettingsBuilder_ == null) {
+          return retrySettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.getDefaultInstance() : retrySettings_;
+        } else {
+          return retrySettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       */
+      public Builder setRetrySettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings value) {
+        if (retrySettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          retrySettings_ = value;
+          onChanged();
+        } else {
+          retrySettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       */
+      public Builder setRetrySettings(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder builderForValue) {
+        if (retrySettingsBuilder_ == null) {
+          retrySettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          retrySettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       */
+      public Builder mergeRetrySettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings value) {
+        if (retrySettingsBuilder_ == null) {
+          if (retrySettings_ != null) {
+            retrySettings_ =
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.newBuilder(retrySettings_).mergeFrom(value).buildPartial();
+          } else {
+            retrySettings_ = value;
+          }
+          onChanged();
+        } else {
+          retrySettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       */
+      public Builder clearRetrySettings() {
+        if (retrySettingsBuilder_ == null) {
+          retrySettings_ = null;
+          onChanged();
+        } else {
+          retrySettings_ = null;
+          retrySettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder getRetrySettingsBuilder() {
+        
+        onChanged();
+        return getRetrySettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder getRetrySettingsOrBuilder() {
+        if (retrySettingsBuilder_ != null) {
+          return retrySettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return retrySettings_ == null ?
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.getDefaultInstance() : retrySettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder> 
+          getRetrySettingsFieldBuilder() {
+        if (retrySettingsBuilder_ == null) {
+          retrySettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder>(
+                  getRetrySettings(),
+                  getParentForChildren(),
+                  isClean());
+          retrySettings_ = null;
+        }
+        return retrySettingsBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage deadLetterQueue_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder> deadLetterQueueBuilder_;
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       * @return Whether the deadLetterQueue field is set.
+       */
+      public boolean hasDeadLetterQueue() {
+        return deadLetterQueueBuilder_ != null || deadLetterQueue_ != null;
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       * @return The deadLetterQueue.
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue() {
+        if (deadLetterQueueBuilder_ == null) {
+          return deadLetterQueue_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.getDefaultInstance() : deadLetterQueue_;
+        } else {
+          return deadLetterQueueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       */
+      public Builder setDeadLetterQueue(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage value) {
+        if (deadLetterQueueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deadLetterQueue_ = value;
+          onChanged();
+        } else {
+          deadLetterQueueBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       */
+      public Builder setDeadLetterQueue(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder builderForValue) {
+        if (deadLetterQueueBuilder_ == null) {
+          deadLetterQueue_ = builderForValue.build();
+          onChanged();
+        } else {
+          deadLetterQueueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       */
+      public Builder mergeDeadLetterQueue(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage value) {
+        if (deadLetterQueueBuilder_ == null) {
+          if (deadLetterQueue_ != null) {
+            deadLetterQueue_ =
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.newBuilder(deadLetterQueue_).mergeFrom(value).buildPartial();
+          } else {
+            deadLetterQueue_ = value;
+          }
+          onChanged();
+        } else {
+          deadLetterQueueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       */
+      public Builder clearDeadLetterQueue() {
+        if (deadLetterQueueBuilder_ == null) {
+          deadLetterQueue_ = null;
+          onChanged();
+        } else {
+          deadLetterQueue_ = null;
+          deadLetterQueueBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder getDeadLetterQueueBuilder() {
+        
+        onChanged();
+        return getDeadLetterQueueFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder getDeadLetterQueueOrBuilder() {
+        if (deadLetterQueueBuilder_ != null) {
+          return deadLetterQueueBuilder_.getMessageOrBuilder();
+        } else {
+          return deadLetterQueue_ == null ?
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.getDefaultInstance() : deadLetterQueue_;
+        }
+      }
+      /**
+       * <pre>
+       * DLQ policy (no value means discarding a message).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder> 
+          getDeadLetterQueueFieldBuilder() {
+        if (deadLetterQueueBuilder_ == null) {
+          deadLetterQueueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder>(
+                  getDeadLetterQueue(),
+                  getParentForChildren(),
+                  isClean());
+          deadLetterQueue_ = null;
+        }
+        return deadLetterQueueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartWorkflowWithRetry>
+        PARSER = new com.google.protobuf.AbstractParser<StartWorkflowWithRetry>() {
+      @java.lang.Override
+      public StartWorkflowWithRetry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartWorkflowWithRetry(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartWorkflowWithRetry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartWorkflowWithRetry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GatewayWebsocketBroadcastOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the API gateway.
+     * </pre>
+     *
      * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The gatewayId.
      */
     java.lang.String getGatewayId();
     /**
+     * <pre>
+     * ID of the API gateway.
+     * </pre>
+     *
      * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for gatewayId.
      */
@@ -29055,11 +33512,19 @@ public final class TriggerOuterClass {
         getGatewayIdBytes();
 
     /**
+     * <pre>
+     * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+     * </pre>
+     *
      * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
      * @return The path.
      */
     java.lang.String getPath();
     /**
+     * <pre>
+     * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+     * </pre>
+     *
      * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for path.
      */
@@ -29068,7 +33533,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * sa which has permission for writing to websockets
+     * ID of the service account which has permission for broadcasting to WebSocket connections.
      * </pre>
      *
      * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29077,7 +33542,7 @@ public final class TriggerOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * sa which has permission for writing to websockets
+     * ID of the service account which has permission for broadcasting to WebSocket connections.
      * </pre>
      *
      * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29187,6 +33652,10 @@ public final class TriggerOuterClass {
     public static final int GATEWAY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object gatewayId_;
     /**
+     * <pre>
+     * ID of the API gateway.
+     * </pre>
+     *
      * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The gatewayId.
      */
@@ -29204,6 +33673,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the API gateway.
+     * </pre>
+     *
      * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for gatewayId.
      */
@@ -29225,6 +33698,10 @@ public final class TriggerOuterClass {
     public static final int PATH_FIELD_NUMBER = 2;
     private volatile java.lang.Object path_;
     /**
+     * <pre>
+     * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+     * </pre>
+     *
      * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
      * @return The path.
      */
@@ -29242,6 +33719,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+     * </pre>
+     *
      * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for path.
      */
@@ -29264,7 +33745,7 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * sa which has permission for writing to websockets
+     * ID of the service account which has permission for broadcasting to WebSocket connections.
      * </pre>
      *
      * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29285,7 +33766,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * sa which has permission for writing to websockets
+     * ID of the service account which has permission for broadcasting to WebSocket connections.
      * </pre>
      *
      * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29644,6 +34125,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object gatewayId_ = "";
       /**
+       * <pre>
+       * ID of the API gateway.
+       * </pre>
+       *
        * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The gatewayId.
        */
@@ -29660,6 +34145,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the API gateway.
+       * </pre>
+       *
        * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for gatewayId.
        */
@@ -29677,6 +34166,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the API gateway.
+       * </pre>
+       *
        * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The gatewayId to set.
        * @return This builder for chaining.
@@ -29692,6 +34185,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the API gateway.
+       * </pre>
+       *
        * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -29702,6 +34199,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the API gateway.
+       * </pre>
+       *
        * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for gatewayId to set.
        * @return This builder for chaining.
@@ -29720,6 +34221,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object path_ = "";
       /**
+       * <pre>
+       * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+       * </pre>
+       *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
        * @return The path.
        */
@@ -29736,6 +34241,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+       * </pre>
+       *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for path.
        */
@@ -29753,6 +34262,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+       * </pre>
+       *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The path to set.
        * @return This builder for chaining.
@@ -29768,6 +34281,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+       * </pre>
+       *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -29778,6 +34295,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path in the OpenAPI specification. Messages will be sent through WebSocket connections established using this path.
+       * </pre>
+       *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for path to set.
        * @return This builder for chaining.
@@ -29797,7 +34318,7 @@ public final class TriggerOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * sa which has permission for writing to websockets
+       * ID of the service account which has permission for broadcasting to WebSocket connections.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29817,7 +34338,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * sa which has permission for writing to websockets
+       * ID of the service account which has permission for broadcasting to WebSocket connections.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29838,7 +34359,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * sa which has permission for writing to websockets
+       * ID of the service account which has permission for broadcasting to WebSocket connections.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29857,7 +34378,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * sa which has permission for writing to websockets
+       * ID of the service account which has permission for broadcasting to WebSocket connections.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29871,7 +34392,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * sa which has permission for writing to websockets
+       * ID of the service account which has permission for broadcasting to WebSocket connections.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33901,11 +38422,19 @@ public final class TriggerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the billing account.
+     * </pre>
+     *
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The billingAccountId.
      */
     java.lang.String getBillingAccountId();
     /**
+     * <pre>
+     * ID of the billing account.
+     * </pre>
+     *
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for billingAccountId.
      */
@@ -33913,11 +38442,19 @@ public final class TriggerOuterClass {
         getBillingAccountIdBytes();
 
     /**
+     * <pre>
+     * ID of the budget.
+     * </pre>
+     *
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The budgetId.
      */
     java.lang.String getBudgetId();
     /**
+     * <pre>
+     * ID of the budget.
+     * </pre>
+     *
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for budgetId.
      */
@@ -33925,49 +38462,112 @@ public final class TriggerOuterClass {
         getBudgetIdBytes();
 
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return Whether the invokeFunction field is set.
      */
     boolean hasInvokeFunction();
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return The invokeFunction.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return Whether the invokeContainer field is set.
      */
     boolean hasInvokeContainer();
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return The invokeContainer.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return Whether the gatewayWebsocketBroadcast field is set.
      */
     boolean hasGatewayWebsocketBroadcast();
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return The gatewayWebsocketBroadcast.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return Whether the startWorkflow field is set.
+     */
+    boolean hasStartWorkflow();
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return The startWorkflow.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow();
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder();
 
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget.ActionCase getActionCase();
   }
@@ -34072,6 +38672,20 @@ public final class TriggerOuterClass {
               actionCase_ = 104;
               break;
             }
+            case 842: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder subBuilder = null;
+              if (actionCase_ == 105) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 105;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -34112,6 +38726,7 @@ public final class TriggerOuterClass {
       INVOKE_FUNCTION(101),
       INVOKE_CONTAINER(103),
       GATEWAY_WEBSOCKET_BROADCAST(104),
+      START_WORKFLOW(105),
       ACTION_NOT_SET(0);
       private final int value;
       private ActionCase(int value) {
@@ -34132,6 +38747,7 @@ public final class TriggerOuterClass {
           case 101: return INVOKE_FUNCTION;
           case 103: return INVOKE_CONTAINER;
           case 104: return GATEWAY_WEBSOCKET_BROADCAST;
+          case 105: return START_WORKFLOW;
           case 0: return ACTION_NOT_SET;
           default: return null;
         }
@@ -34150,6 +38766,10 @@ public final class TriggerOuterClass {
     public static final int BILLING_ACCOUNT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object billingAccountId_;
     /**
+     * <pre>
+     * ID of the billing account.
+     * </pre>
+     *
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The billingAccountId.
      */
@@ -34167,6 +38787,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the billing account.
+     * </pre>
+     *
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for billingAccountId.
      */
@@ -34188,6 +38812,10 @@ public final class TriggerOuterClass {
     public static final int BUDGET_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object budgetId_;
     /**
+     * <pre>
+     * ID of the budget.
+     * </pre>
+     *
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The budgetId.
      */
@@ -34205,6 +38833,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the budget.
+     * </pre>
+     *
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for budgetId.
      */
@@ -34225,6 +38857,10 @@ public final class TriggerOuterClass {
 
     public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return Whether the invokeFunction field is set.
      */
@@ -34233,6 +38869,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 101;
     }
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return The invokeFunction.
      */
@@ -34244,6 +38884,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      */
     @java.lang.Override
@@ -34256,6 +38900,10 @@ public final class TriggerOuterClass {
 
     public static final int INVOKE_CONTAINER_FIELD_NUMBER = 103;
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return Whether the invokeContainer field is set.
      */
@@ -34264,6 +38912,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 103;
     }
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return The invokeContainer.
      */
@@ -34275,6 +38927,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      */
     @java.lang.Override
@@ -34287,6 +38943,10 @@ public final class TriggerOuterClass {
 
     public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 104;
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return Whether the gatewayWebsocketBroadcast field is set.
      */
@@ -34295,6 +38955,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 104;
     }
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return The gatewayWebsocketBroadcast.
      */
@@ -34306,6 +38970,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      */
     @java.lang.Override
@@ -34314,6 +38982,49 @@ public final class TriggerOuterClass {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
       }
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+
+    public static final int START_WORKFLOW_FIELD_NUMBER = 105;
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return Whether the startWorkflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartWorkflow() {
+      return actionCase_ == 105;
+    }
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return The startWorkflow.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+      if (actionCase_ == 105) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+      if (actionCase_ == 105) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -34345,6 +39056,9 @@ public final class TriggerOuterClass {
       if (actionCase_ == 104) {
         output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
       }
+      if (actionCase_ == 105) {
+        output.writeMessage(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -34371,6 +39085,10 @@ public final class TriggerOuterClass {
       if (actionCase_ == 104) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+      }
+      if (actionCase_ == 105) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -34405,6 +39123,10 @@ public final class TriggerOuterClass {
           if (!getGatewayWebsocketBroadcast()
               .equals(other.getGatewayWebsocketBroadcast())) return false;
           break;
+        case 105:
+          if (!getStartWorkflow()
+              .equals(other.getStartWorkflow())) return false;
+          break;
         case 0:
         default:
       }
@@ -34435,6 +39157,10 @@ public final class TriggerOuterClass {
         case 104:
           hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
           hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+          break;
+        case 105:
+          hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+          hash = (53 * hash) + getStartWorkflow().hashCode();
           break;
         case 0:
         default:
@@ -34627,6 +39353,13 @@ public final class TriggerOuterClass {
             result.action_ = gatewayWebsocketBroadcastBuilder_.build();
           }
         }
+        if (actionCase_ == 105) {
+          if (startWorkflowBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = startWorkflowBuilder_.build();
+          }
+        }
         result.actionCase_ = actionCase_;
         onBuilt();
         return result;
@@ -34697,6 +39430,10 @@ public final class TriggerOuterClass {
             mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
             break;
           }
+          case START_WORKFLOW: {
+            mergeStartWorkflow(other.getStartWorkflow());
+            break;
+          }
           case ACTION_NOT_SET: {
             break;
           }
@@ -34747,6 +39484,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object billingAccountId_ = "";
       /**
+       * <pre>
+       * ID of the billing account.
+       * </pre>
+       *
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The billingAccountId.
        */
@@ -34763,6 +39504,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the billing account.
+       * </pre>
+       *
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for billingAccountId.
        */
@@ -34780,6 +39525,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the billing account.
+       * </pre>
+       *
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The billingAccountId to set.
        * @return This builder for chaining.
@@ -34795,6 +39544,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the billing account.
+       * </pre>
+       *
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -34805,6 +39558,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the billing account.
+       * </pre>
+       *
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for billingAccountId to set.
        * @return This builder for chaining.
@@ -34823,6 +39580,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object budgetId_ = "";
       /**
+       * <pre>
+       * ID of the budget.
+       * </pre>
+       *
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The budgetId.
        */
@@ -34839,6 +39600,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the budget.
+       * </pre>
+       *
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for budgetId.
        */
@@ -34856,6 +39621,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the budget.
+       * </pre>
+       *
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The budgetId to set.
        * @return This builder for chaining.
@@ -34871,6 +39640,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the budget.
+       * </pre>
+       *
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -34881,6 +39654,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the budget.
+       * </pre>
+       *
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for budgetId to set.
        * @return This builder for chaining.
@@ -34900,6 +39677,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        * @return Whether the invokeFunction field is set.
        */
@@ -34908,6 +39689,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 101;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        * @return The invokeFunction.
        */
@@ -34926,6 +39711,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -34942,6 +39731,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder setInvokeFunction(
@@ -34956,6 +39749,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -34978,6 +39775,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder clearInvokeFunction() {
@@ -34997,12 +39798,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder getInvokeFunctionBuilder() {
         return getInvokeFunctionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       @java.lang.Override
@@ -35017,6 +39826,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -35041,6 +39854,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder> invokeContainerBuilder_;
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        * @return Whether the invokeContainer field is set.
        */
@@ -35049,6 +39866,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 103;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        * @return The invokeContainer.
        */
@@ -35067,6 +39888,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder setInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
@@ -35083,6 +39908,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder setInvokeContainer(
@@ -35097,6 +39926,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder mergeInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
@@ -35119,6 +39952,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder clearInvokeContainer() {
@@ -35138,12 +39975,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder getInvokeContainerBuilder() {
         return getInvokeContainerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       @java.lang.Override
@@ -35158,6 +40003,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -35182,6 +40031,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        * @return Whether the gatewayWebsocketBroadcast field is set.
        */
@@ -35190,6 +40043,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 104;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        * @return The gatewayWebsocketBroadcast.
        */
@@ -35208,6 +40065,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
@@ -35224,6 +40085,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder setGatewayWebsocketBroadcast(
@@ -35238,6 +40103,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
@@ -35260,6 +40129,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder clearGatewayWebsocketBroadcast() {
@@ -35279,12 +40152,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
         return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       @java.lang.Override
@@ -35299,6 +40180,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -35318,6 +40203,183 @@ public final class TriggerOuterClass {
         actionCase_ = 104;
         onChanged();;
         return gatewayWebsocketBroadcastBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> startWorkflowBuilder_;
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 105;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 105) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        } else {
+          if (actionCase_ == 105) {
+            return startWorkflowBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+        if (startWorkflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          startWorkflowBuilder_.setMessage(value);
+        }
+        actionCase_ = 105;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder setStartWorkflow(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder builderForValue) {
+        if (startWorkflowBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          startWorkflowBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 105;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 105 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 105) {
+            startWorkflowBuilder_.mergeFrom(value);
+          }
+          startWorkflowBuilder_.setMessage(value);
+        }
+        actionCase_ = 105;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder clearStartWorkflow() {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 105) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 105) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          startWorkflowBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder getStartWorkflowBuilder() {
+        return getStartWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+        if ((actionCase_ == 105) && (startWorkflowBuilder_ != null)) {
+          return startWorkflowBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 105) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> 
+          getStartWorkflowFieldBuilder() {
+        if (startWorkflowBuilder_ == null) {
+          if (!(actionCase_ == 105)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+          startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 105;
+        onChanged();;
+        return startWorkflowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -36276,49 +41338,112 @@ public final class TriggerOuterClass {
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder getBatchSettingsOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
      * @return Whether the invokeFunction field is set.
      */
     boolean hasInvokeFunction();
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
      * @return The invokeFunction.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
      * @return Whether the invokeContainer field is set.
      */
     boolean hasInvokeContainer();
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
      * @return The invokeContainer.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
      * @return Whether the gatewayWebsocketBroadcast field is set.
      */
     boolean hasGatewayWebsocketBroadcast();
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
      * @return The gatewayWebsocketBroadcast.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+     * @return Whether the startWorkflow field is set.
+     */
+    boolean hasStartWorkflow();
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+     * @return The startWorkflow.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow();
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder();
 
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.ActionCase getActionCase();
   }
@@ -36450,6 +41575,20 @@ public final class TriggerOuterClass {
               actionCase_ = 16;
               break;
             }
+            case 138: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder subBuilder = null;
+              if (actionCase_ == 17) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 17;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -36490,6 +41629,7 @@ public final class TriggerOuterClass {
       INVOKE_FUNCTION(13),
       INVOKE_CONTAINER(15),
       GATEWAY_WEBSOCKET_BROADCAST(16),
+      START_WORKFLOW(17),
       ACTION_NOT_SET(0);
       private final int value;
       private ActionCase(int value) {
@@ -36510,6 +41650,7 @@ public final class TriggerOuterClass {
           case 13: return INVOKE_FUNCTION;
           case 15: return INVOKE_CONTAINER;
           case 16: return GATEWAY_WEBSOCKET_BROADCAST;
+          case 17: return START_WORKFLOW;
           case 0: return ACTION_NOT_SET;
           default: return null;
         }
@@ -36749,6 +41890,10 @@ public final class TriggerOuterClass {
 
     public static final int INVOKE_FUNCTION_FIELD_NUMBER = 13;
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
      * @return Whether the invokeFunction field is set.
      */
@@ -36757,6 +41902,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 13;
     }
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
      * @return The invokeFunction.
      */
@@ -36768,6 +41917,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
      */
     @java.lang.Override
@@ -36780,6 +41933,10 @@ public final class TriggerOuterClass {
 
     public static final int INVOKE_CONTAINER_FIELD_NUMBER = 15;
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
      * @return Whether the invokeContainer field is set.
      */
@@ -36788,6 +41945,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 15;
     }
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
      * @return The invokeContainer.
      */
@@ -36799,6 +41960,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
      */
     @java.lang.Override
@@ -36811,6 +41976,10 @@ public final class TriggerOuterClass {
 
     public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 16;
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
      * @return Whether the gatewayWebsocketBroadcast field is set.
      */
@@ -36819,6 +41988,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 16;
     }
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
      * @return The gatewayWebsocketBroadcast.
      */
@@ -36830,6 +42003,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
      */
     @java.lang.Override
@@ -36838,6 +42015,49 @@ public final class TriggerOuterClass {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
       }
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+
+    public static final int START_WORKFLOW_FIELD_NUMBER = 17;
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+     * @return Whether the startWorkflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartWorkflow() {
+      return actionCase_ == 17;
+    }
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+     * @return The startWorkflow.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+      if (actionCase_ == 17) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+      if (actionCase_ == 17) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -36878,6 +42098,9 @@ public final class TriggerOuterClass {
       if (actionCase_ == 16) {
         output.writeMessage(16, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
       }
+      if (actionCase_ == 17) {
+        output.writeMessage(17, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -36914,6 +42137,10 @@ public final class TriggerOuterClass {
       if (actionCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+      }
+      if (actionCase_ == 17) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -36957,6 +42184,10 @@ public final class TriggerOuterClass {
           if (!getGatewayWebsocketBroadcast()
               .equals(other.getGatewayWebsocketBroadcast())) return false;
           break;
+        case 17:
+          if (!getStartWorkflow()
+              .equals(other.getStartWorkflow())) return false;
+          break;
         case 0:
         default:
       }
@@ -36995,6 +42226,10 @@ public final class TriggerOuterClass {
         case 16:
           hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
           hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+          break;
+        case 17:
+          hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+          hash = (53 * hash) + getStartWorkflow().hashCode();
           break;
         case 0:
         default:
@@ -37204,6 +42439,13 @@ public final class TriggerOuterClass {
             result.action_ = gatewayWebsocketBroadcastBuilder_.build();
           }
         }
+        if (actionCase_ == 17) {
+          if (startWorkflowBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = startWorkflowBuilder_.build();
+          }
+        }
         result.actionCase_ = actionCase_;
         onBuilt();
         return result;
@@ -37283,6 +42525,10 @@ public final class TriggerOuterClass {
           }
           case GATEWAY_WEBSOCKET_BROADCAST: {
             mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
+            break;
+          }
+          case START_WORKFLOW: {
+            mergeStartWorkflow(other.getStartWorkflow());
             break;
           }
           case ACTION_NOT_SET: {
@@ -37875,6 +43121,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        * @return Whether the invokeFunction field is set.
        */
@@ -37883,6 +43133,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 13;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        * @return The invokeFunction.
        */
@@ -37901,6 +43155,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
       public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -37917,6 +43175,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
       public Builder setInvokeFunction(
@@ -37931,6 +43193,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
       public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -37953,6 +43219,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
       public Builder clearInvokeFunction() {
@@ -37972,12 +43242,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder getInvokeFunctionBuilder() {
         return getInvokeFunctionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
       @java.lang.Override
@@ -37992,6 +43270,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -38016,6 +43298,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder> invokeContainerBuilder_;
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        * @return Whether the invokeContainer field is set.
        */
@@ -38024,6 +43310,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 15;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        * @return The invokeContainer.
        */
@@ -38042,6 +43332,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
       public Builder setInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
@@ -38058,6 +43352,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
       public Builder setInvokeContainer(
@@ -38072,6 +43370,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
       public Builder mergeInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
@@ -38094,6 +43396,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
       public Builder clearInvokeContainer() {
@@ -38113,12 +43419,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder getInvokeContainerBuilder() {
         return getInvokeContainerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
       @java.lang.Override
@@ -38133,6 +43447,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -38157,6 +43475,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        * @return Whether the gatewayWebsocketBroadcast field is set.
        */
@@ -38165,6 +43487,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 16;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        * @return The gatewayWebsocketBroadcast.
        */
@@ -38183,6 +43509,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        */
       public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
@@ -38199,6 +43529,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        */
       public Builder setGatewayWebsocketBroadcast(
@@ -38213,6 +43547,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        */
       public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
@@ -38235,6 +43573,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        */
       public Builder clearGatewayWebsocketBroadcast() {
@@ -38254,12 +43596,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
         return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        */
       @java.lang.Override
@@ -38274,6 +43624,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -38293,6 +43647,183 @@ public final class TriggerOuterClass {
         actionCase_ = 16;
         onChanged();;
         return gatewayWebsocketBroadcastBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> startWorkflowBuilder_;
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 17;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 17) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        } else {
+          if (actionCase_ == 17) {
+            return startWorkflowBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       */
+      public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+        if (startWorkflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          startWorkflowBuilder_.setMessage(value);
+        }
+        actionCase_ = 17;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       */
+      public Builder setStartWorkflow(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder builderForValue) {
+        if (startWorkflowBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          startWorkflowBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 17;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       */
+      public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 17 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 17) {
+            startWorkflowBuilder_.mergeFrom(value);
+          }
+          startWorkflowBuilder_.setMessage(value);
+        }
+        actionCase_ = 17;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       */
+      public Builder clearStartWorkflow() {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 17) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 17) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          startWorkflowBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder getStartWorkflowBuilder() {
+        return getStartWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+        if ((actionCase_ == 17) && (startWorkflowBuilder_ != null)) {
+          return startWorkflowBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 17) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> 
+          getStartWorkflowFieldBuilder() {
+        if (startWorkflowBuilder_ == null) {
+          if (!(actionCase_ == 17)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+          startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 17;
+        onChanged();;
+        return startWorkflowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -39218,49 +44749,112 @@ public final class TriggerOuterClass {
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder getAttachmentsBucketOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return Whether the invokeFunction field is set.
      */
     boolean hasInvokeFunction();
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return The invokeFunction.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return Whether the invokeContainer field is set.
      */
     boolean hasInvokeContainer();
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return The invokeContainer.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return Whether the gatewayWebsocketBroadcast field is set.
      */
     boolean hasGatewayWebsocketBroadcast();
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return The gatewayWebsocketBroadcast.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return Whether the startWorkflow field is set.
+     */
+    boolean hasStartWorkflow();
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return The startWorkflow.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow();
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder();
 
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail.ActionCase getActionCase();
   }
@@ -39384,6 +44978,20 @@ public final class TriggerOuterClass {
               actionCase_ = 104;
               break;
             }
+            case 842: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder subBuilder = null;
+              if (actionCase_ == 105) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 105;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -39424,6 +45032,7 @@ public final class TriggerOuterClass {
       INVOKE_FUNCTION(101),
       INVOKE_CONTAINER(103),
       GATEWAY_WEBSOCKET_BROADCAST(104),
+      START_WORKFLOW(105),
       ACTION_NOT_SET(0);
       private final int value;
       private ActionCase(int value) {
@@ -39444,6 +45053,7 @@ public final class TriggerOuterClass {
           case 101: return INVOKE_FUNCTION;
           case 103: return INVOKE_CONTAINER;
           case 104: return GATEWAY_WEBSOCKET_BROADCAST;
+          case 105: return START_WORKFLOW;
           case 0: return ACTION_NOT_SET;
           default: return null;
         }
@@ -39585,6 +45195,10 @@ public final class TriggerOuterClass {
 
     public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return Whether the invokeFunction field is set.
      */
@@ -39593,6 +45207,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 101;
     }
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return The invokeFunction.
      */
@@ -39604,6 +45222,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for invoking a function with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      */
     @java.lang.Override
@@ -39616,6 +45238,10 @@ public final class TriggerOuterClass {
 
     public static final int INVOKE_CONTAINER_FIELD_NUMBER = 103;
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return Whether the invokeContainer field is set.
      */
@@ -39624,6 +45250,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 103;
     }
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      * @return The invokeContainer.
      */
@@ -39635,6 +45265,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for invoking a container with retries as needed.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      */
     @java.lang.Override
@@ -39647,6 +45281,10 @@ public final class TriggerOuterClass {
 
     public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 104;
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return Whether the gatewayWebsocketBroadcast field is set.
      */
@@ -39655,6 +45293,10 @@ public final class TriggerOuterClass {
       return actionCase_ == 104;
     }
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      * @return The gatewayWebsocketBroadcast.
      */
@@ -39666,6 +45308,10 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructions for broadcasting to API gateway websocket once.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
      */
     @java.lang.Override
@@ -39674,6 +45320,49 @@ public final class TriggerOuterClass {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
       }
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+
+    public static final int START_WORKFLOW_FIELD_NUMBER = 105;
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return Whether the startWorkflow field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartWorkflow() {
+      return actionCase_ == 105;
+    }
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     * @return The startWorkflow.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+      if (actionCase_ == 105) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Instructions for starting a workflow with retry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+      if (actionCase_ == 105) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -39708,6 +45397,9 @@ public final class TriggerOuterClass {
       if (actionCase_ == 104) {
         output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
       }
+      if (actionCase_ == 105) {
+        output.writeMessage(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -39739,6 +45431,10 @@ public final class TriggerOuterClass {
       if (actionCase_ == 104) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+      }
+      if (actionCase_ == 105) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -39781,6 +45477,10 @@ public final class TriggerOuterClass {
           if (!getGatewayWebsocketBroadcast()
               .equals(other.getGatewayWebsocketBroadcast())) return false;
           break;
+        case 105:
+          if (!getStartWorkflow()
+              .equals(other.getStartWorkflow())) return false;
+          break;
         case 0:
         default:
       }
@@ -39817,6 +45517,10 @@ public final class TriggerOuterClass {
         case 104:
           hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
           hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
+          break;
+        case 105:
+          hash = (37 * hash) + START_WORKFLOW_FIELD_NUMBER;
+          hash = (53 * hash) + getStartWorkflow().hashCode();
           break;
         case 0:
         default:
@@ -40028,6 +45732,13 @@ public final class TriggerOuterClass {
             result.action_ = gatewayWebsocketBroadcastBuilder_.build();
           }
         }
+        if (actionCase_ == 105) {
+          if (startWorkflowBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = startWorkflowBuilder_.build();
+          }
+        }
         result.actionCase_ = actionCase_;
         onBuilt();
         return result;
@@ -40098,6 +45809,10 @@ public final class TriggerOuterClass {
           }
           case GATEWAY_WEBSOCKET_BROADCAST: {
             mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
+            break;
+          }
+          case START_WORKFLOW: {
+            mergeStartWorkflow(other.getStartWorkflow());
             break;
           }
           case ACTION_NOT_SET: {
@@ -40562,6 +46277,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        * @return Whether the invokeFunction field is set.
        */
@@ -40570,6 +46289,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 101;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        * @return The invokeFunction.
        */
@@ -40588,6 +46311,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -40604,6 +46331,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder setInvokeFunction(
@@ -40618,6 +46349,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -40640,6 +46375,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public Builder clearInvokeFunction() {
@@ -40659,12 +46398,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder getInvokeFunctionBuilder() {
         return getInvokeFunctionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       @java.lang.Override
@@ -40679,6 +46426,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -40703,6 +46454,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder> invokeContainerBuilder_;
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        * @return Whether the invokeContainer field is set.
        */
@@ -40711,6 +46466,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 103;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        * @return The invokeContainer.
        */
@@ -40729,6 +46488,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder setInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
@@ -40745,6 +46508,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder setInvokeContainer(
@@ -40759,6 +46526,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder mergeInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
@@ -40781,6 +46552,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public Builder clearInvokeContainer() {
@@ -40800,12 +46575,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder getInvokeContainerBuilder() {
         return getInvokeContainerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       @java.lang.Override
@@ -40820,6 +46603,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for invoking a container with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -40844,6 +46631,10 @@ public final class TriggerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        * @return Whether the gatewayWebsocketBroadcast field is set.
        */
@@ -40852,6 +46643,10 @@ public final class TriggerOuterClass {
         return actionCase_ == 104;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        * @return The gatewayWebsocketBroadcast.
        */
@@ -40870,6 +46665,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
@@ -40886,6 +46685,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder setGatewayWebsocketBroadcast(
@@ -40900,6 +46703,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
@@ -40922,6 +46729,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public Builder clearGatewayWebsocketBroadcast() {
@@ -40941,12 +46752,20 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
         return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       @java.lang.Override
@@ -40961,6 +46780,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -40980,6 +46803,183 @@ public final class TriggerOuterClass {
         actionCase_ = 104;
         onChanged();;
         return gatewayWebsocketBroadcastBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> startWorkflowBuilder_;
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return Whether the startWorkflow field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartWorkflow() {
+        return actionCase_ == 105;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       * @return The startWorkflow.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry getStartWorkflow() {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 105) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        } else {
+          if (actionCase_ == 105) {
+            return startWorkflowBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder setStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+        if (startWorkflowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          startWorkflowBuilder_.setMessage(value);
+        }
+        actionCase_ = 105;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder setStartWorkflow(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder builderForValue) {
+        if (startWorkflowBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          startWorkflowBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 105;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder mergeStartWorkflow(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry value) {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 105 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 105) {
+            startWorkflowBuilder_.mergeFrom(value);
+          }
+          startWorkflowBuilder_.setMessage(value);
+        }
+        actionCase_ = 105;
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public Builder clearStartWorkflow() {
+        if (startWorkflowBuilder_ == null) {
+          if (actionCase_ == 105) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 105) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          startWorkflowBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder getStartWorkflowBuilder() {
+        return getStartWorkflowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder getStartWorkflowOrBuilder() {
+        if ((actionCase_ == 105) && (startWorkflowBuilder_ != null)) {
+          return startWorkflowBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 105) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Instructions for starting a workflow with retry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.StartWorkflowWithRetry start_workflow = 105;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder> 
+          getStartWorkflowFieldBuilder() {
+        if (startWorkflowBuilder_ == null) {
+          if (!(actionCase_ == 105)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.getDefaultInstance();
+          }
+          startWorkflowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetryOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.StartWorkflowWithRetry) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 105;
+        onChanged();;
+        return startWorkflowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -41110,6 +47110,16 @@ public final class TriggerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_triggers_v1_InvokeContainerWithRetry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -41178,7 +47188,7 @@ public final class TriggerOuterClass {
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\'yande" +
       "x/cloud/logging/v1/log_entry.proto\032\035yand" +
-      "ex/cloud/validation.proto\"\276.\n\007Trigger\022\n\n" +
+      "ex/cloud/validation.proto\"\3601\n\007Trigger\022\n\n" +
       "\002id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013de" +
@@ -41211,46 +47221,64 @@ public final class TriggerOuterClass {
       "stream\030\014 \001(\0132/.yandex.cloud.serverless.t" +
       "riggers.v1.DataStreamH\000\0229\n\004mail\030\r \001(\0132)." +
       "yandex.cloud.serverless.triggers.v1.Mail" +
-      "H\000B\014\n\004rule\022\004\300\3011\001J\004\010\007\020\t\032\355\003\n\005Timer\022&\n\017cron" +
+      "H\000B\014\n\004rule\022\004\300\3011\001J\004\010\007\020\t\032\310\004\n\005Timer\022&\n\017cron" +
       "_expression\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022\033\n\007payl" +
-      "oad\030\002 \001(\tB\n\212\3101\006<=4096\022R\n\017invoke_function" +
+      "oad\030\002 \001(\tB\n\212\3101\006<=4096\022V\n\017invoke_function" +
       "\030e \001(\01327.yandex.cloud.serverless.trigger" +
-      "s.v1.InvokeFunctionOnceH\000\022b\n\032invoke_func" +
-      "tion_with_retry\030g \001(\0132<.yandex.cloud.ser" +
-      "verless.triggers.v1.InvokeFunctionWithRe" +
-      "tryH\000\022d\n\033invoke_container_with_retry\030h \001" +
-      "(\0132=.yandex.cloud.serverless.triggers.v1" +
-      ".InvokeContainerWithRetryH\000\022e\n\033gateway_w" +
-      "ebsocket_broadcast\030i \001(\0132>.yandex.cloud." +
-      "serverless.triggers.v1.GatewayWebsocketB" +
-      "roadcastH\000B\016\n\006action\022\004\300\3011\001J\004\010f\020gJ\004\010\003\020e\032\221" +
-      "\004\n\014MessageQueue\022\026\n\010queue_id\030\013 \001(\tB\004\350\3071\001\022" +
-      "(\n\022service_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022P\n\016batch_settings\030\004 \001(\01322.yandex.cloud" +
-      ".serverless.triggers.v1.BatchSettingsB\004\350" +
-      "\3071\001\022@\n\022visibility_timeout\030\005 \001(\0132\031.google" +
-      ".protobuf.DurationB\t\372\3071\005<=12h\022R\n\017invoke_" +
-      "function\030e \001(\01327.yandex.cloud.serverless" +
-      ".triggers.v1.InvokeFunctionOnceH\000\022T\n\020inv" +
-      "oke_container\030f \001(\01328.yandex.cloud.serve" +
-      "rless.triggers.v1.InvokeContainerOnceH\000\022" +
-      "e\n\033gateway_websocket_broadcast\030g \001(\0132>.y" +
-      "andex.cloud.serverless.triggers.v1.Gatew" +
-      "ayWebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001J\004" +
-      "\010\014\020eJ\004\010\006\020\013\032\313\003\n\nIoTMessage\022\031\n\013registry_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(\t\022\022\n\nmqtt_" +
-      "topic\030\003 \001(\t\022J\n\016batch_settings\030\004 \001(\01322.ya" +
-      "ndex.cloud.serverless.triggers.v1.BatchS" +
-      "ettings\022W\n\017invoke_function\030e \001(\0132<.yande" +
-      "x.cloud.serverless.triggers.v1.InvokeFun" +
-      "ctionWithRetryH\000\022Y\n\020invoke_container\030f \001" +
-      "(\0132=.yandex.cloud.serverless.triggers.v1" +
-      ".InvokeContainerWithRetryH\000\022e\n\033gateway_w" +
-      "ebsocket_broadcast\030g \001(\0132>.yandex.cloud." +
-      "serverless.triggers.v1.GatewayWebsocketB" +
-      "roadcastH\000B\016\n\006action\022\004\300\3011\001J\004\010\005\020e\032\274\003\n\020IoT" +
-      "BrokerMessage\022\027\n\tbroker_id\030\001 \001(\tB\004\350\3071\001\022\022" +
-      "\n\nmqtt_topic\030\002 \001(\t\022J\n\016batch_settings\030\003 \001" +
+      "s.v1.InvokeFunctionOnceB\002\030\001H\000\022b\n\032invoke_" +
+      "function_with_retry\030g \001(\0132<.yandex.cloud" +
+      ".serverless.triggers.v1.InvokeFunctionWi" +
+      "thRetryH\000\022d\n\033invoke_container_with_retry" +
+      "\030h \001(\0132=.yandex.cloud.serverless.trigger" +
+      "s.v1.InvokeContainerWithRetryH\000\022e\n\033gatew" +
+      "ay_websocket_broadcast\030i \001(\0132>.yandex.cl" +
+      "oud.serverless.triggers.v1.GatewayWebsoc" +
+      "ketBroadcastH\000\022U\n\016start_workflow\030j \001(\0132;" +
+      ".yandex.cloud.serverless.triggers.v1.Sta" +
+      "rtWorkflowWithRetryH\000B\016\n\006action\022\004\300\3011\001J\004\010" +
+      "f\020gJ\004\010\003\020e\032\343\004\n\014MessageQueue\022\026\n\010queue_id\030\013" +
+      " \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\003 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022P\n\016batch_settings\030\004 \001(\01322.y" +
+      "andex.cloud.serverless.triggers.v1.Batch" +
+      "SettingsB\004\350\3071\001\022@\n\022visibility_timeout\030\005 \001" +
+      "(\0132\031.google.protobuf.DurationB\t\372\3071\005<=12h" +
+      "\022R\n\017invoke_function\030e \001(\01327.yandex.cloud" +
+      ".serverless.triggers.v1.InvokeFunctionOn" +
+      "ceH\000\022T\n\020invoke_container\030f \001(\01328.yandex." +
+      "cloud.serverless.triggers.v1.InvokeConta" +
+      "inerOnceH\000\022e\n\033gateway_websocket_broadcas" +
+      "t\030g \001(\0132>.yandex.cloud.serverless.trigge" +
+      "rs.v1.GatewayWebsocketBroadcastH\000\022P\n\016sta" +
+      "rt_workflow\030h \001(\01326.yandex.cloud.serverl" +
+      "ess.triggers.v1.StartWorkflowOnceH\000B\016\n\006a" +
+      "ction\022\004\300\3011\001J\004\010\014\020eJ\004\010\006\020\013\032\313\003\n\nIoTMessage\022\031" +
+      "\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002" +
+      " \001(\t\022\022\n\nmqtt_topic\030\003 \001(\t\022J\n\016batch_settin" +
+      "gs\030\004 \001(\01322.yandex.cloud.serverless.trigg" +
+      "ers.v1.BatchSettings\022W\n\017invoke_function\030" +
+      "e \001(\0132<.yandex.cloud.serverless.triggers" +
+      ".v1.InvokeFunctionWithRetryH\000\022Y\n\020invoke_" +
+      "container\030f \001(\0132=.yandex.cloud.serverles" +
+      "s.triggers.v1.InvokeContainerWithRetryH\000" +
+      "\022e\n\033gateway_websocket_broadcast\030g \001(\0132>." +
+      "yandex.cloud.serverless.triggers.v1.Gate" +
+      "wayWebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001J" +
+      "\004\010\005\020e\032\274\003\n\020IoTBrokerMessage\022\027\n\tbroker_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022\022\n\nmqtt_topic\030\002 \001(\t\022J\n\016batch" +
+      "_settings\030\003 \001(\01322.yandex.cloud.serverles" +
+      "s.triggers.v1.BatchSettings\022W\n\017invoke_fu" +
+      "nction\030e \001(\0132<.yandex.cloud.serverless.t" +
+      "riggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020" +
+      "invoke_container\030f \001(\0132=.yandex.cloud.se" +
+      "rverless.triggers.v1.InvokeContainerWith" +
+      "RetryH\000\022e\n\033gateway_websocket_broadcast\030g" +
+      " \001(\0132>.yandex.cloud.serverless.triggers." +
+      "v1.GatewayWebsocketBroadcastH\000B\016\n\006action" +
+      "\022\004\300\3011\001J\004\010\004\020e\032\375\004\n\rObjectStorage\022_\n\nevent_" +
+      "type\030\003 \003(\0162C.yandex.cloud.serverless.tri" +
+      "ggers.v1.Trigger.ObjectStorageEventTypeB" +
+      "\006\202\3101\002>0\022\021\n\tbucket_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001" +
+      "(\t\022\016\n\006suffix\030\007 \001(\t\022J\n\016batch_settings\030\010 \001" +
       "(\01322.yandex.cloud.serverless.triggers.v1" +
       ".BatchSettings\022W\n\017invoke_function\030e \001(\0132" +
       "<.yandex.cloud.serverless.triggers.v1.In" +
@@ -41259,159 +47287,167 @@ public final class TriggerOuterClass {
       "gers.v1.InvokeContainerWithRetryH\000\022e\n\033ga" +
       "teway_websocket_broadcast\030g \001(\0132>.yandex" +
       ".cloud.serverless.triggers.v1.GatewayWeb" +
-      "socketBroadcastH\000B\016\n\006action\022\004\300\3011\001J\004\010\004\020e\032" +
-      "\246\004\n\rObjectStorage\022_\n\nevent_type\030\003 \003(\0162C." +
-      "yandex.cloud.serverless.triggers.v1.Trig" +
-      "ger.ObjectStorageEventTypeB\006\202\3101\002>0\022\021\n\tbu" +
-      "cket_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030" +
-      "\007 \001(\t\022J\n\016batch_settings\030\010 \001(\01322.yandex.c" +
-      "loud.serverless.triggers.v1.BatchSetting" +
-      "s\022W\n\017invoke_function\030e \001(\0132<.yandex.clou" +
-      "d.serverless.triggers.v1.InvokeFunctionW" +
-      "ithRetryH\000\022Y\n\020invoke_container\030f \001(\0132=.y" +
-      "andex.cloud.serverless.triggers.v1.Invok" +
-      "eContainerWithRetryH\000\022e\n\033gateway_websock" +
-      "et_broadcast\030g \001(\0132>.yandex.cloud.server" +
-      "less.triggers.v1.GatewayWebsocketBroadca" +
-      "stH\000B\016\n\006action\022\004\300\3011\001J\004\010\t\020eJ\004\010\005\020\006\032\253\004\n\021Con" +
-      "tainerRegistry\022c\n\nevent_type\030\003 \003(\0162G.yan" +
-      "dex.cloud.serverless.triggers.v1.Trigger" +
-      ".ContainerRegistryEventTypeB\006\202\3101\002>0\022\023\n\013r" +
-      "egistry_id\030\004 \001(\t\022\022\n\nimage_name\030\005 \001(\t\022\013\n\003" +
-      "tag\030\006 \001(\t\022J\n\016batch_settings\030\007 \001(\01322.yand" +
-      "ex.cloud.serverless.triggers.v1.BatchSet" +
-      "tings\022W\n\017invoke_function\030e \001(\0132<.yandex." +
-      "cloud.serverless.triggers.v1.InvokeFunct" +
-      "ionWithRetryH\000\022Y\n\020invoke_container\030f \001(\013" +
-      "2=.yandex.cloud.serverless.triggers.v1.I" +
-      "nvokeContainerWithRetryH\000\022e\n\033gateway_web" +
-      "socket_broadcast\030g \001(\0132>.yandex.cloud.se" +
-      "rverless.triggers.v1.GatewayWebsocketBro" +
-      "adcastH\000B\016\n\006action\022\004\300\3011\001J\004\010\010\020e\032\306\002\n\tCloud" +
-      "Logs\022\024\n\014log_group_id\030\001 \003(\t\022Y\n\016batch_sett" +
-      "ings\030\002 \001(\0132;.yandex.cloud.serverless.tri" +
-      "ggers.v1.CloudLogsBatchSettingsB\004\350\3071\001\022W\n" +
-      "\017invoke_function\030e \001(\0132<.yandex.cloud.se" +
-      "rverless.triggers.v1.InvokeFunctionWithR" +
-      "etryH\000\022Y\n\020invoke_container\030f \001(\0132=.yande" +
-      "x.cloud.serverless.triggers.v1.InvokeCon" +
-      "tainerWithRetryH\000B\016\n\006action\022\004\300\3011\001J\004\010\003\020e\032" +
-      "\305\005\n\007Logging\022\036\n\014log_group_id\030\001 \001(\tB\010\212\3101\004<" +
-      "=50\022@\n\rresource_type\030\003 \003(\tB)\362\3071\034[a-zA-Z]" +
-      "[-a-zA-Z0-9_.]{1,62}\202\3101\005<=100\022>\n\013resourc" +
-      "e_id\030\004 \003(\tB)\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1" +
-      ",62}\202\3101\005<=100\022?\n\013stream_name\030\007 \003(\tB*\362\3071\035" +
-      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\202\3101\005<=100\022A" +
-      "\n\006levels\030\005 \003(\0162\'.yandex.cloud.logging.v1" +
-      ".LogLevel.LevelB\010\202\3101\004<=10\022W\n\016batch_setti" +
-      "ngs\030\006 \001(\01329.yandex.cloud.serverless.trig" +
-      "gers.v1.LoggingBatchSettingsB\004\350\3071\001\022W\n\017in" +
-      "voke_function\030e \001(\0132<.yandex.cloud.serve" +
-      "rless.triggers.v1.InvokeFunctionWithRetr" +
-      "yH\000\022Y\n\020invoke_container\030g \001(\0132=.yandex.c" +
-      "loud.serverless.triggers.v1.InvokeContai" +
-      "nerWithRetryH\000\022e\n\033gateway_websocket_broa" +
-      "dcast\030h \001(\0132>.yandex.cloud.serverless.tr" +
-      "iggers.v1.GatewayWebsocketBroadcastH\000B\016\n" +
-      "\006action\022\004\300\3011\001J\004\010\010\020eJ\004\010f\020gJ\004\010\002\020\003\"\312\001\n\026Obje" +
-      "ctStorageEventType\022)\n%OBJECT_STORAGE_EVE" +
-      "NT_TYPE_UNSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_" +
-      "EVENT_TYPE_CREATE_OBJECT\020\001\022+\n\'OBJECT_STO" +
-      "RAGE_EVENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJEC" +
-      "T_STORAGE_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n" +
-      "\032ContainerRegistryEventType\022-\n)CONTAINER" +
-      "_REGISTRY_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CO" +
-      "NTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE" +
-      "\020\001\022.\n*CONTAINER_REGISTRY_EVENT_TYPE_DELE" +
-      "TE_IMAGE\020\002\0222\n.CONTAINER_REGISTRY_EVENT_T" +
-      "YPE_CREATE_IMAGE_TAG\020\003\0222\n.CONTAINER_REGI" +
-      "STRY_EVENT_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006St" +
-      "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001" +
-      "\022\n\n\006PAUSED\020\002J\004\010\007\020\010\"i\n\022InvokeFunctionOnce" +
-      "\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014f" +
-      "unction_tag\030\002 \001(\t\022\032\n\022service_account_id\030" +
-      "\003 \001(\t\"\213\002\n\027InvokeFunctionWithRetry\022!\n\013fun" +
-      "ction_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function" +
-      "_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\022J" +
-      "\n\016retry_settings\030\004 \001(\01322.yandex.cloud.se" +
-      "rverless.triggers.v1.RetrySettings\022O\n\021de" +
-      "ad_letter_queue\030\005 \001(\01324.yandex.cloud.ser" +
-      "verless.triggers.v1.PutQueueMessage\"i\n\023I" +
-      "nvokeContainerOnce\022\"\n\014container_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_" +
-      "account_id\030\004 \001(\tJ\004\010\002\020\003\"\213\002\n\030InvokeContain" +
-      "erWithRetry\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account" +
-      "_id\030\004 \001(\t\022J\n\016retry_settings\030\005 \001(\01322.yand" +
-      "ex.cloud.serverless.triggers.v1.RetrySet" +
-      "tings\022O\n\021dead_letter_queue\030\006 \001(\01324.yande" +
-      "x.cloud.serverless.triggers.v1.PutQueueM" +
-      "essageJ\004\010\002\020\003\"{\n\031GatewayWebsocketBroadcas" +
-      "t\022 \n\ngateway_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004p" +
-      "ath\030\002 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\003 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"S\n\017PutQueueMessage\022\020\n\010" +
-      "queue_id\030\013 \001(\t\022(\n\022service_account_id\030\002 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50J\004\010\003\020\013\"Z\n\rBatchSettings\022" +
-      "\030\n\004size\030\001 \001(\003B\n\372\3071\0060-1000\022/\n\006cutoff\030\002 \001(" +
-      "\0132\031.google.protobuf.DurationB\004\350\3071\001\"g\n\026Cl" +
-      "oudLogsBatchSettings\022\027\n\004size\030\001 \001(\003B\t\372\3071\005" +
-      "0-100\0224\n\006cutoff\030\002 \001(\0132\031.google.protobuf." +
-      "DurationB\t\372\3071\0051s-1m\"f\n\024LoggingBatchSetti" +
-      "ngs\022\030\n\004size\030\001 \001(\003B\n\372\3071\0061-1000\0224\n\006cutoff\030" +
-      "\002 \001(\0132\031.google.protobuf.DurationB\t\372\3071\0051s" +
-      "-1m\"m\n\rRetrySettings\022\037\n\016retry_attempts\030\001" +
-      " \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031.google" +
-      ".protobuf.DurationB\016\372\3071\00610s-1m\350\3071\001\"\215\003\n\rB" +
-      "illingBudget\022(\n\022billing_account_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB\010\212\3101\004<" +
-      "=50\022W\n\017invoke_function\030e \001(\0132<.yandex.cl" +
-      "oud.serverless.triggers.v1.InvokeFunctio" +
-      "nWithRetryH\000\022Y\n\020invoke_container\030g \001(\0132=" +
-      ".yandex.cloud.serverless.triggers.v1.Inv" +
-      "okeContainerWithRetryH\000\022e\n\033gateway_webso" +
-      "cket_broadcast\030h \001(\0132>.yandex.cloud.serv" +
-      "erless.triggers.v1.GatewayWebsocketBroad" +
-      "castH\000B\016\n\006action\022\004\300\3011\001J\004\010f\020gJ\004\010\003\020e\"j\n\027Da" +
-      "taStreamBatchSettings\022\031\n\004size\030\001 \001(\003B\013\372\3071" +
-      "\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.google.protob" +
-      "uf.DurationB\t\372\3071\0051s-1m\"\351\003\n\nDataStream\022\020\n" +
-      "\010endpoint\030\001 \001(\t\022\020\n\010database\030\002 \001(\t\022\016\n\006str" +
-      "eam\030\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022T\n" +
-      "\016batch_settings\030\005 \001(\0132<.yandex.cloud.ser" +
-      "verless.triggers.v1.DataStreamBatchSetti" +
-      "ngs\022W\n\017invoke_function\030\r \001(\0132<.yandex.cl" +
-      "oud.serverless.triggers.v1.InvokeFunctio" +
-      "nWithRetryH\000\022Y\n\020invoke_container\030\017 \001(\0132=" +
-      ".yandex.cloud.serverless.triggers.v1.Inv" +
-      "okeContainerWithRetryH\000\022e\n\033gateway_webso" +
-      "cket_broadcast\030\020 \001(\0132>.yandex.cloud.serv" +
-      "erless.triggers.v1.GatewayWebsocketBroad" +
-      "castH\000B\016\n\006action\022\004\300\3011\001J\004\010\016\020\017J\004\010\006\020\r\"v\n\033Ob" +
-      "jectStorageBucketSettings\022-\n\tbucket_id\030\001" +
-      " \001(\tB\032\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022(\n\022serv" +
-      "ice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\366\003\n\004M" +
-      "ail\022\r\n\005email\030\002 \001(\t\022J\n\016batch_settings\030\003 \001" +
-      "(\01322.yandex.cloud.serverless.triggers.v1" +
-      ".BatchSettings\022\\\n\022attachments_bucket\030\004 \001" +
-      "(\0132@.yandex.cloud.serverless.triggers.v1" +
-      ".ObjectStorageBucketSettings\022W\n\017invoke_f" +
-      "unction\030e \001(\0132<.yandex.cloud.serverless." +
-      "triggers.v1.InvokeFunctionWithRetryH\000\022Y\n" +
-      "\020invoke_container\030g \001(\0132=.yandex.cloud.s" +
-      "erverless.triggers.v1.InvokeContainerWit" +
-      "hRetryH\000\022e\n\033gateway_websocket_broadcast\030" +
-      "h \001(\0132>.yandex.cloud.serverless.triggers" +
-      ".v1.GatewayWebsocketBroadcastH\000B\016\n\006actio" +
-      "n\022\004\300\3011\001J\004\010f\020gJ\004\010\005\020e*\342\001\n\013TriggerType\022\034\n\030T" +
-      "RIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\r" +
-      "MESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_" +
-      "BROKER_MESSAGE\020\014\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022" +
-      "CONTAINER_REGISTRY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007" +
-      "LOGGING\020\010\022\022\n\016BILLING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010" +
-      "\n\004MAIL\020\013B{\n\'yandex.cloud.api.serverless." +
-      "triggers.v1ZPgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/serverless/trigger" +
-      "s/v1;triggersb\006proto3"
+      "socketBroadcastH\000\022U\n\016start_workflow\030h \001(" +
+      "\0132;.yandex.cloud.serverless.triggers.v1." +
+      "StartWorkflowWithRetryH\000B\016\n\006action\022\004\300\3011\001" +
+      "J\004\010\t\020eJ\004\010\005\020\006\032\202\005\n\021ContainerRegistry\022c\n\nev" +
+      "ent_type\030\003 \003(\0162G.yandex.cloud.serverless" +
+      ".triggers.v1.Trigger.ContainerRegistryEv" +
+      "entTypeB\006\202\3101\002>0\022\023\n\013registry_id\030\004 \001(\t\022\022\n\n" +
+      "image_name\030\005 \001(\t\022\013\n\003tag\030\006 \001(\t\022J\n\016batch_s" +
+      "ettings\030\007 \001(\01322.yandex.cloud.serverless." +
+      "triggers.v1.BatchSettings\022W\n\017invoke_func" +
+      "tion\030e \001(\0132<.yandex.cloud.serverless.tri" +
+      "ggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020in" +
+      "voke_container\030f \001(\0132=.yandex.cloud.serv" +
+      "erless.triggers.v1.InvokeContainerWithRe" +
+      "tryH\000\022e\n\033gateway_websocket_broadcast\030g \001" +
+      "(\0132>.yandex.cloud.serverless.triggers.v1" +
+      ".GatewayWebsocketBroadcastH\000\022U\n\016start_wo" +
+      "rkflow\030h \001(\0132;.yandex.cloud.serverless.t" +
+      "riggers.v1.StartWorkflowWithRetryH\000B\016\n\006a" +
+      "ction\022\004\300\3011\001J\004\010\010\020e\032\306\002\n\tCloudLogs\022\024\n\014log_g" +
+      "roup_id\030\001 \003(\t\022Y\n\016batch_settings\030\002 \001(\0132;." +
+      "yandex.cloud.serverless.triggers.v1.Clou" +
+      "dLogsBatchSettingsB\004\350\3071\001\022W\n\017invoke_funct" +
+      "ion\030e \001(\0132<.yandex.cloud.serverless.trig" +
+      "gers.v1.InvokeFunctionWithRetryH\000\022Y\n\020inv" +
+      "oke_container\030f \001(\0132=.yandex.cloud.serve" +
+      "rless.triggers.v1.InvokeContainerWithRet" +
+      "ryH\000B\016\n\006action\022\004\300\3011\001J\004\010\003\020e\032\234\006\n\007Logging\022\036" +
+      "\n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=50\022@\n\rresour" +
+      "ce_type\030\003 \003(\tB)\362\3071\034[a-zA-Z][-a-zA-Z0-9_." +
+      "]{1,62}\202\3101\005<=100\022>\n\013resource_id\030\004 \003(\tB)\362" +
+      "\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101\005<=100" +
+      "\022?\n\013stream_name\030\007 \003(\tB*\362\3071\035|[a-z][-a-z0-" +
+      "9]{1,61}[a-z0-9]\202\3101\005<=100\022A\n\006levels\030\005 \003(" +
+      "\0162\'.yandex.cloud.logging.v1.LogLevel.Lev" +
+      "elB\010\202\3101\004<=10\022W\n\016batch_settings\030\006 \001(\01329.y" +
+      "andex.cloud.serverless.triggers.v1.Loggi" +
+      "ngBatchSettingsB\004\350\3071\001\022W\n\017invoke_function" +
+      "\030e \001(\0132<.yandex.cloud.serverless.trigger" +
+      "s.v1.InvokeFunctionWithRetryH\000\022Y\n\020invoke" +
+      "_container\030g \001(\0132=.yandex.cloud.serverle" +
+      "ss.triggers.v1.InvokeContainerWithRetryH" +
+      "\000\022e\n\033gateway_websocket_broadcast\030h \001(\0132>" +
+      ".yandex.cloud.serverless.triggers.v1.Gat" +
+      "ewayWebsocketBroadcastH\000\022U\n\016start_workfl" +
+      "ow\030i \001(\0132;.yandex.cloud.serverless.trigg" +
+      "ers.v1.StartWorkflowWithRetryH\000B\016\n\006actio" +
+      "n\022\004\300\3011\001J\004\010\010\020eJ\004\010f\020gJ\004\010\002\020\003\"\312\001\n\026ObjectStor" +
+      "ageEventType\022)\n%OBJECT_STORAGE_EVENT_TYP" +
+      "E_UNSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_EVENT_" +
+      "TYPE_CREATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE_E" +
+      "VENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJECT_STOR" +
+      "AGE_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n\032Conta" +
+      "inerRegistryEventType\022-\n)CONTAINER_REGIS" +
+      "TRY_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CONTAINE" +
+      "R_REGISTRY_EVENT_TYPE_CREATE_IMAGE\020\001\022.\n*" +
+      "CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMA" +
+      "GE\020\002\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_CR" +
+      "EATE_IMAGE_TAG\020\003\0222\n.CONTAINER_REGISTRY_E" +
+      "VENT_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006Status\022\026" +
+      "\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006PA" +
+      "USED\020\002J\004\010\007\020\010\"i\n\022InvokeFunctionOnce\022!\n\013fu" +
+      "nction_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014functio" +
+      "n_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\"" +
+      "\213\002\n\027InvokeFunctionWithRetry\022!\n\013function_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002" +
+      " \001(\t\022\032\n\022service_account_id\030\003 \001(\t\022J\n\016retr" +
+      "y_settings\030\004 \001(\01322.yandex.cloud.serverle" +
+      "ss.triggers.v1.RetrySettings\022O\n\021dead_let" +
+      "ter_queue\030\005 \001(\01324.yandex.cloud.serverles" +
+      "s.triggers.v1.PutQueueMessage\"i\n\023InvokeC" +
+      "ontainerOnce\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_accoun" +
+      "t_id\030\004 \001(\tJ\004\010\002\020\003\"\213\002\n\030InvokeContainerWith" +
+      "Retry\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account_id\030\004 " +
+      "\001(\t\022J\n\016retry_settings\030\005 \001(\01322.yandex.clo" +
+      "ud.serverless.triggers.v1.RetrySettings\022" +
+      "O\n\021dead_letter_queue\030\006 \001(\01324.yandex.clou" +
+      "d.serverless.triggers.v1.PutQueueMessage" +
+      "J\004\010\002\020\003\"R\n\021StartWorkflowOnce\022!\n\013workflow_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022service_accoun" +
+      "t_id\030\002 \001(\t\"\364\001\n\026StartWorkflowWithRetry\022!\n" +
+      "\013workflow_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022serv" +
+      "ice_account_id\030\002 \001(\t\022J\n\016retry_settings\030\003" +
+      " \001(\01322.yandex.cloud.serverless.triggers." +
+      "v1.RetrySettings\022O\n\021dead_letter_queue\030\004 " +
+      "\001(\01324.yandex.cloud.serverless.triggers.v" +
+      "1.PutQueueMessage\"{\n\031GatewayWebsocketBro" +
+      "adcast\022 \n\ngateway_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022(\n\022service_account_" +
+      "id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\"S\n\017PutQueueMessag" +
+      "e\022\020\n\010queue_id\030\013 \001(\t\022(\n\022service_account_i" +
+      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50J\004\010\003\020\013\"Z\n\rBatchSett" +
+      "ings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0060-1000\022/\n\006cutoff" +
+      "\030\002 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\"" +
+      "g\n\026CloudLogsBatchSettings\022\027\n\004size\030\001 \001(\003B" +
+      "\t\372\3071\0050-100\0224\n\006cutoff\030\002 \001(\0132\031.google.prot" +
+      "obuf.DurationB\t\372\3071\0051s-1m\"f\n\024LoggingBatch" +
+      "Settings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0061-1000\0224\n\006cu" +
+      "toff\030\002 \001(\0132\031.google.protobuf.DurationB\t\372" +
+      "\3071\0051s-1m\"m\n\rRetrySettings\022\037\n\016retry_attem" +
+      "pts\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\016\372\3071\00610s-1m\350\3071\001\"" +
+      "\344\003\n\rBillingBudget\022(\n\022billing_account_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB\010" +
+      "\212\3101\004<=50\022W\n\017invoke_function\030e \001(\0132<.yand" +
+      "ex.cloud.serverless.triggers.v1.InvokeFu" +
+      "nctionWithRetryH\000\022Y\n\020invoke_container\030g " +
+      "\001(\0132=.yandex.cloud.serverless.triggers.v" +
+      "1.InvokeContainerWithRetryH\000\022e\n\033gateway_" +
+      "websocket_broadcast\030h \001(\0132>.yandex.cloud" +
+      ".serverless.triggers.v1.GatewayWebsocket" +
+      "BroadcastH\000\022U\n\016start_workflow\030i \001(\0132;.ya" +
+      "ndex.cloud.serverless.triggers.v1.StartW" +
+      "orkflowWithRetryH\000B\016\n\006action\022\004\300\3011\001J\004\010f\020g" +
+      "J\004\010\003\020e\"j\n\027DataStreamBatchSettings\022\031\n\004siz" +
+      "e\030\001 \001(\003B\013\372\3071\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\t\372\3071\0051s-1m\"\300\004\n\nD" +
+      "ataStream\022\020\n\010endpoint\030\001 \001(\t\022\020\n\010database\030" +
+      "\002 \001(\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022service_account" +
+      "_id\030\004 \001(\t\022T\n\016batch_settings\030\005 \001(\0132<.yand" +
+      "ex.cloud.serverless.triggers.v1.DataStre" +
+      "amBatchSettings\022W\n\017invoke_function\030\r \001(\013" +
+      "2<.yandex.cloud.serverless.triggers.v1.I" +
+      "nvokeFunctionWithRetryH\000\022Y\n\020invoke_conta" +
+      "iner\030\017 \001(\0132=.yandex.cloud.serverless.tri" +
+      "ggers.v1.InvokeContainerWithRetryH\000\022e\n\033g" +
+      "ateway_websocket_broadcast\030\020 \001(\0132>.yande" +
+      "x.cloud.serverless.triggers.v1.GatewayWe" +
+      "bsocketBroadcastH\000\022U\n\016start_workflow\030\021 \001" +
+      "(\0132;.yandex.cloud.serverless.triggers.v1" +
+      ".StartWorkflowWithRetryH\000B\016\n\006action\022\004\300\3011" +
+      "\001J\004\010\016\020\017J\004\010\006\020\r\"v\n\033ObjectStorageBucketSett" +
+      "ings\022-\n\tbucket_id\030\001 \001(\tB\032\212\3101\0043-63\362\3071\016[-." +
+      "0-9a-zA-Z]*\022(\n\022service_account_id\030\002 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\"\315\004\n\004Mail\022\r\n\005email\030\002 \001(\t\022J\n" +
+      "\016batch_settings\030\003 \001(\01322.yandex.cloud.ser" +
+      "verless.triggers.v1.BatchSettings\022\\\n\022att" +
+      "achments_bucket\030\004 \001(\0132@.yandex.cloud.ser" +
+      "verless.triggers.v1.ObjectStorageBucketS" +
+      "ettings\022W\n\017invoke_function\030e \001(\0132<.yande" +
+      "x.cloud.serverless.triggers.v1.InvokeFun" +
+      "ctionWithRetryH\000\022Y\n\020invoke_container\030g \001" +
+      "(\0132=.yandex.cloud.serverless.triggers.v1" +
+      ".InvokeContainerWithRetryH\000\022e\n\033gateway_w" +
+      "ebsocket_broadcast\030h \001(\0132>.yandex.cloud." +
+      "serverless.triggers.v1.GatewayWebsocketB" +
+      "roadcastH\000\022U\n\016start_workflow\030i \001(\0132;.yan" +
+      "dex.cloud.serverless.triggers.v1.StartWo" +
+      "rkflowWithRetryH\000B\016\n\006action\022\004\300\3011\001J\004\010f\020gJ" +
+      "\004\010\005\020e*\342\001\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UN" +
+      "SPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020" +
+      "\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE" +
+      "\020\014\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGI" +
+      "STRY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016B" +
+      "ILLING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'ya" +
+      "ndex.cloud.api.serverless.triggers.v1ZPg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/serverless/triggers/v1;triggersb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41444,13 +47480,13 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_descriptor,
-        new java.lang.String[] { "CronExpression", "Payload", "InvokeFunction", "InvokeFunctionWithRetry", "InvokeContainerWithRetry", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "CronExpression", "Payload", "InvokeFunction", "InvokeFunctionWithRetry", "InvokeContainerWithRetry", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_MessageQueue_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_MessageQueue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_MessageQueue_descriptor,
-        new java.lang.String[] { "QueueId", "ServiceAccountId", "BatchSettings", "VisibilityTimeout", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "QueueId", "ServiceAccountId", "BatchSettings", "VisibilityTimeout", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTMessage_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(4);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTMessage_fieldAccessorTable = new
@@ -41468,13 +47504,13 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_descriptor,
-        new java.lang.String[] { "EventType", "BucketId", "Prefix", "Suffix", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "EventType", "BucketId", "Prefix", "Suffix", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(7);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_descriptor,
-        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "Tag", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "Tag", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_CloudLogs_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(8);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_CloudLogs_fieldAccessorTable = new
@@ -41486,7 +47522,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Logging_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Logging_descriptor,
-        new java.lang.String[] { "LogGroupId", "ResourceType", "ResourceId", "StreamName", "Levels", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "LogGroupId", "ResourceType", "ResourceId", "StreamName", "Levels", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_fieldAccessorTable = new
@@ -41511,72 +47547,84 @@ public final class TriggerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_InvokeContainerWithRetry_descriptor,
         new java.lang.String[] { "ContainerId", "Path", "ServiceAccountId", "RetrySettings", "DeadLetterQueue", });
-    internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor =
+    internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowOnce_descriptor,
+        new java.lang.String[] { "WorkflowId", "ServiceAccountId", });
+    internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_StartWorkflowWithRetry_descriptor,
+        new java.lang.String[] { "WorkflowId", "ServiceAccountId", "RetrySettings", "DeadLetterQueue", });
+    internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor,
         new java.lang.String[] { "GatewayId", "Path", "ServiceAccountId", });
     internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_descriptor,
         new java.lang.String[] { "QueueId", "ServiceAccountId", });
     internal_static_yandex_cloud_serverless_triggers_v1_BatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_serverless_triggers_v1_BatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_BatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_CloudLogsBatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_serverless_triggers_v1_CloudLogsBatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_CloudLogsBatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_LoggingBatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_serverless_triggers_v1_LoggingBatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_LoggingBatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_RetrySettings_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_serverless_triggers_v1_RetrySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_RetrySettings_descriptor,
         new java.lang.String[] { "RetryAttempts", "Interval", });
     internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_descriptor,
-        new java.lang.String[] { "BillingAccountId", "BudgetId", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "BillingAccountId", "BudgetId", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_serverless_triggers_v1_DataStream_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor,
-        new java.lang.String[] { "Endpoint", "Database", "Stream", "ServiceAccountId", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "Endpoint", "Database", "Stream", "ServiceAccountId", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor,
         new java.lang.String[] { "BucketId", "ServiceAccountId", });
     internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_serverless_triggers_v1_Mail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor,
-        new java.lang.String[] { "Email", "BatchSettings", "AttachmentsBucket", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
+        new java.lang.String[] { "Email", "BatchSettings", "AttachmentsBucket", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "StartWorkflow", "Action", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

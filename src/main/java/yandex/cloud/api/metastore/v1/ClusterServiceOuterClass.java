@@ -18967,6 +18967,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      */
     yandex.cloud.api.metastore.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return Whether the warehouse field is set.
+     */
+    boolean hasWarehouse();
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return The warehouse.
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse();
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.metastore.v1.ConfigSpec}
@@ -19022,6 +19049,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(resources_);
                 resources_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder subBuilder = null;
+              if (warehouse_ != null) {
+                subBuilder = warehouse_.toBuilder();
+              }
+              warehouse_ = input.readMessage(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(warehouse_);
+                warehouse_ = subBuilder.buildPartial();
               }
 
               break;
@@ -19096,6 +19136,44 @@ public final class ClusterServiceOuterClass {
       return getResources();
     }
 
+    public static final int WAREHOUSE_FIELD_NUMBER = 3;
+    private yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig warehouse_;
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return Whether the warehouse field is set.
+     */
+    @java.lang.Override
+    public boolean hasWarehouse() {
+      return warehouse_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return The warehouse.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse() {
+      return warehouse_ == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+    }
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder() {
+      return getWarehouse();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19113,6 +19191,9 @@ public final class ClusterServiceOuterClass {
       if (resources_ != null) {
         output.writeMessage(2, getResources());
       }
+      if (warehouse_ != null) {
+        output.writeMessage(3, getWarehouse());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19125,6 +19206,10 @@ public final class ClusterServiceOuterClass {
       if (resources_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResources());
+      }
+      if (warehouse_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getWarehouse());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19146,6 +19231,11 @@ public final class ClusterServiceOuterClass {
         if (!getResources()
             .equals(other.getResources())) return false;
       }
+      if (hasWarehouse() != other.hasWarehouse()) return false;
+      if (hasWarehouse()) {
+        if (!getWarehouse()
+            .equals(other.getWarehouse())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19160,6 +19250,10 @@ public final class ClusterServiceOuterClass {
       if (hasResources()) {
         hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
         hash = (53 * hash) + getResources().hashCode();
+      }
+      if (hasWarehouse()) {
+        hash = (37 * hash) + WAREHOUSE_FIELD_NUMBER;
+        hash = (53 * hash) + getWarehouse().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -19300,6 +19394,12 @@ public final class ClusterServiceOuterClass {
           resources_ = null;
           resourcesBuilder_ = null;
         }
+        if (warehouseBuilder_ == null) {
+          warehouse_ = null;
+        } else {
+          warehouse_ = null;
+          warehouseBuilder_ = null;
+        }
         return this;
       }
 
@@ -19330,6 +19430,11 @@ public final class ClusterServiceOuterClass {
           result.resources_ = resources_;
         } else {
           result.resources_ = resourcesBuilder_.build();
+        }
+        if (warehouseBuilder_ == null) {
+          result.warehouse_ = warehouse_;
+        } else {
+          result.warehouse_ = warehouseBuilder_.build();
         }
         onBuilt();
         return result;
@@ -19381,6 +19486,9 @@ public final class ClusterServiceOuterClass {
         if (other == yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance()) return this;
         if (other.hasResources()) {
           mergeResources(other.getResources());
+        }
+        if (other.hasWarehouse()) {
+          mergeWarehouse(other.getWarehouse());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19565,6 +19673,161 @@ public final class ClusterServiceOuterClass {
         }
         return resourcesBuilder_;
       }
+
+      private yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig warehouse_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder> warehouseBuilder_;
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       * @return Whether the warehouse field is set.
+       */
+      public boolean hasWarehouse() {
+        return warehouseBuilder_ != null || warehouse_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       * @return The warehouse.
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse() {
+        if (warehouseBuilder_ == null) {
+          return warehouse_ == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+        } else {
+          return warehouseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder setWarehouse(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig value) {
+        if (warehouseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          warehouse_ = value;
+          onChanged();
+        } else {
+          warehouseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder setWarehouse(
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder builderForValue) {
+        if (warehouseBuilder_ == null) {
+          warehouse_ = builderForValue.build();
+          onChanged();
+        } else {
+          warehouseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder mergeWarehouse(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig value) {
+        if (warehouseBuilder_ == null) {
+          if (warehouse_ != null) {
+            warehouse_ =
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.newBuilder(warehouse_).mergeFrom(value).buildPartial();
+          } else {
+            warehouse_ = value;
+          }
+          onChanged();
+        } else {
+          warehouseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder clearWarehouse() {
+        if (warehouseBuilder_ == null) {
+          warehouse_ = null;
+          onChanged();
+        } else {
+          warehouse_ = null;
+          warehouseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder getWarehouseBuilder() {
+        
+        onChanged();
+        return getWarehouseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder() {
+        if (warehouseBuilder_ != null) {
+          return warehouseBuilder_.getMessageOrBuilder();
+        } else {
+          return warehouse_ == null ?
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder> 
+          getWarehouseFieldBuilder() {
+        if (warehouseBuilder_ == null) {
+          warehouseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder>(
+                  getWarehouse(),
+                  getParentForChildren(),
+                  isClean());
+          warehouse_ = null;
+        }
+        return warehouseBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19648,6 +19911,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.metastore.v1.Resources resources = 1;</code>
      */
     yandex.cloud.api.metastore.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+     * @return Whether the warehouse field is set.
+     */
+    boolean hasWarehouse();
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+     * @return The warehouse.
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse();
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.metastore.v1.UpdateClusterConfigSpec}
@@ -19703,6 +19993,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(resources_);
                 resources_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder subBuilder = null;
+              if (warehouse_ != null) {
+                subBuilder = warehouse_.toBuilder();
+              }
+              warehouse_ = input.readMessage(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(warehouse_);
+                warehouse_ = subBuilder.buildPartial();
               }
 
               break;
@@ -19777,6 +20080,44 @@ public final class ClusterServiceOuterClass {
       return getResources();
     }
 
+    public static final int WAREHOUSE_FIELD_NUMBER = 2;
+    private yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig warehouse_;
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+     * @return Whether the warehouse field is set.
+     */
+    @java.lang.Override
+    public boolean hasWarehouse() {
+      return warehouse_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+     * @return The warehouse.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse() {
+      return warehouse_ == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+    }
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder() {
+      return getWarehouse();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19794,6 +20135,9 @@ public final class ClusterServiceOuterClass {
       if (resources_ != null) {
         output.writeMessage(1, getResources());
       }
+      if (warehouse_ != null) {
+        output.writeMessage(2, getWarehouse());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19806,6 +20150,10 @@ public final class ClusterServiceOuterClass {
       if (resources_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getResources());
+      }
+      if (warehouse_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getWarehouse());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19827,6 +20175,11 @@ public final class ClusterServiceOuterClass {
         if (!getResources()
             .equals(other.getResources())) return false;
       }
+      if (hasWarehouse() != other.hasWarehouse()) return false;
+      if (hasWarehouse()) {
+        if (!getWarehouse()
+            .equals(other.getWarehouse())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19841,6 +20194,10 @@ public final class ClusterServiceOuterClass {
       if (hasResources()) {
         hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
         hash = (53 * hash) + getResources().hashCode();
+      }
+      if (hasWarehouse()) {
+        hash = (37 * hash) + WAREHOUSE_FIELD_NUMBER;
+        hash = (53 * hash) + getWarehouse().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -19981,6 +20338,12 @@ public final class ClusterServiceOuterClass {
           resources_ = null;
           resourcesBuilder_ = null;
         }
+        if (warehouseBuilder_ == null) {
+          warehouse_ = null;
+        } else {
+          warehouse_ = null;
+          warehouseBuilder_ = null;
+        }
         return this;
       }
 
@@ -20011,6 +20374,11 @@ public final class ClusterServiceOuterClass {
           result.resources_ = resources_;
         } else {
           result.resources_ = resourcesBuilder_.build();
+        }
+        if (warehouseBuilder_ == null) {
+          result.warehouse_ = warehouse_;
+        } else {
+          result.warehouse_ = warehouseBuilder_.build();
         }
         onBuilt();
         return result;
@@ -20062,6 +20430,9 @@ public final class ClusterServiceOuterClass {
         if (other == yandex.cloud.api.metastore.v1.ClusterServiceOuterClass.UpdateClusterConfigSpec.getDefaultInstance()) return this;
         if (other.hasResources()) {
           mergeResources(other.getResources());
+        }
+        if (other.hasWarehouse()) {
+          mergeWarehouse(other.getWarehouse());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20245,6 +20616,161 @@ public final class ClusterServiceOuterClass {
           resources_ = null;
         }
         return resourcesBuilder_;
+      }
+
+      private yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig warehouse_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder> warehouseBuilder_;
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       * @return Whether the warehouse field is set.
+       */
+      public boolean hasWarehouse() {
+        return warehouseBuilder_ != null || warehouse_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       * @return The warehouse.
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse() {
+        if (warehouseBuilder_ == null) {
+          return warehouse_ == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+        } else {
+          return warehouseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       */
+      public Builder setWarehouse(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig value) {
+        if (warehouseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          warehouse_ = value;
+          onChanged();
+        } else {
+          warehouseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       */
+      public Builder setWarehouse(
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder builderForValue) {
+        if (warehouseBuilder_ == null) {
+          warehouse_ = builderForValue.build();
+          onChanged();
+        } else {
+          warehouseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       */
+      public Builder mergeWarehouse(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig value) {
+        if (warehouseBuilder_ == null) {
+          if (warehouse_ != null) {
+            warehouse_ =
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.newBuilder(warehouse_).mergeFrom(value).buildPartial();
+          } else {
+            warehouse_ = value;
+          }
+          onChanged();
+        } else {
+          warehouseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       */
+      public Builder clearWarehouse() {
+        if (warehouseBuilder_ == null) {
+          warehouse_ = null;
+          onChanged();
+        } else {
+          warehouse_ = null;
+          warehouseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder getWarehouseBuilder() {
+        
+        onChanged();
+        return getWarehouseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder() {
+        if (warehouseBuilder_ != null) {
+          return warehouseBuilder_.getMessageOrBuilder();
+        } else {
+          return warehouse_ == null ?
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder> 
+          getWarehouseFieldBuilder() {
+        if (warehouseBuilder_ == null) {
+          warehouseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder>(
+                  getWarehouse(),
+                  getParentForChildren(),
+                  isClean());
+          warehouse_ = null;
+        }
+        return warehouseBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21208,79 +21734,82 @@ public final class ClusterServiceOuterClass {
       "B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
       "100\"o\n\035ListClusterOperationsResponse\0225\n\n" +
       "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
-      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t\"K\n\n" +
-      "ConfigSpec\0227\n\tresources\030\002 \001(\0132$.yandex.c" +
-      "loud.metastore.v1.ResourcesJ\004\010\001\020\002\"R\n\027Upd" +
-      "ateClusterConfigSpec\0227\n\tresources\030\001 \001(\0132" +
-      "$.yandex.cloud.metastore.v1.Resources\"5\n" +
-      "\027UpdateNetworkConfigSpec\022\032\n\022security_gro" +
-      "up_ids\030\001 \003(\t2\345\023\n\016ClusterService\022\214\001\n\003Get\022" +
-      ",.yandex.cloud.metastore.v1.GetClusterRe" +
-      "quest\032\".yandex.cloud.metastore.v1.Cluste" +
-      "r\"3\202\323\344\223\002-\022+/managed-metastore/v1/cluster" +
-      "s/{cluster_id}\022\217\001\n\004List\022..yandex.cloud.m" +
-      "etastore.v1.ListClustersRequest\032/.yandex" +
-      ".cloud.metastore.v1.ListClustersResponse" +
-      "\"&\202\323\344\223\002 \022\036/managed-metastore/v1/clusters" +
-      "\022\253\001\n\006Create\022/.yandex.cloud.metastore.v1." +
-      "CreateClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"M\202\323\344\223\002#\"\036/managed-metast" +
-      "ore/v1/clusters:\001*\262\322* \n\025CreateClusterMet" +
-      "adata\022\007Cluster\022\270\001\n\006Update\022/.yandex.cloud" +
-      ".metastore.v1.UpdateClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"Z\202\323\344\223\00202+/" +
-      "managed-metastore/v1/clusters/{cluster_i" +
-      "d}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluste" +
-      "r\022\303\001\n\006Delete\022/.yandex.cloud.metastore.v1" +
-      ".DeleteClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"e\202\323\344\223\002-*+/managed-metas" +
-      "tore/v1/clusters/{cluster_id}\262\322*.\n\025Delet" +
-      "eClusterMetadata\022\025google.protobuf.Empty\022" +
-      "\270\001\n\005Start\022..yandex.cloud.metastore.v1.St" +
-      "artClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\\\202\323\344\223\0023\"1/managed-metastore" +
-      "/v1/clusters/{cluster_id}:start\262\322*\037\n\024Sta" +
-      "rtClusterMetadata\022\007Cluster\022\264\001\n\004Stop\022-.ya" +
-      "ndex.cloud.metastore.v1.StopClusterReque" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t\"\212\001\n" +
+      "\nConfigSpec\0227\n\tresources\030\002 \001(\0132$.yandex." +
+      "cloud.metastore.v1.Resources\022=\n\twarehous" +
+      "e\030\003 \001(\0132*.yandex.cloud.metastore.v1.Ware" +
+      "houseConfigJ\004\010\001\020\002\"\221\001\n\027UpdateClusterConfi" +
+      "gSpec\0227\n\tresources\030\001 \001(\0132$.yandex.cloud." +
+      "metastore.v1.Resources\022=\n\twarehouse\030\002 \001(" +
+      "\0132*.yandex.cloud.metastore.v1.WarehouseC" +
+      "onfig\"5\n\027UpdateNetworkConfigSpec\022\032\n\022secu" +
+      "rity_group_ids\030\001 \003(\t2\345\023\n\016ClusterService\022" +
+      "\214\001\n\003Get\022,.yandex.cloud.metastore.v1.GetC" +
+      "lusterRequest\032\".yandex.cloud.metastore.v" +
+      "1.Cluster\"3\202\323\344\223\002-\022+/managed-metastore/v1" +
+      "/clusters/{cluster_id}\022\217\001\n\004List\022..yandex" +
+      ".cloud.metastore.v1.ListClustersRequest\032" +
+      "/.yandex.cloud.metastore.v1.ListClusters" +
+      "Response\"&\202\323\344\223\002 \022\036/managed-metastore/v1/" +
+      "clusters\022\253\001\n\006Create\022/.yandex.cloud.metas" +
+      "tore.v1.CreateClusterRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"M\202\323\344\223\002#\"\036/manage" +
+      "d-metastore/v1/clusters:\001*\262\322* \n\025CreateCl" +
+      "usterMetadata\022\007Cluster\022\270\001\n\006Update\022/.yand" +
+      "ex.cloud.metastore.v1.UpdateClusterReque" +
       "st\032!.yandex.cloud.operation.Operation\"Z\202" +
-      "\323\344\223\0022\"0/managed-metastore/v1/clusters/{c" +
-      "luster_id}:stop\262\322*\036\n\023StopClusterMetadata" +
-      "\022\007Cluster\022\275\001\n\nImportData\022,.yandex.cloud." +
-      "metastore.v1.ImportDataRequest\032!.yandex." +
+      "\323\344\223\00202+/managed-metastore/v1/clusters/{c" +
+      "luster_id}:\001*\262\322* \n\025UpdateClusterMetadata" +
+      "\022\007Cluster\022\303\001\n\006Delete\022/.yandex.cloud.meta" +
+      "store.v1.DeleteClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"e\202\323\344\223\002-*+/manag" +
+      "ed-metastore/v1/clusters/{cluster_id}\262\322*" +
+      ".\n\025DeleteClusterMetadata\022\025google.protobu" +
+      "f.Empty\022\270\001\n\005Start\022..yandex.cloud.metasto" +
+      "re.v1.StartClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\\\202\323\344\223\0023\"1/managed-m" +
+      "etastore/v1/clusters/{cluster_id}:start\262" +
+      "\322*\037\n\024StartClusterMetadata\022\007Cluster\022\264\001\n\004S" +
+      "top\022-.yandex.cloud.metastore.v1.StopClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"Z\202\323\344\223\0022\"0/managed-metastore/v1/clu" +
+      "sters/{cluster_id}:stop\262\322*\036\n\023StopCluster" +
+      "Metadata\022\007Cluster\022\275\001\n\nImportData\022,.yande" +
+      "x.cloud.metastore.v1.ImportDataRequest\032!" +
+      ".yandex.cloud.operation.Operation\"^\202\323\344\223\002" +
+      "7\"2/managed-metastore/v1/clusters/{clust" +
+      "er_id}:import:\001*\262\322*\035\n\022ImportDataMetadata" +
+      "\022\007Cluster\022\275\001\n\nExportData\022,.yandex.cloud." +
+      "metastore.v1.ExportDataRequest\032!.yandex." +
       "cloud.operation.Operation\"^\202\323\344\223\0027\"2/mana" +
-      "ged-metastore/v1/clusters/{cluster_id}:i" +
-      "mport:\001*\262\322*\035\n\022ImportDataMetadata\022\007Cluste" +
-      "r\022\275\001\n\nExportData\022,.yandex.cloud.metastor" +
-      "e.v1.ExportDataRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"^\202\323\344\223\0027\"2/managed-meta" +
-      "store/v1/clusters/{cluster_id}:export:\001*" +
-      "\262\322*\035\n\022ExportDataMetadata\022\007Cluster\022\303\001\n\016Li" +
-      "stOperations\0227.yandex.cloud.metastore.v1" +
-      ".ListClusterOperationsRequest\0328.yandex.c" +
-      "loud.metastore.v1.ListClusterOperationsR" +
-      "esponse\">\202\323\344\223\0028\0226/managed-metastore/v1/c" +
-      "lusters/{cluster_id}/operations\022\276\001\n\022List" +
-      "AccessBindings\022..yandex.cloud.access.Lis" +
-      "tAccessBindingsRequest\032/.yandex.cloud.ac" +
-      "cess.ListAccessBindingsResponse\"G\202\323\344\223\002A\022" +
-      "?/managed-metastore/v1/clusters/{resourc" +
-      "e_id}:listAccessBindings\022\375\001\n\021SetAccessBi" +
-      "ndings\022-.yandex.cloud.access.SetAccessBi" +
-      "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\225\001\202\323\344\223\002C\">/managed-metastore/v1" +
-      "/clusters/{resource_id}:setAccessBinding" +
-      "s:\001*\262\322*H\n access.SetAccessBindingsMetada" +
-      "ta\022$access.AccessBindingsOperationResult" +
-      "\022\211\002\n\024UpdateAccessBindings\0220.yandex.cloud" +
-      ".access.UpdateAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\233\001\202\323\344\223\002F2" +
-      "A/managed-metastore/v1/clusters/{resourc" +
-      "e_id}:updateAccessBindings:\001*\262\322*K\n#acces" +
-      "s.UpdateAccessBindingsMetadata\022$access.A" +
-      "ccessBindingsOperationResultBh\n\035yandex.c" +
-      "loud.api.metastore.v1ZGgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/metastor" +
-      "e/v1;metastoreb\006proto3"
+      "ged-metastore/v1/clusters/{cluster_id}:e" +
+      "xport:\001*\262\322*\035\n\022ExportDataMetadata\022\007Cluste" +
+      "r\022\303\001\n\016ListOperations\0227.yandex.cloud.meta" +
+      "store.v1.ListClusterOperationsRequest\0328." +
+      "yandex.cloud.metastore.v1.ListClusterOpe" +
+      "rationsResponse\">\202\323\344\223\0028\0226/managed-metast" +
+      "ore/v1/clusters/{cluster_id}/operations\022" +
+      "\276\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
+      "cess.ListAccessBindingsRequest\032/.yandex." +
+      "cloud.access.ListAccessBindingsResponse\"" +
+      "G\202\323\344\223\002A\022?/managed-metastore/v1/clusters/" +
+      "{resource_id}:listAccessBindings\022\375\001\n\021Set" +
+      "AccessBindings\022-.yandex.cloud.access.Set" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\225\001\202\323\344\223\002C\">/managed-meta" +
+      "store/v1/clusters/{resource_id}:setAcces" +
+      "sBindings:\001*\262\322*H\n access.SetAccessBindin" +
+      "gsMetadata\022$access.AccessBindingsOperati" +
+      "onResult\022\211\002\n\024UpdateAccessBindings\0220.yand" +
+      "ex.cloud.access.UpdateAccessBindingsRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\233" +
+      "\001\202\323\344\223\002F2A/managed-metastore/v1/clusters/" +
+      "{resource_id}:updateAccessBindings:\001*\262\322*" +
+      "K\n#access.UpdateAccessBindingsMetadata\022$" +
+      "access.AccessBindingsOperationResultBh\n\035" +
+      "yandex.cloud.api.metastore.v1ZGgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "metastore/v1;metastoreb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21425,13 +21954,13 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_metastore_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Resources", });
+        new java.lang.String[] { "Resources", "Warehouse", });
     internal_static_yandex_cloud_metastore_v1_UpdateClusterConfigSpec_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_metastore_v1_UpdateClusterConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_UpdateClusterConfigSpec_descriptor,
-        new java.lang.String[] { "Resources", });
+        new java.lang.String[] { "Resources", "Warehouse", });
     internal_static_yandex_cloud_metastore_v1_UpdateNetworkConfigSpec_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_metastore_v1_UpdateNetworkConfigSpec_fieldAccessorTable = new

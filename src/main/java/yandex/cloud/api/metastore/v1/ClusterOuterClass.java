@@ -21,7 +21,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Unique ID of the Metastore Cluster.
-     * This ID is assigned by Cloud in the process of creating a Trino cluster.
+     * This ID is assigned by Cloud in the process of creating a Metastore cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -31,7 +31,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Unique ID of the Metastore Cluster.
-     * This ID is assigned by Cloud in the process of creating a Trino cluster.
+     * This ID is assigned by Cloud in the process of creating a Metastore cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1152,7 +1152,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Unique ID of the Metastore Cluster.
-     * This ID is assigned by Cloud in the process of creating a Trino cluster.
+     * This ID is assigned by Cloud in the process of creating a Metastore cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1174,7 +1174,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Unique ID of the Metastore Cluster.
-     * This ID is assigned by Cloud in the process of creating a Trino cluster.
+     * This ID is assigned by Cloud in the process of creating a Metastore cluster.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -2738,7 +2738,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Unique ID of the Metastore Cluster.
-       * This ID is assigned by Cloud in the process of creating a Trino cluster.
+       * This ID is assigned by Cloud in the process of creating a Metastore cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2759,7 +2759,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Unique ID of the Metastore Cluster.
-       * This ID is assigned by Cloud in the process of creating a Trino cluster.
+       * This ID is assigned by Cloud in the process of creating a Metastore cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2781,7 +2781,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Unique ID of the Metastore Cluster.
-       * This ID is assigned by Cloud in the process of creating a Trino cluster.
+       * This ID is assigned by Cloud in the process of creating a Metastore cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2801,7 +2801,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Unique ID of the Metastore Cluster.
-       * This ID is assigned by Cloud in the process of creating a Trino cluster.
+       * This ID is assigned by Cloud in the process of creating a Metastore cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2816,7 +2816,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Unique ID of the Metastore Cluster.
-       * This ID is assigned by Cloud in the process of creating a Trino cluster.
+       * This ID is assigned by Cloud in the process of creating a Metastore cluster.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -6162,6 +6162,33 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.metastore.v1.Resources resources = 2;</code>
      */
     yandex.cloud.api.metastore.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return Whether the warehouse field is set.
+     */
+    boolean hasWarehouse();
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return The warehouse.
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse();
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.metastore.v1.ClusterConfig}
@@ -6217,6 +6244,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(resources_);
                 resources_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder subBuilder = null;
+              if (warehouse_ != null) {
+                subBuilder = warehouse_.toBuilder();
+              }
+              warehouse_ = input.readMessage(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(warehouse_);
+                warehouse_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6291,6 +6331,44 @@ public final class ClusterOuterClass {
       return getResources();
     }
 
+    public static final int WAREHOUSE_FIELD_NUMBER = 3;
+    private yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig warehouse_;
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return Whether the warehouse field is set.
+     */
+    @java.lang.Override
+    public boolean hasWarehouse() {
+      return warehouse_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     * @return The warehouse.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse() {
+      return warehouse_ == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+    }
+    /**
+     * <pre>
+     * Configuration of warehouse.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder() {
+      return getWarehouse();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6308,6 +6386,9 @@ public final class ClusterOuterClass {
       if (resources_ != null) {
         output.writeMessage(2, getResources());
       }
+      if (warehouse_ != null) {
+        output.writeMessage(3, getWarehouse());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6320,6 +6401,10 @@ public final class ClusterOuterClass {
       if (resources_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResources());
+      }
+      if (warehouse_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getWarehouse());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6341,6 +6426,11 @@ public final class ClusterOuterClass {
         if (!getResources()
             .equals(other.getResources())) return false;
       }
+      if (hasWarehouse() != other.hasWarehouse()) return false;
+      if (hasWarehouse()) {
+        if (!getWarehouse()
+            .equals(other.getWarehouse())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6355,6 +6445,10 @@ public final class ClusterOuterClass {
       if (hasResources()) {
         hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
         hash = (53 * hash) + getResources().hashCode();
+      }
+      if (hasWarehouse()) {
+        hash = (37 * hash) + WAREHOUSE_FIELD_NUMBER;
+        hash = (53 * hash) + getWarehouse().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6495,6 +6589,12 @@ public final class ClusterOuterClass {
           resources_ = null;
           resourcesBuilder_ = null;
         }
+        if (warehouseBuilder_ == null) {
+          warehouse_ = null;
+        } else {
+          warehouse_ = null;
+          warehouseBuilder_ = null;
+        }
         return this;
       }
 
@@ -6525,6 +6625,11 @@ public final class ClusterOuterClass {
           result.resources_ = resources_;
         } else {
           result.resources_ = resourcesBuilder_.build();
+        }
+        if (warehouseBuilder_ == null) {
+          result.warehouse_ = warehouse_;
+        } else {
+          result.warehouse_ = warehouseBuilder_.build();
         }
         onBuilt();
         return result;
@@ -6576,6 +6681,9 @@ public final class ClusterOuterClass {
         if (other == yandex.cloud.api.metastore.v1.ClusterOuterClass.ClusterConfig.getDefaultInstance()) return this;
         if (other.hasResources()) {
           mergeResources(other.getResources());
+        }
+        if (other.hasWarehouse()) {
+          mergeWarehouse(other.getWarehouse());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6759,6 +6867,161 @@ public final class ClusterOuterClass {
           resources_ = null;
         }
         return resourcesBuilder_;
+      }
+
+      private yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig warehouse_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder> warehouseBuilder_;
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       * @return Whether the warehouse field is set.
+       */
+      public boolean hasWarehouse() {
+        return warehouseBuilder_ != null || warehouse_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       * @return The warehouse.
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getWarehouse() {
+        if (warehouseBuilder_ == null) {
+          return warehouse_ == null ? yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+        } else {
+          return warehouseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder setWarehouse(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig value) {
+        if (warehouseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          warehouse_ = value;
+          onChanged();
+        } else {
+          warehouseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder setWarehouse(
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder builderForValue) {
+        if (warehouseBuilder_ == null) {
+          warehouse_ = builderForValue.build();
+          onChanged();
+        } else {
+          warehouseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder mergeWarehouse(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig value) {
+        if (warehouseBuilder_ == null) {
+          if (warehouse_ != null) {
+            warehouse_ =
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.newBuilder(warehouse_).mergeFrom(value).buildPartial();
+          } else {
+            warehouse_ = value;
+          }
+          onChanged();
+        } else {
+          warehouseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public Builder clearWarehouse() {
+        if (warehouseBuilder_ == null) {
+          warehouse_ = null;
+          onChanged();
+        } else {
+          warehouse_ = null;
+          warehouseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder getWarehouseBuilder() {
+        
+        onChanged();
+        return getWarehouseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder getWarehouseOrBuilder() {
+        if (warehouseBuilder_ != null) {
+          return warehouseBuilder_.getMessageOrBuilder();
+        } else {
+          return warehouse_ == null ?
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance() : warehouse_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of warehouse.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig warehouse = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder> 
+          getWarehouseFieldBuilder() {
+        if (warehouseBuilder_ == null) {
+          warehouseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder>(
+                  getWarehouse(),
+                  getParentForChildren(),
+                  isClean());
+          warehouse_ = null;
+        }
+        return warehouseBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9630,6 +9893,1574 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface WarehouseConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.metastore.v1.WarehouseConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Yandex Cloud Object Storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+     * @return Whether the s3 field is set.
+     */
+    boolean hasS3();
+    /**
+     * <pre>
+     * Yandex Cloud Object Storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+     * @return The s3.
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse getS3();
+    /**
+     * <pre>
+     * Yandex Cloud Object Storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+     */
+    yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3WarehouseOrBuilder getS3OrBuilder();
+
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.WarehouseCase getWarehouseCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.metastore.v1.WarehouseConfig}
+   */
+  public static final class WarehouseConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.metastore.v1.WarehouseConfig)
+      WarehouseConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WarehouseConfig.newBuilder() to construct.
+    private WarehouseConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WarehouseConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WarehouseConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WarehouseConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder subBuilder = null;
+              if (warehouseCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_).toBuilder();
+              }
+              warehouse_ =
+                  input.readMessage(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_);
+                warehouse_ = subBuilder.buildPartial();
+              }
+              warehouseCase_ = 1;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.class, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder.class);
+    }
+
+    public interface S3WarehouseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Bucket name to use.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bucket.
+       */
+      java.lang.String getBucket();
+      /**
+       * <pre>
+       * Bucket name to use.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for bucket.
+       */
+      com.google.protobuf.ByteString
+          getBucketBytes();
+
+      /**
+       * <pre>
+       * Path within the bucket to use.
+       * </pre>
+       *
+       * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+       * @return The path.
+       */
+      java.lang.String getPath();
+      /**
+       * <pre>
+       * Path within the bucket to use.
+       * </pre>
+       *
+       * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+       * @return The bytes for path.
+       */
+      com.google.protobuf.ByteString
+          getPathBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse}
+     */
+    public static final class S3Warehouse extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse)
+        S3WarehouseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use S3Warehouse.newBuilder() to construct.
+      private S3Warehouse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private S3Warehouse() {
+        bucket_ = "";
+        path_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new S3Warehouse();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private S3Warehouse(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                bucket_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                path_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.class, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder.class);
+      }
+
+      public static final int BUCKET_FIELD_NUMBER = 1;
+      private volatile java.lang.Object bucket_;
+      /**
+       * <pre>
+       * Bucket name to use.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bucket.
+       */
+      @java.lang.Override
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Bucket name to use.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for bucket.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PATH_FIELD_NUMBER = 2;
+      private volatile java.lang.Object path_;
+      /**
+       * <pre>
+       * Path within the bucket to use.
+       * </pre>
+       *
+       * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+       * @return The path.
+       */
+      @java.lang.Override
+      public java.lang.String getPath() {
+        java.lang.Object ref = path_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          path_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Path within the bucket to use.
+       * </pre>
+       *
+       * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+       * @return The bytes for path.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, path_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, path_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse other = (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) obj;
+
+        if (!getBucket()
+            .equals(other.getBucket())) return false;
+        if (!getPath()
+            .equals(other.getPath())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+        hash = (53 * hash) + getBucket().hashCode();
+        hash = (37 * hash) + PATH_FIELD_NUMBER;
+        hash = (53 * hash) + getPath().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse)
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3WarehouseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.class, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bucket_ = "";
+
+          path_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse getDefaultInstanceForType() {
+          return yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse build() {
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse buildPartial() {
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse result = new yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse(this);
+          result.bucket_ = bucket_;
+          result.path_ = path_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) {
+            return mergeFrom((yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse other) {
+          if (other == yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance()) return this;
+          if (!other.getBucket().isEmpty()) {
+            bucket_ = other.bucket_;
+            onChanged();
+          }
+          if (!other.getPath().isEmpty()) {
+            path_ = other.path_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object bucket_ = "";
+        /**
+         * <pre>
+         * Bucket name to use.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bucket.
+         */
+        public java.lang.String getBucket() {
+          java.lang.Object ref = bucket_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            bucket_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Bucket name to use.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for bucket.
+         */
+        public com.google.protobuf.ByteString
+            getBucketBytes() {
+          java.lang.Object ref = bucket_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            bucket_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Bucket name to use.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bucket to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBucket(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          bucket_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Bucket name to use.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBucket() {
+          
+          bucket_ = getDefaultInstance().getBucket();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Bucket name to use.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for bucket to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBucketBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          bucket_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object path_ = "";
+        /**
+         * <pre>
+         * Path within the bucket to use.
+         * </pre>
+         *
+         * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+         * @return The path.
+         */
+        public java.lang.String getPath() {
+          java.lang.Object ref = path_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            path_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Path within the bucket to use.
+         * </pre>
+         *
+         * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+         * @return The bytes for path.
+         */
+        public com.google.protobuf.ByteString
+            getPathBytes() {
+          java.lang.Object ref = path_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            path_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Path within the bucket to use.
+         * </pre>
+         *
+         * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+         * @param value The path to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPath(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          path_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Path within the bucket to use.
+         * </pre>
+         *
+         * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPath() {
+          
+          path_ = getDefaultInstance().getPath();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Path within the bucket to use.
+         * </pre>
+         *
+         * <code>string path = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9/][-a-zA-Z0-9_./]{0,512})?"];</code>
+         * @param value The bytes for path to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPathBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          path_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse)
+      private static final yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse();
+      }
+
+      public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<S3Warehouse>
+          PARSER = new com.google.protobuf.AbstractParser<S3Warehouse>() {
+        @java.lang.Override
+        public S3Warehouse parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new S3Warehouse(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<S3Warehouse> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<S3Warehouse> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int warehouseCase_ = 0;
+    private java.lang.Object warehouse_;
+    public enum WarehouseCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      S3(1),
+      WAREHOUSE_NOT_SET(0);
+      private final int value;
+      private WarehouseCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static WarehouseCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static WarehouseCase forNumber(int value) {
+        switch (value) {
+          case 1: return S3;
+          case 0: return WAREHOUSE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public WarehouseCase
+    getWarehouseCase() {
+      return WarehouseCase.forNumber(
+          warehouseCase_);
+    }
+
+    public static final int S3_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Yandex Cloud Object Storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+     * @return Whether the s3 field is set.
+     */
+    @java.lang.Override
+    public boolean hasS3() {
+      return warehouseCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Yandex Cloud Object Storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+     * @return The s3.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse getS3() {
+      if (warehouseCase_ == 1) {
+         return (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_;
+      }
+      return yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Yandex Cloud Object Storage.
+     * </pre>
+     *
+     * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3WarehouseOrBuilder getS3OrBuilder() {
+      if (warehouseCase_ == 1) {
+         return (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_;
+      }
+      return yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (warehouseCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (warehouseCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig other = (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig) obj;
+
+      if (!getWarehouseCase().equals(other.getWarehouseCase())) return false;
+      switch (warehouseCase_) {
+        case 1:
+          if (!getS3()
+              .equals(other.getS3())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (warehouseCase_) {
+        case 1:
+          hash = (37 * hash) + S3_FIELD_NUMBER;
+          hash = (53 * hash) + getS3().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.metastore.v1.WarehouseConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.metastore.v1.WarehouseConfig)
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.class, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        warehouseCase_ = 0;
+        warehouse_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.internal_static_yandex_cloud_metastore_v1_WarehouseConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig build() {
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig buildPartial() {
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig result = new yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig(this);
+        if (warehouseCase_ == 1) {
+          if (s3Builder_ == null) {
+            result.warehouse_ = warehouse_;
+          } else {
+            result.warehouse_ = s3Builder_.build();
+          }
+        }
+        result.warehouseCase_ = warehouseCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig) {
+          return mergeFrom((yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig other) {
+        if (other == yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.getDefaultInstance()) return this;
+        switch (other.getWarehouseCase()) {
+          case S3: {
+            mergeS3(other.getS3());
+            break;
+          }
+          case WAREHOUSE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int warehouseCase_ = 0;
+      private java.lang.Object warehouse_;
+      public WarehouseCase
+          getWarehouseCase() {
+        return WarehouseCase.forNumber(
+            warehouseCase_);
+      }
+
+      public Builder clearWarehouse() {
+        warehouseCase_ = 0;
+        warehouse_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3WarehouseOrBuilder> s3Builder_;
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       * @return Whether the s3 field is set.
+       */
+      @java.lang.Override
+      public boolean hasS3() {
+        return warehouseCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       * @return The s3.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse getS3() {
+        if (s3Builder_ == null) {
+          if (warehouseCase_ == 1) {
+            return (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_;
+          }
+          return yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance();
+        } else {
+          if (warehouseCase_ == 1) {
+            return s3Builder_.getMessage();
+          }
+          return yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       */
+      public Builder setS3(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse value) {
+        if (s3Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          warehouse_ = value;
+          onChanged();
+        } else {
+          s3Builder_.setMessage(value);
+        }
+        warehouseCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       */
+      public Builder setS3(
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder builderForValue) {
+        if (s3Builder_ == null) {
+          warehouse_ = builderForValue.build();
+          onChanged();
+        } else {
+          s3Builder_.setMessage(builderForValue.build());
+        }
+        warehouseCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       */
+      public Builder mergeS3(yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse value) {
+        if (s3Builder_ == null) {
+          if (warehouseCase_ == 1 &&
+              warehouse_ != yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance()) {
+            warehouse_ = yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.newBuilder((yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            warehouse_ = value;
+          }
+          onChanged();
+        } else {
+          if (warehouseCase_ == 1) {
+            s3Builder_.mergeFrom(value);
+          }
+          s3Builder_.setMessage(value);
+        }
+        warehouseCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       */
+      public Builder clearS3() {
+        if (s3Builder_ == null) {
+          if (warehouseCase_ == 1) {
+            warehouseCase_ = 0;
+            warehouse_ = null;
+            onChanged();
+          }
+        } else {
+          if (warehouseCase_ == 1) {
+            warehouseCase_ = 0;
+            warehouse_ = null;
+          }
+          s3Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       */
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder getS3Builder() {
+        return getS3FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3WarehouseOrBuilder getS3OrBuilder() {
+        if ((warehouseCase_ == 1) && (s3Builder_ != null)) {
+          return s3Builder_.getMessageOrBuilder();
+        } else {
+          if (warehouseCase_ == 1) {
+            return (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_;
+          }
+          return yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Yandex Cloud Object Storage.
+       * </pre>
+       *
+       * <code>.yandex.cloud.metastore.v1.WarehouseConfig.S3Warehouse s3 = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3WarehouseOrBuilder> 
+          getS3FieldBuilder() {
+        if (s3Builder_ == null) {
+          if (!(warehouseCase_ == 1)) {
+            warehouse_ = yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.getDefaultInstance();
+          }
+          s3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse.Builder, yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3WarehouseOrBuilder>(
+                  (yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig.S3Warehouse) warehouse_,
+                  getParentForChildren(),
+                  isClean());
+          warehouse_ = null;
+        }
+        warehouseCase_ = 1;
+        onChanged();;
+        return s3Builder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.metastore.v1.WarehouseConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.metastore.v1.WarehouseConfig)
+    private static final yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig();
+    }
+
+    public static yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WarehouseConfig>
+        PARSER = new com.google.protobuf.AbstractParser<WarehouseConfig>() {
+      @java.lang.Override
+      public WarehouseConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WarehouseConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WarehouseConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WarehouseConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.metastore.v1.ClusterOuterClass.WarehouseConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_metastore_v1_Cluster_descriptor;
   private static final 
@@ -9665,6 +11496,16 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_metastore_v1_LoggingConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_metastore_v1_WarehouseConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_metastore_v1_WarehouseConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9707,21 +11548,27 @@ public final class ClusterOuterClass {
       "G\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING" +
       "\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007J\004\010\n\020\020\"=\n\nM" +
       "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
-      " \001(\t\022\014\n\004link\030\003 \001(\t\"N\n\rClusterConfig\0227\n\tr" +
-      "esources\030\002 \001(\0132$.yandex.cloud.metastore." +
-      "v1.ResourcesJ\004\010\001\020\002\"?\n\rNetworkConfig\022\022\n\ns" +
-      "ubnet_ids\030\001 \003(\t\022\032\n\022security_group_ids\030\002 " +
-      "\003(\t\"5\n\tResources\022(\n\022resource_preset_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\342\001\n\rLoggingConfig\022\017\n\007" +
-      "enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([" +
-      "a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014log_g" +
-      "roup_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_" +
-      ".]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex" +
-      ".cloud.logging.v1.LogLevel.LevelB\r\n\013dest" +
-      "inationBh\n\035yandex.cloud.api.metastore.v1" +
-      "ZGgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/metastore/v1;metastoreb\006proto" +
-      "3"
+      " \001(\t\022\014\n\004link\030\003 \001(\t\"\215\001\n\rClusterConfig\0227\n\t" +
+      "resources\030\002 \001(\0132$.yandex.cloud.metastore" +
+      ".v1.Resources\022=\n\twarehouse\030\003 \001(\0132*.yande" +
+      "x.cloud.metastore.v1.WarehouseConfigJ\004\010\001" +
+      "\020\002\"?\n\rNetworkConfig\022\022\n\nsubnet_ids\030\001 \003(\t\022" +
+      "\032\n\022security_group_ids\030\002 \003(\t\"5\n\tResources" +
+      "\022(\n\022resource_preset_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"\342\001\n\rLoggingConfig\022\017\n\007enabled\030\001 \001(\010\0228\n" +
+      "\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0" +
+      "-9_.]{0,63})?H\000\022;\n\014log_group_id\030\003 \001(\tB#\362" +
+      "\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\t" +
+      "min_level\030\004 \001(\0162\'.yandex.cloud.logging.v" +
+      "1.LogLevel.LevelB\r\n\013destination\"\310\001\n\017Ware" +
+      "houseConfig\022D\n\002s3\030\001 \001(\01326.yandex.cloud.m" +
+      "etastore.v1.WarehouseConfig.S3WarehouseH" +
+      "\000\032\\\n\013S3Warehouse\022\024\n\006bucket\030\001 \001(\tB\004\350\3071\001\0227" +
+      "\n\004path\030\002 \001(\tB)\362\3071%([a-zA-Z0-9/][-a-zA-Z0" +
+      "-9_./]{0,512})?B\021\n\twarehouse\022\004\300\3011\001Bh\n\035ya" +
+      "ndex.cloud.api.metastore.v1ZGgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/me" +
+      "tastore/v1;metastoreb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9754,7 +11601,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_metastore_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Resources", });
+        new java.lang.String[] { "Resources", "Warehouse", });
     internal_static_yandex_cloud_metastore_v1_NetworkConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_metastore_v1_NetworkConfig_fieldAccessorTable = new
@@ -9773,8 +11620,21 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_metastore_v1_LoggingConfig_descriptor,
         new java.lang.String[] { "Enabled", "FolderId", "LogGroupId", "MinLevel", "Destination", });
+    internal_static_yandex_cloud_metastore_v1_WarehouseConfig_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_metastore_v1_WarehouseConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_metastore_v1_WarehouseConfig_descriptor,
+        new java.lang.String[] { "S3", "Warehouse", });
+    internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_descriptor =
+      internal_static_yandex_cloud_metastore_v1_WarehouseConfig_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_metastore_v1_WarehouseConfig_S3Warehouse_descriptor,
+        new java.lang.String[] { "Bucket", "Path", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);

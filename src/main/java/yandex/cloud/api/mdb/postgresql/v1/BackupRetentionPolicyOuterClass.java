@@ -19,11 +19,21 @@ public final class BackupRetentionPolicyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_month = 3;</code>
      * @return The dayOfMonth.
      */
     java.lang.String getDayOfMonth();
     /**
+     * <pre>
+     * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_month = 3;</code>
      * @return The bytes for dayOfMonth.
      */
@@ -31,11 +41,21 @@ public final class BackupRetentionPolicyOuterClass {
         getDayOfMonthBytes();
 
     /**
+     * <pre>
+     * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string month = 4;</code>
      * @return The month.
      */
     java.lang.String getMonth();
     /**
+     * <pre>
+     * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string month = 4;</code>
      * @return The bytes for month.
      */
@@ -43,11 +63,21 @@ public final class BackupRetentionPolicyOuterClass {
         getMonthBytes();
 
     /**
+     * <pre>
+     * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_week = 5;</code>
      * @return The dayOfWeek.
      */
     java.lang.String getDayOfWeek();
     /**
+     * <pre>
+     * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_week = 5;</code>
      * @return The bytes for dayOfWeek.
      */
@@ -159,6 +189,11 @@ public final class BackupRetentionPolicyOuterClass {
     public static final int DAY_OF_MONTH_FIELD_NUMBER = 3;
     private volatile java.lang.Object dayOfMonth_;
     /**
+     * <pre>
+     * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_month = 3;</code>
      * @return The dayOfMonth.
      */
@@ -176,6 +211,11 @@ public final class BackupRetentionPolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_month = 3;</code>
      * @return The bytes for dayOfMonth.
      */
@@ -197,6 +237,11 @@ public final class BackupRetentionPolicyOuterClass {
     public static final int MONTH_FIELD_NUMBER = 4;
     private volatile java.lang.Object month_;
     /**
+     * <pre>
+     * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string month = 4;</code>
      * @return The month.
      */
@@ -214,6 +259,11 @@ public final class BackupRetentionPolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string month = 4;</code>
      * @return The bytes for month.
      */
@@ -235,6 +285,11 @@ public final class BackupRetentionPolicyOuterClass {
     public static final int DAY_OF_WEEK_FIELD_NUMBER = 5;
     private volatile java.lang.Object dayOfWeek_;
     /**
+     * <pre>
+     * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_week = 5;</code>
      * @return The dayOfWeek.
      */
@@ -252,6 +307,11 @@ public final class BackupRetentionPolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+     * Defaults to "*".
+     * </pre>
+     *
      * <code>string day_of_week = 5;</code>
      * @return The bytes for dayOfWeek.
      */
@@ -612,6 +672,11 @@ public final class BackupRetentionPolicyOuterClass {
 
       private java.lang.Object dayOfMonth_ = "";
       /**
+       * <pre>
+       * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_month = 3;</code>
        * @return The dayOfMonth.
        */
@@ -628,6 +693,11 @@ public final class BackupRetentionPolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_month = 3;</code>
        * @return The bytes for dayOfMonth.
        */
@@ -645,6 +715,11 @@ public final class BackupRetentionPolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_month = 3;</code>
        * @param value The dayOfMonth to set.
        * @return This builder for chaining.
@@ -660,6 +735,11 @@ public final class BackupRetentionPolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_month = 3;</code>
        * @return This builder for chaining.
        */
@@ -670,6 +750,11 @@ public final class BackupRetentionPolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Day of month in cron format. Valid values: 1-31, *, ranges (1-15), steps (*&#47;2, 1-15/3), lists (1,15,28).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_month = 3;</code>
        * @param value The bytes for dayOfMonth to set.
        * @return This builder for chaining.
@@ -688,6 +773,11 @@ public final class BackupRetentionPolicyOuterClass {
 
       private java.lang.Object month_ = "";
       /**
+       * <pre>
+       * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string month = 4;</code>
        * @return The month.
        */
@@ -704,6 +794,11 @@ public final class BackupRetentionPolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string month = 4;</code>
        * @return The bytes for month.
        */
@@ -721,6 +816,11 @@ public final class BackupRetentionPolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string month = 4;</code>
        * @param value The month to set.
        * @return This builder for chaining.
@@ -736,6 +836,11 @@ public final class BackupRetentionPolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string month = 4;</code>
        * @return This builder for chaining.
        */
@@ -746,6 +851,11 @@ public final class BackupRetentionPolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Month in cron format. Valid values: 1-12, *, ranges (1-6), steps (*&#47;3), lists (1,6,12).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string month = 4;</code>
        * @param value The bytes for month to set.
        * @return This builder for chaining.
@@ -764,6 +874,11 @@ public final class BackupRetentionPolicyOuterClass {
 
       private java.lang.Object dayOfWeek_ = "";
       /**
+       * <pre>
+       * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_week = 5;</code>
        * @return The dayOfWeek.
        */
@@ -780,6 +895,11 @@ public final class BackupRetentionPolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_week = 5;</code>
        * @return The bytes for dayOfWeek.
        */
@@ -797,6 +917,11 @@ public final class BackupRetentionPolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_week = 5;</code>
        * @param value The dayOfWeek to set.
        * @return This builder for chaining.
@@ -812,6 +937,11 @@ public final class BackupRetentionPolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_week = 5;</code>
        * @return This builder for chaining.
        */
@@ -822,6 +952,11 @@ public final class BackupRetentionPolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Day of week in cron format. Valid values: 0-7 (0 and 7 both mean Sunday), *, ranges (1-5), steps (0-6/2), lists (1,3,5).
+       * Defaults to "*".
+       * </pre>
+       *
        * <code>string day_of_week = 5;</code>
        * @param value The bytes for dayOfWeek to set.
        * @return This builder for chaining.

@@ -14350,6 +14350,4478 @@ public final class TrunkConnectionServiceOuterClass {
 
   }
 
+  public interface ListTrunkConnectionPrivateConnectionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The trunkConnectionId.
+     */
+    java.lang.String getTrunkConnectionId();
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListTrunkConnectionPrivateConnectionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsRequest}
+   */
+  public static final class ListTrunkConnectionPrivateConnectionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsRequest)
+      ListTrunkConnectionPrivateConnectionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTrunkConnectionPrivateConnectionsRequest.newBuilder() to construct.
+    private ListTrunkConnectionPrivateConnectionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTrunkConnectionPrivateConnectionsRequest() {
+      trunkConnectionId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTrunkConnectionPrivateConnectionsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTrunkConnectionPrivateConnectionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trunkConnectionId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.Builder.class);
+    }
+
+    public static final int TRUNK_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object trunkConnectionId_;
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The trunkConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTrunkConnectionId() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trunkConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trunkConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListTrunkConnectionPrivateConnectionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, trunkConnectionId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, trunkConnectionId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest other = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest) obj;
+
+      if (!getTrunkConnectionId()
+          .equals(other.getTrunkConnectionId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRUNK_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTrunkConnectionId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsRequest)
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        trunkConnectionId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest build() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest buildPartial() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest result = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest(this);
+        result.trunkConnectionId_ = trunkConnectionId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest other) {
+        if (other == yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.getDefaultInstance()) return this;
+        if (!other.getTrunkConnectionId().isEmpty()) {
+          trunkConnectionId_ = other.trunkConnectionId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object trunkConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The trunkConnectionId.
+       */
+      public java.lang.String getTrunkConnectionId() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trunkConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for trunkConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getTrunkConnectionIdBytes() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trunkConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrunkConnectionId() {
+        
+        trunkConnectionId_ = getDefaultInstance().getTrunkConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListTrunkConnectionPrivateConnectionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListTrunkConnectionPrivateConnectionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListTrunkConnectionPrivateConnectionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPrivateConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsRequest)
+    private static final yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTrunkConnectionPrivateConnectionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListTrunkConnectionPrivateConnectionsRequest>() {
+      @java.lang.Override
+      public ListTrunkConnectionPrivateConnectionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTrunkConnectionPrivateConnectionsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTrunkConnectionPrivateConnectionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTrunkConnectionPrivateConnectionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTrunkConnectionPrivateConnectionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection> 
+        getPrivateConnectionsList();
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection getPrivateConnections(int index);
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    int getPrivateConnectionsCount();
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder> 
+        getPrivateConnectionsOrBuilderList();
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder getPrivateConnectionsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsResponse}
+   */
+  public static final class ListTrunkConnectionPrivateConnectionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsResponse)
+      ListTrunkConnectionPrivateConnectionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTrunkConnectionPrivateConnectionsResponse.newBuilder() to construct.
+    private ListTrunkConnectionPrivateConnectionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTrunkConnectionPrivateConnectionsResponse() {
+      privateConnections_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTrunkConnectionPrivateConnectionsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTrunkConnectionPrivateConnectionsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                privateConnections_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              privateConnections_.add(
+                  input.readMessage(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          privateConnections_ = java.util.Collections.unmodifiableList(privateConnections_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection> privateConnections_;
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection> getPrivateConnectionsList() {
+      return privateConnections_;
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder> 
+        getPrivateConnectionsOrBuilderList() {
+      return privateConnections_;
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    @java.lang.Override
+    public int getPrivateConnectionsCount() {
+      return privateConnections_.size();
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection getPrivateConnections(int index) {
+      return privateConnections_.get(index);
+    }
+    /**
+     * <pre>
+     * List of PrivateConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder getPrivateConnectionsOrBuilder(
+        int index) {
+      return privateConnections_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < privateConnections_.size(); i++) {
+        output.writeMessage(1, privateConnections_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < privateConnections_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, privateConnections_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse other = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse) obj;
+
+      if (!getPrivateConnectionsList()
+          .equals(other.getPrivateConnectionsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPrivateConnectionsCount() > 0) {
+        hash = (37 * hash) + PRIVATE_CONNECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivateConnectionsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsResponse)
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPrivateConnectionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (privateConnectionsBuilder_ == null) {
+          privateConnections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          privateConnectionsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse build() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse buildPartial() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse result = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (privateConnectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            privateConnections_ = java.util.Collections.unmodifiableList(privateConnections_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.privateConnections_ = privateConnections_;
+        } else {
+          result.privateConnections_ = privateConnectionsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse) {
+          return mergeFrom((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse other) {
+        if (other == yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.getDefaultInstance()) return this;
+        if (privateConnectionsBuilder_ == null) {
+          if (!other.privateConnections_.isEmpty()) {
+            if (privateConnections_.isEmpty()) {
+              privateConnections_ = other.privateConnections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePrivateConnectionsIsMutable();
+              privateConnections_.addAll(other.privateConnections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.privateConnections_.isEmpty()) {
+            if (privateConnectionsBuilder_.isEmpty()) {
+              privateConnectionsBuilder_.dispose();
+              privateConnectionsBuilder_ = null;
+              privateConnections_ = other.privateConnections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              privateConnectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPrivateConnectionsFieldBuilder() : null;
+            } else {
+              privateConnectionsBuilder_.addAllMessages(other.privateConnections_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection> privateConnections_ =
+        java.util.Collections.emptyList();
+      private void ensurePrivateConnectionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          privateConnections_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection>(privateConnections_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder> privateConnectionsBuilder_;
+
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection> getPrivateConnectionsList() {
+        if (privateConnectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(privateConnections_);
+        } else {
+          return privateConnectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public int getPrivateConnectionsCount() {
+        if (privateConnectionsBuilder_ == null) {
+          return privateConnections_.size();
+        } else {
+          return privateConnectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection getPrivateConnections(int index) {
+        if (privateConnectionsBuilder_ == null) {
+          return privateConnections_.get(index);
+        } else {
+          return privateConnectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder setPrivateConnections(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection value) {
+        if (privateConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrivateConnectionsIsMutable();
+          privateConnections_.set(index, value);
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder setPrivateConnections(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder builderForValue) {
+        if (privateConnectionsBuilder_ == null) {
+          ensurePrivateConnectionsIsMutable();
+          privateConnections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder addPrivateConnections(yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection value) {
+        if (privateConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrivateConnectionsIsMutable();
+          privateConnections_.add(value);
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder addPrivateConnections(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection value) {
+        if (privateConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrivateConnectionsIsMutable();
+          privateConnections_.add(index, value);
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder addPrivateConnections(
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder builderForValue) {
+        if (privateConnectionsBuilder_ == null) {
+          ensurePrivateConnectionsIsMutable();
+          privateConnections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder addPrivateConnections(
+          int index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder builderForValue) {
+        if (privateConnectionsBuilder_ == null) {
+          ensurePrivateConnectionsIsMutable();
+          privateConnections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder addAllPrivateConnections(
+          java.lang.Iterable<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection> values) {
+        if (privateConnectionsBuilder_ == null) {
+          ensurePrivateConnectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, privateConnections_);
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder clearPrivateConnections() {
+        if (privateConnectionsBuilder_ == null) {
+          privateConnections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public Builder removePrivateConnections(int index) {
+        if (privateConnectionsBuilder_ == null) {
+          ensurePrivateConnectionsIsMutable();
+          privateConnections_.remove(index);
+          onChanged();
+        } else {
+          privateConnectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder getPrivateConnectionsBuilder(
+          int index) {
+        return getPrivateConnectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder getPrivateConnectionsOrBuilder(
+          int index) {
+        if (privateConnectionsBuilder_ == null) {
+          return privateConnections_.get(index);  } else {
+          return privateConnectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder> 
+           getPrivateConnectionsOrBuilderList() {
+        if (privateConnectionsBuilder_ != null) {
+          return privateConnectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(privateConnections_);
+        }
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder addPrivateConnectionsBuilder() {
+        return getPrivateConnectionsFieldBuilder().addBuilder(
+            yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder addPrivateConnectionsBuilder(
+          int index) {
+        return getPrivateConnectionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of PrivateConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PrivateConnection private_connections = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder> 
+           getPrivateConnectionsBuilderList() {
+        return getPrivateConnectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder> 
+          getPrivateConnectionsFieldBuilder() {
+        if (privateConnectionsBuilder_ == null) {
+          privateConnectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnection.Builder, yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.PrivateConnectionOrBuilder>(
+                  privateConnections_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          privateConnections_ = null;
+        }
+        return privateConnectionsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPrivateConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPrivateConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.ListTrunkConnectionPrivateConnectionsResponse)
+    private static final yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse();
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTrunkConnectionPrivateConnectionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListTrunkConnectionPrivateConnectionsResponse>() {
+      @java.lang.Override
+      public ListTrunkConnectionPrivateConnectionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTrunkConnectionPrivateConnectionsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTrunkConnectionPrivateConnectionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTrunkConnectionPrivateConnectionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTrunkConnectionPublicConnectionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The trunkConnectionId.
+     */
+    java.lang.String getTrunkConnectionId();
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListTrunkConnectionPublicConnectionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsRequest}
+   */
+  public static final class ListTrunkConnectionPublicConnectionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsRequest)
+      ListTrunkConnectionPublicConnectionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTrunkConnectionPublicConnectionsRequest.newBuilder() to construct.
+    private ListTrunkConnectionPublicConnectionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTrunkConnectionPublicConnectionsRequest() {
+      trunkConnectionId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTrunkConnectionPublicConnectionsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTrunkConnectionPublicConnectionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trunkConnectionId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.Builder.class);
+    }
+
+    public static final int TRUNK_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object trunkConnectionId_;
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The trunkConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTrunkConnectionId() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trunkConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trunkConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListTrunkConnectionPublicConnectionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, trunkConnectionId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, trunkConnectionId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest other = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest) obj;
+
+      if (!getTrunkConnectionId()
+          .equals(other.getTrunkConnectionId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRUNK_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTrunkConnectionId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsRequest)
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        trunkConnectionId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest build() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest buildPartial() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest result = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest(this);
+        result.trunkConnectionId_ = trunkConnectionId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest other) {
+        if (other == yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.getDefaultInstance()) return this;
+        if (!other.getTrunkConnectionId().isEmpty()) {
+          trunkConnectionId_ = other.trunkConnectionId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object trunkConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The trunkConnectionId.
+       */
+      public java.lang.String getTrunkConnectionId() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trunkConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for trunkConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getTrunkConnectionIdBytes() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trunkConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrunkConnectionId() {
+        
+        trunkConnectionId_ = getDefaultInstance().getTrunkConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListTrunkConnectionPublicConnectionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListTrunkConnectionPublicConnectionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListTrunkConnectionPublicConnectionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListTrunkConnectionPublicConnectionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsRequest)
+    private static final yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTrunkConnectionPublicConnectionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListTrunkConnectionPublicConnectionsRequest>() {
+      @java.lang.Override
+      public ListTrunkConnectionPublicConnectionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTrunkConnectionPublicConnectionsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTrunkConnectionPublicConnectionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTrunkConnectionPublicConnectionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTrunkConnectionPublicConnectionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection> 
+        getPublicConnectionsList();
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection getPublicConnections(int index);
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    int getPublicConnectionsCount();
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder> 
+        getPublicConnectionsOrBuilderList();
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder getPublicConnectionsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsResponse}
+   */
+  public static final class ListTrunkConnectionPublicConnectionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsResponse)
+      ListTrunkConnectionPublicConnectionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTrunkConnectionPublicConnectionsResponse.newBuilder() to construct.
+    private ListTrunkConnectionPublicConnectionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTrunkConnectionPublicConnectionsResponse() {
+      publicConnections_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTrunkConnectionPublicConnectionsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTrunkConnectionPublicConnectionsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                publicConnections_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              publicConnections_.add(
+                  input.readMessage(yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          publicConnections_ = java.util.Collections.unmodifiableList(publicConnections_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.Builder.class);
+    }
+
+    public static final int PUBLIC_CONNECTIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection> publicConnections_;
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection> getPublicConnectionsList() {
+      return publicConnections_;
+    }
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder> 
+        getPublicConnectionsOrBuilderList() {
+      return publicConnections_;
+    }
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    @java.lang.Override
+    public int getPublicConnectionsCount() {
+      return publicConnections_.size();
+    }
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection getPublicConnections(int index) {
+      return publicConnections_.get(index);
+    }
+    /**
+     * <pre>
+     * List of PublicConnection resources.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder getPublicConnectionsOrBuilder(
+        int index) {
+      return publicConnections_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < publicConnections_.size(); i++) {
+        output.writeMessage(1, publicConnections_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < publicConnections_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, publicConnections_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse other = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse) obj;
+
+      if (!getPublicConnectionsList()
+          .equals(other.getPublicConnectionsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPublicConnectionsCount() > 0) {
+        hash = (37 * hash) + PUBLIC_CONNECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPublicConnectionsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsResponse)
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPublicConnectionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (publicConnectionsBuilder_ == null) {
+          publicConnections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          publicConnectionsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse build() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse buildPartial() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse result = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (publicConnectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            publicConnections_ = java.util.Collections.unmodifiableList(publicConnections_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.publicConnections_ = publicConnections_;
+        } else {
+          result.publicConnections_ = publicConnectionsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse) {
+          return mergeFrom((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse other) {
+        if (other == yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.getDefaultInstance()) return this;
+        if (publicConnectionsBuilder_ == null) {
+          if (!other.publicConnections_.isEmpty()) {
+            if (publicConnections_.isEmpty()) {
+              publicConnections_ = other.publicConnections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePublicConnectionsIsMutable();
+              publicConnections_.addAll(other.publicConnections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.publicConnections_.isEmpty()) {
+            if (publicConnectionsBuilder_.isEmpty()) {
+              publicConnectionsBuilder_.dispose();
+              publicConnectionsBuilder_ = null;
+              publicConnections_ = other.publicConnections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              publicConnectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPublicConnectionsFieldBuilder() : null;
+            } else {
+              publicConnectionsBuilder_.addAllMessages(other.publicConnections_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection> publicConnections_ =
+        java.util.Collections.emptyList();
+      private void ensurePublicConnectionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          publicConnections_ = new java.util.ArrayList<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection>(publicConnections_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder> publicConnectionsBuilder_;
+
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection> getPublicConnectionsList() {
+        if (publicConnectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(publicConnections_);
+        } else {
+          return publicConnectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public int getPublicConnectionsCount() {
+        if (publicConnectionsBuilder_ == null) {
+          return publicConnections_.size();
+        } else {
+          return publicConnectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection getPublicConnections(int index) {
+        if (publicConnectionsBuilder_ == null) {
+          return publicConnections_.get(index);
+        } else {
+          return publicConnectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder setPublicConnections(
+          int index, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection value) {
+        if (publicConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublicConnectionsIsMutable();
+          publicConnections_.set(index, value);
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder setPublicConnections(
+          int index, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder builderForValue) {
+        if (publicConnectionsBuilder_ == null) {
+          ensurePublicConnectionsIsMutable();
+          publicConnections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder addPublicConnections(yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection value) {
+        if (publicConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublicConnectionsIsMutable();
+          publicConnections_.add(value);
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder addPublicConnections(
+          int index, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection value) {
+        if (publicConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublicConnectionsIsMutable();
+          publicConnections_.add(index, value);
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder addPublicConnections(
+          yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder builderForValue) {
+        if (publicConnectionsBuilder_ == null) {
+          ensurePublicConnectionsIsMutable();
+          publicConnections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder addPublicConnections(
+          int index, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder builderForValue) {
+        if (publicConnectionsBuilder_ == null) {
+          ensurePublicConnectionsIsMutable();
+          publicConnections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder addAllPublicConnections(
+          java.lang.Iterable<? extends yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection> values) {
+        if (publicConnectionsBuilder_ == null) {
+          ensurePublicConnectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, publicConnections_);
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder clearPublicConnections() {
+        if (publicConnectionsBuilder_ == null) {
+          publicConnections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public Builder removePublicConnections(int index) {
+        if (publicConnectionsBuilder_ == null) {
+          ensurePublicConnectionsIsMutable();
+          publicConnections_.remove(index);
+          onChanged();
+        } else {
+          publicConnectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder getPublicConnectionsBuilder(
+          int index) {
+        return getPublicConnectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder getPublicConnectionsOrBuilder(
+          int index) {
+        if (publicConnectionsBuilder_ == null) {
+          return publicConnections_.get(index);  } else {
+          return publicConnectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder> 
+           getPublicConnectionsOrBuilderList() {
+        if (publicConnectionsBuilder_ != null) {
+          return publicConnectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(publicConnections_);
+        }
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder addPublicConnectionsBuilder() {
+        return getPublicConnectionsFieldBuilder().addBuilder(
+            yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder addPublicConnectionsBuilder(
+          int index) {
+        return getPublicConnectionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of PublicConnection resources.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.cic.v1.PublicConnection public_connections = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder> 
+           getPublicConnectionsBuilderList() {
+        return getPublicConnectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder> 
+          getPublicConnectionsFieldBuilder() {
+        if (publicConnectionsBuilder_ == null) {
+          publicConnectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnection.Builder, yandex.cloud.api.cic.v1.PublicConnectionOuterClass.PublicConnectionOrBuilder>(
+                  publicConnections_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          publicConnections_ = null;
+        }
+        return publicConnectionsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListTrunkConnectionPublicConnectionsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListTrunkConnectionPublicConnectionsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.ListTrunkConnectionPublicConnectionsResponse)
+    private static final yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse();
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTrunkConnectionPublicConnectionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListTrunkConnectionPublicConnectionsResponse>() {
+      @java.lang.Override
+      public ListTrunkConnectionPublicConnectionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTrunkConnectionPublicConnectionsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTrunkConnectionPublicConnectionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTrunkConnectionPublicConnectionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListTrunkConnectionOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListTrunkConnectionOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -16472,6 +20944,26 @@ public final class TrunkConnectionServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16500,117 +20992,147 @@ public final class TrunkConnectionServiceOuterClass {
       "ex/cloud/cic/v1/common/transceiver_type." +
       "proto\0328yandex/cloud/cic/v1/common/lag_al" +
       "location_settings.proto\032*yandex/cloud/ci" +
-      "c/v1/trunk_connection.proto\"F\n\031GetTrunkC" +
-      "onnectionRequest\022)\n\023trunk_connection_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\230\001\n\033ListTrunkConnect" +
-      "ionsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
-      "(\tB\n\212\3101\006<=1000\"x\n\034ListTrunkConnectionsRe" +
-      "sponse\022?\n\021trunk_connections\030\001 \003(\0132$.yand" +
-      "ex.cloud.cic.v1.TrunkConnection\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\355\t\n\034CreateTrunkConnecti" +
-      "onRequest\022<\n\004name\030\001 \001(\tB.\362\3071*|[a-zA-Z]([" +
-      "-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?\022\036\n\013descr" +
-      "iption\030\002 \001(\tB\t\212\3101\005<=256\022\037\n\tfolder_id\030\004 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tregion_id\030\005 \001(\tB\n\030\001\212" +
-      "\3101\004<=50\022k\n\030single_port_direct_joint\030\n \001(" +
-      "\0132G.yandex.cloud.cic.v1.CreateTrunkConne" +
-      "ctionRequest.SinglePortDirectJointH\000\022\\\n\020" +
-      "lag_direct_joint\030\013 \001(\0132@.yandex.cloud.ci" +
-      "c.v1.CreateTrunkConnectionRequest.LagDir" +
-      "ectJointH\000\022\\\n\022partner_joint_info\030\014 \001(\0132>" +
-      ".yandex.cloud.cic.v1.CreateTrunkConnecti" +
-      "onRequest.PartnerJointH\000\022@\n\024point_of_pre" +
-      "sence_id\030\r \001(\0132\034.google.protobuf.StringV" +
-      "alueB\004\350\3071\001\022E\n\010capacity\030\021 \001(\0162-.yandex.cl" +
-      "oud.cic.v1.TrunkConnection.CapacityB\004\350\3071" +
-      "\001\022\216\001\n\006labels\030\022 \003(\0132=.yandex.cloud.cic.v1" +
-      ".CreateTrunkConnectionRequest.LabelsEntr" +
-      "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
-      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_p" +
-      "rotection\030\024 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032j\n\025SinglePortDire" +
-      "ctJoint\022K\n\020transceiver_type\030\001 \001(\0162+.yand" +
-      "ex.cloud.cic.v1.common.TransceiverTypeB\004" +
-      "\350\3071\001J\004\010\002\020\005\032\304\001\n\016LagDirectJoint\022K\n\020transce" +
-      "iver_type\030\001 \001(\0162+.yandex.cloud.cic.v1.co" +
-      "mmon.TransceiverTypeB\004\350\3071\001\022_\n\027lag_alloca" +
-      "tion_settings\030\003 \001(\01328.yandex.cloud.cic.v" +
-      "1.common.LagAllocationSettingsRequestB\004\350" +
-      "\3071\001J\004\010\002\020\003\032L\n\014PartnerJoint\0226\n\npartner_id\030" +
-      "\004 \001(\0132\034.google.protobuf.StringValueB\004\350\3071" +
-      "\001J\004\010\001\020\004B\007\n\005jointJ\004\010\003\020\004J\004\010\006\020\nJ\004\010\016\020\021J\004\010\023\020\024" +
-      "\"<\n\035CreateTrunkConnectionMetadata\022\033\n\023tru" +
-      "nk_connection_id\030\001 \001(\t\"\363\004\n\034UpdateTrunkCo" +
-      "nnectionRequest\022)\n\023trunk_connection_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022<\n\004name\030\003 \001(" +
-      "\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-z" +
-      "A-Z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
-      "6\022\035\n\tregion_id\030\007 \001(\tB\n\030\001\212\3101\004<=50\022>\n\024poin" +
-      "t_of_presence_id\030\r \001(\0132\034.google.protobuf" +
-      ".StringValueB\002\030\001\022E\n\010capacity\030\021 \001(\0162-.yan" +
-      "dex.cloud.cic.v1.TrunkConnection.Capacit" +
-      "yB\004\350\3071\001\022\216\001\n\006labels\030\022 \003(\0132=.yandex.cloud." +
-      "cic.v1.UpdateTrunkConnectionRequest.Labe" +
-      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
-      "\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023dele" +
-      "tion_protection\030\024 \001(\010\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\007J\004\010\010\020\r" +
-      "J\004\010\016\020\021J\004\010\023\020\024\"<\n\035UpdateTrunkConnectionMet" +
-      "adata\022\033\n\023trunk_connection_id\030\001 \001(\t\"I\n\034De" +
-      "leteTrunkConnectionRequest\022)\n\023trunk_conn" +
-      "ection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n\035DeleteT" +
-      "runkConnectionMetadata\022\033\n\023trunk_connecti" +
-      "on_id\030\001 \001(\t\"t\n\032MoveTrunkConnectionReques" +
-      "t\022)\n\023trunk_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\":\n\033MoveTrunkConnectionMetadata" +
-      "\022\033\n\023trunk_connection_id\030\001 \001(\t\"\217\001\n$ListTr" +
-      "unkConnectionOperationsRequest\022)\n\023trunk_" +
-      "connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
-      " \001(\tB\t\212\3101\005<=100\"w\n%ListTrunkConnectionOp" +
-      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
-      "andex.cloud.operation.Operation\022\027\n\017next_" +
-      "page_token\030\002 \001(\t2\267\n\n\026TrunkConnectionServ" +
-      "ice\022\223\001\n\003Get\022..yandex.cloud.cic.v1.GetTru" +
-      "nkConnectionRequest\032$.yandex.cloud.cic.v" +
-      "1.TrunkConnection\"6\202\323\344\223\0020\022./cic/v1/trunk" +
-      "Connections/{trunk_connection_id}\022\215\001\n\004Li" +
-      "st\0220.yandex.cloud.cic.v1.ListTrunkConnec" +
-      "tionsRequest\0321.yandex.cloud.cic.v1.ListT" +
-      "runkConnectionsResponse\" \202\323\344\223\002\032\022\030/cic/v1" +
-      "/trunkConnections\022\267\001\n\006Create\0221.yandex.cl" +
-      "oud.cic.v1.CreateTrunkConnectionRequest\032" +
-      "!.yandex.cloud.operation.Operation\"W\262\322*0" +
-      "\n\035CreateTrunkConnectionMetadata\022\017TrunkCo" +
-      "nnection\202\323\344\223\002\035\"\030/cic/v1/trunkConnections" +
-      ":\001*\022\315\001\n\006Update\0221.yandex.cloud.cic.v1.Upd" +
-      "ateTrunkConnectionRequest\032!.yandex.cloud" +
-      ".operation.Operation\"m\262\322*0\n\035UpdateTrunkC" +
-      "onnectionMetadata\022\017TrunkConnection\202\323\344\223\0023" +
-      "2./cic/v1/trunkConnections/{trunk_connec" +
-      "tion_id}:\001*\022\320\001\n\006Delete\0221.yandex.cloud.ci" +
-      "c.v1.DeleteTrunkConnectionRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"p\262\322*6\n\035Dele" +
-      "teTrunkConnectionMetadata\022\025google.protob" +
-      "uf.Empty\202\323\344\223\0020*./cic/v1/trunkConnections" +
-      "/{trunk_connection_id}\022\314\001\n\004Move\022/.yandex" +
-      ".cloud.cic.v1.MoveTrunkConnectionRequest" +
-      "\032!.yandex.cloud.operation.Operation\"p\202\323\344" +
-      "\223\0028\"3/cic/v1/trunkConnections/{trunk_con" +
-      "nection_id}:move:\001*\262\322*.\n\033MoveTrunkConnec" +
-      "tionMetadata\022\017TrunkConnection\022\312\001\n\016ListOp" +
-      "erations\0229.yandex.cloud.cic.v1.ListTrunk" +
-      "ConnectionOperationsRequest\032:.yandex.clo" +
-      "ud.cic.v1.ListTrunkConnectionOperationsR" +
-      "esponse\"A\202\323\344\223\002;\0229/cic/v1/trunkConnection" +
-      "s/{trunk_connection_id}/operationsBV\n\027ya" +
-      "ndex.cloud.api.cic.v1Z;github.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/cic/v1;c" +
-      "icb\006proto3"
+      "c/v1/trunk_connection.proto\032,yandex/clou" +
+      "d/cic/v1/private_connection.proto\032+yande" +
+      "x/cloud/cic/v1/public_connection.proto\"F" +
+      "\n\031GetTrunkConnectionRequest\022)\n\023trunk_con" +
+      "nection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\230\001\n\033ListT" +
+      "runkConnectionsRequest\022\037\n\tfolder_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n" +
+      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"x\n\034ListTrunkCo" +
+      "nnectionsResponse\022?\n\021trunk_connections\030\001" +
+      " \003(\0132$.yandex.cloud.cic.v1.TrunkConnecti" +
+      "on\022\027\n\017next_page_token\030\002 \001(\t\"\355\t\n\034CreateTr" +
+      "unkConnectionRequest\022<\n\004name\030\001 \001(\tB.\362\3071*" +
+      "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9]" +
+      ")?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\037\n\tfo" +
+      "lder_id\030\004 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tregion_id" +
+      "\030\005 \001(\tB\n\030\001\212\3101\004<=50\022k\n\030single_port_direct" +
+      "_joint\030\n \001(\0132G.yandex.cloud.cic.v1.Creat" +
+      "eTrunkConnectionRequest.SinglePortDirect" +
+      "JointH\000\022\\\n\020lag_direct_joint\030\013 \001(\0132@.yand" +
+      "ex.cloud.cic.v1.CreateTrunkConnectionReq" +
+      "uest.LagDirectJointH\000\022\\\n\022partner_joint_i" +
+      "nfo\030\014 \001(\0132>.yandex.cloud.cic.v1.CreateTr" +
+      "unkConnectionRequest.PartnerJointH\000\022@\n\024p" +
+      "oint_of_presence_id\030\r \001(\0132\034.google.proto" +
+      "buf.StringValueB\004\350\3071\001\022E\n\010capacity\030\021 \001(\0162" +
+      "-.yandex.cloud.cic.v1.TrunkConnection.Ca" +
+      "pacityB\004\350\3071\001\022\216\001\n\006labels\030\022 \003(\0132=.yandex.c" +
+      "loud.cic.v1.CreateTrunkConnectionRequest" +
+      ".LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9" +
+      "a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n" +
+      "\023deletion_protection\030\024 \001(\010\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032j\n\025Sin" +
+      "glePortDirectJoint\022K\n\020transceiver_type\030\001" +
+      " \001(\0162+.yandex.cloud.cic.v1.common.Transc" +
+      "eiverTypeB\004\350\3071\001J\004\010\002\020\005\032\304\001\n\016LagDirectJoint" +
+      "\022K\n\020transceiver_type\030\001 \001(\0162+.yandex.clou" +
+      "d.cic.v1.common.TransceiverTypeB\004\350\3071\001\022_\n" +
+      "\027lag_allocation_settings\030\003 \001(\01328.yandex." +
+      "cloud.cic.v1.common.LagAllocationSetting" +
+      "sRequestB\004\350\3071\001J\004\010\002\020\003\032L\n\014PartnerJoint\0226\n\n" +
+      "partner_id\030\004 \001(\0132\034.google.protobuf.Strin" +
+      "gValueB\004\350\3071\001J\004\010\001\020\004B\007\n\005jointJ\004\010\003\020\004J\004\010\006\020\nJ" +
+      "\004\010\016\020\021J\004\010\023\020\024\"<\n\035CreateTrunkConnectionMeta" +
+      "data\022\033\n\023trunk_connection_id\030\001 \001(\t\"\363\004\n\034Up" +
+      "dateTrunkConnectionRequest\022)\n\023trunk_conn" +
+      "ection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022<" +
+      "\n\004name\030\003 \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9" +
+      "]{0,61}[a-zA-Z0-9])?\022\036\n\013description\030\004 \001(" +
+      "\tB\t\212\3101\005<=256\022\035\n\tregion_id\030\007 \001(\tB\n\030\001\212\3101\004<" +
+      "=50\022>\n\024point_of_presence_id\030\r \001(\0132\034.goog" +
+      "le.protobuf.StringValueB\002\030\001\022E\n\010capacity\030" +
+      "\021 \001(\0162-.yandex.cloud.cic.v1.TrunkConnect" +
+      "ion.CapacityB\004\350\3071\001\022\216\001\n\006labels\030\022 \003(\0132=.ya" +
+      "ndex.cloud.cic.v1.UpdateTrunkConnectionR" +
+      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
+      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
+      "z]*\022\033\n\023deletion_protection\030\024 \001(\010\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J" +
+      "\004\010\005\020\007J\004\010\010\020\rJ\004\010\016\020\021J\004\010\023\020\024\"<\n\035UpdateTrunkCo" +
+      "nnectionMetadata\022\033\n\023trunk_connection_id\030" +
+      "\001 \001(\t\"I\n\034DeleteTrunkConnectionRequest\022)\n" +
+      "\023trunk_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"<\n\035DeleteTrunkConnectionMetadata\022\033\n\023tru" +
+      "nk_connection_id\030\001 \001(\t\"t\n\032MoveTrunkConne" +
+      "ctionRequest\022)\n\023trunk_connection_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id" +
+      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\":\n\033MoveTrunkConnect" +
+      "ionMetadata\022\033\n\023trunk_connection_id\030\001 \001(\t" +
+      "\"\263\001\n,ListTrunkConnectionPrivateConnectio" +
+      "nsRequest\022)\n\023trunk_connection_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fi" +
+      "lter\030\004 \001(\tB\n\212\3101\006<=1000\"\215\001\n-ListTrunkConn" +
+      "ectionPrivateConnectionsResponse\022C\n\023priv" +
+      "ate_connections\030\001 \003(\0132&.yandex.cloud.cic" +
+      ".v1.PrivateConnection\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\262\001\n+ListTrunkConnectionPublicConn" +
+      "ectionsRequest\022)\n\023trunk_connection_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
+      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022" +
+      "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\212\001\n,ListTrun" +
+      "kConnectionPublicConnectionsResponse\022A\n\022" +
+      "public_connections\030\001 \003(\0132%.yandex.cloud." +
+      "cic.v1.PublicConnection\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"\217\001\n$ListTrunkConnectionOperatio" +
+      "nsRequest\022)\n\023trunk_connection_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"w\n%Li" +
+      "stTrunkConnectionOperationsResponse\0225\n\no" +
+      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
+      ".Operation\022\027\n\017next_page_token\030\002 \001(\t2\215\016\n\026" +
+      "TrunkConnectionService\022\223\001\n\003Get\022..yandex." +
+      "cloud.cic.v1.GetTrunkConnectionRequest\032$" +
+      ".yandex.cloud.cic.v1.TrunkConnection\"6\202\323" +
+      "\344\223\0020\022./cic/v1/trunkConnections/{trunk_co" +
+      "nnection_id}\022\215\001\n\004List\0220.yandex.cloud.cic" +
+      ".v1.ListTrunkConnectionsRequest\0321.yandex" +
+      ".cloud.cic.v1.ListTrunkConnectionsRespon" +
+      "se\" \202\323\344\223\002\032\022\030/cic/v1/trunkConnections\022\267\001\n" +
+      "\006Create\0221.yandex.cloud.cic.v1.CreateTrun" +
+      "kConnectionRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"W\262\322*0\n\035CreateTrunkConnecti" +
+      "onMetadata\022\017TrunkConnection\202\323\344\223\002\035\"\030/cic/" +
+      "v1/trunkConnections:\001*\022\315\001\n\006Update\0221.yand" +
+      "ex.cloud.cic.v1.UpdateTrunkConnectionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "m\262\322*0\n\035UpdateTrunkConnectionMetadata\022\017Tr" +
+      "unkConnection\202\323\344\223\00232./cic/v1/trunkConnec" +
+      "tions/{trunk_connection_id}:\001*\022\320\001\n\006Delet" +
+      "e\0221.yandex.cloud.cic.v1.DeleteTrunkConne" +
+      "ctionRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"p\262\322*6\n\035DeleteTrunkConnectionMeta" +
+      "data\022\025google.protobuf.Empty\202\323\344\223\0020*./cic/" +
+      "v1/trunkConnections/{trunk_connection_id" +
+      "}\022\314\001\n\004Move\022/.yandex.cloud.cic.v1.MoveTru" +
+      "nkConnectionRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"p\202\323\344\223\0028\"3/cic/v1/trunkCon" +
+      "nections/{trunk_connection_id}:move:\001*\262\322" +
+      "*.\n\033MoveTrunkConnectionMetadata\022\017TrunkCo" +
+      "nnection\022\352\001\n\026ListPrivateConnections\022A.ya" +
+      "ndex.cloud.cic.v1.ListTrunkConnectionPri" +
+      "vateConnectionsRequest\032B.yandex.cloud.ci" +
+      "c.v1.ListTrunkConnectionPrivateConnectio" +
+      "nsResponse\"I\202\323\344\223\002C\022A/cic/v1/trunkConnect" +
+      "ions/{trunk_connection_id}/privateConnec" +
+      "tions\022\346\001\n\025ListPublicConnections\022@.yandex" +
+      ".cloud.cic.v1.ListTrunkConnectionPublicC" +
+      "onnectionsRequest\032A.yandex.cloud.cic.v1." +
+      "ListTrunkConnectionPublicConnectionsResp" +
+      "onse\"H\202\323\344\223\002B\022@/cic/v1/trunkConnections/{" +
+      "trunk_connection_id}/publicConnections\022\312" +
+      "\001\n\016ListOperations\0229.yandex.cloud.cic.v1." +
+      "ListTrunkConnectionOperationsRequest\032:.y" +
+      "andex.cloud.cic.v1.ListTrunkConnectionOp" +
+      "erationsResponse\"A\202\323\344\223\002;\0229/cic/v1/trunkC" +
+      "onnections/{trunk_connection_id}/operati" +
+      "onsBV\n\027yandex.cloud.api.cic.v1Z;github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/cic/v1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16624,6 +21146,8 @@ public final class TrunkConnectionServiceOuterClass {
           yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.getDescriptor(),
           yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.getDescriptor(),
           yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.getDescriptor(),
+          yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.getDescriptor(),
+          yandex.cloud.api.cic.v1.PublicConnectionOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_GetTrunkConnectionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -16721,14 +21245,38 @@ public final class TrunkConnectionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_descriptor,
         new java.lang.String[] { "TrunkConnectionId", });
-    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor =
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsRequest_descriptor,
+        new java.lang.String[] { "TrunkConnectionId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPrivateConnectionsResponse_descriptor,
+        new java.lang.String[] { "PrivateConnections", "NextPageToken", });
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsRequest_descriptor,
+        new java.lang.String[] { "TrunkConnectionId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_ListTrunkConnectionPublicConnectionsResponse_descriptor,
+        new java.lang.String[] { "PublicConnections", "NextPageToken", });
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor,
         new java.lang.String[] { "TrunkConnectionId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsResponse_descriptor,
@@ -16754,6 +21302,8 @@ public final class TrunkConnectionServiceOuterClass {
     yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.getDescriptor();
     yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.getDescriptor();
     yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.getDescriptor();
+    yandex.cloud.api.cic.v1.PrivateConnectionOuterClass.getDescriptor();
+    yandex.cloud.api.cic.v1.PublicConnectionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

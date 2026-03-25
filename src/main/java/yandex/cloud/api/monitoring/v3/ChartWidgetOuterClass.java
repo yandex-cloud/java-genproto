@@ -17469,30 +17469,90 @@ public final class ChartWidgetOuterClass {
          * Hide line in legend.
          * </pre>
          *
-         * <code>bool line_hiding_in_legend = 11;</code>
+         * <code>bool line_hiding_in_legend = 11 [deprecated = true];</code>
+         * @deprecated
          * @return The lineHidingInLegend.
          */
-        boolean getLineHidingInLegend();
+        @java.lang.Deprecated boolean getLineHidingInLegend();
 
         /**
          * <pre>
          * Hide line in tooltip.
          * </pre>
          *
-         * <code>bool line_hiding_in_tooltip = 12;</code>
+         * <code>bool line_hiding_in_tooltip = 12 [deprecated = true];</code>
+         * @deprecated
          * @return The lineHidingInTooltip.
          */
-        boolean getLineHidingInTooltip();
+        @java.lang.Deprecated boolean getLineHidingInTooltip();
 
         /**
          * <pre>
          * Hide line in chart.
          * </pre>
          *
-         * <code>bool line_hiding_in_chart = 13;</code>
+         * <code>bool line_hiding_in_chart = 13 [deprecated = true];</code>
+         * @deprecated
          * @return The lineHidingInChart.
          */
-        boolean getLineHidingInChart();
+        @java.lang.Deprecated boolean getLineHidingInChart();
+
+        /**
+         * <pre>
+         * Line visibility in legend. Replaces line_hiding_in_legend.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+         * @return The enum numeric value on the wire for lineVisibilityInLegend.
+         */
+        int getLineVisibilityInLegendValue();
+        /**
+         * <pre>
+         * Line visibility in legend. Replaces line_hiding_in_legend.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+         * @return The lineVisibilityInLegend.
+         */
+        yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInLegend();
+
+        /**
+         * <pre>
+         * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+         * @return The enum numeric value on the wire for lineVisibilityInTooltip.
+         */
+        int getLineVisibilityInTooltipValue();
+        /**
+         * <pre>
+         * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+         * @return The lineVisibilityInTooltip.
+         */
+        yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInTooltip();
+
+        /**
+         * <pre>
+         * Line visibility in chart. Replaces line_hiding_in_chart.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+         * @return The enum numeric value on the wire for lineVisibilityInChart.
+         */
+        int getLineVisibilityInChartValue();
+        /**
+         * <pre>
+         * Line visibility in chart. Replaces line_hiding_in_chart.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+         * @return The lineVisibilityInChart.
+         */
+        yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInChart();
       }
       /**
        * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings}
@@ -17514,6 +17574,9 @@ public final class ChartWidgetOuterClass {
           yaxisPosition_ = 0;
           lineStyle_ = 0;
           lineHidingType_ = 0;
+          lineVisibilityInLegend_ = 0;
+          lineVisibilityInTooltip_ = 0;
+          lineVisibilityInChart_ = 0;
         }
 
         @java.lang.Override
@@ -17611,6 +17674,24 @@ public final class ChartWidgetOuterClass {
                 case 104: {
 
                   lineHidingInChart_ = input.readBool();
+                  break;
+                }
+                case 112: {
+                  int rawValue = input.readEnum();
+
+                  lineVisibilityInLegend_ = rawValue;
+                  break;
+                }
+                case 120: {
+                  int rawValue = input.readEnum();
+
+                  lineVisibilityInTooltip_ = rawValue;
+                  break;
+                }
+                case 128: {
+                  int rawValue = input.readEnum();
+
+                  lineVisibilityInChart_ = rawValue;
                   break;
                 }
                 default: {
@@ -17961,6 +18042,151 @@ public final class ChartWidgetOuterClass {
           // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType)
         }
 
+        /**
+         * <pre>
+         * Visibility override settings for a line element.
+         * </pre>
+         *
+         * Protobuf enum {@code yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings}
+         */
+        public enum LineOverrideVisibilitySettings
+            implements com.google.protobuf.ProtocolMessageEnum {
+          /**
+           * <pre>
+           * Not specified (default visibility applies).
+           * </pre>
+           *
+           * <code>LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED = 0;</code>
+           */
+          LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED(0),
+          /**
+           * <pre>
+           * Explicitly visible.
+           * </pre>
+           *
+           * <code>LINE_OVERRIDE_VISIBILITY_SETTINGS_VISIBLE = 1;</code>
+           */
+          LINE_OVERRIDE_VISIBILITY_SETTINGS_VISIBLE(1),
+          /**
+           * <pre>
+           * Explicitly hidden.
+           * </pre>
+           *
+           * <code>LINE_OVERRIDE_VISIBILITY_SETTINGS_HIDDEN = 2;</code>
+           */
+          LINE_OVERRIDE_VISIBILITY_SETTINGS_HIDDEN(2),
+          UNRECOGNIZED(-1),
+          ;
+
+          /**
+           * <pre>
+           * Not specified (default visibility applies).
+           * </pre>
+           *
+           * <code>LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED = 0;</code>
+           */
+          public static final int LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED_VALUE = 0;
+          /**
+           * <pre>
+           * Explicitly visible.
+           * </pre>
+           *
+           * <code>LINE_OVERRIDE_VISIBILITY_SETTINGS_VISIBLE = 1;</code>
+           */
+          public static final int LINE_OVERRIDE_VISIBILITY_SETTINGS_VISIBLE_VALUE = 1;
+          /**
+           * <pre>
+           * Explicitly hidden.
+           * </pre>
+           *
+           * <code>LINE_OVERRIDE_VISIBILITY_SETTINGS_HIDDEN = 2;</code>
+           */
+          public static final int LINE_OVERRIDE_VISIBILITY_SETTINGS_HIDDEN_VALUE = 2;
+
+
+          public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
+            }
+            return value;
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static LineOverrideVisibilitySettings valueOf(int value) {
+            return forNumber(value);
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
+          public static LineOverrideVisibilitySettings forNumber(int value) {
+            switch (value) {
+              case 0: return LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED;
+              case 1: return LINE_OVERRIDE_VISIBILITY_SETTINGS_VISIBLE;
+              case 2: return LINE_OVERRIDE_VISIBILITY_SETTINGS_HIDDEN;
+              default: return null;
+            }
+          }
+
+          public static com.google.protobuf.Internal.EnumLiteMap<LineOverrideVisibilitySettings>
+              internalGetValueMap() {
+            return internalValueMap;
+          }
+          private static final com.google.protobuf.Internal.EnumLiteMap<
+              LineOverrideVisibilitySettings> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<LineOverrideVisibilitySettings>() {
+                  public LineOverrideVisibilitySettings findValueByNumber(int number) {
+                    return LineOverrideVisibilitySettings.forNumber(number);
+                  }
+                };
+
+          public final com.google.protobuf.Descriptors.EnumValueDescriptor
+              getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+          }
+          public final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptorForType() {
+            return getDescriptor();
+          }
+          public static final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.getDescriptor().getEnumTypes().get(2);
+          }
+
+          private static final LineOverrideVisibilitySettings[] VALUES = values();
+
+          public static LineOverrideVisibilitySettings valueOf(
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+              throw new java.lang.IllegalArgumentException(
+                "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+              return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+          }
+
+          private final int value;
+
+          private LineOverrideVisibilitySettings(int value) {
+            this.value = value;
+          }
+
+          // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings)
+        }
+
         public static final int NAME_FIELD_NUMBER = 1;
         private volatile java.lang.Object name_;
         /**
@@ -18246,11 +18472,12 @@ public final class ChartWidgetOuterClass {
          * Hide line in legend.
          * </pre>
          *
-         * <code>bool line_hiding_in_legend = 11;</code>
+         * <code>bool line_hiding_in_legend = 11 [deprecated = true];</code>
+         * @deprecated
          * @return The lineHidingInLegend.
          */
         @java.lang.Override
-        public boolean getLineHidingInLegend() {
+        @java.lang.Deprecated public boolean getLineHidingInLegend() {
           return lineHidingInLegend_;
         }
 
@@ -18261,11 +18488,12 @@ public final class ChartWidgetOuterClass {
          * Hide line in tooltip.
          * </pre>
          *
-         * <code>bool line_hiding_in_tooltip = 12;</code>
+         * <code>bool line_hiding_in_tooltip = 12 [deprecated = true];</code>
+         * @deprecated
          * @return The lineHidingInTooltip.
          */
         @java.lang.Override
-        public boolean getLineHidingInTooltip() {
+        @java.lang.Deprecated public boolean getLineHidingInTooltip() {
           return lineHidingInTooltip_;
         }
 
@@ -18276,12 +18504,94 @@ public final class ChartWidgetOuterClass {
          * Hide line in chart.
          * </pre>
          *
-         * <code>bool line_hiding_in_chart = 13;</code>
+         * <code>bool line_hiding_in_chart = 13 [deprecated = true];</code>
+         * @deprecated
          * @return The lineHidingInChart.
          */
         @java.lang.Override
-        public boolean getLineHidingInChart() {
+        @java.lang.Deprecated public boolean getLineHidingInChart() {
           return lineHidingInChart_;
+        }
+
+        public static final int LINE_VISIBILITY_IN_LEGEND_FIELD_NUMBER = 14;
+        private int lineVisibilityInLegend_;
+        /**
+         * <pre>
+         * Line visibility in legend. Replaces line_hiding_in_legend.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+         * @return The enum numeric value on the wire for lineVisibilityInLegend.
+         */
+        @java.lang.Override public int getLineVisibilityInLegendValue() {
+          return lineVisibilityInLegend_;
+        }
+        /**
+         * <pre>
+         * Line visibility in legend. Replaces line_hiding_in_legend.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+         * @return The lineVisibilityInLegend.
+         */
+        @java.lang.Override public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInLegend() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.valueOf(lineVisibilityInLegend_);
+          return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.UNRECOGNIZED : result;
+        }
+
+        public static final int LINE_VISIBILITY_IN_TOOLTIP_FIELD_NUMBER = 15;
+        private int lineVisibilityInTooltip_;
+        /**
+         * <pre>
+         * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+         * @return The enum numeric value on the wire for lineVisibilityInTooltip.
+         */
+        @java.lang.Override public int getLineVisibilityInTooltipValue() {
+          return lineVisibilityInTooltip_;
+        }
+        /**
+         * <pre>
+         * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+         * @return The lineVisibilityInTooltip.
+         */
+        @java.lang.Override public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInTooltip() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.valueOf(lineVisibilityInTooltip_);
+          return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.UNRECOGNIZED : result;
+        }
+
+        public static final int LINE_VISIBILITY_IN_CHART_FIELD_NUMBER = 16;
+        private int lineVisibilityInChart_;
+        /**
+         * <pre>
+         * Line visibility in chart. Replaces line_hiding_in_chart.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+         * @return The enum numeric value on the wire for lineVisibilityInChart.
+         */
+        @java.lang.Override public int getLineVisibilityInChartValue() {
+          return lineVisibilityInChart_;
+        }
+        /**
+         * <pre>
+         * Line visibility in chart. Replaces line_hiding_in_chart.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+         * @return The lineVisibilityInChart.
+         */
+        @java.lang.Override public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInChart() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.valueOf(lineVisibilityInChart_);
+          return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.UNRECOGNIZED : result;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -18333,6 +18643,15 @@ public final class ChartWidgetOuterClass {
           }
           if (lineHidingInChart_ != false) {
             output.writeBool(13, lineHidingInChart_);
+          }
+          if (lineVisibilityInLegend_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED.getNumber()) {
+            output.writeEnum(14, lineVisibilityInLegend_);
+          }
+          if (lineVisibilityInTooltip_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED.getNumber()) {
+            output.writeEnum(15, lineVisibilityInTooltip_);
+          }
+          if (lineVisibilityInChart_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED.getNumber()) {
+            output.writeEnum(16, lineVisibilityInChart_);
           }
           unknownFields.writeTo(output);
         }
@@ -18388,6 +18707,18 @@ public final class ChartWidgetOuterClass {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(13, lineHidingInChart_);
           }
+          if (lineVisibilityInLegend_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(14, lineVisibilityInLegend_);
+          }
+          if (lineVisibilityInTooltip_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(15, lineVisibilityInTooltip_);
+          }
+          if (lineVisibilityInChart_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.LINE_OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(16, lineVisibilityInChart_);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -18423,6 +18754,9 @@ public final class ChartWidgetOuterClass {
               != other.getLineHidingInTooltip()) return false;
           if (getLineHidingInChart()
               != other.getLineHidingInChart()) return false;
+          if (lineVisibilityInLegend_ != other.lineVisibilityInLegend_) return false;
+          if (lineVisibilityInTooltip_ != other.lineVisibilityInTooltip_) return false;
+          if (lineVisibilityInChart_ != other.lineVisibilityInChart_) return false;
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -18463,6 +18797,12 @@ public final class ChartWidgetOuterClass {
           hash = (37 * hash) + LINE_HIDING_IN_CHART_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getLineHidingInChart());
+          hash = (37 * hash) + LINE_VISIBILITY_IN_LEGEND_FIELD_NUMBER;
+          hash = (53 * hash) + lineVisibilityInLegend_;
+          hash = (37 * hash) + LINE_VISIBILITY_IN_TOOLTIP_FIELD_NUMBER;
+          hash = (53 * hash) + lineVisibilityInTooltip_;
+          hash = (37 * hash) + LINE_VISIBILITY_IN_CHART_FIELD_NUMBER;
+          hash = (53 * hash) + lineVisibilityInChart_;
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -18620,6 +18960,12 @@ public final class ChartWidgetOuterClass {
 
             lineHidingInChart_ = false;
 
+            lineVisibilityInLegend_ = 0;
+
+            lineVisibilityInTooltip_ = 0;
+
+            lineVisibilityInChart_ = 0;
+
             return this;
           }
 
@@ -18658,6 +19004,9 @@ public final class ChartWidgetOuterClass {
             result.lineHidingInLegend_ = lineHidingInLegend_;
             result.lineHidingInTooltip_ = lineHidingInTooltip_;
             result.lineHidingInChart_ = lineHidingInChart_;
+            result.lineVisibilityInLegend_ = lineVisibilityInLegend_;
+            result.lineVisibilityInTooltip_ = lineVisibilityInTooltip_;
+            result.lineVisibilityInChart_ = lineVisibilityInChart_;
             onBuilt();
             return result;
           }
@@ -18744,6 +19093,15 @@ public final class ChartWidgetOuterClass {
             }
             if (other.getLineHidingInChart() != false) {
               setLineHidingInChart(other.getLineHidingInChart());
+            }
+            if (other.lineVisibilityInLegend_ != 0) {
+              setLineVisibilityInLegendValue(other.getLineVisibilityInLegendValue());
+            }
+            if (other.lineVisibilityInTooltip_ != 0) {
+              setLineVisibilityInTooltipValue(other.getLineVisibilityInTooltipValue());
+            }
+            if (other.lineVisibilityInChart_ != 0) {
+              setLineVisibilityInChartValue(other.getLineVisibilityInChartValue());
             }
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
@@ -19455,11 +19813,12 @@ public final class ChartWidgetOuterClass {
            * Hide line in legend.
            * </pre>
            *
-           * <code>bool line_hiding_in_legend = 11;</code>
+           * <code>bool line_hiding_in_legend = 11 [deprecated = true];</code>
+           * @deprecated
            * @return The lineHidingInLegend.
            */
           @java.lang.Override
-          public boolean getLineHidingInLegend() {
+          @java.lang.Deprecated public boolean getLineHidingInLegend() {
             return lineHidingInLegend_;
           }
           /**
@@ -19467,11 +19826,12 @@ public final class ChartWidgetOuterClass {
            * Hide line in legend.
            * </pre>
            *
-           * <code>bool line_hiding_in_legend = 11;</code>
+           * <code>bool line_hiding_in_legend = 11 [deprecated = true];</code>
+           * @deprecated
            * @param value The lineHidingInLegend to set.
            * @return This builder for chaining.
            */
-          public Builder setLineHidingInLegend(boolean value) {
+          @java.lang.Deprecated public Builder setLineHidingInLegend(boolean value) {
             
             lineHidingInLegend_ = value;
             onChanged();
@@ -19482,10 +19842,11 @@ public final class ChartWidgetOuterClass {
            * Hide line in legend.
            * </pre>
            *
-           * <code>bool line_hiding_in_legend = 11;</code>
+           * <code>bool line_hiding_in_legend = 11 [deprecated = true];</code>
+           * @deprecated
            * @return This builder for chaining.
            */
-          public Builder clearLineHidingInLegend() {
+          @java.lang.Deprecated public Builder clearLineHidingInLegend() {
             
             lineHidingInLegend_ = false;
             onChanged();
@@ -19498,11 +19859,12 @@ public final class ChartWidgetOuterClass {
            * Hide line in tooltip.
            * </pre>
            *
-           * <code>bool line_hiding_in_tooltip = 12;</code>
+           * <code>bool line_hiding_in_tooltip = 12 [deprecated = true];</code>
+           * @deprecated
            * @return The lineHidingInTooltip.
            */
           @java.lang.Override
-          public boolean getLineHidingInTooltip() {
+          @java.lang.Deprecated public boolean getLineHidingInTooltip() {
             return lineHidingInTooltip_;
           }
           /**
@@ -19510,11 +19872,12 @@ public final class ChartWidgetOuterClass {
            * Hide line in tooltip.
            * </pre>
            *
-           * <code>bool line_hiding_in_tooltip = 12;</code>
+           * <code>bool line_hiding_in_tooltip = 12 [deprecated = true];</code>
+           * @deprecated
            * @param value The lineHidingInTooltip to set.
            * @return This builder for chaining.
            */
-          public Builder setLineHidingInTooltip(boolean value) {
+          @java.lang.Deprecated public Builder setLineHidingInTooltip(boolean value) {
             
             lineHidingInTooltip_ = value;
             onChanged();
@@ -19525,10 +19888,11 @@ public final class ChartWidgetOuterClass {
            * Hide line in tooltip.
            * </pre>
            *
-           * <code>bool line_hiding_in_tooltip = 12;</code>
+           * <code>bool line_hiding_in_tooltip = 12 [deprecated = true];</code>
+           * @deprecated
            * @return This builder for chaining.
            */
-          public Builder clearLineHidingInTooltip() {
+          @java.lang.Deprecated public Builder clearLineHidingInTooltip() {
             
             lineHidingInTooltip_ = false;
             onChanged();
@@ -19541,11 +19905,12 @@ public final class ChartWidgetOuterClass {
            * Hide line in chart.
            * </pre>
            *
-           * <code>bool line_hiding_in_chart = 13;</code>
+           * <code>bool line_hiding_in_chart = 13 [deprecated = true];</code>
+           * @deprecated
            * @return The lineHidingInChart.
            */
           @java.lang.Override
-          public boolean getLineHidingInChart() {
+          @java.lang.Deprecated public boolean getLineHidingInChart() {
             return lineHidingInChart_;
           }
           /**
@@ -19553,11 +19918,12 @@ public final class ChartWidgetOuterClass {
            * Hide line in chart.
            * </pre>
            *
-           * <code>bool line_hiding_in_chart = 13;</code>
+           * <code>bool line_hiding_in_chart = 13 [deprecated = true];</code>
+           * @deprecated
            * @param value The lineHidingInChart to set.
            * @return This builder for chaining.
            */
-          public Builder setLineHidingInChart(boolean value) {
+          @java.lang.Deprecated public Builder setLineHidingInChart(boolean value) {
             
             lineHidingInChart_ = value;
             onChanged();
@@ -19568,12 +19934,235 @@ public final class ChartWidgetOuterClass {
            * Hide line in chart.
            * </pre>
            *
-           * <code>bool line_hiding_in_chart = 13;</code>
+           * <code>bool line_hiding_in_chart = 13 [deprecated = true];</code>
+           * @deprecated
            * @return This builder for chaining.
            */
-          public Builder clearLineHidingInChart() {
+          @java.lang.Deprecated public Builder clearLineHidingInChart() {
             
             lineHidingInChart_ = false;
+            onChanged();
+            return this;
+          }
+
+          private int lineVisibilityInLegend_ = 0;
+          /**
+           * <pre>
+           * Line visibility in legend. Replaces line_hiding_in_legend.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+           * @return The enum numeric value on the wire for lineVisibilityInLegend.
+           */
+          @java.lang.Override public int getLineVisibilityInLegendValue() {
+            return lineVisibilityInLegend_;
+          }
+          /**
+           * <pre>
+           * Line visibility in legend. Replaces line_hiding_in_legend.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+           * @param value The enum numeric value on the wire for lineVisibilityInLegend to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineVisibilityInLegendValue(int value) {
+            
+            lineVisibilityInLegend_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line visibility in legend. Replaces line_hiding_in_legend.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+           * @return The lineVisibilityInLegend.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInLegend() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.valueOf(lineVisibilityInLegend_);
+            return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.UNRECOGNIZED : result;
+          }
+          /**
+           * <pre>
+           * Line visibility in legend. Replaces line_hiding_in_legend.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+           * @param value The lineVisibilityInLegend to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineVisibilityInLegend(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            lineVisibilityInLegend_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line visibility in legend. Replaces line_hiding_in_legend.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_legend = 14;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineVisibilityInLegend() {
+            
+            lineVisibilityInLegend_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int lineVisibilityInTooltip_ = 0;
+          /**
+           * <pre>
+           * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+           * @return The enum numeric value on the wire for lineVisibilityInTooltip.
+           */
+          @java.lang.Override public int getLineVisibilityInTooltipValue() {
+            return lineVisibilityInTooltip_;
+          }
+          /**
+           * <pre>
+           * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+           * @param value The enum numeric value on the wire for lineVisibilityInTooltip to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineVisibilityInTooltipValue(int value) {
+            
+            lineVisibilityInTooltip_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+           * @return The lineVisibilityInTooltip.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInTooltip() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.valueOf(lineVisibilityInTooltip_);
+            return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.UNRECOGNIZED : result;
+          }
+          /**
+           * <pre>
+           * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+           * @param value The lineVisibilityInTooltip to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineVisibilityInTooltip(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            lineVisibilityInTooltip_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line visibility in tooltip. Replaces line_hiding_in_tooltip.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_tooltip = 15;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineVisibilityInTooltip() {
+            
+            lineVisibilityInTooltip_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int lineVisibilityInChart_ = 0;
+          /**
+           * <pre>
+           * Line visibility in chart. Replaces line_hiding_in_chart.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+           * @return The enum numeric value on the wire for lineVisibilityInChart.
+           */
+          @java.lang.Override public int getLineVisibilityInChartValue() {
+            return lineVisibilityInChart_;
+          }
+          /**
+           * <pre>
+           * Line visibility in chart. Replaces line_hiding_in_chart.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+           * @param value The enum numeric value on the wire for lineVisibilityInChart to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineVisibilityInChartValue(int value) {
+            
+            lineVisibilityInChart_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line visibility in chart. Replaces line_hiding_in_chart.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+           * @return The lineVisibilityInChart.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings getLineVisibilityInChart() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.valueOf(lineVisibilityInChart_);
+            return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings.UNRECOGNIZED : result;
+          }
+          /**
+           * <pre>
+           * Line visibility in chart. Replaces line_hiding_in_chart.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+           * @param value The lineVisibilityInChart to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineVisibilityInChart(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            lineVisibilityInChart_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line visibility in chart. Replaces line_hiding_in_chart.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineOverrideVisibilitySettings line_visibility_in_chart = 16;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineVisibilityInChart() {
+            
+            lineVisibilityInChart_ = 0;
             onChanged();
             return this;
           }
@@ -29580,7 +30169,7 @@ public final class ChartWidgetOuterClass {
       "ex/cloud/monitoring/v3/sort_order.proto\032" +
       ",yandex/cloud/monitoring/v3/unit_format." +
       "proto\032+yandex/cloud/monitoring/v3/thresh" +
-      "olds.proto\"\3065\n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@" +
+      "olds.proto\"\276:\n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@" +
       "\n\007queries\030\002 \001(\0132/.yandex.cloud.monitorin" +
       "g.v3.ChartWidget.Queries\022]\n\026visualizatio" +
       "n_settings\030\003 \001(\0132=.yandex.cloud.monitori" +
@@ -29692,14 +30281,14 @@ public final class ChartWidgetOuterClass {
       "IED\020\000\022\032\n\026SERIES_AGGREGATION_AVG\020\001\022\032\n\026SER" +
       "IES_AGGREGATION_MIN\020\002\022\032\n\026SERIES_AGGREGAT" +
       "ION_MAX\020\003\022\033\n\027SERIES_AGGREGATION_LAST\020\004\022\032" +
-      "\n\026SERIES_AGGREGATION_SUM\020\005\032\320\013\n\017SeriesOve" +
+      "\n\026SERIES_AGGREGATION_SUM\020\005\032\310\020\n\017SeriesOve" +
       "rrides\022\016\n\004name\030\001 \001(\tH\000\022\026\n\014target_index\030\002" +
       " \001(\tH\000\022`\n\010settings\030\003 \001(\0132N.yandex.cloud." +
       "monitoring.v3.ChartWidget.SeriesOverride" +
       "s.SeriesOverrideSettings\022\025\n\roverride_nam" +
       "e\030\004 \001(\t\022H\n\007matcher\030\005 \001(\01327.yandex.cloud." +
       "monitoring.v3.ChartWidget.OverrideMatche" +
-      "r\032\211\007\n\026SeriesOverrideSettings\022\014\n\004name\030\001 \001" +
+      "r\032\201\014\n\026SeriesOverrideSettings\022\014\n\004name\030\001 \001" +
       "(\t\022\r\n\005color\030\002 \001(\t\022]\n\004type\030\003 \001(\0162O.yandex" +
       ".cloud.monitoring.v3.ChartWidget.SeriesO" +
       "verrides.SeriesVisualizationType\022\022\n\nstac" +
@@ -29712,49 +30301,65 @@ public final class ChartWidgetOuterClass {
       "ttings.LineStyle\022{\n\020line_hiding_type\030\n \001" +
       "(\0162].yandex.cloud.monitoring.v3.ChartWid" +
       "get.SeriesOverrides.SeriesOverrideSettin" +
-      "gs.LineHidingTypeB\002\030\001\022\035\n\025line_hiding_in_" +
-      "legend\030\013 \001(\010\022\036\n\026line_hiding_in_tooltip\030\014" +
-      " \001(\010\022\034\n\024line_hiding_in_chart\030\r \001(\010\"g\n\tLi" +
-      "neStyle\022\032\n\026LINE_STYLE_UNSPECIFIED\020\000\022\024\n\020L" +
-      "INE_STYLE_SOLID\020\001\022\023\n\017LINE_STYLE_DASH\020\002\022\023" +
-      "\n\017LINE_STYLE_DOTS\020\003\"\241\001\n\016LineHidingType\022 " +
-      "\n\034LINE_HIDING_TYPE_UNSPECIFIED\020\000\022 \n\034LINE" +
-      "_HIDING_TYPE_HIDE_LEGEND\020\001\022!\n\035LINE_HIDIN" +
-      "G_TYPE_HIDE_TOOLTIP\020\002\022$\n LINE_HIDING_TYP" +
-      "E_HIDE_EVERYWHERE\020\003\032\002\030\001J\004\010\t\020\n\"b\n\rYaxisPo" +
-      "sition\022\036\n\032YAXIS_POSITION_UNSPECIFIED\020\000\022\027" +
-      "\n\023YAXIS_POSITION_LEFT\020\001\022\030\n\024YAXIS_POSITIO" +
-      "N_RIGHT\020\002\"\331\001\n\027SeriesVisualizationType\022)\n" +
-      "%SERIES_VISUALIZATION_TYPE_UNSPECIFIED\020\000" +
-      "\022\"\n\036SERIES_VISUALIZATION_TYPE_LINE\020\001\022#\n\037" +
-      "SERIES_VISUALIZATION_TYPE_STACK\020\002\022$\n SER" +
-      "IES_VISUALIZATION_TYPE_COLUMN\020\003\022$\n SERIE" +
-      "S_VISUALIZATION_TYPE_POINTS\020\004B\006\n\004type\032\266\002" +
-      "\n\017OverrideMatcher\022E\n\005query\030\001 \001(\01324.yande" +
-      "x.cloud.monitoring.v3.ChartWidget.QueryM" +
-      "atcherH\000\022C\n\004line\030\002 \001(\01323.yandex.cloud.mo" +
-      "nitoring.v3.ChartWidget.LineMatcherH\000\022G\n" +
-      "\006regexp\030\003 \001(\01325.yandex.cloud.monitoring." +
-      "v3.ChartWidget.RegExpMatcherH\000\022F\n\006values" +
-      "\030\004 \001(\01324.yandex.cloud.monitoring.v3.Char" +
-      "tWidget.ValueMatcherH\000B\006\n\004type\032\035\n\014QueryM" +
-      "atcher\022\r\n\005names\030\001 \003(\t\032\037\n\013LineMatcher\022\020\n\010" +
-      "line_ids\030\001 \003(\t\032 \n\rRegExpMatcher\022\017\n\007reg_e" +
-      "xp\030\001 \001(\t\032V\n\014ValueMatcher\022F\n\nvalue_type\030\001" +
-      " \001(\01622.yandex.cloud.monitoring.v3.ChartW" +
-      "idget.ValuesType\0325\n\022NameHidingSettings\022\020" +
-      "\n\010positive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\032>\n\016Repea" +
-      "tSettings\022\021\n\trepeat_by\030\001 \003(\t\022\031\n\021max_char" +
-      "ts_in_row\030\002 \001(\003\"^\n\nValuesType\022\033\n\027VALUES_" +
-      "TYPE_UNSPECIFIED\020\000\022\031\n\025VALUES_TYPE_ALL_ZE" +
-      "ROS\020\001\022\030\n\024VALUES_TYPE_ALL_NULL\020\002\"\231\001\n\016Free" +
-      "zeDuration\022\037\n\033FREEZE_DURATION_UNSPECIFIE" +
-      "D\020\000\022\030\n\024FREEZE_DURATION_HOUR\020\001\022\027\n\023FREEZE_" +
-      "DURATION_DAY\020\002\022\030\n\024FREEZE_DURATION_WEEK\020\003" +
-      "\022\031\n\025FREEZE_DURATION_MONTH\020\004Bk\n\036yandex.cl" +
-      "oud.api.monitoring.v3ZIgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/monitori" +
-      "ng/v3;monitoringb\006proto3"
+      "gs.LineHidingTypeB\002\030\001\022!\n\025line_hiding_in_" +
+      "legend\030\013 \001(\010B\002\030\001\022\"\n\026line_hiding_in_toolt" +
+      "ip\030\014 \001(\010B\002\030\001\022 \n\024line_hiding_in_chart\030\r \001" +
+      "(\010B\002\030\001\022\220\001\n\031line_visibility_in_legend\030\016 \001" +
+      "(\0162m.yandex.cloud.monitoring.v3.ChartWid" +
+      "get.SeriesOverrides.SeriesOverrideSettin" +
+      "gs.LineOverrideVisibilitySettings\022\221\001\n\032li" +
+      "ne_visibility_in_tooltip\030\017 \001(\0162m.yandex." +
+      "cloud.monitoring.v3.ChartWidget.SeriesOv" +
+      "errides.SeriesOverrideSettings.LineOverr" +
+      "ideVisibilitySettings\022\217\001\n\030line_visibilit" +
+      "y_in_chart\030\020 \001(\0162m.yandex.cloud.monitori" +
+      "ng.v3.ChartWidget.SeriesOverrides.Series" +
+      "OverrideSettings.LineOverrideVisibilityS" +
+      "ettings\"g\n\tLineStyle\022\032\n\026LINE_STYLE_UNSPE" +
+      "CIFIED\020\000\022\024\n\020LINE_STYLE_SOLID\020\001\022\023\n\017LINE_S" +
+      "TYLE_DASH\020\002\022\023\n\017LINE_STYLE_DOTS\020\003\"\241\001\n\016Lin" +
+      "eHidingType\022 \n\034LINE_HIDING_TYPE_UNSPECIF" +
+      "IED\020\000\022 \n\034LINE_HIDING_TYPE_HIDE_LEGEND\020\001\022" +
+      "!\n\035LINE_HIDING_TYPE_HIDE_TOOLTIP\020\002\022$\n LI" +
+      "NE_HIDING_TYPE_HIDE_EVERYWHERE\020\003\032\002\030\001\"\260\001\n" +
+      "\036LineOverrideVisibilitySettings\0221\n-LINE_" +
+      "OVERRIDE_VISIBILITY_SETTINGS_UNSPECIFIED" +
+      "\020\000\022-\n)LINE_OVERRIDE_VISIBILITY_SETTINGS_" +
+      "VISIBLE\020\001\022,\n(LINE_OVERRIDE_VISIBILITY_SE" +
+      "TTINGS_HIDDEN\020\002J\004\010\t\020\n\"b\n\rYaxisPosition\022\036" +
+      "\n\032YAXIS_POSITION_UNSPECIFIED\020\000\022\027\n\023YAXIS_" +
+      "POSITION_LEFT\020\001\022\030\n\024YAXIS_POSITION_RIGHT\020" +
+      "\002\"\331\001\n\027SeriesVisualizationType\022)\n%SERIES_" +
+      "VISUALIZATION_TYPE_UNSPECIFIED\020\000\022\"\n\036SERI" +
+      "ES_VISUALIZATION_TYPE_LINE\020\001\022#\n\037SERIES_V" +
+      "ISUALIZATION_TYPE_STACK\020\002\022$\n SERIES_VISU" +
+      "ALIZATION_TYPE_COLUMN\020\003\022$\n SERIES_VISUAL" +
+      "IZATION_TYPE_POINTS\020\004B\006\n\004type\032\266\002\n\017Overri" +
+      "deMatcher\022E\n\005query\030\001 \001(\01324.yandex.cloud." +
+      "monitoring.v3.ChartWidget.QueryMatcherH\000" +
+      "\022C\n\004line\030\002 \001(\01323.yandex.cloud.monitoring" +
+      ".v3.ChartWidget.LineMatcherH\000\022G\n\006regexp\030" +
+      "\003 \001(\01325.yandex.cloud.monitoring.v3.Chart" +
+      "Widget.RegExpMatcherH\000\022F\n\006values\030\004 \001(\01324" +
+      ".yandex.cloud.monitoring.v3.ChartWidget." +
+      "ValueMatcherH\000B\006\n\004type\032\035\n\014QueryMatcher\022\r" +
+      "\n\005names\030\001 \003(\t\032\037\n\013LineMatcher\022\020\n\010line_ids" +
+      "\030\001 \003(\t\032 \n\rRegExpMatcher\022\017\n\007reg_exp\030\001 \001(\t" +
+      "\032V\n\014ValueMatcher\022F\n\nvalue_type\030\001 \001(\01622.y" +
+      "andex.cloud.monitoring.v3.ChartWidget.Va" +
+      "luesType\0325\n\022NameHidingSettings\022\020\n\010positi" +
+      "ve\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\032>\n\016RepeatSetting" +
+      "s\022\021\n\trepeat_by\030\001 \003(\t\022\031\n\021max_charts_in_ro" +
+      "w\030\002 \001(\003\"^\n\nValuesType\022\033\n\027VALUES_TYPE_UNS" +
+      "PECIFIED\020\000\022\031\n\025VALUES_TYPE_ALL_ZEROS\020\001\022\030\n" +
+      "\024VALUES_TYPE_ALL_NULL\020\002\"\231\001\n\016FreezeDurati" +
+      "on\022\037\n\033FREEZE_DURATION_UNSPECIFIED\020\000\022\030\n\024F" +
+      "REEZE_DURATION_HOUR\020\001\022\027\n\023FREEZE_DURATION" +
+      "_DAY\020\002\022\030\n\024FREEZE_DURATION_WEEK\020\003\022\031\n\025FREE" +
+      "ZE_DURATION_MONTH\020\004Bk\n\036yandex.cloud.api." +
+      "monitoring.v3ZIgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/monitoring/v3;mo" +
+      "nitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29866,7 +30471,7 @@ public final class ChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_SeriesOverrides_SeriesOverrideSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_SeriesOverrides_SeriesOverrideSettings_descriptor,
-        new java.lang.String[] { "Name", "Color", "Type", "StackName", "GrowDown", "YaxisPosition", "LineWidth", "LineStyle", "LineHidingType", "LineHidingInLegend", "LineHidingInTooltip", "LineHidingInChart", });
+        new java.lang.String[] { "Name", "Color", "Type", "StackName", "GrowDown", "YaxisPosition", "LineWidth", "LineStyle", "LineHidingType", "LineHidingInLegend", "LineHidingInTooltip", "LineHidingInChart", "LineVisibilityInLegend", "LineVisibilityInTooltip", "LineVisibilityInChart", });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_OverrideMatcher_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_OverrideMatcher_fieldAccessorTable = new

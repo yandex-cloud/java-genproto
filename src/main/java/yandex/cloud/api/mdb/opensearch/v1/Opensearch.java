@@ -21,9 +21,6 @@ public final class Opensearch {
     /**
      * <pre>
      * Defines the maximum product of fields and terms that are queryable simultaneously.
-     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-     * New thread pools use the updated value.
      * Default value: **1024**.
      * Change of the setting is applied with restart.
      * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -36,9 +33,6 @@ public final class Opensearch {
     /**
      * <pre>
      * Defines the maximum product of fields and terms that are queryable simultaneously.
-     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-     * New thread pools use the updated value.
      * Default value: **1024**.
      * Change of the setting is applied with restart.
      * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -51,9 +45,6 @@ public final class Opensearch {
     /**
      * <pre>
      * Defines the maximum product of fields and terms that are queryable simultaneously.
-     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-     * New thread pools use the updated value.
      * Default value: **1024**.
      * Change of the setting is applied with restart.
      * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -328,9 +319,6 @@ public final class Opensearch {
     /**
      * <pre>
      * Defines the maximum product of fields and terms that are queryable simultaneously.
-     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-     * New thread pools use the updated value.
      * Default value: **1024**.
      * Change of the setting is applied with restart.
      * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -346,9 +334,6 @@ public final class Opensearch {
     /**
      * <pre>
      * Defines the maximum product of fields and terms that are queryable simultaneously.
-     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-     * New thread pools use the updated value.
      * Default value: **1024**.
      * Change of the setting is applied with restart.
      * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -364,9 +349,6 @@ public final class Opensearch {
     /**
      * <pre>
      * Defines the maximum product of fields and terms that are queryable simultaneously.
-     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-     * New thread pools use the updated value.
      * Default value: **1024**.
      * Change of the setting is applied with restart.
      * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -998,9 +980,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1015,9 +994,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1036,9 +1012,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1062,9 +1035,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1086,9 +1056,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1114,9 +1081,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1138,9 +1102,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1156,9 +1117,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
@@ -1177,9 +1135,6 @@ public final class Opensearch {
       /**
        * <pre>
        * Defines the maximum product of fields and terms that are queryable simultaneously.
-       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
-       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
-       * New thread pools use the updated value.
        * Default value: **1024**.
        * Change of the setting is applied with restart.
        * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).

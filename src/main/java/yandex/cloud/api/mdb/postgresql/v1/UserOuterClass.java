@@ -9474,6 +9474,33 @@ public final class UserOuterClass {
      * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder getPgauditOrBuilder();
+
+    /**
+     * <pre>
+     * in milliseconds; can be set only for PostgreSQL 14+
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the idleSessionTimeout field is set.
+     */
+    boolean hasIdleSessionTimeout();
+    /**
+     * <pre>
+     * in milliseconds; can be set only for PostgreSQL 14+
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The idleSessionTimeout.
+     */
+    com.google.protobuf.Int64Value getIdleSessionTimeout();
+    /**
+     * <pre>
+     * in milliseconds; can be set only for PostgreSQL 14+
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getIdleSessionTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -9665,6 +9692,19 @@ public final class UserOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pgaudit_);
                 pgaudit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (idleSessionTimeout_ != null) {
+                subBuilder = idleSessionTimeout_.toBuilder();
+              }
+              idleSessionTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(idleSessionTimeout_);
+                idleSessionTimeout_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10920,6 +10960,44 @@ public final class UserOuterClass {
       return getPgaudit();
     }
 
+    public static final int IDLE_SESSION_TIMEOUT_FIELD_NUMBER = 14;
+    private com.google.protobuf.Int64Value idleSessionTimeout_;
+    /**
+     * <pre>
+     * in milliseconds; can be set only for PostgreSQL 14+
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the idleSessionTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdleSessionTimeout() {
+      return idleSessionTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * in milliseconds; can be set only for PostgreSQL 14+
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The idleSessionTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getIdleSessionTimeout() {
+      return idleSessionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleSessionTimeout_;
+    }
+    /**
+     * <pre>
+     * in milliseconds; can be set only for PostgreSQL 14+
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getIdleSessionTimeoutOrBuilder() {
+      return getIdleSessionTimeout();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10972,6 +11050,9 @@ public final class UserOuterClass {
       }
       if (pgaudit_ != null) {
         output.writeMessage(13, getPgaudit());
+      }
+      if (idleSessionTimeout_ != null) {
+        output.writeMessage(14, getIdleSessionTimeout());
       }
       unknownFields.writeTo(output);
     }
@@ -11033,6 +11114,10 @@ public final class UserOuterClass {
       if (pgaudit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getPgaudit());
+      }
+      if (idleSessionTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getIdleSessionTimeout());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11098,6 +11183,11 @@ public final class UserOuterClass {
         if (!getPgaudit()
             .equals(other.getPgaudit())) return false;
       }
+      if (hasIdleSessionTimeout() != other.hasIdleSessionTimeout()) return false;
+      if (hasIdleSessionTimeout()) {
+        if (!getIdleSessionTimeout()
+            .equals(other.getIdleSessionTimeout())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11152,6 +11242,10 @@ public final class UserOuterClass {
       if (hasPgaudit()) {
         hash = (37 * hash) + PGAUDIT_FIELD_NUMBER;
         hash = (53 * hash) + getPgaudit().hashCode();
+      }
+      if (hasIdleSessionTimeout()) {
+        hash = (37 * hash) + IDLE_SESSION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getIdleSessionTimeout().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11352,6 +11446,12 @@ public final class UserOuterClass {
           pgaudit_ = null;
           pgauditBuilder_ = null;
         }
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeout_ = null;
+        } else {
+          idleSessionTimeout_ = null;
+          idleSessionTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -11426,6 +11526,11 @@ public final class UserOuterClass {
           result.pgaudit_ = pgaudit_;
         } else {
           result.pgaudit_ = pgauditBuilder_.build();
+        }
+        if (idleSessionTimeoutBuilder_ == null) {
+          result.idleSessionTimeout_ = idleSessionTimeout_;
+        } else {
+          result.idleSessionTimeout_ = idleSessionTimeoutBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11513,6 +11618,9 @@ public final class UserOuterClass {
         }
         if (other.hasPgaudit()) {
           mergePgaudit(other.getPgaudit());
+        }
+        if (other.hasIdleSessionTimeout()) {
+          mergeIdleSessionTimeout(other.getIdleSessionTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13493,6 +13601,161 @@ public final class UserOuterClass {
         }
         return pgauditBuilder_;
       }
+
+      private com.google.protobuf.Int64Value idleSessionTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idleSessionTimeoutBuilder_;
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return Whether the idleSessionTimeout field is set.
+       */
+      public boolean hasIdleSessionTimeout() {
+        return idleSessionTimeoutBuilder_ != null || idleSessionTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return The idleSessionTimeout.
+       */
+      public com.google.protobuf.Int64Value getIdleSessionTimeout() {
+        if (idleSessionTimeoutBuilder_ == null) {
+          return idleSessionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleSessionTimeout_;
+        } else {
+          return idleSessionTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setIdleSessionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleSessionTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          idleSessionTimeout_ = value;
+          onChanged();
+        } else {
+          idleSessionTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setIdleSessionTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          idleSessionTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder mergeIdleSessionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleSessionTimeoutBuilder_ == null) {
+          if (idleSessionTimeout_ != null) {
+            idleSessionTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(idleSessionTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            idleSessionTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          idleSessionTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder clearIdleSessionTimeout() {
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeout_ = null;
+          onChanged();
+        } else {
+          idleSessionTimeout_ = null;
+          idleSessionTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getIdleSessionTimeoutBuilder() {
+        
+        onChanged();
+        return getIdleSessionTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getIdleSessionTimeoutOrBuilder() {
+        if (idleSessionTimeoutBuilder_ != null) {
+          return idleSessionTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return idleSessionTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : idleSessionTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds; can be set only for PostgreSQL 14+
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 14 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getIdleSessionTimeoutFieldBuilder() {
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getIdleSessionTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          idleSessionTimeout_ = null;
+        }
+        return idleSessionTimeoutBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13630,7 +13893,7 @@ public final class UserOuterClass {
       "CTION\020\003\022\036\n\032PG_AUDIT_SETTINGS_LOG_ROLE\020\004\022" +
       "\035\n\031PG_AUDIT_SETTINGS_LOG_DDL\020\005\022\036\n\032PG_AUD" +
       "IT_SETTINGS_LOG_MISC\020\006\022\"\n\036PG_AUDIT_SETTI" +
-      "NGS_LOG_MISC_SET\020\007\"\314\014\n\014UserSettings\022h\n\035d" +
+      "NGS_LOG_MISC_SET\020\007\"\231\r\n\014UserSettings\022h\n\035d" +
       "efault_transaction_isolation\030\001 \001(\0162A.yan" +
       "dex.cloud.mdb.postgresql.v1.UserSettings" +
       ".TransactionIsolation\0221\n\014lock_timeout\030\002 " +
@@ -13653,33 +13916,35 @@ public final class UserOuterClass {
       "f.Int64ValueB\020\372\3071\0140-2147483647\0226\n\021statem" +
       "ent_timeout\030\014 \001(\0132\033.google.protobuf.Int6" +
       "4Value\022@\n\007pgaudit\030\r \001(\0132/.yandex.cloud.m" +
-      "db.postgresql.v1.PGAuditSettings\"\326\001\n\021Syn" +
-      "chronousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNS" +
-      "PECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n" +
-      "\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS" +
-      "_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_RE" +
-      "MOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOT" +
-      "E_APPLY\020\005\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEM" +
-      "ENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020" +
-      "\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMEN" +
-      "T_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Trans" +
-      "actionIsolation\022%\n!TRANSACTION_ISOLATION" +
-      "_UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_" +
-      "READ_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLAT" +
-      "ION_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOL" +
-      "ATION_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_I" +
-      "SOLATION_SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034" +
-      "\n\030POOLING_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020" +
-      "\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003*X\n\nAut" +
-      "hMethod\022\033\n\027AUTH_METHOD_UNSPECIFIED\020\000\022\030\n\024" +
-      "AUTH_METHOD_PASSWORD\020\001\022\023\n\017AUTH_METHOD_IA" +
-      "M\020\002*\220\001\n\026UserPasswordEncryption\022(\n$USER_P" +
-      "ASSWORD_ENCRYPTION_UNSPECIFIED\020\000\022 \n\034USER" +
-      "_PASSWORD_ENCRYPTION_MD5\020\001\022*\n&USER_PASSW" +
-      "ORD_ENCRYPTION_SCRAM_SHA_256\020\002Bs\n\"yandex" +
-      ".cloud.api.mdb.postgresql.v1ZMgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/postgresql/v1;postgresqlb\006proto3"
+      "db.postgresql.v1.PGAuditSettings\022K\n\024idle" +
+      "_session_timeout\030\016 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\020\372\3071\0140-2147483647\"\326\001\n\021Synchr" +
+      "onousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPEC" +
+      "IFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SY" +
+      "NCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_CO" +
+      "MMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOT" +
+      "E_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_A" +
+      "PPLY\020\005\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT" +
+      "_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025" +
+      "\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_M" +
+      "OD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Transact" +
+      "ionIsolation\022%\n!TRANSACTION_ISOLATION_UN" +
+      "SPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_REA" +
+      "D_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATION" +
+      "_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATI" +
+      "ON_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOL" +
+      "ATION_SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030P" +
+      "OOLING_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017" +
+      "\n\013TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003*X\n\nAuthMe" +
+      "thod\022\033\n\027AUTH_METHOD_UNSPECIFIED\020\000\022\030\n\024AUT" +
+      "H_METHOD_PASSWORD\020\001\022\023\n\017AUTH_METHOD_IAM\020\002" +
+      "*\220\001\n\026UserPasswordEncryption\022(\n$USER_PASS" +
+      "WORD_ENCRYPTION_UNSPECIFIED\020\000\022 \n\034USER_PA" +
+      "SSWORD_ENCRYPTION_MD5\020\001\022*\n&USER_PASSWORD" +
+      "_ENCRYPTION_SCRAM_SHA_256\020\002Bs\n\"yandex.cl" +
+      "oud.api.mdb.postgresql.v1ZMgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13722,7 +13987,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor,
-        new java.lang.String[] { "DefaultTransactionIsolation", "LockTimeout", "LogMinDurationStatement", "SynchronousCommit", "TempFileLimit", "LogStatement", "PoolMode", "PreparedStatementsPooling", "CatchupTimeout", "WalSenderTimeout", "IdleInTransactionSessionTimeout", "StatementTimeout", "Pgaudit", });
+        new java.lang.String[] { "DefaultTransactionIsolation", "LockTimeout", "LogMinDurationStatement", "SynchronousCommit", "TempFileLimit", "LogStatement", "PoolMode", "PreparedStatementsPooling", "CatchupTimeout", "WalSenderTimeout", "IdleInTransactionSessionTimeout", "StatementTimeout", "Pgaudit", "IdleSessionTimeout", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

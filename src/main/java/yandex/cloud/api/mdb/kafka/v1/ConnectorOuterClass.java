@@ -18226,41 +18226,20 @@ public final class ConnectorOuterClass {
      * List of tables, separated by ','.
      * </pre>
      *
-     * <code>repeated string tables = 1;</code>
-     * @return A list containing the tables.
+     * <code>string tables = 1;</code>
+     * @return The tables.
      */
-    java.util.List<java.lang.String>
-        getTablesList();
+    java.lang.String getTables();
     /**
      * <pre>
      * List of tables, separated by ','.
      * </pre>
      *
-     * <code>repeated string tables = 1;</code>
-     * @return The count of tables.
-     */
-    int getTablesCount();
-    /**
-     * <pre>
-     * List of tables, separated by ','.
-     * </pre>
-     *
-     * <code>repeated string tables = 1;</code>
-     * @param index The index of the element to return.
-     * @return The tables at the given index.
-     */
-    java.lang.String getTables(int index);
-    /**
-     * <pre>
-     * List of tables, separated by ','.
-     * </pre>
-     *
-     * <code>repeated string tables = 1;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tables at the given index.
+     * <code>string tables = 1;</code>
+     * @return The bytes for tables.
      */
     com.google.protobuf.ByteString
-        getTablesBytes(int index);
+        getTablesBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.StaticTablesSpec}
@@ -18275,7 +18254,7 @@ public final class ConnectorOuterClass {
       super(builder);
     }
     private StaticTablesSpec() {
-      tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tables_ = "";
     }
 
     @java.lang.Override
@@ -18298,7 +18277,6 @@ public final class ConnectorOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18311,11 +18289,8 @@ public final class ConnectorOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                tables_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              tables_.add(s);
+
+              tables_ = s;
               break;
             }
             default: {
@@ -18333,9 +18308,6 @@ public final class ConnectorOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          tables_ = tables_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -18354,54 +18326,49 @@ public final class ConnectorOuterClass {
     }
 
     public static final int TABLES_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList tables_;
+    private volatile java.lang.Object tables_;
     /**
      * <pre>
      * List of tables, separated by ','.
      * </pre>
      *
-     * <code>repeated string tables = 1;</code>
-     * @return A list containing the tables.
+     * <code>string tables = 1;</code>
+     * @return The tables.
      */
-    public com.google.protobuf.ProtocolStringList
-        getTablesList() {
-      return tables_;
+    @java.lang.Override
+    public java.lang.String getTables() {
+      java.lang.Object ref = tables_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tables_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * List of tables, separated by ','.
      * </pre>
      *
-     * <code>repeated string tables = 1;</code>
-     * @return The count of tables.
+     * <code>string tables = 1;</code>
+     * @return The bytes for tables.
      */
-    public int getTablesCount() {
-      return tables_.size();
-    }
-    /**
-     * <pre>
-     * List of tables, separated by ','.
-     * </pre>
-     *
-     * <code>repeated string tables = 1;</code>
-     * @param index The index of the element to return.
-     * @return The tables at the given index.
-     */
-    public java.lang.String getTables(int index) {
-      return tables_.get(index);
-    }
-    /**
-     * <pre>
-     * List of tables, separated by ','.
-     * </pre>
-     *
-     * <code>repeated string tables = 1;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tables at the given index.
-     */
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getTablesBytes(int index) {
-      return tables_.getByteString(index);
+        getTablesBytes() {
+      java.lang.Object ref = tables_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tables_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18418,8 +18385,8 @@ public final class ConnectorOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < tables_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tables_.getRaw(i));
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tables_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tables_);
       }
       unknownFields.writeTo(output);
     }
@@ -18430,13 +18397,8 @@ public final class ConnectorOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tables_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tables_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTablesList().size();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tables_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tables_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18453,8 +18415,8 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec) obj;
 
-      if (!getTablesList()
-          .equals(other.getTablesList())) return false;
+      if (!getTables()
+          .equals(other.getTables())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18466,10 +18428,8 @@ public final class ConnectorOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTablesCount() > 0) {
-        hash = (37 * hash) + TABLES_FIELD_NUMBER;
-        hash = (53 * hash) + getTablesList().hashCode();
-      }
+      hash = (37 * hash) + TABLES_FIELD_NUMBER;
+      hash = (53 * hash) + getTables().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18603,8 +18563,8 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        tables_ = "";
+
         return this;
       }
 
@@ -18631,11 +18591,6 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tables_ = tables_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
         result.tables_ = tables_;
         onBuilt();
         return result;
@@ -18685,14 +18640,8 @@ public final class ConnectorOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec other) {
         if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.StaticTablesSpec.getDefaultInstance()) return this;
-        if (!other.tables_.isEmpty()) {
-          if (tables_.isEmpty()) {
-            tables_ = other.tables_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureTablesIsMutable();
-            tables_.addAll(other.tables_);
-          }
+        if (!other.getTables().isEmpty()) {
+          tables_ = other.tables_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -18723,99 +18672,65 @@ public final class ConnectorOuterClass {
         }
         return this;
       }
-      private int bitField0_;
 
-      private com.google.protobuf.LazyStringList tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTablesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          tables_ = new com.google.protobuf.LazyStringArrayList(tables_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+      private java.lang.Object tables_ = "";
       /**
        * <pre>
        * List of tables, separated by ','.
        * </pre>
        *
-       * <code>repeated string tables = 1;</code>
-       * @return A list containing the tables.
+       * <code>string tables = 1;</code>
+       * @return The tables.
        */
-      public com.google.protobuf.ProtocolStringList
-          getTablesList() {
-        return tables_.getUnmodifiableView();
+      public java.lang.String getTables() {
+        java.lang.Object ref = tables_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tables_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
        * List of tables, separated by ','.
        * </pre>
        *
-       * <code>repeated string tables = 1;</code>
-       * @return The count of tables.
-       */
-      public int getTablesCount() {
-        return tables_.size();
-      }
-      /**
-       * <pre>
-       * List of tables, separated by ','.
-       * </pre>
-       *
-       * <code>repeated string tables = 1;</code>
-       * @param index The index of the element to return.
-       * @return The tables at the given index.
-       */
-      public java.lang.String getTables(int index) {
-        return tables_.get(index);
-      }
-      /**
-       * <pre>
-       * List of tables, separated by ','.
-       * </pre>
-       *
-       * <code>repeated string tables = 1;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tables at the given index.
+       * <code>string tables = 1;</code>
+       * @return The bytes for tables.
        */
       public com.google.protobuf.ByteString
-          getTablesBytes(int index) {
-        return tables_.getByteString(index);
+          getTablesBytes() {
+        java.lang.Object ref = tables_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tables_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
        * <pre>
        * List of tables, separated by ','.
        * </pre>
        *
-       * <code>repeated string tables = 1;</code>
-       * @param index The index to set the value at.
+       * <code>string tables = 1;</code>
        * @param value The tables to set.
        * @return This builder for chaining.
        */
       public Builder setTables(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTablesIsMutable();
-        tables_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * List of tables, separated by ','.
-       * </pre>
-       *
-       * <code>repeated string tables = 1;</code>
-       * @param value The tables to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTables(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTablesIsMutable();
-        tables_.add(value);
+  
+        tables_ = value;
         onChanged();
         return this;
       }
@@ -18824,29 +18739,12 @@ public final class ConnectorOuterClass {
        * List of tables, separated by ','.
        * </pre>
        *
-       * <code>repeated string tables = 1;</code>
-       * @param values The tables to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllTables(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTablesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tables_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * List of tables, separated by ','.
-       * </pre>
-       *
-       * <code>repeated string tables = 1;</code>
+       * <code>string tables = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearTables() {
-        tables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
+        tables_ = getDefaultInstance().getTables();
         onChanged();
         return this;
       }
@@ -18855,18 +18753,18 @@ public final class ConnectorOuterClass {
        * List of tables, separated by ','.
        * </pre>
        *
-       * <code>repeated string tables = 1;</code>
-       * @param value The bytes of the tables to add.
+       * <code>string tables = 1;</code>
+       * @param value The bytes for tables to set.
        * @return This builder for chaining.
        */
-      public Builder addTablesBytes(
+      public Builder setTablesBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureTablesIsMutable();
-        tables_.add(value);
+        
+        tables_ = value;
         onChanged();
         return this;
       }
@@ -45550,7 +45448,7 @@ public final class ConnectorOuterClass {
       "lesConfigSpec\022E\n\016control_config\030\006 \001(\0132-." +
       "yandex.cloud.mdb.kafka.v1.IcebergControl" +
       "SpecB\017\n\rtopics_source\"\"\n\020StaticTablesSpe" +
-      "c\022\016\n\006tables\030\001 \003(\t\"(\n\021DynamicTablesSpec\022\023" +
+      "c\022\016\n\006tables\030\001 \001(\t\"(\n\021DynamicTablesSpec\022\023" +
       "\n\013route_field\030\001 \001(\t\"A\n\027MetastoreConnecti" +
       "onSpec\022\023\n\013catalog_uri\030\001 \001(\t\022\021\n\twarehouse" +
       "\030\002 \001(\t\"t\n\027IcebergS3ConnectionSpec\022N\n\013ext" +

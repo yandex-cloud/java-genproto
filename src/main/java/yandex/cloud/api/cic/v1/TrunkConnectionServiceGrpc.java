@@ -204,6 +204,68 @@ public final class TrunkConnectionServiceGrpc {
     return getMoveMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest,
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse> getListPrivateConnectionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPrivateConnections",
+      requestType = yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.class,
+      responseType = yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest,
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse> getListPrivateConnectionsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse> getListPrivateConnectionsMethod;
+    if ((getListPrivateConnectionsMethod = TrunkConnectionServiceGrpc.getListPrivateConnectionsMethod) == null) {
+      synchronized (TrunkConnectionServiceGrpc.class) {
+        if ((getListPrivateConnectionsMethod = TrunkConnectionServiceGrpc.getListPrivateConnectionsMethod) == null) {
+          TrunkConnectionServiceGrpc.getListPrivateConnectionsMethod = getListPrivateConnectionsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPrivateConnections"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TrunkConnectionServiceMethodDescriptorSupplier("ListPrivateConnections"))
+              .build();
+        }
+      }
+    }
+    return getListPrivateConnectionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest,
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse> getListPublicConnectionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPublicConnections",
+      requestType = yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.class,
+      responseType = yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest,
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse> getListPublicConnectionsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse> getListPublicConnectionsMethod;
+    if ((getListPublicConnectionsMethod = TrunkConnectionServiceGrpc.getListPublicConnectionsMethod) == null) {
+      synchronized (TrunkConnectionServiceGrpc.class) {
+        if ((getListPublicConnectionsMethod = TrunkConnectionServiceGrpc.getListPublicConnectionsMethod) == null) {
+          TrunkConnectionServiceGrpc.getListPublicConnectionsMethod = getListPublicConnectionsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPublicConnections"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TrunkConnectionServiceMethodDescriptorSupplier("ListPublicConnections"))
+              .build();
+        }
+      }
+    }
+    return getListPublicConnectionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionOperationsRequest,
       yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionOperationsResponse> getListOperationsMethod;
 
@@ -352,6 +414,26 @@ public final class TrunkConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of PrivateConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public void listPrivateConnections(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPrivateConnectionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of PublicConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public void listPublicConnections(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPublicConnectionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified TrunkConnection.
      * </pre>
      */
@@ -404,6 +486,20 @@ public final class TrunkConnectionServiceGrpc {
                 yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
+          .addMethod(
+            getListPrivateConnectionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest,
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse>(
+                  this, METHODID_LIST_PRIVATE_CONNECTIONS)))
+          .addMethod(
+            getListPublicConnectionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest,
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse>(
+                  this, METHODID_LIST_PUBLIC_CONNECTIONS)))
           .addMethod(
             getListOperationsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -504,6 +600,28 @@ public final class TrunkConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of PrivateConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public void listPrivateConnections(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPrivateConnectionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of PublicConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public void listPublicConnections(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPublicConnectionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified TrunkConnection.
      * </pre>
      */
@@ -593,6 +711,26 @@ public final class TrunkConnectionServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of PrivateConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse listPrivateConnections(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPrivateConnectionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of PublicConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse listPublicConnections(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPublicConnectionsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -695,6 +833,28 @@ public final class TrunkConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of PrivateConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse> listPrivateConnections(
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPrivateConnectionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of PublicConnection resources associated with the specified TrunkConnection.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse> listPublicConnections(
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPublicConnectionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified TrunkConnection.
      * </pre>
      */
@@ -711,7 +871,9 @@ public final class TrunkConnectionServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_MOVE = 5;
-  private static final int METHODID_LIST_OPERATIONS = 6;
+  private static final int METHODID_LIST_PRIVATE_CONNECTIONS = 6;
+  private static final int METHODID_LIST_PUBLIC_CONNECTIONS = 7;
+  private static final int METHODID_LIST_OPERATIONS = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -753,6 +915,14 @@ public final class TrunkConnectionServiceGrpc {
         case METHODID_MOVE:
           serviceImpl.move((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_PRIVATE_CONNECTIONS:
+          serviceImpl.listPrivateConnections((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPrivateConnectionsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_PUBLIC_CONNECTIONS:
+          serviceImpl.listPublicConnections((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionPublicConnectionsResponse>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionOperationsRequest) request,
@@ -825,6 +995,8 @@ public final class TrunkConnectionServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getMoveMethod())
+              .addMethod(getListPrivateConnectionsMethod())
+              .addMethod(getListPublicConnectionsMethod())
               .addMethod(getListOperationsMethod())
               .build();
         }
