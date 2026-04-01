@@ -18,37 +18,6 @@ public final class BackupServiceGrpc {
   public static final String SERVICE_NAME = "yandex.cloud.backup.v1.BackupService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest,
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> getListMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "List",
-      requestType = yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.class,
-      responseType = yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest,
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> getListMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> getListMethod;
-    if ((getListMethod = BackupServiceGrpc.getListMethod) == null) {
-      synchronized (BackupServiceGrpc.class) {
-        if ((getListMethod = BackupServiceGrpc.getListMethod) == null) {
-          BackupServiceGrpc.getListMethod = getListMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("List"))
-              .build();
-        }
-      }
-    }
-    return getListMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesRequest,
       yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesResponse> getListArchivesMethod;
 
@@ -78,6 +47,37 @@ public final class BackupServiceGrpc {
       }
     }
     return getListArchivesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest,
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.class,
+      responseType = yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest,
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> getListMethod;
+    if ((getListMethod = BackupServiceGrpc.getListMethod) == null) {
+      synchronized (BackupServiceGrpc.class) {
+        if ((getListMethod = BackupServiceGrpc.getListMethod) == null) {
+          BackupServiceGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest, yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("List"))
+              .build();
+        }
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListFilesRequest,
@@ -319,16 +319,6 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * List backups using filters.
-     * </pre>
-     */
-    public void list(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * List archives that holds backups for specified folder or
      * specified [Compute Cloud instance](/docs/backup/concepts/vm-connection#os).
      * </pre>
@@ -336,6 +326,16 @@ public final class BackupServiceGrpc {
     public void listArchives(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListArchivesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List backups using filters.
+     * </pre>
+     */
+    public void list(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -402,19 +402,19 @@ public final class BackupServiceGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getListMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest,
-                yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse>(
-                  this, METHODID_LIST)))
-          .addMethod(
             getListArchivesMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesRequest,
                 yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesResponse>(
                   this, METHODID_LIST_ARCHIVES)))
+          .addMethod(
+            getListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest,
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse>(
+                  this, METHODID_LIST)))
           .addMethod(
             getListFilesMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -480,17 +480,6 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * List backups using filters.
-     * </pre>
-     */
-    public void list(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * List archives that holds backups for specified folder or
      * specified [Compute Cloud instance](/docs/backup/concepts/vm-connection#os).
      * </pre>
@@ -499,6 +488,17 @@ public final class BackupServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListArchivesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List backups using filters.
+     * </pre>
+     */
+    public void list(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -588,16 +588,6 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * List backups using filters.
-     * </pre>
-     */
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse list(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * List archives that holds backups for specified folder or
      * specified [Compute Cloud instance](/docs/backup/concepts/vm-connection#os).
      * </pre>
@@ -605,6 +595,16 @@ public final class BackupServiceGrpc {
     public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesResponse listArchives(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListArchivesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List backups using filters.
+     * </pre>
+     */
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse list(yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -688,17 +688,6 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * List backups using filters.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> list(
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * List archives that holds backups for specified folder or
      * specified [Compute Cloud instance](/docs/backup/concepts/vm-connection#os).
      * </pre>
@@ -707,6 +696,17 @@ public final class BackupServiceGrpc {
         yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListArchivesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * List backups using filters.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse> list(
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
     /**
@@ -777,8 +777,8 @@ public final class BackupServiceGrpc {
     }
   }
 
-  private static final int METHODID_LIST = 0;
-  private static final int METHODID_LIST_ARCHIVES = 1;
+  private static final int METHODID_LIST_ARCHIVES = 0;
+  private static final int METHODID_LIST = 1;
   private static final int METHODID_LIST_FILES = 2;
   private static final int METHODID_GET = 3;
   private static final int METHODID_START_RECOVERY = 4;
@@ -803,13 +803,13 @@ public final class BackupServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_LIST:
-          serviceImpl.list((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse>) responseObserver);
-          break;
         case METHODID_LIST_ARCHIVES:
           serviceImpl.listArchives((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListArchivesResponse>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsResponse>) responseObserver);
           break;
         case METHODID_LIST_FILES:
           serviceImpl.listFiles((yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListFilesRequest) request,
@@ -896,8 +896,8 @@ public final class BackupServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BackupServiceFileDescriptorSupplier())
-              .addMethod(getListMethod())
               .addMethod(getListArchivesMethod())
+              .addMethod(getListMethod())
               .addMethod(getListFilesMethod())
               .addMethod(getGetMethod())
               .addMethod(getStartRecoveryMethod())

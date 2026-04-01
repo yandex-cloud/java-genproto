@@ -6083,6 +6083,60 @@ public final class GroupServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.CreateGroupRequest}
@@ -6122,6 +6176,7 @@ public final class GroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6150,6 +6205,19 @@ public final class GroupServiceOuterClass {
               description_ = s;
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6174,6 +6242,18 @@ public final class GroupServiceOuterClass {
       return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -6324,6 +6404,103 @@ public final class GroupServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 4;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6347,6 +6524,12 @@ public final class GroupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          4);
       unknownFields.writeTo(output);
     }
 
@@ -6364,6 +6547,16 @@ public final class GroupServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6386,6 +6579,8 @@ public final class GroupServiceOuterClass {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6403,6 +6598,10 @@ public final class GroupServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6510,6 +6709,28 @@ public final class GroupServiceOuterClass {
         return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -6542,6 +6763,7 @@ public final class GroupServiceOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -6568,9 +6790,12 @@ public final class GroupServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateGroupRequest buildPartial() {
         yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateGroupRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateGroupRequest(this);
+        int from_bitField0_ = bitField0_;
         result.organizationId_ = organizationId_;
         result.name_ = name_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -6631,6 +6856,8 @@ public final class GroupServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6659,6 +6886,7 @@ public final class GroupServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object organizationId_ = "";
       /**
@@ -6955,6 +7183,165 @@ public final class GroupServiceOuterClass {
         
         description_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -7739,6 +8126,60 @@ public final class GroupServiceOuterClass {
      * @return The makeEditor.
      */
     boolean getMakeEditor();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.CreateExternalGroupRequest}
@@ -7780,6 +8221,7 @@ public final class GroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7825,6 +8267,19 @@ public final class GroupServiceOuterClass {
               makeEditor_ = input.readBool();
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7849,6 +8304,18 @@ public final class GroupServiceOuterClass {
       return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 7:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -8114,6 +8581,103 @@ public final class GroupServiceOuterClass {
       return makeEditor_;
     }
 
+    public static final int LABELS_FIELD_NUMBER = 7;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8146,6 +8710,12 @@ public final class GroupServiceOuterClass {
       if (makeEditor_ != false) {
         output.writeBool(6, makeEditor_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          7);
       unknownFields.writeTo(output);
     }
 
@@ -8174,6 +8744,16 @@ public final class GroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, makeEditor_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8201,6 +8781,8 @@ public final class GroupServiceOuterClass {
           .equals(other.getExternalId())) return false;
       if (getMakeEditor()
           != other.getMakeEditor()) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8225,6 +8807,10 @@ public final class GroupServiceOuterClass {
       hash = (37 * hash) + MAKE_EDITOR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getMakeEditor());
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8332,6 +8918,28 @@ public final class GroupServiceOuterClass {
         return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 7:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 7:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -8370,6 +8978,7 @@ public final class GroupServiceOuterClass {
 
         makeEditor_ = false;
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -8396,12 +9005,15 @@ public final class GroupServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest buildPartial() {
         yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.CreateExternalGroupRequest(this);
+        int from_bitField0_ = bitField0_;
         result.organizationId_ = organizationId_;
         result.name_ = name_;
         result.description_ = description_;
         result.subjectContainerId_ = subjectContainerId_;
         result.externalId_ = externalId_;
         result.makeEditor_ = makeEditor_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -8473,6 +9085,8 @@ public final class GroupServiceOuterClass {
         if (other.getMakeEditor() != false) {
           setMakeEditor(other.getMakeEditor());
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -8501,6 +9115,7 @@ public final class GroupServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object organizationId_ = "";
       /**
@@ -9052,6 +9667,165 @@ public final class GroupServiceOuterClass {
         
         makeEditor_ = false;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -10640,6 +11414,60 @@ public final class GroupServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateGroupRequest}
@@ -10679,6 +11507,7 @@ public final class GroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10720,6 +11549,19 @@ public final class GroupServiceOuterClass {
               description_ = s;
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10744,6 +11586,18 @@ public final class GroupServiceOuterClass {
       return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -10932,6 +11786,103 @@ public final class GroupServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 5;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10958,6 +11909,12 @@ public final class GroupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          5);
       unknownFields.writeTo(output);
     }
 
@@ -10979,6 +11936,16 @@ public final class GroupServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11006,6 +11973,8 @@ public final class GroupServiceOuterClass {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11027,6 +11996,10 @@ public final class GroupServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11134,6 +12107,28 @@ public final class GroupServiceOuterClass {
         return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -11172,6 +12167,7 @@ public final class GroupServiceOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -11198,6 +12194,7 @@ public final class GroupServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest buildPartial() {
         yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.UpdateGroupRequest(this);
+        int from_bitField0_ = bitField0_;
         result.groupId_ = groupId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -11206,6 +12203,8 @@ public final class GroupServiceOuterClass {
         }
         result.name_ = name_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -11269,6 +12268,8 @@ public final class GroupServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -11297,6 +12298,7 @@ public final class GroupServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object groupId_ = "";
       /**
@@ -11748,6 +12750,165 @@ public final class GroupServiceOuterClass {
         
         description_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -27878,6 +29039,11 @@ public final class GroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -27888,6 +29054,11 @@ public final class GroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -27897,6 +29068,11 @@ public final class GroupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMetadata_descriptor;
   private static final 
@@ -28021,169 +29197,184 @@ public final class GroupServiceOuterClass {
       "\001(\tB\n\212\3101\006<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1" +
       "000\"q\n\032ListExternalGroupsResponse\022:\n\006gro" +
       "ups\030\001 \003(\0132*.yandex.cloud.organizationman" +
-      "ager.v1.Group\022\027\n\017next_page_token\030\002 \001(\t\"\236" +
-      "\001\n\022CreateGroupRequest\022%\n\017organization_id" +
+      "ager.v1.Group\022\027\n\017next_page_token\030\002 \001(\t\"\344" +
+      "\002\n\022CreateGroupRequest\022%\n\017organization_id" +
       "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\004name\030\002 \001(\tB3\350\3071\001" +
       "\362\3071+[a-zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-" +
-      "Z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\"" +
-      "\'\n\023CreateGroupMetadata\022\020\n\010group_id\030\001 \001(\t" +
-      "\"\202\002\n\032CreateExternalGroupRequest\022%\n\017organ" +
-      "ization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\004name\030\002" +
-      " \001(\tB3\350\3071\001\362\3071+[a-zA-Z]([-a-zA-Z0-9._-]{0" +
-      ",61}[a-zA-Z0-9])?\022\036\n\013description\030\003 \001(\tB\t" +
-      "\212\3101\005<=256\022*\n\024subject_container_id\030\004 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\031\n\013external_id\030\005 \001(\tB\004\350\3071\001" +
-      "\022\023\n\013make_editor\030\006 \001(\010\"\244\001\n\033CreateExternal" +
-      "GroupMetadata\022\020\n\010group_id\030\001 \001(\t\022\027\n\017organ" +
-      "ization_id\030\002 \001(\t\022\022\n\ngroup_name\030\003 \001(\t\022\034\n\024" +
-      "subject_container_id\030\004 \001(\t\022\023\n\013external_i" +
-      "d\030\005 \001(\t\022\023\n\013make_editor\030\006 \001(\010\"\305\001\n\022UpdateG" +
-      "roupRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
-      "uf.FieldMask\022>\n\004name\030\003 \001(\tB0\362\3071,|[a-zA-Z" +
-      "]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?\022\036\n\013" +
-      "description\030\004 \001(\tB\t\212\3101\005<=256\"\'\n\023UpdateGr" +
-      "oupMetadata\022\020\n\010group_id\030\001 \001(\t\"\233\001\n\035Conver" +
-      "tToExternalGroupRequest\022\036\n\010group_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022*\n\024subject_container_id\030" +
-      "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013external_id\030\003 \001(\t" +
-      "B\004\350\3071\001\022\023\n\013make_editor\030\004 \001(\010\"z\n\036ConvertTo" +
-      "ExternalGroupMetadata\022\020\n\010group_id\030\001 \001(\t\022" +
-      "\034\n\024subject_container_id\030\002 \001(\t\022\023\n\013externa" +
-      "l_id\030\003 \001(\t\022\023\n\013make_editor\030\004 \001(\010\"L\n\036Conve" +
-      "rtAllToBasicGroupsRequest\022*\n\024subject_con" +
-      "tainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"?\n\037Convert" +
-      "AllToBasicGroupsMetadata\022\034\n\024subject_cont" +
-      "ainer_id\030\001 \001(\t\"4\n\022DeleteGroupRequest\022\036\n\010" +
-      "group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023DeleteGr" +
-      "oupMetadata\022\020\n\010group_id\030\001 \001(\t\"{\n\032ListGro" +
-      "upOperationsRequest\022\036\n\010group_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
-      "00\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\"m\n\033Li" +
-      "stGroupOperationsResponse\0225\n\noperations\030" +
-      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"x\n\027ListGroupMe" +
-      "mbersRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\np" +
-      "age_token\030\003 \001(\tB\n\212\3101\006<=2000\"v\n\030ListGroup" +
-      "MembersResponse\022A\n\007members\030\001 \003(\01320.yande" +
-      "x.cloud.organizationmanager.v1.GroupMemb" +
-      "er\022\027\n\017next_page_token\030\002 \001(\t\"7\n\013GroupMemb" +
-      "er\022\022\n\nsubject_id\030\001 \001(\t\022\024\n\014subject_type\030\002" +
-      " \001(\t\"\220\001\n\031UpdateGroupMembersRequest\022\036\n\010gr" +
-      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022S\n\rmember_del" +
-      "tas\030\002 \003(\01320.yandex.cloud.organizationman" +
-      "ager.v1.MemberDeltaB\n\202\3101\0061-1000\".\n\032Updat" +
-      "eGroupMembersMetadata\022\020\n\010group_id\030\001 \001(\t\"" +
-      "\310\001\n\013MemberDelta\022S\n\006action\030\001 \001(\0162=.yandex" +
-      ".cloud.organizationmanager.v1.MemberDelt" +
-      "a.MemberActionB\004\350\3071\001\022 \n\nsubject_id\030\002 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"B\n\014MemberAction\022\035\n\031MEMBER" +
-      "_ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE" +
-      "\020\002\"\266\001\n\024ListEffectiveRequest\022 \n\nsubject_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\017organization_id" +
-      "\030\004 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\022" +
-      "\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\";\n\023GroupMemb" +
-      "ershipInfo\022\020\n\010group_id\030\001 \001(\t\022\022\n\ngroup_na" +
-      "me\030\002 \001(\t\"\211\001\n\025ListEffectiveResponse\022W\n\025gr" +
-      "oup_membership_info\030\001 \003(\01328.yandex.cloud" +
-      ".organizationmanager.v1.GroupMembershipI" +
-      "nfo\022\027\n\017next_page_token\030\002 \001(\t2\222\034\n\014GroupSe" +
-      "rvice\022\233\001\n\003Get\0224.yandex.cloud.organizatio" +
-      "nmanager.v1.GetGroupRequest\032*.yandex.clo" +
-      "ud.organizationmanager.v1.Group\"2\202\323\344\223\002,\022" +
-      "*/organization-manager/v1/groups/{group_" +
-      "id}\022\326\001\n\017ResolveExternal\022@.yandex.cloud.o" +
-      "rganizationmanager.v1.ResolveExternalGro" +
-      "upRequest\032*.yandex.cloud.organizationman" +
-      "ager.v1.Group\"U\202\323\344\223\002O\022M/organization-man" +
-      "ager/v1/external_groups/{subject_contain" +
-      "er_id}/{external_id}\022\240\001\n\004List\0226.yandex.c" +
-      "loud.organizationmanager.v1.ListGroupsRe" +
-      "quest\0327.yandex.cloud.organizationmanager" +
-      ".v1.ListGroupsResponse\"\'\202\323\344\223\002!\022\037/organiz" +
-      "ation-manager/v1/groups\022\301\001\n\014ListExternal" +
-      "\022>.yandex.cloud.organizationmanager.v1.L" +
-      "istExternalGroupsRequest\032?.yandex.cloud." +
-      "organizationmanager.v1.ListExternalGroup" +
-      "sResponse\"0\202\323\344\223\002*\022(/organization-manager" +
-      "/v1/external_groups\022\260\001\n\006Create\0227.yandex." +
-      "cloud.organizationmanager.v1.CreateGroup" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"J\202\323\344\223\002$\"\037/organization-manager/v1/gro" +
-      "ups:\001*\262\322*\034\n\023CreateGroupMetadata\022\005Group\022\321" +
-      "\001\n\016CreateExternal\022?.yandex.cloud.organiz" +
-      "ationmanager.v1.CreateExternalGroupReque" +
-      "st\032!.yandex.cloud.operation.Operation\"[\202" +
-      "\323\344\223\002-\"(/organization-manager/v1/external" +
-      "_groups:\001*\262\322*$\n\033CreateExternalGroupMetad" +
-      "ata\022\005Group\022\273\001\n\006Update\0227.yandex.cloud.org" +
-      "anizationmanager.v1.UpdateGroupRequest\032!" +
-      ".yandex.cloud.operation.Operation\"U\202\323\344\223\002" +
-      "/2*/organization-manager/v1/groups/{grou" +
-      "p_id}:\001*\262\322*\034\n\023UpdateGroupMetadata\022\005Group" +
-      "\022\356\001\n\021ConvertToExternal\022B.yandex.cloud.or" +
-      "ganizationmanager.v1.ConvertToExternalGr" +
-      "oupRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"r\202\323\344\223\002A\"</organization-manager/v1/" +
-      "groups/{group_id}:convertToExternal:\001*\262\322" +
-      "*\'\n\036ConvertToExternalGroupMetadata\022\005Grou" +
-      "p\022\377\001\n\021ConvertAllToBasic\022C.yandex.cloud.o" +
-      "rganizationmanager.v1.ConvertAllToBasicG" +
-      "roupsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\201\001\202\323\344\223\002?\":/organization-manager/" +
-      "v1/external_groups:convertAllToBasic:\001*\262" +
-      "\322*8\n\037ConvertAllToBasicGroupsMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\310\001\n\006Delete\0227.yandex." +
-      "cloud.organizationmanager.v1.DeleteGroup" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"b\202\323\344\223\002,**/organization-manager/v1/gro" +
-      "ups/{group_id}\262\322*,\n\023DeleteGroupMetadata\022" +
-      "\025google.protobuf.Empty\022\322\001\n\016ListOperation" +
-      "s\022?.yandex.cloud.organizationmanager.v1." +
-      "ListGroupOperationsRequest\032@.yandex.clou" +
-      "d.organizationmanager.v1.ListGroupOperat" +
-      "ionsResponse\"=\202\323\344\223\0027\0225/organization-mana" +
-      "ger/v1/groups/{group_id}/operations\022\312\001\n\013" +
-      "ListMembers\022<.yandex.cloud.organizationm" +
-      "anager.v1.ListGroupMembersRequest\032=.yand" +
-      "ex.cloud.organizationmanager.v1.ListGrou" +
-      "pMembersResponse\">\202\323\344\223\0028\0226/organization-" +
-      "manager/v1/groups/{group_id}:listMembers" +
-      "\022\356\001\n\rUpdateMembers\022>.yandex.cloud.organi" +
-      "zationmanager.v1.UpdateGroupMembersReque" +
-      "st\032!.yandex.cloud.operation.Operation\"z\202" +
-      "\323\344\223\002=\"8/organization-manager/v1/groups/{" +
-      "group_id}:updateMembers:\001*\262\322*3\n\032UpdateGr" +
-      "oupMembersMetadata\022\025google.protobuf.Empt" +
-      "y\022\277\001\n\022ListAccessBindings\022..yandex.cloud." +
-      "access.ListAccessBindingsRequest\032/.yande" +
-      "x.cloud.access.ListAccessBindingsRespons" +
-      "e\"H\202\323\344\223\002B\022@/organization-manager/v1/grou" +
-      "ps/{resource_id}:listAccessBindings\022\376\001\n\021" +
-      "SetAccessBindings\022-.yandex.cloud.access." +
-      "SetAccessBindingsRequest\032!.yandex.cloud." +
-      "operation.Operation\"\226\001\202\323\344\223\002D\"?/organizat" +
-      "ion-manager/v1/groups/{resource_id}:setA" +
-      "ccessBindings:\001*\262\322*H\n access.SetAccessBi" +
-      "ndingsMetadata\022$access.AccessBindingsOpe" +
-      "rationResult\022\212\002\n\024UpdateAccessBindings\0220." +
-      "yandex.cloud.access.UpdateAccessBindings" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"\234\001\202\323\344\223\002G\"B/organization-manager/v1/gr" +
-      "oups/{resource_id}:updateAccessBindings:" +
-      "\001*\262\322*K\n#access.UpdateAccessBindingsMetad" +
-      "ata\022$access.AccessBindingsOperationResul" +
-      "t\022\275\001\n\rListEffective\0229.yandex.cloud.organ" +
-      "izationmanager.v1.ListEffectiveRequest\032:" +
-      ".yandex.cloud.organizationmanager.v1.Lis" +
-      "tEffectiveResponse\"5\202\323\344\223\002/\022-/organizatio" +
-      "n-manager/v1/groups:listEffectiveB\206\001\n\'ya" +
-      "ndex.cloud.api.organizationmanager.v1Z[g" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/organizationmanager/v1;organizat" +
-      "ionmanagerb\006proto3"
+      "Z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022" +
+      "\224\001\n\006labels\030\004 \003(\0132C.yandex.cloud.organiza" +
+      "tionmanager.v1.CreateGroupRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n" +
+      "\023CreateGroupMetadata\022\020\n\010group_id\030\001 \001(\t\"\320" +
+      "\003\n\032CreateExternalGroupRequest\022%\n\017organiz" +
+      "ation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\004name\030\002 \001" +
+      "(\tB3\350\3071\001\362\3071+[a-zA-Z]([-a-zA-Z0-9._-]{0,6" +
+      "1}[a-zA-Z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\310" +
+      "1\005<=256\022*\n\024subject_container_id\030\004 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\031\n\013external_id\030\005 \001(\tB\004\350\3071\001\022\023" +
+      "\n\013make_editor\030\006 \001(\010\022\234\001\n\006labels\030\007 \003(\0132K.y" +
+      "andex.cloud.organizationmanager.v1.Creat" +
+      "eExternalGroupRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\244\001\n\033CreateExte" +
+      "rnalGroupMetadata\022\020\n\010group_id\030\001 \001(\t\022\027\n\017o" +
+      "rganization_id\030\002 \001(\t\022\022\n\ngroup_name\030\003 \001(\t" +
+      "\022\034\n\024subject_container_id\030\004 \001(\t\022\023\n\013extern" +
+      "al_id\030\005 \001(\t\022\023\n\013make_editor\030\006 \001(\010\"\213\003\n\022Upd" +
+      "ateGroupRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022>\n\004name\030\003 \001(\tB0\362\3071,|[a-" +
+      "zA-Z]([-a-zA-Z0-9._-]{0,61}[a-zA-Z0-9])?" +
+      "\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\224\001\n\006lab" +
+      "els\030\005 \003(\0132C.yandex.cloud.organizationman" +
+      "ager.v1.UpdateGroupRequest.LabelsEntryB?" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\023Update" +
+      "GroupMetadata\022\020\n\010group_id\030\001 \001(\t\"\233\001\n\035Conv" +
+      "ertToExternalGroupRequest\022\036\n\010group_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022*\n\024subject_container_i" +
+      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013external_id\030\003 \001" +
+      "(\tB\004\350\3071\001\022\023\n\013make_editor\030\004 \001(\010\"z\n\036Convert" +
+      "ToExternalGroupMetadata\022\020\n\010group_id\030\001 \001(" +
+      "\t\022\034\n\024subject_container_id\030\002 \001(\t\022\023\n\013exter" +
+      "nal_id\030\003 \001(\t\022\023\n\013make_editor\030\004 \001(\010\"L\n\036Con" +
+      "vertAllToBasicGroupsRequest\022*\n\024subject_c" +
+      "ontainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"?\n\037Conve" +
+      "rtAllToBasicGroupsMetadata\022\034\n\024subject_co" +
+      "ntainer_id\030\001 \001(\t\"4\n\022DeleteGroupRequest\022\036" +
+      "\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023Delete" +
+      "GroupMetadata\022\020\n\010group_id\030\001 \001(\t\"{\n\032ListG" +
+      "roupOperationsRequest\022\036\n\010group_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-" +
+      "1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\"m\n\033" +
+      "ListGroupOperationsResponse\0225\n\noperation" +
+      "s\030\001 \003(\0132!.yandex.cloud.operation.Operati" +
+      "on\022\027\n\017next_page_token\030\002 \001(\t\"x\n\027ListGroup" +
+      "MembersRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n" +
+      "\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\"v\n\030ListGro" +
+      "upMembersResponse\022A\n\007members\030\001 \003(\01320.yan" +
+      "dex.cloud.organizationmanager.v1.GroupMe" +
+      "mber\022\027\n\017next_page_token\030\002 \001(\t\"7\n\013GroupMe" +
+      "mber\022\022\n\nsubject_id\030\001 \001(\t\022\024\n\014subject_type" +
+      "\030\002 \001(\t\"\220\001\n\031UpdateGroupMembersRequest\022\036\n\010" +
+      "group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022S\n\rmember_d" +
+      "eltas\030\002 \003(\01320.yandex.cloud.organizationm" +
+      "anager.v1.MemberDeltaB\n\202\3101\0061-1000\".\n\032Upd" +
+      "ateGroupMembersMetadata\022\020\n\010group_id\030\001 \001(" +
+      "\t\"\310\001\n\013MemberDelta\022S\n\006action\030\001 \001(\0162=.yand" +
+      "ex.cloud.organizationmanager.v1.MemberDe" +
+      "lta.MemberActionB\004\350\3071\001\022 \n\nsubject_id\030\002 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"B\n\014MemberAction\022\035\n\031MEMB" +
+      "ER_ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMO" +
+      "VE\020\002\"\266\001\n\024ListEffectiveRequest\022 \n\nsubject" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\017organization_" +
+      "id\030\004 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=200" +
+      "0\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\";\n\023GroupMe" +
+      "mbershipInfo\022\020\n\010group_id\030\001 \001(\t\022\022\n\ngroup_" +
+      "name\030\002 \001(\t\"\211\001\n\025ListEffectiveResponse\022W\n\025" +
+      "group_membership_info\030\001 \003(\01328.yandex.clo" +
+      "ud.organizationmanager.v1.GroupMembershi" +
+      "pInfo\022\027\n\017next_page_token\030\002 \001(\t2\222\034\n\014Group" +
+      "Service\022\233\001\n\003Get\0224.yandex.cloud.organizat" +
+      "ionmanager.v1.GetGroupRequest\032*.yandex.c" +
+      "loud.organizationmanager.v1.Group\"2\202\323\344\223\002" +
+      ",\022*/organization-manager/v1/groups/{grou" +
+      "p_id}\022\326\001\n\017ResolveExternal\022@.yandex.cloud" +
+      ".organizationmanager.v1.ResolveExternalG" +
+      "roupRequest\032*.yandex.cloud.organizationm" +
+      "anager.v1.Group\"U\202\323\344\223\002O\022M/organization-m" +
+      "anager/v1/external_groups/{subject_conta" +
+      "iner_id}/{external_id}\022\240\001\n\004List\0226.yandex" +
+      ".cloud.organizationmanager.v1.ListGroups" +
+      "Request\0327.yandex.cloud.organizationmanag" +
+      "er.v1.ListGroupsResponse\"\'\202\323\344\223\002!\022\037/organ" +
+      "ization-manager/v1/groups\022\301\001\n\014ListExtern" +
+      "al\022>.yandex.cloud.organizationmanager.v1" +
+      ".ListExternalGroupsRequest\032?.yandex.clou" +
+      "d.organizationmanager.v1.ListExternalGro" +
+      "upsResponse\"0\202\323\344\223\002*\022(/organization-manag" +
+      "er/v1/external_groups\022\260\001\n\006Create\0227.yande" +
+      "x.cloud.organizationmanager.v1.CreateGro" +
+      "upRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"J\202\323\344\223\002$\"\037/organization-manager/v1/g" +
+      "roups:\001*\262\322*\034\n\023CreateGroupMetadata\022\005Group" +
+      "\022\321\001\n\016CreateExternal\022?.yandex.cloud.organ" +
+      "izationmanager.v1.CreateExternalGroupReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "[\202\323\344\223\002-\"(/organization-manager/v1/extern" +
+      "al_groups:\001*\262\322*$\n\033CreateExternalGroupMet" +
+      "adata\022\005Group\022\273\001\n\006Update\0227.yandex.cloud.o" +
+      "rganizationmanager.v1.UpdateGroupRequest" +
+      "\032!.yandex.cloud.operation.Operation\"U\202\323\344" +
+      "\223\002/2*/organization-manager/v1/groups/{gr" +
+      "oup_id}:\001*\262\322*\034\n\023UpdateGroupMetadata\022\005Gro" +
+      "up\022\356\001\n\021ConvertToExternal\022B.yandex.cloud." +
+      "organizationmanager.v1.ConvertToExternal" +
+      "GroupRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"r\202\323\344\223\002A\"</organization-manager/v" +
+      "1/groups/{group_id}:convertToExternal:\001*" +
+      "\262\322*\'\n\036ConvertToExternalGroupMetadata\022\005Gr" +
+      "oup\022\377\001\n\021ConvertAllToBasic\022C.yandex.cloud" +
+      ".organizationmanager.v1.ConvertAllToBasi" +
+      "cGroupsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\201\001\202\323\344\223\002?\":/organization-manage" +
+      "r/v1/external_groups:convertAllToBasic:\001" +
+      "*\262\322*8\n\037ConvertAllToBasicGroupsMetadata\022\025" +
+      "google.protobuf.Empty\022\310\001\n\006Delete\0227.yande" +
+      "x.cloud.organizationmanager.v1.DeleteGro" +
+      "upRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"b\202\323\344\223\002,**/organization-manager/v1/g" +
+      "roups/{group_id}\262\322*,\n\023DeleteGroupMetadat" +
+      "a\022\025google.protobuf.Empty\022\322\001\n\016ListOperati" +
+      "ons\022?.yandex.cloud.organizationmanager.v" +
+      "1.ListGroupOperationsRequest\032@.yandex.cl" +
+      "oud.organizationmanager.v1.ListGroupOper" +
+      "ationsResponse\"=\202\323\344\223\0027\0225/organization-ma" +
+      "nager/v1/groups/{group_id}/operations\022\312\001" +
+      "\n\013ListMembers\022<.yandex.cloud.organizatio" +
+      "nmanager.v1.ListGroupMembersRequest\032=.ya" +
+      "ndex.cloud.organizationmanager.v1.ListGr" +
+      "oupMembersResponse\">\202\323\344\223\0028\0226/organizatio" +
+      "n-manager/v1/groups/{group_id}:listMembe" +
+      "rs\022\356\001\n\rUpdateMembers\022>.yandex.cloud.orga" +
+      "nizationmanager.v1.UpdateGroupMembersReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "z\202\323\344\223\002=\"8/organization-manager/v1/groups" +
+      "/{group_id}:updateMembers:\001*\262\322*3\n\032Update" +
+      "GroupMembersMetadata\022\025google.protobuf.Em" +
+      "pty\022\277\001\n\022ListAccessBindings\022..yandex.clou" +
+      "d.access.ListAccessBindingsRequest\032/.yan" +
+      "dex.cloud.access.ListAccessBindingsRespo" +
+      "nse\"H\202\323\344\223\002B\022@/organization-manager/v1/gr" +
+      "oups/{resource_id}:listAccessBindings\022\376\001" +
+      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
+      "s.SetAccessBindingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\226\001\202\323\344\223\002D\"?/organiz" +
+      "ation-manager/v1/groups/{resource_id}:se" +
+      "tAccessBindings:\001*\262\322*H\n access.SetAccess" +
+      "BindingsMetadata\022$access.AccessBindingsO" +
+      "perationResult\022\212\002\n\024UpdateAccessBindings\022" +
+      "0.yandex.cloud.access.UpdateAccessBindin" +
+      "gsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\234\001\202\323\344\223\002G\"B/organization-manager/v1/" +
+      "groups/{resource_id}:updateAccessBinding" +
+      "s:\001*\262\322*K\n#access.UpdateAccessBindingsMet" +
+      "adata\022$access.AccessBindingsOperationRes" +
+      "ult\022\275\001\n\rListEffective\0229.yandex.cloud.org" +
+      "anizationmanager.v1.ListEffectiveRequest" +
+      "\032:.yandex.cloud.organizationmanager.v1.L" +
+      "istEffectiveResponse\"5\202\323\344\223\002/\022-/organizat" +
+      "ion-manager/v1/groups:listEffectiveB\206\001\n\'" +
+      "yandex.cloud.api.organizationmanager.v1Z" +
+      "[github.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/organizationmanager/v1;organiz" +
+      "ationmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28237,7 +29428,13 @@ public final class GroupServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "Name", "Description", });
+        new java.lang.String[] { "OrganizationId", "Name", "Description", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_CreateGroupRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupMetadata_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_organizationmanager_v1_CreateGroupMetadata_fieldAccessorTable = new
@@ -28249,7 +29446,13 @@ public final class GroupServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "Name", "Description", "SubjectContainerId", "ExternalId", "MakeEditor", });
+        new java.lang.String[] { "OrganizationId", "Name", "Description", "SubjectContainerId", "ExternalId", "MakeEditor", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_organizationmanager_v1_CreateExternalGroupMetadata_fieldAccessorTable = new
@@ -28261,7 +29464,13 @@ public final class GroupServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_descriptor,
-        new java.lang.String[] { "GroupId", "UpdateMask", "Name", "Description", });
+        new java.lang.String[] { "GroupId", "UpdateMask", "Name", "Description", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMetadata_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMetadata_fieldAccessorTable = new
@@ -28375,6 +29584,7 @@ public final class GroupServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);

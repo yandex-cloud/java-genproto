@@ -2493,7 +2493,7 @@ public final class ProviderServiceOuterClass {
      * Folder ID.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -2502,7 +2502,7 @@ public final class ProviderServiceOuterClass {
      * Folder ID.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -2654,7 +2654,7 @@ public final class ProviderServiceOuterClass {
      * Folder ID.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -2675,7 +2675,7 @@ public final class ProviderServiceOuterClass {
      * Folder ID.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -3088,7 +3088,7 @@ public final class ProviderServiceOuterClass {
        * Folder ID.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -3108,7 +3108,7 @@ public final class ProviderServiceOuterClass {
        * Folder ID.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -3129,7 +3129,7 @@ public final class ProviderServiceOuterClass {
        * Folder ID.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -3148,7 +3148,7 @@ public final class ProviderServiceOuterClass {
        * Folder ID.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -3162,7 +3162,7 @@ public final class ProviderServiceOuterClass {
        * Folder ID.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -3411,27 +3411,28 @@ public final class ProviderServiceOuterClass {
       "operation.proto\032&yandex/cloud/operation/" +
       "operation.proto\032\035yandex/cloud/validation" +
       ".proto\"\231\001\n\027ActivateProviderRequest\022\037\n\tfo" +
-      "lder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004name\030\003 \001(" +
+      "lder_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022\022\n\004name\030\003 \001(" +
       "\tB\004\350\3071\001\022!\n\023skip_default_policy\030\004 \001(\010B\004\350\307" +
       "1\000\022 \n\030instance_registration_id\030\005 \001(\tJ\004\010\002" +
       "\020\003\";\n\030ActivateProviderMetadata\022\037\n\tfolder" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\035ListActivated" +
-      "ProvidersRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022 \n\030instance_registration_id\030\002 " +
-      "\001(\t\"H\n\036ListActivatedProvidersResponse\022\021\n" +
-      "\tfolder_id\030\001 \001(\t\022\r\n\005names\030\003 \003(\tJ\004\010\002\020\0032\367\002" +
-      "\n\017ProviderService\022\304\001\n\010Activate\022/.yandex." +
-      "cloud.backup.v1.ActivateProviderRequest\032" +
-      "!.yandex.cloud.operation.Operation\"d\202\323\344\223" +
-      "\002)\"$/backup/v1/providers/{name}:activate" +
-      ":\001*\262\322*1\n\030ActivateProviderMetadata\022\025googl" +
-      "e.protobuf.Empty\022\234\001\n\rListActivated\0225.yan" +
-      "dex.cloud.backup.v1.ListActivatedProvide" +
-      "rsRequest\0326.yandex.cloud.backup.v1.ListA" +
-      "ctivatedProvidersResponse\"\034\202\323\344\223\002\026\022\024/back" +
-      "up/v1/providersB_\n\032yandex.cloud.api.back" +
-      "up.v1ZAgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/backup/v1;backupb\006proto3"
+      "_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\"b\n\035ListActivated" +
+      "ProvidersRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\212\3101" +
+      "\004<=50\350\3071\001\022 \n\030instance_registration_id\030\002 " +
+      "\001(\t\"V\n\036ListActivatedProvidersResponse\022\037\n" +
+      "\tfolder_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022\r\n\005names\030" +
+      "\003 \003(\tJ\004\010\002\020\0032\367\002\n\017ProviderService\022\304\001\n\010Acti" +
+      "vate\022/.yandex.cloud.backup.v1.ActivatePr" +
+      "oviderRequest\032!.yandex.cloud.operation.O" +
+      "peration\"d\262\322*1\n\030ActivateProviderMetadata" +
+      "\022\025google.protobuf.Empty\202\323\344\223\002)\"$/backup/v" +
+      "1/providers/{name}:activate:\001*\022\234\001\n\rListA" +
+      "ctivated\0225.yandex.cloud.backup.v1.ListAc" +
+      "tivatedProvidersRequest\0326.yandex.cloud.b" +
+      "ackup.v1.ListActivatedProvidersResponse\"" +
+      "\034\202\323\344\223\002\026\022\024/backup/v1/providersB_\n\032yandex." +
+      "cloud.api.backup.v1ZAgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/backup/v1;" +
+      "backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

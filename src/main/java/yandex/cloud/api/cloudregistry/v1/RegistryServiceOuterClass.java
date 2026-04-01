@@ -1557,7 +1557,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
-    java.util.List<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> 
+    java.util.List<yandex.cloud.api.cloudregistry.v1.PR.Registry> 
         getRegistriesList();
     /**
      * <pre>
@@ -1566,7 +1566,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry getRegistries(int index);
+    yandex.cloud.api.cloudregistry.v1.PR.Registry getRegistries(int index);
     /**
      * <pre>
      * List of Registry resources.
@@ -1582,7 +1582,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
-    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder> 
         getRegistriesOrBuilderList();
     /**
      * <pre>
@@ -1591,7 +1591,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder getRegistriesOrBuilder(
+    yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder getRegistriesOrBuilder(
         int index);
 
     /**
@@ -1674,11 +1674,11 @@ public final class RegistryServiceOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                registries_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry>();
+                registries_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PR.Registry>();
                 mutable_bitField0_ |= 0x00000001;
               }
               registries_.add(
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PR.Registry.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -1723,7 +1723,7 @@ public final class RegistryServiceOuterClass {
     }
 
     public static final int REGISTRIES_FIELD_NUMBER = 1;
-    private java.util.List<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> registries_;
+    private java.util.List<yandex.cloud.api.cloudregistry.v1.PR.Registry> registries_;
     /**
      * <pre>
      * List of Registry resources.
@@ -1732,7 +1732,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> getRegistriesList() {
+    public java.util.List<yandex.cloud.api.cloudregistry.v1.PR.Registry> getRegistriesList() {
       return registries_;
     }
     /**
@@ -1743,7 +1743,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder> 
         getRegistriesOrBuilderList() {
       return registries_;
     }
@@ -1766,7 +1766,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry getRegistries(int index) {
+    public yandex.cloud.api.cloudregistry.v1.PR.Registry getRegistries(int index) {
       return registries_.get(index);
     }
     /**
@@ -1777,7 +1777,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder getRegistriesOrBuilder(
+    public yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder getRegistriesOrBuilder(
         int index) {
       return registries_.get(index);
     }
@@ -2197,17 +2197,17 @@ public final class RegistryServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> registries_ =
+      private java.util.List<yandex.cloud.api.cloudregistry.v1.PR.Registry> registries_ =
         java.util.Collections.emptyList();
       private void ensureRegistriesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          registries_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry>(registries_);
+          registries_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PR.Registry>(registries_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder> registriesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PR.Registry, yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder, yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder> registriesBuilder_;
 
       /**
        * <pre>
@@ -2216,7 +2216,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> getRegistriesList() {
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PR.Registry> getRegistriesList() {
         if (registriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(registries_);
         } else {
@@ -2244,7 +2244,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry getRegistries(int index) {
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry getRegistries(int index) {
         if (registriesBuilder_ == null) {
           return registries_.get(index);
         } else {
@@ -2259,7 +2259,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
       public Builder setRegistries(
-          int index, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PR.Registry value) {
         if (registriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2280,7 +2280,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
       public Builder setRegistries(
-          int index, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder builderForValue) {
         if (registriesBuilder_ == null) {
           ensureRegistriesIsMutable();
           registries_.set(index, builderForValue.build());
@@ -2297,7 +2297,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public Builder addRegistries(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry value) {
+      public Builder addRegistries(yandex.cloud.api.cloudregistry.v1.PR.Registry value) {
         if (registriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2318,7 +2318,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
       public Builder addRegistries(
-          int index, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PR.Registry value) {
         if (registriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2339,7 +2339,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
       public Builder addRegistries(
-          yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder builderForValue) {
         if (registriesBuilder_ == null) {
           ensureRegistriesIsMutable();
           registries_.add(builderForValue.build());
@@ -2357,7 +2357,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
       public Builder addRegistries(
-          int index, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder builderForValue) {
         if (registriesBuilder_ == null) {
           ensureRegistriesIsMutable();
           registries_.add(index, builderForValue.build());
@@ -2375,7 +2375,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
       public Builder addAllRegistries(
-          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.PR.Registry> values) {
         if (registriesBuilder_ == null) {
           ensureRegistriesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2427,7 +2427,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder getRegistriesBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder getRegistriesBuilder(
           int index) {
         return getRegistriesFieldBuilder().getBuilder(index);
       }
@@ -2438,7 +2438,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder getRegistriesOrBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder getRegistriesOrBuilder(
           int index) {
         if (registriesBuilder_ == null) {
           return registries_.get(index);  } else {
@@ -2452,7 +2452,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder> 
            getRegistriesOrBuilderList() {
         if (registriesBuilder_ != null) {
           return registriesBuilder_.getMessageOrBuilderList();
@@ -2467,9 +2467,9 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder addRegistriesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder addRegistriesBuilder() {
         return getRegistriesFieldBuilder().addBuilder(
-            yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDefaultInstance());
+            yandex.cloud.api.cloudregistry.v1.PR.Registry.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2478,10 +2478,10 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder addRegistriesBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder addRegistriesBuilder(
           int index) {
         return getRegistriesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDefaultInstance());
+            index, yandex.cloud.api.cloudregistry.v1.PR.Registry.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2490,16 +2490,16 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Registry registries = 1;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder> 
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder> 
            getRegistriesBuilderList() {
         return getRegistriesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PR.Registry, yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder, yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder> 
           getRegistriesFieldBuilder() {
         if (registriesBuilder_ == null) {
           registriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PR.Registry, yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder, yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder>(
                   registries_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -2801,7 +2801,7 @@ public final class RegistryServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
      * @return The kind.
      */
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind();
+    yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind getKind();
 
     /**
      * <pre>
@@ -2820,7 +2820,7 @@ public final class RegistryServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType();
+    yandex.cloud.api.cloudregistry.v1.PR.Registry.Type getType();
 
     /**
      * <pre>
@@ -3263,10 +3263,10 @@ public final class RegistryServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4 [(.yandex.cloud.required) = true];</code>
      * @return The kind.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind getKind() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.valueOf(kind_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.valueOf(kind_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.UNRECOGNIZED : result;
     }
 
     public static final int TYPE_FIELD_NUMBER = 5;
@@ -3290,10 +3290,10 @@ public final class RegistryServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PR.Registry.Type getType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.valueOf(type_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PR.Registry.Type result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.valueOf(type_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.UNRECOGNIZED : result;
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 6;
@@ -3465,10 +3465,10 @@ public final class RegistryServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           3);
-      if (kind_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
+      if (kind_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, kind_);
       }
-      if (type_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, type_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
@@ -3505,11 +3505,11 @@ public final class RegistryServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, labels__);
       }
-      if (kind_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
+      if (kind_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, kind_);
       }
-      if (type_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, type_);
       }
@@ -4286,10 +4286,10 @@ public final class RegistryServiceOuterClass {
        * @return The kind.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind() {
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind getKind() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.valueOf(kind_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.valueOf(kind_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -4300,7 +4300,7 @@ public final class RegistryServiceOuterClass {
        * @param value The kind to set.
        * @return This builder for chaining.
        */
-      public Builder setKind(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind value) {
+      public Builder setKind(yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4360,10 +4360,10 @@ public final class RegistryServiceOuterClass {
        * @return The type.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType() {
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Type getType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.valueOf(type_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PR.Registry.Type result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -4374,7 +4374,7 @@ public final class RegistryServiceOuterClass {
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type value) {
+      public Builder setType(yandex.cloud.api.cloudregistry.v1.PR.Registry.Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -9168,7 +9168,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
-    java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> 
+    java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> 
         getIpPermissionsList();
     /**
      * <pre>
@@ -9177,7 +9177,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getIpPermissions(int index);
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getIpPermissions(int index);
     /**
      * <pre>
      * IP permission to be set.
@@ -9193,7 +9193,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
-    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
         getIpPermissionsOrBuilderList();
     /**
      * <pre>
@@ -9202,7 +9202,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionsOrBuilder(
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getIpPermissionsOrBuilder(
         int index);
   }
   /**
@@ -9261,11 +9261,11 @@ public final class RegistryServiceOuterClass {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                ipPermissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission>();
+                ipPermissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission>();
                 mutable_bitField0_ |= 0x00000001;
               }
               ipPermissions_.add(
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -9350,7 +9350,7 @@ public final class RegistryServiceOuterClass {
     }
 
     public static final int IP_PERMISSIONS_FIELD_NUMBER = 2;
-    private java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> ipPermissions_;
+    private java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> ipPermissions_;
     /**
      * <pre>
      * IP permission to be set.
@@ -9359,7 +9359,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> getIpPermissionsList() {
+    public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> getIpPermissionsList() {
       return ipPermissions_;
     }
     /**
@@ -9370,7 +9370,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
         getIpPermissionsOrBuilderList() {
       return ipPermissions_;
     }
@@ -9393,7 +9393,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getIpPermissions(int index) {
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getIpPermissions(int index) {
       return ipPermissions_.get(index);
     }
     /**
@@ -9404,7 +9404,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionsOrBuilder(
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getIpPermissionsOrBuilder(
         int index) {
       return ipPermissions_.get(index);
     }
@@ -9864,17 +9864,17 @@ public final class RegistryServiceOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> ipPermissions_ =
+      private java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> ipPermissions_ =
         java.util.Collections.emptyList();
       private void ensureIpPermissionsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          ipPermissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission>(ipPermissions_);
+          ipPermissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission>(ipPermissions_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> ipPermissionsBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> ipPermissionsBuilder_;
 
       /**
        * <pre>
@@ -9883,7 +9883,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> getIpPermissionsList() {
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> getIpPermissionsList() {
         if (ipPermissionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ipPermissions_);
         } else {
@@ -9911,7 +9911,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getIpPermissions(int index) {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getIpPermissions(int index) {
         if (ipPermissionsBuilder_ == null) {
           return ipPermissions_.get(index);
         } else {
@@ -9926,7 +9926,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
       public Builder setIpPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (ipPermissionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9947,7 +9947,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
       public Builder setIpPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder builderForValue) {
         if (ipPermissionsBuilder_ == null) {
           ensureIpPermissionsIsMutable();
           ipPermissions_.set(index, builderForValue.build());
@@ -9964,7 +9964,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public Builder addIpPermissions(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+      public Builder addIpPermissions(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (ipPermissionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9985,7 +9985,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
       public Builder addIpPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (ipPermissionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10006,7 +10006,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
       public Builder addIpPermissions(
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder builderForValue) {
         if (ipPermissionsBuilder_ == null) {
           ensureIpPermissionsIsMutable();
           ipPermissions_.add(builderForValue.build());
@@ -10024,7 +10024,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
       public Builder addIpPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder builderForValue) {
         if (ipPermissionsBuilder_ == null) {
           ensureIpPermissionsIsMutable();
           ipPermissions_.add(index, builderForValue.build());
@@ -10042,7 +10042,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
       public Builder addAllIpPermissions(
-          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> values) {
         if (ipPermissionsBuilder_ == null) {
           ensureIpPermissionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -10094,7 +10094,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder getIpPermissionsBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder getIpPermissionsBuilder(
           int index) {
         return getIpPermissionsFieldBuilder().getBuilder(index);
       }
@@ -10105,7 +10105,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionsOrBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getIpPermissionsOrBuilder(
           int index) {
         if (ipPermissionsBuilder_ == null) {
           return ipPermissions_.get(index);  } else {
@@ -10119,7 +10119,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
            getIpPermissionsOrBuilderList() {
         if (ipPermissionsBuilder_ != null) {
           return ipPermissionsBuilder_.getMessageOrBuilderList();
@@ -10134,9 +10134,9 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder addIpPermissionsBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder addIpPermissionsBuilder() {
         return getIpPermissionsFieldBuilder().addBuilder(
-            yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+            yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance());
       }
       /**
        * <pre>
@@ -10145,10 +10145,10 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder addIpPermissionsBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder addIpPermissionsBuilder(
           int index) {
         return getIpPermissionsFieldBuilder().addBuilder(
-            index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+            index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance());
       }
       /**
        * <pre>
@@ -10157,16 +10157,16 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission ip_permissions = 2;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder> 
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder> 
            getIpPermissionsBuilderList() {
         return getIpPermissionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
           getIpPermissionsFieldBuilder() {
         if (ipPermissionsBuilder_ == null) {
           ipPermissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder>(
                   ipPermissions_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -10257,24 +10257,24 @@ public final class RegistryServiceOuterClass {
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
-    java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta> 
+    java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta> 
         getIpPermissionDeltasList();
     /**
      * <pre>
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta getIpPermissionDeltas(int index);
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta getIpPermissionDeltas(int index);
     /**
      * <pre>
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     int getIpPermissionDeltasCount();
     /**
@@ -10282,18 +10282,18 @@ public final class RegistryServiceOuterClass {
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
-    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder> 
         getIpPermissionDeltasOrBuilderList();
     /**
      * <pre>
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
         int index);
   }
   /**
@@ -10352,11 +10352,11 @@ public final class RegistryServiceOuterClass {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                ipPermissionDeltas_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta>();
+                ipPermissionDeltas_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta>();
                 mutable_bitField0_ |= 0x00000001;
               }
               ipPermissionDeltas_.add(
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -10441,16 +10441,16 @@ public final class RegistryServiceOuterClass {
     }
 
     public static final int IP_PERMISSION_DELTAS_FIELD_NUMBER = 2;
-    private java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta> ipPermissionDeltas_;
+    private java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta> ipPermissionDeltas_;
     /**
      * <pre>
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta> getIpPermissionDeltasList() {
+    public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta> getIpPermissionDeltasList() {
       return ipPermissionDeltas_;
     }
     /**
@@ -10458,10 +10458,10 @@ public final class RegistryServiceOuterClass {
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder> 
         getIpPermissionDeltasOrBuilderList() {
       return ipPermissionDeltas_;
     }
@@ -10470,7 +10470,7 @@ public final class RegistryServiceOuterClass {
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     @java.lang.Override
     public int getIpPermissionDeltasCount() {
@@ -10481,10 +10481,10 @@ public final class RegistryServiceOuterClass {
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta getIpPermissionDeltas(int index) {
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta getIpPermissionDeltas(int index) {
       return ipPermissionDeltas_.get(index);
     }
     /**
@@ -10492,10 +10492,10 @@ public final class RegistryServiceOuterClass {
      * Updates to IP permissions.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
         int index) {
       return ipPermissionDeltas_.get(index);
     }
@@ -10955,26 +10955,26 @@ public final class RegistryServiceOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta> ipPermissionDeltas_ =
+      private java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta> ipPermissionDeltas_ =
         java.util.Collections.emptyList();
       private void ensureIpPermissionDeltasIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          ipPermissionDeltas_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta>(ipPermissionDeltas_);
+          ipPermissionDeltas_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta>(ipPermissionDeltas_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder> ipPermissionDeltasBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder> ipPermissionDeltasBuilder_;
 
       /**
        * <pre>
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta> getIpPermissionDeltasList() {
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta> getIpPermissionDeltasList() {
         if (ipPermissionDeltasBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ipPermissionDeltas_);
         } else {
@@ -10986,7 +10986,7 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public int getIpPermissionDeltasCount() {
         if (ipPermissionDeltasBuilder_ == null) {
@@ -11000,9 +11000,9 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta getIpPermissionDeltas(int index) {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta getIpPermissionDeltas(int index) {
         if (ipPermissionDeltasBuilder_ == null) {
           return ipPermissionDeltas_.get(index);
         } else {
@@ -11014,10 +11014,10 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setIpPermissionDeltas(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta value) {
         if (ipPermissionDeltasBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11035,10 +11035,10 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setIpPermissionDeltas(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder builderForValue) {
         if (ipPermissionDeltasBuilder_ == null) {
           ensureIpPermissionDeltasIsMutable();
           ipPermissionDeltas_.set(index, builderForValue.build());
@@ -11053,9 +11053,9 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public Builder addIpPermissionDeltas(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta value) {
+      public Builder addIpPermissionDeltas(yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta value) {
         if (ipPermissionDeltasBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11073,10 +11073,10 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addIpPermissionDeltas(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta value) {
         if (ipPermissionDeltasBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11094,10 +11094,10 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addIpPermissionDeltas(
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder builderForValue) {
         if (ipPermissionDeltasBuilder_ == null) {
           ensureIpPermissionDeltasIsMutable();
           ipPermissionDeltas_.add(builderForValue.build());
@@ -11112,10 +11112,10 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addIpPermissionDeltas(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder builderForValue) {
         if (ipPermissionDeltasBuilder_ == null) {
           ensureIpPermissionDeltasIsMutable();
           ipPermissionDeltas_.add(index, builderForValue.build());
@@ -11130,10 +11130,10 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAllIpPermissionDeltas(
-          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta> values) {
         if (ipPermissionDeltasBuilder_ == null) {
           ensureIpPermissionDeltasIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -11149,7 +11149,7 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder clearIpPermissionDeltas() {
         if (ipPermissionDeltasBuilder_ == null) {
@@ -11166,7 +11166,7 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder removeIpPermissionDeltas(int index) {
         if (ipPermissionDeltasBuilder_ == null) {
@@ -11183,9 +11183,9 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder getIpPermissionDeltasBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder getIpPermissionDeltasBuilder(
           int index) {
         return getIpPermissionDeltasFieldBuilder().getBuilder(index);
       }
@@ -11194,9 +11194,9 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
           int index) {
         if (ipPermissionDeltasBuilder_ == null) {
           return ipPermissionDeltas_.get(index);  } else {
@@ -11208,9 +11208,9 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder> 
            getIpPermissionDeltasOrBuilderList() {
         if (ipPermissionDeltasBuilder_ != null) {
           return ipPermissionDeltasBuilder_.getMessageOrBuilderList();
@@ -11223,41 +11223,41 @@ public final class RegistryServiceOuterClass {
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder addIpPermissionDeltasBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder addIpPermissionDeltasBuilder() {
         return getIpPermissionDeltasFieldBuilder().addBuilder(
-            yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.getDefaultInstance());
+            yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.getDefaultInstance());
       }
       /**
        * <pre>
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder addIpPermissionDeltasBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder addIpPermissionDeltasBuilder(
           int index) {
         return getIpPermissionDeltasFieldBuilder().addBuilder(
-            index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.getDefaultInstance());
+            index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.getDefaultInstance());
       }
       /**
        * <pre>
        * Updates to IP permissions.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermissionDelta ip_permission_deltas = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder> 
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder> 
            getIpPermissionDeltasBuilderList() {
         return getIpPermissionDeltasFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder> 
           getIpPermissionDeltasFieldBuilder() {
         if (ipPermissionDeltasBuilder_ == null) {
           ipPermissionDeltasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder>(
                   ipPermissionDeltas_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -11934,7 +11934,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
-    java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> 
+    java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> 
         getPermissionsList();
     /**
      * <pre>
@@ -11943,7 +11943,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getPermissions(int index);
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getPermissions(int index);
     /**
      * <pre>
      * List of ip permissions for registry
@@ -11959,7 +11959,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
-    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
         getPermissionsOrBuilderList();
     /**
      * <pre>
@@ -11968,7 +11968,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getPermissionsOrBuilder(
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getPermissionsOrBuilder(
         int index);
   }
   /**
@@ -12020,11 +12020,11 @@ public final class RegistryServiceOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                permissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission>();
+                permissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission>();
                 mutable_bitField0_ |= 0x00000001;
               }
               permissions_.add(
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -12063,7 +12063,7 @@ public final class RegistryServiceOuterClass {
     }
 
     public static final int PERMISSIONS_FIELD_NUMBER = 1;
-    private java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> permissions_;
+    private java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> permissions_;
     /**
      * <pre>
      * List of ip permissions for registry
@@ -12072,7 +12072,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> getPermissionsList() {
+    public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> getPermissionsList() {
       return permissions_;
     }
     /**
@@ -12083,7 +12083,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
         getPermissionsOrBuilderList() {
       return permissions_;
     }
@@ -12106,7 +12106,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getPermissions(int index) {
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getPermissions(int index) {
       return permissions_.get(index);
     }
     /**
@@ -12117,7 +12117,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getPermissionsOrBuilder(
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getPermissionsOrBuilder(
         int index) {
       return permissions_.get(index);
     }
@@ -12464,17 +12464,17 @@ public final class RegistryServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> permissions_ =
+      private java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> permissions_ =
         java.util.Collections.emptyList();
       private void ensurePermissionsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          permissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission>(permissions_);
+          permissions_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission>(permissions_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> permissionsBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> permissionsBuilder_;
 
       /**
        * <pre>
@@ -12483,7 +12483,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> getPermissionsList() {
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> getPermissionsList() {
         if (permissionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(permissions_);
         } else {
@@ -12511,7 +12511,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getPermissions(int index) {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getPermissions(int index) {
         if (permissionsBuilder_ == null) {
           return permissions_.get(index);
         } else {
@@ -12526,7 +12526,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
       public Builder setPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (permissionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12547,7 +12547,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
       public Builder setPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder builderForValue) {
         if (permissionsBuilder_ == null) {
           ensurePermissionsIsMutable();
           permissions_.set(index, builderForValue.build());
@@ -12564,7 +12564,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public Builder addPermissions(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+      public Builder addPermissions(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (permissionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12585,7 +12585,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
       public Builder addPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (permissionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12606,7 +12606,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
       public Builder addPermissions(
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder builderForValue) {
         if (permissionsBuilder_ == null) {
           ensurePermissionsIsMutable();
           permissions_.add(builderForValue.build());
@@ -12624,7 +12624,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
       public Builder addPermissions(
-          int index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder builderForValue) {
         if (permissionsBuilder_ == null) {
           ensurePermissionsIsMutable();
           permissions_.add(index, builderForValue.build());
@@ -12642,7 +12642,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
       public Builder addAllPermissions(
-          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermission> values) {
         if (permissionsBuilder_ == null) {
           ensurePermissionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -12694,7 +12694,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder getPermissionsBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder getPermissionsBuilder(
           int index) {
         return getPermissionsFieldBuilder().getBuilder(index);
       }
@@ -12705,7 +12705,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getPermissionsOrBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getPermissionsOrBuilder(
           int index) {
         if (permissionsBuilder_ == null) {
           return permissions_.get(index);  } else {
@@ -12719,7 +12719,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
            getPermissionsOrBuilderList() {
         if (permissionsBuilder_ != null) {
           return permissionsBuilder_.getMessageOrBuilderList();
@@ -12734,9 +12734,9 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder addPermissionsBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder addPermissionsBuilder() {
         return getPermissionsFieldBuilder().addBuilder(
-            yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+            yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance());
       }
       /**
        * <pre>
@@ -12745,10 +12745,10 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder addPermissionsBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder addPermissionsBuilder(
           int index) {
         return getPermissionsFieldBuilder().addBuilder(
-            index, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+            index, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance());
       }
       /**
        * <pre>
@@ -12757,16 +12757,16 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.IpPermission permissions = 1;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder> 
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder> 
            getPermissionsBuilderList() {
         return getPermissionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
           getPermissionsFieldBuilder() {
         if (permissionsBuilder_ == null) {
           permissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder>(
                   permissions_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -15152,7 +15152,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
-    java.util.List<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> 
+    java.util.List<yandex.cloud.api.cloudregistry.v1.PA.Artifact> 
         getArtifactsList();
     /**
      * <pre>
@@ -15161,7 +15161,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact getArtifacts(int index);
+    yandex.cloud.api.cloudregistry.v1.PA.Artifact getArtifacts(int index);
     /**
      * <pre>
      * List of Registry artifact resources.
@@ -15177,7 +15177,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
-    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder> 
         getArtifactsOrBuilderList();
     /**
      * <pre>
@@ -15186,7 +15186,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder getArtifactsOrBuilder(
+    yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder getArtifactsOrBuilder(
         int index);
 
     /**
@@ -15269,11 +15269,11 @@ public final class RegistryServiceOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                artifacts_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact>();
+                artifacts_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PA.Artifact>();
                 mutable_bitField0_ |= 0x00000001;
               }
               artifacts_.add(
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PA.Artifact.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -15318,7 +15318,7 @@ public final class RegistryServiceOuterClass {
     }
 
     public static final int ARTIFACTS_FIELD_NUMBER = 1;
-    private java.util.List<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> artifacts_;
+    private java.util.List<yandex.cloud.api.cloudregistry.v1.PA.Artifact> artifacts_;
     /**
      * <pre>
      * List of Registry artifact resources.
@@ -15327,7 +15327,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> getArtifactsList() {
+    public java.util.List<yandex.cloud.api.cloudregistry.v1.PA.Artifact> getArtifactsList() {
       return artifacts_;
     }
     /**
@@ -15338,7 +15338,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder> 
         getArtifactsOrBuilderList() {
       return artifacts_;
     }
@@ -15361,7 +15361,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact getArtifacts(int index) {
+    public yandex.cloud.api.cloudregistry.v1.PA.Artifact getArtifacts(int index) {
       return artifacts_.get(index);
     }
     /**
@@ -15372,7 +15372,7 @@ public final class RegistryServiceOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder getArtifactsOrBuilder(
+    public yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder getArtifactsOrBuilder(
         int index) {
       return artifacts_.get(index);
     }
@@ -15792,17 +15792,17 @@ public final class RegistryServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> artifacts_ =
+      private java.util.List<yandex.cloud.api.cloudregistry.v1.PA.Artifact> artifacts_ =
         java.util.Collections.emptyList();
       private void ensureArtifactsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          artifacts_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact>(artifacts_);
+          artifacts_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PA.Artifact>(artifacts_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder> artifactsBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PA.Artifact, yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder, yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder> artifactsBuilder_;
 
       /**
        * <pre>
@@ -15811,7 +15811,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> getArtifactsList() {
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PA.Artifact> getArtifactsList() {
         if (artifactsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(artifacts_);
         } else {
@@ -15839,7 +15839,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact getArtifacts(int index) {
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact getArtifacts(int index) {
         if (artifactsBuilder_ == null) {
           return artifacts_.get(index);
         } else {
@@ -15854,7 +15854,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
       public Builder setArtifacts(
-          int index, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PA.Artifact value) {
         if (artifactsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15875,7 +15875,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
       public Builder setArtifacts(
-          int index, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder builderForValue) {
         if (artifactsBuilder_ == null) {
           ensureArtifactsIsMutable();
           artifacts_.set(index, builderForValue.build());
@@ -15892,7 +15892,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public Builder addArtifacts(yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact value) {
+      public Builder addArtifacts(yandex.cloud.api.cloudregistry.v1.PA.Artifact value) {
         if (artifactsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15913,7 +15913,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
       public Builder addArtifacts(
-          int index, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PA.Artifact value) {
         if (artifactsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15934,7 +15934,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
       public Builder addArtifacts(
-          yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder builderForValue) {
         if (artifactsBuilder_ == null) {
           ensureArtifactsIsMutable();
           artifacts_.add(builderForValue.build());
@@ -15952,7 +15952,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
       public Builder addArtifacts(
-          int index, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder builderForValue) {
         if (artifactsBuilder_ == null) {
           ensureArtifactsIsMutable();
           artifacts_.add(index, builderForValue.build());
@@ -15970,7 +15970,7 @@ public final class RegistryServiceOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
       public Builder addAllArtifacts(
-          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.PA.Artifact> values) {
         if (artifactsBuilder_ == null) {
           ensureArtifactsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -16022,7 +16022,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder getArtifactsBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder getArtifactsBuilder(
           int index) {
         return getArtifactsFieldBuilder().getBuilder(index);
       }
@@ -16033,7 +16033,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder getArtifactsOrBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder getArtifactsOrBuilder(
           int index) {
         if (artifactsBuilder_ == null) {
           return artifacts_.get(index);  } else {
@@ -16047,7 +16047,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder> 
            getArtifactsOrBuilderList() {
         if (artifactsBuilder_ != null) {
           return artifactsBuilder_.getMessageOrBuilderList();
@@ -16062,9 +16062,9 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder addArtifactsBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder addArtifactsBuilder() {
         return getArtifactsFieldBuilder().addBuilder(
-            yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.getDefaultInstance());
+            yandex.cloud.api.cloudregistry.v1.PA.Artifact.getDefaultInstance());
       }
       /**
        * <pre>
@@ -16073,10 +16073,10 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder addArtifactsBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder addArtifactsBuilder(
           int index) {
         return getArtifactsFieldBuilder().addBuilder(
-            index, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.getDefaultInstance());
+            index, yandex.cloud.api.cloudregistry.v1.PA.Artifact.getDefaultInstance());
       }
       /**
        * <pre>
@@ -16085,16 +16085,16 @@ public final class RegistryServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.Artifact artifacts = 1;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder> 
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder> 
            getArtifactsBuilderList() {
         return getArtifactsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PA.Artifact, yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder, yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder> 
           getArtifactsFieldBuilder() {
         if (artifactsBuilder_ == null) {
           artifactsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PA.Artifact, yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder, yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder>(
                   artifacts_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -16393,163 +16393,163 @@ public final class RegistryServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n4yandex/cloud/cloudregistry/v1/registry" +
       "_service.proto\022\035yandex.cloud.cloudregist" +
-      "ry.v1\032 yandex/cloud/api/operation.proto\032" +
-      " yandex/cloud/access/access.proto\032,yande" +
-      "x/cloud/cloudregistry/v1/registry.proto\032" +
-      "&yandex/cloud/operation/operation.proto\032" +
-      "\035yandex/cloud/validation.proto\032 google/p" +
-      "rotobuf/field_mask.proto\0321yandex/cloud/c" +
-      "loudregistry/v1/ip_permission.proto\032,yan" +
-      "dex/cloud/cloudregistry/v1/artifact.prot" +
-      "o\032\034google/api/annotations.proto\"7\n\022GetRe" +
-      "gistryRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"v\n\025ListRegistriesRequest\022\037\n\tfol" +
-      "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "ry.v1\032\034google/api/annotations.proto\032 goo" +
+      "gle/protobuf/field_mask.proto\032 yandex/cl" +
+      "oud/access/access.proto\032 yandex/cloud/ap" +
+      "i/operation.proto\032,yandex/cloud/cloudreg" +
+      "istry/v1/artifact.proto\0321yandex/cloud/cl" +
+      "oudregistry/v1/ip_permission.proto\032,yand" +
+      "ex/cloud/cloudregistry/v1/registry.proto" +
+      "\032&yandex/cloud/operation/operation.proto" +
+      "\032\035yandex/cloud/validation.proto\"7\n\022GetRe" +
+      "gistryRequest\022!\n\013registry_id\030\001 \001(\tB\014\212\3101\004" +
+      "<=50\350\3071\001\"v\n\025ListRegistriesRequest\022\037\n\tfol" +
+      "der_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022\035\n\tpage_size\030" +
       "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
       "\3101\005<=100\"n\n\026ListRegistriesResponse\022;\n\nre" +
       "gistries\030\001 \003(\0132\'.yandex.cloud.cloudregis" +
       "try.v1.Registry\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\260\005\n\025CreateRegistryRequest\022\037\n\tfolder_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\221\001\n\006labels\030" +
+      "\"\250\005\n\025CreateRegistryRequest\022\037\n\tfolder_id\030" +
+      "\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022/\n\004name\030\002 \001(\tB!\362\3071\035|" +
+      "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\215\001\n\006labels\030" +
       "\003 \003(\0132@.yandex.cloud.cloudregistry.v1.Cr" +
-      "eateRegistryRequest.LabelsEntryB?\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\022@\n\004kind\030\004 \001(\0162,.yandex." +
-      "cloud.cloudregistry.v1.Registry.KindB\004\350\307" +
-      "1\001\022@\n\004type\030\005 \001(\0162,.yandex.cloud.cloudreg" +
-      "istry.v1.Registry.TypeB\004\350\3071\001\022\037\n\013descript" +
-      "ion\030\006 \001(\tB\n\212\3101\006<=1024\022\251\001\n\nproperties\030\007 \003" +
-      "(\0132D.yandex.cloud.cloudregistry.v1.Creat" +
-      "eRegistryRequest.PropertiesEntryBO\202\3101\004<=" +
-      "64\212\3101\005<=255\362\3071![-_.~!*\'();/?:@&=+$,%#0-9" +
-      "a-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022\t[a-zA-Z]+\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"-\n\026CreateRegistryMetadata\022\023\n" +
-      "\013registry_id\030\001 \001(\t\"\337\004\n\025UpdateRegistryReq" +
-      "uest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0" +
-      "-9]{1,61}[a-z0-9]\022\221\001\n\006labels\030\004 \003(\0132@.yan" +
+      "eateRegistryRequest.LabelsEntryB;\212\3101\004<=6" +
+      "3\262\3101\030\022\020[a-z][-_0-9a-z]*\032\0041-63\362\3071\013[-_0-9a" +
+      "-z]*\202\3101\004<=64\022@\n\004kind\030\004 \001(\0162,.yandex.clou" +
+      "d.cloudregistry.v1.Registry.KindB\004\350\3071\001\022@" +
+      "\n\004type\030\005 \001(\0162,.yandex.cloud.cloudregistr" +
+      "y.v1.Registry.TypeB\004\350\3071\001\022\037\n\013description\030" +
+      "\006 \001(\tB\n\212\3101\006<=1024\022\245\001\n\nproperties\030\007 \003(\0132D" +
+      ".yandex.cloud.cloudregistry.v1.CreateReg" +
+      "istryRequest.PropertiesEntryBK\212\3101\005<=255\262" +
+      "\3101\021\022\t[a-zA-Z]+\032\0041-63\362\3071![-_.~!*\'();/?:@&" +
+      "=+$,%#0-9a-zA-Z]+\202\3101\004<=64\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017Prop" +
+      "ertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"-\n\026CreateRegistryMetadata\022\023\n\013registr" +
+      "y_id\030\001 \001(\t\"\327\004\n\025UpdateRegistryRequest\022!\n\013" +
+      "registry_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022/\n\013updat" +
+      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
+      "\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61" +
+      "}[a-z0-9]\022\215\001\n\006labels\030\004 \003(\0132@.yandex.clou" +
+      "d.cloudregistry.v1.UpdateRegistryRequest" +
+      ".LabelsEntryB;\212\3101\004<=63\262\3101\030\022\020[a-z][-_0-9a" +
+      "-z]*\032\0041-63\362\3071\013[-_0-9a-z]*\202\3101\004<=64\022\037\n\013des" +
+      "cription\030\005 \001(\tB\n\212\3101\006<=1024\022\245\001\n\npropertie" +
+      "s\030\006 \003(\0132D.yandex.cloud.cloudregistry.v1." +
+      "UpdateRegistryRequest.PropertiesEntryBK\212" +
+      "\3101\005<=255\262\3101\021\022\t[a-zA-Z]+\032\0041-63\362\3071![-_.~!*" +
+      "\'();/?:@&=+$,%#0-9a-zA-Z]+\202\3101\004<=64\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"-\n\026UpdateRegistryMetadata\022\023" +
+      "\n\013registry_id\030\001 \001(\t\":\n\025DeleteRegistryReq" +
+      "uest\022!\n\013registry_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\"" +
+      "-\n\026DeleteRegistryMetadata\022\023\n\013registry_id" +
+      "\030\001 \001(\t\"\201\001\n\027SetIpPermissionsRequest\022!\n\013re" +
+      "gistry_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022C\n\016ip_perm" +
+      "issions\030\002 \003(\0132+.yandex.cloud.cloudregist" +
+      "ry.v1.IpPermission\"\227\001\n\032UpdateIpPermissio" +
+      "nsRequest\022!\n\013registry_id\030\001 \001(\tB\014\212\3101\004<=50" +
+      "\350\3071\001\022V\n\024ip_permission_deltas\030\002 \003(\01320.yan" +
+      "dex.cloud.cloudregistry.v1.IpPermissionD" +
+      "eltaB\006\202\3101\002>0\"=\n\030ListIpPermissionsRequest" +
+      "\022!\n\013registry_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\"]\n\031L" +
+      "istIpPermissionsResponse\022@\n\013permissions\030" +
+      "\001 \003(\0132+.yandex.cloud.cloudregistry.v1.Ip" +
+      "Permission\"/\n\030SetIpPermissionsMetadata\022\023" +
+      "\n\013registry_id\030\001 \001(\t\"2\n\033UpdateIpPermissio" +
+      "nsMetadata\022\023\n\013registry_id\030\001 \001(\t\"\201\001\n\024List" +
+      "ArtifactsRequest\022\035\n\013registry_id\030\001 \001(\tB\010\212" +
+      "\3101\004<=50\022\014\n\004path\030\002 \001(\t\022\035\n\tpage_size\030\003 \001(\003" +
+      "B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=" +
+      "100\"l\n\025ListArtifactsResponse\022:\n\tartifact" +
+      "s\030\001 \003(\0132\'.yandex.cloud.cloudregistry.v1." +
+      "Artifact\022\027\n\017next_page_token\030\002 \001(\t2\213\025\n\017Re" +
+      "gistryService\022\226\001\n\003Get\0221.yandex.cloud.clo" +
+      "udregistry.v1.GetRegistryRequest\032\'.yande" +
+      "x.cloud.cloudregistry.v1.Registry\"3\202\323\344\223\002" +
+      "-\022+/cloud-registry/v1/registries/{regist" +
+      "ry_id}\022\232\001\n\004List\0224.yandex.cloud.cloudregi" +
+      "stry.v1.ListRegistriesRequest\0325.yandex.c" +
+      "loud.cloudregistry.v1.ListRegistriesResp" +
+      "onse\"%\202\323\344\223\002\037\022\035/cloud-registry/v1/registr" +
+      "ies\022\261\001\n\006Create\0224.yandex.cloud.cloudregis" +
+      "try.v1.CreateRegistryRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"N\262\322*\"\n\026CreateReg" +
+      "istryMetadata\022\010Registry\202\323\344\223\002\"\"\035/cloud-re" +
+      "gistry/v1/registries:\001*\022\277\001\n\006Update\0224.yan" +
       "dex.cloud.cloudregistry.v1.UpdateRegistr" +
-      "yRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\307" +
-      "1\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
-      "a-z]*\022\037\n\013description\030\005 \001(\tB\n\212\3101\006<=1024\022\251" +
-      "\001\n\nproperties\030\006 \003(\0132D.yandex.cloud.cloud" +
-      "registry.v1.UpdateRegistryRequest.Proper" +
-      "tiesEntryBO\202\3101\004<=64\212\3101\005<=255\362\3071![-_.~!*\'" +
-      "();/?:@&=+$,%#0-9a-zA-Z]+\262\3101\006\032\0041-63\262\3101\013\022" +
-      "\t[a-zA-Z]+\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\0321\n\017PropertiesEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateRe" +
-      "gistryMetadata\022\023\n\013registry_id\030\001 \001(\t\":\n\025D" +
-      "eleteRegistryRequest\022!\n\013registry_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRegistryMetadat" +
-      "a\022\023\n\013registry_id\030\001 \001(\t\"\201\001\n\027SetIpPermissi" +
-      "onsRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022C\n\016ip_permissions\030\002 \003(\0132+.yandex.c" +
-      "loud.cloudregistry.v1.IpPermission\"\217\001\n\032U" +
-      "pdateIpPermissionsRequest\022!\n\013registry_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022N\n\024ip_permission_de" +
-      "ltas\030\002 \003(\01320.yandex.cloud.cloudregistry." +
-      "v1.IpPermissionDelta\"=\n\030ListIpPermission" +
-      "sRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"]\n\031ListIpPermissionsResponse\022@\n\013perm" +
-      "issions\030\001 \003(\0132+.yandex.cloud.cloudregist" +
-      "ry.v1.IpPermission\"/\n\030SetIpPermissionsMe" +
-      "tadata\022\023\n\013registry_id\030\001 \001(\t\"2\n\033UpdateIpP" +
-      "ermissionsMetadata\022\023\n\013registry_id\030\001 \001(\t\"" +
-      "\201\001\n\024ListArtifactsRequest\022\035\n\013registry_id\030" +
-      "\001 \001(\tB\010\212\3101\004<=50\022\014\n\004path\030\002 \001(\t\022\035\n\tpage_si" +
-      "ze\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\t" +
-      "B\t\212\3101\005<=100\"l\n\025ListArtifactsResponse\022:\n\t" +
-      "artifacts\030\001 \003(\0132\'.yandex.cloud.cloudregi" +
-      "stry.v1.Artifact\022\027\n\017next_page_token\030\002 \001(" +
-      "\t2\213\025\n\017RegistryService\022\226\001\n\003Get\0221.yandex.c" +
-      "loud.cloudregistry.v1.GetRegistryRequest" +
-      "\032\'.yandex.cloud.cloudregistry.v1.Registr" +
-      "y\"3\202\323\344\223\002-\022+/cloud-registry/v1/registries" +
-      "/{registry_id}\022\232\001\n\004List\0224.yandex.cloud.c" +
-      "loudregistry.v1.ListRegistriesRequest\0325." +
-      "yandex.cloud.cloudregistry.v1.ListRegist" +
-      "riesResponse\"%\202\323\344\223\002\037\022\035/cloud-registry/v1" +
-      "/registries\022\261\001\n\006Create\0224.yandex.cloud.cl" +
-      "oudregistry.v1.CreateRegistryRequest\032!.y" +
-      "andex.cloud.operation.Operation\"N\202\323\344\223\002\"\"" +
-      "\035/cloud-registry/v1/registries:\001*\262\322*\"\n\026C" +
-      "reateRegistryMetadata\022\010Registry\022\277\001\n\006Upda" +
-      "te\0224.yandex.cloud.cloudregistry.v1.Updat" +
-      "eRegistryRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\\\202\323\344\223\00202+/cloud-registry/v1/" +
-      "registries/{registry_id}:\001*\262\322*\"\n\026UpdateR" +
-      "egistryMetadata\022\010Registry\022\311\001\n\006Delete\0224.y" +
-      "andex.cloud.cloudregistry.v1.DeleteRegis" +
-      "tryRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"f\202\323\344\223\002-*+/cloud-registry/v1/regist" +
-      "ries/{registry_id}\262\322*/\n\026DeleteRegistryMe" +
-      "tadata\022\025google.protobuf.Empty\022\332\001\n\013ForceD" +
-      "elete\0224.yandex.cloud.cloudregistry.v1.De" +
-      "leteRegistryRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"r\202\323\344\223\0029\"7/cloud-registry/" +
-      "v1/registries/{registry_id}:forceDelete\262" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\\\262\322*\"\n\026UpdateRegistryMetadata\022\010Regis" +
+      "try\202\323\344\223\00202+/cloud-registry/v1/registries" +
+      "/{registry_id}:\001*\022\311\001\n\006Delete\0224.yandex.cl" +
+      "oud.cloudregistry.v1.DeleteRegistryReque" +
+      "st\032!.yandex.cloud.operation.Operation\"f\262" +
       "\322*/\n\026DeleteRegistryMetadata\022\025google.prot" +
-      "obuf.Empty\022\275\001\n\022ListAccessBindings\022..yand" +
-      "ex.cloud.access.ListAccessBindingsReques" +
-      "t\032/.yandex.cloud.access.ListAccessBindin" +
-      "gsResponse\"F\202\323\344\223\002@\022>/cloud-registry/v1/r" +
-      "egistries/{resource_id}:listAccessBindin" +
-      "gs\022\355\001\n\021SetAccessBindings\022-.yandex.cloud." +
-      "access.SetAccessBindingsRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\205\001\202\323\344\223\002B\"=/cl" +
-      "oud-registry/v1/registries/{resource_id}" +
-      ":setAccessBindings:\001*\262\322*9\n access.SetAcc" +
+      "obuf.Empty\202\323\344\223\002-*+/cloud-registry/v1/reg" +
+      "istries/{registry_id}\022\332\001\n\013ForceDelete\0224." +
+      "yandex.cloud.cloudregistry.v1.DeleteRegi" +
+      "stryRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"r\262\322*/\n\026DeleteRegistryMetadata\022\025go" +
+      "ogle.protobuf.Empty\202\323\344\223\0029\"7/cloud-regist" +
+      "ry/v1/registries/{registry_id}:forceDele" +
+      "te\022\275\001\n\022ListAccessBindings\022..yandex.cloud" +
+      ".access.ListAccessBindingsRequest\032/.yand" +
+      "ex.cloud.access.ListAccessBindingsRespon" +
+      "se\"F\202\323\344\223\002@\022>/cloud-registry/v1/registrie" +
+      "s/{resource_id}:listAccessBindings\022\355\001\n\021S" +
+      "etAccessBindings\022-.yandex.cloud.access.S" +
+      "etAccessBindingsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\205\001\262\322*9\n access.SetAcc" +
       "essBindingsMetadata\022\025google.protobuf.Emp" +
-      "ty\022\371\001\n\024UpdateAccessBindings\0220.yandex.clo" +
-      "ud.access.UpdateAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\213\001\202\323\344\223\002" +
-      "E\"@/cloud-registry/v1/registries/{resour" +
-      "ce_id}:updateAccessBindings:\001*\262\322*<\n#acce" +
-      "ss.UpdateAccessBindingsMetadata\022\025google." +
-      "protobuf.Empty\022\315\001\n\021ListIpPermissions\0227.y" +
-      "andex.cloud.cloudregistry.v1.ListIpPermi" +
-      "ssionsRequest\0328.yandex.cloud.cloudregist" +
-      "ry.v1.ListIpPermissionsResponse\"E\202\323\344\223\002?\022" +
-      "=/cloud-registry/v1/registries/{registry" +
-      "_id}:listIpPermissions\022\353\001\n\020SetIpPermissi" +
-      "ons\0226.yandex.cloud.cloudregistry.v1.SetI" +
-      "pPermissionsRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"|\202\323\344\223\002A\"</cloud-registry/" +
-      "v1/registries/{registry_id}:setIpPermiss" +
-      "ions:\001*\262\322*1\n\030SetIpPermissionsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\370\001\n\023UpdateIpPermiss" +
-      "ions\0229.yandex.cloud.cloudregistry.v1.Upd" +
-      "ateIpPermissionsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\202\001\202\323\344\223\002D\"?/cloud-regi" +
-      "stry/v1/registries/{registry_id}:updateI" +
-      "pPermissions:\001*\262\322*4\n\033UpdateIpPermissions" +
-      "Metadata\022\025google.protobuf.Empty\022\275\001\n\rList" +
-      "Artifacts\0223.yandex.cloud.cloudregistry.v" +
-      "1.ListArtifactsRequest\0324.yandex.cloud.cl" +
-      "oudregistry.v1.ListArtifactsResponse\"A\202\323" +
-      "\344\223\002;\0229/cloud-registry/v1/registries/{reg" +
-      "istry_id}:listArtifactsBt\n!yandex.cloud." +
-      "api.cloudregistry.v1ZOgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/cloudregi" +
-      "stry/v1;cloudregistryb\006proto3"
+      "ty\202\323\344\223\002B\"=/cloud-registry/v1/registries/" +
+      "{resource_id}:setAccessBindings:\001*\022\371\001\n\024U" +
+      "pdateAccessBindings\0220.yandex.cloud.acces" +
+      "s.UpdateAccessBindingsRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\213\001\262\322*<\n#access." +
+      "UpdateAccessBindingsMetadata\022\025google.pro" +
+      "tobuf.Empty\202\323\344\223\002E\"@/cloud-registry/v1/re" +
+      "gistries/{resource_id}:updateAccessBindi" +
+      "ngs:\001*\022\315\001\n\021ListIpPermissions\0227.yandex.cl" +
+      "oud.cloudregistry.v1.ListIpPermissionsRe" +
+      "quest\0328.yandex.cloud.cloudregistry.v1.Li" +
+      "stIpPermissionsResponse\"E\202\323\344\223\002?\022=/cloud-" +
+      "registry/v1/registries/{registry_id}:lis" +
+      "tIpPermissions\022\353\001\n\020SetIpPermissions\0226.ya" +
+      "ndex.cloud.cloudregistry.v1.SetIpPermiss" +
+      "ionsRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"|\262\322*1\n\030SetIpPermissionsMetadata\022\025" +
+      "google.protobuf.Empty\202\323\344\223\002A\"</cloud-regi" +
+      "stry/v1/registries/{registry_id}:setIpPe" +
+      "rmissions:\001*\022\370\001\n\023UpdateIpPermissions\0229.y" +
+      "andex.cloud.cloudregistry.v1.UpdateIpPer" +
+      "missionsRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\202\001\262\322*4\n\033UpdateIpPermissionsMe" +
+      "tadata\022\025google.protobuf.Empty\202\323\344\223\002D\"?/cl" +
+      "oud-registry/v1/registries/{registry_id}" +
+      ":updateIpPermissions:\001*\022\275\001\n\rListArtifact" +
+      "s\0223.yandex.cloud.cloudregistry.v1.ListAr" +
+      "tifactsRequest\0324.yandex.cloud.cloudregis" +
+      "try.v1.ListArtifactsResponse\"A\202\323\344\223\002;\0229/c" +
+      "loud-registry/v1/registries/{registry_id" +
+      "}:listArtifactsBt\n!yandex.cloud.api.clou" +
+      "dregistry.v1ZOgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/cloudregistry/v1;" +
+      "cloudregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
-          yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.cloudregistry.v1.PA.getDescriptor(),
+          yandex.cloud.api.cloudregistry.v1.PIP.getDescriptor(),
+          yandex.cloud.api.cloudregistry.v1.PR.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.getDescriptor(),
-          yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_yandex_cloud_cloudregistry_v1_GetRegistryRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -16689,15 +16689,15 @@ public final class RegistryServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.cloudregistry.v1.PA.getDescriptor();
+    yandex.cloud.api.cloudregistry.v1.PIP.getDescriptor();
+    yandex.cloud.api.cloudregistry.v1.PR.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.getDescriptor();
-    yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

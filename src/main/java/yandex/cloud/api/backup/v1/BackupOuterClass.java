@@ -710,8 +710,8 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * Encryption Algorithm for underlying backups: 
-     * `ENCRYPTION_ALGORITHM_UNSPECIFIED`, `NONE`, `AES128`, `AES192`, 
+     * Encryption Algorithm for underlying backups:
+     * `ENCRYPTION_ALGORITHM_UNSPECIFIED`, `NONE`, `AES128`, `AES192`,
      * `AES256`.
      * </pre>
      *
@@ -14626,8 +14626,8 @@ public final class BackupOuterClass {
       "\n#yandex/cloud/backup/v1/backup.proto\022\026y" +
       "andex.cloud.backup.v1\032\037google/protobuf/t" +
       "imestamp.proto\032\036google/protobuf/wrappers" +
-      ".proto\032\035yandex/cloud/validation.proto\032#y" +
-      "andex/cloud/backup/v1/policy.proto\"\301\010\n\007A" +
+      ".proto\032#yandex/cloud/backup/v1/policy.pr" +
+      "oto\032\035yandex/cloud/validation.proto\"\273\010\n\007A" +
       "rchive\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010vaul" +
       "t_id\030\003 \001(\t\022E\n\nattributes\030\004 \001(\01321.yandex." +
       "cloud.backup.v1.Archive.ArchiveAttribute" +
@@ -14654,51 +14654,51 @@ public final class BackupOuterClass {
       "TION_ALGORITHM_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\n" +
       "\n\006AES128\020\002\022\n\n\006AES192\020\003\022\n\n\006AES256\020\004\"B\n\006Ac" +
       "tion\022\026\n\022ACTION_UNSPECIFIED\020\000\022\013\n\007REFRESH\020" +
-      "\001\022\023\n\017DELETE_BY_AGENT\020\002J\004\010\021\020\024J\004\010\025\020\026J\004\010\034\020\035" +
-      "J\004\010\035\020\036\"u\n\006Volume\022\022\n\nfree_space\030\001 \001(\003\022\023\n\013" +
-      "is_bootable\030\002 \001(\010\022\021\n\tis_system\030\003 \001(\010\022\014\n\004" +
-      "name\030\004 \001(\t\022\014\n\004size\030\005 \001(\003\022\023\n\013mount_strid\030" +
-      "\006 \001(\t\"i\n\004Disk\022\024\n\014device_model\030\001 \001(\t\022\014\n\004n" +
-      "ame\030\002 \001(\t\022\014\n\004size\030\003 \001(\003\022/\n\007volumes\030\004 \003(\013" +
-      "2\036.yandex.cloud.backup.v1.Volume\"\372\004\n\006Bac" +
-      "kup\022\n\n\002id\030\001 \001(\t\022\020\n\010vault_id\030\002 \001(\t\022\022\n\narc" +
-      "hive_id\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\0220\n\014last_seen_at\030\005 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\014\n\004size\030" +
-      "\006 \001(\003\022\031\n\021deduplicated_size\030\007 \001(\003\022\033\n\023back" +
-      "ed_up_data_size\030\010 \001(\003\022\032\n\022original_data_s" +
-      "ize\030\t \001(\003\022C\n\nattributes\030\n \001(\0132/.yandex.c" +
-      "loud.backup.v1.Backup.BackupAttributes\022\033" +
-      "\n\023compute_instance_id\030\013 \001(\t\022+\n\005disks\030\016 \003" +
-      "(\0132\034.yandex.cloud.backup.v1.Disk\0221\n\004type" +
-      "\030\017 \001(\0162#.yandex.cloud.backup.v1.Backup.T" +
-      "ype\022\017\n\007deleted\030\025 \001(\010\022\021\n\tpolicy_id\030\026 \001(\t\022" +
-      "\023\n\013resource_id\030\027 \001(\t\0324\n\020BackupAttributes" +
-      "\022\023\n\013stream_name\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\"7\n\004Ty" +
-      "pe\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\017\n\013IN" +
-      "CREMENTAL\020\002J\004\010\014\020\rJ\004\010\r\020\016J\004\010\020\020\025\"\304\003\n\nBackup" +
-      "File\022\020\n\002id\030\001 \001(\tB\004\350\3071\001\0225\n\tparent_id\030\002 \001(" +
-      "\0132\034.google.protobuf.StringValueB\004\350\3071\000\022;\n" +
-      "\004type\030\003 \001(\0162\'.yandex.cloud.backup.v1.Bac" +
-      "kupFile.TypeB\004\350\3071\001\022\027\n\tfull_path\030\004 \001(\tB\004\350" +
-      "\3071\001\022\022\n\004name\030\005 \001(\tB\004\350\3071\001\022\014\n\004size\030\006 \001(\003\022A\n" +
-      "\007actions\030\007 \001(\0132*.yandex.cloud.backup.v1." +
-      "BackupFile.ActionsB\004\350\3071\001\0225\n\013modified_at\030" +
-      "\010 \001(\0132\032.google.protobuf.TimestampB\004\350\3071\001\032" +
-      "@\n\007Actions\022\027\n\017restore_to_disk\030\001 \001(\010\022\026\n\016g" +
-      "o_to_location\030\002 \001(\010J\004\010\003\020\004\"9\n\004Type\022\024\n\020TYP" +
-      "E_UNSPECIFIED\020\000\022\014\n\010TYPE_DIR\020\001\022\r\n\tTYPE_FI" +
-      "LE\020\002B_\n\032yandex.cloud.api.backup.v1ZAgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/backup/v1;backupb\006proto3"
+      "\001\022\023\n\017DELETE_BY_AGENT\020\002J\004\010\021\020\024J\004\010\025\020\026J\004\010\034\020\036" +
+      "\"u\n\006Volume\022\022\n\nfree_space\030\001 \001(\003\022\023\n\013is_boo" +
+      "table\030\002 \001(\010\022\021\n\tis_system\030\003 \001(\010\022\014\n\004name\030\004" +
+      " \001(\t\022\014\n\004size\030\005 \001(\003\022\023\n\013mount_strid\030\006 \001(\t\"" +
+      "i\n\004Disk\022\024\n\014device_model\030\001 \001(\t\022\014\n\004name\030\002 " +
+      "\001(\t\022\014\n\004size\030\003 \001(\003\022/\n\007volumes\030\004 \003(\0132\036.yan" +
+      "dex.cloud.backup.v1.Volume\"\364\004\n\006Backup\022\n\n" +
+      "\002id\030\001 \001(\t\022\020\n\010vault_id\030\002 \001(\t\022\022\n\narchive_i" +
+      "d\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\0220\n\014last_seen_at\030\005 \001(\0132\032." +
+      "google.protobuf.Timestamp\022\014\n\004size\030\006 \001(\003\022" +
+      "\031\n\021deduplicated_size\030\007 \001(\003\022\033\n\023backed_up_" +
+      "data_size\030\010 \001(\003\022\032\n\022original_data_size\030\t " +
+      "\001(\003\022C\n\nattributes\030\n \001(\0132/.yandex.cloud.b" +
+      "ackup.v1.Backup.BackupAttributes\022\033\n\023comp" +
+      "ute_instance_id\030\013 \001(\t\022+\n\005disks\030\016 \003(\0132\034.y" +
+      "andex.cloud.backup.v1.Disk\0221\n\004type\030\017 \001(\016" +
+      "2#.yandex.cloud.backup.v1.Backup.Type\022\017\n" +
+      "\007deleted\030\025 \001(\010\022\021\n\tpolicy_id\030\026 \001(\t\022\023\n\013res" +
+      "ource_id\030\027 \001(\t\0324\n\020BackupAttributes\022\023\n\013st" +
+      "ream_name\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\"7\n\004Type\022\024\n\020" +
+      "TYPE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\017\n\013INCREMEN" +
+      "TAL\020\002J\004\010\014\020\016J\004\010\020\020\025\"\276\003\n\nBackupFile\022\020\n\002id\030\001" +
+      " \001(\tB\004\350\3071\001\0225\n\tparent_id\030\002 \001(\0132\034.google.p" +
+      "rotobuf.StringValueB\004\350\3071\000\022;\n\004type\030\003 \001(\0162" +
+      "\'.yandex.cloud.backup.v1.BackupFile.Type" +
+      "B\004\350\3071\001\022\027\n\tfull_path\030\004 \001(\tB\004\350\3071\001\022\022\n\004name\030" +
+      "\005 \001(\tB\004\350\3071\001\022\014\n\004size\030\006 \001(\003\022A\n\007actions\030\007 \001" +
+      "(\0132*.yandex.cloud.backup.v1.BackupFile.A" +
+      "ctionsB\004\350\3071\001\0225\n\013modified_at\030\010 \001(\0132\032.goog" +
+      "le.protobuf.TimestampB\004\350\3071\001\032:\n\007Actions\022\027" +
+      "\n\017restore_to_disk\030\001 \001(\010\022\026\n\016go_to_locatio" +
+      "n\030\002 \001(\010\"9\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n" +
+      "\010TYPE_DIR\020\001\022\r\n\tTYPE_FILE\020\002B_\n\032yandex.clo" +
+      "ud.api.backup.v1ZAgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/backup/v1;bac" +
+      "kupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.backup.v1.PolicyOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_backup_v1_Archive_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14755,8 +14755,8 @@ public final class BackupOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.backup.v1.PolicyOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

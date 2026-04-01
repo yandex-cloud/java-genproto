@@ -2769,6 +2769,33 @@ public final class ChannelOuterClass {
      * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
      */
     yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder getRefererVerificationOrBuilder();
+
+    /**
+     * <pre>
+     * Settings for displaying video
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+     * @return Whether the video field is set.
+     */
+    boolean hasVideo();
+    /**
+     * <pre>
+     * Settings for displaying video
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+     * @return The video.
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings getVideo();
+    /**
+     * <pre>
+     * Settings for displaying video
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettingsOrBuilder getVideoOrBuilder();
   }
   /**
    * <pre>
@@ -2843,6 +2870,19 @@ public final class ChannelOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(refererVerification_);
                 refererVerification_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder subBuilder = null;
+              if (video_ != null) {
+                subBuilder = video_.toBuilder();
+              }
+              video_ = input.readMessage(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(video_);
+                video_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2967,6 +3007,44 @@ public final class ChannelOuterClass {
       return getRefererVerification();
     }
 
+    public static final int VIDEO_FIELD_NUMBER = 4;
+    private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings video_;
+    /**
+     * <pre>
+     * Settings for displaying video
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+     * @return Whether the video field is set.
+     */
+    @java.lang.Override
+    public boolean hasVideo() {
+      return video_ != null;
+    }
+    /**
+     * <pre>
+     * Settings for displaying video
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+     * @return The video.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings getVideo() {
+      return video_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.getDefaultInstance() : video_;
+    }
+    /**
+     * <pre>
+     * Settings for displaying video
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettingsOrBuilder getVideoOrBuilder() {
+      return getVideo();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2987,6 +3065,9 @@ public final class ChannelOuterClass {
       if (refererVerification_ != null) {
         output.writeMessage(3, getRefererVerification());
       }
+      if (video_ != null) {
+        output.writeMessage(4, getVideo());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3003,6 +3084,10 @@ public final class ChannelOuterClass {
       if (refererVerification_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRefererVerification());
+      }
+      if (video_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getVideo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3029,6 +3114,11 @@ public final class ChannelOuterClass {
         if (!getRefererVerification()
             .equals(other.getRefererVerification())) return false;
       }
+      if (hasVideo() != other.hasVideo()) return false;
+      if (hasVideo()) {
+        if (!getVideo()
+            .equals(other.getVideo())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3047,6 +3137,10 @@ public final class ChannelOuterClass {
       if (hasRefererVerification()) {
         hash = (37 * hash) + REFERER_VERIFICATION_FIELD_NUMBER;
         hash = (53 * hash) + getRefererVerification().hashCode();
+      }
+      if (hasVideo()) {
+        hash = (37 * hash) + VIDEO_FIELD_NUMBER;
+        hash = (53 * hash) + getVideo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3199,6 +3293,12 @@ public final class ChannelOuterClass {
           refererVerification_ = null;
           refererVerificationBuilder_ = null;
         }
+        if (videoBuilder_ == null) {
+          video_ = null;
+        } else {
+          video_ = null;
+          videoBuilder_ = null;
+        }
         return this;
       }
 
@@ -3234,6 +3334,11 @@ public final class ChannelOuterClass {
           result.refererVerification_ = refererVerification_;
         } else {
           result.refererVerification_ = refererVerificationBuilder_.build();
+        }
+        if (videoBuilder_ == null) {
+          result.video_ = video_;
+        } else {
+          result.video_ = videoBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3288,6 +3393,9 @@ public final class ChannelOuterClass {
         }
         if (other.hasRefererVerification()) {
           mergeRefererVerification(other.getRefererVerification());
+        }
+        if (other.hasVideo()) {
+          mergeVideo(other.getVideo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3662,6 +3770,161 @@ public final class ChannelOuterClass {
           refererVerification_ = null;
         }
         return refererVerificationBuilder_;
+      }
+
+      private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings video_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettingsOrBuilder> videoBuilder_;
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       * @return Whether the video field is set.
+       */
+      public boolean hasVideo() {
+        return videoBuilder_ != null || video_ != null;
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       * @return The video.
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings getVideo() {
+        if (videoBuilder_ == null) {
+          return video_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.getDefaultInstance() : video_;
+        } else {
+          return videoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       */
+      public Builder setVideo(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings value) {
+        if (videoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          video_ = value;
+          onChanged();
+        } else {
+          videoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       */
+      public Builder setVideo(
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder builderForValue) {
+        if (videoBuilder_ == null) {
+          video_ = builderForValue.build();
+          onChanged();
+        } else {
+          videoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       */
+      public Builder mergeVideo(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings value) {
+        if (videoBuilder_ == null) {
+          if (video_ != null) {
+            video_ =
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.newBuilder(video_).mergeFrom(value).buildPartial();
+          } else {
+            video_ = value;
+          }
+          onChanged();
+        } else {
+          videoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       */
+      public Builder clearVideo() {
+        if (videoBuilder_ == null) {
+          video_ = null;
+          onChanged();
+        } else {
+          video_ = null;
+          videoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder getVideoBuilder() {
+        
+        onChanged();
+        return getVideoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettingsOrBuilder getVideoOrBuilder() {
+        if (videoBuilder_ != null) {
+          return videoBuilder_.getMessageOrBuilder();
+        } else {
+          return video_ == null ?
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.getDefaultInstance() : video_;
+        }
+      }
+      /**
+       * <pre>
+       * Settings for displaying video
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelVideoSettings video = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettingsOrBuilder> 
+          getVideoFieldBuilder() {
+        if (videoBuilder_ == null) {
+          videoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettingsOrBuilder>(
+                  getVideo(),
+                  getParentForChildren(),
+                  isClean());
+          video_ = null;
+        }
+        return videoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6105,6 +6368,533 @@ public final class ChannelOuterClass {
 
   }
 
+  public interface ChannelVideoSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.ChannelVideoSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Instruct the player to allow playback of the raw source file while
+     * transcoding is in progress. Once a transcoded version is available, 
+     * the source file will no longer be used.
+     * </pre>
+     *
+     * <code>bool show_source_file_before_transcoding = 1;</code>
+     * @return The showSourceFileBeforeTranscoding.
+     */
+    boolean getShowSourceFileBeforeTranscoding();
+  }
+  /**
+   * <pre>
+   * Settings for displaying video
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.video.v1.ChannelVideoSettings}
+   */
+  public static final class ChannelVideoSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.ChannelVideoSettings)
+      ChannelVideoSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChannelVideoSettings.newBuilder() to construct.
+    private ChannelVideoSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChannelVideoSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChannelVideoSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChannelVideoSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              showSourceFileBeforeTranscoding_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelVideoSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelVideoSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder.class);
+    }
+
+    public static final int SHOW_SOURCE_FILE_BEFORE_TRANSCODING_FIELD_NUMBER = 1;
+    private boolean showSourceFileBeforeTranscoding_;
+    /**
+     * <pre>
+     * Instruct the player to allow playback of the raw source file while
+     * transcoding is in progress. Once a transcoded version is available, 
+     * the source file will no longer be used.
+     * </pre>
+     *
+     * <code>bool show_source_file_before_transcoding = 1;</code>
+     * @return The showSourceFileBeforeTranscoding.
+     */
+    @java.lang.Override
+    public boolean getShowSourceFileBeforeTranscoding() {
+      return showSourceFileBeforeTranscoding_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (showSourceFileBeforeTranscoding_ != false) {
+        output.writeBool(1, showSourceFileBeforeTranscoding_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (showSourceFileBeforeTranscoding_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, showSourceFileBeforeTranscoding_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings other = (yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings) obj;
+
+      if (getShowSourceFileBeforeTranscoding()
+          != other.getShowSourceFileBeforeTranscoding()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SHOW_SOURCE_FILE_BEFORE_TRANSCODING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getShowSourceFileBeforeTranscoding());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Settings for displaying video
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.video.v1.ChannelVideoSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.ChannelVideoSettings)
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelVideoSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelVideoSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        showSourceFileBeforeTranscoding_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_ChannelVideoSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings build() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings buildPartial() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings result = new yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings(this);
+        result.showSourceFileBeforeTranscoding_ = showSourceFileBeforeTranscoding_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings) {
+          return mergeFrom((yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings other) {
+        if (other == yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings.getDefaultInstance()) return this;
+        if (other.getShowSourceFileBeforeTranscoding() != false) {
+          setShowSourceFileBeforeTranscoding(other.getShowSourceFileBeforeTranscoding());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean showSourceFileBeforeTranscoding_ ;
+      /**
+       * <pre>
+       * Instruct the player to allow playback of the raw source file while
+       * transcoding is in progress. Once a transcoded version is available, 
+       * the source file will no longer be used.
+       * </pre>
+       *
+       * <code>bool show_source_file_before_transcoding = 1;</code>
+       * @return The showSourceFileBeforeTranscoding.
+       */
+      @java.lang.Override
+      public boolean getShowSourceFileBeforeTranscoding() {
+        return showSourceFileBeforeTranscoding_;
+      }
+      /**
+       * <pre>
+       * Instruct the player to allow playback of the raw source file while
+       * transcoding is in progress. Once a transcoded version is available, 
+       * the source file will no longer be used.
+       * </pre>
+       *
+       * <code>bool show_source_file_before_transcoding = 1;</code>
+       * @param value The showSourceFileBeforeTranscoding to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShowSourceFileBeforeTranscoding(boolean value) {
+        
+        showSourceFileBeforeTranscoding_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Instruct the player to allow playback of the raw source file while
+       * transcoding is in progress. Once a transcoded version is available, 
+       * the source file will no longer be used.
+       * </pre>
+       *
+       * <code>bool show_source_file_before_transcoding = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShowSourceFileBeforeTranscoding() {
+        
+        showSourceFileBeforeTranscoding_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.ChannelVideoSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.ChannelVideoSettings)
+    private static final yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings();
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChannelVideoSettings>
+        PARSER = new com.google.protobuf.AbstractParser<ChannelVideoSettings>() {
+      @java.lang.Override
+      public ChannelVideoSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChannelVideoSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChannelVideoSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChannelVideoSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelVideoSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_Channel_descriptor;
   private static final 
@@ -6135,6 +6925,11 @@ public final class ChannelOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_RefererVerificationSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_ChannelVideoSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_ChannelVideoSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6156,23 +6951,26 @@ public final class ChannelOuterClass {
       "ndex.cloud.video.v1.Channel.LabelsEntry\022" +
       "9\n\010settings\030\311\001 \001(\0132&.yandex.cloud.video." +
       "v1.ChannelSettings\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020dJ\005\010f\020\310\001\"\256" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020dJ\005\010f\020\310\001\"\352" +
       "\001\n\017ChannelSettings\022C\n\radvertisement\030\001 \001(" +
       "\0132,.yandex.cloud.video.v1.AdvertisementS" +
       "ettings\022P\n\024referer_verification\030\003 \001(\01322." +
       "yandex.cloud.video.v1.RefererVerificatio" +
-      "nSettingsJ\004\010\002\020\003\"\300\001\n\025AdvertisementSetting" +
-      "s\022R\n\ryandex_direct\030d \001(\01329.yandex.cloud." +
-      "video.v1.AdvertisementSettings.YandexDir" +
-      "ectH\000\032A\n\014YandexDirect\022\016\n\006enable\030\001 \001(\010\022\017\n" +
-      "\007page_id\030\002 \001(\003\022\020\n\010category\030\003 \001(\003B\n\n\010prov" +
-      "iderJ\004\010\001\020d\"\234\001\n\033RefererVerificationSettin" +
-      "gs\022\016\n\006enable\030\001 \001(\010\022m\n\017allowed_domains\030\002 " +
-      "\003(\tBT\362\3071>^(?:\\*\\.)?(?:[a-zA-Z0-9-]*\\.)+[" +
-      "a-zA-Z]{2,}$|^\\*\\.[a-zA-Z]{2,}$\212\3101\0054-255" +
-      "\202\3101\005<=100B\\\n\031yandex.cloud.api.video.v1Z?" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/video/v1;videob\006proto3"
+      "nSettings\022:\n\005video\030\004 \001(\0132+.yandex.cloud." +
+      "video.v1.ChannelVideoSettingsJ\004\010\002\020\003\"\300\001\n\025" +
+      "AdvertisementSettings\022R\n\ryandex_direct\030d" +
+      " \001(\01329.yandex.cloud.video.v1.Advertiseme" +
+      "ntSettings.YandexDirectH\000\032A\n\014YandexDirec" +
+      "t\022\016\n\006enable\030\001 \001(\010\022\017\n\007page_id\030\002 \001(\003\022\020\n\010ca" +
+      "tegory\030\003 \001(\003B\n\n\010providerJ\004\010\001\020d\"\234\001\n\033Refer" +
+      "erVerificationSettings\022\016\n\006enable\030\001 \001(\010\022m" +
+      "\n\017allowed_domains\030\002 \003(\tBT\362\3071>^(?:\\*\\.)?(" +
+      "?:[a-zA-Z0-9-]*\\.)+[a-zA-Z]{2,}$|^\\*\\.[a" +
+      "-zA-Z]{2,}$\212\3101\0054-255\202\3101\005<=100\"C\n\024Channel" +
+      "VideoSettings\022+\n#show_source_file_before" +
+      "_transcoding\030\001 \001(\010B\\\n\031yandex.cloud.api.v" +
+      "ideo.v1Z?github.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6197,7 +6995,7 @@ public final class ChannelOuterClass {
     internal_static_yandex_cloud_video_v1_ChannelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor,
-        new java.lang.String[] { "Advertisement", "RefererVerification", });
+        new java.lang.String[] { "Advertisement", "RefererVerification", "Video", });
     internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_video_v1_AdvertisementSettings_fieldAccessorTable = new
@@ -6216,6 +7014,12 @@ public final class ChannelOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_RefererVerificationSettings_descriptor,
         new java.lang.String[] { "Enable", "AllowedDomains", });
+    internal_static_yandex_cloud_video_v1_ChannelVideoSettings_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_video_v1_ChannelVideoSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_ChannelVideoSettings_descriptor,
+        new java.lang.String[] { "ShowSourceFileBeforeTranscoding", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

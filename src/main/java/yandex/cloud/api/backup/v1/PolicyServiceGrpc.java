@@ -361,7 +361,6 @@ public final class PolicyServiceGrpc {
     /**
      * <pre>
      * Create a new policy.
-     * 
      * For detailed information, please see [Creating a backup policy](/docs/backup/operations/policy-vm/create).
      * </pre>
      */
@@ -542,7 +541,6 @@ public final class PolicyServiceGrpc {
     /**
      * <pre>
      * Create a new policy.
-     * 
      * For detailed information, please see [Creating a backup policy](/docs/backup/operations/policy-vm/create).
      * </pre>
      */
@@ -662,7 +660,6 @@ public final class PolicyServiceGrpc {
     /**
      * <pre>
      * Create a new policy.
-     * 
      * For detailed information, please see [Creating a backup policy](/docs/backup/operations/policy-vm/create).
      * </pre>
      */
@@ -775,7 +772,6 @@ public final class PolicyServiceGrpc {
     /**
      * <pre>
      * Create a new policy.
-     * 
      * For detailed information, please see [Creating a backup policy](/docs/backup/operations/policy-vm/create).
      * </pre>
      */

@@ -3114,7 +3114,7 @@ public final class ATS {
      * Name of the trail.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3123,7 +3123,7 @@ public final class ATS {
      * Name of the trail.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3537,7 +3537,7 @@ public final class ATS {
      * Name of the trail.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3558,7 +3558,7 @@ public final class ATS {
      * Name of the trail.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4484,7 +4484,7 @@ public final class ATS {
        * Name of the trail.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4504,7 +4504,7 @@ public final class ATS {
        * Name of the trail.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4525,7 +4525,7 @@ public final class ATS {
        * Name of the trail.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4544,7 +4544,7 @@ public final class ATS {
        * Name of the trail.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4558,7 +4558,7 @@ public final class ATS {
        * Name of the trail.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -12610,93 +12610,93 @@ public final class ATS {
       "\003 \001(\tB\t\212\3101\005<=100\022\016\n\006filter\030\004 \001(\t\022\020\n\010orde" +
       "r_by\030\005 \001(\t\"a\n\022ListTrailsResponse\0222\n\006trai" +
       "ls\030\001 \003(\0132\".yandex.cloud.audittrails.v1.T" +
-      "rail\022\027\n\017next_page_token\030\002 \001(\t\"\312\004\n\022Create" +
+      "rail\022\027\n\017next_page_token\030\002 \001(\t\"\311\004\n\022Create" +
       "TrailRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
-      "]{0,61}[a-z0-9])?\022\037\n\013description\030\003 \001(\tB\n" +
-      "\212\3101\006<=1024\022\214\001\n\006labels\030\004 \003(\0132;.yandex.clo" +
-      "ud.audittrails.v1.CreateTrailRequest.Lab" +
-      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
-      "*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022I\n\013des" +
-      "tination\030\005 \001(\0132..yandex.cloud.audittrail" +
-      "s.v1.Trail.DestinationB\004\350\3071\001\022(\n\022service_" +
-      "account_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\006filter" +
-      "\030\007 \001(\0132).yandex.cloud.audittrails.v1.Tra" +
-      "il.FilterB\002\030\001\022L\n\020filtering_policy\030\010 \001(\0132" +
-      "2.yandex.cloud.audittrails.v1.Trail.Filt" +
-      "eringPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"\360\004\n\022UpdateTrailReques" +
-      "t\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upd" +
-      "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
-      "sk\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
-      ",61}[a-z0-9])?\022\037\n\013description\030\004 \001(\tB\n\212\3101" +
-      "\006<=1024\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cloud." +
-      "audittrails.v1.UpdateTrailRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013destin" +
-      "ation\030\006 \001(\0132..yandex.cloud.audittrails.v" +
-      "1.Trail.Destination\022$\n\022service_account_i" +
-      "d\030\007 \001(\tB\010\212\3101\004<=50\022=\n\006filter\030\010 \001(\0132).yand" +
-      "ex.cloud.audittrails.v1.Trail.FilterB\002\030\001" +
-      "\022L\n\020filtering_policy\030\t \001(\01322.yandex.clou" +
-      "d.audittrails.v1.Trail.FilteringPolicy\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"4\n\022DeleteTrailRequest\022\036\n\010trail_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023CreateTrailMetada" +
-      "ta\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023UpdateTrailMetad" +
-      "ata\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023DeleteTrailMeta" +
-      "data\022\020\n\010trail_id\030\001 \001(\t\"z\n\032ListTrailOpera" +
-      "tionsRequest\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListTrailO" +
-      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
-      "yandex.cloud.operation.Operation\022\027\n\017next" +
-      "_page_token\030\002 \001(\t2\201\r\n\014TrailService\022\203\001\n\003G" +
-      "et\022,.yandex.cloud.audittrails.v1.GetTrai" +
-      "lRequest\032\".yandex.cloud.audittrails.v1.T" +
-      "rail\"*\202\323\344\223\002$\022\"/audit-trails/v1/trails/{t" +
-      "rail_id}\022\210\001\n\004List\022..yandex.cloud.audittr" +
-      "ails.v1.ListTrailsRequest\032/.yandex.cloud" +
-      ".audittrails.v1.ListTrailsResponse\"\037\202\323\344\223" +
-      "\002\031\022\027/audit-trails/v1/trails\022\240\001\n\006Create\022/" +
-      ".yandex.cloud.audittrails.v1.CreateTrail" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"B\202\323\344\223\002\034\"\027/audit-trails/v1/trails:\001*\262\322" +
-      "*\034\n\023CreateTrailMetadata\022\005Trail\022\253\001\n\006Updat" +
-      "e\022/.yandex.cloud.audittrails.v1.UpdateTr" +
-      "ailRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"M\202\323\344\223\002\'2\"/audit-trails/v1/trails/{" +
-      "trail_id}:\001*\262\322*\034\n\023UpdateTrailMetadata\022\005T" +
-      "rail\022\270\001\n\006Delete\022/.yandex.cloud.audittrai" +
-      "ls.v1.DeleteTrailRequest\032!.yandex.cloud." +
-      "operation.Operation\"Z\202\323\344\223\002$*\"/audit-trai" +
-      "ls/v1/trails/{trail_id}\262\322*,\n\023DeleteTrail" +
-      "Metadata\022\025google.protobuf.Empty\022\272\001\n\016List" +
-      "Operations\0227.yandex.cloud.audittrails.v1" +
-      ".ListTrailOperationsRequest\0328.yandex.clo" +
-      "ud.audittrails.v1.ListTrailOperationsRes" +
-      "ponse\"5\202\323\344\223\002/\022-/audit-trails/v1/trails/{" +
-      "trail_id}/operations\022\267\001\n\022ListAccessBindi" +
-      "ngs\022..yandex.cloud.access.ListAccessBind" +
-      "ingsRequest\032/.yandex.cloud.access.ListAc" +
-      "cessBindingsResponse\"@\202\323\344\223\002:\0228/audit-tra" +
-      "ils/v1/trails/{resource_id}:listAccessBi" +
-      "ndings\022\346\001\n\021SetAccessBindings\022-.yandex.cl" +
-      "oud.access.SetAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\177\202\323\344\223\002<\"7" +
-      "/audit-trails/v1/trails/{resource_id}:se" +
-      "tAccessBindings:\001*\262\322*9\n access.SetAccess" +
-      "BindingsMetadata\022\025google.protobuf.Empty\022" +
-      "\363\001\n\024UpdateAccessBindings\0220.yandex.cloud." +
-      "access.UpdateAccessBindingsRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"\205\001\202\323\344\223\002?\":" +
-      "/audit-trails/v1/trails/{resource_id}:up" +
-      "dateAccessBindings:\001*\262\322*<\n#access.Update" +
-      "AccessBindingsMetadata\022\025google.protobuf." +
-      "EmptyBs\n\037yandex.cloud.api.audittrails.v1" +
-      "B\003ATSZKgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/audittrails/v1;audittrai" +
-      "lsb\006proto3"
+      "\004<=50\0221\n\004name\030\002 \001(\tB#\362\3071\037[a-z]([-a-z0-9]" +
+      "{0,61}[a-z0-9])?\022\037\n\013description\030\003 \001(\tB\n\212" +
+      "\3101\006<=1024\022\214\001\n\006labels\030\004 \003(\0132;.yandex.clou" +
+      "d.audittrails.v1.CreateTrailRequest.Labe" +
+      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
+      "\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022I\n\013dest" +
+      "ination\030\005 \001(\0132..yandex.cloud.audittrails" +
+      ".v1.Trail.DestinationB\004\350\3071\001\022(\n\022service_a" +
+      "ccount_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\006filter\030" +
+      "\007 \001(\0132).yandex.cloud.audittrails.v1.Trai" +
+      "l.FilterB\002\030\001\022L\n\020filtering_policy\030\010 \001(\01322" +
+      ".yandex.cloud.audittrails.v1.Trail.Filte" +
+      "ringPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"\360\004\n\022UpdateTrailRequest" +
+      "\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upda" +
+      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
+      "61}[a-z0-9])?\022\037\n\013description\030\004 \001(\tB\n\212\3101\006" +
+      "<=1024\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cloud.a" +
+      "udittrails.v1.UpdateTrailRequest.LabelsE" +
+      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
+      "\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013destina" +
+      "tion\030\006 \001(\0132..yandex.cloud.audittrails.v1" +
+      ".Trail.Destination\022$\n\022service_account_id" +
+      "\030\007 \001(\tB\010\212\3101\004<=50\022=\n\006filter\030\010 \001(\0132).yande" +
+      "x.cloud.audittrails.v1.Trail.FilterB\002\030\001\022" +
+      "L\n\020filtering_policy\030\t \001(\01322.yandex.cloud" +
+      ".audittrails.v1.Trail.FilteringPolicy\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"4\n\022DeleteTrailRequest\022\036\n\010trail_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023CreateTrailMetadat" +
+      "a\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023UpdateTrailMetada" +
+      "ta\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023DeleteTrailMetad" +
+      "ata\022\020\n\010trail_id\030\001 \001(\t\"z\n\032ListTrailOperat" +
+      "ionsRequest\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListTrailOp" +
+      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
+      "andex.cloud.operation.Operation\022\027\n\017next_" +
+      "page_token\030\002 \001(\t2\201\r\n\014TrailService\022\203\001\n\003Ge" +
+      "t\022,.yandex.cloud.audittrails.v1.GetTrail" +
+      "Request\032\".yandex.cloud.audittrails.v1.Tr" +
+      "ail\"*\202\323\344\223\002$\022\"/audit-trails/v1/trails/{tr" +
+      "ail_id}\022\210\001\n\004List\022..yandex.cloud.audittra" +
+      "ils.v1.ListTrailsRequest\032/.yandex.cloud." +
+      "audittrails.v1.ListTrailsResponse\"\037\202\323\344\223\002" +
+      "\031\022\027/audit-trails/v1/trails\022\240\001\n\006Create\022/." +
+      "yandex.cloud.audittrails.v1.CreateTrailR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"B\202\323\344\223\002\034\"\027/audit-trails/v1/trails:\001*\262\322*" +
+      "\034\n\023CreateTrailMetadata\022\005Trail\022\253\001\n\006Update" +
+      "\022/.yandex.cloud.audittrails.v1.UpdateTra" +
+      "ilRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"M\202\323\344\223\002\'2\"/audit-trails/v1/trails/{t" +
+      "rail_id}:\001*\262\322*\034\n\023UpdateTrailMetadata\022\005Tr" +
+      "ail\022\270\001\n\006Delete\022/.yandex.cloud.audittrail" +
+      "s.v1.DeleteTrailRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"Z\202\323\344\223\002$*\"/audit-trail" +
+      "s/v1/trails/{trail_id}\262\322*,\n\023DeleteTrailM" +
+      "etadata\022\025google.protobuf.Empty\022\272\001\n\016ListO" +
+      "perations\0227.yandex.cloud.audittrails.v1." +
+      "ListTrailOperationsRequest\0328.yandex.clou" +
+      "d.audittrails.v1.ListTrailOperationsResp" +
+      "onse\"5\202\323\344\223\002/\022-/audit-trails/v1/trails/{t" +
+      "rail_id}/operations\022\267\001\n\022ListAccessBindin" +
+      "gs\022..yandex.cloud.access.ListAccessBindi" +
+      "ngsRequest\032/.yandex.cloud.access.ListAcc" +
+      "essBindingsResponse\"@\202\323\344\223\002:\0228/audit-trai" +
+      "ls/v1/trails/{resource_id}:listAccessBin" +
+      "dings\022\346\001\n\021SetAccessBindings\022-.yandex.clo" +
+      "ud.access.SetAccessBindingsRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\177\202\323\344\223\002<\"7/" +
+      "audit-trails/v1/trails/{resource_id}:set" +
+      "AccessBindings:\001*\262\322*9\n access.SetAccessB" +
+      "indingsMetadata\022\025google.protobuf.Empty\022\363" +
+      "\001\n\024UpdateAccessBindings\0220.yandex.cloud.a" +
+      "ccess.UpdateAccessBindingsRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\205\001\202\323\344\223\002?\":/" +
+      "audit-trails/v1/trails/{resource_id}:upd" +
+      "ateAccessBindings:\001*\262\322*<\n#access.UpdateA" +
+      "ccessBindingsMetadata\022\025google.protobuf.E" +
+      "mptyBs\n\037yandex.cloud.api.audittrails.v1B" +
+      "\003ATSZKgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/audittrails/v1;audittrail" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

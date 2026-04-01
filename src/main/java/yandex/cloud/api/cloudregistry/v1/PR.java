@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.cloudregistry.v1;
 
-public final class RegistryOuterClass {
-  private RegistryOuterClass() {}
+public final class PR {
+  private PR() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -80,6 +80,26 @@ public final class RegistryOuterClass {
 
     /**
      * <pre>
+     * Description of the registry.
+     * </pre>
+     *
+     * <code>string description = 7;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
+     * <code>string description = 7;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
      * Kind of the registry.
      * </pre>
      *
@@ -95,7 +115,7 @@ public final class RegistryOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
      * @return The kind.
      */
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind();
+    yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind getKind();
 
     /**
      * <pre>
@@ -114,7 +134,7 @@ public final class RegistryOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
      * @return The type.
      */
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType();
+    yandex.cloud.api.cloudregistry.v1.PR.Registry.Type getType();
 
     /**
      * <pre>
@@ -133,27 +153,7 @@ public final class RegistryOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
      * @return The status.
      */
-    yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status getStatus();
-
-    /**
-     * <pre>
-     * Description of the registry.
-     * </pre>
-     *
-     * <code>string description = 7;</code>
-     * @return The description.
-     */
-    java.lang.String getDescription();
-    /**
-     * <pre>
-     * Description of the registry.
-     * </pre>
-     *
-     * <code>string description = 7;</code>
-     * @return The bytes for description.
-     */
-    com.google.protobuf.ByteString
-        getDescriptionBytes();
+    yandex.cloud.api.cloudregistry.v1.PR.Registry.Status getStatus();
 
     /**
      * <pre>
@@ -337,10 +337,10 @@ public final class RegistryOuterClass {
       id_ = "";
       folderId_ = "";
       name_ = "";
+      description_ = "";
       kind_ = 0;
       type_ = 0;
       status_ = 0;
-      description_ = "";
     }
 
     @java.lang.Override
@@ -489,7 +489,7 @@ public final class RegistryOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PR.internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -509,9 +509,9 @@ public final class RegistryOuterClass {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Registry_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PR.internal_static_yandex_cloud_cloudregistry_v1_Registry_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.class, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PR.Registry.class, yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder.class);
     }
 
     /**
@@ -638,7 +638,7 @@ public final class RegistryOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.cloudregistry.v1.PR.Registry.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Status[] VALUES = values();
@@ -699,20 +699,20 @@ public final class RegistryOuterClass {
       DOCKER(3),
       /**
        * <pre>
-       * Registry kind is nuget.
-       * </pre>
-       *
-       * <code>NUGET = 4;</code>
-       */
-      NUGET(4),
-      /**
-       * <pre>
        * Registry kind is debian.
        * </pre>
        *
        * <code>DEBIAN = 5;</code>
        */
       DEBIAN(5),
+      /**
+       * <pre>
+       * Registry kind is nuget.
+       * </pre>
+       *
+       * <code>NUGET = 4;</code>
+       */
+      NUGET(4),
       /**
        * <pre>
        * Registry kind is pypi.
@@ -762,20 +762,20 @@ public final class RegistryOuterClass {
       public static final int DOCKER_VALUE = 3;
       /**
        * <pre>
-       * Registry kind is nuget.
-       * </pre>
-       *
-       * <code>NUGET = 4;</code>
-       */
-      public static final int NUGET_VALUE = 4;
-      /**
-       * <pre>
        * Registry kind is debian.
        * </pre>
        *
        * <code>DEBIAN = 5;</code>
        */
       public static final int DEBIAN_VALUE = 5;
+      /**
+       * <pre>
+       * Registry kind is nuget.
+       * </pre>
+       *
+       * <code>NUGET = 4;</code>
+       */
+      public static final int NUGET_VALUE = 4;
       /**
        * <pre>
        * Registry kind is pypi.
@@ -822,8 +822,8 @@ public final class RegistryOuterClass {
           case 1: return MAVEN;
           case 2: return NPM;
           case 3: return DOCKER;
-          case 4: return NUGET;
           case 5: return DEBIAN;
+          case 4: return NUGET;
           case 6: return PYPI;
           case 7: return BINARY;
           default: return null;
@@ -856,7 +856,7 @@ public final class RegistryOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDescriptor().getEnumTypes().get(1);
+        return yandex.cloud.api.cloudregistry.v1.PR.Registry.getDescriptor().getEnumTypes().get(1);
       }
 
       private static final Kind[] VALUES = values();
@@ -990,7 +990,7 @@ public final class RegistryOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDescriptor().getEnumTypes().get(2);
+        return yandex.cloud.api.cloudregistry.v1.PR.Registry.getDescriptor().getEnumTypes().get(2);
       }
 
       private static final Type[] VALUES = values();
@@ -1154,87 +1154,6 @@ public final class RegistryOuterClass {
       }
     }
 
-    public static final int KIND_FIELD_NUMBER = 4;
-    private int kind_;
-    /**
-     * <pre>
-     * Kind of the registry.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
-     * @return The enum numeric value on the wire for kind.
-     */
-    @java.lang.Override public int getKindValue() {
-      return kind_;
-    }
-    /**
-     * <pre>
-     * Kind of the registry.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
-     * @return The kind.
-     */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.valueOf(kind_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.UNRECOGNIZED : result;
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 5;
-    private int type_;
-    /**
-     * <pre>
-     * Type of the registry.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     * Type of the registry.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
-     * @return The type.
-     */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.valueOf(type_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.UNRECOGNIZED : result;
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 6;
-    private int status_;
-    /**
-     * <pre>
-     * Output only. Status of the registry.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <pre>
-     * Output only. Status of the registry.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
-     * @return The status.
-     */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status getStatus() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status.valueOf(status_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status.UNRECOGNIZED : result;
-    }
-
     public static final int DESCRIPTION_FIELD_NUMBER = 7;
     private volatile java.lang.Object description_;
     /**
@@ -1281,13 +1200,94 @@ public final class RegistryOuterClass {
       }
     }
 
+    public static final int KIND_FIELD_NUMBER = 4;
+    private int kind_;
+    /**
+     * <pre>
+     * Kind of the registry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+     * @return The enum numeric value on the wire for kind.
+     */
+    @java.lang.Override public int getKindValue() {
+      return kind_;
+    }
+    /**
+     * <pre>
+     * Kind of the registry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+     * @return The kind.
+     */
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind getKind() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.valueOf(kind_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.UNRECOGNIZED : result;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 5;
+    private int type_;
+    /**
+     * <pre>
+     * Type of the registry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of the registry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PR.Registry.Type getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.cloudregistry.v1.PR.Registry.Type result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.valueOf(type_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.UNRECOGNIZED : result;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 6;
+    private int status_;
+    /**
+     * <pre>
+     * Output only. Status of the registry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Output only. Status of the registry.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PR.Registry.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.cloudregistry.v1.PR.Registry.Status result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Status.UNRECOGNIZED : result;
+    }
+
     public static final int LABELS_FIELD_NUMBER = 8;
     private static final class LabelsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Registry_LabelsEntry_descriptor, 
+                  yandex.cloud.api.cloudregistry.v1.PR.internal_static_yandex_cloud_cloudregistry_v1_Registry_LabelsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -1384,7 +1384,7 @@ public final class RegistryOuterClass {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Registry_PropertiesEntry_descriptor, 
+                  yandex.cloud.api.cloudregistry.v1.PR.internal_static_yandex_cloud_cloudregistry_v1_Registry_PropertiesEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -1574,13 +1574,13 @@ public final class RegistryOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (kind_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
+      if (kind_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, kind_);
       }
-      if (type_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, type_);
       }
-      if (status_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status.STATUS_UNSPECIFIED.getNumber()) {
+      if (status_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, status_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
@@ -1622,15 +1622,15 @@ public final class RegistryOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (kind_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
+      if (kind_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.KIND_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, kind_);
       }
-      if (type_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, type_);
       }
-      if (status_ != yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status.STATUS_UNSPECIFIED.getNumber()) {
+      if (status_ != yandex.cloud.api.cloudregistry.v1.PR.Registry.Status.STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, status_);
       }
@@ -1675,10 +1675,10 @@ public final class RegistryOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PR.Registry)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry other = (yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry) obj;
+      yandex.cloud.api.cloudregistry.v1.PR.Registry other = (yandex.cloud.api.cloudregistry.v1.PR.Registry) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1686,11 +1686,11 @@ public final class RegistryOuterClass {
           .equals(other.getFolderId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (kind_ != other.kind_) return false;
       if (type_ != other.type_) return false;
       if (status_ != other.status_) return false;
-      if (!getDescription()
-          .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
       if (!internalGetProperties().equals(
@@ -1722,14 +1722,14 @@ public final class RegistryOuterClass {
       hash = (53 * hash) + getFolderId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + KIND_FIELD_NUMBER;
       hash = (53 * hash) + kind_;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-      hash = (53 * hash) + getDescription().hashCode();
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -1751,69 +1751,69 @@ public final class RegistryOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1826,7 +1826,7 @@ public final class RegistryOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PR.Registry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1851,10 +1851,10 @@ public final class RegistryOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.Registry)
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.RegistryOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PR.RegistryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PR.internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -1886,12 +1886,12 @@ public final class RegistryOuterClass {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Registry_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PR.internal_static_yandex_cloud_cloudregistry_v1_Registry_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.class, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PR.Registry.class, yandex.cloud.api.cloudregistry.v1.PR.Registry.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PR.Registry.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1915,13 +1915,13 @@ public final class RegistryOuterClass {
 
         name_ = "";
 
+        description_ = "";
+
         kind_ = 0;
 
         type_ = 0;
 
         status_ = 0;
-
-        description_ = "";
 
         internalGetMutableLabels().clear();
         internalGetMutableProperties().clear();
@@ -1943,17 +1943,17 @@ public final class RegistryOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PR.internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PR.Registry.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry build() {
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry build() {
+        yandex.cloud.api.cloudregistry.v1.PR.Registry result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1961,16 +1961,16 @@ public final class RegistryOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry result = new yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry(this);
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PR.Registry result = new yandex.cloud.api.cloudregistry.v1.PR.Registry(this);
         int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.folderId_ = folderId_;
         result.name_ = name_;
+        result.description_ = description_;
         result.kind_ = kind_;
         result.type_ = type_;
         result.status_ = status_;
-        result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.properties_ = internalGetProperties();
@@ -2023,16 +2023,16 @@ public final class RegistryOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PR.Registry) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PR.Registry)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PR.Registry other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PR.Registry.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -2045,6 +2045,10 @@ public final class RegistryOuterClass {
           name_ = other.name_;
           onChanged();
         }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
         if (other.kind_ != 0) {
           setKindValue(other.getKindValue());
         }
@@ -2053,10 +2057,6 @@ public final class RegistryOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
-        }
-        if (!other.getDescription().isEmpty()) {
-          description_ = other.description_;
-          onChanged();
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
@@ -2083,11 +2083,11 @@ public final class RegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PR.Registry parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PR.Registry) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2386,228 +2386,6 @@ public final class RegistryOuterClass {
         return this;
       }
 
-      private int kind_ = 0;
-      /**
-       * <pre>
-       * Kind of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
-       * @return The enum numeric value on the wire for kind.
-       */
-      @java.lang.Override public int getKindValue() {
-        return kind_;
-      }
-      /**
-       * <pre>
-       * Kind of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
-       * @param value The enum numeric value on the wire for kind to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKindValue(int value) {
-        
-        kind_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Kind of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
-       * @return The kind.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind getKind() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.valueOf(kind_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Kind of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
-       * @param value The kind to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKind(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Kind value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        kind_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Kind of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKind() {
-        
-        kind_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int type_ = 0;
-      /**
-       * <pre>
-       * Type of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
-       * @return The enum numeric value on the wire for type.
-       */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
-      }
-      /**
-       * <pre>
-       * Type of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
-       * @param value The enum numeric value on the wire for type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTypeValue(int value) {
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Type of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
-       * @return The type.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type getType() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.valueOf(type_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Type of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setType(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Type value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        type_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Type of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearType() {
-        
-        type_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int status_ = 0;
-      /**
-       * <pre>
-       * Output only. Status of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <pre>
-       * Output only. Status of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Output only. Status of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status getStatus() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status result = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status.valueOf(status_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Output only. Status of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.Status value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Output only. Status of the registry.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        
-        status_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object description_ = "";
       /**
        * <pre>
@@ -2700,6 +2478,228 @@ public final class RegistryOuterClass {
   checkByteStringIsUtf8(value);
         
         description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int kind_ = 0;
+      /**
+       * <pre>
+       * Kind of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * @return The enum numeric value on the wire for kind.
+       */
+      @java.lang.Override public int getKindValue() {
+        return kind_;
+      }
+      /**
+       * <pre>
+       * Kind of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * @param value The enum numeric value on the wire for kind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKindValue(int value) {
+        
+        kind_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Kind of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * @return The kind.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind getKind() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.valueOf(kind_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Kind of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * @param value The kind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKind(yandex.cloud.api.cloudregistry.v1.PR.Registry.Kind value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        kind_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Kind of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Kind kind = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKind() {
+        
+        kind_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Type getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cloudregistry.v1.PR.Registry.Type result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.cloudregistry.v1.PR.Registry.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Type type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Output only. Status of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Output only. Status of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Status of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PR.Registry.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cloudregistry.v1.PR.Registry.Status result = yandex.cloud.api.cloudregistry.v1.PR.Registry.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PR.Registry.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Output only. Status of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.cloudregistry.v1.PR.Registry.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Status of the registry.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.Registry.Status status = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
         onChanged();
         return this;
       }
@@ -3348,12 +3348,12 @@ public final class RegistryOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.Registry)
-    private static final yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PR.Registry DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PR.Registry();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PR.Registry getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3378,7 +3378,7 @@ public final class RegistryOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PR.Registry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3412,12 +3412,12 @@ public final class RegistryOuterClass {
       ".proto\022\035yandex.cloud.cloudregistry.v1\032\037g" +
       "oogle/protobuf/timestamp.proto\"\320\006\n\010Regis" +
       "try\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004na" +
-      "me\030\003 \001(\t\022:\n\004kind\030\004 \001(\0162,.yandex.cloud.cl" +
-      "oudregistry.v1.Registry.Kind\022:\n\004type\030\005 \001" +
-      "(\0162,.yandex.cloud.cloudregistry.v1.Regis" +
-      "try.Type\022>\n\006status\030\006 \001(\0162..yandex.cloud." +
-      "cloudregistry.v1.Registry.Status\022\023\n\013desc" +
-      "ription\030\007 \001(\t\022C\n\006labels\030\010 \003(\01323.yandex.c" +
+      "me\030\003 \001(\t\022\023\n\013description\030\007 \001(\t\022:\n\004kind\030\004 " +
+      "\001(\0162,.yandex.cloud.cloudregistry.v1.Regi" +
+      "stry.Kind\022:\n\004type\030\005 \001(\0162,.yandex.cloud.c" +
+      "loudregistry.v1.Registry.Type\022>\n\006status\030" +
+      "\006 \001(\0162..yandex.cloud.cloudregistry.v1.Re" +
+      "gistry.Status\022C\n\006labels\030\010 \003(\01323.yandex.c" +
       "loud.cloudregistry.v1.Registry.LabelsEnt" +
       "ry\022K\n\nproperties\030\t \003(\01327.yandex.cloud.cl" +
       "oudregistry.v1.Registry.PropertiesEntry\022" +
@@ -3429,13 +3429,13 @@ public final class RegistryOuterClass {
       "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING" +
       "\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\"i\n\004Kind\022\024\n\020" +
       "KIND_UNSPECIFIED\020\000\022\t\n\005MAVEN\020\001\022\007\n\003NPM\020\002\022\n" +
-      "\n\006DOCKER\020\003\022\t\n\005NUGET\020\004\022\n\n\006DEBIAN\020\005\022\010\n\004PYP" +
+      "\n\006DOCKER\020\003\022\n\n\006DEBIAN\020\005\022\t\n\005NUGET\020\004\022\010\n\004PYP" +
       "I\020\006\022\n\n\006BINARY\020\007\"@\n\004Type\022\024\n\020TYPE_UNSPECIF" +
       "IED\020\000\022\t\n\005LOCAL\020\001\022\n\n\006REMOTE\020\002\022\013\n\007VIRTUAL\020" +
-      "\003Bt\n!yandex.cloud.api.cloudregistry.v1ZO" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/cloudregistry/v1;cloudregistryb" +
-      "\006proto3"
+      "\003Bx\n!yandex.cloud.api.cloudregistry.v1B\002" +
+      "PRZOgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/cloudregistry/v1;cloudregis" +
+      "tryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3447,7 +3447,7 @@ public final class RegistryOuterClass {
     internal_static_yandex_cloud_cloudregistry_v1_Registry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Kind", "Type", "Status", "Description", "Labels", "Properties", "CreatedAt", "ModifiedAt", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "Kind", "Type", "Status", "Labels", "Properties", "CreatedAt", "ModifiedAt", });
     internal_static_yandex_cloud_cloudregistry_v1_Registry_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cloudregistry_v1_Registry_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cloudregistry_v1_Registry_LabelsEntry_fieldAccessorTable = new

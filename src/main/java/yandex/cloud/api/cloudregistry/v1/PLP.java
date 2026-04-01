@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.cloudregistry.v1;
 
-public final class LifecyclePolicyOuterClass {
-  private LifecyclePolicyOuterClass() {}
+public final class PLP {
+  private PLP() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -125,7 +125,7 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.getDescriptor().getEnumTypes().get(0);
+      return yandex.cloud.api.cloudregistry.v1.PLP.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final DeleteLifecycleRuleKind[] VALUES = values();
@@ -262,7 +262,7 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.getDescriptor().getEnumTypes().get(1);
+      return yandex.cloud.api.cloudregistry.v1.PLP.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final LifecyclePolicyState[] VALUES = values();
@@ -359,7 +359,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
-    java.util.List<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> 
+    java.util.List<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule> 
         getRulesList();
     /**
      * <pre>
@@ -368,7 +368,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index);
+    yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule getRules(int index);
     /**
      * <pre>
      * List of lifecycle rules.
@@ -384,7 +384,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
-    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList();
     /**
      * <pre>
@@ -393,7 +393,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
+    yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder getRulesOrBuilder(
         int index);
 
     /**
@@ -413,7 +413,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.LifecyclePolicyState state = 5;</code>
      * @return The state.
      */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState getState();
+    yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState getState();
 
     /**
      * <pre>
@@ -531,7 +531,7 @@ public final class LifecyclePolicyOuterClass {
   }
   /**
    * <pre>
-   * A LifecyclePolicy resource. 
+   * A LifecyclePolicy resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cloudregistry.v1.LifecyclePolicy}
@@ -607,11 +607,11 @@ public final class LifecyclePolicyOuterClass {
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                rules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>();
+                rules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule>();
                 mutable_bitField0_ |= 0x00000001;
               }
               rules_.add(
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.parser(), extensionRegistry));
               break;
             }
             case 40: {
@@ -688,15 +688,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy.class, yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -838,7 +838,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     public static final int RULES_FIELD_NUMBER = 4;
-    private java.util.List<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_;
+    private java.util.List<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule> rules_;
     /**
      * <pre>
      * List of lifecycle rules.
@@ -847,7 +847,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
+    public java.util.List<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule> getRulesList() {
       return rules_;
     }
     /**
@@ -858,7 +858,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList() {
       return rules_;
     }
@@ -881,7 +881,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
+    public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule getRules(int index) {
       return rules_.get(index);
     }
     /**
@@ -892,7 +892,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
+    public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder getRulesOrBuilder(
         int index) {
       return rules_.get(index);
     }
@@ -918,10 +918,10 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.LifecyclePolicyState state = 5;</code>
      * @return The state.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState getState() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState getState() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState.valueOf(state_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState result = yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState.valueOf(state_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState.UNRECOGNIZED : result;
     }
 
     public static final int REGISTRY_ID_FIELD_NUMBER = 6;
@@ -1164,7 +1164,7 @@ public final class LifecyclePolicyOuterClass {
       for (int i = 0; i < rules_.size(); i++) {
         output.writeMessage(4, rules_.get(i));
       }
-      if (state_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState.LIFECYCLE_POLICY_STATE_UNSPECIFIED.getNumber()) {
+      if (state_ != yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState.LIFECYCLE_POLICY_STATE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, state_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
@@ -1204,7 +1204,7 @@ public final class LifecyclePolicyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, rules_.get(i));
       }
-      if (state_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState.LIFECYCLE_POLICY_STATE_UNSPECIFIED.getNumber()) {
+      if (state_ != yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState.LIFECYCLE_POLICY_STATE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, state_);
       }
@@ -1235,10 +1235,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy other = (yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1307,69 +1307,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1382,7 +1382,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1399,7 +1399,7 @@ public final class LifecyclePolicyOuterClass {
     }
     /**
      * <pre>
-     * A LifecyclePolicy resource. 
+     * A LifecyclePolicy resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cloudregistry.v1.LifecyclePolicy}
@@ -1407,21 +1407,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.LifecyclePolicy)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy.class, yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1478,17 +1478,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecyclePolicy_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1496,8 +1496,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy(this);
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy result = new yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy(this);
         int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
@@ -1563,16 +1563,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -1647,11 +1647,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1950,17 +1950,17 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_ =
+      private java.util.List<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule> rules_ =
         java.util.Collections.emptyList();
       private void ensureRulesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          rules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>(rules_);
+          rules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule>(rules_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> rulesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder> rulesBuilder_;
 
       /**
        * <pre>
@@ -1969,7 +1969,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule> getRulesList() {
         if (rulesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(rules_);
         } else {
@@ -1997,7 +1997,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule getRules(int index) {
         if (rulesBuilder_ == null) {
           return rules_.get(index);
         } else {
@@ -2012,7 +2012,7 @@ public final class LifecyclePolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
       public Builder setRules(
-          int index, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2033,7 +2033,7 @@ public final class LifecyclePolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
       public Builder setRules(
-          int index, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           ensureRulesIsMutable();
           rules_.set(index, builderForValue.build());
@@ -2050,7 +2050,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public Builder addRules(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule value) {
+      public Builder addRules(yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2071,7 +2071,7 @@ public final class LifecyclePolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
       public Builder addRules(
-          int index, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2092,7 +2092,7 @@ public final class LifecyclePolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
       public Builder addRules(
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           ensureRulesIsMutable();
           rules_.add(builderForValue.build());
@@ -2110,7 +2110,7 @@ public final class LifecyclePolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
       public Builder addRules(
-          int index, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           ensureRulesIsMutable();
           rules_.add(index, builderForValue.build());
@@ -2128,7 +2128,7 @@ public final class LifecyclePolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
       public Builder addAllRules(
-          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule> values) {
         if (rulesBuilder_ == null) {
           ensureRulesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2180,7 +2180,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder getRulesBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder getRulesBuilder(
           int index) {
         return getRulesFieldBuilder().getBuilder(index);
       }
@@ -2191,7 +2191,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder getRulesOrBuilder(
           int index) {
         if (rulesBuilder_ == null) {
           return rules_.get(index);  } else {
@@ -2205,7 +2205,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder> 
            getRulesOrBuilderList() {
         if (rulesBuilder_ != null) {
           return rulesBuilder_.getMessageOrBuilderList();
@@ -2220,9 +2220,9 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder addRulesBuilder() {
         return getRulesFieldBuilder().addBuilder(
-            yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
+            yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2231,10 +2231,10 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder addRulesBuilder(
           int index) {
         return getRulesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
+            index, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2243,16 +2243,16 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.LifecycleRule rules = 4;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder> 
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder> 
            getRulesBuilderList() {
         return getRulesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder> 
           getRulesFieldBuilder() {
         if (rulesBuilder_ == null) {
           rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder>(
                   rules_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -2298,10 +2298,10 @@ public final class LifecyclePolicyOuterClass {
        * @return The state.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState getState() {
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState getState() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState.valueOf(state_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState result = yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState.valueOf(state_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -2312,7 +2312,7 @@ public final class LifecyclePolicyOuterClass {
        * @param value The state to set.
        * @return This builder for chaining.
        */
-      public Builder setState(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyState value) {
+      public Builder setState(yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicyState value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2950,12 +2950,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.LifecyclePolicy)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2980,7 +2980,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.LifecyclePolicy getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2989,6 +2989,141 @@ public final class LifecyclePolicyOuterClass {
   public interface LifecycleRuleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.cloudregistry.v1.LifecycleRule)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Rule that keeps artifacts by age.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+     * @return Whether the keepByAge field is set.
+     */
+    boolean hasKeepByAge();
+    /**
+     * <pre>
+     * Rule that keeps artifacts by age.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+     * @return The keepByAge.
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule getKeepByAge();
+    /**
+     * <pre>
+     * Rule that keeps artifacts by age.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRuleOrBuilder getKeepByAgeOrBuilder();
+
+    /**
+     * <pre>
+     * Rule that keeps artifacts by version count.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+     * @return Whether the keepByVersion field is set.
+     */
+    boolean hasKeepByVersion();
+    /**
+     * <pre>
+     * Rule that keeps artifacts by version count.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+     * @return The keepByVersion.
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule getKeepByVersion();
+    /**
+     * <pre>
+     * Rule that keeps artifacts by version count.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRuleOrBuilder getKeepByVersionOrBuilder();
+
+    /**
+     * <pre>
+     * Rule that deletes artifacts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+     * @return Whether the delete field is set.
+     */
+    boolean hasDelete();
+    /**
+     * <pre>
+     * Rule that deletes artifacts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+     * @return The delete.
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule getDelete();
+    /**
+     * <pre>
+     * Rule that deletes artifacts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleOrBuilder getDeleteOrBuilder();
+
+    /**
+     * <pre>
+     * Docker-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+     * @return Whether the dockerFilters field is set.
+     */
+    boolean hasDockerFilters();
+    /**
+     * <pre>
+     * Docker-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+     * @return The dockerFilters.
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters getDockerFilters();
+    /**
+     * <pre>
+     * Docker-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.DockerFiltersOrBuilder getDockerFiltersOrBuilder();
+
+    /**
+     * <pre>
+     * Maven-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+     * @return Whether the mavenFilters field is set.
+     */
+    boolean hasMavenFilters();
+    /**
+     * <pre>
+     * Maven-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+     * @return The mavenFilters.
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters getMavenFilters();
+    /**
+     * <pre>
+     * Maven-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.MavenFiltersOrBuilder getMavenFiltersOrBuilder();
 
     /**
      * <pre>
@@ -3012,141 +3147,6 @@ public final class LifecyclePolicyOuterClass {
 
     /**
      * <pre>
-     * Rule that keeps artifacts by age.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-     * @return Whether the keepByAge field is set.
-     */
-    boolean hasKeepByAge();
-    /**
-     * <pre>
-     * Rule that keeps artifacts by age.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-     * @return The keepByAge.
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule getKeepByAge();
-    /**
-     * <pre>
-     * Rule that keeps artifacts by age.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRuleOrBuilder getKeepByAgeOrBuilder();
-
-    /**
-     * <pre>
-     * Rule that keeps artifacts by version count.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-     * @return Whether the keepByVersion field is set.
-     */
-    boolean hasKeepByVersion();
-    /**
-     * <pre>
-     * Rule that keeps artifacts by version count.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-     * @return The keepByVersion.
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule getKeepByVersion();
-    /**
-     * <pre>
-     * Rule that keeps artifacts by version count.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRuleOrBuilder getKeepByVersionOrBuilder();
-
-    /**
-     * <pre>
-     * Rule that deletes artifacts.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-     * @return Whether the delete field is set.
-     */
-    boolean hasDelete();
-    /**
-     * <pre>
-     * Rule that deletes artifacts.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-     * @return The delete.
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule getDelete();
-    /**
-     * <pre>
-     * Rule that deletes artifacts.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleOrBuilder getDeleteOrBuilder();
-
-    /**
-     * <pre>
-     * Docker-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-     * @return Whether the dockerFilters field is set.
-     */
-    boolean hasDockerFilters();
-    /**
-     * <pre>
-     * Docker-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-     * @return The dockerFilters.
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters getDockerFilters();
-    /**
-     * <pre>
-     * Docker-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFiltersOrBuilder getDockerFiltersOrBuilder();
-
-    /**
-     * <pre>
-     * Maven-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-     * @return Whether the mavenFilters field is set.
-     */
-    boolean hasMavenFilters();
-    /**
-     * <pre>
-     * Maven-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-     * @return The mavenFilters.
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters getMavenFilters();
-    /**
-     * <pre>
-     * Maven-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFiltersOrBuilder getMavenFiltersOrBuilder();
-
-    /**
-     * <pre>
      * Regular expression pattern to match package version or docker tag.
      * </pre>
      *
@@ -3165,9 +3165,9 @@ public final class LifecyclePolicyOuterClass {
     com.google.protobuf.ByteString
         getVersionRegexpBytes();
 
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.KindCase getKindCase();
+    public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.KindCase getKindCase();
 
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.FilterCase getFilterCase();
+    public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.FilterCase getFilterCase();
   }
   /**
    * <pre>
@@ -3227,70 +3227,70 @@ public final class LifecyclePolicyOuterClass {
               break;
             }
             case 18: {
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder subBuilder = null;
               if (kindCase_ == 2) {
-                subBuilder = ((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_).toBuilder();
+                subBuilder = ((yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_);
+                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 2;
               break;
             }
             case 26: {
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder subBuilder = null;
               if (kindCase_ == 3) {
-                subBuilder = ((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_).toBuilder();
+                subBuilder = ((yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_);
+                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 3;
               break;
             }
             case 34: {
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder subBuilder = null;
               if (kindCase_ == 4) {
-                subBuilder = ((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_).toBuilder();
+                subBuilder = ((yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_).toBuilder();
               }
               kind_ =
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_);
+                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_);
                 kind_ = subBuilder.buildPartial();
               }
               kindCase_ = 4;
               break;
             }
             case 42: {
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder subBuilder = null;
               if (filterCase_ == 5) {
-                subBuilder = ((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_).toBuilder();
+                subBuilder = ((yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_).toBuilder();
               }
               filter_ =
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_);
+                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_);
                 filter_ = subBuilder.buildPartial();
               }
               filterCase_ = 5;
               break;
             }
             case 50: {
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder subBuilder = null;
               if (filterCase_ == 6) {
-                subBuilder = ((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_).toBuilder();
+                subBuilder = ((yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_).toBuilder();
               }
               filter_ =
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_);
+                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_);
                 filter_ = subBuilder.buildPartial();
               }
               filterCase_ = 6;
@@ -3323,15 +3323,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder.class);
     }
 
     private int kindCase_ = 0;
@@ -3418,6 +3418,221 @@ public final class LifecyclePolicyOuterClass {
           filterCase_);
     }
 
+    public static final int KEEP_BY_AGE_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Rule that keeps artifacts by age.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+     * @return Whether the keepByAge field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeepByAge() {
+      return kindCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Rule that keeps artifacts by age.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+     * @return The keepByAge.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule getKeepByAge() {
+      if (kindCase_ == 2) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Rule that keeps artifacts by age.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRuleOrBuilder getKeepByAgeOrBuilder() {
+      if (kindCase_ == 2) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance();
+    }
+
+    public static final int KEEP_BY_VERSION_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Rule that keeps artifacts by version count.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+     * @return Whether the keepByVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeepByVersion() {
+      return kindCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Rule that keeps artifacts by version count.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+     * @return The keepByVersion.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule getKeepByVersion() {
+      if (kindCase_ == 3) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Rule that keeps artifacts by version count.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRuleOrBuilder getKeepByVersionOrBuilder() {
+      if (kindCase_ == 3) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance();
+    }
+
+    public static final int DELETE_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * Rule that deletes artifacts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+     * @return Whether the delete field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelete() {
+      return kindCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Rule that deletes artifacts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+     * @return The delete.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule getDelete() {
+      if (kindCase_ == 4) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Rule that deletes artifacts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleOrBuilder getDeleteOrBuilder() {
+      if (kindCase_ == 4) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance();
+    }
+
+    public static final int DOCKER_FILTERS_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * Docker-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+     * @return Whether the dockerFilters field is set.
+     */
+    @java.lang.Override
+    public boolean hasDockerFilters() {
+      return filterCase_ == 5;
+    }
+    /**
+     * <pre>
+     * Docker-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+     * @return The dockerFilters.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters getDockerFilters() {
+      if (filterCase_ == 5) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Docker-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.DockerFiltersOrBuilder getDockerFiltersOrBuilder() {
+      if (filterCase_ == 5) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance();
+    }
+
+    public static final int MAVEN_FILTERS_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Maven-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+     * @return Whether the mavenFilters field is set.
+     */
+    @java.lang.Override
+    public boolean hasMavenFilters() {
+      return filterCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Maven-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+     * @return The mavenFilters.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters getMavenFilters() {
+      if (filterCase_ == 6) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Maven-specific filters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cloudregistry.v1.PLP.MavenFiltersOrBuilder getMavenFiltersOrBuilder() {
+      if (filterCase_ == 6) {
+         return (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_;
+      }
+      return yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance();
+    }
+
     public static final int PATH_PREFIX_FIELD_NUMBER = 1;
     private volatile java.lang.Object pathPrefix_;
     /**
@@ -3462,221 +3677,6 @@ public final class LifecyclePolicyOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int KEEP_BY_AGE_FIELD_NUMBER = 2;
-    /**
-     * <pre>
-     * Rule that keeps artifacts by age.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-     * @return Whether the keepByAge field is set.
-     */
-    @java.lang.Override
-    public boolean hasKeepByAge() {
-      return kindCase_ == 2;
-    }
-    /**
-     * <pre>
-     * Rule that keeps artifacts by age.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-     * @return The keepByAge.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule getKeepByAge() {
-      if (kindCase_ == 2) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Rule that keeps artifacts by age.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRuleOrBuilder getKeepByAgeOrBuilder() {
-      if (kindCase_ == 2) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance();
-    }
-
-    public static final int KEEP_BY_VERSION_FIELD_NUMBER = 3;
-    /**
-     * <pre>
-     * Rule that keeps artifacts by version count.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-     * @return Whether the keepByVersion field is set.
-     */
-    @java.lang.Override
-    public boolean hasKeepByVersion() {
-      return kindCase_ == 3;
-    }
-    /**
-     * <pre>
-     * Rule that keeps artifacts by version count.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-     * @return The keepByVersion.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule getKeepByVersion() {
-      if (kindCase_ == 3) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Rule that keeps artifacts by version count.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRuleOrBuilder getKeepByVersionOrBuilder() {
-      if (kindCase_ == 3) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance();
-    }
-
-    public static final int DELETE_FIELD_NUMBER = 4;
-    /**
-     * <pre>
-     * Rule that deletes artifacts.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-     * @return Whether the delete field is set.
-     */
-    @java.lang.Override
-    public boolean hasDelete() {
-      return kindCase_ == 4;
-    }
-    /**
-     * <pre>
-     * Rule that deletes artifacts.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-     * @return The delete.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule getDelete() {
-      if (kindCase_ == 4) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Rule that deletes artifacts.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleOrBuilder getDeleteOrBuilder() {
-      if (kindCase_ == 4) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance();
-    }
-
-    public static final int DOCKER_FILTERS_FIELD_NUMBER = 5;
-    /**
-     * <pre>
-     * Docker-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-     * @return Whether the dockerFilters field is set.
-     */
-    @java.lang.Override
-    public boolean hasDockerFilters() {
-      return filterCase_ == 5;
-    }
-    /**
-     * <pre>
-     * Docker-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-     * @return The dockerFilters.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters getDockerFilters() {
-      if (filterCase_ == 5) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Docker-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFiltersOrBuilder getDockerFiltersOrBuilder() {
-      if (filterCase_ == 5) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance();
-    }
-
-    public static final int MAVEN_FILTERS_FIELD_NUMBER = 6;
-    /**
-     * <pre>
-     * Maven-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-     * @return Whether the mavenFilters field is set.
-     */
-    @java.lang.Override
-    public boolean hasMavenFilters() {
-      return filterCase_ == 6;
-    }
-    /**
-     * <pre>
-     * Maven-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-     * @return The mavenFilters.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters getMavenFilters() {
-      if (filterCase_ == 6) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Maven-specific filters.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFiltersOrBuilder getMavenFiltersOrBuilder() {
-      if (filterCase_ == 6) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_;
-      }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance();
     }
 
     public static final int VERSION_REGEXP_FIELD_NUMBER = 7;
@@ -3743,19 +3743,19 @@ public final class LifecyclePolicyOuterClass {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pathPrefix_);
       }
       if (kindCase_ == 2) {
-        output.writeMessage(2, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_);
+        output.writeMessage(2, (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_);
       }
       if (kindCase_ == 3) {
-        output.writeMessage(3, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_);
+        output.writeMessage(3, (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_);
       }
       if (kindCase_ == 4) {
-        output.writeMessage(4, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_);
+        output.writeMessage(4, (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_);
       }
       if (filterCase_ == 5) {
-        output.writeMessage(5, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_);
+        output.writeMessage(5, (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_);
       }
       if (filterCase_ == 6) {
-        output.writeMessage(6, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_);
+        output.writeMessage(6, (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionRegexp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, versionRegexp_);
@@ -3774,23 +3774,23 @@ public final class LifecyclePolicyOuterClass {
       }
       if (kindCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_);
+          .computeMessageSize(2, (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_);
       }
       if (kindCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_);
+          .computeMessageSize(3, (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_);
       }
       if (kindCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_);
+          .computeMessageSize(4, (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_);
       }
       if (filterCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_);
+          .computeMessageSize(5, (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_);
       }
       if (filterCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_);
+          .computeMessageSize(6, (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionRegexp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, versionRegexp_);
@@ -3805,10 +3805,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule other = (yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule) obj;
 
       if (!getPathPrefix()
           .equals(other.getPathPrefix())) return false;
@@ -3892,69 +3892,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3967,7 +3967,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3992,21 +3992,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.LifecycleRule)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4038,17 +4038,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4056,9 +4056,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule(this);
-        result.pathPrefix_ = pathPrefix_;
+      public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule result = new yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule(this);
         if (kindCase_ == 2) {
           if (keepByAgeBuilder_ == null) {
             result.kind_ = kind_;
@@ -4094,6 +4093,7 @@ public final class LifecyclePolicyOuterClass {
             result.filter_ = mavenFiltersBuilder_.build();
           }
         }
+        result.pathPrefix_ = pathPrefix_;
         result.versionRegexp_ = versionRegexp_;
         result.kindCase_ = kindCase_;
         result.filterCase_ = filterCase_;
@@ -4135,16 +4135,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule.getDefaultInstance()) return this;
         if (!other.getPathPrefix().isEmpty()) {
           pathPrefix_ = other.pathPrefix_;
           onChanged();
@@ -4198,11 +4198,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4241,6 +4241,891 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
 
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRuleOrBuilder> keepByAgeBuilder_;
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       * @return Whether the keepByAge field is set.
+       */
+      @java.lang.Override
+      public boolean hasKeepByAge() {
+        return kindCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       * @return The keepByAge.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule getKeepByAge() {
+        if (keepByAgeBuilder_ == null) {
+          if (kindCase_ == 2) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance();
+        } else {
+          if (kindCase_ == 2) {
+            return keepByAgeBuilder_.getMessage();
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       */
+      public Builder setKeepByAge(yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule value) {
+        if (keepByAgeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kind_ = value;
+          onChanged();
+        } else {
+          keepByAgeBuilder_.setMessage(value);
+        }
+        kindCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       */
+      public Builder setKeepByAge(
+          yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder builderForValue) {
+        if (keepByAgeBuilder_ == null) {
+          kind_ = builderForValue.build();
+          onChanged();
+        } else {
+          keepByAgeBuilder_.setMessage(builderForValue.build());
+        }
+        kindCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       */
+      public Builder mergeKeepByAge(yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule value) {
+        if (keepByAgeBuilder_ == null) {
+          if (kindCase_ == 2 &&
+              kind_ != yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance()) {
+            kind_ = yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.newBuilder((yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            kind_ = value;
+          }
+          onChanged();
+        } else {
+          if (kindCase_ == 2) {
+            keepByAgeBuilder_.mergeFrom(value);
+          }
+          keepByAgeBuilder_.setMessage(value);
+        }
+        kindCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       */
+      public Builder clearKeepByAge() {
+        if (keepByAgeBuilder_ == null) {
+          if (kindCase_ == 2) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
+        } else {
+          if (kindCase_ == 2) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          keepByAgeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       */
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder getKeepByAgeBuilder() {
+        return getKeepByAgeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRuleOrBuilder getKeepByAgeOrBuilder() {
+        if ((kindCase_ == 2) && (keepByAgeBuilder_ != null)) {
+          return keepByAgeBuilder_.getMessageOrBuilder();
+        } else {
+          if (kindCase_ == 2) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by age.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRuleOrBuilder> 
+          getKeepByAgeFieldBuilder() {
+        if (keepByAgeBuilder_ == null) {
+          if (!(kindCase_ == 2)) {
+            kind_ = yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance();
+          }
+          keepByAgeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRuleOrBuilder>(
+                  (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) kind_,
+                  getParentForChildren(),
+                  isClean());
+          kind_ = null;
+        }
+        kindCase_ = 2;
+        onChanged();;
+        return keepByAgeBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRuleOrBuilder> keepByVersionBuilder_;
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       * @return Whether the keepByVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasKeepByVersion() {
+        return kindCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       * @return The keepByVersion.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule getKeepByVersion() {
+        if (keepByVersionBuilder_ == null) {
+          if (kindCase_ == 3) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance();
+        } else {
+          if (kindCase_ == 3) {
+            return keepByVersionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       */
+      public Builder setKeepByVersion(yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule value) {
+        if (keepByVersionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kind_ = value;
+          onChanged();
+        } else {
+          keepByVersionBuilder_.setMessage(value);
+        }
+        kindCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       */
+      public Builder setKeepByVersion(
+          yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder builderForValue) {
+        if (keepByVersionBuilder_ == null) {
+          kind_ = builderForValue.build();
+          onChanged();
+        } else {
+          keepByVersionBuilder_.setMessage(builderForValue.build());
+        }
+        kindCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       */
+      public Builder mergeKeepByVersion(yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule value) {
+        if (keepByVersionBuilder_ == null) {
+          if (kindCase_ == 3 &&
+              kind_ != yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance()) {
+            kind_ = yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.newBuilder((yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            kind_ = value;
+          }
+          onChanged();
+        } else {
+          if (kindCase_ == 3) {
+            keepByVersionBuilder_.mergeFrom(value);
+          }
+          keepByVersionBuilder_.setMessage(value);
+        }
+        kindCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       */
+      public Builder clearKeepByVersion() {
+        if (keepByVersionBuilder_ == null) {
+          if (kindCase_ == 3) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
+        } else {
+          if (kindCase_ == 3) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          keepByVersionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       */
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder getKeepByVersionBuilder() {
+        return getKeepByVersionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRuleOrBuilder getKeepByVersionOrBuilder() {
+        if ((kindCase_ == 3) && (keepByVersionBuilder_ != null)) {
+          return keepByVersionBuilder_.getMessageOrBuilder();
+        } else {
+          if (kindCase_ == 3) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Rule that keeps artifacts by version count.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRuleOrBuilder> 
+          getKeepByVersionFieldBuilder() {
+        if (keepByVersionBuilder_ == null) {
+          if (!(kindCase_ == 3)) {
+            kind_ = yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance();
+          }
+          keepByVersionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRuleOrBuilder>(
+                  (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) kind_,
+                  getParentForChildren(),
+                  isClean());
+          kind_ = null;
+        }
+        kindCase_ = 3;
+        onChanged();;
+        return keepByVersionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleOrBuilder> deleteBuilder_;
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       * @return Whether the delete field is set.
+       */
+      @java.lang.Override
+      public boolean hasDelete() {
+        return kindCase_ == 4;
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       * @return The delete.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule getDelete() {
+        if (deleteBuilder_ == null) {
+          if (kindCase_ == 4) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance();
+        } else {
+          if (kindCase_ == 4) {
+            return deleteBuilder_.getMessage();
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       */
+      public Builder setDelete(yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule value) {
+        if (deleteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kind_ = value;
+          onChanged();
+        } else {
+          deleteBuilder_.setMessage(value);
+        }
+        kindCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       */
+      public Builder setDelete(
+          yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder builderForValue) {
+        if (deleteBuilder_ == null) {
+          kind_ = builderForValue.build();
+          onChanged();
+        } else {
+          deleteBuilder_.setMessage(builderForValue.build());
+        }
+        kindCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       */
+      public Builder mergeDelete(yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule value) {
+        if (deleteBuilder_ == null) {
+          if (kindCase_ == 4 &&
+              kind_ != yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance()) {
+            kind_ = yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.newBuilder((yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            kind_ = value;
+          }
+          onChanged();
+        } else {
+          if (kindCase_ == 4) {
+            deleteBuilder_.mergeFrom(value);
+          }
+          deleteBuilder_.setMessage(value);
+        }
+        kindCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       */
+      public Builder clearDelete() {
+        if (deleteBuilder_ == null) {
+          if (kindCase_ == 4) {
+            kindCase_ = 0;
+            kind_ = null;
+            onChanged();
+          }
+        } else {
+          if (kindCase_ == 4) {
+            kindCase_ = 0;
+            kind_ = null;
+          }
+          deleteBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       */
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder getDeleteBuilder() {
+        return getDeleteFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleOrBuilder getDeleteOrBuilder() {
+        if ((kindCase_ == 4) && (deleteBuilder_ != null)) {
+          return deleteBuilder_.getMessageOrBuilder();
+        } else {
+          if (kindCase_ == 4) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Rule that deletes artifacts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleOrBuilder> 
+          getDeleteFieldBuilder() {
+        if (deleteBuilder_ == null) {
+          if (!(kindCase_ == 4)) {
+            kind_ = yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance();
+          }
+          deleteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleOrBuilder>(
+                  (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) kind_,
+                  getParentForChildren(),
+                  isClean());
+          kind_ = null;
+        }
+        kindCase_ = 4;
+        onChanged();;
+        return deleteBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters, yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DockerFiltersOrBuilder> dockerFiltersBuilder_;
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       * @return Whether the dockerFilters field is set.
+       */
+      @java.lang.Override
+      public boolean hasDockerFilters() {
+        return filterCase_ == 5;
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       * @return The dockerFilters.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters getDockerFilters() {
+        if (dockerFiltersBuilder_ == null) {
+          if (filterCase_ == 5) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance();
+        } else {
+          if (filterCase_ == 5) {
+            return dockerFiltersBuilder_.getMessage();
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       */
+      public Builder setDockerFilters(yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters value) {
+        if (dockerFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+          onChanged();
+        } else {
+          dockerFiltersBuilder_.setMessage(value);
+        }
+        filterCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       */
+      public Builder setDockerFilters(
+          yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder builderForValue) {
+        if (dockerFiltersBuilder_ == null) {
+          filter_ = builderForValue.build();
+          onChanged();
+        } else {
+          dockerFiltersBuilder_.setMessage(builderForValue.build());
+        }
+        filterCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       */
+      public Builder mergeDockerFilters(yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters value) {
+        if (dockerFiltersBuilder_ == null) {
+          if (filterCase_ == 5 &&
+              filter_ != yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance()) {
+            filter_ = yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.newBuilder((yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            filter_ = value;
+          }
+          onChanged();
+        } else {
+          if (filterCase_ == 5) {
+            dockerFiltersBuilder_.mergeFrom(value);
+          }
+          dockerFiltersBuilder_.setMessage(value);
+        }
+        filterCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       */
+      public Builder clearDockerFilters() {
+        if (dockerFiltersBuilder_ == null) {
+          if (filterCase_ == 5) {
+            filterCase_ = 0;
+            filter_ = null;
+            onChanged();
+          }
+        } else {
+          if (filterCase_ == 5) {
+            filterCase_ = 0;
+            filter_ = null;
+          }
+          dockerFiltersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       */
+      public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder getDockerFiltersBuilder() {
+        return getDockerFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.DockerFiltersOrBuilder getDockerFiltersOrBuilder() {
+        if ((filterCase_ == 5) && (dockerFiltersBuilder_ != null)) {
+          return dockerFiltersBuilder_.getMessageOrBuilder();
+        } else {
+          if (filterCase_ == 5) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Docker-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters, yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DockerFiltersOrBuilder> 
+          getDockerFiltersFieldBuilder() {
+        if (dockerFiltersBuilder_ == null) {
+          if (!(filterCase_ == 5)) {
+            filter_ = yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance();
+          }
+          dockerFiltersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters, yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DockerFiltersOrBuilder>(
+                  (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) filter_,
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        filterCase_ = 5;
+        onChanged();;
+        return dockerFiltersBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters, yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder, yandex.cloud.api.cloudregistry.v1.PLP.MavenFiltersOrBuilder> mavenFiltersBuilder_;
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       * @return Whether the mavenFilters field is set.
+       */
+      @java.lang.Override
+      public boolean hasMavenFilters() {
+        return filterCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       * @return The mavenFilters.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters getMavenFilters() {
+        if (mavenFiltersBuilder_ == null) {
+          if (filterCase_ == 6) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance();
+        } else {
+          if (filterCase_ == 6) {
+            return mavenFiltersBuilder_.getMessage();
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       */
+      public Builder setMavenFilters(yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters value) {
+        if (mavenFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+          onChanged();
+        } else {
+          mavenFiltersBuilder_.setMessage(value);
+        }
+        filterCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       */
+      public Builder setMavenFilters(
+          yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder builderForValue) {
+        if (mavenFiltersBuilder_ == null) {
+          filter_ = builderForValue.build();
+          onChanged();
+        } else {
+          mavenFiltersBuilder_.setMessage(builderForValue.build());
+        }
+        filterCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       */
+      public Builder mergeMavenFilters(yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters value) {
+        if (mavenFiltersBuilder_ == null) {
+          if (filterCase_ == 6 &&
+              filter_ != yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance()) {
+            filter_ = yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.newBuilder((yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            filter_ = value;
+          }
+          onChanged();
+        } else {
+          if (filterCase_ == 6) {
+            mavenFiltersBuilder_.mergeFrom(value);
+          }
+          mavenFiltersBuilder_.setMessage(value);
+        }
+        filterCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       */
+      public Builder clearMavenFilters() {
+        if (mavenFiltersBuilder_ == null) {
+          if (filterCase_ == 6) {
+            filterCase_ = 0;
+            filter_ = null;
+            onChanged();
+          }
+        } else {
+          if (filterCase_ == 6) {
+            filterCase_ = 0;
+            filter_ = null;
+          }
+          mavenFiltersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       */
+      public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder getMavenFiltersBuilder() {
+        return getMavenFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.MavenFiltersOrBuilder getMavenFiltersOrBuilder() {
+        if ((filterCase_ == 6) && (mavenFiltersBuilder_ != null)) {
+          return mavenFiltersBuilder_.getMessageOrBuilder();
+        } else {
+          if (filterCase_ == 6) {
+            return (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_;
+          }
+          return yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Maven-specific filters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters, yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder, yandex.cloud.api.cloudregistry.v1.PLP.MavenFiltersOrBuilder> 
+          getMavenFiltersFieldBuilder() {
+        if (mavenFiltersBuilder_ == null) {
+          if (!(filterCase_ == 6)) {
+            filter_ = yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance();
+          }
+          mavenFiltersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters, yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder, yandex.cloud.api.cloudregistry.v1.PLP.MavenFiltersOrBuilder>(
+                  (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) filter_,
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        filterCase_ = 6;
+        onChanged();;
+        return mavenFiltersBuilder_;
+      }
 
       private java.lang.Object pathPrefix_ = "";
       /**
@@ -4336,891 +5221,6 @@ public final class LifecyclePolicyOuterClass {
         pathPrefix_ = value;
         onChanged();
         return this;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRuleOrBuilder> keepByAgeBuilder_;
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       * @return Whether the keepByAge field is set.
-       */
-      @java.lang.Override
-      public boolean hasKeepByAge() {
-        return kindCase_ == 2;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       * @return The keepByAge.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule getKeepByAge() {
-        if (keepByAgeBuilder_ == null) {
-          if (kindCase_ == 2) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance();
-        } else {
-          if (kindCase_ == 2) {
-            return keepByAgeBuilder_.getMessage();
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       */
-      public Builder setKeepByAge(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule value) {
-        if (keepByAgeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          kind_ = value;
-          onChanged();
-        } else {
-          keepByAgeBuilder_.setMessage(value);
-        }
-        kindCase_ = 2;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       */
-      public Builder setKeepByAge(
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder builderForValue) {
-        if (keepByAgeBuilder_ == null) {
-          kind_ = builderForValue.build();
-          onChanged();
-        } else {
-          keepByAgeBuilder_.setMessage(builderForValue.build());
-        }
-        kindCase_ = 2;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       */
-      public Builder mergeKeepByAge(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule value) {
-        if (keepByAgeBuilder_ == null) {
-          if (kindCase_ == 2 &&
-              kind_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance()) {
-            kind_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.newBuilder((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            kind_ = value;
-          }
-          onChanged();
-        } else {
-          if (kindCase_ == 2) {
-            keepByAgeBuilder_.mergeFrom(value);
-          }
-          keepByAgeBuilder_.setMessage(value);
-        }
-        kindCase_ = 2;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       */
-      public Builder clearKeepByAge() {
-        if (keepByAgeBuilder_ == null) {
-          if (kindCase_ == 2) {
-            kindCase_ = 0;
-            kind_ = null;
-            onChanged();
-          }
-        } else {
-          if (kindCase_ == 2) {
-            kindCase_ = 0;
-            kind_ = null;
-          }
-          keepByAgeBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder getKeepByAgeBuilder() {
-        return getKeepByAgeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRuleOrBuilder getKeepByAgeOrBuilder() {
-        if ((kindCase_ == 2) && (keepByAgeBuilder_ != null)) {
-          return keepByAgeBuilder_.getMessageOrBuilder();
-        } else {
-          if (kindCase_ == 2) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by age.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule keep_by_age = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRuleOrBuilder> 
-          getKeepByAgeFieldBuilder() {
-        if (keepByAgeBuilder_ == null) {
-          if (!(kindCase_ == 2)) {
-            kind_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance();
-          }
-          keepByAgeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRuleOrBuilder>(
-                  (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) kind_,
-                  getParentForChildren(),
-                  isClean());
-          kind_ = null;
-        }
-        kindCase_ = 2;
-        onChanged();;
-        return keepByAgeBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRuleOrBuilder> keepByVersionBuilder_;
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       * @return Whether the keepByVersion field is set.
-       */
-      @java.lang.Override
-      public boolean hasKeepByVersion() {
-        return kindCase_ == 3;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       * @return The keepByVersion.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule getKeepByVersion() {
-        if (keepByVersionBuilder_ == null) {
-          if (kindCase_ == 3) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance();
-        } else {
-          if (kindCase_ == 3) {
-            return keepByVersionBuilder_.getMessage();
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       */
-      public Builder setKeepByVersion(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule value) {
-        if (keepByVersionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          kind_ = value;
-          onChanged();
-        } else {
-          keepByVersionBuilder_.setMessage(value);
-        }
-        kindCase_ = 3;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       */
-      public Builder setKeepByVersion(
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder builderForValue) {
-        if (keepByVersionBuilder_ == null) {
-          kind_ = builderForValue.build();
-          onChanged();
-        } else {
-          keepByVersionBuilder_.setMessage(builderForValue.build());
-        }
-        kindCase_ = 3;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       */
-      public Builder mergeKeepByVersion(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule value) {
-        if (keepByVersionBuilder_ == null) {
-          if (kindCase_ == 3 &&
-              kind_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance()) {
-            kind_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.newBuilder((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            kind_ = value;
-          }
-          onChanged();
-        } else {
-          if (kindCase_ == 3) {
-            keepByVersionBuilder_.mergeFrom(value);
-          }
-          keepByVersionBuilder_.setMessage(value);
-        }
-        kindCase_ = 3;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       */
-      public Builder clearKeepByVersion() {
-        if (keepByVersionBuilder_ == null) {
-          if (kindCase_ == 3) {
-            kindCase_ = 0;
-            kind_ = null;
-            onChanged();
-          }
-        } else {
-          if (kindCase_ == 3) {
-            kindCase_ = 0;
-            kind_ = null;
-          }
-          keepByVersionBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder getKeepByVersionBuilder() {
-        return getKeepByVersionFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRuleOrBuilder getKeepByVersionOrBuilder() {
-        if ((kindCase_ == 3) && (keepByVersionBuilder_ != null)) {
-          return keepByVersionBuilder_.getMessageOrBuilder();
-        } else {
-          if (kindCase_ == 3) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Rule that keeps artifacts by version count.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule keep_by_version = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRuleOrBuilder> 
-          getKeepByVersionFieldBuilder() {
-        if (keepByVersionBuilder_ == null) {
-          if (!(kindCase_ == 3)) {
-            kind_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance();
-          }
-          keepByVersionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRuleOrBuilder>(
-                  (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) kind_,
-                  getParentForChildren(),
-                  isClean());
-          kind_ = null;
-        }
-        kindCase_ = 3;
-        onChanged();;
-        return keepByVersionBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleOrBuilder> deleteBuilder_;
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       * @return Whether the delete field is set.
-       */
-      @java.lang.Override
-      public boolean hasDelete() {
-        return kindCase_ == 4;
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       * @return The delete.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule getDelete() {
-        if (deleteBuilder_ == null) {
-          if (kindCase_ == 4) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance();
-        } else {
-          if (kindCase_ == 4) {
-            return deleteBuilder_.getMessage();
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       */
-      public Builder setDelete(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule value) {
-        if (deleteBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          kind_ = value;
-          onChanged();
-        } else {
-          deleteBuilder_.setMessage(value);
-        }
-        kindCase_ = 4;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       */
-      public Builder setDelete(
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder builderForValue) {
-        if (deleteBuilder_ == null) {
-          kind_ = builderForValue.build();
-          onChanged();
-        } else {
-          deleteBuilder_.setMessage(builderForValue.build());
-        }
-        kindCase_ = 4;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       */
-      public Builder mergeDelete(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule value) {
-        if (deleteBuilder_ == null) {
-          if (kindCase_ == 4 &&
-              kind_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance()) {
-            kind_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.newBuilder((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            kind_ = value;
-          }
-          onChanged();
-        } else {
-          if (kindCase_ == 4) {
-            deleteBuilder_.mergeFrom(value);
-          }
-          deleteBuilder_.setMessage(value);
-        }
-        kindCase_ = 4;
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       */
-      public Builder clearDelete() {
-        if (deleteBuilder_ == null) {
-          if (kindCase_ == 4) {
-            kindCase_ = 0;
-            kind_ = null;
-            onChanged();
-          }
-        } else {
-          if (kindCase_ == 4) {
-            kindCase_ = 0;
-            kind_ = null;
-          }
-          deleteBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder getDeleteBuilder() {
-        return getDeleteFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleOrBuilder getDeleteOrBuilder() {
-        if ((kindCase_ == 4) && (deleteBuilder_ != null)) {
-          return deleteBuilder_.getMessageOrBuilder();
-        } else {
-          if (kindCase_ == 4) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Rule that deletes artifacts.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRule delete = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleOrBuilder> 
-          getDeleteFieldBuilder() {
-        if (deleteBuilder_ == null) {
-          if (!(kindCase_ == 4)) {
-            kind_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance();
-          }
-          deleteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleOrBuilder>(
-                  (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) kind_,
-                  getParentForChildren(),
-                  isClean());
-          kind_ = null;
-        }
-        kindCase_ = 4;
-        onChanged();;
-        return deleteBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFiltersOrBuilder> dockerFiltersBuilder_;
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       * @return Whether the dockerFilters field is set.
-       */
-      @java.lang.Override
-      public boolean hasDockerFilters() {
-        return filterCase_ == 5;
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       * @return The dockerFilters.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters getDockerFilters() {
-        if (dockerFiltersBuilder_ == null) {
-          if (filterCase_ == 5) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance();
-        } else {
-          if (filterCase_ == 5) {
-            return dockerFiltersBuilder_.getMessage();
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       */
-      public Builder setDockerFilters(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters value) {
-        if (dockerFiltersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          filter_ = value;
-          onChanged();
-        } else {
-          dockerFiltersBuilder_.setMessage(value);
-        }
-        filterCase_ = 5;
-        return this;
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       */
-      public Builder setDockerFilters(
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder builderForValue) {
-        if (dockerFiltersBuilder_ == null) {
-          filter_ = builderForValue.build();
-          onChanged();
-        } else {
-          dockerFiltersBuilder_.setMessage(builderForValue.build());
-        }
-        filterCase_ = 5;
-        return this;
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       */
-      public Builder mergeDockerFilters(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters value) {
-        if (dockerFiltersBuilder_ == null) {
-          if (filterCase_ == 5 &&
-              filter_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance()) {
-            filter_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.newBuilder((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            filter_ = value;
-          }
-          onChanged();
-        } else {
-          if (filterCase_ == 5) {
-            dockerFiltersBuilder_.mergeFrom(value);
-          }
-          dockerFiltersBuilder_.setMessage(value);
-        }
-        filterCase_ = 5;
-        return this;
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       */
-      public Builder clearDockerFilters() {
-        if (dockerFiltersBuilder_ == null) {
-          if (filterCase_ == 5) {
-            filterCase_ = 0;
-            filter_ = null;
-            onChanged();
-          }
-        } else {
-          if (filterCase_ == 5) {
-            filterCase_ = 0;
-            filter_ = null;
-          }
-          dockerFiltersBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder getDockerFiltersBuilder() {
-        return getDockerFiltersFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFiltersOrBuilder getDockerFiltersOrBuilder() {
-        if ((filterCase_ == 5) && (dockerFiltersBuilder_ != null)) {
-          return dockerFiltersBuilder_.getMessageOrBuilder();
-        } else {
-          if (filterCase_ == 5) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Docker-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DockerFilters docker_filters = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFiltersOrBuilder> 
-          getDockerFiltersFieldBuilder() {
-        if (dockerFiltersBuilder_ == null) {
-          if (!(filterCase_ == 5)) {
-            filter_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance();
-          }
-          dockerFiltersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFiltersOrBuilder>(
-                  (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) filter_,
-                  getParentForChildren(),
-                  isClean());
-          filter_ = null;
-        }
-        filterCase_ = 5;
-        onChanged();;
-        return dockerFiltersBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFiltersOrBuilder> mavenFiltersBuilder_;
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       * @return Whether the mavenFilters field is set.
-       */
-      @java.lang.Override
-      public boolean hasMavenFilters() {
-        return filterCase_ == 6;
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       * @return The mavenFilters.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters getMavenFilters() {
-        if (mavenFiltersBuilder_ == null) {
-          if (filterCase_ == 6) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance();
-        } else {
-          if (filterCase_ == 6) {
-            return mavenFiltersBuilder_.getMessage();
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       */
-      public Builder setMavenFilters(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters value) {
-        if (mavenFiltersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          filter_ = value;
-          onChanged();
-        } else {
-          mavenFiltersBuilder_.setMessage(value);
-        }
-        filterCase_ = 6;
-        return this;
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       */
-      public Builder setMavenFilters(
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder builderForValue) {
-        if (mavenFiltersBuilder_ == null) {
-          filter_ = builderForValue.build();
-          onChanged();
-        } else {
-          mavenFiltersBuilder_.setMessage(builderForValue.build());
-        }
-        filterCase_ = 6;
-        return this;
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       */
-      public Builder mergeMavenFilters(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters value) {
-        if (mavenFiltersBuilder_ == null) {
-          if (filterCase_ == 6 &&
-              filter_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance()) {
-            filter_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.newBuilder((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            filter_ = value;
-          }
-          onChanged();
-        } else {
-          if (filterCase_ == 6) {
-            mavenFiltersBuilder_.mergeFrom(value);
-          }
-          mavenFiltersBuilder_.setMessage(value);
-        }
-        filterCase_ = 6;
-        return this;
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       */
-      public Builder clearMavenFilters() {
-        if (mavenFiltersBuilder_ == null) {
-          if (filterCase_ == 6) {
-            filterCase_ = 0;
-            filter_ = null;
-            onChanged();
-          }
-        } else {
-          if (filterCase_ == 6) {
-            filterCase_ = 0;
-            filter_ = null;
-          }
-          mavenFiltersBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder getMavenFiltersBuilder() {
-        return getMavenFiltersFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFiltersOrBuilder getMavenFiltersOrBuilder() {
-        if ((filterCase_ == 6) && (mavenFiltersBuilder_ != null)) {
-          return mavenFiltersBuilder_.getMessageOrBuilder();
-        } else {
-          if (filterCase_ == 6) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_;
-          }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Maven-specific filters.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.MavenFilters maven_filters = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFiltersOrBuilder> 
-          getMavenFiltersFieldBuilder() {
-        if (mavenFiltersBuilder_ == null) {
-          if (!(filterCase_ == 6)) {
-            filter_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance();
-          }
-          mavenFiltersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFiltersOrBuilder>(
-                  (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) filter_,
-                  getParentForChildren(),
-                  isClean());
-          filter_ = null;
-        }
-        filterCase_ = 6;
-        onChanged();;
-        return mavenFiltersBuilder_;
       }
 
       private java.lang.Object versionRegexp_ = "";
@@ -5335,12 +5335,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.LifecycleRule)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5365,7 +5365,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.LifecycleRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5392,7 +5392,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.DockerFilters.TagStatus tag_status = 1;</code>
      * @return The tagStatus.
      */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus getTagStatus();
+    yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus getTagStatus();
   }
   /**
    * <pre>
@@ -5471,15 +5471,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.class, yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder.class);
     }
 
     /**
@@ -5606,7 +5606,7 @@ public final class LifecyclePolicyOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final TagStatus[] VALUES = values();
@@ -5653,10 +5653,10 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.DockerFilters.TagStatus tag_status = 1;</code>
      * @return The tagStatus.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus getTagStatus() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus getTagStatus() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus.valueOf(tagStatus_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus result = yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus.valueOf(tagStatus_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5673,7 +5673,7 @@ public final class LifecyclePolicyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (tagStatus_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus.TAG_STATUS_UNSPECIFIED.getNumber()) {
+      if (tagStatus_ != yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus.TAG_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, tagStatus_);
       }
       unknownFields.writeTo(output);
@@ -5685,7 +5685,7 @@ public final class LifecyclePolicyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (tagStatus_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus.TAG_STATUS_UNSPECIFIED.getNumber()) {
+      if (tagStatus_ != yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus.TAG_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, tagStatus_);
       }
@@ -5699,10 +5699,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters other = (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) obj;
 
       if (tagStatus_ != other.tagStatus_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -5723,69 +5723,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5798,7 +5798,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5823,21 +5823,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.DockerFilters)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFiltersOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.DockerFiltersOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.class, yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5863,17 +5863,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5881,8 +5881,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters(this);
+      public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters result = new yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters(this);
         result.tagStatus_ = tagStatus_;
         onBuilt();
         return result;
@@ -5922,16 +5922,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.getDefaultInstance()) return this;
         if (other.tagStatus_ != 0) {
           setTagStatusValue(other.getTagStatusValue());
         }
@@ -5950,11 +5950,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6000,10 +6000,10 @@ public final class LifecyclePolicyOuterClass {
        * @return The tagStatus.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus getTagStatus() {
+      public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus getTagStatus() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus.valueOf(tagStatus_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus result = yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus.valueOf(tagStatus_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -6014,7 +6014,7 @@ public final class LifecyclePolicyOuterClass {
        * @param value The tagStatus to set.
        * @return This builder for chaining.
        */
-      public Builder setTagStatus(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters.TagStatus value) {
+      public Builder setTagStatus(yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters.TagStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -6054,12 +6054,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.DockerFilters)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6084,7 +6084,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DockerFilters getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.DockerFilters getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6111,7 +6111,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.MavenFilters.VersionType version_type = 1;</code>
      * @return The versionType.
      */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType getVersionType();
+    yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType getVersionType();
   }
   /**
    * <pre>
@@ -6190,15 +6190,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.class, yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder.class);
     }
 
     /**
@@ -6325,7 +6325,7 @@ public final class LifecyclePolicyOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final VersionType[] VALUES = values();
@@ -6372,10 +6372,10 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.MavenFilters.VersionType version_type = 1;</code>
      * @return The versionType.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType getVersionType() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType getVersionType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType.valueOf(versionType_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType result = yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType.valueOf(versionType_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6392,7 +6392,7 @@ public final class LifecyclePolicyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (versionType_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType.VERSION_TYPE_UNSPECIFIED.getNumber()) {
+      if (versionType_ != yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType.VERSION_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, versionType_);
       }
       unknownFields.writeTo(output);
@@ -6404,7 +6404,7 @@ public final class LifecyclePolicyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (versionType_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType.VERSION_TYPE_UNSPECIFIED.getNumber()) {
+      if (versionType_ != yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType.VERSION_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, versionType_);
       }
@@ -6418,10 +6418,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters other = (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) obj;
 
       if (versionType_ != other.versionType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -6442,69 +6442,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6517,7 +6517,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6542,21 +6542,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.MavenFilters)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFiltersOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.MavenFiltersOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.class, yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6582,17 +6582,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_MavenFilters_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6600,8 +6600,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters(this);
+      public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters result = new yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters(this);
         result.versionType_ = versionType_;
         onBuilt();
         return result;
@@ -6641,16 +6641,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.getDefaultInstance()) return this;
         if (other.versionType_ != 0) {
           setVersionTypeValue(other.getVersionTypeValue());
         }
@@ -6669,11 +6669,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6719,10 +6719,10 @@ public final class LifecyclePolicyOuterClass {
        * @return The versionType.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType getVersionType() {
+      public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType getVersionType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType.valueOf(versionType_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType result = yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType.valueOf(versionType_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -6733,7 +6733,7 @@ public final class LifecyclePolicyOuterClass {
        * @param value The versionType to set.
        * @return This builder for chaining.
        */
-      public Builder setVersionType(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters.VersionType value) {
+      public Builder setVersionType(yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters.VersionType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -6773,12 +6773,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.MavenFilters)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6803,7 +6803,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.MavenFilters getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.MavenFilters getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6898,15 +6898,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder.class);
     }
 
     public static final int KEEP_VERSIONS_COUNT_FIELD_NUMBER = 1;
@@ -6964,10 +6964,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule other = (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) obj;
 
       if (getKeepVersionsCount()
           != other.getKeepVersionsCount()) return false;
@@ -6990,69 +6990,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7065,7 +7065,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7090,21 +7090,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRuleOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7130,17 +7130,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByVersionLifecycleRule_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7148,8 +7148,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule(this);
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule result = new yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule(this);
         result.keepVersionsCount_ = keepVersionsCount_;
         onBuilt();
         return result;
@@ -7189,16 +7189,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule.getDefaultInstance()) return this;
         if (other.getKeepVersionsCount() != 0L) {
           setKeepVersionsCount(other.getKeepVersionsCount());
         }
@@ -7217,11 +7217,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7290,12 +7290,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.KeepByVersionLifecycleRule)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7320,7 +7320,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByVersionLifecycleRule getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.KeepByVersionLifecycleRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7415,15 +7415,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder.class);
     }
 
     public static final int YOUNGER_THAN_DAYS_FIELD_NUMBER = 1;
@@ -7481,10 +7481,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule other = (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) obj;
 
       if (getYoungerThanDays()
           != other.getYoungerThanDays()) return false;
@@ -7507,69 +7507,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7582,7 +7582,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7607,21 +7607,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRuleOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7647,17 +7647,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_KeepByAgeLifecycleRule_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7665,8 +7665,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule(this);
+      public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule result = new yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule(this);
         result.youngerThanDays_ = youngerThanDays_;
         onBuilt();
         return result;
@@ -7706,16 +7706,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule.getDefaultInstance()) return this;
         if (other.getYoungerThanDays() != 0L) {
           setYoungerThanDays(other.getYoungerThanDays());
         }
@@ -7734,11 +7734,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7807,12 +7807,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.KeepByAgeLifecycleRule)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7837,7 +7837,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.KeepByAgeLifecycleRule getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.KeepByAgeLifecycleRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7846,35 +7846,6 @@ public final class LifecyclePolicyOuterClass {
   public interface DeleteLifecycleRuleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.cloudregistry.v1.DeleteLifecycleRule)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Type of deletion.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    int getTypeValue();
-    /**
-     * <pre>
-     * Type of deletion.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-     * @return The type.
-     */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind getType();
-
-    /**
-     * <pre>
-     * Cooldown period in days before deletion.
-     * </pre>
-     *
-     * <code>int64 cooldown_period_days = 2;</code>
-     * @return The cooldownPeriodDays.
-     */
-    long getCooldownPeriodDays();
 
     /**
      * <pre>
@@ -7912,7 +7883,7 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
      * @return The versionCondition.
      */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition getVersionCondition();
+    yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition getVersionCondition();
     /**
      * <pre>
      * Delete artifacts by version count condition.
@@ -7920,7 +7891,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionConditionOrBuilder getVersionConditionOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionConditionOrBuilder getVersionConditionOrBuilder();
 
     /**
      * <pre>
@@ -7941,7 +7912,36 @@ public final class LifecyclePolicyOuterClass {
      */
     boolean getAlways();
 
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.ConditionCase getConditionCase();
+    /**
+     * <pre>
+     * Type of deletion.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of deletion.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind getType();
+
+    /**
+     * <pre>
+     * Cooldown period in days before deletion.
+     * </pre>
+     *
+     * <code>int64 cooldown_period_days = 2;</code>
+     * @return The cooldownPeriodDays.
+     */
+    long getCooldownPeriodDays();
+
+    public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.ConditionCase getConditionCase();
   }
   /**
    * <pre>
@@ -8010,14 +8010,14 @@ public final class LifecyclePolicyOuterClass {
               break;
             }
             case 34: {
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder subBuilder = null;
               if (conditionCase_ == 4) {
-                subBuilder = ((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_).toBuilder();
+                subBuilder = ((yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_).toBuilder();
               }
               condition_ =
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_);
+                subBuilder.mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_);
                 condition_ = subBuilder.buildPartial();
               }
               conditionCase_ = 4;
@@ -8049,15 +8049,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder.class);
     }
 
     private int conditionCase_ = 0;
@@ -8101,48 +8101,6 @@ public final class LifecyclePolicyOuterClass {
     getConditionCase() {
       return ConditionCase.forNumber(
           conditionCase_);
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 1;
-    private int type_;
-    /**
-     * <pre>
-     * Type of deletion.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     * Type of deletion.
-     * </pre>
-     *
-     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-     * @return The type.
-     */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind getType() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind.valueOf(type_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind.UNRECOGNIZED : result;
-    }
-
-    public static final int COOLDOWN_PERIOD_DAYS_FIELD_NUMBER = 2;
-    private long cooldownPeriodDays_;
-    /**
-     * <pre>
-     * Cooldown period in days before deletion.
-     * </pre>
-     *
-     * <code>int64 cooldown_period_days = 2;</code>
-     * @return The cooldownPeriodDays.
-     */
-    @java.lang.Override
-    public long getCooldownPeriodDays() {
-      return cooldownPeriodDays_;
     }
 
     public static final int OLDER_THAN_DAYS_FIELD_NUMBER = 3;
@@ -8196,11 +8154,11 @@ public final class LifecyclePolicyOuterClass {
      * @return The versionCondition.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition getVersionCondition() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition getVersionCondition() {
       if (conditionCase_ == 4) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_;
+         return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_;
       }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance();
+      return yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance();
     }
     /**
      * <pre>
@@ -8210,11 +8168,11 @@ public final class LifecyclePolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionConditionOrBuilder getVersionConditionOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionConditionOrBuilder getVersionConditionOrBuilder() {
       if (conditionCase_ == 4) {
-         return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_;
+         return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_;
       }
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance();
+      return yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance();
     }
 
     public static final int ALWAYS_FIELD_NUMBER = 5;
@@ -8246,6 +8204,48 @@ public final class LifecyclePolicyOuterClass {
       return false;
     }
 
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <pre>
+     * Type of deletion.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of deletion.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind result = yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind.valueOf(type_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind.UNRECOGNIZED : result;
+    }
+
+    public static final int COOLDOWN_PERIOD_DAYS_FIELD_NUMBER = 2;
+    private long cooldownPeriodDays_;
+    /**
+     * <pre>
+     * Cooldown period in days before deletion.
+     * </pre>
+     *
+     * <code>int64 cooldown_period_days = 2;</code>
+     * @return The cooldownPeriodDays.
+     */
+    @java.lang.Override
+    public long getCooldownPeriodDays() {
+      return cooldownPeriodDays_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8260,7 +8260,7 @@ public final class LifecyclePolicyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind.DELETE_LIFECYCLE_RULE_KIND_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind.DELETE_LIFECYCLE_RULE_KIND_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (cooldownPeriodDays_ != 0L) {
@@ -8271,7 +8271,7 @@ public final class LifecyclePolicyOuterClass {
             3, (long)((java.lang.Long) condition_));
       }
       if (conditionCase_ == 4) {
-        output.writeMessage(4, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_);
+        output.writeMessage(4, (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_);
       }
       if (conditionCase_ == 5) {
         output.writeBool(
@@ -8286,7 +8286,7 @@ public final class LifecyclePolicyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind.DELETE_LIFECYCLE_RULE_KIND_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind.DELETE_LIFECYCLE_RULE_KIND_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
@@ -8301,7 +8301,7 @@ public final class LifecyclePolicyOuterClass {
       }
       if (conditionCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_);
+          .computeMessageSize(4, (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_);
       }
       if (conditionCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
@@ -8318,10 +8318,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule other = (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) obj;
 
       if (type_ != other.type_) return false;
       if (getCooldownPeriodDays()
@@ -8382,69 +8382,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8457,7 +8457,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8482,21 +8482,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.DeleteLifecycleRule)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.class, yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8526,17 +8526,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8544,10 +8544,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule(this);
-        result.type_ = type_;
-        result.cooldownPeriodDays_ = cooldownPeriodDays_;
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule result = new yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule(this);
         if (conditionCase_ == 3) {
           result.condition_ = condition_;
         }
@@ -8561,6 +8559,8 @@ public final class LifecyclePolicyOuterClass {
         if (conditionCase_ == 5) {
           result.condition_ = condition_;
         }
+        result.type_ = type_;
+        result.cooldownPeriodDays_ = cooldownPeriodDays_;
         result.conditionCase_ = conditionCase_;
         onBuilt();
         return result;
@@ -8600,16 +8600,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -8648,11 +8648,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8676,123 +8676,6 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
 
-
-      private int type_ = 0;
-      /**
-       * <pre>
-       * Type of deletion.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-       * @return The enum numeric value on the wire for type.
-       */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
-      }
-      /**
-       * <pre>
-       * Type of deletion.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-       * @param value The enum numeric value on the wire for type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTypeValue(int value) {
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Type of deletion.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-       * @return The type.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind getType() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind result = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind.valueOf(type_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Type of deletion.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setType(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRuleKind value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        type_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Type of deletion.
-       * </pre>
-       *
-       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearType() {
-        
-        type_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private long cooldownPeriodDays_ ;
-      /**
-       * <pre>
-       * Cooldown period in days before deletion.
-       * </pre>
-       *
-       * <code>int64 cooldown_period_days = 2;</code>
-       * @return The cooldownPeriodDays.
-       */
-      @java.lang.Override
-      public long getCooldownPeriodDays() {
-        return cooldownPeriodDays_;
-      }
-      /**
-       * <pre>
-       * Cooldown period in days before deletion.
-       * </pre>
-       *
-       * <code>int64 cooldown_period_days = 2;</code>
-       * @param value The cooldownPeriodDays to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCooldownPeriodDays(long value) {
-        
-        cooldownPeriodDays_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Cooldown period in days before deletion.
-       * </pre>
-       *
-       * <code>int64 cooldown_period_days = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCooldownPeriodDays() {
-        
-        cooldownPeriodDays_ = 0L;
-        onChanged();
-        return this;
-      }
 
       /**
        * <pre>
@@ -8852,7 +8735,7 @@ public final class LifecyclePolicyOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionConditionOrBuilder> versionConditionBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionConditionOrBuilder> versionConditionBuilder_;
       /**
        * <pre>
        * Delete artifacts by version count condition.
@@ -8874,17 +8757,17 @@ public final class LifecyclePolicyOuterClass {
        * @return The versionCondition.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition getVersionCondition() {
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition getVersionCondition() {
         if (versionConditionBuilder_ == null) {
           if (conditionCase_ == 4) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_;
+            return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_;
           }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance();
+          return yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance();
         } else {
           if (conditionCase_ == 4) {
             return versionConditionBuilder_.getMessage();
           }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance();
+          return yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance();
         }
       }
       /**
@@ -8894,7 +8777,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
        */
-      public Builder setVersionCondition(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition value) {
+      public Builder setVersionCondition(yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition value) {
         if (versionConditionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8915,7 +8798,7 @@ public final class LifecyclePolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
        */
       public Builder setVersionCondition(
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder builderForValue) {
         if (versionConditionBuilder_ == null) {
           condition_ = builderForValue.build();
           onChanged();
@@ -8932,11 +8815,11 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
        */
-      public Builder mergeVersionCondition(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition value) {
+      public Builder mergeVersionCondition(yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition value) {
         if (versionConditionBuilder_ == null) {
           if (conditionCase_ == 4 &&
-              condition_ != yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance()) {
-            condition_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.newBuilder((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_)
+              condition_ != yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance()) {
+            condition_ = yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.newBuilder((yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_)
                 .mergeFrom(value).buildPartial();
           } else {
             condition_ = value;
@@ -8981,7 +8864,7 @@ public final class LifecyclePolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder getVersionConditionBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder getVersionConditionBuilder() {
         return getVersionConditionFieldBuilder().getBuilder();
       }
       /**
@@ -8992,14 +8875,14 @@ public final class LifecyclePolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionConditionOrBuilder getVersionConditionOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionConditionOrBuilder getVersionConditionOrBuilder() {
         if ((conditionCase_ == 4) && (versionConditionBuilder_ != null)) {
           return versionConditionBuilder_.getMessageOrBuilder();
         } else {
           if (conditionCase_ == 4) {
-            return (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_;
+            return (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_;
           }
-          return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance();
+          return yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance();
         }
       }
       /**
@@ -9010,15 +8893,15 @@ public final class LifecyclePolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.DeleteByVersionCondition version_condition = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionConditionOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionConditionOrBuilder> 
           getVersionConditionFieldBuilder() {
         if (versionConditionBuilder_ == null) {
           if (!(conditionCase_ == 4)) {
-            condition_ = yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance();
+            condition_ = yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance();
           }
           versionConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionConditionOrBuilder>(
-                  (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) condition_,
+              yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionConditionOrBuilder>(
+                  (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) condition_,
                   getParentForChildren(),
                   isClean());
           condition_ = null;
@@ -9084,6 +8967,123 @@ public final class LifecyclePolicyOuterClass {
         }
         return this;
       }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of deletion.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of deletion.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of deletion.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind result = yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind.valueOf(type_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of deletion.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRuleKind value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of deletion.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cloudregistry.v1.DeleteLifecycleRuleKind type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long cooldownPeriodDays_ ;
+      /**
+       * <pre>
+       * Cooldown period in days before deletion.
+       * </pre>
+       *
+       * <code>int64 cooldown_period_days = 2;</code>
+       * @return The cooldownPeriodDays.
+       */
+      @java.lang.Override
+      public long getCooldownPeriodDays() {
+        return cooldownPeriodDays_;
+      }
+      /**
+       * <pre>
+       * Cooldown period in days before deletion.
+       * </pre>
+       *
+       * <code>int64 cooldown_period_days = 2;</code>
+       * @param value The cooldownPeriodDays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCooldownPeriodDays(long value) {
+        
+        cooldownPeriodDays_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cooldown period in days before deletion.
+       * </pre>
+       *
+       * <code>int64 cooldown_period_days = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCooldownPeriodDays() {
+        
+        cooldownPeriodDays_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9101,12 +9101,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.DeleteLifecycleRule)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9131,7 +9131,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteLifecycleRule getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.DeleteLifecycleRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9226,15 +9226,15 @@ public final class LifecyclePolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.class, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder.class);
     }
 
     public static final int VERSIONS_COUNT_GREATER_THAN_FIELD_NUMBER = 1;
@@ -9292,10 +9292,10 @@ public final class LifecyclePolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition other = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) obj;
+      yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition other = (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) obj;
 
       if (getVersionsCountGreaterThan()
           != other.getVersionsCountGreaterThan()) return false;
@@ -9318,69 +9318,69 @@ public final class LifecyclePolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9393,7 +9393,7 @@ public final class LifecyclePolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9418,21 +9418,21 @@ public final class LifecyclePolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.DeleteByVersionCondition)
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionConditionOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionConditionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.class, yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.class, yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9458,17 +9458,17 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PLP.internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition build() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition build() {
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9476,8 +9476,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition result = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition(this);
+      public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition result = new yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition(this);
         result.versionsCountGreaterThan_ = versionsCountGreaterThan_;
         onBuilt();
         return result;
@@ -9517,16 +9517,16 @@ public final class LifecyclePolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition.getDefaultInstance()) return this;
         if (other.getVersionsCountGreaterThan() != 0L) {
           setVersionsCountGreaterThan(other.getVersionsCountGreaterThan());
         }
@@ -9545,11 +9545,11 @@ public final class LifecyclePolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9618,12 +9618,12 @@ public final class LifecyclePolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.DeleteByVersionCondition)
-    private static final yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9648,7 +9648,7 @@ public final class LifecyclePolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.LifecyclePolicyOuterClass.DeleteByVersionCondition getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PLP.DeleteByVersionCondition getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9715,17 +9715,17 @@ public final class LifecyclePolicyOuterClass {
       "ogle.protobuf.Timestamp\022/\n\013modified_at\030\010" +
       " \001(\0132\032.google.protobuf.Timestamp\022\022\n\ncrea" +
       "ted_by\030\t \001(\t\022\023\n\013modified_by\030\n \001(\t\"\306\003\n\rLi" +
-      "fecycleRule\022\023\n\013path_prefix\030\001 \001(\t\022L\n\013keep" +
-      "_by_age\030\002 \001(\01325.yandex.cloud.cloudregist" +
-      "ry.v1.KeepByAgeLifecycleRuleH\000\022T\n\017keep_b" +
-      "y_version\030\003 \001(\01329.yandex.cloud.cloudregi" +
-      "stry.v1.KeepByVersionLifecycleRuleH\000\022D\n\006" +
-      "delete\030\004 \001(\01322.yandex.cloud.cloudregistr" +
-      "y.v1.DeleteLifecycleRuleH\000\022F\n\016docker_fil" +
-      "ters\030\005 \001(\0132,.yandex.cloud.cloudregistry." +
-      "v1.DockerFiltersH\001\022D\n\rmaven_filters\030\006 \001(" +
-      "\0132+.yandex.cloud.cloudregistry.v1.MavenF" +
-      "iltersH\001\022\026\n\016version_regexp\030\007 \001(\tB\006\n\004kind" +
+      "fecycleRule\022L\n\013keep_by_age\030\002 \001(\01325.yande" +
+      "x.cloud.cloudregistry.v1.KeepByAgeLifecy" +
+      "cleRuleH\000\022T\n\017keep_by_version\030\003 \001(\01329.yan" +
+      "dex.cloud.cloudregistry.v1.KeepByVersion" +
+      "LifecycleRuleH\000\022D\n\006delete\030\004 \001(\01322.yandex" +
+      ".cloud.cloudregistry.v1.DeleteLifecycleR" +
+      "uleH\000\022F\n\016docker_filters\030\005 \001(\0132,.yandex.c" +
+      "loud.cloudregistry.v1.DockerFiltersH\001\022D\n" +
+      "\rmaven_filters\030\006 \001(\0132+.yandex.cloud.clou" +
+      "dregistry.v1.MavenFiltersH\001\022\023\n\013path_pref" +
+      "ix\030\001 \001(\t\022\026\n\016version_regexp\030\007 \001(\tB\006\n\004kind" +
       "B\010\n\006filter\"\262\001\n\rDockerFilters\022J\n\ntag_stat" +
       "us\030\001 \001(\01626.yandex.cloud.cloudregistry.v1" +
       ".DockerFilters.TagStatus\"U\n\tTagStatus\022\032\n" +
@@ -9738,23 +9738,23 @@ public final class LifecyclePolicyOuterClass {
       "LEASE\020\002\022\014\n\010SNAPSHOT\020\003\"9\n\032KeepByVersionLi" +
       "fecycleRule\022\033\n\023keep_versions_count\030\001 \001(\003" +
       "\"3\n\026KeepByAgeLifecycleRule\022\031\n\021younger_th" +
-      "an_days\030\001 \001(\003\"\211\002\n\023DeleteLifecycleRule\022D\n" +
-      "\004type\030\001 \001(\01626.yandex.cloud.cloudregistry" +
-      ".v1.DeleteLifecycleRuleKind\022\034\n\024cooldown_" +
-      "period_days\030\002 \001(\003\022\031\n\017older_than_days\030\003 \001" +
-      "(\003H\000\022T\n\021version_condition\030\004 \001(\01327.yandex" +
-      ".cloud.cloudregistry.v1.DeleteByVersionC" +
-      "onditionH\000\022\020\n\006always\030\005 \001(\010H\000B\013\n\tconditio" +
+      "an_days\030\001 \001(\003\"\211\002\n\023DeleteLifecycleRule\022\031\n" +
+      "\017older_than_days\030\003 \001(\003H\000\022T\n\021version_cond" +
+      "ition\030\004 \001(\01327.yandex.cloud.cloudregistry" +
+      ".v1.DeleteByVersionConditionH\000\022\020\n\006always" +
+      "\030\005 \001(\010H\000\022D\n\004type\030\001 \001(\01626.yandex.cloud.cl" +
+      "oudregistry.v1.DeleteLifecycleRuleKind\022\034" +
+      "\n\024cooldown_period_days\030\002 \001(\003B\013\n\tconditio" +
       "n\"?\n\030DeleteByVersionCondition\022#\n\033version" +
       "s_count_greater_than\030\001 \001(\003*g\n\027DeleteLife" +
       "cycleRuleKind\022*\n&DELETE_LIFECYCLE_RULE_K" +
       "IND_UNSPECIFIED\020\000\022\017\n\013HARD_DELETE\020\001\022\017\n\013SO" +
       "FT_DELETE\020\002*Y\n\024LifecyclePolicyState\022&\n\"L" +
       "IFECYCLE_POLICY_STATE_UNSPECIFIED\020\000\022\014\n\010D" +
-      "ISABLED\020\001\022\013\n\007ENABLED\020\002Bt\n!yandex.cloud.a" +
-      "pi.cloudregistry.v1ZOgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/cloudregis" +
-      "try/v1;cloudregistryb\006proto3"
+      "ISABLED\020\001\022\013\n\007ENABLED\020\002By\n!yandex.cloud.a" +
+      "pi.cloudregistry.v1B\003PLPZOgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/cloud" +
+      "registry/v1;cloudregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9772,7 +9772,7 @@ public final class LifecyclePolicyOuterClass {
     internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudregistry_v1_LifecycleRule_descriptor,
-        new java.lang.String[] { "PathPrefix", "KeepByAge", "KeepByVersion", "Delete", "DockerFilters", "MavenFilters", "VersionRegexp", "Kind", "Filter", });
+        new java.lang.String[] { "KeepByAge", "KeepByVersion", "Delete", "DockerFilters", "MavenFilters", "PathPrefix", "VersionRegexp", "Kind", "Filter", });
     internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_cloudregistry_v1_DockerFilters_fieldAccessorTable = new
@@ -9802,7 +9802,7 @@ public final class LifecyclePolicyOuterClass {
     internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudregistry_v1_DeleteLifecycleRule_descriptor,
-        new java.lang.String[] { "Type", "CooldownPeriodDays", "OlderThanDays", "VersionCondition", "Always", "Condition", });
+        new java.lang.String[] { "OlderThanDays", "VersionCondition", "Always", "Type", "CooldownPeriodDays", "Condition", });
     internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_cloudregistry_v1_DeleteByVersionCondition_fieldAccessorTable = new

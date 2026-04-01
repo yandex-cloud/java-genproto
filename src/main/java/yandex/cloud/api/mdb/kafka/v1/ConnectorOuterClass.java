@@ -13554,6 +13554,26 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 11;</code>
+     * @return The controlTopic.
+     */
+    java.lang.String getControlTopic();
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 11;</code>
+     * @return The bytes for controlTopic.
+     */
+    com.google.protobuf.ByteString
+        getControlTopicBytes();
+
+    /**
+     * <pre>
      * Credentials for connecting to Managed Hive Metastore.
      * </pre>
      *
@@ -13735,6 +13755,7 @@ public final class ConnectorOuterClass {
       super(builder);
     }
     private ConnectorConfigIcebergSinkSpec() {
+      controlTopic_ = "";
     }
 
     @java.lang.Override
@@ -13857,6 +13878,12 @@ public final class ConnectorOuterClass {
                 controlConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              controlTopic_ = s;
               break;
             }
             default: {
@@ -14095,6 +14122,52 @@ public final class ConnectorOuterClass {
         if (topicsSourceCase_ == 2) {
           topicsSource_ = b;
         }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROL_TOPIC_FIELD_NUMBER = 11;
+    private volatile java.lang.Object controlTopic_;
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 11;</code>
+     * @return The controlTopic.
+     */
+    @java.lang.Override
+    public java.lang.String getControlTopic() {
+      java.lang.Object ref = controlTopic_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controlTopic_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 11;</code>
+     * @return The bytes for controlTopic.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControlTopicBytes() {
+      java.lang.Object ref = controlTopic_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controlTopic_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -14377,6 +14450,9 @@ public final class ConnectorOuterClass {
       if (controlConfig_ != null) {
         output.writeMessage(10, getControlConfig());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlTopic_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, controlTopic_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14416,6 +14492,9 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getControlConfig());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlTopic_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, controlTopic_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14431,6 +14510,8 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec) obj;
 
+      if (!getControlTopic()
+          .equals(other.getControlTopic())) return false;
       if (hasMetastoreConnection() != other.hasMetastoreConnection()) return false;
       if (hasMetastoreConnection()) {
         if (!getMetastoreConnection()
@@ -14488,6 +14569,8 @@ public final class ConnectorOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTROL_TOPIC_FIELD_NUMBER;
+      hash = (53 * hash) + getControlTopic().hashCode();
       if (hasMetastoreConnection()) {
         hash = (37 * hash) + METASTORE_CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getMetastoreConnection().hashCode();
@@ -14665,6 +14748,8 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        controlTopic_ = "";
+
         if (metastoreConnectionBuilder_ == null) {
           metastoreConnection_ = null;
         } else {
@@ -14725,6 +14810,7 @@ public final class ConnectorOuterClass {
         if (topicsSourceCase_ == 2) {
           result.topicsSource_ = topicsSource_;
         }
+        result.controlTopic_ = controlTopic_;
         if (metastoreConnectionBuilder_ == null) {
           result.metastoreConnection_ = metastoreConnection_;
         } else {
@@ -14809,6 +14895,10 @@ public final class ConnectorOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec other) {
         if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSinkSpec.getDefaultInstance()) return this;
+        if (!other.getControlTopic().isEmpty()) {
+          controlTopic_ = other.controlTopic_;
+          onChanged();
+        }
         if (other.hasMetastoreConnection()) {
           mergeMetastoreConnection(other.getMetastoreConnection());
         }
@@ -15148,6 +15238,102 @@ public final class ConnectorOuterClass {
   checkByteStringIsUtf8(value);
         topicsSourceCase_ = 2;
         topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controlTopic_ = "";
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 11;</code>
+       * @return The controlTopic.
+       */
+      public java.lang.String getControlTopic() {
+        java.lang.Object ref = controlTopic_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controlTopic_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 11;</code>
+       * @return The bytes for controlTopic.
+       */
+      public com.google.protobuf.ByteString
+          getControlTopicBytes() {
+        java.lang.Object ref = controlTopic_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controlTopic_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 11;</code>
+       * @param value The controlTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControlTopic(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        controlTopic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControlTopic() {
+        
+        controlTopic_ = getDefaultInstance().getControlTopic();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 11;</code>
+       * @param value The bytes for controlTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControlTopicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        controlTopic_ = value;
         onChanged();
         return this;
       }
@@ -16242,6 +16428,26 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 7;</code>
+     * @return The controlTopic.
+     */
+    java.lang.String getControlTopic();
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 7;</code>
+     * @return The bytes for controlTopic.
+     */
+    com.google.protobuf.ByteString
+        getControlTopicBytes();
+
+    /**
+     * <pre>
      * Credentials for connecting to Managed Hive Metastore.
      * </pre>
      *
@@ -16367,6 +16573,7 @@ public final class ConnectorOuterClass {
       super(builder);
     }
     private UpdateConnectorConfigIcebergSinkSpec() {
+      controlTopic_ = "";
     }
 
     @java.lang.Override
@@ -16461,6 +16668,12 @@ public final class ConnectorOuterClass {
                 controlConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              controlTopic_ = s;
               break;
             }
             default: {
@@ -16664,6 +16877,52 @@ public final class ConnectorOuterClass {
       }
     }
 
+    public static final int CONTROL_TOPIC_FIELD_NUMBER = 7;
+    private volatile java.lang.Object controlTopic_;
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 7;</code>
+     * @return The controlTopic.
+     */
+    @java.lang.Override
+    public java.lang.String getControlTopic() {
+      java.lang.Object ref = controlTopic_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controlTopic_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 7;</code>
+     * @return The bytes for controlTopic.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControlTopicBytes() {
+      java.lang.Object ref = controlTopic_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controlTopic_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int METASTORE_CONNECTION_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.MetastoreConnectionSpec metastoreConnection_;
     /**
@@ -16848,6 +17107,9 @@ public final class ConnectorOuterClass {
       if (controlConfig_ != null) {
         output.writeMessage(6, getControlConfig());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlTopic_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, controlTopic_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16879,6 +17141,9 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getControlConfig());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlTopic_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, controlTopic_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16894,6 +17159,8 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec) obj;
 
+      if (!getControlTopic()
+          .equals(other.getControlTopic())) return false;
       if (hasMetastoreConnection() != other.hasMetastoreConnection()) return false;
       if (hasMetastoreConnection()) {
         if (!getMetastoreConnection()
@@ -16938,6 +17205,8 @@ public final class ConnectorOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTROL_TOPIC_FIELD_NUMBER;
+      hash = (53 * hash) + getControlTopic().hashCode();
       if (hasMetastoreConnection()) {
         hash = (37 * hash) + METASTORE_CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getMetastoreConnection().hashCode();
@@ -17103,6 +17372,8 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        controlTopic_ = "";
+
         if (metastoreConnectionBuilder_ == null) {
           metastoreConnection_ = null;
         } else {
@@ -17161,6 +17432,7 @@ public final class ConnectorOuterClass {
         if (topicsSourceCase_ == 2) {
           result.topicsSource_ = topicsSource_;
         }
+        result.controlTopic_ = controlTopic_;
         if (metastoreConnectionBuilder_ == null) {
           result.metastoreConnection_ = metastoreConnection_;
         } else {
@@ -17230,6 +17502,10 @@ public final class ConnectorOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec other) {
         if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorConfigIcebergSinkSpec.getDefaultInstance()) return this;
+        if (!other.getControlTopic().isEmpty()) {
+          controlTopic_ = other.controlTopic_;
+          onChanged();
+        }
         if (other.hasMetastoreConnection()) {
           mergeMetastoreConnection(other.getMetastoreConnection());
         }
@@ -17541,6 +17817,102 @@ public final class ConnectorOuterClass {
   checkByteStringIsUtf8(value);
         topicsSourceCase_ = 2;
         topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controlTopic_ = "";
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 7;</code>
+       * @return The controlTopic.
+       */
+      public java.lang.String getControlTopic() {
+        java.lang.Object ref = controlTopic_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controlTopic_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 7;</code>
+       * @return The bytes for controlTopic.
+       */
+      public com.google.protobuf.ByteString
+          getControlTopicBytes() {
+        java.lang.Object ref = controlTopic_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controlTopic_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 7;</code>
+       * @param value The controlTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControlTopic(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        controlTopic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControlTopic() {
+        
+        controlTopic_ = getDefaultInstance().getControlTopic();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 7;</code>
+       * @param value The bytes for controlTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControlTopicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        controlTopic_ = value;
         onChanged();
         return this;
       }
@@ -35759,6 +36131,26 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 9;</code>
+     * @return The controlTopic.
+     */
+    java.lang.String getControlTopic();
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 9;</code>
+     * @return The bytes for controlTopic.
+     */
+    com.google.protobuf.ByteString
+        getControlTopicBytes();
+
+    /**
+     * <pre>
      * Credentials for connecting to Managed Hive Metastore.
      * </pre>
      *
@@ -35940,6 +36332,7 @@ public final class ConnectorOuterClass {
       super(builder);
     }
     private ConnectorConfigIcebergSink() {
+      controlTopic_ = "";
     }
 
     @java.lang.Override
@@ -36062,6 +36455,12 @@ public final class ConnectorOuterClass {
                 controlConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              controlTopic_ = s;
               break;
             }
             default: {
@@ -36300,6 +36699,52 @@ public final class ConnectorOuterClass {
         if (topicsSourceCase_ == 2) {
           topicsSource_ = b;
         }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROL_TOPIC_FIELD_NUMBER = 9;
+    private volatile java.lang.Object controlTopic_;
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 9;</code>
+     * @return The controlTopic.
+     */
+    @java.lang.Override
+    public java.lang.String getControlTopic() {
+      java.lang.Object ref = controlTopic_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controlTopic_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Control topic name for Iceberg connector.
+     * </pre>
+     *
+     * <code>string control_topic = 9;</code>
+     * @return The bytes for controlTopic.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControlTopicBytes() {
+      java.lang.Object ref = controlTopic_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controlTopic_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -36582,6 +37027,9 @@ public final class ConnectorOuterClass {
       if (controlConfig_ != null) {
         output.writeMessage(8, getControlConfig());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlTopic_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, controlTopic_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -36621,6 +37069,9 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getControlConfig());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlTopic_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, controlTopic_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -36636,6 +37087,8 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink) obj;
 
+      if (!getControlTopic()
+          .equals(other.getControlTopic())) return false;
       if (hasMetastoreConnection() != other.hasMetastoreConnection()) return false;
       if (hasMetastoreConnection()) {
         if (!getMetastoreConnection()
@@ -36693,6 +37146,8 @@ public final class ConnectorOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTROL_TOPIC_FIELD_NUMBER;
+      hash = (53 * hash) + getControlTopic().hashCode();
       if (hasMetastoreConnection()) {
         hash = (37 * hash) + METASTORE_CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getMetastoreConnection().hashCode();
@@ -36870,6 +37325,8 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        controlTopic_ = "";
+
         if (metastoreConnectionBuilder_ == null) {
           metastoreConnection_ = null;
         } else {
@@ -36930,6 +37387,7 @@ public final class ConnectorOuterClass {
         if (topicsSourceCase_ == 2) {
           result.topicsSource_ = topicsSource_;
         }
+        result.controlTopic_ = controlTopic_;
         if (metastoreConnectionBuilder_ == null) {
           result.metastoreConnection_ = metastoreConnection_;
         } else {
@@ -37014,6 +37472,10 @@ public final class ConnectorOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink other) {
         if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigIcebergSink.getDefaultInstance()) return this;
+        if (!other.getControlTopic().isEmpty()) {
+          controlTopic_ = other.controlTopic_;
+          onChanged();
+        }
         if (other.hasMetastoreConnection()) {
           mergeMetastoreConnection(other.getMetastoreConnection());
         }
@@ -37353,6 +37815,102 @@ public final class ConnectorOuterClass {
   checkByteStringIsUtf8(value);
         topicsSourceCase_ = 2;
         topicsSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controlTopic_ = "";
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 9;</code>
+       * @return The controlTopic.
+       */
+      public java.lang.String getControlTopic() {
+        java.lang.Object ref = controlTopic_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controlTopic_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 9;</code>
+       * @return The bytes for controlTopic.
+       */
+      public com.google.protobuf.ByteString
+          getControlTopicBytes() {
+        java.lang.Object ref = controlTopic_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controlTopic_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 9;</code>
+       * @param value The controlTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControlTopic(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        controlTopic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControlTopic() {
+        
+        controlTopic_ = getDefaultInstance().getControlTopic();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Control topic name for Iceberg connector.
+       * </pre>
+       *
+       * <code>string control_topic = 9;</code>
+       * @param value The bytes for controlTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControlTopicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        controlTopic_ = value;
         onChanged();
         return this;
       }
@@ -45423,131 +45981,133 @@ public final class ConnectorOuterClass {
       "lS3StorageSpecH\000B\t\n\007storage\"k\n\025ExternalS" +
       "3StorageSpec\022\025\n\raccess_key_id\030\001 \001(\t\022\031\n\021s" +
       "ecret_access_key\030\002 \001(\t\022\020\n\010endpoint\030\003 \001(\t" +
-      "\022\016\n\006region\030\004 \001(\t\"\257\004\n\036ConnectorConfigIceb" +
+      "\022\016\n\006region\030\004 \001(\t\"\306\004\n\036ConnectorConfigIceb" +
       "ergSinkSpec\022\020\n\006topics\030\001 \001(\tH\000\022\026\n\014topics_" +
-      "regex\030\002 \001(\tH\000\022P\n\024metastore_connection\030\003 " +
-      "\001(\01322.yandex.cloud.mdb.kafka.v1.Metastor" +
-      "eConnectionSpec\022I\n\rs3_connection\030\004 \001(\01322" +
-      ".yandex.cloud.mdb.kafka.v1.IcebergS3Conn" +
-      "ectionSpec\022D\n\rstatic_tables\030\007 \001(\0132+.yand" +
-      "ex.cloud.mdb.kafka.v1.StaticTablesSpecH\001" +
-      "\022F\n\016dynamic_tables\030\010 \001(\0132,.yandex.cloud." +
-      "mdb.kafka.v1.DynamicTablesSpecH\001\022I\n\rtabl" +
-      "es_config\030\t \001(\01322.yandex.cloud.mdb.kafka" +
-      ".v1.IcebergTablesConfigSpec\022E\n\016control_c" +
-      "onfig\030\n \001(\0132-.yandex.cloud.mdb.kafka.v1." +
-      "IcebergControlSpecB\017\n\rtopics_sourceB\017\n\rt" +
-      "able_routingJ\004\010\005\020\007\"\220\003\n$UpdateConnectorCo" +
-      "nfigIcebergSinkSpec\022\020\n\006topics\030\001 \001(\tH\000\022\026\n" +
-      "\014topics_regex\030\002 \001(\tH\000\022P\n\024metastore_conne" +
-      "ction\030\003 \001(\01322.yandex.cloud.mdb.kafka.v1." +
-      "MetastoreConnectionSpec\022I\n\rs3_connection" +
-      "\030\004 \001(\01322.yandex.cloud.mdb.kafka.v1.Icebe" +
-      "rgS3ConnectionSpec\022I\n\rtables_config\030\005 \001(" +
-      "\01322.yandex.cloud.mdb.kafka.v1.IcebergTab" +
-      "lesConfigSpec\022E\n\016control_config\030\006 \001(\0132-." +
-      "yandex.cloud.mdb.kafka.v1.IcebergControl" +
-      "SpecB\017\n\rtopics_source\"\"\n\020StaticTablesSpe" +
-      "c\022\016\n\006tables\030\001 \001(\t\"(\n\021DynamicTablesSpec\022\023" +
-      "\n\013route_field\030\001 \001(\t\"A\n\027MetastoreConnecti" +
-      "onSpec\022\023\n\013catalog_uri\030\001 \001(\t\022\021\n\twarehouse" +
-      "\030\002 \001(\t\"t\n\027IcebergS3ConnectionSpec\022N\n\013ext" +
-      "ernal_s3\030\001 \001(\01327.yandex.cloud.mdb.kafka." +
-      "v1.ExternalIcebergS3StorageSpecH\000B\t\n\007sto" +
-      "rage\"r\n\034ExternalIcebergS3StorageSpec\022\025\n\r" +
-      "access_key_id\030\001 \001(\t\022\031\n\021secret_access_key" +
-      "\030\002 \001(\t\022\020\n\010endpoint\030\003 \001(\t\022\016\n\006region\030\004 \001(\t" +
-      "\"\321\001\n\027IcebergTablesConfigSpec\022\035\n\025default_" +
-      "commit_branch\030\001 \001(\t\022\032\n\022default_id_column" +
-      "s\030\002 \001(\t\022\034\n\024default_partition_by\030\003 \001(\t\022\035\n" +
-      "\025evolve_schema_enabled\030\004 \001(\010\022\035\n\025schema_f" +
-      "orce_optional\030\005 \001(\010\022\037\n\027schema_case_insen" +
-      "sitive\030\006 \001(\010\"\361\001\n\022IcebergControlSpec\022\027\n\017g" +
-      "roup_id_prefix\030\001 \001(\t\0227\n\022commit_interval_" +
-      "ms\030\002 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
-      "\021commit_timeout_ms\030\003 \001(\0132\033.google.protob" +
-      "uf.Int64Value\0223\n\016commit_threads\030\004 \001(\0132\033." +
-      "google.protobuf.Int64Value\022\034\n\024transactio" +
-      "nal_prefix\030\005 \001(\t\"\370\005\n\tConnector\022\014\n\004name\030\001" +
-      " \001(\t\022.\n\ttasks_max\030\002 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022H\n\nproperties\030\003 \003(\01324.yande" +
-      "x.cloud.mdb.kafka.v1.Connector.Propertie" +
-      "sEntry\022;\n\006health\030\004 \001(\0162+.yandex.cloud.md" +
-      "b.kafka.v1.Connector.Health\022;\n\006status\030\005 " +
-      "\001(\0162+.yandex.cloud.mdb.kafka.v1.Connecto" +
-      "r.Status\022\022\n\ncluster_id\030\006 \001(\t\022]\n\034connecto" +
-      "r_config_mirrormaker\030\n \001(\01325.yandex.clou" +
-      "d.mdb.kafka.v1.ConnectorConfigMirrorMake" +
-      "rH\000\022T\n\030connector_config_s3_sink\030\013 \001(\01320." +
-      "yandex.cloud.mdb.kafka.v1.ConnectorConfi" +
-      "gS3SinkH\000\022^\n\035connector_config_iceberg_si" +
-      "nk\030\014 \001(\01325.yandex.cloud.mdb.kafka.v1.Con" +
-      "nectorConfigIcebergSinkH\000\0321\n\017PropertiesE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\006" +
-      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\013\n" +
-      "\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020\003B\022\n\020con" +
-      "nector_configJ\004\010\007\020\n\"\361\001\n\032ConnectorConfigM" +
-      "irrorMaker\022D\n\016source_cluster\030\001 \001(\0132,.yan" +
-      "dex.cloud.mdb.kafka.v1.ClusterConnection" +
-      "\022D\n\016target_cluster\030\002 \001(\0132,.yandex.cloud." +
-      "mdb.kafka.v1.ClusterConnection\022\016\n\006topics" +
-      "\030\003 \001(\t\0227\n\022replication_factor\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"\312\001\n\021ClusterConne" +
-      "ction\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002 \001" +
-      "(\0132&.yandex.cloud.mdb.kafka.v1.ThisClust" +
-      "erH\000\022P\n\020external_cluster\030\003 \001(\01324.yandex." +
-      "cloud.mdb.kafka.v1.ExternalClusterConnec" +
-      "tionH\000B\024\n\022cluster_connection\"\r\n\013ThisClus" +
-      "ter\"\206\001\n\031ExternalClusterConnection\022\031\n\021boo" +
-      "tstrap_servers\030\001 \001(\t\022\025\n\rsasl_username\030\002 " +
-      "\001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021security_" +
-      "protocol\030\005 \001(\tJ\004\010\003\020\004\"\275\001\n\025ConnectorConfig" +
-      "S3Sink\022\016\n\006topics\030\001 \001(\t\022\035\n\025file_compressi" +
-      "on_type\030\002 \001(\t\0225\n\020file_max_records\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022>\n\rs3_conne" +
-      "ction\030\004 \001(\0132\'.yandex.cloud.mdb.kafka.v1." +
-      "S3Connection\"s\n\014S3Connection\022\023\n\013bucket_n" +
-      "ame\030\001 \001(\t\022C\n\013external_s3\030\002 \001(\0132,.yandex." +
-      "cloud.mdb.kafka.v1.ExternalS3StorageH\000B\t" +
-      "\n\007storage\"L\n\021ExternalS3Storage\022\025\n\raccess" +
-      "_key_id\030\001 \001(\t\022\020\n\010endpoint\030\002 \001(\t\022\016\n\006regio" +
-      "n\030\003 \001(\t\"\215\004\n\032ConnectorConfigIcebergSink\022\020" +
-      "\n\006topics\030\001 \001(\tH\000\022\026\n\014topics_regex\030\002 \001(\tH\000" +
-      "\022L\n\024metastore_connection\030\003 \001(\0132..yandex." +
-      "cloud.mdb.kafka.v1.MetastoreConnection\022E" +
-      "\n\rs3_connection\030\004 \001(\0132..yandex.cloud.mdb" +
-      ".kafka.v1.IcebergS3Connection\022@\n\rstatic_" +
-      "tables\030\005 \001(\0132\'.yandex.cloud.mdb.kafka.v1" +
-      ".StaticTablesH\001\022B\n\016dynamic_tables\030\006 \001(\0132" +
-      "(.yandex.cloud.mdb.kafka.v1.DynamicTable" +
-      "sH\001\022E\n\rtables_config\030\007 \001(\0132..yandex.clou" +
-      "d.mdb.kafka.v1.IcebergTablesConfig\022A\n\016co" +
-      "ntrol_config\030\010 \001(\0132).yandex.cloud.mdb.ka" +
-      "fka.v1.IcebergControlB\017\n\rtopics_sourceB\017" +
-      "\n\rtable_routing\"\036\n\014StaticTables\022\016\n\006table" +
-      "s\030\001 \001(\t\"$\n\rDynamicTables\022\023\n\013route_field\030" +
-      "\001 \001(\t\"=\n\023MetastoreConnection\022\023\n\013catalog_" +
-      "uri\030\001 \001(\t\022\021\n\twarehouse\030\002 \001(\t\"l\n\023IcebergS" +
-      "3Connection\022J\n\013external_s3\030\001 \001(\01323.yande" +
-      "x.cloud.mdb.kafka.v1.ExternalIcebergS3St" +
-      "orageH\000B\t\n\007storage\"S\n\030ExternalIcebergS3S" +
-      "torage\022\025\n\raccess_key_id\030\001 \001(\t\022\020\n\010endpoin" +
-      "t\030\002 \001(\t\022\016\n\006region\030\003 \001(\t\"\315\001\n\023IcebergTable" +
-      "sConfig\022\035\n\025default_commit_branch\030\001 \001(\t\022\032" +
-      "\n\022default_id_columns\030\002 \001(\t\022\034\n\024default_pa" +
-      "rtition_by\030\003 \001(\t\022\035\n\025evolve_schema_enable" +
-      "d\030\004 \001(\010\022\035\n\025schema_force_optional\030\005 \001(\010\022\037" +
-      "\n\027schema_case_insensitive\030\006 \001(\010\"\355\001\n\016Iceb" +
-      "ergControl\022\027\n\017group_id_prefix\030\001 \001(\t\0227\n\022c" +
-      "ommit_interval_ms\030\002 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0226\n\021commit_timeout_ms\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64Value\0223\n\016commit_t" +
-      "hreads\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022\034\n\024transactional_prefix\030\005 \001(\tBd\n\035yande" +
-      "x.cloud.api.mdb.kafka.v1ZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/mdb/k" +
-      "afka/v1;kafkab\006proto3"
+      "regex\030\002 \001(\tH\000\022\025\n\rcontrol_topic\030\013 \001(\t\022P\n\024" +
+      "metastore_connection\030\003 \001(\01322.yandex.clou" +
+      "d.mdb.kafka.v1.MetastoreConnectionSpec\022I" +
+      "\n\rs3_connection\030\004 \001(\01322.yandex.cloud.mdb" +
+      ".kafka.v1.IcebergS3ConnectionSpec\022D\n\rsta" +
+      "tic_tables\030\007 \001(\0132+.yandex.cloud.mdb.kafk" +
+      "a.v1.StaticTablesSpecH\001\022F\n\016dynamic_table" +
+      "s\030\010 \001(\0132,.yandex.cloud.mdb.kafka.v1.Dyna" +
+      "micTablesSpecH\001\022I\n\rtables_config\030\t \001(\01322" +
+      ".yandex.cloud.mdb.kafka.v1.IcebergTables" +
+      "ConfigSpec\022E\n\016control_config\030\n \001(\0132-.yan" +
+      "dex.cloud.mdb.kafka.v1.IcebergControlSpe" +
+      "cB\017\n\rtopics_sourceB\017\n\rtable_routingJ\004\010\005\020" +
+      "\007\"\247\003\n$UpdateConnectorConfigIcebergSinkSp" +
+      "ec\022\020\n\006topics\030\001 \001(\tH\000\022\026\n\014topics_regex\030\002 \001" +
+      "(\tH\000\022\025\n\rcontrol_topic\030\007 \001(\t\022P\n\024metastore" +
+      "_connection\030\003 \001(\01322.yandex.cloud.mdb.kaf" +
+      "ka.v1.MetastoreConnectionSpec\022I\n\rs3_conn" +
+      "ection\030\004 \001(\01322.yandex.cloud.mdb.kafka.v1" +
+      ".IcebergS3ConnectionSpec\022I\n\rtables_confi" +
+      "g\030\005 \001(\01322.yandex.cloud.mdb.kafka.v1.Iceb" +
+      "ergTablesConfigSpec\022E\n\016control_config\030\006 " +
+      "\001(\0132-.yandex.cloud.mdb.kafka.v1.IcebergC" +
+      "ontrolSpecB\017\n\rtopics_source\"\"\n\020StaticTab" +
+      "lesSpec\022\016\n\006tables\030\001 \001(\t\"(\n\021DynamicTables" +
+      "Spec\022\023\n\013route_field\030\001 \001(\t\"A\n\027MetastoreCo" +
+      "nnectionSpec\022\023\n\013catalog_uri\030\001 \001(\t\022\021\n\twar" +
+      "ehouse\030\002 \001(\t\"t\n\027IcebergS3ConnectionSpec\022" +
+      "N\n\013external_s3\030\001 \001(\01327.yandex.cloud.mdb." +
+      "kafka.v1.ExternalIcebergS3StorageSpecH\000B" +
+      "\t\n\007storage\"r\n\034ExternalIcebergS3StorageSp" +
+      "ec\022\025\n\raccess_key_id\030\001 \001(\t\022\031\n\021secret_acce" +
+      "ss_key\030\002 \001(\t\022\020\n\010endpoint\030\003 \001(\t\022\016\n\006region" +
+      "\030\004 \001(\t\"\321\001\n\027IcebergTablesConfigSpec\022\035\n\025de" +
+      "fault_commit_branch\030\001 \001(\t\022\032\n\022default_id_" +
+      "columns\030\002 \001(\t\022\034\n\024default_partition_by\030\003 " +
+      "\001(\t\022\035\n\025evolve_schema_enabled\030\004 \001(\010\022\035\n\025sc" +
+      "hema_force_optional\030\005 \001(\010\022\037\n\027schema_case" +
+      "_insensitive\030\006 \001(\010\"\361\001\n\022IcebergControlSpe" +
+      "c\022\027\n\017group_id_prefix\030\001 \001(\t\0227\n\022commit_int" +
+      "erval_ms\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\0226\n\021commit_timeout_ms\030\003 \001(\0132\033.google." +
+      "protobuf.Int64Value\0223\n\016commit_threads\030\004 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022\034\n\024tran" +
+      "sactional_prefix\030\005 \001(\t\"\370\005\n\tConnector\022\014\n\004" +
+      "name\030\001 \001(\t\022.\n\ttasks_max\030\002 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022H\n\nproperties\030\003 \003(\01324" +
+      ".yandex.cloud.mdb.kafka.v1.Connector.Pro" +
+      "pertiesEntry\022;\n\006health\030\004 \001(\0162+.yandex.cl" +
+      "oud.mdb.kafka.v1.Connector.Health\022;\n\006sta" +
+      "tus\030\005 \001(\0162+.yandex.cloud.mdb.kafka.v1.Co" +
+      "nnector.Status\022\022\n\ncluster_id\030\006 \001(\t\022]\n\034co" +
+      "nnector_config_mirrormaker\030\n \001(\01325.yande" +
+      "x.cloud.mdb.kafka.v1.ConnectorConfigMirr" +
+      "orMakerH\000\022T\n\030connector_config_s3_sink\030\013 " +
+      "\001(\01320.yandex.cloud.mdb.kafka.v1.Connecto" +
+      "rConfigS3SinkH\000\022^\n\035connector_config_iceb" +
+      "erg_sink\030\014 \001(\01325.yandex.cloud.mdb.kafka." +
+      "v1.ConnectorConfigIcebergSinkH\000\0321\n\017Prope" +
+      "rtiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
+      "E\020\001\022\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKNOW" +
+      "N\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020\003B" +
+      "\022\n\020connector_configJ\004\010\007\020\n\"\361\001\n\032ConnectorC" +
+      "onfigMirrorMaker\022D\n\016source_cluster\030\001 \001(\013" +
+      "2,.yandex.cloud.mdb.kafka.v1.ClusterConn" +
+      "ection\022D\n\016target_cluster\030\002 \001(\0132,.yandex." +
+      "cloud.mdb.kafka.v1.ClusterConnection\022\016\n\006" +
+      "topics\030\003 \001(\t\0227\n\022replication_factor\030\004 \001(\013" +
+      "2\033.google.protobuf.Int64Value\"\312\001\n\021Cluste" +
+      "rConnection\022\r\n\005alias\030\001 \001(\t\022>\n\014this_clust" +
+      "er\030\002 \001(\0132&.yandex.cloud.mdb.kafka.v1.Thi" +
+      "sClusterH\000\022P\n\020external_cluster\030\003 \001(\01324.y" +
+      "andex.cloud.mdb.kafka.v1.ExternalCluster" +
+      "ConnectionH\000B\024\n\022cluster_connection\"\r\n\013Th" +
+      "isCluster\"\206\001\n\031ExternalClusterConnection\022" +
+      "\031\n\021bootstrap_servers\030\001 \001(\t\022\025\n\rsasl_usern" +
+      "ame\030\002 \001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021sec" +
+      "urity_protocol\030\005 \001(\tJ\004\010\003\020\004\"\275\001\n\025Connector" +
+      "ConfigS3Sink\022\016\n\006topics\030\001 \001(\t\022\035\n\025file_com" +
+      "pression_type\030\002 \001(\t\0225\n\020file_max_records\030" +
+      "\003 \001(\0132\033.google.protobuf.Int64Value\022>\n\rs3" +
+      "_connection\030\004 \001(\0132\'.yandex.cloud.mdb.kaf" +
+      "ka.v1.S3Connection\"s\n\014S3Connection\022\023\n\013bu" +
+      "cket_name\030\001 \001(\t\022C\n\013external_s3\030\002 \001(\0132,.y" +
+      "andex.cloud.mdb.kafka.v1.ExternalS3Stora" +
+      "geH\000B\t\n\007storage\"L\n\021ExternalS3Storage\022\025\n\r" +
+      "access_key_id\030\001 \001(\t\022\020\n\010endpoint\030\002 \001(\t\022\016\n" +
+      "\006region\030\003 \001(\t\"\244\004\n\032ConnectorConfigIceberg" +
+      "Sink\022\020\n\006topics\030\001 \001(\tH\000\022\026\n\014topics_regex\030\002" +
+      " \001(\tH\000\022\025\n\rcontrol_topic\030\t \001(\t\022L\n\024metasto" +
+      "re_connection\030\003 \001(\0132..yandex.cloud.mdb.k" +
+      "afka.v1.MetastoreConnection\022E\n\rs3_connec" +
+      "tion\030\004 \001(\0132..yandex.cloud.mdb.kafka.v1.I" +
+      "cebergS3Connection\022@\n\rstatic_tables\030\005 \001(" +
+      "\0132\'.yandex.cloud.mdb.kafka.v1.StaticTabl" +
+      "esH\001\022B\n\016dynamic_tables\030\006 \001(\0132(.yandex.cl" +
+      "oud.mdb.kafka.v1.DynamicTablesH\001\022E\n\rtabl" +
+      "es_config\030\007 \001(\0132..yandex.cloud.mdb.kafka" +
+      ".v1.IcebergTablesConfig\022A\n\016control_confi" +
+      "g\030\010 \001(\0132).yandex.cloud.mdb.kafka.v1.Iceb" +
+      "ergControlB\017\n\rtopics_sourceB\017\n\rtable_rou" +
+      "ting\"\036\n\014StaticTables\022\016\n\006tables\030\001 \001(\t\"$\n\r" +
+      "DynamicTables\022\023\n\013route_field\030\001 \001(\t\"=\n\023Me" +
+      "tastoreConnection\022\023\n\013catalog_uri\030\001 \001(\t\022\021" +
+      "\n\twarehouse\030\002 \001(\t\"l\n\023IcebergS3Connection" +
+      "\022J\n\013external_s3\030\001 \001(\01323.yandex.cloud.mdb" +
+      ".kafka.v1.ExternalIcebergS3StorageH\000B\t\n\007" +
+      "storage\"S\n\030ExternalIcebergS3Storage\022\025\n\ra" +
+      "ccess_key_id\030\001 \001(\t\022\020\n\010endpoint\030\002 \001(\t\022\016\n\006" +
+      "region\030\003 \001(\t\"\315\001\n\023IcebergTablesConfig\022\035\n\025" +
+      "default_commit_branch\030\001 \001(\t\022\032\n\022default_i" +
+      "d_columns\030\002 \001(\t\022\034\n\024default_partition_by\030" +
+      "\003 \001(\t\022\035\n\025evolve_schema_enabled\030\004 \001(\010\022\035\n\025" +
+      "schema_force_optional\030\005 \001(\010\022\037\n\027schema_ca" +
+      "se_insensitive\030\006 \001(\010\"\355\001\n\016IcebergControl\022" +
+      "\027\n\017group_id_prefix\030\001 \001(\t\0227\n\022commit_inter" +
+      "val_ms\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0226\n\021commit_timeout_ms\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0223\n\016commit_threads\030\004 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022\034\n\024transa" +
+      "ctional_prefix\030\005 \001(\tBd\n\035yandex.cloud.api" +
+      ".mdb.kafka.v1ZCgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/mdb/kafka/v1;kaf" +
+      "kab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45631,13 +46191,13 @@ public final class ConnectorOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSinkSpec_descriptor,
-        new java.lang.String[] { "Topics", "TopicsRegex", "MetastoreConnection", "S3Connection", "StaticTables", "DynamicTables", "TablesConfig", "ControlConfig", "TopicsSource", "TableRouting", });
+        new java.lang.String[] { "Topics", "TopicsRegex", "ControlTopic", "MetastoreConnection", "S3Connection", "StaticTables", "DynamicTables", "TablesConfig", "ControlConfig", "TopicsSource", "TableRouting", });
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorConfigIcebergSinkSpec_descriptor,
-        new java.lang.String[] { "Topics", "TopicsRegex", "MetastoreConnection", "S3Connection", "TablesConfig", "ControlConfig", "TopicsSource", });
+        new java.lang.String[] { "Topics", "TopicsRegex", "ControlTopic", "MetastoreConnection", "S3Connection", "TablesConfig", "ControlConfig", "TopicsSource", });
     internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_mdb_kafka_v1_StaticTablesSpec_fieldAccessorTable = new
@@ -45739,7 +46299,7 @@ public final class ConnectorOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigIcebergSink_descriptor,
-        new java.lang.String[] { "Topics", "TopicsRegex", "MetastoreConnection", "S3Connection", "StaticTables", "DynamicTables", "TablesConfig", "ControlConfig", "TopicsSource", "TableRouting", });
+        new java.lang.String[] { "Topics", "TopicsRegex", "ControlTopic", "MetastoreConnection", "S3Connection", "StaticTables", "DynamicTables", "TablesConfig", "ControlConfig", "TopicsSource", "TableRouting", });
     internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_descriptor =
       getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_kafka_v1_StaticTables_fieldAccessorTable = new

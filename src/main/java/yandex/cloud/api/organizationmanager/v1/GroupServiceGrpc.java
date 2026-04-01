@@ -669,7 +669,7 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
-     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * Converts single basic (not external) group to external. Precondition: group must be basic.
      * </pre>
      */
     public void convertToExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest request,
@@ -989,7 +989,7 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
-     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * Converts single basic (not external) group to external. Precondition: group must be basic.
      * </pre>
      */
     public void convertToExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest request,
@@ -1188,7 +1188,7 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
-     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * Converts single basic (not external) group to external. Precondition: group must be basic.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation convertToExternal(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ConvertToExternalGroupRequest request) {
@@ -1384,7 +1384,7 @@ public final class GroupServiceGrpc {
 
     /**
      * <pre>
-     * Converts single basic (not external) group to external. Precondition: group must be basic. 
+     * Converts single basic (not external) group to external. Precondition: group must be basic.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> convertToExternal(

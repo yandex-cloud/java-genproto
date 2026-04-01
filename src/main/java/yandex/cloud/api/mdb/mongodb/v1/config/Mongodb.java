@@ -12507,6 +12507,42 @@ public final class Mongodb {
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter.MirrorReads mirror_reads = 12;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb.MongodConfig.SetParameter.MirrorReadsOrBuilder getMirrorReadsOrBuilder();
+
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+       * @return Whether the redactClientLogData field is set.
+       */
+      boolean hasRedactClientLogData();
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+       * @return The redactClientLogData.
+       */
+      com.google.protobuf.BoolValue getRedactClientLogData();
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig.SetParameter}
@@ -12705,6 +12741,19 @@ public final class Mongodb {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(mirrorReads_);
                   mirrorReads_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 106: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (redactClientLogData_ != null) {
+                  subBuilder = redactClientLogData_.toBuilder();
+                }
+                redactClientLogData_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(redactClientLogData_);
+                  redactClientLogData_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -14147,6 +14196,53 @@ public final class Mongodb {
         return getMirrorReads();
       }
 
+      public static final int REDACT_CLIENT_LOG_DATA_FIELD_NUMBER = 13;
+      private com.google.protobuf.BoolValue redactClientLogData_;
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+       * @return Whether the redactClientLogData field is set.
+       */
+      @java.lang.Override
+      public boolean hasRedactClientLogData() {
+        return redactClientLogData_ != null;
+      }
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+       * @return The redactClientLogData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getRedactClientLogData() {
+        return redactClientLogData_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+      }
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder() {
+        return getRedactClientLogData();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -14196,6 +14292,9 @@ public final class Mongodb {
         }
         if (mirrorReads_ != null) {
           output.writeMessage(12, getMirrorReads());
+        }
+        if (redactClientLogData_ != null) {
+          output.writeMessage(13, getRedactClientLogData());
         }
         unknownFields.writeTo(output);
       }
@@ -14253,6 +14352,10 @@ public final class Mongodb {
         if (mirrorReads_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(12, getMirrorReads());
+        }
+        if (redactClientLogData_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(13, getRedactClientLogData());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -14329,6 +14432,11 @@ public final class Mongodb {
           if (!getMirrorReads()
               .equals(other.getMirrorReads())) return false;
         }
+        if (hasRedactClientLogData() != other.hasRedactClientLogData()) return false;
+        if (hasRedactClientLogData()) {
+          if (!getRedactClientLogData()
+              .equals(other.getRedactClientLogData())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -14387,6 +14495,10 @@ public final class Mongodb {
         if (hasMirrorReads()) {
           hash = (37 * hash) + MIRROR_READS_FIELD_NUMBER;
           hash = (53 * hash) + getMirrorReads().hashCode();
+        }
+        if (hasRedactClientLogData()) {
+          hash = (37 * hash) + REDACT_CLIENT_LOG_DATA_FIELD_NUMBER;
+          hash = (53 * hash) + getRedactClientLogData().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -14593,6 +14705,12 @@ public final class Mongodb {
             mirrorReads_ = null;
             mirrorReadsBuilder_ = null;
           }
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = null;
+          } else {
+            redactClientLogData_ = null;
+            redactClientLogDataBuilder_ = null;
+          }
           return this;
         }
 
@@ -14679,6 +14797,11 @@ public final class Mongodb {
           } else {
             result.mirrorReads_ = mirrorReadsBuilder_.build();
           }
+          if (redactClientLogDataBuilder_ == null) {
+            result.redactClientLogData_ = redactClientLogData_;
+          } else {
+            result.redactClientLogData_ = redactClientLogDataBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -14762,6 +14885,9 @@ public final class Mongodb {
           }
           if (other.hasMirrorReads()) {
             mergeMirrorReads(other.getMirrorReads());
+          }
+          if (other.hasRedactClientLogData()) {
+            mergeRedactClientLogData(other.getRedactClientLogData());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -16668,6 +16794,188 @@ public final class Mongodb {
             mirrorReads_ = null;
           }
           return mirrorReadsBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue redactClientLogData_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> redactClientLogDataBuilder_;
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         * @return Whether the redactClientLogData field is set.
+         */
+        public boolean hasRedactClientLogData() {
+          return redactClientLogDataBuilder_ != null || redactClientLogData_ != null;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         * @return The redactClientLogData.
+         */
+        public com.google.protobuf.BoolValue getRedactClientLogData() {
+          if (redactClientLogDataBuilder_ == null) {
+            return redactClientLogData_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+          } else {
+            return redactClientLogDataBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         */
+        public Builder setRedactClientLogData(com.google.protobuf.BoolValue value) {
+          if (redactClientLogDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            redactClientLogData_ = value;
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         */
+        public Builder setRedactClientLogData(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = builderForValue.build();
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         */
+        public Builder mergeRedactClientLogData(com.google.protobuf.BoolValue value) {
+          if (redactClientLogDataBuilder_ == null) {
+            if (redactClientLogData_ != null) {
+              redactClientLogData_ =
+                com.google.protobuf.BoolValue.newBuilder(redactClientLogData_).mergeFrom(value).buildPartial();
+            } else {
+              redactClientLogData_ = value;
+            }
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         */
+        public Builder clearRedactClientLogData() {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = null;
+            onChanged();
+          } else {
+            redactClientLogData_ = null;
+            redactClientLogDataBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getRedactClientLogDataBuilder() {
+          
+          onChanged();
+          return getRedactClientLogDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder() {
+          if (redactClientLogDataBuilder_ != null) {
+            return redactClientLogDataBuilder_.getMessageOrBuilder();
+          } else {
+            return redactClientLogData_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+          }
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 13;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getRedactClientLogDataFieldBuilder() {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getRedactClientLogData(),
+                    getParentForChildren(),
+                    isClean());
+            redactClientLogData_ = null;
+          }
+          return redactClientLogDataBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -24226,6 +24534,42 @@ public final class Mongodb {
        * <code>.google.protobuf.BoolValue audit_authorization_success = 2;</code>
        */
       com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder();
+
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+       * @return Whether the redactClientLogData field is set.
+       */
+      boolean hasRedactClientLogData();
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+       * @return The redactClientLogData.
+       */
+      com.google.protobuf.BoolValue getRedactClientLogData();
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig.SetParameter}
@@ -24294,6 +24638,19 @@ public final class Mongodb {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(auditAuthorizationSuccess_);
                   auditAuthorizationSuccess_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (redactClientLogData_ != null) {
+                  subBuilder = redactClientLogData_.toBuilder();
+                }
+                redactClientLogData_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(redactClientLogData_);
+                  redactClientLogData_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -24415,6 +24772,53 @@ public final class Mongodb {
         return getAuditAuthorizationSuccess();
       }
 
+      public static final int REDACT_CLIENT_LOG_DATA_FIELD_NUMBER = 3;
+      private com.google.protobuf.BoolValue redactClientLogData_;
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+       * @return Whether the redactClientLogData field is set.
+       */
+      @java.lang.Override
+      public boolean hasRedactClientLogData() {
+        return redactClientLogData_ != null;
+      }
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+       * @return The redactClientLogData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getRedactClientLogData() {
+        return redactClientLogData_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+      }
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder() {
+        return getRedactClientLogData();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -24435,6 +24839,9 @@ public final class Mongodb {
         if (auditAuthorizationSuccess_ != null) {
           output.writeMessage(2, getAuditAuthorizationSuccess());
         }
+        if (redactClientLogData_ != null) {
+          output.writeMessage(3, getRedactClientLogData());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -24451,6 +24858,10 @@ public final class Mongodb {
         if (auditAuthorizationSuccess_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getAuditAuthorizationSuccess());
+        }
+        if (redactClientLogData_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getRedactClientLogData());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -24477,6 +24888,11 @@ public final class Mongodb {
           if (!getAuditAuthorizationSuccess()
               .equals(other.getAuditAuthorizationSuccess())) return false;
         }
+        if (hasRedactClientLogData() != other.hasRedactClientLogData()) return false;
+        if (hasRedactClientLogData()) {
+          if (!getRedactClientLogData()
+              .equals(other.getRedactClientLogData())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -24495,6 +24911,10 @@ public final class Mongodb {
         if (hasAuditAuthorizationSuccess()) {
           hash = (37 * hash) + AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER;
           hash = (53 * hash) + getAuditAuthorizationSuccess().hashCode();
+        }
+        if (hasRedactClientLogData()) {
+          hash = (37 * hash) + REDACT_CLIENT_LOG_DATA_FIELD_NUMBER;
+          hash = (53 * hash) + getRedactClientLogData().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -24641,6 +25061,12 @@ public final class Mongodb {
             auditAuthorizationSuccess_ = null;
             auditAuthorizationSuccessBuilder_ = null;
           }
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = null;
+          } else {
+            redactClientLogData_ = null;
+            redactClientLogDataBuilder_ = null;
+          }
           return this;
         }
 
@@ -24676,6 +25102,11 @@ public final class Mongodb {
             result.auditAuthorizationSuccess_ = auditAuthorizationSuccess_;
           } else {
             result.auditAuthorizationSuccess_ = auditAuthorizationSuccessBuilder_.build();
+          }
+          if (redactClientLogDataBuilder_ == null) {
+            result.redactClientLogData_ = redactClientLogData_;
+          } else {
+            result.redactClientLogData_ = redactClientLogDataBuilder_.build();
           }
           onBuilt();
           return result;
@@ -24730,6 +25161,9 @@ public final class Mongodb {
           }
           if (other.hasAuditAuthorizationSuccess()) {
             mergeAuditAuthorizationSuccess(other.getAuditAuthorizationSuccess());
+          }
+          if (other.hasRedactClientLogData()) {
+            mergeRedactClientLogData(other.getRedactClientLogData());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -25095,6 +25529,188 @@ public final class Mongodb {
             auditAuthorizationSuccess_ = null;
           }
           return auditAuthorizationSuccessBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue redactClientLogData_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> redactClientLogDataBuilder_;
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         * @return Whether the redactClientLogData field is set.
+         */
+        public boolean hasRedactClientLogData() {
+          return redactClientLogDataBuilder_ != null || redactClientLogData_ != null;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         * @return The redactClientLogData.
+         */
+        public com.google.protobuf.BoolValue getRedactClientLogData() {
+          if (redactClientLogDataBuilder_ == null) {
+            return redactClientLogData_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+          } else {
+            return redactClientLogDataBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         */
+        public Builder setRedactClientLogData(com.google.protobuf.BoolValue value) {
+          if (redactClientLogDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            redactClientLogData_ = value;
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         */
+        public Builder setRedactClientLogData(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = builderForValue.build();
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         */
+        public Builder mergeRedactClientLogData(com.google.protobuf.BoolValue value) {
+          if (redactClientLogDataBuilder_ == null) {
+            if (redactClientLogData_ != null) {
+              redactClientLogData_ =
+                com.google.protobuf.BoolValue.newBuilder(redactClientLogData_).mergeFrom(value).buildPartial();
+            } else {
+              redactClientLogData_ = value;
+            }
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         */
+        public Builder clearRedactClientLogData() {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = null;
+            onChanged();
+          } else {
+            redactClientLogData_ = null;
+            redactClientLogDataBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getRedactClientLogDataBuilder() {
+          
+          onChanged();
+          return getRedactClientLogDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder() {
+          if (redactClientLogDataBuilder_ != null) {
+            return redactClientLogDataBuilder_.getMessageOrBuilder();
+          } else {
+            return redactClientLogData_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+          }
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getRedactClientLogDataFieldBuilder() {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getRedactClientLogData(),
+                    getParentForChildren(),
+                    isClean());
+            redactClientLogData_ = null;
+          }
+          return redactClientLogDataBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -31205,6 +31821,42 @@ public final class Mongodb {
        * <code>.google.protobuf.Int64Value sharding_task_executor_pool_min_size_for_config_servers = 13;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getShardingTaskExecutorPoolMinSizeForConfigServersOrBuilder();
+
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+       * @return Whether the redactClientLogData field is set.
+       */
+      boolean hasRedactClientLogData();
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+       * @return The redactClientLogData.
+       */
+      com.google.protobuf.BoolValue getRedactClientLogData();
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig.SetParameter}
@@ -31416,6 +32068,19 @@ public final class Mongodb {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(shardingTaskExecutorPoolMinSizeForConfigServers_);
                   shardingTaskExecutorPoolMinSizeForConfigServers_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 114: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (redactClientLogData_ != null) {
+                  subBuilder = redactClientLogData_.toBuilder();
+                }
+                redactClientLogData_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(redactClientLogData_);
+                  redactClientLogData_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -31949,6 +32614,53 @@ public final class Mongodb {
         return getShardingTaskExecutorPoolMinSizeForConfigServers();
       }
 
+      public static final int REDACT_CLIENT_LOG_DATA_FIELD_NUMBER = 14;
+      private com.google.protobuf.BoolValue redactClientLogData_;
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+       * @return Whether the redactClientLogData field is set.
+       */
+      @java.lang.Override
+      public boolean hasRedactClientLogData() {
+        return redactClientLogData_ != null;
+      }
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+       * @return The redactClientLogData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getRedactClientLogData() {
+        return redactClientLogData_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+      }
+      /**
+       * <pre>
+       * Enables redacting any message accompanying a given log event before logging.
+       * This prevents the mongod or mongos from writing potentially sensitive data
+       * stored on the database to the diagnostic log.
+       * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder() {
+        return getRedactClientLogData();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -32001,6 +32713,9 @@ public final class Mongodb {
         }
         if (shardingTaskExecutorPoolMinSizeForConfigServers_ != null) {
           output.writeMessage(13, getShardingTaskExecutorPoolMinSizeForConfigServers());
+        }
+        if (redactClientLogData_ != null) {
+          output.writeMessage(14, getRedactClientLogData());
         }
         unknownFields.writeTo(output);
       }
@@ -32062,6 +32777,10 @@ public final class Mongodb {
         if (shardingTaskExecutorPoolMinSizeForConfigServers_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(13, getShardingTaskExecutorPoolMinSizeForConfigServers());
+        }
+        if (redactClientLogData_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(14, getRedactClientLogData());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -32143,6 +32862,11 @@ public final class Mongodb {
           if (!getShardingTaskExecutorPoolMinSizeForConfigServers()
               .equals(other.getShardingTaskExecutorPoolMinSizeForConfigServers())) return false;
         }
+        if (hasRedactClientLogData() != other.hasRedactClientLogData()) return false;
+        if (hasRedactClientLogData()) {
+          if (!getRedactClientLogData()
+              .equals(other.getRedactClientLogData())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -32205,6 +32929,10 @@ public final class Mongodb {
         if (hasShardingTaskExecutorPoolMinSizeForConfigServers()) {
           hash = (37 * hash) + SHARDING_TASK_EXECUTOR_POOL_MIN_SIZE_FOR_CONFIG_SERVERS_FIELD_NUMBER;
           hash = (53 * hash) + getShardingTaskExecutorPoolMinSizeForConfigServers().hashCode();
+        }
+        if (hasRedactClientLogData()) {
+          hash = (37 * hash) + REDACT_CLIENT_LOG_DATA_FIELD_NUMBER;
+          hash = (53 * hash) + getRedactClientLogData().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -32417,6 +33145,12 @@ public final class Mongodb {
             shardingTaskExecutorPoolMinSizeForConfigServers_ = null;
             shardingTaskExecutorPoolMinSizeForConfigServersBuilder_ = null;
           }
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = null;
+          } else {
+            redactClientLogData_ = null;
+            redactClientLogDataBuilder_ = null;
+          }
           return this;
         }
 
@@ -32508,6 +33242,11 @@ public final class Mongodb {
           } else {
             result.shardingTaskExecutorPoolMinSizeForConfigServers_ = shardingTaskExecutorPoolMinSizeForConfigServersBuilder_.build();
           }
+          if (redactClientLogDataBuilder_ == null) {
+            result.redactClientLogData_ = redactClientLogData_;
+          } else {
+            result.redactClientLogData_ = redactClientLogDataBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -32594,6 +33333,9 @@ public final class Mongodb {
           }
           if (other.hasShardingTaskExecutorPoolMinSizeForConfigServers()) {
             mergeShardingTaskExecutorPoolMinSizeForConfigServers(other.getShardingTaskExecutorPoolMinSizeForConfigServers());
+          }
+          if (other.hasRedactClientLogData()) {
+            mergeRedactClientLogData(other.getRedactClientLogData());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -34646,6 +35388,188 @@ public final class Mongodb {
             shardingTaskExecutorPoolMinSizeForConfigServers_ = null;
           }
           return shardingTaskExecutorPoolMinSizeForConfigServersBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue redactClientLogData_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> redactClientLogDataBuilder_;
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         * @return Whether the redactClientLogData field is set.
+         */
+        public boolean hasRedactClientLogData() {
+          return redactClientLogDataBuilder_ != null || redactClientLogData_ != null;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         * @return The redactClientLogData.
+         */
+        public com.google.protobuf.BoolValue getRedactClientLogData() {
+          if (redactClientLogDataBuilder_ == null) {
+            return redactClientLogData_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+          } else {
+            return redactClientLogDataBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         */
+        public Builder setRedactClientLogData(com.google.protobuf.BoolValue value) {
+          if (redactClientLogDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            redactClientLogData_ = value;
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         */
+        public Builder setRedactClientLogData(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = builderForValue.build();
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         */
+        public Builder mergeRedactClientLogData(com.google.protobuf.BoolValue value) {
+          if (redactClientLogDataBuilder_ == null) {
+            if (redactClientLogData_ != null) {
+              redactClientLogData_ =
+                com.google.protobuf.BoolValue.newBuilder(redactClientLogData_).mergeFrom(value).buildPartial();
+            } else {
+              redactClientLogData_ = value;
+            }
+            onChanged();
+          } else {
+            redactClientLogDataBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         */
+        public Builder clearRedactClientLogData() {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogData_ = null;
+            onChanged();
+          } else {
+            redactClientLogData_ = null;
+            redactClientLogDataBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getRedactClientLogDataBuilder() {
+          
+          onChanged();
+          return getRedactClientLogDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getRedactClientLogDataOrBuilder() {
+          if (redactClientLogDataBuilder_ != null) {
+            return redactClientLogDataBuilder_.getMessageOrBuilder();
+          } else {
+            return redactClientLogData_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : redactClientLogData_;
+          }
+        }
+        /**
+         * <pre>
+         * Enables redacting any message accompanying a given log event before logging.
+         * This prevents the mongod or mongos from writing potentially sensitive data
+         * stored on the database to the diagnostic log.
+         * https://mongo-db.ru/reference/configuration-options/index.html#mongodb-setting-security.redactClientLogData
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue redact_client_log_data = 14;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getRedactClientLogDataFieldBuilder() {
+          if (redactClientLogDataBuilder_ == null) {
+            redactClientLogDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getRedactClientLogData(),
+                    getParentForChildren(),
+                    isClean());
+            redactClientLogData_ = null;
+          }
+          return redactClientLogDataBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -40376,7 +41300,7 @@ public final class Mongodb {
       "\n0yandex/cloud/mdb/mongodb/v1/config/mon" +
       "godb.proto\022\"yandex.cloud.mdb.mongodb.v1." +
       "config\032\036google/protobuf/wrappers.proto\032\035" +
-      "yandex/cloud/validation.proto\"\275\036\n\014Mongod" +
+      "yandex/cloud/validation.proto\"\371\036\n\014Mongod" +
       "Config\022I\n\007storage\030\001 \001(\01328.yandex.cloud.m" +
       "db.mongodb.v1.config.MongodConfig.Storag" +
       "e\022`\n\023operation_profiling\030\002 \001(\0132C.yandex." +
@@ -40444,7 +41368,7 @@ public final class Mongodb {
       "ca\030\003 \001(\t\022\032\n\022client_certificate\030\004 \001(\t\022\026\n\016" +
       "key_identifier\030\005 \001(\t\032U\n\010AuditLog\022\016\n\006filt" +
       "er\030\001 \001(\t\0229\n\025runtime_configuration\030\002 \001(\0132" +
-      "\032.google.protobuf.BoolValue\032\244\010\n\014SetParam" +
+      "\032.google.protobuf.BoolValue\032\340\010\n\014SetParam" +
       "eter\022?\n\033audit_authorization_success\030\001 \001(" +
       "\0132\032.google.protobuf.BoolValue\0227\n\023enable_" +
       "flow_control\030\002 \001(\0132\032.google.protobuf.Boo" +
@@ -40468,51 +41392,54 @@ public final class Mongodb {
       "google.protobuf.Int64ValueB\007\372\3071\003>=0\022_\n\014m" +
       "irror_reads\030\014 \001(\0132I.yandex.cloud.mdb.mon" +
       "godb.v1.config.MongodConfig.SetParameter" +
-      ".MirrorReads\032t\n\013MirrorReads\0223\n\rsampling_" +
-      "rate\030\001 \001(\0132\034.google.protobuf.DoubleValue" +
-      "\0220\n\013max_time_ms\030\002 \001(\0132\033.google.protobuf." +
-      "Int64Value\032y\n\005Oplog\0225\n\020max_size_percent\030" +
-      "\001 \001(\0132\033.google.protobuf.Int64Value\0229\n\023mi" +
-      "n_retention_hours\030\002 \001(\0132\034.google.protobu" +
-      "f.DoubleValue\"\370\013\n\016MongoCfgConfig\022K\n\007stor" +
-      "age\030\001 \001(\0132:.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongoCfgConfig.Storage\022b\n\023operati" +
-      "on_profiling\030\002 \001(\0132E.yandex.cloud.mdb.mo" +
-      "ngodb.v1.config.MongoCfgConfig.Operation" +
-      "Profiling\022G\n\003net\030\003 \001(\0132:.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongoCfgConfig.Netwo" +
-      "rk\022V\n\rset_parameter\030\004 \001(\0132?.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongoCfgConfig.Se" +
-      "tParameter\022N\n\taudit_log\030\005 \001(\0132;.yandex.c" +
+      ".MirrorReads\022:\n\026redact_client_log_data\030\r" +
+      " \001(\0132\032.google.protobuf.BoolValue\032t\n\013Mirr" +
+      "orReads\0223\n\rsampling_rate\030\001 \001(\0132\034.google." +
+      "protobuf.DoubleValue\0220\n\013max_time_ms\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64Value\032y\n\005Oplog\022" +
+      "5\n\020max_size_percent\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0229\n\023min_retention_hours\030\002 " +
+      "\001(\0132\034.google.protobuf.DoubleValue\"\264\014\n\016Mo" +
+      "ngoCfgConfig\022K\n\007storage\030\001 \001(\0132:.yandex.c" +
       "loud.mdb.mongodb.v1.config.MongoCfgConfi" +
-      "g.AuditLog\022G\n\005oplog\030\006 \001(\01328.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongoCfgConfig.Op" +
-      "log\0224\n\020chaining_allowed\030\010 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\032\326\002\n\007Storage\022Z\n\013wired_t" +
-      "iger\030\001 \001(\0132E.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfig.Storage.WiredTige" +
-      "r\032\356\001\n\nWiredTiger\022i\n\rengine_config\030\001 \001(\0132" +
-      "R.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "goCfgConfig.Storage.WiredTiger.EngineCon" +
-      "fig\032u\n\014EngineConfig\0223\n\rcache_size_gb\030\001 \001" +
-      "(\0132\034.google.protobuf.DoubleValue\0220\n\ncach" +
-      "e_size\030\002 \001(\0132\034.google.protobuf.DoubleVal" +
-      "ue\032\353\001\n\022OperationProfiling\022X\n\004mode\030\001 \001(\0162" +
-      "J.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "goCfgConfig.OperationProfiling.Mode\022>\n\021s" +
-      "low_op_threshold\030\002 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\006\372\3071\002>0\";\n\004Mode\022\024\n\020MODE_UNSP" +
-      "ECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003" +
-      "\032V\n\007Network\022K\n\030max_incoming_connections\030" +
-      "\001 \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071\010" +
-      "10-32768\032\210\001\n\014SetParameter\0227\n\023enable_flow" +
-      "_control\030\001 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022?\n\033audit_authorization_success\030\002 \001(\0132" +
+      "g.Storage\022b\n\023operation_profiling\030\002 \001(\0132E" +
+      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
+      "oCfgConfig.OperationProfiling\022G\n\003net\030\003 \001" +
+      "(\0132:.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongoCfgConfig.Network\022V\n\rset_parameter\030" +
+      "\004 \001(\0132?.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongoCfgConfig.SetParameter\022N\n\taudit_" +
+      "log\030\005 \001(\0132;.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongoCfgConfig.AuditLog\022G\n\005oplog\030" +
+      "\006 \001(\01328.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongoCfgConfig.Oplog\0224\n\020chaining_allo" +
+      "wed\030\010 \001(\0132\032.google.protobuf.BoolValue\032\326\002" +
+      "\n\007Storage\022Z\n\013wired_tiger\030\001 \001(\0132E.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongoCfgConf" +
+      "ig.Storage.WiredTiger\032\356\001\n\nWiredTiger\022i\n\r" +
+      "engine_config\030\001 \001(\0132R.yandex.cloud.mdb.m" +
+      "ongodb.v1.config.MongoCfgConfig.Storage." +
+      "WiredTiger.EngineConfig\032u\n\014EngineConfig\022" +
+      "3\n\rcache_size_gb\030\001 \001(\0132\034.google.protobuf" +
+      ".DoubleValue\0220\n\ncache_size\030\002 \001(\0132\034.googl" +
+      "e.protobuf.DoubleValue\032\353\001\n\022OperationProf" +
+      "iling\022X\n\004mode\030\001 \001(\0162J.yandex.cloud.mdb.m" +
+      "ongodb.v1.config.MongoCfgConfig.Operatio" +
+      "nProfiling.Mode\022>\n\021slow_op_threshold\030\002 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\"" +
+      ";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013" +
+      "\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max_i" +
+      "ncoming_connections\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\014\372\3071\01010-32768\032\304\001\n\014SetPara" +
+      "meter\0227\n\023enable_flow_control\030\001 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022?\n\033audit_authoriz" +
+      "ation_success\030\002 \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022:\n\026redact_client_log_data\030\003 \001(\0132" +
       "\032.google.protobuf.BoolValue\032\032\n\010AuditLog\022" +
       "\016\n\006filter\030\001 \001(\t\032y\n\005Oplog\0225\n\020max_size_per" +
       "cent\030\001 \001(\0132\033.google.protobuf.Int64Value\022" +
       "9\n\023min_retention_hours\030\002 \001(\0132\034.google.pr" +
-      "otobuf.DoubleValueJ\004\010\007\020\010\"\250\016\n\014MongosConfi" +
+      "otobuf.DoubleValueJ\004\010\007\020\010\"\344\016\n\014MongosConfi" +
       "g\022E\n\003net\030\003 \001(\01328.yandex.cloud.mdb.mongod" +
       "b.v1.config.MongosConfig.Network\022T\n\rset_" +
       "parameter\030\004 \001(\0132=.yandex.cloud.mdb.mongo" +
@@ -40530,7 +41457,7 @@ public final class Mongodb {
       ".Compression.CompressorB\007\202\3101\0031-3\"V\n\nComp" +
       "ressor\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\n\n\006SN" +
       "APPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISABLED\020\004" +
-      "\032\324\010\n\014SetParameter\022?\n\033audit_authorization" +
+      "\032\220\t\n\014SetParameter\022?\n\033audit_authorization" +
       "_success\030\001 \001(\0132\032.google.protobuf.BoolVal" +
       "ue\0227\n\021read_hedging_mode\030\002 \001(\0132\034.google.p" +
       "rotobuf.StringValue\022I\n$sharding_task_exe" +
@@ -40557,29 +41484,31 @@ public final class Mongodb {
       "ize_for_config_servers\030\014 \001(\0132\033.google.pr" +
       "otobuf.Int64Value\022\\\n7sharding_task_execu" +
       "tor_pool_min_size_for_config_servers\030\r \001" +
-      "(\0132\033.google.protobuf.Int64Value\032\032\n\010Audit" +
-      "Log\022\016\n\006filter\030\001 \001(\t\"\356\001\n\017MongodConfigSet\022" +
-      "J\n\020effective_config\030\001 \001(\01320.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongodConfig\022E\n\013u" +
-      "ser_config\030\002 \001(\01320.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongodConfig\022H\n\016default_co" +
-      "nfig\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongodConfig\"\366\001\n\021MongoCfgConfigS" +
-      "et\022L\n\020effective_config\030\001 \001(\01322.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
-      "\022G\n\013user_config\030\002 \001(\01322.yandex.cloud.mdb" +
-      ".mongodb.v1.config.MongoCfgConfig\022J\n\016def" +
-      "ault_config\030\003 \001(\01322.yandex.cloud.mdb.mon" +
-      "godb.v1.config.MongoCfgConfig\"\356\001\n\017Mongos" +
-      "ConfigSet\022J\n\020effective_config\030\001 \001(\01320.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongosC" +
-      "onfig\022E\n\013user_config\030\002 \001(\01320.yandex.clou" +
-      "d.mdb.mongodb.v1.config.MongosConfig\022H\n\016" +
-      "default_config\030\003 \001(\01320.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongosConfigBx\n&yandex" +
-      ".cloud.api.mdb.mongodb.v1.configZNgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/mongodb/v1/config;mongodbb\006proto3"
+      "(\0132\033.google.protobuf.Int64Value\022:\n\026redac" +
+      "t_client_log_data\030\016 \001(\0132\032.google.protobu" +
+      "f.BoolValue\032\032\n\010AuditLog\022\016\n\006filter\030\001 \001(\t\"" +
+      "\356\001\n\017MongodConfigSet\022J\n\020effective_config\030" +
+      "\001 \001(\01320.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongodConfig\022E\n\013user_config\030\002 \001(\01320.y" +
+      "andex.cloud.mdb.mongodb.v1.config.Mongod" +
+      "Config\022H\n\016default_config\030\003 \001(\01320.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongodConfig" +
+      "\"\366\001\n\021MongoCfgConfigSet\022L\n\020effective_conf" +
+      "ig\030\001 \001(\01322.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongoCfgConfig\022G\n\013user_config\030\002 \001(" +
+      "\01322.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongoCfgConfig\022J\n\016default_config\030\003 \001(\01322." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "CfgConfig\"\356\001\n\017MongosConfigSet\022J\n\020effecti" +
+      "ve_config\030\001 \001(\01320.yandex.cloud.mdb.mongo" +
+      "db.v1.config.MongosConfig\022E\n\013user_config" +
+      "\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongosConfig\022H\n\016default_config\030\003 \001(\013" +
+      "20.yandex.cloud.mdb.mongodb.v1.config.Mo" +
+      "ngosConfigBx\n&yandex.cloud.api.mdb.mongo" +
+      "db.v1.configZNgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/mongodb/v1/co" +
+      "nfig;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -40670,7 +41599,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_descriptor,
-        new java.lang.String[] { "AuditAuthorizationSuccess", "EnableFlowControl", "MinSnapshotHistoryWindowInSeconds", "FlowControlTargetLagSeconds", "FlowControlWarnThresholdSeconds", "MigrateCloneInsertionBatchDelayMs", "MigrateCloneInsertionBatchSize", "OrphanCleanupDelaySecs", "PersistedChunkCacheUpdateMaxBatchSize", "RangeDeleterBatchDelayMs", "RangeDeleterBatchSize", "MirrorReads", });
+        new java.lang.String[] { "AuditAuthorizationSuccess", "EnableFlowControl", "MinSnapshotHistoryWindowInSeconds", "FlowControlTargetLagSeconds", "FlowControlWarnThresholdSeconds", "MigrateCloneInsertionBatchDelayMs", "MigrateCloneInsertionBatchSize", "OrphanCleanupDelaySecs", "PersistedChunkCacheUpdateMaxBatchSize", "RangeDeleterBatchDelayMs", "RangeDeleterBatchSize", "MirrorReads", "RedactClientLogData", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig_SetParameter_MirrorReads_fieldAccessorTable = new
@@ -40724,7 +41653,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_SetParameter_descriptor,
-        new java.lang.String[] { "EnableFlowControl", "AuditAuthorizationSuccess", });
+        new java.lang.String[] { "EnableFlowControl", "AuditAuthorizationSuccess", "RedactClientLogData", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_descriptor.getNestedTypes().get(4);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig_AuditLog_fieldAccessorTable = new
@@ -40760,7 +41689,7 @@ public final class Mongodb {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_SetParameter_descriptor,
-        new java.lang.String[] { "AuditAuthorizationSuccess", "ReadHedgingMode", "ShardingTaskExecutorPoolMaxSize", "ShardingTaskExecutorPoolMaxConnecting", "ShardingTaskExecutorPoolMinSize", "ShardingTaskExecutorPoolReplicaSetMatching", "ShardingTaskExecutorPoolHostTimeoutMs", "ShardingTaskExecutorPoolRefreshRequirementMs", "ShardingTaskExecutorPoolRefreshTimeoutMs", "WarmMinConnectionsInShardingTaskExecutorPoolOnStartup", "WarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs", "ShardingTaskExecutorPoolMaxSizeForConfigServers", "ShardingTaskExecutorPoolMinSizeForConfigServers", });
+        new java.lang.String[] { "AuditAuthorizationSuccess", "ReadHedgingMode", "ShardingTaskExecutorPoolMaxSize", "ShardingTaskExecutorPoolMaxConnecting", "ShardingTaskExecutorPoolMinSize", "ShardingTaskExecutorPoolReplicaSetMatching", "ShardingTaskExecutorPoolHostTimeoutMs", "ShardingTaskExecutorPoolRefreshRequirementMs", "ShardingTaskExecutorPoolRefreshTimeoutMs", "WarmMinConnectionsInShardingTaskExecutorPoolOnStartup", "WarmMinConnectionsInShardingTaskExecutorPoolOnStartupWaitMs", "ShardingTaskExecutorPoolMaxSizeForConfigServers", "ShardingTaskExecutorPoolMinSizeForConfigServers", "RedactClientLogData", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongosConfig_AuditLog_fieldAccessorTable = new

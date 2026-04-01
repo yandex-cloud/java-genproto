@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.cloudregistry.v1;
 
-public final class ScanPolicyOuterClass {
-  private ScanPolicyOuterClass() {}
+public final class PSP {
+  private PSP() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -119,7 +119,7 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
      * @return The scanPolicyOptions.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions getScanPolicyOptions();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions getScanPolicyOptions();
     /**
      * <pre>
      * Scan policy options.
@@ -127,7 +127,7 @@ public final class ScanPolicyOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptionsOrBuilder getScanPolicyOptionsOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptionsOrBuilder getScanPolicyOptionsOrBuilder();
 
     /**
      * <pre>
@@ -146,7 +146,7 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      * @return The rules.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules();
     /**
      * <pre>
      * The rules of scan policy.
@@ -154,7 +154,7 @@ public final class ScanPolicyOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder();
 
     /**
      * <pre>
@@ -267,11 +267,11 @@ public final class ScanPolicyOuterClass {
               break;
             }
             case 42: {
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder subBuilder = null;
               if (scanPolicyOptions_ != null) {
                 subBuilder = scanPolicyOptions_.toBuilder();
               }
-              scanPolicyOptions_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.parser(), extensionRegistry);
+              scanPolicyOptions_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(scanPolicyOptions_);
                 scanPolicyOptions_ = subBuilder.buildPartial();
@@ -280,11 +280,11 @@ public final class ScanPolicyOuterClass {
               break;
             }
             case 50: {
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder subBuilder = null;
               if (rules_ != null) {
                 subBuilder = rules_.toBuilder();
               }
-              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.parser(), extensionRegistry);
+              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rules_);
                 rules_ = subBuilder.buildPartial();
@@ -331,15 +331,15 @@ public final class ScanPolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.class, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -531,7 +531,7 @@ public final class ScanPolicyOuterClass {
     }
 
     public static final int SCAN_POLICY_OPTIONS_FIELD_NUMBER = 5;
-    private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions scanPolicyOptions_;
+    private yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions scanPolicyOptions_;
     /**
      * <pre>
      * Scan policy options.
@@ -553,8 +553,8 @@ public final class ScanPolicyOuterClass {
      * @return The scanPolicyOptions.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions getScanPolicyOptions() {
-      return scanPolicyOptions_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.getDefaultInstance() : scanPolicyOptions_;
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions getScanPolicyOptions() {
+      return scanPolicyOptions_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.getDefaultInstance() : scanPolicyOptions_;
     }
     /**
      * <pre>
@@ -564,12 +564,12 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptionsOrBuilder getScanPolicyOptionsOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptionsOrBuilder getScanPolicyOptionsOrBuilder() {
       return getScanPolicyOptions();
     }
 
     public static final int RULES_FIELD_NUMBER = 6;
-    private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+    private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
     /**
      * <pre>
      * The rules of scan policy.
@@ -591,8 +591,8 @@ public final class ScanPolicyOuterClass {
      * @return The rules.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
-      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
+      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
     }
     /**
      * <pre>
@@ -602,7 +602,7 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
       return getRules();
     }
 
@@ -744,10 +744,10 @@ public final class ScanPolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy other = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy) obj;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy other = (yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -813,69 +813,69 @@ public final class ScanPolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -888,7 +888,7 @@ public final class ScanPolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -909,21 +909,21 @@ public final class ScanPolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.ScanPolicy)
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.class, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -975,17 +975,17 @@ public final class ScanPolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy build() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy build() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -993,8 +993,8 @@ public final class ScanPolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy result = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy(this);
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy result = new yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy(this);
         result.id_ = id_;
         result.registryId_ = registryId_;
         result.name_ = name_;
@@ -1053,16 +1053,16 @@ public final class ScanPolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -1106,11 +1106,11 @@ public final class ScanPolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1514,9 +1514,9 @@ public final class ScanPolicyOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions scanPolicyOptions_;
+      private yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions scanPolicyOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptionsOrBuilder> scanPolicyOptionsBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptionsOrBuilder> scanPolicyOptionsBuilder_;
       /**
        * <pre>
        * Scan policy options.
@@ -1536,9 +1536,9 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
        * @return The scanPolicyOptions.
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions getScanPolicyOptions() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions getScanPolicyOptions() {
         if (scanPolicyOptionsBuilder_ == null) {
-          return scanPolicyOptions_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.getDefaultInstance() : scanPolicyOptions_;
+          return scanPolicyOptions_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.getDefaultInstance() : scanPolicyOptions_;
         } else {
           return scanPolicyOptionsBuilder_.getMessage();
         }
@@ -1550,7 +1550,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
        */
-      public Builder setScanPolicyOptions(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions value) {
+      public Builder setScanPolicyOptions(yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions value) {
         if (scanPolicyOptionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1571,7 +1571,7 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
        */
       public Builder setScanPolicyOptions(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder builderForValue) {
         if (scanPolicyOptionsBuilder_ == null) {
           scanPolicyOptions_ = builderForValue.build();
           onChanged();
@@ -1588,11 +1588,11 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
        */
-      public Builder mergeScanPolicyOptions(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions value) {
+      public Builder mergeScanPolicyOptions(yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions value) {
         if (scanPolicyOptionsBuilder_ == null) {
           if (scanPolicyOptions_ != null) {
             scanPolicyOptions_ =
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.newBuilder(scanPolicyOptions_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.newBuilder(scanPolicyOptions_).mergeFrom(value).buildPartial();
           } else {
             scanPolicyOptions_ = value;
           }
@@ -1628,7 +1628,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder getScanPolicyOptionsBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder getScanPolicyOptionsBuilder() {
         
         onChanged();
         return getScanPolicyOptionsFieldBuilder().getBuilder();
@@ -1640,12 +1640,12 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptionsOrBuilder getScanPolicyOptionsOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptionsOrBuilder getScanPolicyOptionsOrBuilder() {
         if (scanPolicyOptionsBuilder_ != null) {
           return scanPolicyOptionsBuilder_.getMessageOrBuilder();
         } else {
           return scanPolicyOptions_ == null ?
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.getDefaultInstance() : scanPolicyOptions_;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.getDefaultInstance() : scanPolicyOptions_;
         }
       }
       /**
@@ -1656,11 +1656,11 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanPolicyOptions scan_policy_options = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptionsOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptionsOrBuilder> 
           getScanPolicyOptionsFieldBuilder() {
         if (scanPolicyOptionsBuilder_ == null) {
           scanPolicyOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptionsOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptionsOrBuilder>(
                   getScanPolicyOptions(),
                   getParentForChildren(),
                   isClean());
@@ -1669,9 +1669,9 @@ public final class ScanPolicyOuterClass {
         return scanPolicyOptionsBuilder_;
       }
 
-      private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+      private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> rulesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> rulesBuilder_;
       /**
        * <pre>
        * The rules of scan policy.
@@ -1691,9 +1691,9 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        * @return The rules.
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
         if (rulesBuilder_ == null) {
-          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         } else {
           return rulesBuilder_.getMessage();
         }
@@ -1705,7 +1705,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public Builder setRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder setRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1726,7 +1726,7 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
       public Builder setRules(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           rules_ = builderForValue.build();
           onChanged();
@@ -1743,11 +1743,11 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (rules_ != null) {
             rules_ =
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
           } else {
             rules_ = value;
           }
@@ -1783,7 +1783,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder getRulesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder getRulesBuilder() {
         
         onChanged();
         return getRulesFieldBuilder().getBuilder();
@@ -1795,12 +1795,12 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
         if (rulesBuilder_ != null) {
           return rulesBuilder_.getMessageOrBuilder();
         } else {
           return rules_ == null ?
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         }
       }
       /**
@@ -1811,11 +1811,11 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> 
           getRulesFieldBuilder() {
         if (rulesBuilder_ == null) {
           rulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder>(
                   getRules(),
                   getParentForChildren(),
                   isClean());
@@ -2038,12 +2038,12 @@ public final class ScanPolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.ScanPolicy)
-    private static final yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2068,7 +2068,7 @@ public final class ScanPolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2159,15 +2159,15 @@ public final class ScanPolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.class, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder.class);
     }
 
     public static final int SCAN_LANG_PACKAGES_FIELD_NUMBER = 1;
@@ -2225,10 +2225,10 @@ public final class ScanPolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions other = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions) obj;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions other = (yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions) obj;
 
       if (getScanLangPackages()
           != other.getScanLangPackages()) return false;
@@ -2251,69 +2251,69 @@ public final class ScanPolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2326,7 +2326,7 @@ public final class ScanPolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2347,21 +2347,21 @@ public final class ScanPolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.ScanPolicyOptions)
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptionsOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.class, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2387,17 +2387,17 @@ public final class ScanPolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanPolicyOptions_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions build() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions build() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2405,8 +2405,8 @@ public final class ScanPolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions result = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions(this);
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions result = new yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions(this);
         result.scanLangPackages_ = scanLangPackages_;
         onBuilt();
         return result;
@@ -2446,16 +2446,16 @@ public final class ScanPolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions.getDefaultInstance()) return this;
         if (other.getScanLangPackages() != false) {
           setScanLangPackages(other.getScanLangPackages());
         }
@@ -2474,11 +2474,11 @@ public final class ScanPolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2547,12 +2547,12 @@ public final class ScanPolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.ScanPolicyOptions)
-    private static final yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2577,7 +2577,7 @@ public final class ScanPolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicyOptions getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicyOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2604,7 +2604,7 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
      * @return The pushRule.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule getPushRule();
+    yandex.cloud.api.cloudregistry.v1.PSP.PushRule getPushRule();
     /**
      * <pre>
      * Description of on-push scan rule.
@@ -2612,7 +2612,7 @@ public final class ScanPolicyOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRuleOrBuilder getPushRuleOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PSP.PushRuleOrBuilder getPushRuleOrBuilder();
 
     /**
      * <pre>
@@ -2621,7 +2621,7 @@ public final class ScanPolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
-    java.util.List<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule> 
+    java.util.List<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule> 
         getScheduleRulesList();
     /**
      * <pre>
@@ -2630,7 +2630,7 @@ public final class ScanPolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule getScheduleRules(int index);
+    yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule getScheduleRules(int index);
     /**
      * <pre>
      * Description of time based rescan rule.
@@ -2646,7 +2646,7 @@ public final class ScanPolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
-    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder> 
         getScheduleRulesOrBuilderList();
     /**
      * <pre>
@@ -2655,7 +2655,7 @@ public final class ScanPolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder getScheduleRulesOrBuilder(
+    yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder getScheduleRulesOrBuilder(
         int index);
   }
   /**
@@ -2706,11 +2706,11 @@ public final class ScanPolicyOuterClass {
               done = true;
               break;
             case 10: {
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder subBuilder = null;
               if (pushRule_ != null) {
                 subBuilder = pushRule_.toBuilder();
               }
-              pushRule_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.parser(), extensionRegistry);
+              pushRule_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.PushRule.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pushRule_);
                 pushRule_ = subBuilder.buildPartial();
@@ -2720,11 +2720,11 @@ public final class ScanPolicyOuterClass {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                scheduleRules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule>();
+                scheduleRules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule>();
                 mutable_bitField0_ |= 0x00000001;
               }
               scheduleRules_.add(
-                  input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2751,19 +2751,19 @@ public final class ScanPolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.class, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder.class);
     }
 
     public static final int PUSH_RULE_FIELD_NUMBER = 1;
-    private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule pushRule_;
+    private yandex.cloud.api.cloudregistry.v1.PSP.PushRule pushRule_;
     /**
      * <pre>
      * Description of on-push scan rule.
@@ -2785,8 +2785,8 @@ public final class ScanPolicyOuterClass {
      * @return The pushRule.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule getPushRule() {
-      return pushRule_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.getDefaultInstance() : pushRule_;
+    public yandex.cloud.api.cloudregistry.v1.PSP.PushRule getPushRule() {
+      return pushRule_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.PushRule.getDefaultInstance() : pushRule_;
     }
     /**
      * <pre>
@@ -2796,12 +2796,12 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRuleOrBuilder getPushRuleOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.PushRuleOrBuilder getPushRuleOrBuilder() {
       return getPushRule();
     }
 
     public static final int SCHEDULE_RULES_FIELD_NUMBER = 2;
-    private java.util.List<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule> scheduleRules_;
+    private java.util.List<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule> scheduleRules_;
     /**
      * <pre>
      * Description of time based rescan rule.
@@ -2810,7 +2810,7 @@ public final class ScanPolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule> getScheduleRulesList() {
+    public java.util.List<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule> getScheduleRulesList() {
       return scheduleRules_;
     }
     /**
@@ -2821,7 +2821,7 @@ public final class ScanPolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder> 
         getScheduleRulesOrBuilderList() {
       return scheduleRules_;
     }
@@ -2844,7 +2844,7 @@ public final class ScanPolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule getScheduleRules(int index) {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule getScheduleRules(int index) {
       return scheduleRules_.get(index);
     }
     /**
@@ -2855,7 +2855,7 @@ public final class ScanPolicyOuterClass {
      * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder getScheduleRulesOrBuilder(
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder getScheduleRulesOrBuilder(
         int index) {
       return scheduleRules_.get(index);
     }
@@ -2907,10 +2907,10 @@ public final class ScanPolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScanRules)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules other = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules) obj;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScanRules other = (yandex.cloud.api.cloudregistry.v1.PSP.ScanRules) obj;
 
       if (hasPushRule() != other.hasPushRule()) return false;
       if (hasPushRule()) {
@@ -2943,69 +2943,69 @@ public final class ScanPolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3018,7 +3018,7 @@ public final class ScanPolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3039,21 +3039,21 @@ public final class ScanPolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.ScanRules)
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.class, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3090,17 +3090,17 @@ public final class ScanPolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScanRules_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules build() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules build() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanRules result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3108,8 +3108,8 @@ public final class ScanPolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules result = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules(this);
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanRules result = new yandex.cloud.api.cloudregistry.v1.PSP.ScanRules(this);
         int from_bitField0_ = bitField0_;
         if (pushRuleBuilder_ == null) {
           result.pushRule_ = pushRule_;
@@ -3163,16 +3163,16 @@ public final class ScanPolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScanRules) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PSP.ScanRules)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance()) return this;
         if (other.hasPushRule()) {
           mergePushRule(other.getPushRule());
         }
@@ -3217,11 +3217,11 @@ public final class ScanPolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PSP.ScanRules parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PSP.ScanRules) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3232,9 +3232,9 @@ public final class ScanPolicyOuterClass {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule pushRule_;
+      private yandex.cloud.api.cloudregistry.v1.PSP.PushRule pushRule_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRuleOrBuilder> pushRuleBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.PushRule, yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder, yandex.cloud.api.cloudregistry.v1.PSP.PushRuleOrBuilder> pushRuleBuilder_;
       /**
        * <pre>
        * Description of on-push scan rule.
@@ -3254,9 +3254,9 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
        * @return The pushRule.
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule getPushRule() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.PushRule getPushRule() {
         if (pushRuleBuilder_ == null) {
-          return pushRule_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.getDefaultInstance() : pushRule_;
+          return pushRule_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.PushRule.getDefaultInstance() : pushRule_;
         } else {
           return pushRuleBuilder_.getMessage();
         }
@@ -3268,7 +3268,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
        */
-      public Builder setPushRule(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule value) {
+      public Builder setPushRule(yandex.cloud.api.cloudregistry.v1.PSP.PushRule value) {
         if (pushRuleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3289,7 +3289,7 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
        */
       public Builder setPushRule(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder builderForValue) {
         if (pushRuleBuilder_ == null) {
           pushRule_ = builderForValue.build();
           onChanged();
@@ -3306,11 +3306,11 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
        */
-      public Builder mergePushRule(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule value) {
+      public Builder mergePushRule(yandex.cloud.api.cloudregistry.v1.PSP.PushRule value) {
         if (pushRuleBuilder_ == null) {
           if (pushRule_ != null) {
             pushRule_ =
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.newBuilder(pushRule_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PSP.PushRule.newBuilder(pushRule_).mergeFrom(value).buildPartial();
           } else {
             pushRule_ = value;
           }
@@ -3346,7 +3346,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder getPushRuleBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder getPushRuleBuilder() {
         
         onChanged();
         return getPushRuleFieldBuilder().getBuilder();
@@ -3358,12 +3358,12 @@ public final class ScanPolicyOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRuleOrBuilder getPushRuleOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.PushRuleOrBuilder getPushRuleOrBuilder() {
         if (pushRuleBuilder_ != null) {
           return pushRuleBuilder_.getMessageOrBuilder();
         } else {
           return pushRule_ == null ?
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.getDefaultInstance() : pushRule_;
+              yandex.cloud.api.cloudregistry.v1.PSP.PushRule.getDefaultInstance() : pushRule_;
         }
       }
       /**
@@ -3374,11 +3374,11 @@ public final class ScanPolicyOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.PushRule push_rule = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRuleOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.PushRule, yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder, yandex.cloud.api.cloudregistry.v1.PSP.PushRuleOrBuilder> 
           getPushRuleFieldBuilder() {
         if (pushRuleBuilder_ == null) {
           pushRuleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRuleOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.PushRule, yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder, yandex.cloud.api.cloudregistry.v1.PSP.PushRuleOrBuilder>(
                   getPushRule(),
                   getParentForChildren(),
                   isClean());
@@ -3387,17 +3387,17 @@ public final class ScanPolicyOuterClass {
         return pushRuleBuilder_;
       }
 
-      private java.util.List<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule> scheduleRules_ =
+      private java.util.List<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule> scheduleRules_ =
         java.util.Collections.emptyList();
       private void ensureScheduleRulesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          scheduleRules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule>(scheduleRules_);
+          scheduleRules_ = new java.util.ArrayList<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule>(scheduleRules_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder> scheduleRulesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder> scheduleRulesBuilder_;
 
       /**
        * <pre>
@@ -3406,7 +3406,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule> getScheduleRulesList() {
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule> getScheduleRulesList() {
         if (scheduleRulesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(scheduleRules_);
         } else {
@@ -3434,7 +3434,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule getScheduleRules(int index) {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule getScheduleRules(int index) {
         if (scheduleRulesBuilder_ == null) {
           return scheduleRules_.get(index);
         } else {
@@ -3449,7 +3449,7 @@ public final class ScanPolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
       public Builder setScheduleRules(
-          int index, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule value) {
         if (scheduleRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3470,7 +3470,7 @@ public final class ScanPolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
       public Builder setScheduleRules(
-          int index, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder builderForValue) {
         if (scheduleRulesBuilder_ == null) {
           ensureScheduleRulesIsMutable();
           scheduleRules_.set(index, builderForValue.build());
@@ -3487,7 +3487,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public Builder addScheduleRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule value) {
+      public Builder addScheduleRules(yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule value) {
         if (scheduleRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3508,7 +3508,7 @@ public final class ScanPolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
       public Builder addScheduleRules(
-          int index, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule value) {
+          int index, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule value) {
         if (scheduleRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3529,7 +3529,7 @@ public final class ScanPolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
       public Builder addScheduleRules(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder builderForValue) {
         if (scheduleRulesBuilder_ == null) {
           ensureScheduleRulesIsMutable();
           scheduleRules_.add(builderForValue.build());
@@ -3547,7 +3547,7 @@ public final class ScanPolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
       public Builder addScheduleRules(
-          int index, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder builderForValue) {
+          int index, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder builderForValue) {
         if (scheduleRulesBuilder_ == null) {
           ensureScheduleRulesIsMutable();
           scheduleRules_.add(index, builderForValue.build());
@@ -3565,7 +3565,7 @@ public final class ScanPolicyOuterClass {
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
       public Builder addAllScheduleRules(
-          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule> values) {
         if (scheduleRulesBuilder_ == null) {
           ensureScheduleRulesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3617,7 +3617,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder getScheduleRulesBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder getScheduleRulesBuilder(
           int index) {
         return getScheduleRulesFieldBuilder().getBuilder(index);
       }
@@ -3628,7 +3628,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder getScheduleRulesOrBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder getScheduleRulesOrBuilder(
           int index) {
         if (scheduleRulesBuilder_ == null) {
           return scheduleRules_.get(index);  } else {
@@ -3642,7 +3642,7 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder> 
            getScheduleRulesOrBuilderList() {
         if (scheduleRulesBuilder_ != null) {
           return scheduleRulesBuilder_.getMessageOrBuilderList();
@@ -3657,9 +3657,9 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder addScheduleRulesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder addScheduleRulesBuilder() {
         return getScheduleRulesFieldBuilder().addBuilder(
-            yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.getDefaultInstance());
+            yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3668,10 +3668,10 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder addScheduleRulesBuilder(
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder addScheduleRulesBuilder(
           int index) {
         return getScheduleRulesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.getDefaultInstance());
+            index, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3680,16 +3680,16 @@ public final class ScanPolicyOuterClass {
        *
        * <code>repeated .yandex.cloud.cloudregistry.v1.ScheduledRule schedule_rules = 2;</code>
        */
-      public java.util.List<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder> 
+      public java.util.List<yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder> 
            getScheduleRulesBuilderList() {
         return getScheduleRulesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder> 
           getScheduleRulesFieldBuilder() {
         if (scheduleRulesBuilder_ == null) {
           scheduleRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder>(
                   scheduleRules_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -3715,12 +3715,12 @@ public final class ScanPolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.ScanRules)
-    private static final yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PSP.ScanRules DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PSP.ScanRules();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3745,7 +3745,7 @@ public final class ScanPolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3891,15 +3891,15 @@ public final class ScanPolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_PushRule_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_PushRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_PushRule_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_PushRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PSP.PushRule.class, yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder.class);
     }
 
     public static final int PATHS_FIELD_NUMBER = 1;
@@ -4019,10 +4019,10 @@ public final class ScanPolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PSP.PushRule)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule other = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule) obj;
+      yandex.cloud.api.cloudregistry.v1.PSP.PushRule other = (yandex.cloud.api.cloudregistry.v1.PSP.PushRule) obj;
 
       if (!getPathsList()
           .equals(other.getPathsList())) return false;
@@ -4051,69 +4051,69 @@ public final class ScanPolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4126,7 +4126,7 @@ public final class ScanPolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PSP.PushRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4147,21 +4147,21 @@ public final class ScanPolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.PushRule)
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRuleOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PSP.PushRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_PushRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_PushRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_PushRule_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_PushRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PSP.PushRule.class, yandex.cloud.api.cloudregistry.v1.PSP.PushRule.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PSP.PushRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4189,17 +4189,17 @@ public final class ScanPolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_PushRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_PushRule_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PSP.PushRule getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PSP.PushRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule build() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PSP.PushRule build() {
+        yandex.cloud.api.cloudregistry.v1.PSP.PushRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4207,8 +4207,8 @@ public final class ScanPolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule result = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule(this);
+      public yandex.cloud.api.cloudregistry.v1.PSP.PushRule buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PSP.PushRule result = new yandex.cloud.api.cloudregistry.v1.PSP.PushRule(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           paths_ = paths_.getUnmodifiableView();
@@ -4254,16 +4254,16 @@ public final class ScanPolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PSP.PushRule) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PSP.PushRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PSP.PushRule other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PSP.PushRule.getDefaultInstance()) return this;
         if (!other.paths_.isEmpty()) {
           if (paths_.isEmpty()) {
             paths_ = other.paths_;
@@ -4292,11 +4292,11 @@ public final class ScanPolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PSP.PushRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PSP.PushRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4512,12 +4512,12 @@ public final class ScanPolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.PushRule)
-    private static final yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PSP.PushRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PSP.PushRule();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PSP.PushRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4542,7 +4542,7 @@ public final class ScanPolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.PushRule getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.PushRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4579,7 +4579,7 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScheduledRule.IntervalUnit interval_unit = 2;</code>
      * @return The intervalUnit.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit getIntervalUnit();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit getIntervalUnit();
 
     /**
      * <pre>
@@ -4729,15 +4729,15 @@ public final class ScanPolicyOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.class, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder.class);
     }
 
     /**
@@ -4830,7 +4830,7 @@ public final class ScanPolicyOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final IntervalUnit[] VALUES = values();
@@ -4892,10 +4892,10 @@ public final class ScanPolicyOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScheduledRule.IntervalUnit interval_unit = 2;</code>
      * @return The intervalUnit.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit getIntervalUnit() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit getIntervalUnit() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit result = yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit.valueOf(intervalUnit_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit result = yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit.valueOf(intervalUnit_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit.UNRECOGNIZED : result;
     }
 
     public static final int PATHS_FIELD_NUMBER = 3;
@@ -4981,7 +4981,7 @@ public final class ScanPolicyOuterClass {
       if (amount_ != 0L) {
         output.writeInt64(1, amount_);
       }
-      if (intervalUnit_ != yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit.INTERVAL_UNIT_UNSPECIFIED.getNumber()) {
+      if (intervalUnit_ != yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit.INTERVAL_UNIT_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, intervalUnit_);
       }
       for (int i = 0; i < paths_.size(); i++) {
@@ -5003,7 +5003,7 @@ public final class ScanPolicyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, amount_);
       }
-      if (intervalUnit_ != yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit.INTERVAL_UNIT_UNSPECIFIED.getNumber()) {
+      if (intervalUnit_ != yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit.INTERVAL_UNIT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, intervalUnit_);
       }
@@ -5029,10 +5029,10 @@ public final class ScanPolicyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule other = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule) obj;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule other = (yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule) obj;
 
       if (getAmount()
           != other.getAmount()) return false;
@@ -5069,69 +5069,69 @@ public final class ScanPolicyOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5144,7 +5144,7 @@ public final class ScanPolicyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5165,21 +5165,21 @@ public final class ScanPolicyOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.ScheduledRule)
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRuleOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.class, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.class, yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5211,17 +5211,17 @@ public final class ScanPolicyOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PSP.internal_static_yandex_cloud_cloudregistry_v1_ScheduledRule_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule build() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule build() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5229,8 +5229,8 @@ public final class ScanPolicyOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule result = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule(this);
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule result = new yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule(this);
         int from_bitField0_ = bitField0_;
         result.amount_ = amount_;
         result.intervalUnit_ = intervalUnit_;
@@ -5278,16 +5278,16 @@ public final class ScanPolicyOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.getDefaultInstance()) return this;
         if (other.getAmount() != 0L) {
           setAmount(other.getAmount());
         }
@@ -5322,11 +5322,11 @@ public final class ScanPolicyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5416,10 +5416,10 @@ public final class ScanPolicyOuterClass {
        * @return The intervalUnit.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit getIntervalUnit() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit getIntervalUnit() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit result = yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit.valueOf(intervalUnit_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit result = yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit.valueOf(intervalUnit_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -5430,7 +5430,7 @@ public final class ScanPolicyOuterClass {
        * @param value The intervalUnit to set.
        * @return This builder for chaining.
        */
-      public Builder setIntervalUnit(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule.IntervalUnit value) {
+      public Builder setIntervalUnit(yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule.IntervalUnit value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -5659,12 +5659,12 @@ public final class ScanPolicyOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.ScheduledRule)
-    private static final yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5689,7 +5689,7 @@ public final class ScanPolicyOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScheduledRule getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScheduledRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5731,8 +5731,8 @@ public final class ScanPolicyOuterClass {
     java.lang.String[] descriptorData = {
       "\n/yandex/cloud/cloudregistry/v1/scan_pol" +
       "icy.proto\022\035yandex.cloud.cloudregistry.v1" +
-      "\032\035yandex/cloud/validation.proto\032\037google/" +
-      "protobuf/timestamp.proto\"\232\002\n\nScanPolicy\022" +
+      "\032\037google/protobuf/timestamp.proto\032\035yande" +
+      "x/cloud/validation.proto\"\232\002\n\nScanPolicy\022" +
       "\n\n\002id\030\001 \001(\t\022\023\n\013registry_id\030\002 \001(\t\022\014\n\004name" +
       "\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022M\n\023scan_poli" +
       "cy_options\030\005 \001(\01320.yandex.cloud.cloudreg" +
@@ -5745,26 +5745,26 @@ public final class ScanPolicyOuterClass {
       ".cloud.cloudregistry.v1.PushRule\022D\n\016sche" +
       "dule_rules\030\002 \003(\0132,.yandex.cloud.cloudreg" +
       "istry.v1.ScheduledRule\"x\n\010PushRule\022Z\n\005pa" +
-      "ths\030\001 \003(\tBK\202\3101\002>0\362\3071A\\*|[a-z0-9]+(?:[._-" +
-      "][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]" +
-      "+)*))*\022\020\n\010disabled\030\002 \001(\010\"\244\002\n\rScheduledRu" +
+      "ths\030\001 \003(\tBK\362\3071A\\*|[a-z0-9]+(?:[._-][a-z0" +
+      "-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*" +
+      "\202\3101\002>0\022\020\n\010disabled\030\002 \001(\010\"\244\002\n\rScheduledRu" +
       "le\022\026\n\006amount\030\001 \001(\003B\006\372\3071\002>0\022P\n\rinterval_u" +
       "nit\030\002 \001(\01629.yandex.cloud.cloudregistry.v" +
       "1.ScheduledRule.IntervalUnit\022^\n\005paths\030\003 " +
-      "\003(\tBO\202\3101\0061-1000\362\3071A\\*|[a-z0-9]+(?:[._-][" +
-      "a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)" +
-      "*))*\022\020\n\010disabled\030\004 \001(\010\"7\n\014IntervalUnit\022\035" +
+      "\003(\tBO\362\3071A\\*|[a-z0-9]+(?:[._-][a-z0-9]+)*" +
+      "(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*\202\3101\0061-" +
+      "1000\022\020\n\010disabled\030\004 \001(\010\"7\n\014IntervalUnit\022\035" +
       "\n\031INTERVAL_UNIT_UNSPECIFIED\020\000\022\010\n\004DAYS\020\001B" +
-      "t\n!yandex.cloud.api.cloudregistry.v1ZOgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/cloudregistry/v1;cloudregistryb\006p" +
-      "roto3"
+      "y\n!yandex.cloud.api.cloudregistry.v1B\003PS" +
+      "PZOgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/cloudregistry/v1;cloudregist" +
+      "ryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          yandex.cloud.api.Validation.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_cloudregistry_v1_ScanPolicy_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5803,8 +5803,8 @@ public final class ScanPolicyOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    yandex.cloud.api.Validation.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

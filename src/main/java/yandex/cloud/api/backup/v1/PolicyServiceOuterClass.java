@@ -13462,22 +13462,22 @@ public final class PolicyServiceOuterClass {
       "(\t\"H\n\024ListPoliciesResponse\0220\n\010policies\030\001" +
       " \003(\0132\036.yandex.cloud.backup.v1.Policy\"\222\001\n" +
       "\023CreatePolicyRequest\022\037\n\tfolder_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\032\n\004name\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022>\n\010settings\030\003 \001(\0132&.yandex.cloud.backu" +
+      "\014\212\3101\004<=50\350\3071\001\022\032\n\004name\030\002 \001(\tB\014\212\3101\004<=50\350\3071" +
+      "\001\022>\n\010settings\030\003 \001(\0132&.yandex.cloud.backu" +
       "p.v1.PolicySettingsB\004\350\3071\001\"7\n\024CreatePolic" +
-      "yMetadata\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"3\n\020GetPolicyRequest\022\037\n\tpolicy_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"v\n\023UpdatePolicyRequest\022\037" +
-      "\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010setti" +
+      "yMetadata\022\037\n\tpolicy_id\030\001 \001(\tB\014\212\3101\004<=50\350\307" +
+      "1\001\"3\n\020GetPolicyRequest\022\037\n\tpolicy_id\030\001 \001(" +
+      "\tB\014\212\3101\004<=50\350\3071\001\"v\n\023UpdatePolicyRequest\022\037" +
+      "\n\tpolicy_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022>\n\010setti" +
       "ngs\030\002 \001(\0132&.yandex.cloud.backup.v1.Polic" +
       "ySettingsB\004\350\3071\001\"7\n\024UpdatePolicyMetadata\022" +
-      "\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\023Dele" +
-      "tePolicyRequest\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"7\n\024DeletePolicyMetadata\022\037\n\tpoli" +
-      "cy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"`\n\022ApplyPolicy" +
-      "Request\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022)\n\023compute_instance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"E\n\023ApplyPolicyMetadata\022\021\n\tpolicy_id\030" +
+      "\037\n\tpolicy_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\"6\n\023Dele" +
+      "tePolicyRequest\022\037\n\tpolicy_id\030\001 \001(\tB\014\212\3101\004" +
+      "<=50\350\3071\001\"7\n\024DeletePolicyMetadata\022\037\n\tpoli" +
+      "cy_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\"`\n\022ApplyPolicy" +
+      "Request\022\037\n\tpolicy_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001" +
+      "\022)\n\023compute_instance_id\030\002 \001(\tB\014\212\3101\004<=50\350" +
+      "\3071\001\"E\n\023ApplyPolicyMetadata\022\021\n\tpolicy_id\030" +
       "\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\"\207\001\n\027L" +
       "istApplicationsRequest\022\023\n\tfolder_id\030\001 \001(" +
       "\tH\000\022\023\n\tpolicy_id\030\002 \001(\tH\000\022\035\n\023compute_inst" +
@@ -13485,13 +13485,13 @@ public final class PolicyServiceOuterClass {
       "B\n\n\002id\022\004\300\3011\001\"[\n\030ListApplicationsResponse" +
       "\022?\n\014applications\030\001 \003(\0132).yandex.cloud.ba" +
       "ckup.v1.PolicyApplication\"\\\n\016ExecuteRequ" +
-      "est\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023" +
-      "compute_instance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "est\022\037\n\tpolicy_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022)\n\023" +
+      "compute_instance_id\030\002 \001(\tB\014\212\3101\004<=50\350\3071\001\"" +
       "^\n\017ExecuteMetadata\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n" +
       "\023compute_instance_id\030\002 \001(\t\022\033\n\023progress_p" +
       "ercentage\030\003 \001(\001\"[\n\rRevokeRequest\022\037\n\tpoli" +
-      "cy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023compute_ins" +
-      "tance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\016RevokeMe" +
+      "cy_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022)\n\023compute_ins" +
+      "tance_id\030\002 \001(\tB\014\212\3101\004<=50\350\3071\001\"@\n\016RevokeMe" +
       "tadata\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n\023compute_ins" +
       "tance_id\030\002 \001(\t2\327\013\n\rPolicyService\022~\n\004List" +
       "\022+.yandex.cloud.backup.v1.ListPoliciesRe" +
@@ -13499,38 +13499,38 @@ public final class PolicyServiceOuterClass {
       "iesResponse\"\033\202\323\344\223\002\025\022\023/backup/v1/policies" +
       "\022\232\001\n\006Create\022+.yandex.cloud.backup.v1.Cre" +
       "atePolicyRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"@\202\323\344\223\002\030\"\023/backup/v1/policies" +
-      ":\001*\262\322*\036\n\024CreatePolicyMetadata\022\006Policy\022x\n" +
+      "n.Operation\"@\262\322*\036\n\024CreatePolicyMetadata\022" +
+      "\006Policy\202\323\344\223\002\030\"\023/backup/v1/policies:\001*\022x\n" +
       "\003Get\022(.yandex.cloud.backup.v1.GetPolicyR" +
       "equest\032\036.yandex.cloud.backup.v1.Policy\"\'" +
       "\202\323\344\223\002!\022\037/backup/v1/policies/{policy_id}\022" +
       "\246\001\n\006Update\022+.yandex.cloud.backup.v1.Upda" +
       "tePolicyRequest\032!.yandex.cloud.operation" +
-      ".Operation\"L\202\323\344\223\002$2\037/backup/v1/policies/" +
-      "{policy_id}:\001*\262\322*\036\n\024UpdatePolicyMetadata" +
-      "\022\006Policy\022\262\001\n\006Delete\022+.yandex.cloud.backu" +
+      ".Operation\"L\262\322*\036\n\024UpdatePolicyMetadata\022\006" +
+      "Policy\202\323\344\223\002$2\037/backup/v1/policies/{polic" +
+      "y_id}:\001*\022\262\001\n\006Delete\022+.yandex.cloud.backu" +
       "p.v1.DeletePolicyRequest\032!.yandex.cloud." +
-      "operation.Operation\"X\202\323\344\223\002!*\037/backup/v1/" +
-      "policies/{policy_id}\262\322*-\n\024DeletePolicyMe" +
-      "tadata\022\025google.protobuf.Empty\022\270\001\n\005Apply\022" +
+      "operation.Operation\"X\262\322*-\n\024DeletePolicyM" +
+      "etadata\022\025google.protobuf.Empty\202\323\344\223\002!*\037/b" +
+      "ackup/v1/policies/{policy_id}\022\270\001\n\005Apply\022" +
       "*.yandex.cloud.backup.v1.ApplyPolicyRequ" +
       "est\032!.yandex.cloud.operation.Operation\"`" +
-      "\202\323\344\223\002*\"%/backup/v1/policies/{policy_id}:" +
-      "apply:\001*\262\322*,\n\023ApplyPolicyMetadata\022\025googl" +
-      "e.protobuf.Empty\022\253\001\n\020ListApplications\022/." +
+      "\262\322*,\n\023ApplyPolicyMetadata\022\025google.protob" +
+      "uf.Empty\202\323\344\223\002*\"%/backup/v1/policies/{pol" +
+      "icy_id}:apply:\001*\022\253\001\n\020ListApplications\022/." +
       "yandex.cloud.backup.v1.ListApplicationsR" +
       "equest\0320.yandex.cloud.backup.v1.ListAppl" +
       "icationsResponse\"4\202\323\344\223\002.\022,/backup/v1/pol" +
       "icies/{policy_id}/applications\022\264\001\n\007Execu" +
       "te\022&.yandex.cloud.backup.v1.ExecuteReque" +
-      "st\032!.yandex.cloud.operation.Operation\"^\202" +
-      "\323\344\223\002,\"\'/backup/v1/policies/{policy_id}:e" +
-      "xecute:\001*\262\322*(\n\017ExecuteMetadata\022\025google.p" +
-      "rotobuf.Empty\022\260\001\n\006Revoke\022%.yandex.cloud." +
+      "st\032!.yandex.cloud.operation.Operation\"^\262" +
+      "\322*(\n\017ExecuteMetadata\022\025google.protobuf.Em" +
+      "pty\202\323\344\223\002,\"\'/backup/v1/policies/{policy_i" +
+      "d}:execute:\001*\022\260\001\n\006Revoke\022%.yandex.cloud." +
       "backup.v1.RevokeRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\\\202\323\344\223\002+\"&/backup/v1/p" +
-      "olicies/{policy_id}:revoke:\001*\262\322*\'\n\016Revok" +
-      "eMetadata\022\025google.protobuf.EmptyB_\n\032yand" +
+      "peration.Operation\"\\\262\322*\'\n\016RevokeMetadata" +
+      "\022\025google.protobuf.Empty\202\323\344\223\002+\"&/backup/v" +
+      "1/policies/{policy_id}:revoke:\001*B_\n\032yand" +
       "ex.cloud.api.backup.v1ZAgithub.com/yande" +
       "x-cloud/go-genproto/yandex/cloud/backup/" +
       "v1;backupb\006proto3"

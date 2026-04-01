@@ -23637,6 +23637,44 @@ public final class InstanceOuterClass {
      * @return The awsV1HttpToken.
      */
     yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption getAwsV1HttpToken();
+
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The enum numeric value on the wire for awsV2HttpEndpoint.
+     */
+    int getAwsV2HttpEndpointValue();
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The awsV2HttpEndpoint.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption getAwsV2HttpEndpoint();
+
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The enum numeric value on the wire for awsV2HttpToken.
+     */
+    int getAwsV2HttpTokenValue();
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The awsV2HttpToken.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption getAwsV2HttpToken();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.MetadataOptions}
@@ -23655,6 +23693,8 @@ public final class InstanceOuterClass {
       awsV1HttpEndpoint_ = 0;
       gceHttpToken_ = 0;
       awsV1HttpToken_ = 0;
+      awsV2HttpEndpoint_ = 0;
+      awsV2HttpToken_ = 0;
     }
 
     @java.lang.Override
@@ -23709,6 +23749,18 @@ public final class InstanceOuterClass {
               int rawValue = input.readEnum();
 
               awsV1HttpToken_ = rawValue;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              awsV2HttpEndpoint_ = rawValue;
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              awsV2HttpToken_ = rawValue;
               break;
             }
             default: {
@@ -23851,6 +23903,60 @@ public final class InstanceOuterClass {
       return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.UNRECOGNIZED : result;
     }
 
+    public static final int AWS_V2_HTTP_ENDPOINT_FIELD_NUMBER = 5;
+    private int awsV2HttpEndpoint_;
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The enum numeric value on the wire for awsV2HttpEndpoint.
+     */
+    @java.lang.Override public int getAwsV2HttpEndpointValue() {
+      return awsV2HttpEndpoint_;
+    }
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The awsV2HttpEndpoint.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption getAwsV2HttpEndpoint() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.valueOf(awsV2HttpEndpoint_);
+      return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.UNRECOGNIZED : result;
+    }
+
+    public static final int AWS_V2_HTTP_TOKEN_FIELD_NUMBER = 6;
+    private int awsV2HttpToken_;
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The enum numeric value on the wire for awsV2HttpToken.
+     */
+    @java.lang.Override public int getAwsV2HttpTokenValue() {
+      return awsV2HttpToken_;
+    }
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The awsV2HttpToken.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption getAwsV2HttpToken() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.valueOf(awsV2HttpToken_);
+      return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -23877,6 +23983,12 @@ public final class InstanceOuterClass {
       if (awsV1HttpToken_ != yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, awsV1HttpToken_);
       }
+      if (awsV2HttpEndpoint_ != yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, awsV2HttpEndpoint_);
+      }
+      if (awsV2HttpToken_ != yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, awsV2HttpToken_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -23902,6 +24014,14 @@ public final class InstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, awsV1HttpToken_);
       }
+      if (awsV2HttpEndpoint_ != yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, awsV2HttpEndpoint_);
+      }
+      if (awsV2HttpToken_ != yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, awsV2HttpToken_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -23921,6 +24041,8 @@ public final class InstanceOuterClass {
       if (awsV1HttpEndpoint_ != other.awsV1HttpEndpoint_) return false;
       if (gceHttpToken_ != other.gceHttpToken_) return false;
       if (awsV1HttpToken_ != other.awsV1HttpToken_) return false;
+      if (awsV2HttpEndpoint_ != other.awsV2HttpEndpoint_) return false;
+      if (awsV2HttpToken_ != other.awsV2HttpToken_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -23940,6 +24062,10 @@ public final class InstanceOuterClass {
       hash = (53 * hash) + gceHttpToken_;
       hash = (37 * hash) + AWS_V1_HTTP_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + awsV1HttpToken_;
+      hash = (37 * hash) + AWS_V2_HTTP_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + awsV2HttpEndpoint_;
+      hash = (37 * hash) + AWS_V2_HTTP_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + awsV2HttpToken_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24081,6 +24207,10 @@ public final class InstanceOuterClass {
 
         awsV1HttpToken_ = 0;
 
+        awsV2HttpEndpoint_ = 0;
+
+        awsV2HttpToken_ = 0;
+
         return this;
       }
 
@@ -24111,6 +24241,8 @@ public final class InstanceOuterClass {
         result.awsV1HttpEndpoint_ = awsV1HttpEndpoint_;
         result.gceHttpToken_ = gceHttpToken_;
         result.awsV1HttpToken_ = awsV1HttpToken_;
+        result.awsV2HttpEndpoint_ = awsV2HttpEndpoint_;
+        result.awsV2HttpToken_ = awsV2HttpToken_;
         onBuilt();
         return result;
       }
@@ -24170,6 +24302,12 @@ public final class InstanceOuterClass {
         }
         if (other.awsV1HttpToken_ != 0) {
           setAwsV1HttpTokenValue(other.getAwsV1HttpTokenValue());
+        }
+        if (other.awsV2HttpEndpoint_ != 0) {
+          setAwsV2HttpEndpointValue(other.getAwsV2HttpEndpointValue());
+        }
+        if (other.awsV2HttpToken_ != 0) {
+          setAwsV2HttpTokenValue(other.getAwsV2HttpTokenValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24492,6 +24630,154 @@ public final class InstanceOuterClass {
       public Builder clearAwsV1HttpToken() {
         
         awsV1HttpToken_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int awsV2HttpEndpoint_ = 0;
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @return The enum numeric value on the wire for awsV2HttpEndpoint.
+       */
+      @java.lang.Override public int getAwsV2HttpEndpointValue() {
+        return awsV2HttpEndpoint_;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @param value The enum numeric value on the wire for awsV2HttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpEndpointValue(int value) {
+        
+        awsV2HttpEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @return The awsV2HttpEndpoint.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption getAwsV2HttpEndpoint() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.valueOf(awsV2HttpEndpoint_);
+        return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @param value The awsV2HttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpEndpoint(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        awsV2HttpEndpoint_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAwsV2HttpEndpoint() {
+        
+        awsV2HttpEndpoint_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int awsV2HttpToken_ = 0;
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+       * @return The enum numeric value on the wire for awsV2HttpToken.
+       */
+      @java.lang.Override public int getAwsV2HttpTokenValue() {
+        return awsV2HttpToken_;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+       * @param value The enum numeric value on the wire for awsV2HttpToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpTokenValue(int value) {
+        
+        awsV2HttpToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+       * @return The awsV2HttpToken.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption getAwsV2HttpToken() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.valueOf(awsV2HttpToken_);
+        return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+       * @param value The awsV2HttpToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpToken(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        awsV2HttpToken_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOption aws_v2_http_token = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAwsV2HttpToken() {
+        
+        awsV2HttpToken_ = 0;
         onChanged();
         return this;
       }
@@ -25446,26 +25732,29 @@ public final class InstanceOuterClass {
       "B.yandex.cloud.compute.v1.PlacementPolic" +
       "y.HostAffinityRule.Operator\022\016\n\006values\030\003 " +
       "\003(\t\"8\n\010Operator\022\030\n\024OPERATOR_UNSPECIFIED\020" +
-      "\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\241\002\n\017MetadataOption" +
+      "\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\254\003\n\017MetadataOption" +
       "s\022B\n\021gce_http_endpoint\030\001 \001(\0162\'.yandex.cl" +
       "oud.compute.v1.MetadataOption\022E\n\024aws_v1_" +
       "http_endpoint\030\002 \001(\0162\'.yandex.cloud.compu" +
       "te.v1.MetadataOption\022?\n\016gce_http_token\030\003" +
       " \001(\0162\'.yandex.cloud.compute.v1.MetadataO" +
       "ption\022B\n\021aws_v1_http_token\030\004 \001(\0162\'.yande" +
-      "x.cloud.compute.v1.MetadataOption\"\311\001\n\022Se" +
-      "rialPortSettings\022W\n\021ssh_authorization\030\001 " +
-      "\001(\0162<.yandex.cloud.compute.v1.SerialPort" +
-      "Settings.SSHAuthorization\"Z\n\020SSHAuthoriz" +
-      "ation\022!\n\035SSH_AUTHORIZATION_UNSPECIFIED\020\000" +
-      "\022\025\n\021INSTANCE_METADATA\020\001\022\014\n\010OS_LOGIN\020\002*;\n" +
-      "\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010" +
-      "\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n\016MetadataOption\022\037\n\033" +
-      "METADATA_OPTION_UNSPECIFIED\020\000\022\013\n\007ENABLED" +
-      "\020\001\022\014\n\010DISABLED\020\002Bb\n\033yandex.cloud.api.com" +
-      "pute.v1ZCgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/compute/v1;computeb\006pr" +
-      "oto3"
+      "x.cloud.compute.v1.MetadataOption\022E\n\024aws" +
+      "_v2_http_endpoint\030\005 \001(\0162\'.yandex.cloud.c" +
+      "ompute.v1.MetadataOption\022B\n\021aws_v2_http_" +
+      "token\030\006 \001(\0162\'.yandex.cloud.compute.v1.Me" +
+      "tadataOption\"\311\001\n\022SerialPortSettings\022W\n\021s" +
+      "sh_authorization\030\001 \001(\0162<.yandex.cloud.co" +
+      "mpute.v1.SerialPortSettings.SSHAuthoriza" +
+      "tion\"Z\n\020SSHAuthorization\022!\n\035SSH_AUTHORIZ" +
+      "ATION_UNSPECIFIED\020\000\022\025\n\021INSTANCE_METADATA" +
+      "\020\001\022\014\n\010OS_LOGIN\020\002*;\n\tIpVersion\022\032\n\026IP_VERS" +
+      "ION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n" +
+      "\016MetadataOption\022\037\n\033METADATA_OPTION_UNSPE" +
+      "CIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002Bb\n\033y" +
+      "andex.cloud.api.compute.v1ZCgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/com" +
+      "pute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25584,7 +25873,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_MetadataOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_MetadataOptions_descriptor,
-        new java.lang.String[] { "GceHttpEndpoint", "AwsV1HttpEndpoint", "GceHttpToken", "AwsV1HttpToken", });
+        new java.lang.String[] { "GceHttpEndpoint", "AwsV1HttpEndpoint", "GceHttpToken", "AwsV1HttpToken", "AwsV2HttpEndpoint", "AwsV2HttpToken", });
     internal_static_yandex_cloud_compute_v1_SerialPortSettings_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_compute_v1_SerialPortSettings_fieldAccessorTable = new

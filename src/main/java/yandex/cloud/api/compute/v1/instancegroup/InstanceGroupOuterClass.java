@@ -713,24 +713,44 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.InstanceGroup.Status getStatus();
 
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> 
         getVariablesList();
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index);
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     int getVariablesCount();
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
         getVariablesOrBuilderList();
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
@@ -2153,6 +2173,10 @@ public final class InstanceGroupOuterClass {
     public static final int VARIABLES_FIELD_NUMBER = 18;
     private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> variables_;
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     @java.lang.Override
@@ -2160,6 +2184,10 @@ public final class InstanceGroupOuterClass {
       return variables_;
     }
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     @java.lang.Override
@@ -2168,6 +2196,10 @@ public final class InstanceGroupOuterClass {
       return variables_;
     }
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     @java.lang.Override
@@ -2175,6 +2207,10 @@ public final class InstanceGroupOuterClass {
       return variables_.size();
     }
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     @java.lang.Override
@@ -2182,6 +2218,10 @@ public final class InstanceGroupOuterClass {
       return variables_.get(index);
     }
     /**
+     * <pre>
+     * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
      */
     @java.lang.Override
@@ -5466,6 +5506,10 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> variablesBuilder_;
 
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> getVariablesList() {
@@ -5476,6 +5520,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public int getVariablesCount() {
@@ -5486,6 +5534,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index) {
@@ -5496,6 +5548,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder setVariables(
@@ -5513,6 +5569,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder setVariables(
@@ -5527,6 +5587,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder addVariables(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
@@ -5543,6 +5607,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder addVariables(
@@ -5560,6 +5628,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder addVariables(
@@ -5574,6 +5646,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder addVariables(
@@ -5588,6 +5664,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder addAllVariables(
@@ -5603,6 +5683,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder clearVariables() {
@@ -5616,6 +5700,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public Builder removeVariables(int index) {
@@ -5629,6 +5717,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder getVariablesBuilder(
@@ -5636,6 +5728,10 @@ public final class InstanceGroupOuterClass {
         return getVariablesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
@@ -5646,6 +5742,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
@@ -5657,6 +5757,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder() {
@@ -5664,6 +5768,10 @@ public final class InstanceGroupOuterClass {
             yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder(
@@ -5672,6 +5780,10 @@ public final class InstanceGroupOuterClass {
             index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
       }
       /**
+       * <pre>
+       * User-defined [variables](docs/compute/concepts/instance-groups/variables-in-the-template) for instance template rendering.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
        */
       public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder> 
@@ -7384,11 +7496,19 @@ public final class InstanceGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the variable.
+     * </pre>
+     *
      * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
+     * <pre>
+     * Name of the variable.
+     * </pre>
+     *
      * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
      * @return The bytes for key.
      */
@@ -7396,11 +7516,19 @@ public final class InstanceGroupOuterClass {
         getKeyBytes();
 
     /**
+     * <pre>
+     * Value of the variable.
+     * </pre>
+     *
      * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
+     * <pre>
+     * Value of the variable.
+     * </pre>
+     *
      * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for value.
      */
@@ -7501,6 +7629,10 @@ public final class InstanceGroupOuterClass {
     public static final int KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object key_;
     /**
+     * <pre>
+     * Name of the variable.
+     * </pre>
+     *
      * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
      * @return The key.
      */
@@ -7518,6 +7650,10 @@ public final class InstanceGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the variable.
+     * </pre>
+     *
      * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
      * @return The bytes for key.
      */
@@ -7539,6 +7675,10 @@ public final class InstanceGroupOuterClass {
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
     /**
+     * <pre>
+     * Value of the variable.
+     * </pre>
+     *
      * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The value.
      */
@@ -7556,6 +7696,10 @@ public final class InstanceGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Value of the variable.
+     * </pre>
+     *
      * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for value.
      */
@@ -7895,6 +8039,10 @@ public final class InstanceGroupOuterClass {
 
       private java.lang.Object key_ = "";
       /**
+       * <pre>
+       * Name of the variable.
+       * </pre>
+       *
        * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
        * @return The key.
        */
@@ -7911,6 +8059,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the variable.
+       * </pre>
+       *
        * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
        * @return The bytes for key.
        */
@@ -7928,6 +8080,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the variable.
+       * </pre>
+       *
        * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
        * @param value The key to set.
        * @return This builder for chaining.
@@ -7943,6 +8099,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the variable.
+       * </pre>
+       *
        * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
        * @return This builder for chaining.
        */
@@ -7953,6 +8113,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the variable.
+       * </pre>
+       *
        * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
@@ -7971,6 +8135,10 @@ public final class InstanceGroupOuterClass {
 
       private java.lang.Object value_ = "";
       /**
+       * <pre>
+       * Value of the variable.
+       * </pre>
+       *
        * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The value.
        */
@@ -7987,6 +8155,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of the variable.
+       * </pre>
+       *
        * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The bytes for value.
        */
@@ -8004,6 +8176,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of the variable.
+       * </pre>
+       *
        * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The value to set.
        * @return This builder for chaining.
@@ -8019,6 +8195,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of the variable.
+       * </pre>
+       *
        * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return This builder for chaining.
        */
@@ -8029,6 +8209,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of the variable.
+       * </pre>
+       *
        * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
@@ -22240,7 +22424,7 @@ public final class InstanceGroupOuterClass {
      * ID of the reserved instance pool that the instance should belong to.
      * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
      * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-     * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+     * Reserved instance pool resource configuration must match the resource configuration of the instance.
      * </pre>
      *
      * <code>string reserved_instance_pool_id = 17;</code>
@@ -22252,7 +22436,7 @@ public final class InstanceGroupOuterClass {
      * ID of the reserved instance pool that the instance should belong to.
      * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
      * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-     * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+     * Reserved instance pool resource configuration must match the resource configuration of the instance.
      * </pre>
      *
      * <code>string reserved_instance_pool_id = 17;</code>
@@ -23490,7 +23674,7 @@ public final class InstanceGroupOuterClass {
      * ID of the reserved instance pool that the instance should belong to.
      * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
      * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-     * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+     * Reserved instance pool resource configuration must match the resource configuration of the instance.
      * </pre>
      *
      * <code>string reserved_instance_pool_id = 17;</code>
@@ -23514,7 +23698,7 @@ public final class InstanceGroupOuterClass {
      * ID of the reserved instance pool that the instance should belong to.
      * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
      * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-     * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+     * Reserved instance pool resource configuration must match the resource configuration of the instance.
      * </pre>
      *
      * <code>string reserved_instance_pool_id = 17;</code>
@@ -27276,7 +27460,7 @@ public final class InstanceGroupOuterClass {
        * ID of the reserved instance pool that the instance should belong to.
        * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
        * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-       * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+       * Reserved instance pool resource configuration must match the resource configuration of the instance.
        * </pre>
        *
        * <code>string reserved_instance_pool_id = 17;</code>
@@ -27299,7 +27483,7 @@ public final class InstanceGroupOuterClass {
        * ID of the reserved instance pool that the instance should belong to.
        * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
        * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-       * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+       * Reserved instance pool resource configuration must match the resource configuration of the instance.
        * </pre>
        *
        * <code>string reserved_instance_pool_id = 17;</code>
@@ -27323,7 +27507,7 @@ public final class InstanceGroupOuterClass {
        * ID of the reserved instance pool that the instance should belong to.
        * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
        * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-       * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+       * Reserved instance pool resource configuration must match the resource configuration of the instance.
        * </pre>
        *
        * <code>string reserved_instance_pool_id = 17;</code>
@@ -27345,7 +27529,7 @@ public final class InstanceGroupOuterClass {
        * ID of the reserved instance pool that the instance should belong to.
        * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
        * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-       * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+       * Reserved instance pool resource configuration must match the resource configuration of the instance.
        * </pre>
        *
        * <code>string reserved_instance_pool_id = 17;</code>
@@ -27362,7 +27546,7 @@ public final class InstanceGroupOuterClass {
        * ID of the reserved instance pool that the instance should belong to.
        * Attaching/detaching running instance will increase/decrease the size of the reserved instance pool.
        * Attaching/detaching stopped instance will leave the size of the reserved instance pool unchanged. Starting such attached instance will use resources from the reserved instance pool.
-       * Reserved instance pool resource configuration must match the resource configuration of the instance. 
+       * Reserved instance pool resource configuration must match the resource configuration of the instance.
        * </pre>
        *
        * <code>string reserved_instance_pool_id = 17;</code>
@@ -28895,10 +29079,18 @@ public final class InstanceGroupOuterClass {
          */
         OPERATOR_UNSPECIFIED(0),
         /**
+         * <pre>
+         * Include action
+         * </pre>
+         *
          * <code>IN = 1;</code>
          */
         IN(1),
         /**
+         * <pre>
+         * Exclude action
+         * </pre>
+         *
          * <code>NOT_IN = 2;</code>
          */
         NOT_IN(2),
@@ -28910,10 +29102,18 @@ public final class InstanceGroupOuterClass {
          */
         public static final int OPERATOR_UNSPECIFIED_VALUE = 0;
         /**
+         * <pre>
+         * Include action
+         * </pre>
+         *
          * <code>IN = 1;</code>
          */
         public static final int IN_VALUE = 1;
         /**
+         * <pre>
+         * Exclude action
+         * </pre>
+         *
          * <code>NOT_IN = 2;</code>
          */
         public static final int NOT_IN_VALUE = 2;
@@ -40564,14 +40764,26 @@ public final class InstanceGroupOuterClass {
        */
       TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Standard network.
+       * </pre>
+       *
        * <code>STANDARD = 1;</code>
        */
       STANDARD(1),
       /**
+       * <pre>
+       * Software accelerated network.
+       * </pre>
+       *
        * <code>SOFTWARE_ACCELERATED = 2;</code>
        */
       SOFTWARE_ACCELERATED(2),
       /**
+       * <pre>
+       * Hardware accelerated network.
+       * </pre>
+       *
        * <code>HARDWARE_ACCELERATED = 3;</code>
        */
       HARDWARE_ACCELERATED(3),
@@ -40583,14 +40795,26 @@ public final class InstanceGroupOuterClass {
        */
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Standard network.
+       * </pre>
+       *
        * <code>STANDARD = 1;</code>
        */
       public static final int STANDARD_VALUE = 1;
       /**
+       * <pre>
+       * Software accelerated network.
+       * </pre>
+       *
        * <code>SOFTWARE_ACCELERATED = 2;</code>
        */
       public static final int SOFTWARE_ACCELERATED_VALUE = 2;
       /**
+       * <pre>
+       * Hardware accelerated network.
+       * </pre>
+       *
        * <code>HARDWARE_ACCELERATED = 3;</code>
        */
       public static final int HARDWARE_ACCELERATED_VALUE = 3;
@@ -59464,6 +59688,44 @@ public final class InstanceGroupOuterClass {
      * @return The awsV1HttpToken.
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption getAwsV1HttpToken();
+
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The enum numeric value on the wire for awsV2HttpEndpoint.
+     */
+    int getAwsV2HttpEndpointValue();
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The awsV2HttpEndpoint.
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption getAwsV2HttpEndpoint();
+
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The enum numeric value on the wire for awsV2HttpToken.
+     */
+    int getAwsV2HttpTokenValue();
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The awsV2HttpToken.
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption getAwsV2HttpToken();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.MetadataOptions}
@@ -59482,6 +59744,8 @@ public final class InstanceGroupOuterClass {
       awsV1HttpEndpoint_ = 0;
       gceHttpToken_ = 0;
       awsV1HttpToken_ = 0;
+      awsV2HttpEndpoint_ = 0;
+      awsV2HttpToken_ = 0;
     }
 
     @java.lang.Override
@@ -59536,6 +59800,18 @@ public final class InstanceGroupOuterClass {
               int rawValue = input.readEnum();
 
               awsV1HttpToken_ = rawValue;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              awsV2HttpEndpoint_ = rawValue;
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              awsV2HttpToken_ = rawValue;
               break;
             }
             default: {
@@ -59678,6 +59954,60 @@ public final class InstanceGroupOuterClass {
       return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.UNRECOGNIZED : result;
     }
 
+    public static final int AWS_V2_HTTP_ENDPOINT_FIELD_NUMBER = 5;
+    private int awsV2HttpEndpoint_;
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The enum numeric value on the wire for awsV2HttpEndpoint.
+     */
+    @java.lang.Override public int getAwsV2HttpEndpointValue() {
+      return awsV2HttpEndpoint_;
+    }
+    /**
+     * <pre>
+     * Enabled access to AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+     * @return The awsV2HttpEndpoint.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption getAwsV2HttpEndpoint() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.valueOf(awsV2HttpEndpoint_);
+      return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.UNRECOGNIZED : result;
+    }
+
+    public static final int AWS_V2_HTTP_TOKEN_FIELD_NUMBER = 6;
+    private int awsV2HttpToken_;
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The enum numeric value on the wire for awsV2HttpToken.
+     */
+    @java.lang.Override public int getAwsV2HttpTokenValue() {
+      return awsV2HttpToken_;
+    }
+    /**
+     * <pre>
+     * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+     * @return The awsV2HttpToken.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption getAwsV2HttpToken() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.valueOf(awsV2HttpToken_);
+      return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -59704,6 +60034,12 @@ public final class InstanceGroupOuterClass {
       if (awsV1HttpToken_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, awsV1HttpToken_);
       }
+      if (awsV2HttpEndpoint_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, awsV2HttpEndpoint_);
+      }
+      if (awsV2HttpToken_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, awsV2HttpToken_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -59729,6 +60065,14 @@ public final class InstanceGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, awsV1HttpToken_);
       }
+      if (awsV2HttpEndpoint_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, awsV2HttpEndpoint_);
+      }
+      if (awsV2HttpToken_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.METADATA_OPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, awsV2HttpToken_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -59748,6 +60092,8 @@ public final class InstanceGroupOuterClass {
       if (awsV1HttpEndpoint_ != other.awsV1HttpEndpoint_) return false;
       if (gceHttpToken_ != other.gceHttpToken_) return false;
       if (awsV1HttpToken_ != other.awsV1HttpToken_) return false;
+      if (awsV2HttpEndpoint_ != other.awsV2HttpEndpoint_) return false;
+      if (awsV2HttpToken_ != other.awsV2HttpToken_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -59767,6 +60113,10 @@ public final class InstanceGroupOuterClass {
       hash = (53 * hash) + gceHttpToken_;
       hash = (37 * hash) + AWS_V1_HTTP_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + awsV1HttpToken_;
+      hash = (37 * hash) + AWS_V2_HTTP_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + awsV2HttpEndpoint_;
+      hash = (37 * hash) + AWS_V2_HTTP_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + awsV2HttpToken_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -59908,6 +60258,10 @@ public final class InstanceGroupOuterClass {
 
         awsV1HttpToken_ = 0;
 
+        awsV2HttpEndpoint_ = 0;
+
+        awsV2HttpToken_ = 0;
+
         return this;
       }
 
@@ -59938,6 +60292,8 @@ public final class InstanceGroupOuterClass {
         result.awsV1HttpEndpoint_ = awsV1HttpEndpoint_;
         result.gceHttpToken_ = gceHttpToken_;
         result.awsV1HttpToken_ = awsV1HttpToken_;
+        result.awsV2HttpEndpoint_ = awsV2HttpEndpoint_;
+        result.awsV2HttpToken_ = awsV2HttpToken_;
         onBuilt();
         return result;
       }
@@ -59997,6 +60353,12 @@ public final class InstanceGroupOuterClass {
         }
         if (other.awsV1HttpToken_ != 0) {
           setAwsV1HttpTokenValue(other.getAwsV1HttpTokenValue());
+        }
+        if (other.awsV2HttpEndpoint_ != 0) {
+          setAwsV2HttpEndpointValue(other.getAwsV2HttpEndpointValue());
+        }
+        if (other.awsV2HttpToken_ != 0) {
+          setAwsV2HttpTokenValue(other.getAwsV2HttpTokenValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -60319,6 +60681,154 @@ public final class InstanceGroupOuterClass {
       public Builder clearAwsV1HttpToken() {
         
         awsV1HttpToken_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int awsV2HttpEndpoint_ = 0;
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @return The enum numeric value on the wire for awsV2HttpEndpoint.
+       */
+      @java.lang.Override public int getAwsV2HttpEndpointValue() {
+        return awsV2HttpEndpoint_;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @param value The enum numeric value on the wire for awsV2HttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpEndpointValue(int value) {
+        
+        awsV2HttpEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @return The awsV2HttpEndpoint.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption getAwsV2HttpEndpoint() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.valueOf(awsV2HttpEndpoint_);
+        return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @param value The awsV2HttpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpEndpoint(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        awsV2HttpEndpoint_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_endpoint = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAwsV2HttpEndpoint() {
+        
+        awsV2HttpEndpoint_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int awsV2HttpToken_ = 0;
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+       * @return The enum numeric value on the wire for awsV2HttpToken.
+       */
+      @java.lang.Override public int getAwsV2HttpTokenValue() {
+        return awsV2HttpToken_;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+       * @param value The enum numeric value on the wire for awsV2HttpToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpTokenValue(int value) {
+        
+        awsV2HttpToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+       * @return The awsV2HttpToken.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption getAwsV2HttpToken() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.valueOf(awsV2HttpToken_);
+        return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+       * @param value The awsV2HttpToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAwsV2HttpToken(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.MetadataOption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        awsV2HttpToken_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled access to STS credentials with AWS flavored metadata with session token (IMDSv2)
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.MetadataOption aws_v2_http_token = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAwsV2HttpToken() {
+        
+        awsV2HttpToken_ = 0;
         onChanged();
         return this;
       }
@@ -61829,7 +62339,7 @@ public final class InstanceGroupOuterClass {
       "v1.instancegroup.AutoHealingPolicy.AutoH" +
       "ealingAction\"]\n\021AutoHealingAction\022#\n\037AUT" +
       "O_HEALING_ACTION_UNSPECIFIED\020\000\022\013\n\007RESTAR" +
-      "T\020\001\022\014\n\010RECREATE\020\002\022\010\n\004NONE\020\003\"\331\002\n\017Metadata" +
+      "T\020\001\022\014\n\010RECREATE\020\002\022\010\n\004NONE\020\003\"\200\004\n\017Metadata" +
       "Options\022P\n\021gce_http_endpoint\030\001 \001(\01625.yan" +
       "dex.cloud.compute.v1.instancegroup.Metad" +
       "ataOption\022S\n\024aws_v1_http_endpoint\030\002 \001(\0162" +
@@ -61838,16 +62348,20 @@ public final class InstanceGroupOuterClass {
       ".yandex.cloud.compute.v1.instancegroup.M" +
       "etadataOption\022P\n\021aws_v1_http_token\030\004 \001(\016" +
       "25.yandex.cloud.compute.v1.instancegroup" +
-      ".MetadataOption\"X\n\021DisableZoneStatus\022\017\n\007" +
-      "zone_id\030\001 \001(\t\0222\n\016disabled_until\030\002 \001(\0132\032." +
-      "google.protobuf.Timestamp*;\n\tIpVersion\022\032" +
-      "\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004" +
-      "IPV6\020\002*L\n\016MetadataOption\022\037\n\033METADATA_OPT" +
-      "ION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABL" +
-      "ED\020\002B\204\001\n)yandex.cloud.api.compute.v1.ins" +
-      "tancegroupZWgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/compute/v1/instance" +
-      "group;instancegroupb\006proto3"
+      ".MetadataOption\022S\n\024aws_v2_http_endpoint\030" +
+      "\005 \001(\01625.yandex.cloud.compute.v1.instance" +
+      "group.MetadataOption\022P\n\021aws_v2_http_toke" +
+      "n\030\006 \001(\01625.yandex.cloud.compute.v1.instan" +
+      "cegroup.MetadataOption\"X\n\021DisableZoneSta" +
+      "tus\022\017\n\007zone_id\030\001 \001(\t\0222\n\016disabled_until\030\002" +
+      " \001(\0132\032.google.protobuf.Timestamp*;\n\tIpVe" +
+      "rsion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV" +
+      "4\020\001\022\010\n\004IPV6\020\002*L\n\016MetadataOption\022\037\n\033METAD" +
+      "ATA_OPTION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n" +
+      "\010DISABLED\020\002B\204\001\n)yandex.cloud.api.compute" +
+      ".v1.instancegroupZWgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/compute/v1/i" +
+      "nstancegroup;instancegroupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62149,7 +62663,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_MetadataOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_MetadataOptions_descriptor,
-        new java.lang.String[] { "GceHttpEndpoint", "AwsV1HttpEndpoint", "GceHttpToken", "AwsV1HttpToken", });
+        new java.lang.String[] { "GceHttpEndpoint", "AwsV1HttpEndpoint", "GceHttpToken", "AwsV1HttpToken", "AwsV2HttpEndpoint", "AwsV2HttpToken", });
     internal_static_yandex_cloud_compute_v1_instancegroup_DisableZoneStatus_descriptor =
       getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_compute_v1_instancegroup_DisableZoneStatus_fieldAccessorTable = new

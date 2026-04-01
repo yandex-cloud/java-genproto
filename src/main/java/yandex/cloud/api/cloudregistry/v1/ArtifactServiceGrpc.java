@@ -19,28 +19,28 @@ public final class ArtifactServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest,
-      yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> getGetMethod;
+      yandex.cloud.api.cloudregistry.v1.PA.Artifact> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
       requestType = yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest.class,
-      responseType = yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.class,
+      responseType = yandex.cloud.api.cloudregistry.v1.PA.Artifact.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest,
-      yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> getGetMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> getGetMethod;
+      yandex.cloud.api.cloudregistry.v1.PA.Artifact> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest, yandex.cloud.api.cloudregistry.v1.PA.Artifact> getGetMethod;
     if ((getGetMethod = ArtifactServiceGrpc.getGetMethod) == null) {
       synchronized (ArtifactServiceGrpc.class) {
         if ((getGetMethod = ArtifactServiceGrpc.getGetMethod) == null) {
           ArtifactServiceGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest, yandex.cloud.api.cloudregistry.v1.PA.Artifact>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.getDefaultInstance()))
+                  yandex.cloud.api.cloudregistry.v1.PA.Artifact.getDefaultInstance()))
               .setSchemaDescriptor(new ArtifactServiceMethodDescriptorSupplier("Get"))
               .build();
         }
@@ -231,7 +231,7 @@ public final class ArtifactServiceGrpc {
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PA.Artifact> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -247,7 +247,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     *access bindings
+     * access bindings
      * Lists access bindings for the specified artifact (folder, package, artifact, etc).
      * </pre>
      */
@@ -283,7 +283,7 @@ public final class ArtifactServiceGrpc {
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest,
-                yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact>(
+                yandex.cloud.api.cloudregistry.v1.PA.Artifact>(
                   this, METHODID_GET)))
           .addMethod(
             getDeleteMethod(),
@@ -341,7 +341,7 @@ public final class ArtifactServiceGrpc {
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PA.Artifact> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -359,7 +359,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     *access bindings
+     * access bindings
      * Lists access bindings for the specified artifact (folder, package, artifact, etc).
      * </pre>
      */
@@ -415,7 +415,7 @@ public final class ArtifactServiceGrpc {
      * To get the list of available artifact resources, make [RegistryService.ListArtifacts] method call.
      * </pre>
      */
-    public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact get(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request) {
+    public yandex.cloud.api.cloudregistry.v1.PA.Artifact get(yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -432,7 +432,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     *access bindings
+     * access bindings
      * Lists access bindings for the specified artifact (folder, package, artifact, etc).
      * </pre>
      */
@@ -485,7 +485,7 @@ public final class ArtifactServiceGrpc {
      * To get the list of available artifact resources, make [RegistryService.ListArtifacts] method call.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact> get(
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.PA.Artifact> get(
         yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
@@ -504,7 +504,7 @@ public final class ArtifactServiceGrpc {
 
     /**
      * <pre>
-     *access bindings
+     * access bindings
      * Lists access bindings for the specified artifact (folder, package, artifact, etc).
      * </pre>
      */
@@ -562,7 +562,7 @@ public final class ArtifactServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.GetArtifactRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact>) responseObserver);
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PA.Artifact>) responseObserver);
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.cloudregistry.v1.ArtifactServiceOuterClass.DeleteArtifactRequest) request,

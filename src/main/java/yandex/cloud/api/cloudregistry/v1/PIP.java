@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.cloudregistry.v1;
 
-public final class IpPermissionOuterClass {
-  private IpPermissionOuterClass() {}
+public final class PIP {
+  private PIP() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -121,7 +121,7 @@ public final class IpPermissionOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.getDescriptor().getEnumTypes().get(0);
+      return yandex.cloud.api.cloudregistry.v1.PIP.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final IpPermissionDeltaAction[] VALUES = values();
@@ -152,23 +152,23 @@ public final class IpPermissionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for action.
      */
     int getActionValue();
     /**
-     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
      * @return The action.
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action getAction();
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action getAction();
 
     /**
-     * <code>string ip = 2;</code>
+     * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
      * @return The ip.
      */
     java.lang.String getIp();
     /**
-     * <code>string ip = 2;</code>
+     * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for ip.
      */
     com.google.protobuf.ByteString
@@ -254,15 +254,15 @@ public final class IpPermissionOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.class, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.class, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder.class);
     }
 
     /**
@@ -356,7 +356,7 @@ public final class IpPermissionOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Action[] VALUES = values();
@@ -385,26 +385,26 @@ public final class IpPermissionOuterClass {
     public static final int ACTION_FIELD_NUMBER = 1;
     private int action_;
     /**
-     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for action.
      */
     @java.lang.Override public int getActionValue() {
       return action_;
     }
     /**
-     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+     * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
      * @return The action.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action getAction() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action getAction() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action result = yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action.valueOf(action_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action result = yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action.valueOf(action_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action.UNRECOGNIZED : result;
     }
 
     public static final int IP_FIELD_NUMBER = 2;
     private volatile java.lang.Object ip_;
     /**
-     * <code>string ip = 2;</code>
+     * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
      * @return The ip.
      */
     @java.lang.Override
@@ -421,7 +421,7 @@ public final class IpPermissionOuterClass {
       }
     }
     /**
-     * <code>string ip = 2;</code>
+     * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for ip.
      */
     @java.lang.Override
@@ -453,7 +453,7 @@ public final class IpPermissionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (action_ != yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action.ACTION_UNSPECIFIED.getNumber()) {
+      if (action_ != yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action.ACTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, action_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ip_)) {
@@ -468,7 +468,7 @@ public final class IpPermissionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (action_ != yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action.ACTION_UNSPECIFIED.getNumber()) {
+      if (action_ != yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action.ACTION_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, action_);
       }
@@ -485,10 +485,10 @@ public final class IpPermissionOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PIP.IpPermission)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission other = (yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission) obj;
+      yandex.cloud.api.cloudregistry.v1.PIP.IpPermission other = (yandex.cloud.api.cloudregistry.v1.PIP.IpPermission) obj;
 
       if (action_ != other.action_) return false;
       if (!getIp()
@@ -513,69 +513,69 @@ public final class IpPermissionOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -588,7 +588,7 @@ public final class IpPermissionOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -609,21 +609,21 @@ public final class IpPermissionOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.IpPermission)
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.class, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.class, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -651,17 +651,17 @@ public final class IpPermissionOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermission_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission build() {
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission build() {
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermission result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -669,8 +669,8 @@ public final class IpPermissionOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission result = new yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission(this);
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermission result = new yandex.cloud.api.cloudregistry.v1.PIP.IpPermission(this);
         result.action_ = action_;
         result.ip_ = ip_;
         onBuilt();
@@ -711,16 +711,16 @@ public final class IpPermissionOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PIP.IpPermission) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PIP.IpPermission)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance()) return this;
         if (other.action_ != 0) {
           setActionValue(other.getActionValue());
         }
@@ -743,11 +743,11 @@ public final class IpPermissionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermission parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PIP.IpPermission) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -759,14 +759,14 @@ public final class IpPermissionOuterClass {
 
       private int action_ = 0;
       /**
-       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for action.
        */
       @java.lang.Override public int getActionValue() {
         return action_;
       }
       /**
-       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for action to set.
        * @return This builder for chaining.
        */
@@ -777,21 +777,21 @@ public final class IpPermissionOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
        * @return The action.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action getAction() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action getAction() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action result = yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action.valueOf(action_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action result = yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action.valueOf(action_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action.UNRECOGNIZED : result;
       }
       /**
-       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The action to set.
        * @return This builder for chaining.
        */
-      public Builder setAction(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Action value) {
+      public Builder setAction(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Action value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -801,7 +801,7 @@ public final class IpPermissionOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1;</code>
+       * <code>.yandex.cloud.cloudregistry.v1.IpPermission.Action action = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearAction() {
@@ -813,7 +813,7 @@ public final class IpPermissionOuterClass {
 
       private java.lang.Object ip_ = "";
       /**
-       * <code>string ip = 2;</code>
+       * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
        * @return The ip.
        */
       public java.lang.String getIp() {
@@ -829,7 +829,7 @@ public final class IpPermissionOuterClass {
         }
       }
       /**
-       * <code>string ip = 2;</code>
+       * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for ip.
        */
       public com.google.protobuf.ByteString
@@ -846,7 +846,7 @@ public final class IpPermissionOuterClass {
         }
       }
       /**
-       * <code>string ip = 2;</code>
+       * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The ip to set.
        * @return This builder for chaining.
        */
@@ -861,7 +861,7 @@ public final class IpPermissionOuterClass {
         return this;
       }
       /**
-       * <code>string ip = 2;</code>
+       * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearIp() {
@@ -871,7 +871,7 @@ public final class IpPermissionOuterClass {
         return this;
       }
       /**
-       * <code>string ip = 2;</code>
+       * <code>string ip = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for ip to set.
        * @return This builder for chaining.
        */
@@ -903,12 +903,12 @@ public final class IpPermissionOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.IpPermission)
-    private static final yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PIP.IpPermission DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PIP.IpPermission();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -933,7 +933,7 @@ public final class IpPermissionOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -960,7 +960,7 @@ public final class IpPermissionOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.IpPermissionDeltaAction action = 1 [(.yandex.cloud.required) = true];</code>
      * @return The action.
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction getAction();
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction getAction();
 
     /**
      * <pre>
@@ -979,7 +979,7 @@ public final class IpPermissionOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
      * @return The ipPermission.
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission();
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getIpPermission();
     /**
      * <pre>
      * Ip permission.
@@ -987,7 +987,7 @@ public final class IpPermissionOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
      */
-    yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getIpPermissionOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.cloudregistry.v1.IpPermissionDelta}
@@ -1042,11 +1042,11 @@ public final class IpPermissionOuterClass {
               break;
             }
             case 18: {
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder subBuilder = null;
               if (ipPermission_ != null) {
                 subBuilder = ipPermission_.toBuilder();
               }
-              ipPermission_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.parser(), extensionRegistry);
+              ipPermission_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(ipPermission_);
                 ipPermission_ = subBuilder.buildPartial();
@@ -1075,15 +1075,15 @@ public final class IpPermissionOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.class, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.class, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder.class);
     }
 
     public static final int ACTION_FIELD_NUMBER = 1;
@@ -1107,14 +1107,14 @@ public final class IpPermissionOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.IpPermissionDeltaAction action = 1 [(.yandex.cloud.required) = true];</code>
      * @return The action.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction getAction() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction getAction() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction result = yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction.valueOf(action_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction result = yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction.valueOf(action_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction.UNRECOGNIZED : result;
     }
 
     public static final int IP_PERMISSION_FIELD_NUMBER = 2;
-    private yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission ipPermission_;
+    private yandex.cloud.api.cloudregistry.v1.PIP.IpPermission ipPermission_;
     /**
      * <pre>
      * Ip permission.
@@ -1136,8 +1136,8 @@ public final class IpPermissionOuterClass {
      * @return The ipPermission.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission() {
-      return ipPermission_ == null ? yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance() : ipPermission_;
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getIpPermission() {
+      return ipPermission_ == null ? yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance() : ipPermission_;
     }
     /**
      * <pre>
@@ -1147,7 +1147,7 @@ public final class IpPermissionOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getIpPermissionOrBuilder() {
       return getIpPermission();
     }
 
@@ -1165,7 +1165,7 @@ public final class IpPermissionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (action_ != yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction.IP_PERMISSION_DELTA_ACTION_UNSPECIFIED.getNumber()) {
+      if (action_ != yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction.IP_PERMISSION_DELTA_ACTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, action_);
       }
       if (ipPermission_ != null) {
@@ -1180,7 +1180,7 @@ public final class IpPermissionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (action_ != yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction.IP_PERMISSION_DELTA_ACTION_UNSPECIFIED.getNumber()) {
+      if (action_ != yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction.IP_PERMISSION_DELTA_ACTION_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, action_);
       }
@@ -1198,10 +1198,10 @@ public final class IpPermissionOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta other = (yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta) obj;
+      yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta other = (yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta) obj;
 
       if (action_ != other.action_) return false;
       if (hasIpPermission() != other.hasIpPermission()) return false;
@@ -1231,69 +1231,69 @@ public final class IpPermissionOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1306,7 +1306,7 @@ public final class IpPermissionOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1327,21 +1327,21 @@ public final class IpPermissionOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.IpPermissionDelta)
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.class, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.class, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1373,17 +1373,17 @@ public final class IpPermissionOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PIP.internal_static_yandex_cloud_cloudregistry_v1_IpPermissionDelta_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta build() {
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta build() {
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1391,8 +1391,8 @@ public final class IpPermissionOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta result = new yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta(this);
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta result = new yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta(this);
         result.action_ = action_;
         if (ipPermissionBuilder_ == null) {
           result.ipPermission_ = ipPermission_;
@@ -1437,16 +1437,16 @@ public final class IpPermissionOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta.getDefaultInstance()) return this;
         if (other.action_ != 0) {
           setActionValue(other.getActionValue());
         }
@@ -1468,11 +1468,11 @@ public final class IpPermissionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1518,10 +1518,10 @@ public final class IpPermissionOuterClass {
        * @return The action.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction getAction() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction getAction() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction result = yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction.valueOf(action_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction result = yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction.valueOf(action_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1532,7 +1532,7 @@ public final class IpPermissionOuterClass {
        * @param value The action to set.
        * @return This builder for chaining.
        */
-      public Builder setAction(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDeltaAction value) {
+      public Builder setAction(yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDeltaAction value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1556,9 +1556,9 @@ public final class IpPermissionOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission ipPermission_;
+      private yandex.cloud.api.cloudregistry.v1.PIP.IpPermission ipPermission_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> ipPermissionBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> ipPermissionBuilder_;
       /**
        * <pre>
        * Ip permission.
@@ -1578,9 +1578,9 @@ public final class IpPermissionOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
        * @return The ipPermission.
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission getIpPermission() {
         if (ipPermissionBuilder_ == null) {
-          return ipPermission_ == null ? yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance() : ipPermission_;
+          return ipPermission_ == null ? yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance() : ipPermission_;
         } else {
           return ipPermissionBuilder_.getMessage();
         }
@@ -1592,7 +1592,7 @@ public final class IpPermissionOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder setIpPermission(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+      public Builder setIpPermission(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (ipPermissionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1613,7 +1613,7 @@ public final class IpPermissionOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setIpPermission(
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder builderForValue) {
         if (ipPermissionBuilder_ == null) {
           ipPermission_ = builderForValue.build();
           onChanged();
@@ -1630,11 +1630,11 @@ public final class IpPermissionOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder mergeIpPermission(yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission value) {
+      public Builder mergeIpPermission(yandex.cloud.api.cloudregistry.v1.PIP.IpPermission value) {
         if (ipPermissionBuilder_ == null) {
           if (ipPermission_ != null) {
             ipPermission_ =
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.newBuilder(ipPermission_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.newBuilder(ipPermission_).mergeFrom(value).buildPartial();
           } else {
             ipPermission_ = value;
           }
@@ -1670,7 +1670,7 @@ public final class IpPermissionOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder getIpPermissionBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder getIpPermissionBuilder() {
         
         onChanged();
         return getIpPermissionFieldBuilder().getBuilder();
@@ -1682,12 +1682,12 @@ public final class IpPermissionOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder getIpPermissionOrBuilder() {
         if (ipPermissionBuilder_ != null) {
           return ipPermissionBuilder_.getMessageOrBuilder();
         } else {
           return ipPermission_ == null ?
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance() : ipPermission_;
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.getDefaultInstance() : ipPermission_;
         }
       }
       /**
@@ -1698,11 +1698,11 @@ public final class IpPermissionOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder> 
           getIpPermissionFieldBuilder() {
         if (ipPermissionBuilder_ == null) {
           ipPermissionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PIP.IpPermission, yandex.cloud.api.cloudregistry.v1.PIP.IpPermission.Builder, yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionOrBuilder>(
                   getIpPermission(),
                   getParentForChildren(),
                   isClean());
@@ -1727,12 +1727,12 @@ public final class IpPermissionOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.IpPermissionDelta)
-    private static final yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1757,7 +1757,7 @@ public final class IpPermissionOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.IpPermissionOuterClass.IpPermissionDelta getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PIP.IpPermissionDelta getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1784,21 +1784,21 @@ public final class IpPermissionOuterClass {
     java.lang.String[] descriptorData = {
       "\n1yandex/cloud/cloudregistry/v1/ip_permi" +
       "ssion.proto\022\035yandex.cloud.cloudregistry." +
-      "v1\032\035yandex/cloud/validation.proto\"\224\001\n\014Ip" +
-      "Permission\022B\n\006action\030\001 \001(\01622.yandex.clou" +
-      "d.cloudregistry.v1.IpPermission.Action\022\n" +
-      "\n\002ip\030\002 \001(\t\"4\n\006Action\022\026\n\022ACTION_UNSPECIFI" +
-      "ED\020\000\022\010\n\004PULL\020\001\022\010\n\004PUSH\020\002\"\253\001\n\021IpPermissio" +
-      "nDelta\022L\n\006action\030\001 \001(\01626.yandex.cloud.cl" +
-      "oudregistry.v1.IpPermissionDeltaActionB\004" +
-      "\350\3071\001\022H\n\rip_permission\030\002 \001(\0132+.yandex.clo" +
-      "ud.cloudregistry.v1.IpPermissionB\004\350\3071\001*Z" +
-      "\n\027IpPermissionDeltaAction\022*\n&IP_PERMISSI" +
-      "ON_DELTA_ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n" +
-      "\n\006REMOVE\020\002Bt\n!yandex.cloud.api.cloudregi" +
-      "stry.v1ZOgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/cloudregistry/v1;cloud" +
-      "registryb\006proto3"
+      "v1\032\035yandex/cloud/validation.proto\"\240\001\n\014Ip" +
+      "Permission\022H\n\006action\030\001 \001(\01622.yandex.clou" +
+      "d.cloudregistry.v1.IpPermission.ActionB\004" +
+      "\350\3071\001\022\020\n\002ip\030\002 \001(\tB\004\350\3071\001\"4\n\006Action\022\026\n\022ACTI" +
+      "ON_UNSPECIFIED\020\000\022\010\n\004PULL\020\001\022\010\n\004PUSH\020\002\"\253\001\n" +
+      "\021IpPermissionDelta\022L\n\006action\030\001 \001(\01626.yan" +
+      "dex.cloud.cloudregistry.v1.IpPermissionD" +
+      "eltaActionB\004\350\3071\001\022H\n\rip_permission\030\002 \001(\0132" +
+      "+.yandex.cloud.cloudregistry.v1.IpPermis" +
+      "sionB\004\350\3071\001*Z\n\027IpPermissionDeltaAction\022*\n" +
+      "&IP_PERMISSION_DELTA_ACTION_UNSPECIFIED\020" +
+      "\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002By\n!yandex.cloud.a" +
+      "pi.cloudregistry.v1B\003PIPZOgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/cloud" +
+      "registry/v1;cloudregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

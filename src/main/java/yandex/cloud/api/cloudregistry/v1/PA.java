@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.cloudregistry.v1;
 
-public final class ArtifactOuterClass {
-  private ArtifactOuterClass() {}
+public final class PA {
+  private PA() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -95,7 +95,7 @@ public final class ArtifactOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Artifact.Kind kind = 4;</code>
      * @return The kind.
      */
-    yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind getKind();
+    yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind getKind();
 
     /**
      * <pre>
@@ -114,7 +114,7 @@ public final class ArtifactOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Artifact.Status status = 5;</code>
      * @return The status.
      */
-    yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status getStatus();
+    yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status getStatus();
 
     /**
      * <pre>
@@ -301,15 +301,15 @@ public final class ArtifactOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Artifact_descriptor;
+      return yandex.cloud.api.cloudregistry.v1.PA.internal_static_yandex_cloud_cloudregistry_v1_Artifact_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Artifact_fieldAccessorTable
+      return yandex.cloud.api.cloudregistry.v1.PA.internal_static_yandex_cloud_cloudregistry_v1_Artifact_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.class, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder.class);
+              yandex.cloud.api.cloudregistry.v1.PA.Artifact.class, yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder.class);
     }
 
     /**
@@ -436,7 +436,7 @@ public final class ArtifactOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.cloudregistry.v1.PA.Artifact.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Kind[] VALUES = values();
@@ -586,7 +586,7 @@ public final class ArtifactOuterClass {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.getDescriptor().getEnumTypes().get(1);
+        return yandex.cloud.api.cloudregistry.v1.PA.Artifact.getDescriptor().getEnumTypes().get(1);
       }
 
       private static final Status[] VALUES = values();
@@ -771,10 +771,10 @@ public final class ArtifactOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Artifact.Kind kind = 4;</code>
      * @return The kind.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind getKind() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind getKind() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind result = yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind.valueOf(kind_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind result = yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind.valueOf(kind_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind.UNRECOGNIZED : result;
     }
 
     public static final int STATUS_FIELD_NUMBER = 5;
@@ -798,10 +798,10 @@ public final class ArtifactOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.Artifact.Status status = 5;</code>
      * @return The status.
      */
-    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status getStatus() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status result = yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status.valueOf(status_);
-      return result == null ? yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status.UNRECOGNIZED : result;
+      yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status result = yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status.UNRECOGNIZED : result;
     }
 
     public static final int CREATED_AT_FIELD_NUMBER = 6;
@@ -903,10 +903,10 @@ public final class ArtifactOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (kind_ != yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind.KIND_UNSPECIFIED.getNumber()) {
+      if (kind_ != yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind.KIND_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, kind_);
       }
-      if (status_ != yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status.STATUS_UNSPECIFIED.getNumber()) {
+      if (status_ != yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, status_);
       }
       if (createdAt_ != null) {
@@ -933,11 +933,11 @@ public final class ArtifactOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (kind_ != yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind.KIND_UNSPECIFIED.getNumber()) {
+      if (kind_ != yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind.KIND_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, kind_);
       }
-      if (status_ != yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status.STATUS_UNSPECIFIED.getNumber()) {
+      if (status_ != yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status.STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, status_);
       }
@@ -959,10 +959,10 @@ public final class ArtifactOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact)) {
+      if (!(obj instanceof yandex.cloud.api.cloudregistry.v1.PA.Artifact)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact other = (yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact) obj;
+      yandex.cloud.api.cloudregistry.v1.PA.Artifact other = (yandex.cloud.api.cloudregistry.v1.PA.Artifact) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1016,69 +1016,69 @@ public final class ArtifactOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(byte[] data)
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseDelimitedFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parseFrom(
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1091,7 +1091,7 @@ public final class ArtifactOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact prototype) {
+    public static Builder newBuilder(yandex.cloud.api.cloudregistry.v1.PA.Artifact prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1116,21 +1116,21 @@ public final class ArtifactOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.cloudregistry.v1.Artifact)
-        yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.ArtifactOrBuilder {
+        yandex.cloud.api.cloudregistry.v1.PA.ArtifactOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Artifact_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PA.internal_static_yandex_cloud_cloudregistry_v1_Artifact_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Artifact_fieldAccessorTable
+        return yandex.cloud.api.cloudregistry.v1.PA.internal_static_yandex_cloud_cloudregistry_v1_Artifact_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.class, yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Builder.class);
+                yandex.cloud.api.cloudregistry.v1.PA.Artifact.class, yandex.cloud.api.cloudregistry.v1.PA.Artifact.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.newBuilder()
+      // Construct using yandex.cloud.api.cloudregistry.v1.PA.Artifact.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1176,17 +1176,17 @@ public final class ArtifactOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.internal_static_yandex_cloud_cloudregistry_v1_Artifact_descriptor;
+        return yandex.cloud.api.cloudregistry.v1.PA.internal_static_yandex_cloud_cloudregistry_v1_Artifact_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact getDefaultInstanceForType() {
-        return yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.getDefaultInstance();
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact getDefaultInstanceForType() {
+        return yandex.cloud.api.cloudregistry.v1.PA.Artifact.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact build() {
-        yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact result = buildPartial();
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact build() {
+        yandex.cloud.api.cloudregistry.v1.PA.Artifact result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1194,8 +1194,8 @@ public final class ArtifactOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact buildPartial() {
-        yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact result = new yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact(this);
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact buildPartial() {
+        yandex.cloud.api.cloudregistry.v1.PA.Artifact result = new yandex.cloud.api.cloudregistry.v1.PA.Artifact(this);
         result.id_ = id_;
         result.path_ = path_;
         result.name_ = name_;
@@ -1249,16 +1249,16 @@ public final class ArtifactOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact) {
-          return mergeFrom((yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact)other);
+        if (other instanceof yandex.cloud.api.cloudregistry.v1.PA.Artifact) {
+          return mergeFrom((yandex.cloud.api.cloudregistry.v1.PA.Artifact)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact other) {
-        if (other == yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.cloudregistry.v1.PA.Artifact other) {
+        if (other == yandex.cloud.api.cloudregistry.v1.PA.Artifact.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -1298,11 +1298,11 @@ public final class ArtifactOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact parsedMessage = null;
+        yandex.cloud.api.cloudregistry.v1.PA.Artifact parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.cloudregistry.v1.PA.Artifact) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1636,10 +1636,10 @@ public final class ArtifactOuterClass {
        * @return The kind.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind getKind() {
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind getKind() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind result = yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind.valueOf(kind_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind result = yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind.valueOf(kind_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1650,7 +1650,7 @@ public final class ArtifactOuterClass {
        * @param value The kind to set.
        * @return This builder for chaining.
        */
-      public Builder setKind(yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Kind value) {
+      public Builder setKind(yandex.cloud.api.cloudregistry.v1.PA.Artifact.Kind value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1710,10 +1710,10 @@ public final class ArtifactOuterClass {
        * @return The status.
        */
       @java.lang.Override
-      public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status getStatus() {
+      public yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status getStatus() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status result = yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status.valueOf(status_);
-        return result == null ? yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status.UNRECOGNIZED : result;
+        yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status result = yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1724,7 +1724,7 @@ public final class ArtifactOuterClass {
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact.Status value) {
+      public Builder setStatus(yandex.cloud.api.cloudregistry.v1.PA.Artifact.Status value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2074,12 +2074,12 @@ public final class ArtifactOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.cloudregistry.v1.Artifact)
-    private static final yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.cloudregistry.v1.PA.Artifact DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact();
+      DEFAULT_INSTANCE = new yandex.cloud.api.cloudregistry.v1.PA.Artifact();
     }
 
-    public static yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact getDefaultInstance() {
+    public static yandex.cloud.api.cloudregistry.v1.PA.Artifact getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2104,7 +2104,7 @@ public final class ArtifactOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.Artifact getDefaultInstanceForType() {
+    public yandex.cloud.api.cloudregistry.v1.PA.Artifact getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2137,10 +2137,10 @@ public final class ArtifactOuterClass {
       "_UNSPECIFIED\020\000\022\n\n\006FOLDER\020\001\022\013\n\007PACKAGE\020\002\022" +
       "\014\n\010ARTIFACT\020\003\"H\n\006Status\022\026\n\022STATUS_UNSPEC" +
       "IFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DEL" +
-      "ETING\020\003Bt\n!yandex.cloud.api.cloudregistr" +
-      "y.v1ZOgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/cloudregistry/v1;cloudreg" +
-      "istryb\006proto3"
+      "ETING\020\003Bx\n!yandex.cloud.api.cloudregistr" +
+      "y.v1B\002PAZOgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/cloudregistry/v1;clou" +
+      "dregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

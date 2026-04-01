@@ -2270,9 +2270,9 @@ public final class PolicyOuterClass {
 
     /**
      * <pre>
-     * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+     * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume,
      * including those that do not contain data.
-     * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+     * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume.
      * This method can be used to back up a disk or volume with an unsupported file system.
      * </pre>
      *
@@ -2283,9 +2283,9 @@ public final class PolicyOuterClass {
 
     /**
      * <pre>
-     * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+     * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data.
      * This is because not only the data physically contained in the backup copy is verified,
-     * but all data restored when it is selected. 
+     * but all data restored when it is selected.
      * This option requires access to previously created backup copies.
      * </pre>
      *
@@ -4200,7 +4200,7 @@ public final class PolicyOuterClass {
 
       /**
        * <pre>
-       * Max number of retry attempts. Operation will be considered as failed 
+       * Max number of retry attempts. Operation will be considered as failed
        * when max number of retry attempts is reached.
        * </pre>
        *
@@ -4366,7 +4366,7 @@ public final class PolicyOuterClass {
       private long maxAttempts_;
       /**
        * <pre>
-       * Max number of retry attempts. Operation will be considered as failed 
+       * Max number of retry attempts. Operation will be considered as failed
        * when max number of retry attempts is reached.
        * </pre>
        *
@@ -4930,7 +4930,7 @@ public final class PolicyOuterClass {
         private long maxAttempts_ ;
         /**
          * <pre>
-         * Max number of retry attempts. Operation will be considered as failed 
+         * Max number of retry attempts. Operation will be considered as failed
          * when max number of retry attempts is reached.
          * </pre>
          *
@@ -4943,7 +4943,7 @@ public final class PolicyOuterClass {
         }
         /**
          * <pre>
-         * Max number of retry attempts. Operation will be considered as failed 
+         * Max number of retry attempts. Operation will be considered as failed
          * when max number of retry attempts is reached.
          * </pre>
          *
@@ -4959,7 +4959,7 @@ public final class PolicyOuterClass {
         }
         /**
          * <pre>
-         * Max number of retry attempts. Operation will be considered as failed 
+         * Max number of retry attempts. Operation will be considered as failed
          * when max number of retry attempts is reached.
          * </pre>
          *
@@ -8196,6 +8196,32 @@ public final class PolicyOuterClass {
           com.google.protobuf.MessageOrBuilder {
 
         /**
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+         * @return Whether the maxAge field is set.
+         */
+        boolean hasMaxAge();
+        /**
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+         * @return The maxAge.
+         */
+        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getMaxAge();
+        /**
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+         */
+        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getMaxAgeOrBuilder();
+
+        /**
+         * <code>int64 max_count = 3;</code>
+         * @return Whether the maxCount field is set.
+         */
+        boolean hasMaxCount();
+        /**
+         * <code>int64 max_count = 3;</code>
+         * @return The maxCount.
+         */
+        long getMaxCount();
+
+        /**
          * <pre>
          * A list of backup sets where rules are effective.
          * </pre>
@@ -8243,32 +8269,6 @@ public final class PolicyOuterClass {
          * @return The enum numeric value on the wire of backupSet at the given index.
          */
         int getBackupSetValue(int index);
-
-        /**
-         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-         * @return Whether the maxAge field is set.
-         */
-        boolean hasMaxAge();
-        /**
-         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-         * @return The maxAge.
-         */
-        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getMaxAge();
-        /**
-         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-         */
-        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getMaxAgeOrBuilder();
-
-        /**
-         * <code>int64 max_count = 3;</code>
-         * @return Whether the maxCount field is set.
-         */
-        boolean hasMaxCount();
-        /**
-         * <code>int64 max_count = 3;</code>
-         * @return The maxCount.
-         */
-        long getMaxCount();
 
         public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Retention.RetentionRule.ConditionCase getConditionCase();
       }
@@ -8437,6 +8437,58 @@ public final class PolicyOuterClass {
               conditionCase_);
         }
 
+        public static final int MAX_AGE_FIELD_NUMBER = 2;
+        /**
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+         * @return Whether the maxAge field is set.
+         */
+        @java.lang.Override
+        public boolean hasMaxAge() {
+          return conditionCase_ == 2;
+        }
+        /**
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+         * @return The maxAge.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getMaxAge() {
+          if (conditionCase_ == 2) {
+             return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
+          }
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
+        }
+        /**
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getMaxAgeOrBuilder() {
+          if (conditionCase_ == 2) {
+             return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
+          }
+          return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
+        }
+
+        public static final int MAX_COUNT_FIELD_NUMBER = 3;
+        /**
+         * <code>int64 max_count = 3;</code>
+         * @return Whether the maxCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasMaxCount() {
+          return conditionCase_ == 3;
+        }
+        /**
+         * <code>int64 max_count = 3;</code>
+         * @return The maxCount.
+         */
+        @java.lang.Override
+        public long getMaxCount() {
+          if (conditionCase_ == 3) {
+            return (java.lang.Long) condition_;
+          }
+          return 0L;
+        }
+
         public static final int BACKUP_SET_FIELD_NUMBER = 1;
         private java.util.List<java.lang.Integer> backupSet_;
         private static final com.google.protobuf.Internal.ListAdapter.Converter<
@@ -8514,58 +8566,6 @@ public final class PolicyOuterClass {
           return backupSet_.get(index);
         }
         private int backupSetMemoizedSerializedSize;
-
-        public static final int MAX_AGE_FIELD_NUMBER = 2;
-        /**
-         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-         * @return Whether the maxAge field is set.
-         */
-        @java.lang.Override
-        public boolean hasMaxAge() {
-          return conditionCase_ == 2;
-        }
-        /**
-         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-         * @return The maxAge.
-         */
-        @java.lang.Override
-        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getMaxAge() {
-          if (conditionCase_ == 2) {
-             return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
-          }
-          return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
-        }
-        /**
-         * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-         */
-        @java.lang.Override
-        public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getMaxAgeOrBuilder() {
-          if (conditionCase_ == 2) {
-             return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
-          }
-          return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
-        }
-
-        public static final int MAX_COUNT_FIELD_NUMBER = 3;
-        /**
-         * <code>int64 max_count = 3;</code>
-         * @return Whether the maxCount field is set.
-         */
-        @java.lang.Override
-        public boolean hasMaxCount() {
-          return conditionCase_ == 3;
-        }
-        /**
-         * <code>int64 max_count = 3;</code>
-         * @return The maxCount.
-         */
-        @java.lang.Override
-        public long getMaxCount() {
-          if (conditionCase_ == 3) {
-            return (java.lang.Long) condition_;
-          }
-          return 0L;
-        }
 
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
@@ -8847,11 +8847,6 @@ public final class PolicyOuterClass {
           public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Retention.RetentionRule buildPartial() {
             yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Retention.RetentionRule result = new yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Retention.RetentionRule(this);
             int from_bitField0_ = bitField0_;
-            if (((bitField0_ & 0x00000001) != 0)) {
-              backupSet_ = java.util.Collections.unmodifiableList(backupSet_);
-              bitField0_ = (bitField0_ & ~0x00000001);
-            }
-            result.backupSet_ = backupSet_;
             if (conditionCase_ == 2) {
               if (maxAgeBuilder_ == null) {
                 result.condition_ = condition_;
@@ -8862,6 +8857,11 @@ public final class PolicyOuterClass {
             if (conditionCase_ == 3) {
               result.condition_ = condition_;
             }
+            if (((bitField0_ & 0x00000001) != 0)) {
+              backupSet_ = java.util.Collections.unmodifiableList(backupSet_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.backupSet_ = backupSet_;
             result.conditionCase_ = conditionCase_;
             onBuilt();
             return result;
@@ -8978,6 +8978,188 @@ public final class PolicyOuterClass {
           }
 
           private int bitField0_;
+
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder> maxAgeBuilder_;
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           * @return Whether the maxAge field is set.
+           */
+          @java.lang.Override
+          public boolean hasMaxAge() {
+            return conditionCase_ == 2;
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           * @return The maxAge.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getMaxAge() {
+            if (maxAgeBuilder_ == null) {
+              if (conditionCase_ == 2) {
+                return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
+              }
+              return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
+            } else {
+              if (conditionCase_ == 2) {
+                return maxAgeBuilder_.getMessage();
+              }
+              return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
+            }
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           */
+          public Builder setMaxAge(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
+            if (maxAgeBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              condition_ = value;
+              onChanged();
+            } else {
+              maxAgeBuilder_.setMessage(value);
+            }
+            conditionCase_ = 2;
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           */
+          public Builder setMaxAge(
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder builderForValue) {
+            if (maxAgeBuilder_ == null) {
+              condition_ = builderForValue.build();
+              onChanged();
+            } else {
+              maxAgeBuilder_.setMessage(builderForValue.build());
+            }
+            conditionCase_ = 2;
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           */
+          public Builder mergeMaxAge(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
+            if (maxAgeBuilder_ == null) {
+              if (conditionCase_ == 2 &&
+                  condition_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance()) {
+                condition_ = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.newBuilder((yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_)
+                    .mergeFrom(value).buildPartial();
+              } else {
+                condition_ = value;
+              }
+              onChanged();
+            } else {
+              if (conditionCase_ == 2) {
+                maxAgeBuilder_.mergeFrom(value);
+              }
+              maxAgeBuilder_.setMessage(value);
+            }
+            conditionCase_ = 2;
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           */
+          public Builder clearMaxAge() {
+            if (maxAgeBuilder_ == null) {
+              if (conditionCase_ == 2) {
+                conditionCase_ = 0;
+                condition_ = null;
+                onChanged();
+              }
+            } else {
+              if (conditionCase_ == 2) {
+                conditionCase_ = 0;
+                condition_ = null;
+              }
+              maxAgeBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           */
+          public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder getMaxAgeBuilder() {
+            return getMaxAgeFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           */
+          @java.lang.Override
+          public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getMaxAgeOrBuilder() {
+            if ((conditionCase_ == 2) && (maxAgeBuilder_ != null)) {
+              return maxAgeBuilder_.getMessageOrBuilder();
+            } else {
+              if (conditionCase_ == 2) {
+                return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
+              }
+              return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
+            }
+          }
+          /**
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder> 
+              getMaxAgeFieldBuilder() {
+            if (maxAgeBuilder_ == null) {
+              if (!(conditionCase_ == 2)) {
+                condition_ = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
+              }
+              maxAgeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder>(
+                      (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_,
+                      getParentForChildren(),
+                      isClean());
+              condition_ = null;
+            }
+            conditionCase_ = 2;
+            onChanged();;
+            return maxAgeBuilder_;
+          }
+
+          /**
+           * <code>int64 max_count = 3;</code>
+           * @return Whether the maxCount field is set.
+           */
+          public boolean hasMaxCount() {
+            return conditionCase_ == 3;
+          }
+          /**
+           * <code>int64 max_count = 3;</code>
+           * @return The maxCount.
+           */
+          public long getMaxCount() {
+            if (conditionCase_ == 3) {
+              return (java.lang.Long) condition_;
+            }
+            return 0L;
+          }
+          /**
+           * <code>int64 max_count = 3;</code>
+           * @param value The maxCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMaxCount(long value) {
+            conditionCase_ = 3;
+            condition_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>int64 max_count = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearMaxCount() {
+            if (conditionCase_ == 3) {
+              conditionCase_ = 0;
+              condition_ = null;
+              onChanged();
+            }
+            return this;
+          }
 
           private java.util.List<java.lang.Integer> backupSet_ =
             java.util.Collections.emptyList();
@@ -9164,188 +9346,6 @@ public final class PolicyOuterClass {
               backupSet_.add(value);
             }
             onChanged();
-            return this;
-          }
-
-          private com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder> maxAgeBuilder_;
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           * @return Whether the maxAge field is set.
-           */
-          @java.lang.Override
-          public boolean hasMaxAge() {
-            return conditionCase_ == 2;
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           * @return The maxAge.
-           */
-          @java.lang.Override
-          public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getMaxAge() {
-            if (maxAgeBuilder_ == null) {
-              if (conditionCase_ == 2) {
-                return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
-              }
-              return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
-            } else {
-              if (conditionCase_ == 2) {
-                return maxAgeBuilder_.getMessage();
-              }
-              return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
-            }
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           */
-          public Builder setMaxAge(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
-            if (maxAgeBuilder_ == null) {
-              if (value == null) {
-                throw new NullPointerException();
-              }
-              condition_ = value;
-              onChanged();
-            } else {
-              maxAgeBuilder_.setMessage(value);
-            }
-            conditionCase_ = 2;
-            return this;
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           */
-          public Builder setMaxAge(
-              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder builderForValue) {
-            if (maxAgeBuilder_ == null) {
-              condition_ = builderForValue.build();
-              onChanged();
-            } else {
-              maxAgeBuilder_.setMessage(builderForValue.build());
-            }
-            conditionCase_ = 2;
-            return this;
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           */
-          public Builder mergeMaxAge(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
-            if (maxAgeBuilder_ == null) {
-              if (conditionCase_ == 2 &&
-                  condition_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance()) {
-                condition_ = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.newBuilder((yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_)
-                    .mergeFrom(value).buildPartial();
-              } else {
-                condition_ = value;
-              }
-              onChanged();
-            } else {
-              if (conditionCase_ == 2) {
-                maxAgeBuilder_.mergeFrom(value);
-              }
-              maxAgeBuilder_.setMessage(value);
-            }
-            conditionCase_ = 2;
-            return this;
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           */
-          public Builder clearMaxAge() {
-            if (maxAgeBuilder_ == null) {
-              if (conditionCase_ == 2) {
-                conditionCase_ = 0;
-                condition_ = null;
-                onChanged();
-              }
-            } else {
-              if (conditionCase_ == 2) {
-                conditionCase_ = 0;
-                condition_ = null;
-              }
-              maxAgeBuilder_.clear();
-            }
-            return this;
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           */
-          public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder getMaxAgeBuilder() {
-            return getMaxAgeFieldBuilder().getBuilder();
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           */
-          @java.lang.Override
-          public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getMaxAgeOrBuilder() {
-            if ((conditionCase_ == 2) && (maxAgeBuilder_ != null)) {
-              return maxAgeBuilder_.getMessageOrBuilder();
-            } else {
-              if (conditionCase_ == 2) {
-                return (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_;
-              }
-              return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
-            }
-          }
-          /**
-           * <code>.yandex.cloud.backup.v1.PolicySettings.Interval max_age = 2;</code>
-           */
-          private com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder> 
-              getMaxAgeFieldBuilder() {
-            if (maxAgeBuilder_ == null) {
-              if (!(conditionCase_ == 2)) {
-                condition_ = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance();
-              }
-              maxAgeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder>(
-                      (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval) condition_,
-                      getParentForChildren(),
-                      isClean());
-              condition_ = null;
-            }
-            conditionCase_ = 2;
-            onChanged();;
-            return maxAgeBuilder_;
-          }
-
-          /**
-           * <code>int64 max_count = 3;</code>
-           * @return Whether the maxCount field is set.
-           */
-          public boolean hasMaxCount() {
-            return conditionCase_ == 3;
-          }
-          /**
-           * <code>int64 max_count = 3;</code>
-           * @return The maxCount.
-           */
-          public long getMaxCount() {
-            if (conditionCase_ == 3) {
-              return (java.lang.Long) condition_;
-            }
-            return 0L;
-          }
-          /**
-           * <code>int64 max_count = 3;</code>
-           * @param value The maxCount to set.
-           * @return This builder for chaining.
-           */
-          public Builder setMaxCount(long value) {
-            conditionCase_ = 3;
-            condition_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>int64 max_count = 3;</code>
-           * @return This builder for chaining.
-           */
-          public Builder clearMaxCount() {
-            if (conditionCase_ == 3) {
-              conditionCase_ = 0;
-              condition_ = null;
-              onChanged();
-            }
             return this;
           }
           @java.lang.Override
@@ -18230,7 +18230,7 @@ public final class PolicyOuterClass {
 
       /**
        * <pre>
-       * Workdir for command execution 
+       * Workdir for command execution
        * </pre>
        *
        * <code>string workdir = 7;</code>
@@ -18239,7 +18239,7 @@ public final class PolicyOuterClass {
       java.lang.String getWorkdir();
       /**
        * <pre>
-       * Workdir for command execution 
+       * Workdir for command execution
        * </pre>
        *
        * <code>string workdir = 7;</code>
@@ -18536,7 +18536,7 @@ public final class PolicyOuterClass {
       private volatile java.lang.Object workdir_;
       /**
        * <pre>
-       * Workdir for command execution 
+       * Workdir for command execution
        * </pre>
        *
        * <code>string workdir = 7;</code>
@@ -18557,7 +18557,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Workdir for command execution 
+       * Workdir for command execution
        * </pre>
        *
        * <code>string workdir = 7;</code>
@@ -19382,7 +19382,7 @@ public final class PolicyOuterClass {
         private java.lang.Object workdir_ = "";
         /**
          * <pre>
-         * Workdir for command execution 
+         * Workdir for command execution
          * </pre>
          *
          * <code>string workdir = 7;</code>
@@ -19402,7 +19402,7 @@ public final class PolicyOuterClass {
         }
         /**
          * <pre>
-         * Workdir for command execution 
+         * Workdir for command execution
          * </pre>
          *
          * <code>string workdir = 7;</code>
@@ -19423,7 +19423,7 @@ public final class PolicyOuterClass {
         }
         /**
          * <pre>
-         * Workdir for command execution 
+         * Workdir for command execution
          * </pre>
          *
          * <code>string workdir = 7;</code>
@@ -19442,7 +19442,7 @@ public final class PolicyOuterClass {
         }
         /**
          * <pre>
-         * Workdir for command execution 
+         * Workdir for command execution
          * </pre>
          *
          * <code>string workdir = 7;</code>
@@ -19456,7 +19456,7 @@ public final class PolicyOuterClass {
         }
         /**
          * <pre>
-         * Workdir for command execution 
+         * Workdir for command execution
          * </pre>
          *
          * <code>string workdir = 7;</code>
@@ -20033,9 +20033,9 @@ public final class PolicyOuterClass {
     private boolean sectorBySector_;
     /**
      * <pre>
-     * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+     * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume,
      * including those that do not contain data.
-     * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+     * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume.
      * This method can be used to back up a disk or volume with an unsupported file system.
      * </pre>
      *
@@ -20051,9 +20051,9 @@ public final class PolicyOuterClass {
     private boolean validationEnabled_;
     /**
      * <pre>
-     * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+     * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data.
      * This is because not only the data physically contained in the backup copy is verified,
-     * but all data restored when it is selected. 
+     * but all data restored when it is selected.
      * This option requires access to previously created backup copies.
      * </pre>
      *
@@ -22797,9 +22797,9 @@ public final class PolicyOuterClass {
       private boolean sectorBySector_ ;
       /**
        * <pre>
-       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume,
        * including those that do not contain data.
-       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume.
        * This method can be used to back up a disk or volume with an unsupported file system.
        * </pre>
        *
@@ -22812,9 +22812,9 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume,
        * including those that do not contain data.
-       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume.
        * This method can be used to back up a disk or volume with an unsupported file system.
        * </pre>
        *
@@ -22830,9 +22830,9 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume,
        * including those that do not contain data.
-       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume.
        * This method can be used to back up a disk or volume with an unsupported file system.
        * </pre>
        *
@@ -22849,9 +22849,9 @@ public final class PolicyOuterClass {
       private boolean validationEnabled_ ;
       /**
        * <pre>
-       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data.
        * This is because not only the data physically contained in the backup copy is verified,
-       * but all data restored when it is selected. 
+       * but all data restored when it is selected.
        * This option requires access to previously created backup copies.
        * </pre>
        *
@@ -22864,9 +22864,9 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data.
        * This is because not only the data physically contained in the backup copy is verified,
-       * but all data restored when it is selected. 
+       * but all data restored when it is selected.
        * This option requires access to previously created backup copies.
        * </pre>
        *
@@ -22882,9 +22882,9 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data.
        * This is because not only the data physically contained in the backup copy is verified,
-       * but all data restored when it is selected. 
+       * but all data restored when it is selected.
        * This option requires access to previously created backup copies.
        * </pre>
        *
@@ -24825,13 +24825,13 @@ public final class PolicyOuterClass {
       "\n#yandex/cloud/backup/v1/policy.proto\022\026y" +
       "andex.cloud.backup.v1\032\037google/protobuf/t" +
       "imestamp.proto\032\035yandex/cloud/validation." +
-      "proto\"\374\001\n\006Policy\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\032\n\004name\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\ncreate" +
+      "proto\"\374\001\n\006Policy\022\030\n\002id\030\001 \001(\tB\014\212\3101\004<=50\350\307" +
+      "1\001\022\032\n\004name\030\002 \001(\tB\014\212\3101\004<=50\350\3071\001\022.\n\ncreate" +
       "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022." +
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\206&\n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\200&\n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
@@ -24886,11 +24886,11 @@ public final class PolicyOuterClass {
       "(\003\022\016\n\006minute\030\002 \001(\003\032\277\002\n\tRetention\022M\n\005rule" +
       "s\030\001 \003(\0132>.yandex.cloud.backup.v1.PolicyS" +
       "ettings.Retention.RetentionRule\022\025\n\rbefor" +
-      "e_backup\030\003 \001(\010\032\305\001\n\rRetentionRule\022H\n\nback" +
-      "up_set\030\001 \003(\01624.yandex.cloud.backup.v1.Po" +
-      "licySettings.RepeatePeriod\022B\n\007max_age\030\002 " +
-      "\001(\0132/.yandex.cloud.backup.v1.PolicySetti" +
-      "ngs.IntervalH\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tc" +
+      "e_backup\030\003 \001(\010\032\305\001\n\rRetentionRule\022B\n\007max_" +
+      "age\030\002 \001(\0132/.yandex.cloud.backup.v1.Polic" +
+      "ySettings.IntervalH\000\022\023\n\tmax_count\030\003 \001(\003H" +
+      "\000\022H\n\nbackup_set\030\001 \003(\01624.yandex.cloud.bac" +
+      "kup.v1.PolicySettings.RepeatePeriodB\021\n\tc" +
       "ondition\022\004\300\3011\001J\004\010\002\020\003\032\200\r\n\nScheduling\022X\n\013b" +
       "ackup_sets\030\001 \003(\0132;.yandex.cloud.backup.v" +
       "1.PolicySettings.Scheduling.BackupSetB\006\202" +
@@ -24953,19 +24953,19 @@ public final class PolicyOuterClass {
       "CommandType\022\034\n\030COMMAND_TYPE_UNSPECIFIED\020" +
       "\000\022\017\n\013PRE_COMMAND\020\001\022\020\n\014POST_COMMAND\020\002\022\024\n\020" +
       "PRE_DATA_COMMAND\020\003\022\025\n\021POST_DATA_COMMAND\020" +
-      "\004J\004\010\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tp" +
-      "olicy_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 " +
-      "\001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.y" +
-      "andex.cloud.backup.v1.PolicyApplication." +
-      "Status\022.\n\ncreated_at\030\005 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n" +
-      "\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022" +
-      "\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022" +
-      "FORMAT_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\n" +
-      "VERSION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.a" +
-      "pi.backup.v1ZAgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/backup/v1;backupb" +
-      "\006proto3"
+      "\004J\004\010\r\020\017\"\242\002\n\021PolicyApplication\022\021\n\tpolicy_" +
+      "id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022\017\n" +
+      "\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yandex." +
+      "cloud.backup.v1.PolicyApplication.Status" +
+      "\022.\n\ncreated_at\030\005 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n\006Statu" +
+      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007RUN" +
+      "NING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022FORMAT" +
+      "_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERSIO" +
+      "N_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.api.bac" +
+      "kup.v1ZAgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/backup/v1;backupb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25038,7 +25038,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_Retention_RetentionRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_Retention_RetentionRule_descriptor,
-        new java.lang.String[] { "BackupSet", "MaxAge", "MaxCount", "Condition", });
+        new java.lang.String[] { "MaxAge", "MaxCount", "BackupSet", "Condition", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor.getNestedTypes().get(8);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_fieldAccessorTable = new

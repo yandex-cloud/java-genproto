@@ -21833,6 +21833,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 18;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * Specification of what databases and table to restore
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+     * @return Whether the partialRestore field is set.
+     */
+    boolean hasPartialRestore();
+    /**
+     * <pre>
+     * Specification of what databases and table to restore
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+     * @return The partialRestore.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec getPartialRestore();
+    /**
+     * <pre>
+     * Specification of what databases and table to restore
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpecOrBuilder getPartialRestoreOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.RestoreClusterRequest}
@@ -22022,6 +22049,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maintenanceWindow_);
                 maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder subBuilder = null;
+              if (partialRestore_ != null) {
+                subBuilder = partialRestore_.toBuilder();
+              }
+              partialRestore_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(partialRestore_);
+                partialRestore_ = subBuilder.buildPartial();
               }
 
               break;
@@ -22856,6 +22896,44 @@ public final class ClusterServiceOuterClass {
       return getMaintenanceWindow();
     }
 
+    public static final int PARTIAL_RESTORE_FIELD_NUMBER = 19;
+    private yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec partialRestore_;
+    /**
+     * <pre>
+     * Specification of what databases and table to restore
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+     * @return Whether the partialRestore field is set.
+     */
+    @java.lang.Override
+    public boolean hasPartialRestore() {
+      return partialRestore_ != null;
+    }
+    /**
+     * <pre>
+     * Specification of what databases and table to restore
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+     * @return The partialRestore.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec getPartialRestore() {
+      return partialRestore_ == null ? yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.getDefaultInstance() : partialRestore_;
+    }
+    /**
+     * <pre>
+     * Specification of what databases and table to restore
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpecOrBuilder getPartialRestoreOrBuilder() {
+      return getPartialRestore();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22920,6 +22998,9 @@ public final class ClusterServiceOuterClass {
       }
       if (maintenanceWindow_ != null) {
         output.writeMessage(18, getMaintenanceWindow());
+      }
+      if (partialRestore_ != null) {
+        output.writeMessage(19, getPartialRestore());
       }
       unknownFields.writeTo(output);
     }
@@ -23002,6 +23083,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getMaintenanceWindow());
       }
+      if (partialRestore_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getPartialRestore());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -23056,6 +23141,11 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenanceWindow()) {
         if (!getMaintenanceWindow()
             .equals(other.getMaintenanceWindow())) return false;
+      }
+      if (hasPartialRestore() != other.hasPartialRestore()) return false;
+      if (hasPartialRestore()) {
+        if (!getPartialRestore()
+            .equals(other.getPartialRestore())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -23116,6 +23206,10 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenanceWindow()) {
         hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasPartialRestore()) {
+        hash = (37 * hash) + PARTIAL_RESTORE_FIELD_NUMBER;
+        hash = (53 * hash) + getPartialRestore().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -23325,6 +23419,12 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
           maintenanceWindowBuilder_ = null;
         }
+        if (partialRestoreBuilder_ == null) {
+          partialRestore_ = null;
+        } else {
+          partialRestore_ = null;
+          partialRestoreBuilder_ = null;
+        }
         return this;
       }
 
@@ -23404,6 +23504,11 @@ public final class ClusterServiceOuterClass {
           result.maintenanceWindow_ = maintenanceWindow_;
         } else {
           result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (partialRestoreBuilder_ == null) {
+          result.partialRestore_ = partialRestore_;
+        } else {
+          result.partialRestore_ = partialRestoreBuilder_.build();
         }
         onBuilt();
         return result;
@@ -23565,6 +23670,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMaintenanceWindow()) {
           mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasPartialRestore()) {
+          mergePartialRestore(other.getPartialRestore());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -25885,6 +25993,161 @@ public final class ClusterServiceOuterClass {
         }
         return maintenanceWindowBuilder_;
       }
+
+      private yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec partialRestore_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpecOrBuilder> partialRestoreBuilder_;
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       * @return Whether the partialRestore field is set.
+       */
+      public boolean hasPartialRestore() {
+        return partialRestoreBuilder_ != null || partialRestore_ != null;
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       * @return The partialRestore.
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec getPartialRestore() {
+        if (partialRestoreBuilder_ == null) {
+          return partialRestore_ == null ? yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.getDefaultInstance() : partialRestore_;
+        } else {
+          return partialRestoreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       */
+      public Builder setPartialRestore(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec value) {
+        if (partialRestoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          partialRestore_ = value;
+          onChanged();
+        } else {
+          partialRestoreBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       */
+      public Builder setPartialRestore(
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder builderForValue) {
+        if (partialRestoreBuilder_ == null) {
+          partialRestore_ = builderForValue.build();
+          onChanged();
+        } else {
+          partialRestoreBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       */
+      public Builder mergePartialRestore(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec value) {
+        if (partialRestoreBuilder_ == null) {
+          if (partialRestore_ != null) {
+            partialRestore_ =
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.newBuilder(partialRestore_).mergeFrom(value).buildPartial();
+          } else {
+            partialRestore_ = value;
+          }
+          onChanged();
+        } else {
+          partialRestoreBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       */
+      public Builder clearPartialRestore() {
+        if (partialRestoreBuilder_ == null) {
+          partialRestore_ = null;
+          onChanged();
+        } else {
+          partialRestore_ = null;
+          partialRestoreBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder getPartialRestoreBuilder() {
+        
+        onChanged();
+        return getPartialRestoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpecOrBuilder getPartialRestoreOrBuilder() {
+        if (partialRestoreBuilder_ != null) {
+          return partialRestoreBuilder_.getMessageOrBuilder();
+        } else {
+          return partialRestore_ == null ?
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.getDefaultInstance() : partialRestore_;
+        }
+      }
+      /**
+       * <pre>
+       * Specification of what databases and table to restore
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec partial_restore = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpecOrBuilder> 
+          getPartialRestoreFieldBuilder() {
+        if (partialRestoreBuilder_ == null) {
+          partialRestoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpecOrBuilder>(
+                  getPartialRestore(),
+                  getParentForChildren(),
+                  isClean());
+          partialRestore_ = null;
+        }
+        return partialRestoreBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -25933,6 +26196,1031 @@ public final class ClusterServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestoreClusterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartialRestoreSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @return A list containing the includePatterns.
+     */
+    java.util.List<java.lang.String>
+        getIncludePatternsList();
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @return The count of includePatterns.
+     */
+    int getIncludePatternsCount();
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @param index The index of the element to return.
+     * @return The includePatterns at the given index.
+     */
+    java.lang.String getIncludePatterns(int index);
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the includePatterns at the given index.
+     */
+    com.google.protobuf.ByteString
+        getIncludePatternsBytes(int index);
+
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @return A list containing the excludePatterns.
+     */
+    java.util.List<java.lang.String>
+        getExcludePatternsList();
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @return The count of excludePatterns.
+     */
+    int getExcludePatternsCount();
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @param index The index of the element to return.
+     * @return The excludePatterns at the given index.
+     */
+    java.lang.String getExcludePatterns(int index);
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePatterns at the given index.
+     */
+    com.google.protobuf.ByteString
+        getExcludePatternsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec}
+   */
+  public static final class PartialRestoreSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec)
+      PartialRestoreSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartialRestoreSpec.newBuilder() to construct.
+    private PartialRestoreSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartialRestoreSpec() {
+      includePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      excludePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PartialRestoreSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartialRestoreSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                includePatterns_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              includePatterns_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                excludePatterns_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              excludePatterns_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          includePatterns_ = includePatterns_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          excludePatterns_ = excludePatterns_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder.class);
+    }
+
+    public static final int INCLUDE_PATTERNS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList includePatterns_;
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @return A list containing the includePatterns.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getIncludePatternsList() {
+      return includePatterns_;
+    }
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @return The count of includePatterns.
+     */
+    public int getIncludePatternsCount() {
+      return includePatterns_.size();
+    }
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @param index The index of the element to return.
+     * @return The includePatterns at the given index.
+     */
+    public java.lang.String getIncludePatterns(int index) {
+      return includePatterns_.get(index);
+    }
+    /**
+     * <pre>
+     * Tables and databases that will be included in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string include_patterns = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the includePatterns at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getIncludePatternsBytes(int index) {
+      return includePatterns_.getByteString(index);
+    }
+
+    public static final int EXCLUDE_PATTERNS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList excludePatterns_;
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @return A list containing the excludePatterns.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getExcludePatternsList() {
+      return excludePatterns_;
+    }
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @return The count of excludePatterns.
+     */
+    public int getExcludePatternsCount() {
+      return excludePatterns_.size();
+    }
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @param index The index of the element to return.
+     * @return The excludePatterns at the given index.
+     */
+    public java.lang.String getExcludePatterns(int index) {
+      return excludePatterns_.get(index);
+    }
+    /**
+     * <pre>
+     * Tables and databases that will be excluded in restored cluster. 
+     * Possible formats: db1.table1, db1.* or db1.table*
+     * </pre>
+     *
+     * <code>repeated string exclude_patterns = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePatterns at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getExcludePatternsBytes(int index) {
+      return excludePatterns_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < includePatterns_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, includePatterns_.getRaw(i));
+      }
+      for (int i = 0; i < excludePatterns_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, excludePatterns_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < includePatterns_.size(); i++) {
+          dataSize += computeStringSizeNoTag(includePatterns_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getIncludePatternsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < excludePatterns_.size(); i++) {
+          dataSize += computeStringSizeNoTag(excludePatterns_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getExcludePatternsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec) obj;
+
+      if (!getIncludePatternsList()
+          .equals(other.getIncludePatternsList())) return false;
+      if (!getExcludePatternsList()
+          .equals(other.getExcludePatternsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIncludePatternsCount() > 0) {
+        hash = (37 * hash) + INCLUDE_PATTERNS_FIELD_NUMBER;
+        hash = (53 * hash) + getIncludePatternsList().hashCode();
+      }
+      if (getExcludePatternsCount() > 0) {
+        hash = (37 * hash) + EXCLUDE_PATTERNS_FIELD_NUMBER;
+        hash = (53 * hash) + getExcludePatternsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        includePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        excludePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          includePatterns_ = includePatterns_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.includePatterns_ = includePatterns_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          excludePatterns_ = excludePatterns_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.excludePatterns_ = excludePatterns_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec.getDefaultInstance()) return this;
+        if (!other.includePatterns_.isEmpty()) {
+          if (includePatterns_.isEmpty()) {
+            includePatterns_ = other.includePatterns_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureIncludePatternsIsMutable();
+            includePatterns_.addAll(other.includePatterns_);
+          }
+          onChanged();
+        }
+        if (!other.excludePatterns_.isEmpty()) {
+          if (excludePatterns_.isEmpty()) {
+            excludePatterns_ = other.excludePatterns_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureExcludePatternsIsMutable();
+            excludePatterns_.addAll(other.excludePatterns_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList includePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureIncludePatternsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          includePatterns_ = new com.google.protobuf.LazyStringArrayList(includePatterns_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @return A list containing the includePatterns.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getIncludePatternsList() {
+        return includePatterns_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @return The count of includePatterns.
+       */
+      public int getIncludePatternsCount() {
+        return includePatterns_.size();
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @param index The index of the element to return.
+       * @return The includePatterns at the given index.
+       */
+      public java.lang.String getIncludePatterns(int index) {
+        return includePatterns_.get(index);
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the includePatterns at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getIncludePatternsBytes(int index) {
+        return includePatterns_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The includePatterns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludePatterns(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIncludePatternsIsMutable();
+        includePatterns_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @param value The includePatterns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIncludePatterns(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIncludePatternsIsMutable();
+        includePatterns_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @param values The includePatterns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIncludePatterns(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureIncludePatternsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, includePatterns_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludePatterns() {
+        includePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be included in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string include_patterns = 1;</code>
+       * @param value The bytes of the includePatterns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIncludePatternsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureIncludePatternsIsMutable();
+        includePatterns_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList excludePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureExcludePatternsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          excludePatterns_ = new com.google.protobuf.LazyStringArrayList(excludePatterns_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @return A list containing the excludePatterns.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExcludePatternsList() {
+        return excludePatterns_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @return The count of excludePatterns.
+       */
+      public int getExcludePatternsCount() {
+        return excludePatterns_.size();
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @param index The index of the element to return.
+       * @return The excludePatterns at the given index.
+       */
+      public java.lang.String getExcludePatterns(int index) {
+        return excludePatterns_.get(index);
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the excludePatterns at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getExcludePatternsBytes(int index) {
+        return excludePatterns_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The excludePatterns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExcludePatterns(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePatternsIsMutable();
+        excludePatterns_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @param value The excludePatterns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludePatterns(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePatternsIsMutable();
+        excludePatterns_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @param values The excludePatterns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllExcludePatterns(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureExcludePatternsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, excludePatterns_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExcludePatterns() {
+        excludePatterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tables and databases that will be excluded in restored cluster. 
+       * Possible formats: db1.table1, db1.* or db1.table*
+       * </pre>
+       *
+       * <code>repeated string exclude_patterns = 2;</code>
+       * @param value The bytes of the excludePatterns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludePatternsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureExcludePatternsIsMutable();
+        excludePatterns_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.PartialRestoreSpec)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartialRestoreSpec>
+        PARSER = new com.google.protobuf.AbstractParser<PartialRestoreSpec>() {
+      @java.lang.Override
+      public PartialRestoreSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartialRestoreSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartialRestoreSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartialRestoreSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.PartialRestoreSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -42144,30 +43432,32 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Whether to copy schema to new ClickHouse hosts from replicas.
+     * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+     * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the copySchema field is set.
      */
-    boolean hasCopySchema();
+    @java.lang.Deprecated boolean hasCopySchema();
     /**
      * <pre>
-     * Whether to copy schema to new ClickHouse hosts from replicas.
+     * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+     * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The copySchema.
      */
-    com.google.protobuf.BoolValue getCopySchema();
+    @java.lang.Deprecated com.google.protobuf.BoolValue getCopySchema();
     /**
      * <pre>
-     * Whether to copy schema to new ClickHouse hosts from replicas.
+     * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+     * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
      */
-    com.google.protobuf.BoolValueOrBuilder getCopySchemaOrBuilder();
+    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getCopySchemaOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.AddClusterHostsRequest}
@@ -42392,37 +43682,39 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.BoolValue copySchema_;
     /**
      * <pre>
-     * Whether to copy schema to new ClickHouse hosts from replicas.
+     * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+     * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the copySchema field is set.
      */
     @java.lang.Override
-    public boolean hasCopySchema() {
+    @java.lang.Deprecated public boolean hasCopySchema() {
       return copySchema_ != null;
     }
     /**
      * <pre>
-     * Whether to copy schema to new ClickHouse hosts from replicas.
+     * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+     * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The copySchema.
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValue getCopySchema() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValue getCopySchema() {
       return copySchema_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : copySchema_;
     }
     /**
      * <pre>
-     * Whether to copy schema to new ClickHouse hosts from replicas.
+     * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+     * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getCopySchemaOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getCopySchemaOrBuilder() {
       return getCopySchema();
     }
 
@@ -43233,24 +44525,26 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> copySchemaBuilder_;
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the copySchema field is set.
        */
-      public boolean hasCopySchema() {
+      @java.lang.Deprecated public boolean hasCopySchema() {
         return copySchemaBuilder_ != null || copySchema_ != null;
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
+       * @deprecated
        * @return The copySchema.
        */
-      public com.google.protobuf.BoolValue getCopySchema() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue getCopySchema() {
         if (copySchemaBuilder_ == null) {
           return copySchema_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : copySchema_;
         } else {
@@ -43259,12 +44553,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
        */
-      public Builder setCopySchema(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder setCopySchema(com.google.protobuf.BoolValue value) {
         if (copySchemaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -43279,12 +44573,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
        */
-      public Builder setCopySchema(
+      @java.lang.Deprecated public Builder setCopySchema(
           com.google.protobuf.BoolValue.Builder builderForValue) {
         if (copySchemaBuilder_ == null) {
           copySchema_ = builderForValue.build();
@@ -43297,12 +44591,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
        */
-      public Builder mergeCopySchema(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder mergeCopySchema(com.google.protobuf.BoolValue value) {
         if (copySchemaBuilder_ == null) {
           if (copySchema_ != null) {
             copySchema_ =
@@ -43319,12 +44613,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
        */
-      public Builder clearCopySchema() {
+      @java.lang.Deprecated public Builder clearCopySchema() {
         if (copySchemaBuilder_ == null) {
           copySchema_ = null;
           onChanged();
@@ -43337,24 +44631,24 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValue.Builder getCopySchemaBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getCopySchemaBuilder() {
         
         onChanged();
         return getCopySchemaFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValueOrBuilder getCopySchemaOrBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getCopySchemaOrBuilder() {
         if (copySchemaBuilder_ != null) {
           return copySchemaBuilder_.getMessageOrBuilder();
         } else {
@@ -43364,10 +44658,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether to copy schema to new ClickHouse hosts from replicas.
+       * Deprecated. The schema is always copied to new ClickHouse replicas in order to avoid potential data loss.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue copy_schema = 3;</code>
+       * <code>.google.protobuf.BoolValue copy_schema = 3 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -90794,6 +92088,11 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -91200,7 +92499,7 @@ public final class ClusterServiceOuterClass {
       "ue\"1\n\033AddClusterZookeeperMetadata\022\022\n\nclu" +
       "ster_id\030\001 \001(\t\"8\n\024BackupClusterRequest\022 \n" +
       "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Backu" +
-      "pClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\253\007\n" +
+      "pClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\370\007\n" +
       "\025RestoreClusterRequest\022\027\n\tbackup_id\030\001 \001(" +
       "\tB\004\350\3071\001\022\035\n\025additional_backup_ids\030\r \003(\t\022," +
       "\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
@@ -91222,459 +92521,463 @@ public final class ClusterServiceOuterClass {
       "house.v1.ShardSpec\022<\n\026disk_encryption_ke" +
       "y_id\030\021 \001(\0132\034.google.protobuf.StringValue" +
       "\022M\n\022maintenance_window\030\022 \001(\01321.yandex.cl" +
-      "oud.mdb.clickhouse.v1.MaintenanceWindow\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001J\004\010\014\020\rJ\004\010\020\020\021\"?\n\026RestoreClusterMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 " +
-      "\001(\t\"\317\002\n\034RescheduleMaintenanceRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022j\n\017resche" +
-      "dule_type\030\002 \001(\0162K.yandex.cloud.mdb.click" +
-      "house.v1.RescheduleMaintenanceRequest.Re" +
-      "scheduleTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(" +
-      "\0132\032.google.protobuf.Timestamp\"n\n\016Resched" +
-      "uleType\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000" +
-      "\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW" +
-      "\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035RescheduleMaint" +
-      "enanceMetadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rde" +
-      "layed_until\030\004 \001(\0132\032.google.protobuf.Time" +
-      "stampJ\004\010\002\020\004\"\263\001\n\tLogRecord\022-\n\ttimestamp\030\001" +
-      " \001(\0132\032.google.protobuf.Timestamp\022G\n\007mess" +
-      "age\030\002 \003(\01326.yandex.cloud.mdb.clickhouse." +
-      "v1.LogRecord.MessageEntry\032.\n\014MessageEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\237\003\n\026Li" +
-      "stClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022^\n" +
-      "\014service_type\030\003 \001(\0162B.yandex.cloud.mdb.c" +
-      "lickhouse.v1.ListClusterLogsRequest.Serv" +
-      "iceTypeB\004\350\3071\001\022-\n\tfrom_time\030\004 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032." +
-      "google.protobuf.Timestamp\022\035\n\tpage_size\030\006" +
-      " \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\007 \001(\tB\t\212\310" +
-      "1\005<=100\"R\n\013ServiceType\022\034\n\030SERVICE_TYPE_U" +
-      "NSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\025\n\021CLICKHOU" +
-      "SE_KEEPER\020\002\"k\n\027ListClusterLogsResponse\0227" +
-      "\n\004logs\030\001 \003(\0132).yandex.cloud.mdb.clickhou" +
-      "se.v1.LogRecord\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"g\n\017StreamLogRecord\0229\n\006record\030\001 \001(\0132).ya" +
-      "ndex.cloud.mdb.clickhouse.v1.LogRecord\022\031" +
-      "\n\021next_record_token\030\002 \001(\t\"\242\003\n\030StreamClus" +
-      "terLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022`\n\014servi" +
-      "ce_type\030\003 \001(\0162D.yandex.cloud.mdb.clickho" +
-      "use.v1.StreamClusterLogsRequest.ServiceT" +
-      "ypeB\004\350\3071\001\022-\n\tfrom_time\030\004 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\037\n\014record_token\030\006 " +
-      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=10" +
-      "00\"R\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPEC" +
-      "IFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\025\n\021CLICKHOUSE_KE" +
-      "EPER\020\002\"~\n\034ListClusterOperationsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperationsR" +
-      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
-      "ud.operation.Operation\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"{\n\031ListClusterBackupsRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\"n\n\032ListClusterBackupsRespon" +
-      "se\0227\n\007backups\030\001 \003(\0132&.yandex.cloud.mdb.c" +
-      "lickhouse.v1.Backup\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"y\n\027ListClusterHostsRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
-      "1\005<=100\"h\n\030ListClusterHostsResponse\0223\n\005h" +
-      "osts\030\001 \003(\0132$.yandex.cloud.mdb.clickhouse" +
-      ".v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"\261\001\n\026Ad" +
-      "dClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022D\n\nhost_specs\030\002 \003(\0132(.yan" +
-      "dex.cloud.mdb.clickhouse.v1.HostSpecB\006\202\310" +
-      "1\002>0\022/\n\013copy_schema\030\003 \001(\0132\032.google.proto" +
-      "buf.BoolValue\"A\n\027AddClusterHostsMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t" +
-      "\"\220\001\n\016UpdateHostSpec\022\027\n\thost_name\030\001 \001(\tB\004" +
-      "\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMask\0224\n\020assign_public_ip\030\003 \001(\0132" +
-      "\032.google.protobuf.BoolValue\"\220\001\n\031UpdateCl" +
-      "usterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022Q\n\021update_host_specs\030\002 \003(\0132." +
-      ".yandex.cloud.mdb.clickhouse.v1.UpdateHo" +
-      "stSpecB\006\202\3101\002>0\"D\n\032UpdateClusterHostsMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002" +
-      " \003(\t\"b\n\031DeleteClusterHostsRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_name" +
-      "s\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteCluste" +
-      "rHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nho" +
-      "st_names\030\002 \003(\t\"c\n\032RestartClusterHostsReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#" +
-      "\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=353\"E\n\033R" +
-      "estartClusterHostsMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"n\n\026GetCluster" +
-      "ShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63" +
-      "\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListClusterShardsR" +
-      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\"k\n\031ListClusterSha" +
-      "rdsResponse\0225\n\006shards\030\001 \003(\0132%.yandex.clo" +
-      "ud.mdb.clickhouse.v1.Shard\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"\253\002\n\026AddClusterShardRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshar" +
-      "d_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022D\n\013config_spec\030\003 \001(\0132/.yandex.cloud" +
-      ".mdb.clickhouse.v1.ShardConfigSpec\022D\n\nho" +
-      "st_specs\030\004 \003(\0132(.yandex.cloud.mdb.clickh" +
-      "ouse.v1.HostSpecB\006\202\3101\002>0\022/\n\013copy_schema\030" +
-      "\005 \001(\0132\032.google.protobuf.BoolValue\"A\n\027Add" +
-      "ClusterShardMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\022\022\n\nshard_name\030\002 \001(\t\"\362\001\n\027AddClusterShard" +
-      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022F\n\013shard_specs\030\002 \003(\0132).yandex.cloud.m" +
-      "db.clickhouse.v1.ShardSpecB\006\202\3101\002>0\022<\n\nho" +
-      "st_specs\030\003 \003(\0132(.yandex.cloud.mdb.clickh" +
-      "ouse.v1.HostSpec\022/\n\013copy_schema\030\004 \001(\0132\032." +
-      "google.protobuf.BoolValue\"C\n\030AddClusterS" +
-      "hardsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\023\n\013sha" +
-      "rd_names\030\002 \003(\t\"\243\002\n\031UpdateClusterShardReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222" +
-      "\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google" +
-      ".protobuf.FieldMask\022D\n\013config_spec\030\004 \001(\013" +
-      "2/.yandex.cloud.mdb.clickhouse.v1.ShardC" +
-      "onfigSpec\0229\n\025allow_host_recreation\030\005 \001(\013" +
-      "2\032.google.protobuf.BoolValue\"D\n\032UpdateCl" +
-      "usterShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022" +
-      "\n\nshard_name\030\002 \001(\t\"q\n\031DeleteClusterShard" +
+      "oud.mdb.clickhouse.v1.MaintenanceWindow\022" +
+      "K\n\017partial_restore\030\023 \001(\01322.yandex.cloud." +
+      "mdb.clickhouse.v1.PartialRestoreSpec\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001J\004\010\014\020\rJ\004\010\020\020\021\"H\n\022PartialRestoreSpec\022\030\n" +
+      "\020include_patterns\030\001 \003(\t\022\030\n\020exclude_patte" +
+      "rns\030\002 \003(\t\"?\n\026RestoreClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\317\002\n\034R" +
+      "escheduleMaintenanceRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022j\n\017reschedule_type" +
+      "\030\002 \001(\0162K.yandex.cloud.mdb.clickhouse.v1." +
+      "RescheduleMaintenanceRequest.RescheduleT" +
+      "ypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"n\n\016RescheduleType\022\037" +
+      "\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMED" +
+      "IATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPE" +
+      "CIFIC_TIME\020\003\"l\n\035RescheduleMaintenanceMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_unt" +
+      "il\030\004 \001(\0132\032.google.protobuf.TimestampJ\004\010\002" +
+      "\020\004\"\263\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022G\n\007message\030\002 \003(\013" +
+      "26.yandex.cloud.mdb.clickhouse.v1.LogRec" +
+      "ord.MessageEntry\032.\n\014MessageEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\237\003\n\026ListCluster" +
+      "LogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022^\n\014service_" +
+      "type\030\003 \001(\0162B.yandex.cloud.mdb.clickhouse" +
+      ".v1.ListClusterLogsRequest.ServiceTypeB\004" +
+      "\350\3071\001\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071" +
+      "\006<=1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\"R" +
+      "\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\016\n\nCLICKHOUSE\020\001\022\025\n\021CLICKHOUSE_KEEPER" +
+      "\020\002\"k\n\027ListClusterLogsResponse\0227\n\004logs\030\001 " +
+      "\003(\0132).yandex.cloud.mdb.clickhouse.v1.Log" +
+      "Record\022\027\n\017next_page_token\030\002 \001(\t\"g\n\017Strea" +
+      "mLogRecord\0229\n\006record\030\001 \001(\0132).yandex.clou" +
+      "d.mdb.clickhouse.v1.LogRecord\022\031\n\021next_re" +
+      "cord_token\030\002 \001(\t\"\242\003\n\030StreamClusterLogsRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\025\n\rcolumn_filter\030\002 \003(\t\022`\n\014service_type\030\003" +
+      " \001(\0162D.yandex.cloud.mdb.clickhouse.v1.St" +
+      "reamClusterLogsRequest.ServiceTypeB\004\350\3071\001" +
+      "\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022+\n\007to_time\030\005 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005" +
+      "<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"R\n\013Ser" +
+      "viceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\016" +
+      "\n\nCLICKHOUSE\020\001\022\025\n\021CLICKHOUSE_KEEPER\020\002\"~\n" +
+      "\034ListClusterOperationsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"o\n\035ListClusterOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"{" +
+      "\n\031ListClusterBackupsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\"n\n\032ListClusterBackupsResponse\0227\n\007bac" +
+      "kups\030\001 \003(\0132&.yandex.cloud.mdb.clickhouse" +
+      ".v1.Backup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027L" +
+      "istClusterHostsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"h" +
+      "\n\030ListClusterHostsResponse\0223\n\005hosts\030\001 \003(" +
+      "\0132$.yandex.cloud.mdb.clickhouse.v1.Host\022" +
+      "\027\n\017next_page_token\030\002 \001(\t\"\265\001\n\026AddClusterH" +
+      "ostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022D\n\nhost_specs\030\002 \003(\0132(.yandex.cloud" +
+      ".mdb.clickhouse.v1.HostSpecB\006\202\3101\002>0\0223\n\013c" +
+      "opy_schema\030\003 \001(\0132\032.google.protobuf.BoolV" +
+      "alueB\002\030\001\"A\n\027AddClusterHostsMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\220\001\n\016" +
+      "UpdateHostSpec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\022" +
+      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
+      "ieldMask\0224\n\020assign_public_ip\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\"\220\001\n\031UpdateCluster" +
+      "HostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022Q\n\021update_host_specs\030\002 \003(\0132..yand" +
+      "ex.cloud.mdb.clickhouse.v1.UpdateHostSpe" +
+      "cB\006\202\3101\002>0\"D\n\032UpdateClusterHostsMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"" +
+      "b\n\031DeleteClusterHostsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003" +
+      "(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteClusterHost" +
+      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
+      "mes\030\002 \003(\t\"c\n\032RestartClusterHostsRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhos" +
+      "t_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=353\"E\n\033Restar" +
+      "tClusterHostsMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\022\022\n\nhost_names\030\002 \003(\t\"n\n\026GetClusterShard" +
       "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
       "0\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[" +
-      "a-zA-Z0-9_-]*\"D\n\032DeleteClusterShardMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_name\030\002 " +
-      "\001(\t\"u\n\032DeleteClusterShardsRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\013shard_nam" +
-      "es\030\002 \003(\tB \202\3101\002>0\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
-      "]*\"F\n\033DeleteClusterShardsMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\022\023\n\013shard_names\030\002 \003(\t\"y\n\033Ge" +
-      "tClusterShardGroupRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\020shard_group_name\030" +
-      "\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\177\n" +
-      "\035ListClusterShardGroupsRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"{\n\036ListClusterShardGroupsResponse" +
-      "\022@\n\014shard_groups\030\001 \003(\0132*.yandex.cloud.md" +
-      "b.clickhouse.v1.ShardGroup\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"\246\001\n\036CreateClusterShardGroupR" +
-      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\0228\n\020shard_group_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63" +
-      "\362\3071\016[a-zA-Z0-9_-]*\022\023\n\013description\030\003 \001(\t\022" +
-      "\023\n\013shard_names\030\004 \003(\t\"O\n\037CreateClusterSha" +
-      "rdGroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020s" +
-      "hard_group_name\030\002 \001(\t\"\327\001\n\036UpdateClusterS" +
-      "hardGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\0228\n\020shard_group_name\030\002 \001(\tB\036\350\307" +
-      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_m" +
-      "ask\030\003 \001(\0132\032.google.protobuf.FieldMask\022\023\n" +
-      "\013description\030\004 \001(\t\022\023\n\013shard_names\030\005 \003(\t\"" +
-      "O\n\037UpdateClusterShardGroupMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\022\030\n\020shard_group_name\030\002 \001(\t" +
-      "\"|\n\036DeleteClusterShardGroupRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\020shard_gr" +
-      "oup_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
-      "-9_-]*\"O\n\037DeleteClusterShardGroupMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020shard_group_nam" +
-      "e\030\002 \001(\t\"\210\001\n&ListClusterExternalDictionar" +
-      "iesRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"\255\001\n\'ListClust" +
-      "erExternalDictionariesResponse\022i\n\025extern" +
-      "al_dictionaries\030\001 \003(\0132J.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.E" +
-      "xternalDictionary\022\027\n\017next_page_token\030\002 \001" +
-      "(\t\"\263\001\n&CreateClusterExternalDictionaryRe" +
+      "a-zA-Z0-9_-]*\"z\n\030ListClusterShardsReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\"k\n\031ListClusterShardsRe" +
+      "sponse\0225\n\006shards\030\001 \003(\0132%.yandex.cloud.md" +
+      "b.clickhouse.v1.Shard\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\253\002\n\026AddClusterShardRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_nam" +
+      "e\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
+      "D\n\013config_spec\030\003 \001(\0132/.yandex.cloud.mdb." +
+      "clickhouse.v1.ShardConfigSpec\022D\n\nhost_sp" +
+      "ecs\030\004 \003(\0132(.yandex.cloud.mdb.clickhouse." +
+      "v1.HostSpecB\006\202\3101\002>0\022/\n\013copy_schema\030\005 \001(\013" +
+      "2\032.google.protobuf.BoolValue\"A\n\027AddClust" +
+      "erShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\ns" +
+      "hard_name\030\002 \001(\t\"\362\001\n\027AddClusterShardsRequ" +
+      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n" +
+      "\013shard_specs\030\002 \003(\0132).yandex.cloud.mdb.cl" +
+      "ickhouse.v1.ShardSpecB\006\202\3101\002>0\022<\n\nhost_sp" +
+      "ecs\030\003 \003(\0132(.yandex.cloud.mdb.clickhouse." +
+      "v1.HostSpec\022/\n\013copy_schema\030\004 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\"C\n\030AddClusterShards" +
+      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\023\n\013shard_na" +
+      "mes\030\002 \003(\t\"\243\002\n\031UpdateClusterShardRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nsha" +
+      "rd_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
+      "9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\022D\n\013config_spec\030\004 \001(\0132/.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.ShardConfig" +
+      "Spec\0229\n\025allow_host_recreation\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\"D\n\032UpdateCluster" +
+      "ShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nsha" +
+      "rd_name\030\002 \001(\t\"q\n\031DeleteClusterShardReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\n" +
+      "shard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-" +
+      "Z0-9_-]*\"D\n\032DeleteClusterShardMetadata\022\022" +
+      "\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"u" +
+      "\n\032DeleteClusterShardsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\013shard_names\030\002 " +
+      "\003(\tB \202\3101\002>0\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"F\n" +
+      "\033DeleteClusterShardsMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\022\023\n\013shard_names\030\002 \003(\t\"y\n\033GetClus" +
+      "terShardGroupRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\0228\n\020shard_group_name\030\002 \001(\t" +
+      "B\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\177\n\035List" +
+      "ClusterShardGroupsRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
+      "\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
+      "0\"{\n\036ListClusterShardGroupsResponse\022@\n\014s" +
+      "hard_groups\030\001 \003(\0132*.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.ShardGroup\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\246\001\n\036CreateClusterShardGroupReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\020s" +
+      "hard_group_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[" +
+      "a-zA-Z0-9_-]*\022\023\n\013description\030\003 \001(\t\022\023\n\013sh" +
+      "ard_names\030\004 \003(\t\"O\n\037CreateClusterShardGro" +
+      "upMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020shard_" +
+      "group_name\030\002 \001(\t\"\327\001\n\036UpdateClusterShardG" +
+      "roupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\0228\n\020shard_group_name\030\002 \001(\tB\036\350\3071\001\212\3101" +
+      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003" +
+      " \001(\0132\032.google.protobuf.FieldMask\022\023\n\013desc" +
+      "ription\030\004 \001(\t\022\023\n\013shard_names\030\005 \003(\t\"O\n\037Up" +
+      "dateClusterShardGroupMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\030\n\020shard_group_name\030\002 \001(\t\"|\n\036D" +
+      "eleteClusterShardGroupRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\020shard_group_n" +
+      "ame\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
+      "*\"O\n\037DeleteClusterShardGroupMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\022\030\n\020shard_group_name\030\002 \001" +
+      "(\t\"\210\001\n&ListClusterExternalDictionariesRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_t" +
+      "oken\030\003 \001(\tB\t\212\3101\005<=100\"\255\001\n\'ListClusterExt" +
+      "ernalDictionariesResponse\022i\n\025external_di" +
+      "ctionaries\030\001 \003(\0132J.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.Extern" +
+      "alDictionary\022\027\n\017next_page_token\030\002 \001(\t\"\263\001" +
+      "\n&CreateClusterExternalDictionaryRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022g\n\023ex" +
+      "ternal_dictionary\030\002 \001(\0132J.yandex.cloud.m" +
+      "db.clickhouse.v1.config.ClickhouseConfig" +
+      ".ExternalDictionary\"=\n\'CreateClusterExte" +
+      "rnalDictionaryMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\"\344\001\n&UpdateClusterExternalDictionaryRe" +
       "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "g\n\023external_dictionary\030\002 \001(\0132J.yandex.cl" +
       "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfig.ExternalDictionary\"=\n\'CreateCluste" +
-      "rExternalDictionaryMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\"\344\001\n&UpdateClusterExternalDiction" +
-      "aryRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022g\n\023external_dictionary\030\002 \001(\0132J.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.ExternalDictionary\022/\n\013update_" +
-      "mask\030\003 \001(\0132\032.google.protobuf.FieldMask\"_" +
-      "\n\'UpdateClusterExternalDictionaryMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\022 \n\030external_dictio" +
-      "nary_name\030\002 \001(\t\"l\n&DeleteClusterExternal" +
-      "DictionaryRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022 \n\030external_dictionary_name\030" +
-      "\002 \001(\t\"=\n\'DeleteClusterExternalDictionary" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"\313\001\n\010HostSpe" +
-      "c\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022=\n\004type\030\002 \001" +
-      "(\0162).yandex.cloud.mdb.clickhouse.v1.Host" +
-      ".TypeB\004\350\3071\001\022\033\n\tsubnet_id\030\003 \001(\tB\010\212\3101\004<=50" +
-      "\022\030\n\020assign_public_ip\030\004 \001(\010\022.\n\nshard_name" +
-      "\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\360\007\n\nC" +
-      "onfigSpec\022\017\n\007version\030\003 \001(\t\022I\n\nclickhouse" +
-      "\030\001 \001(\01325.yandex.cloud.mdb.clickhouse.v1." +
-      "ConfigSpec.Clickhouse\022G\n\tzookeeper\030\002 \001(\013" +
-      "24.yandex.cloud.mdb.clickhouse.v1.Config" +
-      "Spec.Zookeeper\0223\n\023backup_window_start\030\004 " +
-      "\001(\0132\026.google.type.TimeOfDay\0226\n\006access\030\005 " +
-      "\001(\0132&.yandex.cloud.mdb.clickhouse.v1.Acc" +
-      "ess\022C\n\rcloud_storage\030\006 \001(\0132,.yandex.clou" +
-      "d.mdb.clickhouse.v1.CloudStorage\022;\n\027sql_" +
-      "database_management\030\007 \001(\0132\032.google.proto" +
-      "buf.BoolValue\0227\n\023sql_user_management\030\010 \001" +
-      "(\0132\032.google.protobuf.BoolValue\022\026\n\016admin_" +
-      "password\030\t \001(\t\0223\n\017embedded_keeper\030\n \001(\0132" +
-      "\032.google.protobuf.BoolValue\022>\n\031backup_re" +
-      "tain_period_days\030\013 \001(\0132\033.google.protobuf" +
-      ".Int64Value\032\347\001\n\nClickhouse\022G\n\006config\030\001 \001" +
-      "(\01327.yandex.cloud.mdb.clickhouse.v1.conf" +
-      "ig.ClickhouseConfig\022<\n\tresources\030\002 \001(\0132)" +
-      ".yandex.cloud.mdb.clickhouse.v1.Resource" +
-      "s\022R\n\025disk_size_autoscaling\030\003 \001(\01323.yande" +
-      "x.cloud.mdb.clickhouse.v1.DiskSizeAutosc" +
-      "aling\032\235\001\n\tZookeeper\022<\n\tresources\030\001 \001(\0132)" +
-      ".yandex.cloud.mdb.clickhouse.v1.Resource" +
-      "s\022R\n\025disk_size_autoscaling\030\002 \001(\01323.yande" +
-      "x.cloud.mdb.clickhouse.v1.DiskSizeAutosc" +
-      "aling\"\370\002\n\017ShardConfigSpec\022N\n\nclickhouse\030" +
-      "\001 \001(\0132:.yandex.cloud.mdb.clickhouse.v1.S" +
-      "hardConfigSpec.Clickhouse\032\224\002\n\nClickhouse" +
-      "\022G\n\006config\030\001 \001(\01327.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfig\022<\n\tres" +
-      "ources\030\002 \001(\0132).yandex.cloud.mdb.clickhou" +
-      "se.v1.Resources\022+\n\006weight\030\003 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022R\n\025disk_size_autosc" +
-      "aling\030\004 \001(\01323.yandex.cloud.mdb.clickhous" +
-      "e.v1.DiskSizeAutoscaling\"\232\001\n\tShardSpec\022," +
-      "\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022D\n\013config_spec\030\002 \001(\0132/.yandex.cloud" +
-      ".mdb.clickhouse.v1.ShardConfigSpec\022\031\n\021sh" +
-      "ard_group_names\030\003 \003(\t2\257D\n\016ClusterService" +
-      "\022\227\001\n\003Get\0221.yandex.cloud.mdb.clickhouse.v" +
-      "1.GetClusterRequest\032\'.yandex.cloud.mdb.c" +
-      "lickhouse.v1.Cluster\"4\202\323\344\223\002.\022,/managed-c" +
-      "lickhouse/v1/clusters/{cluster_id}\022\232\001\n\004L" +
-      "ist\0223.yandex.cloud.mdb.clickhouse.v1.Lis" +
-      "tClustersRequest\0324.yandex.cloud.mdb.clic" +
-      "khouse.v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037" +
-      "/managed-clickhouse/v1/clusters\022\261\001\n\006Crea" +
-      "te\0224.yandex.cloud.mdb.clickhouse.v1.Crea" +
-      "teClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"N\202\323\344\223\002$\"\037/managed-clickhouse" +
-      "/v1/clusters:\001*\262\322* \n\025CreateClusterMetada" +
-      "ta\022\007Cluster\022\276\001\n\006Update\0224.yandex.cloud.md" +
-      "b.clickhouse.v1.UpdateClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"[\202\323\344\223\00212" +
-      ",/managed-clickhouse/v1/clusters/{cluste" +
-      "r_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clu" +
-      "ster\022\311\001\n\006Delete\0224.yandex.cloud.mdb.click" +
-      "house.v1.DeleteClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"f\202\323\344\223\002.*,/manag" +
-      "ed-clickhouse/v1/clusters/{cluster_id}\262\322" +
-      "*.\n\025DeleteClusterMetadata\022\025google.protob" +
-      "uf.Empty\022\276\001\n\005Start\0223.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.StartClusterRequest\032!.yandex" +
-      ".cloud.operation.Operation\"]\202\323\344\223\0024\"2/man" +
-      "aged-clickhouse/v1/clusters/{cluster_id}" +
-      ":start\262\322*\037\n\024StartClusterMetadata\022\007Cluste" +
-      "r\022\272\001\n\004Stop\0222.yandex.cloud.mdb.clickhouse" +
-      ".v1.StopClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"[\202\323\344\223\0023\"1/managed-clic" +
-      "khouse/v1/clusters/{cluster_id}:stop\262\322*\036" +
-      "\n\023StopClusterMetadata\022\007Cluster\022\275\001\n\004Move\022" +
-      "2.yandex.cloud.mdb.clickhouse.v1.MoveClu" +
+      "onfig.ExternalDictionary\022/\n\013update_mask\030" +
+      "\003 \001(\0132\032.google.protobuf.FieldMask\"_\n\'Upd" +
+      "ateClusterExternalDictionaryMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\022 \n\030external_dictionary_" +
+      "name\030\002 \001(\t\"l\n&DeleteClusterExternalDicti" +
+      "onaryRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022 \n\030external_dictionary_name\030\002 \001(\t" +
+      "\"=\n\'DeleteClusterExternalDictionaryMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"\313\001\n\010HostSpec\022\031\n\007" +
+      "zone_id\030\001 \001(\tB\010\212\3101\004<=50\022=\n\004type\030\002 \001(\0162)." +
+      "yandex.cloud.mdb.clickhouse.v1.Host.Type" +
+      "B\004\350\3071\001\022\033\n\tsubnet_id\030\003 \001(\tB\010\212\3101\004<=50\022\030\n\020a" +
+      "ssign_public_ip\030\004 \001(\010\022.\n\nshard_name\030\005 \001(" +
+      "\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\360\007\n\nConfig" +
+      "Spec\022\017\n\007version\030\003 \001(\t\022I\n\nclickhouse\030\001 \001(" +
+      "\01325.yandex.cloud.mdb.clickhouse.v1.Confi" +
+      "gSpec.Clickhouse\022G\n\tzookeeper\030\002 \001(\01324.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.ConfigSpec." +
+      "Zookeeper\0223\n\023backup_window_start\030\004 \001(\0132\026" +
+      ".google.type.TimeOfDay\0226\n\006access\030\005 \001(\0132&" +
+      ".yandex.cloud.mdb.clickhouse.v1.Access\022C" +
+      "\n\rcloud_storage\030\006 \001(\0132,.yandex.cloud.mdb" +
+      ".clickhouse.v1.CloudStorage\022;\n\027sql_datab" +
+      "ase_management\030\007 \001(\0132\032.google.protobuf.B" +
+      "oolValue\0227\n\023sql_user_management\030\010 \001(\0132\032." +
+      "google.protobuf.BoolValue\022\026\n\016admin_passw" +
+      "ord\030\t \001(\t\0223\n\017embedded_keeper\030\n \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022>\n\031backup_retain_" +
+      "period_days\030\013 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\032\347\001\n\nClickhouse\022G\n\006config\030\001 \001(\01327." +
+      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
+      "ickhouseConfig\022<\n\tresources\030\002 \001(\0132).yand" +
+      "ex.cloud.mdb.clickhouse.v1.Resources\022R\n\025" +
+      "disk_size_autoscaling\030\003 \001(\01323.yandex.clo" +
+      "ud.mdb.clickhouse.v1.DiskSizeAutoscaling" +
+      "\032\235\001\n\tZookeeper\022<\n\tresources\030\001 \001(\0132).yand" +
+      "ex.cloud.mdb.clickhouse.v1.Resources\022R\n\025" +
+      "disk_size_autoscaling\030\002 \001(\01323.yandex.clo" +
+      "ud.mdb.clickhouse.v1.DiskSizeAutoscaling" +
+      "\"\370\002\n\017ShardConfigSpec\022N\n\nclickhouse\030\001 \001(\013" +
+      "2:.yandex.cloud.mdb.clickhouse.v1.ShardC" +
+      "onfigSpec.Clickhouse\032\224\002\n\nClickhouse\022G\n\006c" +
+      "onfig\030\001 \001(\01327.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig\022<\n\tresource" +
+      "s\030\002 \001(\0132).yandex.cloud.mdb.clickhouse.v1" +
+      ".Resources\022+\n\006weight\030\003 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022R\n\025disk_size_autoscaling" +
+      "\030\004 \001(\01323.yandex.cloud.mdb.clickhouse.v1." +
+      "DiskSizeAutoscaling\"\232\001\n\tShardSpec\022,\n\004nam" +
+      "e\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
+      "D\n\013config_spec\030\002 \001(\0132/.yandex.cloud.mdb." +
+      "clickhouse.v1.ShardConfigSpec\022\031\n\021shard_g" +
+      "roup_names\030\003 \003(\t2\257D\n\016ClusterService\022\227\001\n\003" +
+      "Get\0221.yandex.cloud.mdb.clickhouse.v1.Get" +
+      "ClusterRequest\032\'.yandex.cloud.mdb.clickh" +
+      "ouse.v1.Cluster\"4\202\323\344\223\002.\022,/managed-clickh" +
+      "ouse/v1/clusters/{cluster_id}\022\232\001\n\004List\0223" +
+      ".yandex.cloud.mdb.clickhouse.v1.ListClus" +
+      "tersRequest\0324.yandex.cloud.mdb.clickhous" +
+      "e.v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/mana" +
+      "ged-clickhouse/v1/clusters\022\261\001\n\006Create\0224." +
+      "yandex.cloud.mdb.clickhouse.v1.CreateClu" +
       "sterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"^\202\323\344\223\0026\"1/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveCl" +
-      "usterMetadata\022\007Cluster\022\335\001\n\014AddZookeeper\022" +
-      ":.yandex.cloud.mdb.clickhouse.v1.AddClus" +
-      "terZookeeperRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"n\202\323\344\223\002>\"9/managed-clickho" +
-      "use/v1/clusters/{cluster_id}:addZookeepe" +
-      "r:\001*\262\322*&\n\033AddClusterZookeeperMetadata\022\007C" +
-      "luster\022\302\001\n\006Backup\0224.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.BackupClusterRequest\032!.yandex" +
-      ".cloud.operation.Operation\"_\202\323\344\223\0025\"3/man" +
+      "ration\"N\202\323\344\223\002$\"\037/managed-clickhouse/v1/c" +
+      "lusters:\001*\262\322* \n\025CreateClusterMetadata\022\007C" +
+      "luster\022\276\001\n\006Update\0224.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.UpdateClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"[\202\323\344\223\00212,/man" +
       "aged-clickhouse/v1/clusters/{cluster_id}" +
-      ":backup\262\322* \n\025BackupClusterMetadata\022\007Clus" +
-      "ter\022\274\001\n\007Restore\0225.yandex.cloud.mdb.click" +
-      "house.v1.RestoreClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"W\202\323\344\223\002,\"\'/mana" +
-      "ged-clickhouse/v1/clusters:restore:\001*\262\322*" +
-      "!\n\026RestoreClusterMetadata\022\007Cluster\022\363\001\n\025R" +
-      "escheduleMaintenance\022<.yandex.cloud.mdb." +
-      "clickhouse.v1.RescheduleMaintenanceReque",
-      "st\032!.yandex.cloud.operation.Operation\"y\202" +
-      "\323\344\223\002G\"B/managed-clickhouse/v1/clusters/{" +
-      "cluster_id}:rescheduleMaintenance:\001*\262\322*(" +
-      "\n\035RescheduleMaintenanceMetadata\022\007Cluster" +
-      "\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb.clickho" +
-      "use.v1.ListClusterLogsRequest\0327.yandex.c" +
-      "loud.mdb.clickhouse.v1.ListClusterLogsRe" +
-      "sponse\"9\202\323\344\223\0023\0221/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}:logs\022\273\001\n\nStreamLogs" +
-      "\0228.yandex.cloud.mdb.clickhouse.v1.Stream" +
-      "ClusterLogsRequest\032/.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/ma" +
-      "naged-clickhouse/v1/clusters/{cluster_id" +
-      "}:stream_logs0\001\022\316\001\n\016ListOperations\022<.yan" +
-      "dex.cloud.mdb.clickhouse.v1.ListClusterO" +
-      "perationsRequest\032=.yandex.cloud.mdb.clic" +
-      "khouse.v1.ListClusterOperationsResponse\"" +
-      "?\202\323\344\223\0029\0227/managed-clickhouse/v1/clusters" +
-      "/{cluster_id}/operations\022\302\001\n\013ListBackups" +
-      "\0229.yandex.cloud.mdb.clickhouse.v1.ListCl" +
-      "usterBackupsRequest\032:.yandex.cloud.mdb.c" +
-      "lickhouse.v1.ListClusterBackupsResponse\"" +
-      "<\202\323\344\223\0026\0224/managed-clickhouse/v1/clusters" +
-      "/{cluster_id}/backups\022\272\001\n\tListHosts\0227.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.ListCluster" +
-      "HostsRequest\0328.yandex.cloud.mdb.clickhou" +
-      "se.v1.ListClusterHostsResponse\":\202\323\344\223\0024\0222" +
-      "/managed-clickhouse/v1/clusters/{cluster" +
-      "_id}/hosts\022\344\001\n\010AddHosts\0226.yandex.cloud.m" +
-      "db.clickhouse.v1.AddClusterHostsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"}\202\323\344\223" +
-      "\002C\">/managed-clickhouse/v1/clusters/{clu" +
-      "ster_id}/hosts:batchCreate:\001*\262\322*0\n\027AddCl" +
-      "usterHostsMetadata\022\025google.protobuf.Empt" +
-      "y\022\356\001\n\013UpdateHosts\0229.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.UpdateClusterHostsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\200\001\202\323\344\223\002C" +
-      "\">/managed-clickhouse/v1/clusters/{clust" +
-      "er_id}/hosts:batchUpdate:\001*\262\322*3\n\032UpdateC" +
-      "lusterHostsMetadata\022\025google.protobuf.Emp" +
-      "ty\022\356\001\n\013DeleteHosts\0229.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.DeleteClusterHostsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\200\001\202\323\344\223\002" +
-      "C\">/managed-clickhouse/v1/clusters/{clus" +
-      "ter_id}/hosts:batchDelete:\001*\262\322*3\n\032Delete" +
-      "ClusterHostsMetadata\022\025google.protobuf.Em" +
-      "pty\022\362\001\n\014RestartHosts\022:.yandex.cloud.mdb." +
-      "clickhouse.v1.RestartClusterHostsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\202\001\202\323" +
-      "\344\223\002D\"?/managed-clickhouse/v1/clusters/{c" +
-      "luster_id}/hosts:restartHosts:\001*\262\322*4\n\033Re" +
-      "startClusterHostsMetadata\022\025google.protob" +
-      "uf.Empty\022\263\001\n\010GetShard\0226.yandex.cloud.mdb" +
-      ".clickhouse.v1.GetClusterShardRequest\032%." +
-      "yandex.cloud.mdb.clickhouse.v1.Shard\"H\202\323" +
-      "\344\223\002B\022@/managed-clickhouse/v1/clusters/{c" +
-      "luster_id}/shards/{shard_name}\022\276\001\n\nListS" +
-      "hards\0228.yandex.cloud.mdb.clickhouse.v1.L" +
-      "istClusterShardsRequest\0329.yandex.cloud.m" +
-      "db.clickhouse.v1.ListClusterShardsRespon" +
-      "se\";\202\323\344\223\0025\0223/managed-clickhouse/v1/clust" +
-      "ers/{cluster_id}/shards\022\314\001\n\010AddShard\0226.y" +
-      "andex.cloud.mdb.clickhouse.v1.AddCluster" +
-      "ShardRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"e\210\002\001\202\323\344\223\0028\"3/managed-clickhouse/" +
-      "v1/clusters/{cluster_id}/shards:\001*\262\322* \n\027" +
-      "AddClusterShardMetadata\022\005Shard\022\331\001\n\tAddSh" +
-      "ards\0227.yandex.cloud.mdb.clickhouse.v1.Ad" +
-      "dClusterShardsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"p\202\323\344\223\002D\"?/managed-click" +
-      "house/v1/clusters/{cluster_id}/shards:ba" +
-      "tchCreate:\001*\262\322*\"\n\030AddClusterShardsMetada" +
-      "ta\022\006Shards\022\337\001\n\013UpdateShard\0229.yandex.clou" +
-      "d.mdb.clickhouse.v1.UpdateClusterShardRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"r\202\323\344\223\002E2@/managed-clickhouse/v1/cluster" +
-      "s/{cluster_id}/shards/{shard_name}:\001*\262\322*" +
-      "#\n\032UpdateClusterShardMetadata\022\005Shard\022\360\001\n" +
-      "\013DeleteShard\0229.yandex.cloud.mdb.clickhou" +
-      "se.v1.DeleteClusterShardRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\202\001\210\002\001\202\323\344\223\002B*@" +
-      "/managed-clickhouse/v1/clusters/{cluster" +
-      "_id}/shards/{shard_name}\262\322*3\n\032DeleteClus" +
-      "terShardMetadata\022\025google.protobuf.Empty\022" +
-      "\362\001\n\014DeleteShards\022:.yandex.cloud.mdb.clic" +
-      "khouse.v1.DeleteClusterShardsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\202\001\202\323\344\223\002D" +
-      "\"?/managed-clickhouse/v1/clusters/{clust" +
-      "er_id}/shards:batchDelete:\001*\262\322*4\n\033Delete" +
-      "ClusterShardsMetadata\022\025google.protobuf.E" +
-      "mpty\022\315\001\n\rGetShardGroup\022;.yandex.cloud.md" +
-      "b.clickhouse.v1.GetClusterShardGroupRequ" +
-      "est\032*.yandex.cloud.mdb.clickhouse.v1.Sha" +
-      "rdGroup\"S\202\323\344\223\002M\022K/managed-clickhouse/v1/" +
-      "clusters/{cluster_id}/shardGroups/{shard" +
-      "_group_name}\022\322\001\n\017ListShardGroups\022=.yande" +
-      "x.cloud.mdb.clickhouse.v1.ListClusterSha" +
-      "rdGroupsRequest\032>.yandex.cloud.mdb.click" +
-      "house.v1.ListClusterShardGroupsResponse\"" +
-      "@\202\323\344\223\002:\0228/managed-clickhouse/v1/clusters" +
-      "/{cluster_id}/shardGroups\022\353\001\n\020CreateShar" +
-      "dGroup\022>.yandex.cloud.mdb.clickhouse.v1." +
-      "CreateClusterShardGroupRequest\032!.yandex." +
-      "cloud.operation.Operation\"t\202\323\344\223\002=\"8/mana" +
-      "ged-clickhouse/v1/clusters/{cluster_id}/" +
-      "shardGroups:\001*\262\322*-\n\037CreateClusterShardGr" +
-      "oupMetadata\022\nShardGroup\022\377\001\n\020UpdateShardG" +
-      "roup\022>.yandex.cloud.mdb.clickhouse.v1.Up" +
-      "dateClusterShardGroupRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\207\001\202\323\344\223\002P2K/manag" +
-      "ed-clickhouse/v1/clusters/{cluster_id}/s" +
-      "hardGroups/{shard_group_name}:\001*\262\322*-\n\037Up" +
-      "dateClusterShardGroupMetadata\022\nShardGrou" +
-      "p\022\207\002\n\020DeleteShardGroup\022>.yandex.cloud.md" +
-      "b.clickhouse.v1.DeleteClusterShardGroupR" +
+      ":\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022" +
+      "\311\001\n\006Delete\0224.yandex.cloud.mdb.clickhouse" +
+      ".v1.DeleteClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"f\202\323\344\223\002.*,/managed-cl" +
+      "ickhouse/v1/clusters/{cluster_id}\262\322*.\n\025D" +
+      "eleteClusterMetadata\022\025google.protobuf.Em" +
+      "pty\022\276\001\n\005Start\0223.yandex.cloud.mdb.clickho" +
+      "use.v1.StartClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"]\202\323\344\223\0024\"2/managed-" +
+      "clickhouse/v1/clusters/{cluster_id}:star" +
+      "t\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\272\001\n" +
+      "\004Stop\0222.yandex.cloud.mdb.clickhouse.v1.S" +
+      "topClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"[\202\323\344\223\0023\"1/managed-clickhous" +
+      "e/v1/clusters/{cluster_id}:stop\262\322*\036\n\023Sto" +
+      "pClusterMetadata\022\007Cluster\022\275\001\n\004Move\0222.yan" +
+      "dex.cloud.mdb.clickhouse.v1.MoveClusterR" +
       "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"\217\001\202\323\344\223\002M*K/managed-clickhouse/v1/clust" +
+      "n\"^\202\323\344\223\0026\"1/managed-clickhouse/v1/cluste" +
+      "rs/{cluster_id}:move:\001*\262\322*\036\n\023MoveCluster" +
+      "Metadata\022\007Cluster\022\335\001\n\014AddZookeeper\022:.yan" +
+      "dex.cloud.mdb.clickhouse.v1.AddClusterZo" +
+      "okeeperRequest\032!.yandex.cloud.operation." +
+      "Operation\"n\202\323\344\223\002>\"9/managed-clickhouse/v" +
+      "1/clusters/{cluster_id}:addZookeeper:\001*\262" +
+      "\322*&\n\033AddClusterZookeeperMetadata\022\007Cluste" +
+      "r\022\302\001\n\006Backup\0224.yandex.cloud.mdb.clickhou" +
+      "se.v1.BackupClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"_\202\323\344\223\0025\"3/managed-" +
+      "clickhouse/v1/clusters/{cluster_id}:back" +
+      "up\262\322* \n\025BackupClusterMetadata\022\007Cluster\022\274" +
+      "\001\n\007Restore\0225.yandex.cloud.mdb.clickhouse" +
+      ".v1.RestoreClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"W\202\323\344\223\002,\"\'/managed-c",
+      "lickhouse/v1/clusters:restore:\001*\262\322*!\n\026Re" +
+      "storeClusterMetadata\022\007Cluster\022\363\001\n\025Resche" +
+      "duleMaintenance\022<.yandex.cloud.mdb.click" +
+      "house.v1.RescheduleMaintenanceRequest\032!." +
+      "yandex.cloud.operation.Operation\"y\202\323\344\223\002G" +
+      "\"B/managed-clickhouse/v1/clusters/{clust" +
+      "er_id}:rescheduleMaintenance:\001*\262\322*(\n\035Res" +
+      "cheduleMaintenanceMetadata\022\007Cluster\022\266\001\n\010" +
+      "ListLogs\0226.yandex.cloud.mdb.clickhouse.v" +
+      "1.ListClusterLogsRequest\0327.yandex.cloud." +
+      "mdb.clickhouse.v1.ListClusterLogsRespons" +
+      "e\"9\202\323\344\223\0023\0221/managed-clickhouse/v1/cluste" +
+      "rs/{cluster_id}:logs\022\273\001\n\nStreamLogs\0228.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.StreamClust" +
+      "erLogsRequest\032/.yandex.cloud.mdb.clickho" +
+      "use.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/managed" +
+      "-clickhouse/v1/clusters/{cluster_id}:str" +
+      "eam_logs0\001\022\316\001\n\016ListOperations\022<.yandex.c" +
+      "loud.mdb.clickhouse.v1.ListClusterOperat" +
+      "ionsRequest\032=.yandex.cloud.mdb.clickhous" +
+      "e.v1.ListClusterOperationsResponse\"?\202\323\344\223" +
+      "\0029\0227/managed-clickhouse/v1/clusters/{clu" +
+      "ster_id}/operations\022\302\001\n\013ListBackups\0229.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.ListCluster" +
+      "BackupsRequest\032:.yandex.cloud.mdb.clickh" +
+      "ouse.v1.ListClusterBackupsResponse\"<\202\323\344\223" +
+      "\0026\0224/managed-clickhouse/v1/clusters/{clu" +
+      "ster_id}/backups\022\272\001\n\tListHosts\0227.yandex." +
+      "cloud.mdb.clickhouse.v1.ListClusterHosts" +
+      "Request\0328.yandex.cloud.mdb.clickhouse.v1" +
+      ".ListClusterHostsResponse\":\202\323\344\223\0024\0222/mana" +
+      "ged-clickhouse/v1/clusters/{cluster_id}/" +
+      "hosts\022\344\001\n\010AddHosts\0226.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.AddClusterHostsRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"}\202\323\344\223\002C\">/" +
+      "managed-clickhouse/v1/clusters/{cluster_" +
+      "id}/hosts:batchCreate:\001*\262\322*0\n\027AddCluster" +
+      "HostsMetadata\022\025google.protobuf.Empty\022\356\001\n" +
+      "\013UpdateHosts\0229.yandex.cloud.mdb.clickhou" +
+      "se.v1.UpdateClusterHostsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\200\001\202\323\344\223\002C\">/ma" +
+      "naged-clickhouse/v1/clusters/{cluster_id" +
+      "}/hosts:batchUpdate:\001*\262\322*3\n\032UpdateCluste" +
+      "rHostsMetadata\022\025google.protobuf.Empty\022\356\001" +
+      "\n\013DeleteHosts\0229.yandex.cloud.mdb.clickho" +
+      "use.v1.DeleteClusterHostsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\200\001\202\323\344\223\002C\">/m" +
+      "anaged-clickhouse/v1/clusters/{cluster_i" +
+      "d}/hosts:batchDelete:\001*\262\322*3\n\032DeleteClust" +
+      "erHostsMetadata\022\025google.protobuf.Empty\022\362" +
+      "\001\n\014RestartHosts\022:.yandex.cloud.mdb.click" +
+      "house.v1.RestartClusterHostsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\202\001\202\323\344\223\002D\"" +
+      "?/managed-clickhouse/v1/clusters/{cluste" +
+      "r_id}/hosts:restartHosts:\001*\262\322*4\n\033Restart" +
+      "ClusterHostsMetadata\022\025google.protobuf.Em" +
+      "pty\022\263\001\n\010GetShard\0226.yandex.cloud.mdb.clic" +
+      "khouse.v1.GetClusterShardRequest\032%.yande" +
+      "x.cloud.mdb.clickhouse.v1.Shard\"H\202\323\344\223\002B\022" +
+      "@/managed-clickhouse/v1/clusters/{cluste" +
+      "r_id}/shards/{shard_name}\022\276\001\n\nListShards" +
+      "\0228.yandex.cloud.mdb.clickhouse.v1.ListCl" +
+      "usterShardsRequest\0329.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.ListClusterShardsResponse\";\202" +
+      "\323\344\223\0025\0223/managed-clickhouse/v1/clusters/{" +
+      "cluster_id}/shards\022\314\001\n\010AddShard\0226.yandex" +
+      ".cloud.mdb.clickhouse.v1.AddClusterShard" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"e\210\002\001\202\323\344\223\0028\"3/managed-clickhouse/v1/cl" +
+      "usters/{cluster_id}/shards:\001*\262\322* \n\027AddCl" +
+      "usterShardMetadata\022\005Shard\022\331\001\n\tAddShards\022" +
+      "7.yandex.cloud.mdb.clickhouse.v1.AddClus" +
+      "terShardsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"p\202\323\344\223\002D\"?/managed-clickhouse" +
+      "/v1/clusters/{cluster_id}/shards:batchCr" +
+      "eate:\001*\262\322*\"\n\030AddClusterShardsMetadata\022\006S" +
+      "hards\022\337\001\n\013UpdateShard\0229.yandex.cloud.mdb" +
+      ".clickhouse.v1.UpdateClusterShardRequest" +
+      "\032!.yandex.cloud.operation.Operation\"r\202\323\344" +
+      "\223\002E2@/managed-clickhouse/v1/clusters/{cl" +
+      "uster_id}/shards/{shard_name}:\001*\262\322*#\n\032Up" +
+      "dateClusterShardMetadata\022\005Shard\022\360\001\n\013Dele" +
+      "teShard\0229.yandex.cloud.mdb.clickhouse.v1" +
+      ".DeleteClusterShardRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\202\001\210\002\001\202\323\344\223\002B*@/mana" +
+      "ged-clickhouse/v1/clusters/{cluster_id}/" +
+      "shards/{shard_name}\262\322*3\n\032DeleteClusterSh" +
+      "ardMetadata\022\025google.protobuf.Empty\022\362\001\n\014D" +
+      "eleteShards\022:.yandex.cloud.mdb.clickhous" +
+      "e.v1.DeleteClusterShardsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\202\001\202\323\344\223\002D\"?/ma" +
+      "naged-clickhouse/v1/clusters/{cluster_id" +
+      "}/shards:batchDelete:\001*\262\322*4\n\033DeleteClust" +
+      "erShardsMetadata\022\025google.protobuf.Empty\022" +
+      "\315\001\n\rGetShardGroup\022;.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.GetClusterShardGroupRequest\032*" +
+      ".yandex.cloud.mdb.clickhouse.v1.ShardGro" +
+      "up\"S\202\323\344\223\002M\022K/managed-clickhouse/v1/clust" +
       "ers/{cluster_id}/shardGroups/{shard_grou" +
-      "p_name}\262\322*8\n\037DeleteClusterShardGroupMeta" +
-      "data\022\025google.protobuf.Empty\022\366\001\n\030ListExte" +
-      "rnalDictionaries\022F.yandex.cloud.mdb.clic" +
-      "khouse.v1.ListClusterExternalDictionarie" +
-      "sRequest\032G.yandex.cloud.mdb.clickhouse.v" +
-      "1.ListClusterExternalDictionariesRespons" +
-      "e\"I\202\323\344\223\002C\022A/managed-clickhouse/v1/cluste" +
-      "rs/{cluster_id}/externalDictionaries\022\216\002\n" +
-      "\030CreateExternalDictionary\022F.yandex.cloud" +
-      ".mdb.clickhouse.v1.CreateClusterExternal" +
-      "DictionaryRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\206\001\202\323\344\223\002J\"E/managed-clickhou" +
-      "se/v1/clusters/{cluster_id}:createExtern" +
-      "alDictionary:\001*\262\322*2\n\'CreateClusterExtern" +
-      "alDictionaryMetadata\022\007Cluster\022\216\002\n\030Update" +
-      "ExternalDictionary\022F.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.UpdateClusterExternalDiction" +
-      "aryRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\206\001\202\323\344\223\002J\"E/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}:updateExternalDicti" +
-      "onary:\001*\262\322*2\n\'UpdateClusterExternalDicti" +
-      "onaryMetadata\022\007Cluster\022\216\002\n\030DeleteExterna" +
-      "lDictionary\022F.yandex.cloud.mdb.clickhous" +
-      "e.v1.DeleteClusterExternalDictionaryRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\206" +
-      "\001\202\323\344\223\002J\"E/managed-clickhouse/v1/clusters" +
-      "/{cluster_id}:deleteExternalDictionary:\001" +
-      "*\262\322*2\n\'DeleteClusterExternalDictionaryMe" +
-      "tadata\022\007Cluster\022\277\001\n\022ListAccessBindings\022." +
-      ".yandex.cloud.access.ListAccessBindingsR" +
-      "equest\032/.yandex.cloud.access.ListAccessB" +
-      "indingsResponse\"H\202\323\344\223\002B\022@/managed-clickh" +
-      "ouse/v1/clusters/{resource_id}:listAcces" +
-      "sBindings\022\376\001\n\021SetAccessBindings\022-.yandex" +
-      ".cloud.access.SetAccessBindingsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\226\001\202\323\344\223" +
-      "\002D\"?/managed-clickhouse/v1/clusters/{res" +
-      "ource_id}:setAccessBindings:\001*\262\322*H\n acce" +
-      "ss.SetAccessBindingsMetadata\022$access.Acc" +
-      "essBindingsOperationResult\022\212\002\n\024UpdateAcc" +
-      "essBindings\0220.yandex.cloud.access.Update" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\234\001\202\323\344\223\002G2B/managed-clic" +
-      "khouse/v1/clusters/{resource_id}:updateA" +
-      "ccessBindings:\001*\262\322*K\n#access.UpdateAcces" +
-      "sBindingsMetadata\022$access.AccessBindings" +
-      "OperationResultBs\n\"yandex.cloud.api.mdb." +
-      "clickhouse.v1ZMgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/mdb/clickhouse/v" +
-      "1;clickhouseb\006proto3"
+      "p_name}\022\322\001\n\017ListShardGroups\022=.yandex.clo" +
+      "ud.mdb.clickhouse.v1.ListClusterShardGro" +
+      "upsRequest\032>.yandex.cloud.mdb.clickhouse" +
+      ".v1.ListClusterShardGroupsResponse\"@\202\323\344\223" +
+      "\002:\0228/managed-clickhouse/v1/clusters/{clu" +
+      "ster_id}/shardGroups\022\353\001\n\020CreateShardGrou" +
+      "p\022>.yandex.cloud.mdb.clickhouse.v1.Creat" +
+      "eClusterShardGroupRequest\032!.yandex.cloud" +
+      ".operation.Operation\"t\202\323\344\223\002=\"8/managed-c" +
+      "lickhouse/v1/clusters/{cluster_id}/shard" +
+      "Groups:\001*\262\322*-\n\037CreateClusterShardGroupMe" +
+      "tadata\022\nShardGroup\022\377\001\n\020UpdateShardGroup\022" +
+      ">.yandex.cloud.mdb.clickhouse.v1.UpdateC" +
+      "lusterShardGroupRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\207\001\202\323\344\223\002P2K/managed-cl" +
+      "ickhouse/v1/clusters/{cluster_id}/shardG" +
+      "roups/{shard_group_name}:\001*\262\322*-\n\037UpdateC" +
+      "lusterShardGroupMetadata\022\nShardGroup\022\207\002\n" +
+      "\020DeleteShardGroup\022>.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.DeleteClusterShardGroupReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\217\001\202" +
+      "\323\344\223\002M*K/managed-clickhouse/v1/clusters/{" +
+      "cluster_id}/shardGroups/{shard_group_nam" +
+      "e}\262\322*8\n\037DeleteClusterShardGroupMetadata\022" +
+      "\025google.protobuf.Empty\022\366\001\n\030ListExternalD" +
+      "ictionaries\022F.yandex.cloud.mdb.clickhous" +
+      "e.v1.ListClusterExternalDictionariesRequ" +
+      "est\032G.yandex.cloud.mdb.clickhouse.v1.Lis" +
+      "tClusterExternalDictionariesResponse\"I\202\323" +
+      "\344\223\002C\022A/managed-clickhouse/v1/clusters/{c" +
+      "luster_id}/externalDictionaries\022\216\002\n\030Crea" +
+      "teExternalDictionary\022F.yandex.cloud.mdb." +
+      "clickhouse.v1.CreateClusterExternalDicti" +
+      "onaryRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\206\001\202\323\344\223\002J\"E/managed-clickhouse/v1" +
+      "/clusters/{cluster_id}:createExternalDic" +
+      "tionary:\001*\262\322*2\n\'CreateClusterExternalDic" +
+      "tionaryMetadata\022\007Cluster\022\216\002\n\030UpdateExter" +
+      "nalDictionary\022F.yandex.cloud.mdb.clickho" +
+      "use.v1.UpdateClusterExternalDictionaryRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\206\001\202\323\344\223\002J\"E/managed-clickhouse/v1/cluste" +
+      "rs/{cluster_id}:updateExternalDictionary" +
+      ":\001*\262\322*2\n\'UpdateClusterExternalDictionary" +
+      "Metadata\022\007Cluster\022\216\002\n\030DeleteExternalDict" +
+      "ionary\022F.yandex.cloud.mdb.clickhouse.v1." +
+      "DeleteClusterExternalDictionaryRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\206\001\202\323\344\223" +
+      "\002J\"E/managed-clickhouse/v1/clusters/{clu" +
+      "ster_id}:deleteExternalDictionary:\001*\262\322*2" +
+      "\n\'DeleteClusterExternalDictionaryMetadat" +
+      "a\022\007Cluster\022\277\001\n\022ListAccessBindings\022..yand" +
+      "ex.cloud.access.ListAccessBindingsReques" +
+      "t\032/.yandex.cloud.access.ListAccessBindin" +
+      "gsResponse\"H\202\323\344\223\002B\022@/managed-clickhouse/" +
+      "v1/clusters/{resource_id}:listAccessBind" +
+      "ings\022\376\001\n\021SetAccessBindings\022-.yandex.clou" +
+      "d.access.SetAccessBindingsRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\226\001\202\323\344\223\002D\"?/" +
+      "managed-clickhouse/v1/clusters/{resource" +
+      "_id}:setAccessBindings:\001*\262\322*H\n access.Se" +
+      "tAccessBindingsMetadata\022$access.AccessBi" +
+      "ndingsOperationResult\022\212\002\n\024UpdateAccessBi" +
+      "ndings\0220.yandex.cloud.access.UpdateAcces" +
+      "sBindingsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\234\001\202\323\344\223\002G2B/managed-clickhous" +
+      "e/v1/clusters/{resource_id}:updateAccess" +
+      "Bindings:\001*\262\322*K\n#access.UpdateAccessBind" +
+      "ingsMetadata\022$access.AccessBindingsOpera" +
+      "tionResultBs\n\"yandex.cloud.api.mdb.click" +
+      "house.v1ZMgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/clickhouse/v1;cli" +
+      "ckhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -91826,33 +93129,39 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "AdditionalBackupIds", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "ServiceAccountId", "SecurityGroupIds", "DeletionProtection", "ShardSpecs", "DiskEncryptionKeyId", "MaintenanceWindow", });
+        new java.lang.String[] { "BackupId", "AdditionalBackupIds", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "ServiceAccountId", "SecurityGroupIds", "DeletionProtection", "ShardSpecs", "DiskEncryptionKeyId", "MaintenanceWindow", "PartialRestore", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterMetadata_descriptor =
+    internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_descriptor =
       getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_PartialRestoreSpec_descriptor,
+        new java.lang.String[] { "IncludePatterns", "ExcludePatterns", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_RestoreClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "BackupId", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_RescheduleMaintenanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_mdb_clickhouse_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_RescheduleMaintenanceRequest_descriptor,
         new java.lang.String[] { "ClusterId", "RescheduleType", "DelayedUntil", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_RescheduleMaintenanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_mdb_clickhouse_v1_RescheduleMaintenanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_RescheduleMaintenanceMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "DelayedUntil", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_LogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_mdb_clickhouse_v1_LogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_LogRecord_descriptor,
@@ -91864,307 +93173,307 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_clickhouse_v1_LogRecord_MessageEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterLogsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterLogsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterLogsResponse_descriptor,
         new java.lang.String[] { "Logs", "NextPageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_StreamLogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_clickhouse_v1_StreamLogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_StreamLogRecord_descriptor,
         new java.lang.String[] { "Record", "NextRecordToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_StreamClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_clickhouse_v1_StreamClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_StreamClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", "Filter", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterOperationsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterBackupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterBackupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterHostsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterHostsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterHostsResponse_descriptor,
         new java.lang.String[] { "Hosts", "NextPageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostSpecs", "CopySchema", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateHostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateHostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateHostSpec_descriptor,
         new java.lang.String[] { "HostName", "UpdateMask", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "UpdateHostSpecs", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestartClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestartClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_RestartClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestartClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_mdb_clickhouse_v1_RestartClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_RestartClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardsResponse_descriptor,
         new java.lang.String[] { "Shards", "NextPageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", "ConfigSpec", "HostSpecs", "CopySchema", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardSpecs", "HostSpecs", "CopySchema", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_AddClusterShardsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", "UpdateMask", "ConfigSpec", "AllowHostRecreation", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardGroupName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor,
         new java.lang.String[] { "ShardGroups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardGroupName", "Description", "ShardNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardGroupName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardGroupName", "UpdateMask", "Description", "ShardNames", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardGroupName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardGroupName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardGroupName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterExternalDictionariesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(65);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterExternalDictionariesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterExternalDictionariesRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterExternalDictionariesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(66);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterExternalDictionariesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterExternalDictionariesResponse_descriptor,
         new java.lang.String[] { "ExternalDictionaries", "NextPageToken", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(67);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ExternalDictionary", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(68);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterExternalDictionaryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(69);
+      getDescriptor().getMessageTypes().get(70);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterExternalDictionaryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterExternalDictionaryRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ExternalDictionary", "UpdateMask", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterExternalDictionaryMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(71);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterExternalDictionaryMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterExternalDictionaryMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ExternalDictionaryName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ExternalDictionaryName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_HostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_yandex_cloud_mdb_clickhouse_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "Type", "SubnetId", "AssignPublicIp", "ShardName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(74);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_descriptor,
@@ -92182,7 +93491,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_Zookeeper_descriptor,
         new java.lang.String[] { "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ShardConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(75);
+      getDescriptor().getMessageTypes().get(76);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ShardConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ShardConfigSpec_descriptor,
@@ -92194,7 +93503,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_clickhouse_v1_ShardConfigSpec_Clickhouse_descriptor,
         new java.lang.String[] { "Config", "Resources", "Weight", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ShardSpec_descriptor =
-      getDescriptor().getMessageTypes().get(76);
+      getDescriptor().getMessageTypes().get(77);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ShardSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ShardSpec_descriptor,

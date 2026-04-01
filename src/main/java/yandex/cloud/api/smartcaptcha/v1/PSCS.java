@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.smartcaptcha.v1;
 
-public final class CaptchaServiceOuterClass {
-  private CaptchaServiceOuterClass() {}
+public final class PSCS {
+  private PSCS() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -111,15 +111,15 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest.Builder.class);
     }
 
     public static final int CAPTCHA_ID_FIELD_NUMBER = 1;
@@ -207,10 +207,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest) obj;
 
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
@@ -232,69 +232,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -307,7 +307,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -328,21 +328,21 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.GetCaptchaRequest)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequestOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -368,17 +368,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -386,8 +386,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest(this);
         result.captchaId_ = captchaId_;
         onBuilt();
         return result;
@@ -427,16 +427,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest.getDefaultInstance()) return this;
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
           onChanged();
@@ -456,11 +456,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -582,12 +582,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.GetCaptchaRequest)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -612,7 +612,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.GetCaptchaRequest getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.GetCaptchaRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -722,7 +722,7 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 4;</code>
      * @return The complexity.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity();
 
     /**
      * <pre>
@@ -771,7 +771,7 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 8;</code>
      * @return The preCheckType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType();
 
     /**
      * <pre>
@@ -790,7 +790,7 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 9;</code>
      * @return The challengeType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType();
 
     /**
      * <pre>
@@ -799,7 +799,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> 
         getSecurityRulesList();
     /**
      * <pre>
@@ -808,7 +808,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index);
     /**
      * <pre>
      * List of security rules.
@@ -824,7 +824,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
         getSecurityRulesOrBuilderList();
     /**
      * <pre>
@@ -833,7 +833,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index);
 
     /**
@@ -853,7 +853,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> 
         getOverrideVariantsList();
     /**
      * <pre>
@@ -862,7 +862,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index);
     /**
      * <pre>
      * List of variants to use in security_rules
@@ -878,7 +878,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
         getOverrideVariantsOrBuilderList();
     /**
      * <pre>
@@ -887,7 +887,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index);
 
     /**
@@ -1082,11 +1082,11 @@ public final class CaptchaServiceOuterClass {
             }
             case 90: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule>();
+                securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule>();
                 mutable_bitField0_ |= 0x00000002;
               }
               securityRules_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.parser(), extensionRegistry));
               break;
             }
             case 96: {
@@ -1096,11 +1096,11 @@ public final class CaptchaServiceOuterClass {
             }
             case 106: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant>();
+                overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant>();
                 mutable_bitField0_ |= 0x00000004;
               }
               overrideVariants_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.parser(), extensionRegistry));
               break;
             }
             case 112: {
@@ -1157,7 +1157,7 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -1175,9 +1175,9 @@ public final class CaptchaServiceOuterClass {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest.Builder.class);
     }
 
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
@@ -1346,10 +1346,10 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 4;</code>
      * @return The complexity.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
     }
 
     public static final int STYLE_JSON_FIELD_NUMBER = 5;
@@ -1434,10 +1434,10 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 8;</code>
      * @return The preCheckType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
     }
 
     public static final int CHALLENGE_TYPE_FIELD_NUMBER = 9;
@@ -1461,14 +1461,14 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 9;</code>
      * @return The challengeType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
     }
 
     public static final int SECURITY_RULES_FIELD_NUMBER = 11;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> securityRules_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> securityRules_;
     /**
      * <pre>
      * List of security rules.
@@ -1477,7 +1477,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> getSecurityRulesList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> getSecurityRulesList() {
       return securityRules_;
     }
     /**
@@ -1488,7 +1488,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
         getSecurityRulesOrBuilderList() {
       return securityRules_;
     }
@@ -1511,7 +1511,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index) {
       return securityRules_.get(index);
     }
     /**
@@ -1522,7 +1522,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index) {
       return securityRules_.get(index);
     }
@@ -1543,7 +1543,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     public static final int OVERRIDE_VARIANTS_FIELD_NUMBER = 13;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> overrideVariants_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> overrideVariants_;
     /**
      * <pre>
      * List of variants to use in security_rules
@@ -1552,7 +1552,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> getOverrideVariantsList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> getOverrideVariantsList() {
       return overrideVariants_;
     }
     /**
@@ -1563,7 +1563,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
         getOverrideVariantsOrBuilderList() {
       return overrideVariants_;
     }
@@ -1586,7 +1586,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index) {
       return overrideVariants_.get(index);
     }
     /**
@@ -1597,7 +1597,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index) {
       return overrideVariants_.get(index);
     }
@@ -1669,7 +1669,7 @@ public final class CaptchaServiceOuterClass {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_descriptor, 
+                  yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -1783,7 +1783,7 @@ public final class CaptchaServiceOuterClass {
       for (int i = 0; i < allowedSites_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, allowedSites_.getRaw(i));
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, complexity_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(styleJson_)) {
@@ -1792,10 +1792,10 @@ public final class CaptchaServiceOuterClass {
       if (turnOffHostnameCheck_ != false) {
         output.writeBool(6, turnOffHostnameCheck_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, challengeType_);
       }
       for (int i = 0; i < securityRules_.size(); i++) {
@@ -1842,7 +1842,7 @@ public final class CaptchaServiceOuterClass {
         size += dataSize;
         size += 1 * getAllowedSitesList().size();
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, complexity_);
       }
@@ -1853,11 +1853,11 @@ public final class CaptchaServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, turnOffHostnameCheck_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, challengeType_);
       }
@@ -1900,10 +1900,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest) obj;
 
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
@@ -1985,69 +1985,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2060,7 +2060,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2081,10 +2081,10 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.CreateCaptchaRequest)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequestOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -2112,12 +2112,12 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2178,17 +2178,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2196,8 +2196,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest(this);
         int from_bitField0_ = bitField0_;
         result.folderId_ = folderId_;
         result.name_ = name_;
@@ -2272,16 +2272,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest.getDefaultInstance()) return this;
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
           onChanged();
@@ -2395,11 +2395,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2789,10 +2789,10 @@ public final class CaptchaServiceOuterClass {
        * @return The complexity.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -2803,7 +2803,7 @@ public final class CaptchaServiceOuterClass {
        * @param value The complexity to set.
        * @return This builder for chaining.
        */
-      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity value) {
+      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3002,10 +3002,10 @@ public final class CaptchaServiceOuterClass {
        * @return The preCheckType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -3016,7 +3016,7 @@ public final class CaptchaServiceOuterClass {
        * @param value The preCheckType to set.
        * @return This builder for chaining.
        */
-      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType value) {
+      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3076,10 +3076,10 @@ public final class CaptchaServiceOuterClass {
        * @return The challengeType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -3090,7 +3090,7 @@ public final class CaptchaServiceOuterClass {
        * @param value The challengeType to set.
        * @return This builder for chaining.
        */
-      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType value) {
+      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3114,17 +3114,17 @@ public final class CaptchaServiceOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> securityRules_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> securityRules_ =
         java.util.Collections.emptyList();
       private void ensureSecurityRulesIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule>(securityRules_);
+          securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule>(securityRules_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> securityRulesBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> securityRulesBuilder_;
 
       /**
        * <pre>
@@ -3133,7 +3133,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> getSecurityRulesList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> getSecurityRulesList() {
         if (securityRulesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(securityRules_);
         } else {
@@ -3161,7 +3161,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index) {
         if (securityRulesBuilder_ == null) {
           return securityRules_.get(index);
         } else {
@@ -3176,7 +3176,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
       public Builder setSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3197,7 +3197,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
       public Builder setSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.set(index, builderForValue.build());
@@ -3214,7 +3214,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public Builder addSecurityRules(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+      public Builder addSecurityRules(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3235,7 +3235,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
       public Builder addSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3256,7 +3256,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
       public Builder addSecurityRules(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.add(builderForValue.build());
@@ -3274,7 +3274,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
       public Builder addSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.add(index, builderForValue.build());
@@ -3292,7 +3292,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
       public Builder addAllSecurityRules(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> values) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3344,7 +3344,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder getSecurityRulesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder getSecurityRulesBuilder(
           int index) {
         return getSecurityRulesFieldBuilder().getBuilder(index);
       }
@@ -3355,7 +3355,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
           int index) {
         if (securityRulesBuilder_ == null) {
           return securityRules_.get(index);  } else {
@@ -3369,7 +3369,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
            getSecurityRulesOrBuilderList() {
         if (securityRulesBuilder_ != null) {
           return securityRulesBuilder_.getMessageOrBuilderList();
@@ -3384,9 +3384,9 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder addSecurityRulesBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder addSecurityRulesBuilder() {
         return getSecurityRulesFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3395,10 +3395,10 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder addSecurityRulesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder addSecurityRulesBuilder(
           int index) {
         return getSecurityRulesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3407,16 +3407,16 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 11;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder> 
            getSecurityRulesBuilderList() {
         return getSecurityRulesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
           getSecurityRulesFieldBuilder() {
         if (securityRulesBuilder_ == null) {
           securityRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder>(
                   securityRules_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
@@ -3469,17 +3469,17 @@ public final class CaptchaServiceOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> overrideVariants_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> overrideVariants_ =
         java.util.Collections.emptyList();
       private void ensureOverrideVariantsIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant>(overrideVariants_);
+          overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant>(overrideVariants_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> overrideVariantsBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> overrideVariantsBuilder_;
 
       /**
        * <pre>
@@ -3488,7 +3488,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> getOverrideVariantsList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> getOverrideVariantsList() {
         if (overrideVariantsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(overrideVariants_);
         } else {
@@ -3516,7 +3516,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index) {
         if (overrideVariantsBuilder_ == null) {
           return overrideVariants_.get(index);
         } else {
@@ -3531,7 +3531,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
       public Builder setOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3552,7 +3552,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
       public Builder setOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.set(index, builderForValue.build());
@@ -3569,7 +3569,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public Builder addOverrideVariants(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+      public Builder addOverrideVariants(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3590,7 +3590,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
       public Builder addOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3611,7 +3611,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
       public Builder addOverrideVariants(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.add(builderForValue.build());
@@ -3629,7 +3629,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
       public Builder addOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.add(index, builderForValue.build());
@@ -3647,7 +3647,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
       public Builder addAllOverrideVariants(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> values) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3699,7 +3699,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder getOverrideVariantsBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder getOverrideVariantsBuilder(
           int index) {
         return getOverrideVariantsFieldBuilder().getBuilder(index);
       }
@@ -3710,7 +3710,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
           int index) {
         if (overrideVariantsBuilder_ == null) {
           return overrideVariants_.get(index);  } else {
@@ -3724,7 +3724,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
            getOverrideVariantsOrBuilderList() {
         if (overrideVariantsBuilder_ != null) {
           return overrideVariantsBuilder_.getMessageOrBuilderList();
@@ -3739,9 +3739,9 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder addOverrideVariantsBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder addOverrideVariantsBuilder() {
         return getOverrideVariantsFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3750,10 +3750,10 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder addOverrideVariantsBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder addOverrideVariantsBuilder(
           int index) {
         return getOverrideVariantsFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3762,16 +3762,16 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 13;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder> 
            getOverrideVariantsBuilderList() {
         return getOverrideVariantsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
           getOverrideVariantsFieldBuilder() {
         if (overrideVariantsBuilder_ == null) {
           overrideVariantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder>(
                   overrideVariants_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
@@ -4095,12 +4095,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.CreateCaptchaRequest)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4125,7 +4125,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaRequest getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4228,15 +4228,15 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata.Builder.class);
     }
 
     public static final int CAPTCHA_ID_FIELD_NUMBER = 1;
@@ -4324,10 +4324,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata other = (yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata) obj;
 
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
@@ -4349,69 +4349,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4424,7 +4424,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4445,21 +4445,21 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.CreateCaptchaMetadata)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadataOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4485,17 +4485,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4503,8 +4503,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata result = new yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata(this);
         result.captchaId_ = captchaId_;
         onBuilt();
         return result;
@@ -4544,16 +4544,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata.getDefaultInstance()) return this;
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
           onChanged();
@@ -4573,11 +4573,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4699,12 +4699,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.CreateCaptchaMetadata)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4729,7 +4729,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.CreateCaptchaMetadata getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.CreateCaptchaMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4832,15 +4832,15 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest.Builder.class);
     }
 
     public static final int CAPTCHA_ID_FIELD_NUMBER = 1;
@@ -4928,10 +4928,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest) obj;
 
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
@@ -4953,69 +4953,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5028,7 +5028,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5049,21 +5049,21 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.DeleteCaptchaRequest)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequestOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5089,17 +5089,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaRequest_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5107,8 +5107,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest(this);
         result.captchaId_ = captchaId_;
         onBuilt();
         return result;
@@ -5148,16 +5148,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest.getDefaultInstance()) return this;
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
           onChanged();
@@ -5177,11 +5177,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5303,12 +5303,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.DeleteCaptchaRequest)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5333,7 +5333,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaRequest getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5436,15 +5436,15 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata.Builder.class);
     }
 
     public static final int CAPTCHA_ID_FIELD_NUMBER = 1;
@@ -5532,10 +5532,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata other = (yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata) obj;
 
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
@@ -5557,69 +5557,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5632,7 +5632,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5653,21 +5653,21 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.DeleteCaptchaMetadata)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadataOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5693,17 +5693,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_DeleteCaptchaMetadata_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5711,8 +5711,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata result = new yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata(this);
         result.captchaId_ = captchaId_;
         onBuilt();
         return result;
@@ -5752,16 +5752,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata.getDefaultInstance()) return this;
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
           onChanged();
@@ -5781,11 +5781,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5907,12 +5907,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.DeleteCaptchaMetadata)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5937,7 +5937,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.DeleteCaptchaMetadata getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.DeleteCaptchaMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6074,7 +6074,7 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 5;</code>
      * @return The complexity.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity();
 
     /**
      * <pre>
@@ -6123,7 +6123,7 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 9;</code>
      * @return The preCheckType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType();
 
     /**
      * <pre>
@@ -6142,7 +6142,7 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 10;</code>
      * @return The challengeType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType();
 
     /**
      * <pre>
@@ -6151,7 +6151,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> 
         getSecurityRulesList();
     /**
      * <pre>
@@ -6160,7 +6160,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index);
     /**
      * <pre>
      * List of security rules.
@@ -6176,7 +6176,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
         getSecurityRulesOrBuilderList();
     /**
      * <pre>
@@ -6185,7 +6185,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index);
 
     /**
@@ -6205,7 +6205,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> 
         getOverrideVariantsList();
     /**
      * <pre>
@@ -6214,7 +6214,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index);
     /**
      * <pre>
      * List of variants to use in security_rules
@@ -6230,7 +6230,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
         getOverrideVariantsOrBuilderList();
     /**
      * <pre>
@@ -6239,7 +6239,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index);
 
     /**
@@ -6447,11 +6447,11 @@ public final class CaptchaServiceOuterClass {
             }
             case 98: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule>();
+                securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule>();
                 mutable_bitField0_ |= 0x00000002;
               }
               securityRules_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.parser(), extensionRegistry));
               break;
             }
             case 104: {
@@ -6461,11 +6461,11 @@ public final class CaptchaServiceOuterClass {
             }
             case 114: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant>();
+                overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant>();
                 mutable_bitField0_ |= 0x00000004;
               }
               overrideVariants_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.parser(), extensionRegistry));
               break;
             }
             case 120: {
@@ -6522,7 +6522,7 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -6540,9 +6540,9 @@ public final class CaptchaServiceOuterClass {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest.Builder.class);
     }
 
     public static final int CAPTCHA_ID_FIELD_NUMBER = 1;
@@ -6749,10 +6749,10 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 5;</code>
      * @return The complexity.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
     }
 
     public static final int STYLE_JSON_FIELD_NUMBER = 6;
@@ -6837,10 +6837,10 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 9;</code>
      * @return The preCheckType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
     }
 
     public static final int CHALLENGE_TYPE_FIELD_NUMBER = 10;
@@ -6864,14 +6864,14 @@ public final class CaptchaServiceOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 10;</code>
      * @return The challengeType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
     }
 
     public static final int SECURITY_RULES_FIELD_NUMBER = 12;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> securityRules_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> securityRules_;
     /**
      * <pre>
      * List of security rules.
@@ -6880,7 +6880,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> getSecurityRulesList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> getSecurityRulesList() {
       return securityRules_;
     }
     /**
@@ -6891,7 +6891,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
         getSecurityRulesOrBuilderList() {
       return securityRules_;
     }
@@ -6914,7 +6914,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index) {
       return securityRules_.get(index);
     }
     /**
@@ -6925,7 +6925,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index) {
       return securityRules_.get(index);
     }
@@ -6946,7 +6946,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     public static final int OVERRIDE_VARIANTS_FIELD_NUMBER = 14;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> overrideVariants_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> overrideVariants_;
     /**
      * <pre>
      * List of variants to use in security_rules
@@ -6955,7 +6955,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> getOverrideVariantsList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> getOverrideVariantsList() {
       return overrideVariants_;
     }
     /**
@@ -6966,7 +6966,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
         getOverrideVariantsOrBuilderList() {
       return overrideVariants_;
     }
@@ -6989,7 +6989,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index) {
       return overrideVariants_.get(index);
     }
     /**
@@ -7000,7 +7000,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index) {
       return overrideVariants_.get(index);
     }
@@ -7072,7 +7072,7 @@ public final class CaptchaServiceOuterClass {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_descriptor, 
+                  yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -7189,7 +7189,7 @@ public final class CaptchaServiceOuterClass {
       for (int i = 0; i < allowedSites_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, allowedSites_.getRaw(i));
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, complexity_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(styleJson_)) {
@@ -7198,10 +7198,10 @@ public final class CaptchaServiceOuterClass {
       if (turnOffHostnameCheck_ != false) {
         output.writeBool(7, turnOffHostnameCheck_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(10, challengeType_);
       }
       for (int i = 0; i < securityRules_.size(); i++) {
@@ -7252,7 +7252,7 @@ public final class CaptchaServiceOuterClass {
         size += dataSize;
         size += 1 * getAllowedSitesList().size();
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, complexity_);
       }
@@ -7263,11 +7263,11 @@ public final class CaptchaServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, turnOffHostnameCheck_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(10, challengeType_);
       }
@@ -7310,10 +7310,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest other = (yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest) obj;
 
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
@@ -7404,69 +7404,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7479,7 +7479,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7500,10 +7500,10 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.UpdateCaptchaRequest)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequestOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -7531,12 +7531,12 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7603,17 +7603,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7621,8 +7621,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest result = new yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest(this);
         int from_bitField0_ = bitField0_;
         result.captchaId_ = captchaId_;
         if (updateMaskBuilder_ == null) {
@@ -7702,16 +7702,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest.getDefaultInstance()) return this;
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
           onChanged();
@@ -7828,11 +7828,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8377,10 +8377,10 @@ public final class CaptchaServiceOuterClass {
        * @return The complexity.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -8391,7 +8391,7 @@ public final class CaptchaServiceOuterClass {
        * @param value The complexity to set.
        * @return This builder for chaining.
        */
-      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity value) {
+      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -8590,10 +8590,10 @@ public final class CaptchaServiceOuterClass {
        * @return The preCheckType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -8604,7 +8604,7 @@ public final class CaptchaServiceOuterClass {
        * @param value The preCheckType to set.
        * @return This builder for chaining.
        */
-      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType value) {
+      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -8664,10 +8664,10 @@ public final class CaptchaServiceOuterClass {
        * @return The challengeType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -8678,7 +8678,7 @@ public final class CaptchaServiceOuterClass {
        * @param value The challengeType to set.
        * @return This builder for chaining.
        */
-      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType value) {
+      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -8702,17 +8702,17 @@ public final class CaptchaServiceOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> securityRules_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> securityRules_ =
         java.util.Collections.emptyList();
       private void ensureSecurityRulesIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule>(securityRules_);
+          securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule>(securityRules_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> securityRulesBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> securityRulesBuilder_;
 
       /**
        * <pre>
@@ -8721,7 +8721,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> getSecurityRulesList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> getSecurityRulesList() {
         if (securityRulesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(securityRules_);
         } else {
@@ -8749,7 +8749,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index) {
         if (securityRulesBuilder_ == null) {
           return securityRules_.get(index);
         } else {
@@ -8764,7 +8764,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
       public Builder setSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8785,7 +8785,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
       public Builder setSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.set(index, builderForValue.build());
@@ -8802,7 +8802,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public Builder addSecurityRules(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+      public Builder addSecurityRules(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8823,7 +8823,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
       public Builder addSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8844,7 +8844,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
       public Builder addSecurityRules(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.add(builderForValue.build());
@@ -8862,7 +8862,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
       public Builder addSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.add(index, builderForValue.build());
@@ -8880,7 +8880,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
       public Builder addAllSecurityRules(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> values) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -8932,7 +8932,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder getSecurityRulesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder getSecurityRulesBuilder(
           int index) {
         return getSecurityRulesFieldBuilder().getBuilder(index);
       }
@@ -8943,7 +8943,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
           int index) {
         if (securityRulesBuilder_ == null) {
           return securityRules_.get(index);  } else {
@@ -8957,7 +8957,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
            getSecurityRulesOrBuilderList() {
         if (securityRulesBuilder_ != null) {
           return securityRulesBuilder_.getMessageOrBuilderList();
@@ -8972,9 +8972,9 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder addSecurityRulesBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder addSecurityRulesBuilder() {
         return getSecurityRulesFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -8983,10 +8983,10 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder addSecurityRulesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder addSecurityRulesBuilder(
           int index) {
         return getSecurityRulesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -8995,16 +8995,16 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 12;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder> 
            getSecurityRulesBuilderList() {
         return getSecurityRulesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
           getSecurityRulesFieldBuilder() {
         if (securityRulesBuilder_ == null) {
           securityRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder>(
                   securityRules_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
@@ -9057,17 +9057,17 @@ public final class CaptchaServiceOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> overrideVariants_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> overrideVariants_ =
         java.util.Collections.emptyList();
       private void ensureOverrideVariantsIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant>(overrideVariants_);
+          overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant>(overrideVariants_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> overrideVariantsBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> overrideVariantsBuilder_;
 
       /**
        * <pre>
@@ -9076,7 +9076,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> getOverrideVariantsList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> getOverrideVariantsList() {
         if (overrideVariantsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(overrideVariants_);
         } else {
@@ -9104,7 +9104,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index) {
         if (overrideVariantsBuilder_ == null) {
           return overrideVariants_.get(index);
         } else {
@@ -9119,7 +9119,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
       public Builder setOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9140,7 +9140,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
       public Builder setOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.set(index, builderForValue.build());
@@ -9157,7 +9157,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public Builder addOverrideVariants(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+      public Builder addOverrideVariants(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9178,7 +9178,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
       public Builder addOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9199,7 +9199,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
       public Builder addOverrideVariants(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.add(builderForValue.build());
@@ -9217,7 +9217,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
       public Builder addOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.add(index, builderForValue.build());
@@ -9235,7 +9235,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
       public Builder addAllOverrideVariants(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> values) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -9287,7 +9287,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder getOverrideVariantsBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder getOverrideVariantsBuilder(
           int index) {
         return getOverrideVariantsFieldBuilder().getBuilder(index);
       }
@@ -9298,7 +9298,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
           int index) {
         if (overrideVariantsBuilder_ == null) {
           return overrideVariants_.get(index);  } else {
@@ -9312,7 +9312,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
            getOverrideVariantsOrBuilderList() {
         if (overrideVariantsBuilder_ != null) {
           return overrideVariantsBuilder_.getMessageOrBuilderList();
@@ -9327,9 +9327,9 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder addOverrideVariantsBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder addOverrideVariantsBuilder() {
         return getOverrideVariantsFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance());
       }
       /**
        * <pre>
@@ -9338,10 +9338,10 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder addOverrideVariantsBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder addOverrideVariantsBuilder(
           int index) {
         return getOverrideVariantsFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance());
       }
       /**
        * <pre>
@@ -9350,16 +9350,16 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 14;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder> 
            getOverrideVariantsBuilderList() {
         return getOverrideVariantsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
           getOverrideVariantsFieldBuilder() {
         if (overrideVariantsBuilder_ == null) {
           overrideVariantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder>(
                   overrideVariants_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
@@ -9683,12 +9683,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.UpdateCaptchaRequest)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9713,7 +9713,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaRequest getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9816,15 +9816,15 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata.Builder.class);
     }
 
     public static final int CAPTCHA_ID_FIELD_NUMBER = 1;
@@ -9912,10 +9912,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata other = (yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata) obj;
 
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
@@ -9937,69 +9937,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10012,7 +10012,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10033,21 +10033,21 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.UpdateCaptchaMetadata)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadataOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata.class, yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10073,17 +10073,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10091,8 +10091,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata result = new yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata(this);
         result.captchaId_ = captchaId_;
         onBuilt();
         return result;
@@ -10132,16 +10132,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata.getDefaultInstance()) return this;
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
           onChanged();
@@ -10161,11 +10161,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10287,12 +10287,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.UpdateCaptchaMetadata)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10317,7 +10317,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.UpdateCaptchaMetadata getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.UpdateCaptchaMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10422,15 +10422,15 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest.Builder.class);
     }
 
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
@@ -10520,10 +10520,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest other = (yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest) obj;
 
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
@@ -10545,69 +10545,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10620,7 +10620,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10641,21 +10641,21 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.ListCaptchasRequest)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequestOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest.class, yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10681,17 +10681,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasRequest_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10699,8 +10699,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest result = new yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest(this);
         result.folderId_ = folderId_;
         onBuilt();
         return result;
@@ -10740,16 +10740,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest.getDefaultInstance()) return this;
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
           onChanged();
@@ -10769,11 +10769,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10900,12 +10900,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.ListCaptchasRequest)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10930,7 +10930,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasRequest getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10948,7 +10948,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha> 
         getResourcesList();
     /**
      * <pre>
@@ -10958,7 +10958,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha getResources(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.Captcha getResources(int index);
     /**
      * <pre>
      * List of Captcha resources.
@@ -10976,7 +10976,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder> 
         getResourcesOrBuilderList();
     /**
      * <pre>
@@ -10986,7 +10986,7 @@ public final class CaptchaServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder getResourcesOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder getResourcesOrBuilder(
         int index);
   }
   /**
@@ -11038,11 +11038,11 @@ public final class CaptchaServiceOuterClass {
               break;
             case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                resources_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha>();
+                resources_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha>();
                 mutable_bitField0_ |= 0x00000001;
               }
               resources_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -11069,19 +11069,19 @@ public final class CaptchaServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse.class, yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse.Builder.class);
     }
 
     public static final int RESOURCES_FIELD_NUMBER = 3;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha> resources_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha> resources_;
     /**
      * <pre>
      * List of Captcha resources.
@@ -11091,7 +11091,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha> getResourcesList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha> getResourcesList() {
       return resources_;
     }
     /**
@@ -11103,7 +11103,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder> 
         getResourcesOrBuilderList() {
       return resources_;
     }
@@ -11128,7 +11128,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha getResources(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha getResources(int index) {
       return resources_.get(index);
     }
     /**
@@ -11140,7 +11140,7 @@ public final class CaptchaServiceOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder getResourcesOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder getResourcesOrBuilder(
         int index) {
       return resources_.get(index);
     }
@@ -11185,10 +11185,10 @@ public final class CaptchaServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse other = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse other = (yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse) obj;
 
       if (!getResourcesList()
           .equals(other.getResourcesList())) return false;
@@ -11212,69 +11212,69 @@ public final class CaptchaServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11287,7 +11287,7 @@ public final class CaptchaServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11308,21 +11308,21 @@ public final class CaptchaServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.ListCaptchasResponse)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponseOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.class, yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse.class, yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11353,17 +11353,17 @@ public final class CaptchaServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.internal_static_yandex_cloud_smartcaptcha_v1_ListCaptchasResponse_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse build() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11371,8 +11371,8 @@ public final class CaptchaServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse result = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse result = new yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse(this);
         int from_bitField0_ = bitField0_;
         if (resourcesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -11421,16 +11421,16 @@ public final class CaptchaServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse.getDefaultInstance()) return this;
         if (resourcesBuilder_ == null) {
           if (!other.resources_.isEmpty()) {
             if (resources_.isEmpty()) {
@@ -11472,11 +11472,11 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11487,17 +11487,17 @@ public final class CaptchaServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha> resources_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha> resources_ =
         java.util.Collections.emptyList();
       private void ensureResourcesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          resources_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha>(resources_);
+          resources_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha>(resources_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder> resourcesBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Captcha, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder> resourcesBuilder_;
 
       /**
        * <pre>
@@ -11507,7 +11507,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha> getResourcesList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha> getResourcesList() {
         if (resourcesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(resources_);
         } else {
@@ -11537,7 +11537,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha getResources(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha getResources(int index) {
         if (resourcesBuilder_ == null) {
           return resources_.get(index);
         } else {
@@ -11553,7 +11553,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
       public Builder setResources(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha value) {
         if (resourcesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11575,7 +11575,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
       public Builder setResources(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder builderForValue) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
           resources_.set(index, builderForValue.build());
@@ -11593,7 +11593,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public Builder addResources(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha value) {
+      public Builder addResources(yandex.cloud.api.smartcaptcha.v1.PSC.Captcha value) {
         if (resourcesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11615,7 +11615,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
       public Builder addResources(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha value) {
         if (resourcesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11637,7 +11637,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
       public Builder addResources(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder builderForValue) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
           resources_.add(builderForValue.build());
@@ -11656,7 +11656,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
       public Builder addResources(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder builderForValue) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
           resources_.add(index, builderForValue.build());
@@ -11675,7 +11675,7 @@ public final class CaptchaServiceOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
       public Builder addAllResources(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Captcha> values) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -11730,7 +11730,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder getResourcesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder getResourcesBuilder(
           int index) {
         return getResourcesFieldBuilder().getBuilder(index);
       }
@@ -11742,7 +11742,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder getResourcesOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder getResourcesOrBuilder(
           int index) {
         if (resourcesBuilder_ == null) {
           return resources_.get(index);  } else {
@@ -11757,7 +11757,7 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder> 
            getResourcesOrBuilderList() {
         if (resourcesBuilder_ != null) {
           return resourcesBuilder_.getMessageOrBuilderList();
@@ -11773,9 +11773,9 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder addResourcesBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder addResourcesBuilder() {
         return getResourcesFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.getDefaultInstance());
       }
       /**
        * <pre>
@@ -11785,10 +11785,10 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder addResourcesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder addResourcesBuilder(
           int index) {
         return getResourcesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.getDefaultInstance());
       }
       /**
        * <pre>
@@ -11798,16 +11798,16 @@ public final class CaptchaServiceOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Captcha resources = 3;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder> 
            getResourcesBuilderList() {
         return getResourcesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.Captcha, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder> 
           getResourcesFieldBuilder() {
         if (resourcesBuilder_ == null) {
           resourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.Captcha, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder>(
                   resources_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -11833,12 +11833,12 @@ public final class CaptchaServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.ListCaptchasResponse)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11863,7 +11863,7 @@ public final class CaptchaServiceOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.ListCaptchasResponse getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSCS.ListCaptchasResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12019,10 +12019,10 @@ public final class CaptchaServiceOuterClass {
       ".cloud.smartcaptcha.v1.ListCaptchasReque" +
       "st\0322.yandex.cloud.smartcaptcha.v1.ListCa" +
       "ptchasResponse\"!\202\323\344\223\002\033\022\031/smartcaptcha/v1" +
-      "/captchasBq\n yandex.cloud.api.smartcaptc" +
-      "ha.v1ZMgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/smartcaptcha/v1;smartcap" +
-      "tchab\006proto3"
+      "/captchasBw\n yandex.cloud.api.smartcaptc" +
+      "ha.v1B\004PSCSZMgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/smartcaptcha/v1;sm" +
+      "artcaptchab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12031,7 +12031,7 @@ public final class CaptchaServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.getDescriptor(),
+          yandex.cloud.api.smartcaptcha.v1.PSC.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_smartcaptcha_v1_GetCaptchaRequest_descriptor =
@@ -12115,7 +12115,7 @@ public final class CaptchaServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.getDescriptor();
+    yandex.cloud.api.smartcaptcha.v1.PSC.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

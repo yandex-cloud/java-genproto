@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.smartcaptcha.v1;
 
-public final class CaptchaOuterClass {
-  private CaptchaOuterClass() {}
+public final class PSC {
+  private PSC() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -159,7 +159,7 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.getDescriptor().getEnumTypes().get(0);
+      return yandex.cloud.api.smartcaptcha.v1.PSC.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final CaptchaComplexity[] VALUES = values();
@@ -296,7 +296,7 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.getDescriptor().getEnumTypes().get(1);
+      return yandex.cloud.api.smartcaptcha.v1.PSC.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final CaptchaPreCheckType[] VALUES = values();
@@ -450,7 +450,7 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.getDescriptor().getEnumTypes().get(2);
+      return yandex.cloud.api.smartcaptcha.v1.PSC.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final CaptchaChallengeType[] VALUES = values();
@@ -625,7 +625,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 9;</code>
      * @return The complexity.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity();
 
     /**
      * <pre>
@@ -704,7 +704,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 16;</code>
      * @return The preCheckType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType();
 
     /**
      * <pre>
@@ -723,7 +723,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 17;</code>
      * @return The challengeType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType();
 
     /**
      * <pre>
@@ -732,7 +732,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> 
         getSecurityRulesList();
     /**
      * <pre>
@@ -741,7 +741,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index);
     /**
      * <pre>
      * List of security rules.
@@ -757,7 +757,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
         getSecurityRulesOrBuilderList();
     /**
      * <pre>
@@ -766,7 +766,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index);
 
     /**
@@ -806,7 +806,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> 
         getOverrideVariantsList();
     /**
      * <pre>
@@ -815,7 +815,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index);
     /**
      * <pre>
      * List of variants to use in security_rules
@@ -831,7 +831,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
         getOverrideVariantsOrBuilderList();
     /**
      * <pre>
@@ -840,21 +840,33 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Disables the use of HTTP request data for training and improving the service's ML models.
+     * </pre>
+     *
      * <code>bool disallow_data_processing = 24;</code>
      * @return The disallowDataProcessing.
      */
     boolean getDisallowDataProcessing();
 
     /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
      * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
      * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
      * @return The bytes for description.
      */
@@ -862,10 +874,18 @@ public final class CaptchaOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -877,11 +897,19 @@ public final class CaptchaOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -889,6 +917,10 @@ public final class CaptchaOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -1040,11 +1072,11 @@ public final class CaptchaOuterClass {
             }
             case 154: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule>();
+                securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule>();
                 mutable_bitField0_ |= 0x00000002;
               }
               securityRules_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.parser(), extensionRegistry));
               break;
             }
             case 170: {
@@ -1060,11 +1092,11 @@ public final class CaptchaOuterClass {
             }
             case 186: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant>();
+                overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant>();
                 mutable_bitField0_ |= 0x00000004;
               }
               overrideVariants_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.parser(), extensionRegistry));
               break;
             }
             case 192: {
@@ -1121,7 +1153,7 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -1139,9 +1171,9 @@ public final class CaptchaOuterClass {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.class, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder.class);
     }
 
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
@@ -1392,10 +1424,10 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 9;</code>
      * @return The complexity.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
     }
 
     public static final int STYLE_JSON_FIELD_NUMBER = 10;
@@ -1541,10 +1573,10 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 16;</code>
      * @return The preCheckType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
     }
 
     public static final int CHALLENGE_TYPE_FIELD_NUMBER = 17;
@@ -1568,14 +1600,14 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 17;</code>
      * @return The challengeType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
     }
 
     public static final int SECURITY_RULES_FIELD_NUMBER = 19;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> securityRules_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> securityRules_;
     /**
      * <pre>
      * List of security rules.
@@ -1584,7 +1616,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> getSecurityRulesList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> getSecurityRulesList() {
       return securityRules_;
     }
     /**
@@ -1595,7 +1627,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
         getSecurityRulesOrBuilderList() {
       return securityRules_;
     }
@@ -1618,7 +1650,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index) {
       return securityRules_.get(index);
     }
     /**
@@ -1629,7 +1661,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
         int index) {
       return securityRules_.get(index);
     }
@@ -1696,7 +1728,7 @@ public final class CaptchaOuterClass {
     }
 
     public static final int OVERRIDE_VARIANTS_FIELD_NUMBER = 23;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> overrideVariants_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> overrideVariants_;
     /**
      * <pre>
      * List of variants to use in security_rules
@@ -1705,7 +1737,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> getOverrideVariantsList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> getOverrideVariantsList() {
       return overrideVariants_;
     }
     /**
@@ -1716,7 +1748,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
         getOverrideVariantsOrBuilderList() {
       return overrideVariants_;
     }
@@ -1739,7 +1771,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index) {
       return overrideVariants_.get(index);
     }
     /**
@@ -1750,7 +1782,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index) {
       return overrideVariants_.get(index);
     }
@@ -1758,6 +1790,10 @@ public final class CaptchaOuterClass {
     public static final int DISALLOW_DATA_PROCESSING_FIELD_NUMBER = 24;
     private boolean disallowDataProcessing_;
     /**
+     * <pre>
+     * Disables the use of HTTP request data for training and improving the service's ML models.
+     * </pre>
+     *
      * <code>bool disallow_data_processing = 24;</code>
      * @return The disallowDataProcessing.
      */
@@ -1769,6 +1805,10 @@ public final class CaptchaOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 25;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
      * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
      * @return The description.
      */
@@ -1786,6 +1826,10 @@ public final class CaptchaOuterClass {
       }
     }
     /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
      * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
      * @return The bytes for description.
      */
@@ -1810,7 +1854,7 @@ public final class CaptchaOuterClass {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_LabelsEntry_descriptor, 
+                  yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_LabelsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -1831,6 +1875,10 @@ public final class CaptchaOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -1849,6 +1897,10 @@ public final class CaptchaOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -1857,6 +1909,10 @@ public final class CaptchaOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -1870,6 +1926,10 @@ public final class CaptchaOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -1914,7 +1974,7 @@ public final class CaptchaOuterClass {
       for (int i = 0; i < allowedSites_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, allowedSites_.getRaw(i));
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, complexity_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(styleJson_)) {
@@ -1929,10 +1989,10 @@ public final class CaptchaOuterClass {
       if (turnOffHostnameCheck_ != false) {
         output.writeBool(14, turnOffHostnameCheck_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(16, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(17, challengeType_);
       }
       for (int i = 0; i < securityRules_.size(); i++) {
@@ -1989,7 +2049,7 @@ public final class CaptchaOuterClass {
         size += dataSize;
         size += 1 * getAllowedSitesList().size();
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, complexity_);
       }
@@ -2007,11 +2067,11 @@ public final class CaptchaOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, turnOffHostnameCheck_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(16, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, challengeType_);
       }
@@ -2057,10 +2117,10 @@ public final class CaptchaOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Captcha)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSC.Captcha other = (yandex.cloud.api.smartcaptcha.v1.PSC.Captcha) obj;
 
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
@@ -2168,69 +2228,69 @@ public final class CaptchaOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2243,7 +2303,7 @@ public final class CaptchaOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Captcha prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2268,10 +2328,10 @@ public final class CaptchaOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Captcha)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -2299,12 +2359,12 @@ public final class CaptchaOuterClass {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.class, yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2379,17 +2439,17 @@ public final class CaptchaOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Captcha_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha build() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.Captcha result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2397,8 +2457,8 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.Captcha result = new yandex.cloud.api.smartcaptcha.v1.PSC.Captcha(this);
         int from_bitField0_ = bitField0_;
         result.folderId_ = folderId_;
         result.clientKey_ = clientKey_;
@@ -2482,16 +2542,16 @@ public final class CaptchaOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Captcha) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Captcha)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Captcha other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Captcha.getDefaultInstance()) return this;
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
           onChanged();
@@ -2623,11 +2683,11 @@ public final class CaptchaOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Captcha parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Captcha) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3263,10 +3323,10 @@ public final class CaptchaOuterClass {
        * @return The complexity.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -3277,7 +3337,7 @@ public final class CaptchaOuterClass {
        * @param value The complexity to set.
        * @return This builder for chaining.
        */
-      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity value) {
+      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3615,10 +3675,10 @@ public final class CaptchaOuterClass {
        * @return The preCheckType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -3629,7 +3689,7 @@ public final class CaptchaOuterClass {
        * @param value The preCheckType to set.
        * @return This builder for chaining.
        */
-      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType value) {
+      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3689,10 +3749,10 @@ public final class CaptchaOuterClass {
        * @return The challengeType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -3703,7 +3763,7 @@ public final class CaptchaOuterClass {
        * @param value The challengeType to set.
        * @return This builder for chaining.
        */
-      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType value) {
+      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3727,17 +3787,17 @@ public final class CaptchaOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> securityRules_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> securityRules_ =
         java.util.Collections.emptyList();
       private void ensureSecurityRulesIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule>(securityRules_);
+          securityRules_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule>(securityRules_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> securityRulesBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> securityRulesBuilder_;
 
       /**
        * <pre>
@@ -3746,7 +3806,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> getSecurityRulesList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> getSecurityRulesList() {
         if (securityRulesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(securityRules_);
         } else {
@@ -3774,7 +3834,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getSecurityRules(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getSecurityRules(int index) {
         if (securityRulesBuilder_ == null) {
           return securityRules_.get(index);
         } else {
@@ -3789,7 +3849,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
       public Builder setSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3810,7 +3870,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
       public Builder setSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.set(index, builderForValue.build());
@@ -3827,7 +3887,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public Builder addSecurityRules(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+      public Builder addSecurityRules(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3848,7 +3908,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
       public Builder addSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule value) {
         if (securityRulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3869,7 +3929,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
       public Builder addSecurityRules(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.add(builderForValue.build());
@@ -3887,7 +3947,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
       public Builder addSecurityRules(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder builderForValue) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           securityRules_.add(index, builderForValue.build());
@@ -3905,7 +3965,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
       public Builder addAllSecurityRules(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule> values) {
         if (securityRulesBuilder_ == null) {
           ensureSecurityRulesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3957,7 +4017,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder getSecurityRulesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder getSecurityRulesBuilder(
           int index) {
         return getSecurityRulesFieldBuilder().getBuilder(index);
       }
@@ -3968,7 +4028,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder getSecurityRulesOrBuilder(
           int index) {
         if (securityRulesBuilder_ == null) {
           return securityRules_.get(index);  } else {
@@ -3982,7 +4042,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
            getSecurityRulesOrBuilderList() {
         if (securityRulesBuilder_ != null) {
           return securityRulesBuilder_.getMessageOrBuilderList();
@@ -3997,9 +4057,9 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder addSecurityRulesBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder addSecurityRulesBuilder() {
         return getSecurityRulesFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -4008,10 +4068,10 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder addSecurityRulesBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder addSecurityRulesBuilder(
           int index) {
         return getSecurityRulesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance());
       }
       /**
        * <pre>
@@ -4020,16 +4080,16 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.SecurityRule security_rules = 19;</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder> 
            getSecurityRulesBuilderList() {
         return getSecurityRulesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder> 
           getSecurityRulesFieldBuilder() {
         if (securityRulesBuilder_ == null) {
           securityRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder>(
                   securityRules_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
@@ -4178,17 +4238,17 @@ public final class CaptchaOuterClass {
         return this;
       }
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> overrideVariants_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> overrideVariants_ =
         java.util.Collections.emptyList();
       private void ensureOverrideVariantsIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant>(overrideVariants_);
+          overrideVariants_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant>(overrideVariants_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> overrideVariantsBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> overrideVariantsBuilder_;
 
       /**
        * <pre>
@@ -4197,7 +4257,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> getOverrideVariantsList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> getOverrideVariantsList() {
         if (overrideVariantsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(overrideVariants_);
         } else {
@@ -4225,7 +4285,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getOverrideVariants(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getOverrideVariants(int index) {
         if (overrideVariantsBuilder_ == null) {
           return overrideVariants_.get(index);
         } else {
@@ -4240,7 +4300,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
       public Builder setOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4261,7 +4321,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
       public Builder setOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.set(index, builderForValue.build());
@@ -4278,7 +4338,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public Builder addOverrideVariants(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+      public Builder addOverrideVariants(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4299,7 +4359,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
       public Builder addOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant value) {
         if (overrideVariantsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4320,7 +4380,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
       public Builder addOverrideVariants(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.add(builderForValue.build());
@@ -4338,7 +4398,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
       public Builder addOverrideVariants(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder builderForValue) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           overrideVariants_.add(index, builderForValue.build());
@@ -4356,7 +4416,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
       public Builder addAllOverrideVariants(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant> values) {
         if (overrideVariantsBuilder_ == null) {
           ensureOverrideVariantsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4408,7 +4468,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder getOverrideVariantsBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder getOverrideVariantsBuilder(
           int index) {
         return getOverrideVariantsFieldBuilder().getBuilder(index);
       }
@@ -4419,7 +4479,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
           int index) {
         if (overrideVariantsBuilder_ == null) {
           return overrideVariants_.get(index);  } else {
@@ -4433,7 +4493,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
            getOverrideVariantsOrBuilderList() {
         if (overrideVariantsBuilder_ != null) {
           return overrideVariantsBuilder_.getMessageOrBuilderList();
@@ -4448,9 +4508,9 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder addOverrideVariantsBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder addOverrideVariantsBuilder() {
         return getOverrideVariantsFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance());
       }
       /**
        * <pre>
@@ -4459,10 +4519,10 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder addOverrideVariantsBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder addOverrideVariantsBuilder(
           int index) {
         return getOverrideVariantsFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance());
       }
       /**
        * <pre>
@@ -4471,16 +4531,16 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.OverrideVariant override_variants = 23 [(.yandex.cloud.size) = "&lt;=32"];</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder> 
            getOverrideVariantsBuilderList() {
         return getOverrideVariantsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder> 
           getOverrideVariantsFieldBuilder() {
         if (overrideVariantsBuilder_ == null) {
           overrideVariantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder>(
                   overrideVariants_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
@@ -4492,6 +4552,10 @@ public final class CaptchaOuterClass {
 
       private boolean disallowDataProcessing_ ;
       /**
+       * <pre>
+       * Disables the use of HTTP request data for training and improving the service's ML models.
+       * </pre>
+       *
        * <code>bool disallow_data_processing = 24;</code>
        * @return The disallowDataProcessing.
        */
@@ -4500,6 +4564,10 @@ public final class CaptchaOuterClass {
         return disallowDataProcessing_;
       }
       /**
+       * <pre>
+       * Disables the use of HTTP request data for training and improving the service's ML models.
+       * </pre>
+       *
        * <code>bool disallow_data_processing = 24;</code>
        * @param value The disallowDataProcessing to set.
        * @return This builder for chaining.
@@ -4511,6 +4579,10 @@ public final class CaptchaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Disables the use of HTTP request data for training and improving the service's ML models.
+       * </pre>
+       *
        * <code>bool disallow_data_processing = 24;</code>
        * @return This builder for chaining.
        */
@@ -4523,6 +4595,10 @@ public final class CaptchaOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
        * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
        * @return The description.
        */
@@ -4539,6 +4615,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
        * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
        * @return The bytes for description.
        */
@@ -4556,6 +4636,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
        * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4571,6 +4655,10 @@ public final class CaptchaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
        * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
        * @return This builder for chaining.
        */
@@ -4581,6 +4669,10 @@ public final class CaptchaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
        * <code>string description = 25 [(.yandex.cloud.length) = "&lt;=512"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4624,6 +4716,10 @@ public final class CaptchaOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4642,6 +4738,10 @@ public final class CaptchaOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4650,6 +4750,10 @@ public final class CaptchaOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4663,6 +4767,10 @@ public final class CaptchaOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -4684,6 +4792,10 @@ public final class CaptchaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4703,6 +4815,10 @@ public final class CaptchaOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4718,6 +4834,10 @@ public final class CaptchaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4744,12 +4864,12 @@ public final class CaptchaOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Captcha)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSC.Captcha DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Captcha();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Captcha getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4774,7 +4894,7 @@ public final class CaptchaOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Captcha getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Captcha getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4841,7 +4961,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 3;</code>
      * @return The complexity.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity();
 
     /**
      * <pre>
@@ -4860,7 +4980,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 4;</code>
      * @return The preCheckType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType();
 
     /**
      * <pre>
@@ -4879,7 +4999,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 5;</code>
      * @return The challengeType.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType();
+    yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType();
   }
   /**
    * <pre>
@@ -4986,15 +5106,15 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.class, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder.class);
     }
 
     public static final int UUID_FIELD_NUMBER = 1;
@@ -5110,10 +5230,10 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaComplexity complexity = 3;</code>
      * @return The complexity.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
     }
 
     public static final int PRE_CHECK_TYPE_FIELD_NUMBER = 4;
@@ -5137,10 +5257,10 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaPreCheckType pre_check_type = 4;</code>
      * @return The preCheckType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
     }
 
     public static final int CHALLENGE_TYPE_FIELD_NUMBER = 5;
@@ -5164,10 +5284,10 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.CaptchaChallengeType challenge_type = 5;</code>
      * @return The challengeType.
      */
-    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+    @java.lang.Override public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-      return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+      return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5190,13 +5310,13 @@ public final class CaptchaOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, complexity_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, challengeType_);
       }
       unknownFields.writeTo(output);
@@ -5214,15 +5334,15 @@ public final class CaptchaOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
+      if (complexity_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.CAPTCHA_COMPLEXITY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, complexity_);
       }
-      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
+      if (preCheckType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.CAPTCHA_PRE_CHECK_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, preCheckType_);
       }
-      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
+      if (challengeType_ != yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.CAPTCHA_CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, challengeType_);
       }
@@ -5236,10 +5356,10 @@ public final class CaptchaOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant other = (yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant) obj;
 
       if (!getUuid()
           .equals(other.getUuid())) return false;
@@ -5274,69 +5394,69 @@ public final class CaptchaOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5349,7 +5469,7 @@ public final class CaptchaOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5374,21 +5494,21 @@ public final class CaptchaOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.OverrideVariant)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariantOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.class, yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5422,17 +5542,17 @@ public final class CaptchaOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_OverrideVariant_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant build() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5440,8 +5560,8 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant result = new yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant(this);
         result.uuid_ = uuid_;
         result.description_ = description_;
         result.complexity_ = complexity_;
@@ -5485,16 +5605,16 @@ public final class CaptchaOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant.getDefaultInstance()) return this;
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
           onChanged();
@@ -5527,11 +5647,11 @@ public final class CaptchaOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5769,10 +5889,10 @@ public final class CaptchaOuterClass {
        * @return The complexity.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity getComplexity() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity getComplexity() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.valueOf(complexity_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.valueOf(complexity_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -5783,7 +5903,7 @@ public final class CaptchaOuterClass {
        * @param value The complexity to set.
        * @return This builder for chaining.
        */
-      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaComplexity value) {
+      public Builder setComplexity(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaComplexity value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -5843,10 +5963,10 @@ public final class CaptchaOuterClass {
        * @return The preCheckType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType getPreCheckType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType getPreCheckType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.valueOf(preCheckType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.valueOf(preCheckType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -5857,7 +5977,7 @@ public final class CaptchaOuterClass {
        * @param value The preCheckType to set.
        * @return This builder for chaining.
        */
-      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaPreCheckType value) {
+      public Builder setPreCheckType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaPreCheckType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -5917,10 +6037,10 @@ public final class CaptchaOuterClass {
        * @return The challengeType.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType getChallengeType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType getChallengeType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.valueOf(challengeType_);
-        return result == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType.UNRECOGNIZED : result;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType result = yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.valueOf(challengeType_);
+        return result == null ? yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -5931,7 +6051,7 @@ public final class CaptchaOuterClass {
        * @param value The challengeType to set.
        * @return This builder for chaining.
        */
-      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaChallengeType value) {
+      public Builder setChallengeType(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaChallengeType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -5971,12 +6091,12 @@ public final class CaptchaOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.OverrideVariant)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6001,7 +6121,7 @@ public final class CaptchaOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.OverrideVariant getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6078,7 +6198,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
      * @return The condition.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition getCondition();
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition getCondition();
     /**
      * <pre>
      * The condition for matching the rule.
@@ -6086,7 +6206,7 @@ public final class CaptchaOuterClass {
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.ConditionOrBuilder getConditionOrBuilder();
+    yandex.cloud.api.smartcaptcha.v1.PSC.ConditionOrBuilder getConditionOrBuilder();
 
     /**
      * <pre>
@@ -6178,11 +6298,11 @@ public final class CaptchaOuterClass {
               break;
             }
             case 34: {
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder subBuilder = null;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder subBuilder = null;
               if (condition_ != null) {
                 subBuilder = condition_.toBuilder();
               }
-              condition_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.parser(), extensionRegistry);
+              condition_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(condition_);
                 condition_ = subBuilder.buildPartial();
@@ -6217,15 +6337,15 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.class, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
@@ -6336,7 +6456,7 @@ public final class CaptchaOuterClass {
     }
 
     public static final int CONDITION_FIELD_NUMBER = 4;
-    private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition condition_;
+    private yandex.cloud.api.smartcaptcha.v1.PSC.Condition condition_;
     /**
      * <pre>
      * The condition for matching the rule.
@@ -6358,8 +6478,8 @@ public final class CaptchaOuterClass {
      * @return The condition.
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition getCondition() {
-      return condition_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.getDefaultInstance() : condition_;
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition getCondition() {
+      return condition_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.getDefaultInstance() : condition_;
     }
     /**
      * <pre>
@@ -6369,7 +6489,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.ConditionOrBuilder getConditionOrBuilder() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.ConditionOrBuilder getConditionOrBuilder() {
       return getCondition();
     }
 
@@ -6484,10 +6604,10 @@ public final class CaptchaOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule other = (yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule) obj;
 
       if (!getName()
           .equals(other.getName())) return false;
@@ -6531,69 +6651,69 @@ public final class CaptchaOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6606,7 +6726,7 @@ public final class CaptchaOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6631,21 +6751,21 @@ public final class CaptchaOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.SecurityRule)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRuleOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRuleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.class, yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6683,17 +6803,17 @@ public final class CaptchaOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_SecurityRule_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule build() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6701,8 +6821,8 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule result = new yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule(this);
         result.name_ = name_;
         result.priority_ = priority_;
         result.description_ = description_;
@@ -6750,16 +6870,16 @@ public final class CaptchaOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -6793,11 +6913,11 @@ public final class CaptchaOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7042,9 +7162,9 @@ public final class CaptchaOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition condition_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition condition_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.ConditionOrBuilder> conditionBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.ConditionOrBuilder> conditionBuilder_;
       /**
        * <pre>
        * The condition for matching the rule.
@@ -7064,9 +7184,9 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
        * @return The condition.
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition getCondition() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition getCondition() {
         if (conditionBuilder_ == null) {
-          return condition_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.getDefaultInstance() : condition_;
+          return condition_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.getDefaultInstance() : condition_;
         } else {
           return conditionBuilder_.getMessage();
         }
@@ -7078,7 +7198,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
        */
-      public Builder setCondition(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition value) {
+      public Builder setCondition(yandex.cloud.api.smartcaptcha.v1.PSC.Condition value) {
         if (conditionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7099,7 +7219,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
        */
       public Builder setCondition(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder builderForValue) {
         if (conditionBuilder_ == null) {
           condition_ = builderForValue.build();
           onChanged();
@@ -7116,11 +7236,11 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
        */
-      public Builder mergeCondition(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition value) {
+      public Builder mergeCondition(yandex.cloud.api.smartcaptcha.v1.PSC.Condition value) {
         if (conditionBuilder_ == null) {
           if (condition_ != null) {
             condition_ =
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.newBuilder(condition_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.newBuilder(condition_).mergeFrom(value).buildPartial();
           } else {
             condition_ = value;
           }
@@ -7156,7 +7276,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder getConditionBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder getConditionBuilder() {
         
         onChanged();
         return getConditionFieldBuilder().getBuilder();
@@ -7168,12 +7288,12 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.ConditionOrBuilder getConditionOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.ConditionOrBuilder getConditionOrBuilder() {
         if (conditionBuilder_ != null) {
           return conditionBuilder_.getMessageOrBuilder();
         } else {
           return condition_ == null ?
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.getDefaultInstance() : condition_;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.getDefaultInstance() : condition_;
         }
       }
       /**
@@ -7184,11 +7304,11 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition condition = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.ConditionOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.ConditionOrBuilder> 
           getConditionFieldBuilder() {
         if (conditionBuilder_ == null) {
           conditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.ConditionOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.ConditionOrBuilder>(
                   getCondition(),
                   getParentForChildren(),
                   isClean());
@@ -7309,12 +7429,12 @@ public final class CaptchaOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.SecurityRule)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7339,7 +7459,7 @@ public final class CaptchaOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.SecurityRule getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.SecurityRule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7366,7 +7486,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
      * @return The host.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher getHost();
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher getHost();
     /**
      * <pre>
      * *AND* semantics implied.
@@ -7374,7 +7494,7 @@ public final class CaptchaOuterClass {
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder getHostOrBuilder();
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcherOrBuilder getHostOrBuilder();
 
     /**
      * <pre>
@@ -7393,7 +7513,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
      * @return The uri.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher getUri();
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher getUri();
     /**
      * <pre>
      * URI where captcha placed.
@@ -7401,7 +7521,7 @@ public final class CaptchaOuterClass {
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcherOrBuilder getUriOrBuilder();
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcherOrBuilder getUriOrBuilder();
 
     /**
      * <pre>
@@ -7410,7 +7530,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
-    java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher> 
+    java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher> 
         getHeadersList();
     /**
      * <pre>
@@ -7419,7 +7539,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher getHeaders(int index);
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher getHeaders(int index);
     /**
      * <pre>
      * Captcha request headers.
@@ -7435,7 +7555,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
-    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder> 
+    java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder> 
         getHeadersOrBuilderList();
     /**
      * <pre>
@@ -7444,7 +7564,7 @@ public final class CaptchaOuterClass {
      *
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder getHeadersOrBuilder(
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder getHeadersOrBuilder(
         int index);
 
     /**
@@ -7464,7 +7584,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
      * @return The sourceIp.
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher getSourceIp();
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher getSourceIp();
     /**
      * <pre>
      * The IP address of the requester.
@@ -7472,7 +7592,7 @@ public final class CaptchaOuterClass {
      *
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
      */
-    yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcherOrBuilder getSourceIpOrBuilder();
+    yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcherOrBuilder getSourceIpOrBuilder();
   }
   /**
    * <pre>
@@ -7526,11 +7646,11 @@ public final class CaptchaOuterClass {
               done = true;
               break;
             case 10: {
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder subBuilder = null;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder subBuilder = null;
               if (host_ != null) {
                 subBuilder = host_.toBuilder();
               }
-              host_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.parser(), extensionRegistry);
+              host_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(host_);
                 host_ = subBuilder.buildPartial();
@@ -7539,11 +7659,11 @@ public final class CaptchaOuterClass {
               break;
             }
             case 18: {
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder subBuilder = null;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder subBuilder = null;
               if (uri_ != null) {
                 subBuilder = uri_.toBuilder();
               }
-              uri_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.parser(), extensionRegistry);
+              uri_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(uri_);
                 uri_ = subBuilder.buildPartial();
@@ -7553,19 +7673,19 @@ public final class CaptchaOuterClass {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                headers_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher>();
+                headers_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher>();
                 mutable_bitField0_ |= 0x00000001;
               }
               headers_.add(
-                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.parser(), extensionRegistry));
+                  input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.parser(), extensionRegistry));
               break;
             }
             case 34: {
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder subBuilder = null;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder subBuilder = null;
               if (sourceIp_ != null) {
                 subBuilder = sourceIp_.toBuilder();
               }
-              sourceIp_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.parser(), extensionRegistry);
+              sourceIp_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(sourceIp_);
                 sourceIp_ = subBuilder.buildPartial();
@@ -7597,15 +7717,15 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder.class);
     }
 
     public interface StringMatcherOrBuilder extends
@@ -7613,16 +7733,28 @@ public final class CaptchaOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Exact match condition.
+       * </pre>
+       *
        * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the exactMatch field is set.
        */
       boolean hasExactMatch();
       /**
+       * <pre>
+       * Exact match condition.
+       * </pre>
+       *
        * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The exactMatch.
        */
       java.lang.String getExactMatch();
       /**
+       * <pre>
+       * Exact match condition.
+       * </pre>
+       *
        * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for exactMatch.
        */
@@ -7630,16 +7762,28 @@ public final class CaptchaOuterClass {
           getExactMatchBytes();
 
       /**
+       * <pre>
+       * Exact not match condition.
+       * </pre>
+       *
        * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the exactNotMatch field is set.
        */
       boolean hasExactNotMatch();
       /**
+       * <pre>
+       * Exact not match condition.
+       * </pre>
+       *
        * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The exactNotMatch.
        */
       java.lang.String getExactNotMatch();
       /**
+       * <pre>
+       * Exact not match condition.
+       * </pre>
+       *
        * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for exactNotMatch.
        */
@@ -7647,16 +7791,28 @@ public final class CaptchaOuterClass {
           getExactNotMatchBytes();
 
       /**
+       * <pre>
+       * Prefix match condition.
+       * </pre>
+       *
        * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the prefixMatch field is set.
        */
       boolean hasPrefixMatch();
       /**
+       * <pre>
+       * Prefix match condition.
+       * </pre>
+       *
        * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The prefixMatch.
        */
       java.lang.String getPrefixMatch();
       /**
+       * <pre>
+       * Prefix match condition.
+       * </pre>
+       *
        * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for prefixMatch.
        */
@@ -7664,16 +7820,28 @@ public final class CaptchaOuterClass {
           getPrefixMatchBytes();
 
       /**
+       * <pre>
+       * Prefix not match condition.
+       * </pre>
+       *
        * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the prefixNotMatch field is set.
        */
       boolean hasPrefixNotMatch();
       /**
+       * <pre>
+       * Prefix not match condition.
+       * </pre>
+       *
        * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The prefixNotMatch.
        */
       java.lang.String getPrefixNotMatch();
       /**
+       * <pre>
+       * Prefix not match condition.
+       * </pre>
+       *
        * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for prefixNotMatch.
        */
@@ -7681,16 +7849,28 @@ public final class CaptchaOuterClass {
           getPrefixNotMatchBytes();
 
       /**
+       * <pre>
+       * PIRE regex match condition.
+       * </pre>
+       *
        * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the pireRegexMatch field is set.
        */
       boolean hasPireRegexMatch();
       /**
+       * <pre>
+       * PIRE regex match condition.
+       * </pre>
+       *
        * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The pireRegexMatch.
        */
       java.lang.String getPireRegexMatch();
       /**
+       * <pre>
+       * PIRE regex match condition.
+       * </pre>
+       *
        * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for pireRegexMatch.
        */
@@ -7698,23 +7878,35 @@ public final class CaptchaOuterClass {
           getPireRegexMatchBytes();
 
       /**
+       * <pre>
+       * PIRE regex not match condition.
+       * </pre>
+       *
        * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the pireRegexNotMatch field is set.
        */
       boolean hasPireRegexNotMatch();
       /**
+       * <pre>
+       * PIRE regex not match condition.
+       * </pre>
+       *
        * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The pireRegexNotMatch.
        */
       java.lang.String getPireRegexNotMatch();
       /**
+       * <pre>
+       * PIRE regex not match condition.
+       * </pre>
+       *
        * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for pireRegexNotMatch.
        */
       com.google.protobuf.ByteString
           getPireRegexNotMatchBytes();
 
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.MatchCase getMatchCase();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.MatchCase getMatchCase();
     }
     /**
      * <pre>
@@ -7822,15 +8014,15 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder.class);
       }
 
       private int matchCase_ = 0;
@@ -7884,6 +8076,10 @@ public final class CaptchaOuterClass {
 
       public static final int EXACT_MATCH_FIELD_NUMBER = 1;
       /**
+       * <pre>
+       * Exact match condition.
+       * </pre>
+       *
        * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the exactMatch field is set.
        */
@@ -7891,6 +8087,10 @@ public final class CaptchaOuterClass {
         return matchCase_ == 1;
       }
       /**
+       * <pre>
+       * Exact match condition.
+       * </pre>
+       *
        * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The exactMatch.
        */
@@ -7912,6 +8112,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Exact match condition.
+       * </pre>
+       *
        * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for exactMatch.
        */
@@ -7936,6 +8140,10 @@ public final class CaptchaOuterClass {
 
       public static final int EXACT_NOT_MATCH_FIELD_NUMBER = 2;
       /**
+       * <pre>
+       * Exact not match condition.
+       * </pre>
+       *
        * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the exactNotMatch field is set.
        */
@@ -7943,6 +8151,10 @@ public final class CaptchaOuterClass {
         return matchCase_ == 2;
       }
       /**
+       * <pre>
+       * Exact not match condition.
+       * </pre>
+       *
        * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The exactNotMatch.
        */
@@ -7964,6 +8176,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Exact not match condition.
+       * </pre>
+       *
        * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for exactNotMatch.
        */
@@ -7988,6 +8204,10 @@ public final class CaptchaOuterClass {
 
       public static final int PREFIX_MATCH_FIELD_NUMBER = 3;
       /**
+       * <pre>
+       * Prefix match condition.
+       * </pre>
+       *
        * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the prefixMatch field is set.
        */
@@ -7995,6 +8215,10 @@ public final class CaptchaOuterClass {
         return matchCase_ == 3;
       }
       /**
+       * <pre>
+       * Prefix match condition.
+       * </pre>
+       *
        * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The prefixMatch.
        */
@@ -8016,6 +8240,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Prefix match condition.
+       * </pre>
+       *
        * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for prefixMatch.
        */
@@ -8040,6 +8268,10 @@ public final class CaptchaOuterClass {
 
       public static final int PREFIX_NOT_MATCH_FIELD_NUMBER = 4;
       /**
+       * <pre>
+       * Prefix not match condition.
+       * </pre>
+       *
        * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the prefixNotMatch field is set.
        */
@@ -8047,6 +8279,10 @@ public final class CaptchaOuterClass {
         return matchCase_ == 4;
       }
       /**
+       * <pre>
+       * Prefix not match condition.
+       * </pre>
+       *
        * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The prefixNotMatch.
        */
@@ -8068,6 +8304,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Prefix not match condition.
+       * </pre>
+       *
        * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for prefixNotMatch.
        */
@@ -8092,6 +8332,10 @@ public final class CaptchaOuterClass {
 
       public static final int PIRE_REGEX_MATCH_FIELD_NUMBER = 5;
       /**
+       * <pre>
+       * PIRE regex match condition.
+       * </pre>
+       *
        * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the pireRegexMatch field is set.
        */
@@ -8099,6 +8343,10 @@ public final class CaptchaOuterClass {
         return matchCase_ == 5;
       }
       /**
+       * <pre>
+       * PIRE regex match condition.
+       * </pre>
+       *
        * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The pireRegexMatch.
        */
@@ -8120,6 +8368,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * PIRE regex match condition.
+       * </pre>
+       *
        * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for pireRegexMatch.
        */
@@ -8144,6 +8396,10 @@ public final class CaptchaOuterClass {
 
       public static final int PIRE_REGEX_NOT_MATCH_FIELD_NUMBER = 6;
       /**
+       * <pre>
+       * PIRE regex not match condition.
+       * </pre>
+       *
        * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
        * @return Whether the pireRegexNotMatch field is set.
        */
@@ -8151,6 +8407,10 @@ public final class CaptchaOuterClass {
         return matchCase_ == 6;
       }
       /**
+       * <pre>
+       * PIRE regex not match condition.
+       * </pre>
+       *
        * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The pireRegexNotMatch.
        */
@@ -8172,6 +8432,10 @@ public final class CaptchaOuterClass {
         }
       }
       /**
+       * <pre>
+       * PIRE regex not match condition.
+       * </pre>
+       *
        * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
        * @return The bytes for pireRegexNotMatch.
        */
@@ -8263,10 +8527,10 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher) obj;
 
         if (!getMatchCase().equals(other.getMatchCase())) return false;
         switch (matchCase_) {
@@ -8341,69 +8605,69 @@ public final class CaptchaOuterClass {
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -8416,7 +8680,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -8441,21 +8705,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.StringMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -8481,17 +8745,17 @@ public final class CaptchaOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_StringMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -8499,8 +8763,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher(this);
           if (matchCase_ == 1) {
             result.match_ = match_;
           }
@@ -8558,16 +8822,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance()) return this;
           switch (other.getMatchCase()) {
             case EXACT_MATCH: {
               matchCase_ = 1;
@@ -8624,11 +8888,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -8654,6 +8918,10 @@ public final class CaptchaOuterClass {
 
 
         /**
+         * <pre>
+         * Exact match condition.
+         * </pre>
+         *
          * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
          * @return Whether the exactMatch field is set.
          */
@@ -8662,6 +8930,10 @@ public final class CaptchaOuterClass {
           return matchCase_ == 1;
         }
         /**
+         * <pre>
+         * Exact match condition.
+         * </pre>
+         *
          * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The exactMatch.
          */
@@ -8684,6 +8956,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Exact match condition.
+         * </pre>
+         *
          * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The bytes for exactMatch.
          */
@@ -8707,6 +8983,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Exact match condition.
+         * </pre>
+         *
          * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The exactMatch to set.
          * @return This builder for chaining.
@@ -8722,6 +9002,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Exact match condition.
+         * </pre>
+         *
          * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
          * @return This builder for chaining.
          */
@@ -8734,6 +9018,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Exact match condition.
+         * </pre>
+         *
          * <code>string exact_match = 1 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The bytes for exactMatch to set.
          * @return This builder for chaining.
@@ -8751,6 +9039,10 @@ public final class CaptchaOuterClass {
         }
 
         /**
+         * <pre>
+         * Exact not match condition.
+         * </pre>
+         *
          * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
          * @return Whether the exactNotMatch field is set.
          */
@@ -8759,6 +9051,10 @@ public final class CaptchaOuterClass {
           return matchCase_ == 2;
         }
         /**
+         * <pre>
+         * Exact not match condition.
+         * </pre>
+         *
          * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The exactNotMatch.
          */
@@ -8781,6 +9077,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Exact not match condition.
+         * </pre>
+         *
          * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The bytes for exactNotMatch.
          */
@@ -8804,6 +9104,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Exact not match condition.
+         * </pre>
+         *
          * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The exactNotMatch to set.
          * @return This builder for chaining.
@@ -8819,6 +9123,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Exact not match condition.
+         * </pre>
+         *
          * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
          * @return This builder for chaining.
          */
@@ -8831,6 +9139,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Exact not match condition.
+         * </pre>
+         *
          * <code>string exact_not_match = 2 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The bytes for exactNotMatch to set.
          * @return This builder for chaining.
@@ -8848,6 +9160,10 @@ public final class CaptchaOuterClass {
         }
 
         /**
+         * <pre>
+         * Prefix match condition.
+         * </pre>
+         *
          * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
          * @return Whether the prefixMatch field is set.
          */
@@ -8856,6 +9172,10 @@ public final class CaptchaOuterClass {
           return matchCase_ == 3;
         }
         /**
+         * <pre>
+         * Prefix match condition.
+         * </pre>
+         *
          * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The prefixMatch.
          */
@@ -8878,6 +9198,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Prefix match condition.
+         * </pre>
+         *
          * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The bytes for prefixMatch.
          */
@@ -8901,6 +9225,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Prefix match condition.
+         * </pre>
+         *
          * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The prefixMatch to set.
          * @return This builder for chaining.
@@ -8916,6 +9244,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Prefix match condition.
+         * </pre>
+         *
          * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
          * @return This builder for chaining.
          */
@@ -8928,6 +9260,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Prefix match condition.
+         * </pre>
+         *
          * <code>string prefix_match = 3 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The bytes for prefixMatch to set.
          * @return This builder for chaining.
@@ -8945,6 +9281,10 @@ public final class CaptchaOuterClass {
         }
 
         /**
+         * <pre>
+         * Prefix not match condition.
+         * </pre>
+         *
          * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
          * @return Whether the prefixNotMatch field is set.
          */
@@ -8953,6 +9293,10 @@ public final class CaptchaOuterClass {
           return matchCase_ == 4;
         }
         /**
+         * <pre>
+         * Prefix not match condition.
+         * </pre>
+         *
          * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The prefixNotMatch.
          */
@@ -8975,6 +9319,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Prefix not match condition.
+         * </pre>
+         *
          * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The bytes for prefixNotMatch.
          */
@@ -8998,6 +9346,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * Prefix not match condition.
+         * </pre>
+         *
          * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The prefixNotMatch to set.
          * @return This builder for chaining.
@@ -9013,6 +9365,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Prefix not match condition.
+         * </pre>
+         *
          * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
          * @return This builder for chaining.
          */
@@ -9025,6 +9381,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Prefix not match condition.
+         * </pre>
+         *
          * <code>string prefix_not_match = 4 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The bytes for prefixNotMatch to set.
          * @return This builder for chaining.
@@ -9042,6 +9402,10 @@ public final class CaptchaOuterClass {
         }
 
         /**
+         * <pre>
+         * PIRE regex match condition.
+         * </pre>
+         *
          * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
          * @return Whether the pireRegexMatch field is set.
          */
@@ -9050,6 +9414,10 @@ public final class CaptchaOuterClass {
           return matchCase_ == 5;
         }
         /**
+         * <pre>
+         * PIRE regex match condition.
+         * </pre>
+         *
          * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The pireRegexMatch.
          */
@@ -9072,6 +9440,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * PIRE regex match condition.
+         * </pre>
+         *
          * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The bytes for pireRegexMatch.
          */
@@ -9095,6 +9467,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * PIRE regex match condition.
+         * </pre>
+         *
          * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The pireRegexMatch to set.
          * @return This builder for chaining.
@@ -9110,6 +9486,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * PIRE regex match condition.
+         * </pre>
+         *
          * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
          * @return This builder for chaining.
          */
@@ -9122,6 +9502,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * PIRE regex match condition.
+         * </pre>
+         *
          * <code>string pire_regex_match = 5 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The bytes for pireRegexMatch to set.
          * @return This builder for chaining.
@@ -9139,6 +9523,10 @@ public final class CaptchaOuterClass {
         }
 
         /**
+         * <pre>
+         * PIRE regex not match condition.
+         * </pre>
+         *
          * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
          * @return Whether the pireRegexNotMatch field is set.
          */
@@ -9147,6 +9535,10 @@ public final class CaptchaOuterClass {
           return matchCase_ == 6;
         }
         /**
+         * <pre>
+         * PIRE regex not match condition.
+         * </pre>
+         *
          * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The pireRegexNotMatch.
          */
@@ -9169,6 +9561,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * PIRE regex not match condition.
+         * </pre>
+         *
          * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
          * @return The bytes for pireRegexNotMatch.
          */
@@ -9192,6 +9588,10 @@ public final class CaptchaOuterClass {
           }
         }
         /**
+         * <pre>
+         * PIRE regex not match condition.
+         * </pre>
+         *
          * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The pireRegexNotMatch to set.
          * @return This builder for chaining.
@@ -9207,6 +9607,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * PIRE regex not match condition.
+         * </pre>
+         *
          * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
          * @return This builder for chaining.
          */
@@ -9219,6 +9623,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * PIRE regex not match condition.
+         * </pre>
+         *
          * <code>string pire_regex_not_match = 6 [(.yandex.cloud.length) = "0-255"];</code>
          * @param value The bytes for pireRegexNotMatch to set.
          * @return This builder for chaining.
@@ -9251,12 +9659,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.StringMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -9281,7 +9689,7 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -9296,44 +9704,71 @@ public final class CaptchaOuterClass {
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher> 
+      @java.lang.Deprecated java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher> 
           getHostsList();
       /**
        * <pre>
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getHosts(int index);
+      @java.lang.Deprecated yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getHosts(int index);
       /**
        * <pre>
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      int getHostsCount();
+      @java.lang.Deprecated int getHostsCount();
       /**
        * <pre>
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> 
+      @java.lang.Deprecated java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
           getHostsOrBuilderList();
       /**
        * <pre>
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getHostsOrBuilder(
+      @java.lang.Deprecated yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getHostsOrBuilder(
           int index);
+
+      /**
+       * <pre>
+       * Host matcher.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+       * @return Whether the hostMatcher field is set.
+       */
+      boolean hasHostMatcher();
+      /**
+       * <pre>
+       * Host matcher.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+       * @return The hostMatcher.
+       */
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getHostMatcher();
+      /**
+       * <pre>
+       * Host matcher.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+       */
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getHostMatcherOrBuilder();
     }
     /**
      * <pre>
@@ -9388,11 +9823,24 @@ public final class CaptchaOuterClass {
                 break;
               case 10: {
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  hosts_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher>();
+                  hosts_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher>();
                   mutable_bitField0_ |= 0x00000001;
                 }
                 hosts_.add(
-                    input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.parser(), extensionRegistry));
+                    input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.parser(), extensionRegistry));
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder subBuilder = null;
+                if (hostMatcher_ != null) {
+                  subBuilder = hostMatcher_.toBuilder();
+                }
+                hostMatcher_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(hostMatcher_);
+                  hostMatcher_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -9419,28 +9867,28 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder.class);
       }
 
       public static final int HOSTS_FIELD_NUMBER = 1;
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher> hosts_;
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher> hosts_;
       /**
        * <pre>
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher> getHostsList() {
+      @java.lang.Deprecated public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher> getHostsList() {
         return hosts_;
       }
       /**
@@ -9448,10 +9896,10 @@ public final class CaptchaOuterClass {
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
           getHostsOrBuilderList() {
         return hosts_;
       }
@@ -9460,10 +9908,10 @@ public final class CaptchaOuterClass {
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public int getHostsCount() {
+      @java.lang.Deprecated public int getHostsCount() {
         return hosts_.size();
       }
       /**
@@ -9471,10 +9919,10 @@ public final class CaptchaOuterClass {
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getHosts(int index) {
+      @java.lang.Deprecated public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getHosts(int index) {
         return hosts_.get(index);
       }
       /**
@@ -9482,12 +9930,50 @@ public final class CaptchaOuterClass {
        * List of hosts. OR semantics implied.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+       * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getHostsOrBuilder(
+      @java.lang.Deprecated public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getHostsOrBuilder(
           int index) {
         return hosts_.get(index);
+      }
+
+      public static final int HOST_MATCHER_FIELD_NUMBER = 2;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher hostMatcher_;
+      /**
+       * <pre>
+       * Host matcher.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+       * @return Whether the hostMatcher field is set.
+       */
+      @java.lang.Override
+      public boolean hasHostMatcher() {
+        return hostMatcher_ != null;
+      }
+      /**
+       * <pre>
+       * Host matcher.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+       * @return The hostMatcher.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getHostMatcher() {
+        return hostMatcher_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : hostMatcher_;
+      }
+      /**
+       * <pre>
+       * Host matcher.
+       * </pre>
+       *
+       * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getHostMatcherOrBuilder() {
+        return getHostMatcher();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -9507,6 +9993,9 @@ public final class CaptchaOuterClass {
         for (int i = 0; i < hosts_.size(); i++) {
           output.writeMessage(1, hosts_.get(i));
         }
+        if (hostMatcher_ != null) {
+          output.writeMessage(2, getHostMatcher());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -9520,6 +10009,10 @@ public final class CaptchaOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, hosts_.get(i));
         }
+        if (hostMatcher_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getHostMatcher());
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -9530,13 +10023,18 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher) obj;
 
         if (!getHostsList()
             .equals(other.getHostsList())) return false;
+        if (hasHostMatcher() != other.hasHostMatcher()) return false;
+        if (hasHostMatcher()) {
+          if (!getHostMatcher()
+              .equals(other.getHostMatcher())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -9552,74 +10050,78 @@ public final class CaptchaOuterClass {
           hash = (37 * hash) + HOSTS_FIELD_NUMBER;
           hash = (53 * hash) + getHostsList().hashCode();
         }
+        if (hasHostMatcher()) {
+          hash = (37 * hash) + HOST_MATCHER_FIELD_NUMBER;
+          hash = (53 * hash) + getHostMatcher().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -9632,7 +10134,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -9657,21 +10159,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.HostMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -9696,23 +10198,29 @@ public final class CaptchaOuterClass {
           } else {
             hostsBuilder_.clear();
           }
+          if (hostMatcherBuilder_ == null) {
+            hostMatcher_ = null;
+          } else {
+            hostMatcher_ = null;
+            hostMatcherBuilder_ = null;
+          }
           return this;
         }
 
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -9720,8 +10228,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher(this);
           int from_bitField0_ = bitField0_;
           if (hostsBuilder_ == null) {
             if (((bitField0_ & 0x00000001) != 0)) {
@@ -9731,6 +10239,11 @@ public final class CaptchaOuterClass {
             result.hosts_ = hosts_;
           } else {
             result.hosts_ = hostsBuilder_.build();
+          }
+          if (hostMatcherBuilder_ == null) {
+            result.hostMatcher_ = hostMatcher_;
+          } else {
+            result.hostMatcher_ = hostMatcherBuilder_.build();
           }
           onBuilt();
           return result;
@@ -9770,16 +10283,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.getDefaultInstance()) return this;
           if (hostsBuilder_ == null) {
             if (!other.hosts_.isEmpty()) {
               if (hosts_.isEmpty()) {
@@ -9806,6 +10319,9 @@ public final class CaptchaOuterClass {
               }
             }
           }
+          if (other.hasHostMatcher()) {
+            mergeHostMatcher(other.getHostMatcher());
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -9821,11 +10337,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -9836,26 +10352,26 @@ public final class CaptchaOuterClass {
         }
         private int bitField0_;
 
-        private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher> hosts_ =
+        private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher> hosts_ =
           java.util.Collections.emptyList();
         private void ensureHostsIsMutable() {
           if (!((bitField0_ & 0x00000001) != 0)) {
-            hosts_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher>(hosts_);
+            hosts_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher>(hosts_);
             bitField0_ |= 0x00000001;
            }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> hostsBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> hostsBuilder_;
 
         /**
          * <pre>
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher> getHostsList() {
+        @java.lang.Deprecated public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher> getHostsList() {
           if (hostsBuilder_ == null) {
             return java.util.Collections.unmodifiableList(hosts_);
           } else {
@@ -9867,9 +10383,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public int getHostsCount() {
+        @java.lang.Deprecated public int getHostsCount() {
           if (hostsBuilder_ == null) {
             return hosts_.size();
           } else {
@@ -9881,9 +10397,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getHosts(int index) {
+        @java.lang.Deprecated public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getHosts(int index) {
           if (hostsBuilder_ == null) {
             return hosts_.get(index);
           } else {
@@ -9895,10 +10411,10 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder setHosts(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        @java.lang.Deprecated public Builder setHosts(
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (hostsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -9916,10 +10432,10 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder setHosts(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder builderForValue) {
+        @java.lang.Deprecated public Builder setHosts(
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder builderForValue) {
           if (hostsBuilder_ == null) {
             ensureHostsIsMutable();
             hosts_.set(index, builderForValue.build());
@@ -9934,9 +10450,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder addHosts(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        @java.lang.Deprecated public Builder addHosts(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (hostsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -9954,10 +10470,10 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder addHosts(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        @java.lang.Deprecated public Builder addHosts(
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (hostsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -9975,10 +10491,10 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder addHosts(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder builderForValue) {
+        @java.lang.Deprecated public Builder addHosts(
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder builderForValue) {
           if (hostsBuilder_ == null) {
             ensureHostsIsMutable();
             hosts_.add(builderForValue.build());
@@ -9993,10 +10509,10 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder addHosts(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder builderForValue) {
+        @java.lang.Deprecated public Builder addHosts(
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder builderForValue) {
           if (hostsBuilder_ == null) {
             ensureHostsIsMutable();
             hosts_.add(index, builderForValue.build());
@@ -10011,10 +10527,10 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder addAllHosts(
-            java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher> values) {
+        @java.lang.Deprecated public Builder addAllHosts(
+            java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher> values) {
           if (hostsBuilder_ == null) {
             ensureHostsIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -10030,9 +10546,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder clearHosts() {
+        @java.lang.Deprecated public Builder clearHosts() {
           if (hostsBuilder_ == null) {
             hosts_ = java.util.Collections.emptyList();
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -10047,9 +10563,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder removeHosts(int index) {
+        @java.lang.Deprecated public Builder removeHosts(int index) {
           if (hostsBuilder_ == null) {
             ensureHostsIsMutable();
             hosts_.remove(index);
@@ -10064,9 +10580,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder getHostsBuilder(
+        @java.lang.Deprecated public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder getHostsBuilder(
             int index) {
           return getHostsFieldBuilder().getBuilder(index);
         }
@@ -10075,9 +10591,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getHostsOrBuilder(
+        @java.lang.Deprecated public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getHostsOrBuilder(
             int index) {
           if (hostsBuilder_ == null) {
             return hosts_.get(index);  } else {
@@ -10089,9 +10605,9 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> 
+        @java.lang.Deprecated public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
              getHostsOrBuilderList() {
           if (hostsBuilder_ != null) {
             return hostsBuilder_.getMessageOrBuilderList();
@@ -10104,41 +10620,41 @@ public final class CaptchaOuterClass {
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder addHostsBuilder() {
+        @java.lang.Deprecated public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder addHostsBuilder() {
           return getHostsFieldBuilder().addBuilder(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance());
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance());
         }
         /**
          * <pre>
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder addHostsBuilder(
+        @java.lang.Deprecated public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder addHostsBuilder(
             int index) {
           return getHostsFieldBuilder().addBuilder(
-              index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance());
+              index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance());
         }
         /**
          * <pre>
          * List of hosts. OR semantics implied.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [(.yandex.cloud.size) = "&lt;=20"];</code>
+         * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.StringMatcher hosts = 1 [deprecated = true, (.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder> 
+        @java.lang.Deprecated public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder> 
              getHostsBuilderList() {
           return getHostsFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
             getHostsFieldBuilder() {
           if (hostsBuilder_ == null) {
             hostsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder>(
                     hosts_,
                     ((bitField0_ & 0x00000001) != 0),
                     getParentForChildren(),
@@ -10146,6 +10662,161 @@ public final class CaptchaOuterClass {
             hosts_ = null;
           }
           return hostsBuilder_;
+        }
+
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher hostMatcher_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> hostMatcherBuilder_;
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         * @return Whether the hostMatcher field is set.
+         */
+        public boolean hasHostMatcher() {
+          return hostMatcherBuilder_ != null || hostMatcher_ != null;
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         * @return The hostMatcher.
+         */
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getHostMatcher() {
+          if (hostMatcherBuilder_ == null) {
+            return hostMatcher_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : hostMatcher_;
+          } else {
+            return hostMatcherBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         */
+        public Builder setHostMatcher(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
+          if (hostMatcherBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            hostMatcher_ = value;
+            onChanged();
+          } else {
+            hostMatcherBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         */
+        public Builder setHostMatcher(
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder builderForValue) {
+          if (hostMatcherBuilder_ == null) {
+            hostMatcher_ = builderForValue.build();
+            onChanged();
+          } else {
+            hostMatcherBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         */
+        public Builder mergeHostMatcher(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
+          if (hostMatcherBuilder_ == null) {
+            if (hostMatcher_ != null) {
+              hostMatcher_ =
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.newBuilder(hostMatcher_).mergeFrom(value).buildPartial();
+            } else {
+              hostMatcher_ = value;
+            }
+            onChanged();
+          } else {
+            hostMatcherBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         */
+        public Builder clearHostMatcher() {
+          if (hostMatcherBuilder_ == null) {
+            hostMatcher_ = null;
+            onChanged();
+          } else {
+            hostMatcher_ = null;
+            hostMatcherBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         */
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder getHostMatcherBuilder() {
+          
+          onChanged();
+          return getHostMatcherFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         */
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getHostMatcherOrBuilder() {
+          if (hostMatcherBuilder_ != null) {
+            return hostMatcherBuilder_.getMessageOrBuilder();
+          } else {
+            return hostMatcher_ == null ?
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : hostMatcher_;
+          }
+        }
+        /**
+         * <pre>
+         * Host matcher.
+         * </pre>
+         *
+         * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher host_matcher = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
+            getHostMatcherFieldBuilder() {
+          if (hostMatcherBuilder_ == null) {
+            hostMatcherBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder>(
+                    getHostMatcher(),
+                    getParentForChildren(),
+                    isClean());
+            hostMatcher_ = null;
+          }
+          return hostMatcherBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -10164,12 +10835,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.HostMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -10194,7 +10865,7 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -10221,7 +10892,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
        * @return The path.
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getPath();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getPath();
       /**
        * <pre>
        * Path of the URI [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986#section-3.3).
@@ -10229,7 +10900,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getPathOrBuilder();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getPathOrBuilder();
 
       /**
        * <pre>
@@ -10238,7 +10909,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher> 
+      java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher> 
           getQueriesList();
       /**
        * <pre>
@@ -10247,7 +10918,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher getQueries(int index);
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher getQueries(int index);
       /**
        * <pre>
        * *AND* semantics implied
@@ -10263,7 +10934,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder> 
+      java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder> 
           getQueriesOrBuilderList();
       /**
        * <pre>
@@ -10272,7 +10943,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder getQueriesOrBuilder(
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder getQueriesOrBuilder(
           int index);
     }
     /**
@@ -10327,11 +10998,11 @@ public final class CaptchaOuterClass {
                 done = true;
                 break;
               case 10: {
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder subBuilder = null;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder subBuilder = null;
                 if (path_ != null) {
                   subBuilder = path_.toBuilder();
                 }
-                path_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.parser(), extensionRegistry);
+                path_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(path_);
                   path_ = subBuilder.buildPartial();
@@ -10341,11 +11012,11 @@ public final class CaptchaOuterClass {
               }
               case 18: {
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  queries_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher>();
+                  queries_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher>();
                   mutable_bitField0_ |= 0x00000001;
                 }
                 queries_.add(
-                    input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.parser(), extensionRegistry));
+                    input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.parser(), extensionRegistry));
                 break;
               }
               default: {
@@ -10372,19 +11043,19 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder.class);
       }
 
       public static final int PATH_FIELD_NUMBER = 1;
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher path_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher path_;
       /**
        * <pre>
        * Path of the URI [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986#section-3.3).
@@ -10406,8 +11077,8 @@ public final class CaptchaOuterClass {
        * @return The path.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getPath() {
-        return path_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : path_;
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getPath() {
+        return path_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : path_;
       }
       /**
        * <pre>
@@ -10417,12 +11088,12 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getPathOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getPathOrBuilder() {
         return getPath();
       }
 
       public static final int QUERIES_FIELD_NUMBER = 2;
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher> queries_;
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher> queries_;
       /**
        * <pre>
        * *AND* semantics implied
@@ -10431,7 +11102,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher> getQueriesList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher> getQueriesList() {
         return queries_;
       }
       /**
@@ -10442,7 +11113,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder> 
           getQueriesOrBuilderList() {
         return queries_;
       }
@@ -10465,7 +11136,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher getQueries(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher getQueries(int index) {
         return queries_.get(index);
       }
       /**
@@ -10476,7 +11147,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder getQueriesOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder getQueriesOrBuilder(
           int index) {
         return queries_.get(index);
       }
@@ -10528,10 +11199,10 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher) obj;
 
         if (hasPath() != other.hasPath()) return false;
         if (hasPath()) {
@@ -10564,69 +11235,69 @@ public final class CaptchaOuterClass {
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -10639,7 +11310,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -10664,21 +11335,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.UriMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -10715,17 +11386,17 @@ public final class CaptchaOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -10733,8 +11404,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher(this);
           int from_bitField0_ = bitField0_;
           if (pathBuilder_ == null) {
             result.path_ = path_;
@@ -10788,16 +11459,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.getDefaultInstance()) return this;
           if (other.hasPath()) {
             mergePath(other.getPath());
           }
@@ -10842,11 +11513,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -10857,9 +11528,9 @@ public final class CaptchaOuterClass {
         }
         private int bitField0_;
 
-        private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher path_;
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher path_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> pathBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> pathBuilder_;
         /**
          * <pre>
          * Path of the URI [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986#section-3.3).
@@ -10879,9 +11550,9 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
          * @return The path.
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getPath() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getPath() {
           if (pathBuilder_ == null) {
-            return path_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : path_;
+            return path_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : path_;
           } else {
             return pathBuilder_.getMessage();
           }
@@ -10893,7 +11564,7 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
          */
-        public Builder setPath(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        public Builder setPath(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (pathBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -10914,7 +11585,7 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
          */
         public Builder setPath(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder builderForValue) {
           if (pathBuilder_ == null) {
             path_ = builderForValue.build();
             onChanged();
@@ -10931,11 +11602,11 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
          */
-        public Builder mergePath(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        public Builder mergePath(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (pathBuilder_ == null) {
             if (path_ != null) {
               path_ =
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.newBuilder(path_).mergeFrom(value).buildPartial();
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.newBuilder(path_).mergeFrom(value).buildPartial();
             } else {
               path_ = value;
             }
@@ -10971,7 +11642,7 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder getPathBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder getPathBuilder() {
           
           onChanged();
           return getPathFieldBuilder().getBuilder();
@@ -10983,12 +11654,12 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getPathOrBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getPathOrBuilder() {
           if (pathBuilder_ != null) {
             return pathBuilder_.getMessageOrBuilder();
           } else {
             return path_ == null ?
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : path_;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : path_;
           }
         }
         /**
@@ -10999,11 +11670,11 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher path = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
             getPathFieldBuilder() {
           if (pathBuilder_ == null) {
             pathBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder>(
                     getPath(),
                     getParentForChildren(),
                     isClean());
@@ -11012,17 +11683,17 @@ public final class CaptchaOuterClass {
           return pathBuilder_;
         }
 
-        private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher> queries_ =
+        private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher> queries_ =
           java.util.Collections.emptyList();
         private void ensureQueriesIsMutable() {
           if (!((bitField0_ & 0x00000001) != 0)) {
-            queries_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher>(queries_);
+            queries_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher>(queries_);
             bitField0_ |= 0x00000001;
            }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder> queriesBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder> queriesBuilder_;
 
         /**
          * <pre>
@@ -11031,7 +11702,7 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher> getQueriesList() {
+        public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher> getQueriesList() {
           if (queriesBuilder_ == null) {
             return java.util.Collections.unmodifiableList(queries_);
           } else {
@@ -11059,7 +11730,7 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher getQueries(int index) {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher getQueries(int index) {
           if (queriesBuilder_ == null) {
             return queries_.get(index);
           } else {
@@ -11074,7 +11745,7 @@ public final class CaptchaOuterClass {
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
         public Builder setQueries(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher value) {
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher value) {
           if (queriesBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -11095,7 +11766,7 @@ public final class CaptchaOuterClass {
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
         public Builder setQueries(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder builderForValue) {
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder builderForValue) {
           if (queriesBuilder_ == null) {
             ensureQueriesIsMutable();
             queries_.set(index, builderForValue.build());
@@ -11112,7 +11783,7 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public Builder addQueries(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher value) {
+        public Builder addQueries(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher value) {
           if (queriesBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -11133,7 +11804,7 @@ public final class CaptchaOuterClass {
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
         public Builder addQueries(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher value) {
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher value) {
           if (queriesBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -11154,7 +11825,7 @@ public final class CaptchaOuterClass {
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
         public Builder addQueries(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder builderForValue) {
           if (queriesBuilder_ == null) {
             ensureQueriesIsMutable();
             queries_.add(builderForValue.build());
@@ -11172,7 +11843,7 @@ public final class CaptchaOuterClass {
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
         public Builder addQueries(
-            int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder builderForValue) {
+            int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder builderForValue) {
           if (queriesBuilder_ == null) {
             ensureQueriesIsMutable();
             queries_.add(index, builderForValue.build());
@@ -11190,7 +11861,7 @@ public final class CaptchaOuterClass {
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
         public Builder addAllQueries(
-            java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher> values) {
+            java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher> values) {
           if (queriesBuilder_ == null) {
             ensureQueriesIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -11242,7 +11913,7 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder getQueriesBuilder(
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder getQueriesBuilder(
             int index) {
           return getQueriesFieldBuilder().getBuilder(index);
         }
@@ -11253,7 +11924,7 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder getQueriesOrBuilder(
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder getQueriesOrBuilder(
             int index) {
           if (queriesBuilder_ == null) {
             return queries_.get(index);  } else {
@@ -11267,7 +11938,7 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder> 
+        public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder> 
              getQueriesOrBuilderList() {
           if (queriesBuilder_ != null) {
             return queriesBuilder_.getMessageOrBuilderList();
@@ -11282,9 +11953,9 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder addQueriesBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder addQueriesBuilder() {
           return getQueriesFieldBuilder().addBuilder(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.getDefaultInstance());
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.getDefaultInstance());
         }
         /**
          * <pre>
@@ -11293,10 +11964,10 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder addQueriesBuilder(
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder addQueriesBuilder(
             int index) {
           return getQueriesFieldBuilder().addBuilder(
-              index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.getDefaultInstance());
+              index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.getDefaultInstance());
         }
         /**
          * <pre>
@@ -11305,16 +11976,16 @@ public final class CaptchaOuterClass {
          *
          * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher queries = 2 [(.yandex.cloud.size) = "&lt;=20"];</code>
          */
-        public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder> 
+        public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder> 
              getQueriesBuilderList() {
           return getQueriesFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder> 
             getQueriesFieldBuilder() {
           if (queriesBuilder_ == null) {
             queriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder>(
                     queries_,
                     ((bitField0_ & 0x00000001) != 0),
                     getParentForChildren(),
@@ -11340,12 +12011,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.UriMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -11370,7 +12041,7 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -11417,7 +12088,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
        * @return The value.
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getValue();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getValue();
       /**
        * <pre>
        * Value of the query parameter.
@@ -11425,7 +12096,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getValueOrBuilder();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getValueOrBuilder();
     }
     /**
      * <pre>
@@ -11484,11 +12155,11 @@ public final class CaptchaOuterClass {
                 break;
               }
               case 18: {
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder subBuilder = null;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder subBuilder = null;
                 if (value_ != null) {
                   subBuilder = value_.toBuilder();
                 }
-                value_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.parser(), extensionRegistry);
+                value_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(value_);
                   value_ = subBuilder.buildPartial();
@@ -11517,15 +12188,15 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder.class);
       }
 
       public static final int KEY_FIELD_NUMBER = 1;
@@ -11575,7 +12246,7 @@ public final class CaptchaOuterClass {
       }
 
       public static final int VALUE_FIELD_NUMBER = 2;
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value_;
       /**
        * <pre>
        * Value of the query parameter.
@@ -11597,8 +12268,8 @@ public final class CaptchaOuterClass {
        * @return The value.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getValue() {
-        return value_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : value_;
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getValue() {
+        return value_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : value_;
       }
       /**
        * <pre>
@@ -11608,7 +12279,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getValueOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getValueOrBuilder() {
         return getValue();
       }
 
@@ -11658,10 +12329,10 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher) obj;
 
         if (!getKey()
             .equals(other.getKey())) return false;
@@ -11692,69 +12363,69 @@ public final class CaptchaOuterClass {
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -11767,7 +12438,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -11792,21 +12463,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -11838,17 +12509,17 @@ public final class CaptchaOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_QueryMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -11856,8 +12527,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher(this);
           result.key_ = key_;
           if (valueBuilder_ == null) {
             result.value_ = value_;
@@ -11902,16 +12573,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher.getDefaultInstance()) return this;
           if (!other.getKey().isEmpty()) {
             key_ = other.key_;
             onChanged();
@@ -11934,11 +12605,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -12044,9 +12715,9 @@ public final class CaptchaOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value_;
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> valueBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> valueBuilder_;
         /**
          * <pre>
          * Value of the query parameter.
@@ -12066,9 +12737,9 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          * @return The value.
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getValue() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getValue() {
           if (valueBuilder_ == null) {
-            return value_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : value_;
+            return value_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : value_;
           } else {
             return valueBuilder_.getMessage();
           }
@@ -12080,7 +12751,7 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public Builder setValue(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        public Builder setValue(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (valueBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -12101,7 +12772,7 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setValue(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder builderForValue) {
           if (valueBuilder_ == null) {
             value_ = builderForValue.build();
             onChanged();
@@ -12118,11 +12789,11 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public Builder mergeValue(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        public Builder mergeValue(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (valueBuilder_ == null) {
             if (value_ != null) {
               value_ =
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.newBuilder(value_).mergeFrom(value).buildPartial();
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.newBuilder(value_).mergeFrom(value).buildPartial();
             } else {
               value_ = value;
             }
@@ -12158,7 +12829,7 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder getValueBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder getValueBuilder() {
           
           onChanged();
           return getValueFieldBuilder().getBuilder();
@@ -12170,12 +12841,12 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getValueOrBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getValueOrBuilder() {
           if (valueBuilder_ != null) {
             return valueBuilder_.getMessageOrBuilder();
           } else {
             return value_ == null ?
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : value_;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : value_;
           }
         }
         /**
@@ -12186,11 +12857,11 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
             getValueFieldBuilder() {
           if (valueBuilder_ == null) {
             valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder>(
                     getValue(),
                     getParentForChildren(),
                     isClean());
@@ -12215,12 +12886,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.QueryMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -12245,7 +12916,7 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.QueryMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.QueryMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -12292,7 +12963,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
        * @return The value.
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getValue();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getValue();
       /**
        * <pre>
        * Value of the header.
@@ -12300,7 +12971,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getValueOrBuilder();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getValueOrBuilder();
     }
     /**
      * <pre>
@@ -12359,11 +13030,11 @@ public final class CaptchaOuterClass {
                 break;
               }
               case 18: {
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder subBuilder = null;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder subBuilder = null;
                 if (value_ != null) {
                   subBuilder = value_.toBuilder();
                 }
-                value_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.parser(), extensionRegistry);
+                value_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(value_);
                   value_ = subBuilder.buildPartial();
@@ -12392,15 +13063,15 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder.class);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
@@ -12450,7 +13121,7 @@ public final class CaptchaOuterClass {
       }
 
       public static final int VALUE_FIELD_NUMBER = 2;
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value_;
       /**
        * <pre>
        * Value of the header.
@@ -12472,8 +13143,8 @@ public final class CaptchaOuterClass {
        * @return The value.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getValue() {
-        return value_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : value_;
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getValue() {
+        return value_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : value_;
       }
       /**
        * <pre>
@@ -12483,7 +13154,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getValueOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getValueOrBuilder() {
         return getValue();
       }
 
@@ -12533,10 +13204,10 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher) obj;
 
         if (!getName()
             .equals(other.getName())) return false;
@@ -12567,69 +13238,69 @@ public final class CaptchaOuterClass {
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -12642,7 +13313,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -12667,21 +13338,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -12713,17 +13384,17 @@ public final class CaptchaOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_HeaderMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -12731,8 +13402,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher(this);
           result.name_ = name_;
           if (valueBuilder_ == null) {
             result.value_ = value_;
@@ -12777,16 +13448,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
             onChanged();
@@ -12809,11 +13480,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -12919,9 +13590,9 @@ public final class CaptchaOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value_;
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> valueBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> valueBuilder_;
         /**
          * <pre>
          * Value of the header.
@@ -12941,9 +13612,9 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          * @return The value.
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher getValue() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher getValue() {
           if (valueBuilder_ == null) {
-            return value_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : value_;
+            return value_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : value_;
           } else {
             return valueBuilder_.getMessage();
           }
@@ -12955,7 +13626,7 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public Builder setValue(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        public Builder setValue(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (valueBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -12976,7 +13647,7 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setValue(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder builderForValue) {
           if (valueBuilder_ == null) {
             value_ = builderForValue.build();
             onChanged();
@@ -12993,11 +13664,11 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public Builder mergeValue(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher value) {
+        public Builder mergeValue(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher value) {
           if (valueBuilder_ == null) {
             if (value_ != null) {
               value_ =
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.newBuilder(value_).mergeFrom(value).buildPartial();
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.newBuilder(value_).mergeFrom(value).buildPartial();
             } else {
               value_ = value;
             }
@@ -13033,7 +13704,7 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder getValueBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder getValueBuilder() {
           
           onChanged();
           return getValueFieldBuilder().getBuilder();
@@ -13045,12 +13716,12 @@ public final class CaptchaOuterClass {
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder getValueOrBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder getValueOrBuilder() {
           if (valueBuilder_ != null) {
             return valueBuilder_.getMessageOrBuilder();
           } else {
             return value_ == null ?
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.getDefaultInstance() : value_;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.getDefaultInstance() : value_;
           }
         }
         /**
@@ -13061,11 +13732,11 @@ public final class CaptchaOuterClass {
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.StringMatcher value = 2 [(.yandex.cloud.required) = true];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder> 
             getValueFieldBuilder() {
           if (valueBuilder_ == null) {
             valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.StringMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.StringMatcherOrBuilder>(
                     getValue(),
                     getParentForChildren(),
                     isClean());
@@ -13090,12 +13761,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -13120,7 +13791,7 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -13132,7 +13803,7 @@ public final class CaptchaOuterClass {
 
       /**
        * <pre>
-       * *AND* semantics implied.
+       * IP ranges to match with.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
@@ -13141,66 +13812,102 @@ public final class CaptchaOuterClass {
       boolean hasIpRangesMatch();
       /**
        * <pre>
-       * *AND* semantics implied.
+       * IP ranges to match with.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        * @return The ipRangesMatch.
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getIpRangesMatch();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getIpRangesMatch();
       /**
        * <pre>
-       * *AND* semantics implied.
+       * IP ranges to match with.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder();
 
       /**
+       * <pre>
+       * IP ranges to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
        * @return Whether the ipRangesNotMatch field is set.
        */
       boolean hasIpRangesNotMatch();
       /**
+       * <pre>
+       * IP ranges to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
        * @return The ipRangesNotMatch.
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getIpRangesNotMatch();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getIpRangesNotMatch();
       /**
+       * <pre>
+       * IP ranges to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesNotMatchOrBuilder();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder getIpRangesNotMatchOrBuilder();
 
       /**
+       * <pre>
+       * Geo locations to match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
        * @return Whether the geoIpMatch field is set.
        */
       boolean hasGeoIpMatch();
       /**
+       * <pre>
+       * Geo locations to match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
        * @return The geoIpMatch.
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getGeoIpMatch();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getGeoIpMatch();
       /**
+       * <pre>
+       * Geo locations to match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder getGeoIpMatchOrBuilder();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder getGeoIpMatchOrBuilder();
 
       /**
+       * <pre>
+       * Geo locations to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
        * @return Whether the geoIpNotMatch field is set.
        */
       boolean hasGeoIpNotMatch();
       /**
+       * <pre>
+       * Geo locations to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
        * @return The geoIpNotMatch.
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getGeoIpNotMatch();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getGeoIpNotMatch();
       /**
+       * <pre>
+       * Geo locations to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
        */
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder getGeoIpNotMatchOrBuilder();
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder getGeoIpNotMatchOrBuilder();
     }
     /**
      * <pre>
@@ -13252,11 +13959,11 @@ public final class CaptchaOuterClass {
                 done = true;
                 break;
               case 10: {
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder subBuilder = null;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder subBuilder = null;
                 if (ipRangesMatch_ != null) {
                   subBuilder = ipRangesMatch_.toBuilder();
                 }
-                ipRangesMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.parser(), extensionRegistry);
+                ipRangesMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(ipRangesMatch_);
                   ipRangesMatch_ = subBuilder.buildPartial();
@@ -13265,11 +13972,11 @@ public final class CaptchaOuterClass {
                 break;
               }
               case 18: {
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder subBuilder = null;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder subBuilder = null;
                 if (ipRangesNotMatch_ != null) {
                   subBuilder = ipRangesNotMatch_.toBuilder();
                 }
-                ipRangesNotMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.parser(), extensionRegistry);
+                ipRangesNotMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(ipRangesNotMatch_);
                   ipRangesNotMatch_ = subBuilder.buildPartial();
@@ -13278,11 +13985,11 @@ public final class CaptchaOuterClass {
                 break;
               }
               case 26: {
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder subBuilder = null;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder subBuilder = null;
                 if (geoIpMatch_ != null) {
                   subBuilder = geoIpMatch_.toBuilder();
                 }
-                geoIpMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.parser(), extensionRegistry);
+                geoIpMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(geoIpMatch_);
                   geoIpMatch_ = subBuilder.buildPartial();
@@ -13291,11 +13998,11 @@ public final class CaptchaOuterClass {
                 break;
               }
               case 34: {
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder subBuilder = null;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder subBuilder = null;
                 if (geoIpNotMatch_ != null) {
                   subBuilder = geoIpNotMatch_.toBuilder();
                 }
-                geoIpNotMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.parser(), extensionRegistry);
+                geoIpNotMatch_ = input.readMessage(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(geoIpNotMatch_);
                   geoIpNotMatch_ = subBuilder.buildPartial();
@@ -13324,22 +14031,22 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder.class);
       }
 
       public static final int IP_RANGES_MATCH_FIELD_NUMBER = 1;
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher ipRangesMatch_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher ipRangesMatch_;
       /**
        * <pre>
-       * *AND* semantics implied.
+       * IP ranges to match with.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
@@ -13351,31 +14058,35 @@ public final class CaptchaOuterClass {
       }
       /**
        * <pre>
-       * *AND* semantics implied.
+       * IP ranges to match with.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        * @return The ipRangesMatch.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getIpRangesMatch() {
-        return ipRangesMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesMatch_;
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getIpRangesMatch() {
+        return ipRangesMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesMatch_;
       }
       /**
        * <pre>
-       * *AND* semantics implied.
+       * IP ranges to match with.
        * </pre>
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder() {
         return getIpRangesMatch();
       }
 
       public static final int IP_RANGES_NOT_MATCH_FIELD_NUMBER = 2;
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher ipRangesNotMatch_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher ipRangesNotMatch_;
       /**
+       * <pre>
+       * IP ranges to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
        * @return Whether the ipRangesNotMatch field is set.
        */
@@ -13384,24 +14095,36 @@ public final class CaptchaOuterClass {
         return ipRangesNotMatch_ != null;
       }
       /**
+       * <pre>
+       * IP ranges to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
        * @return The ipRangesNotMatch.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getIpRangesNotMatch() {
-        return ipRangesNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesNotMatch_;
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getIpRangesNotMatch() {
+        return ipRangesNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesNotMatch_;
       }
       /**
+       * <pre>
+       * IP ranges to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesNotMatchOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder getIpRangesNotMatchOrBuilder() {
         return getIpRangesNotMatch();
       }
 
       public static final int GEO_IP_MATCH_FIELD_NUMBER = 3;
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher geoIpMatch_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher geoIpMatch_;
       /**
+       * <pre>
+       * Geo locations to match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
        * @return Whether the geoIpMatch field is set.
        */
@@ -13410,24 +14133,36 @@ public final class CaptchaOuterClass {
         return geoIpMatch_ != null;
       }
       /**
+       * <pre>
+       * Geo locations to match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
        * @return The geoIpMatch.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getGeoIpMatch() {
-        return geoIpMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance() : geoIpMatch_;
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getGeoIpMatch() {
+        return geoIpMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance() : geoIpMatch_;
       }
       /**
+       * <pre>
+       * Geo locations to match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder getGeoIpMatchOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder getGeoIpMatchOrBuilder() {
         return getGeoIpMatch();
       }
 
       public static final int GEO_IP_NOT_MATCH_FIELD_NUMBER = 4;
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher geoIpNotMatch_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher geoIpNotMatch_;
       /**
+       * <pre>
+       * Geo locations to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
        * @return Whether the geoIpNotMatch field is set.
        */
@@ -13436,18 +14171,26 @@ public final class CaptchaOuterClass {
         return geoIpNotMatch_ != null;
       }
       /**
+       * <pre>
+       * Geo locations to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
        * @return The geoIpNotMatch.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getGeoIpNotMatch() {
-        return geoIpNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance() : geoIpNotMatch_;
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getGeoIpNotMatch() {
+        return geoIpNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance() : geoIpNotMatch_;
       }
       /**
+       * <pre>
+       * Geo locations to not match with.
+       * </pre>
+       *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder getGeoIpNotMatchOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder getGeoIpNotMatchOrBuilder() {
         return getGeoIpNotMatch();
       }
 
@@ -13512,10 +14255,10 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher) obj;
 
         if (hasIpRangesMatch() != other.hasIpRangesMatch()) return false;
         if (hasIpRangesMatch()) {
@@ -13569,69 +14312,69 @@ public final class CaptchaOuterClass {
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -13644,7 +14387,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -13669,21 +14412,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.IpMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -13731,17 +14474,17 @@ public final class CaptchaOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -13749,8 +14492,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher(this);
           if (ipRangesMatchBuilder_ == null) {
             result.ipRangesMatch_ = ipRangesMatch_;
           } else {
@@ -13809,16 +14552,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.getDefaultInstance()) return this;
           if (other.hasIpRangesMatch()) {
             mergeIpRangesMatch(other.getIpRangesMatch());
           }
@@ -13846,11 +14589,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -13860,12 +14603,12 @@ public final class CaptchaOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher ipRangesMatch_;
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher ipRangesMatch_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder> ipRangesMatchBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder> ipRangesMatchBuilder_;
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
@@ -13876,27 +14619,27 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          * @return The ipRangesMatch.
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getIpRangesMatch() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getIpRangesMatch() {
           if (ipRangesMatchBuilder_ == null) {
-            return ipRangesMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesMatch_;
+            return ipRangesMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesMatch_;
           } else {
             return ipRangesMatchBuilder_.getMessage();
           }
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
-        public Builder setIpRangesMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher value) {
+        public Builder setIpRangesMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher value) {
           if (ipRangesMatchBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -13911,13 +14654,13 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         public Builder setIpRangesMatch(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder builderForValue) {
           if (ipRangesMatchBuilder_ == null) {
             ipRangesMatch_ = builderForValue.build();
             onChanged();
@@ -13929,16 +14672,16 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
-        public Builder mergeIpRangesMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher value) {
+        public Builder mergeIpRangesMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher value) {
           if (ipRangesMatchBuilder_ == null) {
             if (ipRangesMatch_ != null) {
               ipRangesMatch_ =
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.newBuilder(ipRangesMatch_).mergeFrom(value).buildPartial();
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.newBuilder(ipRangesMatch_).mergeFrom(value).buildPartial();
             } else {
               ipRangesMatch_ = value;
             }
@@ -13951,7 +14694,7 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
@@ -13969,44 +14712,44 @@ public final class CaptchaOuterClass {
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder getIpRangesMatchBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder getIpRangesMatchBuilder() {
           
           onChanged();
           return getIpRangesMatchFieldBuilder().getBuilder();
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder getIpRangesMatchOrBuilder() {
           if (ipRangesMatchBuilder_ != null) {
             return ipRangesMatchBuilder_.getMessageOrBuilder();
           } else {
             return ipRangesMatch_ == null ?
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesMatch_;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesMatch_;
           }
         }
         /**
          * <pre>
-         * *AND* semantics implied.
+         * IP ranges to match with.
          * </pre>
          *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_match = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder> 
             getIpRangesMatchFieldBuilder() {
           if (ipRangesMatchBuilder_ == null) {
             ipRangesMatchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder>(
                     getIpRangesMatch(),
                     getParentForChildren(),
                     isClean());
@@ -14015,10 +14758,14 @@ public final class CaptchaOuterClass {
           return ipRangesMatchBuilder_;
         }
 
-        private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher ipRangesNotMatch_;
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher ipRangesNotMatch_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder> ipRangesNotMatchBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder> ipRangesNotMatchBuilder_;
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          * @return Whether the ipRangesNotMatch field is set.
          */
@@ -14026,20 +14773,28 @@ public final class CaptchaOuterClass {
           return ipRangesNotMatchBuilder_ != null || ipRangesNotMatch_ != null;
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          * @return The ipRangesNotMatch.
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getIpRangesNotMatch() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getIpRangesNotMatch() {
           if (ipRangesNotMatchBuilder_ == null) {
-            return ipRangesNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesNotMatch_;
+            return ipRangesNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesNotMatch_;
           } else {
             return ipRangesNotMatchBuilder_.getMessage();
           }
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          */
-        public Builder setIpRangesNotMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher value) {
+        public Builder setIpRangesNotMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher value) {
           if (ipRangesNotMatchBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -14053,10 +14808,14 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          */
         public Builder setIpRangesNotMatch(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder builderForValue) {
           if (ipRangesNotMatchBuilder_ == null) {
             ipRangesNotMatch_ = builderForValue.build();
             onChanged();
@@ -14067,13 +14826,17 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          */
-        public Builder mergeIpRangesNotMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher value) {
+        public Builder mergeIpRangesNotMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher value) {
           if (ipRangesNotMatchBuilder_ == null) {
             if (ipRangesNotMatch_ != null) {
               ipRangesNotMatch_ =
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.newBuilder(ipRangesNotMatch_).mergeFrom(value).buildPartial();
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.newBuilder(ipRangesNotMatch_).mergeFrom(value).buildPartial();
             } else {
               ipRangesNotMatch_ = value;
             }
@@ -14085,6 +14848,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          */
         public Builder clearIpRangesNotMatch() {
@@ -14099,33 +14866,45 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder getIpRangesNotMatchBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder getIpRangesNotMatchBuilder() {
           
           onChanged();
           return getIpRangesNotMatchFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder getIpRangesNotMatchOrBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder getIpRangesNotMatchOrBuilder() {
           if (ipRangesNotMatchBuilder_ != null) {
             return ipRangesNotMatchBuilder_.getMessageOrBuilder();
           } else {
             return ipRangesNotMatch_ == null ?
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesNotMatch_;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance() : ipRangesNotMatch_;
           }
         }
         /**
+         * <pre>
+         * IP ranges to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher ip_ranges_not_match = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder> 
             getIpRangesNotMatchFieldBuilder() {
           if (ipRangesNotMatchBuilder_ == null) {
             ipRangesNotMatchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder>(
                     getIpRangesNotMatch(),
                     getParentForChildren(),
                     isClean());
@@ -14134,10 +14913,14 @@ public final class CaptchaOuterClass {
           return ipRangesNotMatchBuilder_;
         }
 
-        private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher geoIpMatch_;
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher geoIpMatch_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder> geoIpMatchBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder> geoIpMatchBuilder_;
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          * @return Whether the geoIpMatch field is set.
          */
@@ -14145,20 +14928,28 @@ public final class CaptchaOuterClass {
           return geoIpMatchBuilder_ != null || geoIpMatch_ != null;
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          * @return The geoIpMatch.
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getGeoIpMatch() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getGeoIpMatch() {
           if (geoIpMatchBuilder_ == null) {
-            return geoIpMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance() : geoIpMatch_;
+            return geoIpMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance() : geoIpMatch_;
           } else {
             return geoIpMatchBuilder_.getMessage();
           }
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          */
-        public Builder setGeoIpMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher value) {
+        public Builder setGeoIpMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher value) {
           if (geoIpMatchBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -14172,10 +14963,14 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          */
         public Builder setGeoIpMatch(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder builderForValue) {
           if (geoIpMatchBuilder_ == null) {
             geoIpMatch_ = builderForValue.build();
             onChanged();
@@ -14186,13 +14981,17 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          */
-        public Builder mergeGeoIpMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher value) {
+        public Builder mergeGeoIpMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher value) {
           if (geoIpMatchBuilder_ == null) {
             if (geoIpMatch_ != null) {
               geoIpMatch_ =
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.newBuilder(geoIpMatch_).mergeFrom(value).buildPartial();
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.newBuilder(geoIpMatch_).mergeFrom(value).buildPartial();
             } else {
               geoIpMatch_ = value;
             }
@@ -14204,6 +15003,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          */
         public Builder clearGeoIpMatch() {
@@ -14218,33 +15021,45 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder getGeoIpMatchBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder getGeoIpMatchBuilder() {
           
           onChanged();
           return getGeoIpMatchFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder getGeoIpMatchOrBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder getGeoIpMatchOrBuilder() {
           if (geoIpMatchBuilder_ != null) {
             return geoIpMatchBuilder_.getMessageOrBuilder();
           } else {
             return geoIpMatch_ == null ?
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance() : geoIpMatch_;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance() : geoIpMatch_;
           }
         }
         /**
+         * <pre>
+         * Geo locations to match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_match = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder> 
             getGeoIpMatchFieldBuilder() {
           if (geoIpMatchBuilder_ == null) {
             geoIpMatchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder>(
                     getGeoIpMatch(),
                     getParentForChildren(),
                     isClean());
@@ -14253,10 +15068,14 @@ public final class CaptchaOuterClass {
           return geoIpMatchBuilder_;
         }
 
-        private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher geoIpNotMatch_;
+        private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher geoIpNotMatch_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder> geoIpNotMatchBuilder_;
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder> geoIpNotMatchBuilder_;
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          * @return Whether the geoIpNotMatch field is set.
          */
@@ -14264,20 +15083,28 @@ public final class CaptchaOuterClass {
           return geoIpNotMatchBuilder_ != null || geoIpNotMatch_ != null;
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          * @return The geoIpNotMatch.
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getGeoIpNotMatch() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getGeoIpNotMatch() {
           if (geoIpNotMatchBuilder_ == null) {
-            return geoIpNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance() : geoIpNotMatch_;
+            return geoIpNotMatch_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance() : geoIpNotMatch_;
           } else {
             return geoIpNotMatchBuilder_.getMessage();
           }
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          */
-        public Builder setGeoIpNotMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher value) {
+        public Builder setGeoIpNotMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher value) {
           if (geoIpNotMatchBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -14291,10 +15118,14 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          */
         public Builder setGeoIpNotMatch(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder builderForValue) {
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder builderForValue) {
           if (geoIpNotMatchBuilder_ == null) {
             geoIpNotMatch_ = builderForValue.build();
             onChanged();
@@ -14305,13 +15136,17 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          */
-        public Builder mergeGeoIpNotMatch(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher value) {
+        public Builder mergeGeoIpNotMatch(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher value) {
           if (geoIpNotMatchBuilder_ == null) {
             if (geoIpNotMatch_ != null) {
               geoIpNotMatch_ =
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.newBuilder(geoIpNotMatch_).mergeFrom(value).buildPartial();
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.newBuilder(geoIpNotMatch_).mergeFrom(value).buildPartial();
             } else {
               geoIpNotMatch_ = value;
             }
@@ -14323,6 +15158,10 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          */
         public Builder clearGeoIpNotMatch() {
@@ -14337,33 +15176,45 @@ public final class CaptchaOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder getGeoIpNotMatchBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder getGeoIpNotMatchBuilder() {
           
           onChanged();
           return getGeoIpNotMatchFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          */
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder getGeoIpNotMatchOrBuilder() {
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder getGeoIpNotMatchOrBuilder() {
           if (geoIpNotMatchBuilder_ != null) {
             return geoIpNotMatchBuilder_.getMessageOrBuilder();
           } else {
             return geoIpNotMatch_ == null ?
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance() : geoIpNotMatch_;
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance() : geoIpNotMatch_;
           }
         }
         /**
+         * <pre>
+         * Geo locations to not match with.
+         * </pre>
+         *
          * <code>.yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher geo_ip_not_match = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder> 
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder> 
             getGeoIpNotMatchFieldBuilder() {
           if (geoIpNotMatchBuilder_ == null) {
             geoIpNotMatchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder>(
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder>(
                     getGeoIpNotMatch(),
                     getParentForChildren(),
                     isClean());
@@ -14388,12 +15239,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.IpMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -14418,7 +15269,7 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -14553,15 +15404,15 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder.class);
       }
 
       public static final int IP_RANGES_FIELD_NUMBER = 1;
@@ -14659,10 +15510,10 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher) obj;
 
         if (!getIpRangesList()
             .equals(other.getIpRangesList())) return false;
@@ -14686,69 +15537,69 @@ public final class CaptchaOuterClass {
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -14761,7 +15612,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -14786,21 +15637,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -14826,17 +15677,17 @@ public final class CaptchaOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_IpRangesMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -14844,8 +15695,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher(this);
           int from_bitField0_ = bitField0_;
           if (((bitField0_ & 0x00000001) != 0)) {
             ipRanges_ = ipRanges_.getUnmodifiableView();
@@ -14890,16 +15741,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher.getDefaultInstance()) return this;
           if (!other.ipRanges_.isEmpty()) {
             if (ipRanges_.isEmpty()) {
               ipRanges_ = other.ipRanges_;
@@ -14925,11 +15776,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -15102,12 +15953,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.IpRangesMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -15132,7 +15983,7 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpRangesMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpRangesMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -15267,15 +16118,15 @@ public final class CaptchaOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder.class);
       }
 
       public static final int LOCATIONS_FIELD_NUMBER = 1;
@@ -15373,10 +16224,10 @@ public final class CaptchaOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher)) {
+        if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher)) {
           return super.equals(obj);
         }
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher) obj;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher) obj;
 
         if (!getLocationsList()
             .equals(other.getLocationsList())) return false;
@@ -15400,69 +16251,69 @@ public final class CaptchaOuterClass {
         return hash;
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(byte[] data)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseDelimitedFrom(java.io.InputStream input)
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseDelimitedFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parseFrom(
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -15475,7 +16326,7 @@ public final class CaptchaOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher prototype) {
+      public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -15500,21 +16351,21 @@ public final class CaptchaOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher)
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcherOrBuilder {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcherOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_fieldAccessorTable
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.Builder.class);
+                  yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.Builder.class);
         }
 
-        // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.newBuilder()
+        // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -15540,17 +16391,17 @@ public final class CaptchaOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_descriptor;
+          return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_GeoIpMatcher_descriptor;
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getDefaultInstanceForType() {
-          return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance();
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher build() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher result = buildPartial();
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher build() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -15558,8 +16409,8 @@ public final class CaptchaOuterClass {
         }
 
         @java.lang.Override
-        public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher buildPartial() {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher(this);
+        public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher buildPartial() {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher(this);
           int from_bitField0_ = bitField0_;
           if (((bitField0_ & 0x00000001) != 0)) {
             locations_ = locations_.getUnmodifiableView();
@@ -15604,16 +16455,16 @@ public final class CaptchaOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher) {
-            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher)other);
+          if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher) {
+            return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher other) {
-          if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher.getDefaultInstance()) return this;
+        public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher other) {
+          if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher.getDefaultInstance()) return this;
           if (!other.locations_.isEmpty()) {
             if (locations_.isEmpty()) {
               locations_ = other.locations_;
@@ -15639,11 +16490,11 @@ public final class CaptchaOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher parsedMessage = null;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher) e.getUnfinishedMessage();
+            parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -15816,12 +16667,12 @@ public final class CaptchaOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition.GeoIpMatcher)
-      private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher DEFAULT_INSTANCE;
+      private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher();
+        DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher();
       }
 
-      public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getDefaultInstance() {
+      public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -15846,14 +16697,14 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.GeoIpMatcher getDefaultInstanceForType() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.GeoIpMatcher getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
     public static final int HOST_FIELD_NUMBER = 1;
-    private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher host_;
+    private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher host_;
     /**
      * <pre>
      * *AND* semantics implied.
@@ -15875,8 +16726,8 @@ public final class CaptchaOuterClass {
      * @return The host.
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher getHost() {
-      return host_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.getDefaultInstance() : host_;
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher getHost() {
+      return host_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.getDefaultInstance() : host_;
     }
     /**
      * <pre>
@@ -15886,12 +16737,12 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder getHostOrBuilder() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcherOrBuilder getHostOrBuilder() {
       return getHost();
     }
 
     public static final int URI_FIELD_NUMBER = 2;
-    private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher uri_;
+    private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher uri_;
     /**
      * <pre>
      * URI where captcha placed.
@@ -15913,8 +16764,8 @@ public final class CaptchaOuterClass {
      * @return The uri.
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher getUri() {
-      return uri_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.getDefaultInstance() : uri_;
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher getUri() {
+      return uri_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.getDefaultInstance() : uri_;
     }
     /**
      * <pre>
@@ -15924,12 +16775,12 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcherOrBuilder getUriOrBuilder() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcherOrBuilder getUriOrBuilder() {
       return getUri();
     }
 
     public static final int HEADERS_FIELD_NUMBER = 3;
-    private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher> headers_;
+    private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher> headers_;
     /**
      * <pre>
      * Captcha request headers.
@@ -15938,7 +16789,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher> getHeadersList() {
+    public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher> getHeadersList() {
       return headers_;
     }
     /**
@@ -15949,7 +16800,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder> 
+    public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder> 
         getHeadersOrBuilderList() {
       return headers_;
     }
@@ -15972,7 +16823,7 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher getHeaders(int index) {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher getHeaders(int index) {
       return headers_.get(index);
     }
     /**
@@ -15983,13 +16834,13 @@ public final class CaptchaOuterClass {
      * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder getHeadersOrBuilder(
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder getHeadersOrBuilder(
         int index) {
       return headers_.get(index);
     }
 
     public static final int SOURCE_IP_FIELD_NUMBER = 4;
-    private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher sourceIp_;
+    private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher sourceIp_;
     /**
      * <pre>
      * The IP address of the requester.
@@ -16011,8 +16862,8 @@ public final class CaptchaOuterClass {
      * @return The sourceIp.
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher getSourceIp() {
-      return sourceIp_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.getDefaultInstance() : sourceIp_;
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher getSourceIp() {
+      return sourceIp_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.getDefaultInstance() : sourceIp_;
     }
     /**
      * <pre>
@@ -16022,7 +16873,7 @@ public final class CaptchaOuterClass {
      * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcherOrBuilder getSourceIpOrBuilder() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcherOrBuilder getSourceIpOrBuilder() {
       return getSourceIp();
     }
 
@@ -16087,10 +16938,10 @@ public final class CaptchaOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSC.Condition other = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition) obj;
 
       if (hasHost() != other.hasHost()) return false;
       if (hasHost()) {
@@ -16141,69 +16992,69 @@ public final class CaptchaOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16216,7 +17067,7 @@ public final class CaptchaOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.Condition prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -16241,21 +17092,21 @@ public final class CaptchaOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.Condition)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.ConditionOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSC.ConditionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.Condition.class, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.Condition.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16304,17 +17155,17 @@ public final class CaptchaOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSC.Condition.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition build() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -16322,8 +17173,8 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition result = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition(this);
         int from_bitField0_ = bitField0_;
         if (hostBuilder_ == null) {
           result.host_ = host_;
@@ -16387,16 +17238,16 @@ public final class CaptchaOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.Condition) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.Condition)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.Condition other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSC.Condition.getDefaultInstance()) return this;
         if (other.hasHost()) {
           mergeHost(other.getHost());
         }
@@ -16447,11 +17298,11 @@ public final class CaptchaOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSC.Condition parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.Condition) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -16462,9 +17313,9 @@ public final class CaptchaOuterClass {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher host_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher host_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder> hostBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcherOrBuilder> hostBuilder_;
       /**
        * <pre>
        * *AND* semantics implied.
@@ -16484,9 +17335,9 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
        * @return The host.
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher getHost() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher getHost() {
         if (hostBuilder_ == null) {
-          return host_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.getDefaultInstance() : host_;
+          return host_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.getDefaultInstance() : host_;
         } else {
           return hostBuilder_.getMessage();
         }
@@ -16498,7 +17349,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
        */
-      public Builder setHost(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher value) {
+      public Builder setHost(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher value) {
         if (hostBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16519,7 +17370,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
        */
       public Builder setHost(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder builderForValue) {
         if (hostBuilder_ == null) {
           host_ = builderForValue.build();
           onChanged();
@@ -16536,11 +17387,11 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
        */
-      public Builder mergeHost(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher value) {
+      public Builder mergeHost(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher value) {
         if (hostBuilder_ == null) {
           if (host_ != null) {
             host_ =
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.newBuilder(host_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.newBuilder(host_).mergeFrom(value).buildPartial();
           } else {
             host_ = value;
           }
@@ -16576,7 +17427,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder getHostBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder getHostBuilder() {
         
         onChanged();
         return getHostFieldBuilder().getBuilder();
@@ -16588,12 +17439,12 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder getHostOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcherOrBuilder getHostOrBuilder() {
         if (hostBuilder_ != null) {
           return hostBuilder_.getMessageOrBuilder();
         } else {
           return host_ == null ?
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.getDefaultInstance() : host_;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.getDefaultInstance() : host_;
         }
       }
       /**
@@ -16604,11 +17455,11 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.HostMatcher host = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcherOrBuilder> 
           getHostFieldBuilder() {
         if (hostBuilder_ == null) {
           hostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HostMatcherOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HostMatcherOrBuilder>(
                   getHost(),
                   getParentForChildren(),
                   isClean());
@@ -16617,9 +17468,9 @@ public final class CaptchaOuterClass {
         return hostBuilder_;
       }
 
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher uri_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher uri_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcherOrBuilder> uriBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcherOrBuilder> uriBuilder_;
       /**
        * <pre>
        * URI where captcha placed.
@@ -16639,9 +17490,9 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
        * @return The uri.
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher getUri() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher getUri() {
         if (uriBuilder_ == null) {
-          return uri_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.getDefaultInstance() : uri_;
+          return uri_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.getDefaultInstance() : uri_;
         } else {
           return uriBuilder_.getMessage();
         }
@@ -16653,7 +17504,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
        */
-      public Builder setUri(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher value) {
+      public Builder setUri(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher value) {
         if (uriBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16674,7 +17525,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
        */
       public Builder setUri(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder builderForValue) {
         if (uriBuilder_ == null) {
           uri_ = builderForValue.build();
           onChanged();
@@ -16691,11 +17542,11 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
        */
-      public Builder mergeUri(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher value) {
+      public Builder mergeUri(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher value) {
         if (uriBuilder_ == null) {
           if (uri_ != null) {
             uri_ =
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.newBuilder(uri_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.newBuilder(uri_).mergeFrom(value).buildPartial();
           } else {
             uri_ = value;
           }
@@ -16731,7 +17582,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder getUriBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder getUriBuilder() {
         
         onChanged();
         return getUriFieldBuilder().getBuilder();
@@ -16743,12 +17594,12 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcherOrBuilder getUriOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcherOrBuilder getUriOrBuilder() {
         if (uriBuilder_ != null) {
           return uriBuilder_.getMessageOrBuilder();
         } else {
           return uri_ == null ?
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.getDefaultInstance() : uri_;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.getDefaultInstance() : uri_;
         }
       }
       /**
@@ -16759,11 +17610,11 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.UriMatcher uri = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcherOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcherOrBuilder> 
           getUriFieldBuilder() {
         if (uriBuilder_ == null) {
           uriBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.UriMatcherOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.UriMatcherOrBuilder>(
                   getUri(),
                   getParentForChildren(),
                   isClean());
@@ -16772,17 +17623,17 @@ public final class CaptchaOuterClass {
         return uriBuilder_;
       }
 
-      private java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher> headers_ =
+      private java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher> headers_ =
         java.util.Collections.emptyList();
       private void ensureHeadersIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          headers_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher>(headers_);
+          headers_ = new java.util.ArrayList<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher>(headers_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder> headersBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder> headersBuilder_;
 
       /**
        * <pre>
@@ -16791,7 +17642,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher> getHeadersList() {
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher> getHeadersList() {
         if (headersBuilder_ == null) {
           return java.util.Collections.unmodifiableList(headers_);
         } else {
@@ -16819,7 +17670,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher getHeaders(int index) {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher getHeaders(int index) {
         if (headersBuilder_ == null) {
           return headers_.get(index);
         } else {
@@ -16834,7 +17685,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       public Builder setHeaders(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher value) {
         if (headersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16855,7 +17706,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       public Builder setHeaders(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder builderForValue) {
         if (headersBuilder_ == null) {
           ensureHeadersIsMutable();
           headers_.set(index, builderForValue.build());
@@ -16872,7 +17723,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public Builder addHeaders(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher value) {
+      public Builder addHeaders(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher value) {
         if (headersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16893,7 +17744,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       public Builder addHeaders(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher value) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher value) {
         if (headersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16914,7 +17765,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       public Builder addHeaders(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder builderForValue) {
         if (headersBuilder_ == null) {
           ensureHeadersIsMutable();
           headers_.add(builderForValue.build());
@@ -16932,7 +17783,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       public Builder addHeaders(
-          int index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder builderForValue) {
+          int index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder builderForValue) {
         if (headersBuilder_ == null) {
           ensureHeadersIsMutable();
           headers_.add(index, builderForValue.build());
@@ -16950,7 +17801,7 @@ public final class CaptchaOuterClass {
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
       public Builder addAllHeaders(
-          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher> values) {
+          java.lang.Iterable<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher> values) {
         if (headersBuilder_ == null) {
           ensureHeadersIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -17002,7 +17853,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder getHeadersBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder getHeadersBuilder(
           int index) {
         return getHeadersFieldBuilder().getBuilder(index);
       }
@@ -17013,7 +17864,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder getHeadersOrBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder getHeadersOrBuilder(
           int index) {
         if (headersBuilder_ == null) {
           return headers_.get(index);  } else {
@@ -17027,7 +17878,7 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder> 
+      public java.util.List<? extends yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder> 
            getHeadersOrBuilderList() {
         if (headersBuilder_ != null) {
           return headersBuilder_.getMessageOrBuilderList();
@@ -17042,9 +17893,9 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder addHeadersBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder addHeadersBuilder() {
         return getHeadersFieldBuilder().addBuilder(
-            yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.getDefaultInstance());
+            yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.getDefaultInstance());
       }
       /**
        * <pre>
@@ -17053,10 +17904,10 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder addHeadersBuilder(
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder addHeadersBuilder(
           int index) {
         return getHeadersFieldBuilder().addBuilder(
-            index, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.getDefaultInstance());
+            index, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.getDefaultInstance());
       }
       /**
        * <pre>
@@ -17065,16 +17916,16 @@ public final class CaptchaOuterClass {
        *
        * <code>repeated .yandex.cloud.smartcaptcha.v1.Condition.HeaderMatcher headers = 3 [(.yandex.cloud.size) = "&lt;=20"];</code>
        */
-      public java.util.List<yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder> 
+      public java.util.List<yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder> 
            getHeadersBuilderList() {
         return getHeadersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder> 
           getHeadersFieldBuilder() {
         if (headersBuilder_ == null) {
           headersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.HeaderMatcherOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.HeaderMatcherOrBuilder>(
                   headers_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -17084,9 +17935,9 @@ public final class CaptchaOuterClass {
         return headersBuilder_;
       }
 
-      private yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher sourceIp_;
+      private yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher sourceIp_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcherOrBuilder> sourceIpBuilder_;
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcherOrBuilder> sourceIpBuilder_;
       /**
        * <pre>
        * The IP address of the requester.
@@ -17106,9 +17957,9 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
        * @return The sourceIp.
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher getSourceIp() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher getSourceIp() {
         if (sourceIpBuilder_ == null) {
-          return sourceIp_ == null ? yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.getDefaultInstance() : sourceIp_;
+          return sourceIp_ == null ? yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.getDefaultInstance() : sourceIp_;
         } else {
           return sourceIpBuilder_.getMessage();
         }
@@ -17120,7 +17971,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
        */
-      public Builder setSourceIp(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher value) {
+      public Builder setSourceIp(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher value) {
         if (sourceIpBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17141,7 +17992,7 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
        */
       public Builder setSourceIp(
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder builderForValue) {
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder builderForValue) {
         if (sourceIpBuilder_ == null) {
           sourceIp_ = builderForValue.build();
           onChanged();
@@ -17158,11 +18009,11 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
        */
-      public Builder mergeSourceIp(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher value) {
+      public Builder mergeSourceIp(yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher value) {
         if (sourceIpBuilder_ == null) {
           if (sourceIp_ != null) {
             sourceIp_ =
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.newBuilder(sourceIp_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.newBuilder(sourceIp_).mergeFrom(value).buildPartial();
           } else {
             sourceIp_ = value;
           }
@@ -17198,7 +18049,7 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder getSourceIpBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder getSourceIpBuilder() {
         
         onChanged();
         return getSourceIpFieldBuilder().getBuilder();
@@ -17210,12 +18061,12 @@ public final class CaptchaOuterClass {
        *
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
        */
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcherOrBuilder getSourceIpOrBuilder() {
+      public yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcherOrBuilder getSourceIpOrBuilder() {
         if (sourceIpBuilder_ != null) {
           return sourceIpBuilder_.getMessageOrBuilder();
         } else {
           return sourceIp_ == null ?
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.getDefaultInstance() : sourceIp_;
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.getDefaultInstance() : sourceIp_;
         }
       }
       /**
@@ -17226,11 +18077,11 @@ public final class CaptchaOuterClass {
        * <code>.yandex.cloud.smartcaptcha.v1.Condition.IpMatcher source_ip = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcherOrBuilder> 
+          yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcherOrBuilder> 
           getSourceIpFieldBuilder() {
         if (sourceIpBuilder_ == null) {
           sourceIpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition.IpMatcherOrBuilder>(
+              yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcher.Builder, yandex.cloud.api.smartcaptcha.v1.PSC.Condition.IpMatcherOrBuilder>(
                   getSourceIp(),
                   getParentForChildren(),
                   isClean());
@@ -17255,12 +18106,12 @@ public final class CaptchaOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.Condition)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSC.Condition DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.Condition();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.Condition getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17285,7 +18136,7 @@ public final class CaptchaOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.Condition getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.Condition getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17392,15 +18243,15 @@ public final class CaptchaOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
+      return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.Builder.class);
+              yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey.Builder.class);
     }
 
     public static final int SERVER_KEY_FIELD_NUMBER = 1;
@@ -17488,10 +18339,10 @@ public final class CaptchaOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey)) {
+      if (!(obj instanceof yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey other = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) obj;
+      yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey other = (yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey) obj;
 
       if (!getServerKey()
           .equals(other.getServerKey())) return false;
@@ -17513,69 +18364,69 @@ public final class CaptchaOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(byte[] data)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseDelimitedFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parseFrom(
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17588,7 +18439,7 @@ public final class CaptchaOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey prototype) {
+    public static Builder newBuilder(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -17613,21 +18464,21 @@ public final class CaptchaOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKeyOrBuilder {
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.Builder.class);
+                yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey.class, yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.newBuilder()
+      // Construct using yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -17653,17 +18504,17 @@ public final class CaptchaOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
+        return yandex.cloud.api.smartcaptcha.v1.PSC.internal_static_yandex_cloud_smartcaptcha_v1_CaptchaSecretKey_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstanceForType() {
-        return yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.getDefaultInstance();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey getDefaultInstanceForType() {
+        return yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey build() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey result = buildPartial();
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey build() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -17671,8 +18522,8 @@ public final class CaptchaOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey buildPartial() {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey result = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey(this);
+      public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey buildPartial() {
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey result = new yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey(this);
         result.serverKey_ = serverKey_;
         onBuilt();
         return result;
@@ -17712,16 +18563,16 @@ public final class CaptchaOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) {
-          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey)other);
+        if (other instanceof yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey) {
+          return mergeFrom((yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey other) {
-        if (other == yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey other) {
+        if (other == yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey.getDefaultInstance()) return this;
         if (!other.getServerKey().isEmpty()) {
           serverKey_ = other.serverKey_;
           onChanged();
@@ -17741,11 +18592,11 @@ public final class CaptchaOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey parsedMessage = null;
+        yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -17867,12 +18718,12 @@ public final class CaptchaOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.smartcaptcha.v1.CaptchaSecretKey)
-    private static final yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey();
+      DEFAULT_INSTANCE = new yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey();
     }
 
-    public static yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstance() {
+    public static yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17897,7 +18748,7 @@ public final class CaptchaOuterClass {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.CaptchaSecretKey getDefaultInstanceForType() {
+    public yandex.cloud.api.smartcaptcha.v1.PSC.CaptchaSecretKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18022,7 +18873,7 @@ public final class CaptchaOuterClass {
       "\3071\0101-999999\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
       "512\022:\n\tcondition\030\004 \001(\0132\'.yandex.cloud.sm" +
       "artcaptcha.v1.Condition\022\035\n\025override_vari" +
-      "ant_uuid\030\006 \001(\tJ\004\010\005\020\006\"\334\013\n\tCondition\022A\n\004ho" +
+      "ant_uuid\030\006 \001(\tJ\004\010\005\020\006\"\254\014\n\tCondition\022A\n\004ho" +
       "st\030\001 \001(\01323.yandex.cloud.smartcaptcha.v1." +
       "Condition.HostMatcher\022?\n\003uri\030\002 \001(\01322.yan" +
       "dex.cloud.smartcaptcha.v1.Condition.UriM" +
@@ -18036,9 +18887,11 @@ public final class CaptchaOuterClass {
       "5H\000\022%\n\020prefix_not_match\030\004 \001(\tB\t\212\3101\0050-255" +
       "H\000\022%\n\020pire_regex_match\030\005 \001(\tB\t\212\3101\0050-255H" +
       "\000\022)\n\024pire_regex_not_match\030\006 \001(\tB\t\212\3101\0050-2" +
-      "55H\000B\007\n\005match\032]\n\013HostMatcher\022N\n\005hosts\030\001 " +
-      "\003(\01325.yandex.cloud.smartcaptcha.v1.Condi" +
-      "tion.StringMatcherB\010\202\3101\004<=20\032\242\001\n\nUriMatc" +
+      "55H\000B\007\n\005match\032\254\001\n\013HostMatcher\022P\n\005hosts\030\001" +
+      " \003(\01325.yandex.cloud.smartcaptcha.v1.Cond" +
+      "ition.StringMatcherB\n\030\001\202\3101\004<=20\022K\n\014host_" +
+      "matcher\030\002 \001(\01325.yandex.cloud.smartcaptch" +
+      "a.v1.Condition.StringMatcher\032\242\001\n\nUriMatc" +
       "her\022C\n\004path\030\001 \001(\01325.yandex.cloud.smartca" +
       "ptcha.v1.Condition.StringMatcher\022O\n\007quer" +
       "ies\030\002 \003(\01324.yandex.cloud.smartcaptcha.v1" +
@@ -18068,10 +18921,10 @@ public final class CaptchaOuterClass {
       "SPECIFIED\020\000\022\014\n\010CHECKBOX\020\001\022\n\n\006SLIDER\020\002*q\n" +
       "\024CaptchaChallengeType\022&\n\"CAPTCHA_CHALLEN" +
       "GE_TYPE_UNSPECIFIED\020\000\022\016\n\nIMAGE_TEXT\020\001\022\017\n" +
-      "\013SILHOUETTES\020\002\022\020\n\014KALEIDOSCOPE\020\003Bq\n yand" +
-      "ex.cloud.api.smartcaptcha.v1ZMgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/s" +
-      "martcaptcha/v1;smartcaptchab\006proto3"
+      "\013SILHOUETTES\020\002\022\020\n\014KALEIDOSCOPE\020\003Bv\n yand" +
+      "ex.cloud.api.smartcaptcha.v1B\003PSCZMgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/smartcaptcha/v1;smartcaptchab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18120,7 +18973,7 @@ public final class CaptchaOuterClass {
     internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_Condition_HostMatcher_descriptor,
-        new java.lang.String[] { "Hosts", });
+        new java.lang.String[] { "Hosts", "HostMatcher", });
     internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_descriptor =
       internal_static_yandex_cloud_smartcaptcha_v1_Condition_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_smartcaptcha_v1_Condition_UriMatcher_fieldAccessorTable = new

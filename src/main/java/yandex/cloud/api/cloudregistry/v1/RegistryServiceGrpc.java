@@ -19,28 +19,28 @@ public final class RegistryServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest,
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> getGetMethod;
+      yandex.cloud.api.cloudregistry.v1.PR.Registry> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
       requestType = yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest.class,
-      responseType = yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.class,
+      responseType = yandex.cloud.api.cloudregistry.v1.PR.Registry.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest,
-      yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> getGetMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> getGetMethod;
+      yandex.cloud.api.cloudregistry.v1.PR.Registry> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest, yandex.cloud.api.cloudregistry.v1.PR.Registry> getGetMethod;
     if ((getGetMethod = RegistryServiceGrpc.getGetMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getGetMethod = RegistryServiceGrpc.getGetMethod) == null) {
           RegistryServiceGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest, yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest, yandex.cloud.api.cloudregistry.v1.PR.Registry>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry.getDefaultInstance()))
+                  yandex.cloud.api.cloudregistry.v1.PR.Registry.getDefaultInstance()))
               .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Get"))
               .build();
         }
@@ -479,7 +479,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PR.Registry> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -610,7 +610,7 @@ public final class RegistryServiceGrpc {
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest,
-                yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry>(
+                yandex.cloud.api.cloudregistry.v1.PR.Registry>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
@@ -724,7 +724,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PR.Registry> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -885,7 +885,7 @@ public final class RegistryServiceGrpc {
      * To get the list of available Registry resources, make a [RegistryService.List] request.
      * </pre>
      */
-    public yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry get(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
+    public yandex.cloud.api.cloudregistry.v1.PR.Registry get(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -1034,7 +1034,7 @@ public final class RegistryServiceGrpc {
      * To get the list of available Registry resources, make a [RegistryService.List] request.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry> get(
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.PR.Registry> get(
         yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
@@ -1206,7 +1206,7 @@ public final class RegistryServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.GetRegistryRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.RegistryOuterClass.Registry>) responseObserver);
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PR.Registry>) responseObserver);
           break;
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.ListRegistriesRequest) request,

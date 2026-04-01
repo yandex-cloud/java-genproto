@@ -4925,7 +4925,7 @@ public final class ResourceServiceOuterClass {
 
     /**
      * <pre>
-     * Number of results per page. 
+     * Number of results per page.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -5099,7 +5099,7 @@ public final class ResourceServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * Number of results per page. 
+     * Number of results per page.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -5592,7 +5592,7 @@ public final class ResourceServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -5604,7 +5604,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -5619,7 +5619,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -11519,7 +11519,7 @@ public final class ResourceServiceOuterClass {
 
     /**
      * <pre>
-     * Number of results per page. 
+     * Number of results per page.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -11693,7 +11693,7 @@ public final class ResourceServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * Number of results per page. 
+     * Number of results per page.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -12186,7 +12186,7 @@ public final class ResourceServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -12198,7 +12198,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -12213,7 +12213,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of results per page. 
+       * Number of results per page.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -15181,27 +15181,27 @@ public final class ResourceServiceOuterClass {
       "e.proto\032&yandex/cloud/operation/operatio" +
       "n.proto\032\035yandex/cloud/validation.proto\"\251" +
       "\001\n\024ListResourcesRequest\022\037\n\tfolder_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "(\tB\014\212\3101\004<=50\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
       "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\0222" +
       "\n\004type\030\004 \001(\0162$.yandex.cloud.backup.v1.Re" +
       "sourceType\"e\n\025ListResourcesResponse\0223\n\tr" +
       "esources\030\001 \003(\0132 .yandex.cloud.backup.v1." +
       "Resource\022\027\n\017next_page_token\030\002 \001(\t\"\\\n\022Get" +
       "ResourceRequest\022)\n\023compute_instance_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\023include_tenant_inf" +
+      " \001(\tB\014\212\3101\004<=50\350\3071\001\022\033\n\023include_tenant_inf" +
       "o\030\002 \001(\010\"I\n\023GetResourceResponse\0222\n\010resour" +
       "ce\030\001 \001(\0132 .yandex.cloud.backup.v1.Resour" +
       "ce\"]\n\025DeleteResourceRequest\022)\n\023compute_i" +
-      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013resour" +
+      "nstance_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022\031\n\013resour" +
       "ce_id\030\002 \001(\tB\004\350\3071\001\"5\n\026DeleteResourceMetad" +
       "ata\022\033\n\023compute_instance_id\030\001 \001(\t\"{\n\020List" +
       "TasksRequest\022)\n\023compute_instance_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "\tB\014\212\3101\004<=50\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
       "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"Y\n" +
       "\021ListTasksResponse\022+\n\005tasks\030\001 \003(\0132\034.yand" +
       "ex.cloud.backup.v1.Task\022\027\n\017next_page_tok" +
       "en\030\002 \001(\t\"n\n\024ListDirectoryRequest\022\037\n\tfold" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023compute_ins" +
+      "er_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022!\n\023compute_ins" +
       "tance_id\030\002 \001(\tB\004\350\3071\001\022\022\n\004path\030\003 \001(\tB\004\350\3071\000" +
       "\"\375\002\n\025ListDirectoryResponse\022K\n\005items\030\001 \003(" +
       "\0132<.yandex.cloud.backup.v1.ListDirectory" +
@@ -15213,19 +15213,19 @@ public final class ResourceServiceOuterClass {
       "nse.FilesystemItem.Type\022\014\n\004size\030\004 \001(\003\"A\n" +
       "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006VOLUME\020\001\022" +
       "\r\n\tDIRECTORY\020\002\022\010\n\004FILE\020\003\"p\n\026CreateDirect" +
-      "oryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022!\n\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022\022" +
+      "oryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\212\3101\004<=50\350" +
+      "\3071\001\022!\n\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022\022" +
       "\n\004path\030\003 \001(\tB\004\350\3071\001\"D\n\027CreateDirectoryMet" +
       "adata\022\033\n\023compute_instance_id\030\001 \001(\t\022\014\n\004pa" +
       "th\030\002 \001(\t\"\210\001\n\035ListResourceOperationsReque" +
-      "st\022)\n\023compute_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "st\022)\n\023compute_instance_id\030\001 \001(\tB\014\212\3101\004<=5" +
+      "0\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
       "page_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListResou" +
       "rceOperationsResponse\0225\n\noperations\030\001 \003(" +
       "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
       "next_page_token\030\002 \001(\t\"z\n#GetInstanceRegi" +
       "strationTokenRequest\022\037\n\tfolder_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\0222\n\004type\030\002 \001(\0162$.yandex.clo" +
+      "\014\212\3101\004<=50\350\3071\001\0222\n\004type\030\002 \001(\0162$.yandex.clo" +
       "ud.backup.v1.ResourceType\"x\n$GetInstance" +
       "RegistrationTokenResponse\022 \n\030instance_re" +
       "gistration_id\030\001 \001(\t\022.\n\nexpired_at\030\002 \001(\0132" +
@@ -15239,10 +15239,10 @@ public final class ResourceServiceOuterClass {
       "\344\223\002,\022*/backup/v1/resources/{compute_inst" +
       "ance_id}\022\301\001\n\006Delete\022-.yandex.cloud.backu" +
       "p.v1.DeleteResourceRequest\032!.yandex.clou" +
-      "d.operation.Operation\"e\202\323\344\223\002,**/backup/v" +
-      "1/resources/{compute_instance_id}\262\322*/\n\026D" +
-      "eleteResourceMetadata\022\025google.protobuf.E" +
-      "mpty\022\232\001\n\tListTasks\022(.yandex.cloud.backup" +
+      "d.operation.Operation\"e\262\322*/\n\026DeleteResou" +
+      "rceMetadata\022\025google.protobuf.Empty\202\323\344\223\002," +
+      "**/backup/v1/resources/{compute_instance" +
+      "_id}\022\232\001\n\tListTasks\022(.yandex.cloud.backup" +
       ".v1.ListTasksRequest\032).yandex.cloud.back" +
       "up.v1.ListTasksResponse\"8\202\323\344\223\0022\0220/backup" +
       "/v1/resources/{compute_instance_id}/task" +

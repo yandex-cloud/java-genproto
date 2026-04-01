@@ -1313,7 +1313,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
      * @return The rules.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules();
     /**
      * <pre>
      * Rules of the scan policy.
@@ -1321,7 +1321,7 @@ public final class ScanPolicyServiceOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder();
 
     /**
      * <pre>
@@ -1405,11 +1405,11 @@ public final class ScanPolicyServiceOuterClass {
               break;
             }
             case 42: {
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder subBuilder = null;
               if (rules_ != null) {
                 subBuilder = rules_.toBuilder();
               }
-              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.parser(), extensionRegistry);
+              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rules_);
                 rules_ = subBuilder.buildPartial();
@@ -1608,7 +1608,7 @@ public final class ScanPolicyServiceOuterClass {
     }
 
     public static final int RULES_FIELD_NUMBER = 5;
-    private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+    private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
     /**
      * <pre>
      * Rules of the scan policy.
@@ -1630,8 +1630,8 @@ public final class ScanPolicyServiceOuterClass {
      * @return The rules.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
-      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
+      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
     }
     /**
      * <pre>
@@ -1641,7 +1641,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
       return getRules();
     }
 
@@ -2393,9 +2393,9 @@ public final class ScanPolicyServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+      private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> rulesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> rulesBuilder_;
       /**
        * <pre>
        * Rules of the scan policy.
@@ -2415,9 +2415,9 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        * @return The rules.
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
         if (rulesBuilder_ == null) {
-          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         } else {
           return rulesBuilder_.getMessage();
         }
@@ -2429,7 +2429,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public Builder setRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder setRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2450,7 +2450,7 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
       public Builder setRules(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           rules_ = builderForValue.build();
           onChanged();
@@ -2467,11 +2467,11 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (rules_ != null) {
             rules_ =
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
           } else {
             rules_ = value;
           }
@@ -2507,7 +2507,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder getRulesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder getRulesBuilder() {
         
         onChanged();
         return getRulesFieldBuilder().getBuilder();
@@ -2519,12 +2519,12 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
         if (rulesBuilder_ != null) {
           return rulesBuilder_.getMessageOrBuilder();
         } else {
           return rules_ == null ?
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         }
       }
       /**
@@ -2535,11 +2535,11 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> 
           getRulesFieldBuilder() {
         if (rulesBuilder_ == null) {
           rulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder>(
                   getRules(),
                   getParentForChildren(),
                   isClean());
@@ -2761,7 +2761,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      * @return The rules.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules();
     /**
      * <pre>
      * Rules of the scan policy.
@@ -2769,7 +2769,7 @@ public final class ScanPolicyServiceOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder();
 
     /**
      * <pre>
@@ -2866,11 +2866,11 @@ public final class ScanPolicyServiceOuterClass {
               break;
             }
             case 50: {
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder subBuilder = null;
               if (rules_ != null) {
                 subBuilder = rules_.toBuilder();
               }
-              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.parser(), extensionRegistry);
+              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rules_);
                 rules_ = subBuilder.buildPartial();
@@ -3107,7 +3107,7 @@ public final class ScanPolicyServiceOuterClass {
     }
 
     public static final int RULES_FIELD_NUMBER = 6;
-    private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+    private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
     /**
      * <pre>
      * Rules of the scan policy.
@@ -3129,8 +3129,8 @@ public final class ScanPolicyServiceOuterClass {
      * @return The rules.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
-      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
+      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
     }
     /**
      * <pre>
@@ -3140,7 +3140,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
       return getRules();
     }
 
@@ -4077,9 +4077,9 @@ public final class ScanPolicyServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+      private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> rulesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> rulesBuilder_;
       /**
        * <pre>
        * Rules of the scan policy.
@@ -4099,9 +4099,9 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        * @return The rules.
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
         if (rulesBuilder_ == null) {
-          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         } else {
           return rulesBuilder_.getMessage();
         }
@@ -4113,7 +4113,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public Builder setRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder setRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4134,7 +4134,7 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
       public Builder setRules(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           rules_ = builderForValue.build();
           onChanged();
@@ -4151,11 +4151,11 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (rules_ != null) {
             rules_ =
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
           } else {
             rules_ = value;
           }
@@ -4191,7 +4191,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder getRulesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder getRulesBuilder() {
         
         onChanged();
         return getRulesFieldBuilder().getBuilder();
@@ -4203,12 +4203,12 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
         if (rulesBuilder_ != null) {
           return rulesBuilder_.getMessageOrBuilder();
         } else {
           return rules_ == null ?
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         }
       }
       /**
@@ -4219,11 +4219,11 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> 
           getRulesFieldBuilder() {
         if (rulesBuilder_ == null) {
           rulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder>(
                   getRules(),
                   getParentForChildren(),
                   isClean());
@@ -5022,7 +5022,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
      * @return The rules.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules();
     /**
      * <pre>
      * Rules of the scan policy.
@@ -5030,7 +5030,7 @@ public final class ScanPolicyServiceOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder();
 
     /**
      * <pre>
@@ -5114,11 +5114,11 @@ public final class ScanPolicyServiceOuterClass {
               break;
             }
             case 42: {
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder subBuilder = null;
               if (rules_ != null) {
                 subBuilder = rules_.toBuilder();
               }
-              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.parser(), extensionRegistry);
+              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rules_);
                 rules_ = subBuilder.buildPartial();
@@ -5317,7 +5317,7 @@ public final class ScanPolicyServiceOuterClass {
     }
 
     public static final int RULES_FIELD_NUMBER = 5;
-    private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+    private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
     /**
      * <pre>
      * Rules of the scan policy.
@@ -5339,8 +5339,8 @@ public final class ScanPolicyServiceOuterClass {
      * @return The rules.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
-      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
+      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
     }
     /**
      * <pre>
@@ -5350,7 +5350,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
       return getRules();
     }
 
@@ -6102,9 +6102,9 @@ public final class ScanPolicyServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+      private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> rulesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> rulesBuilder_;
       /**
        * <pre>
        * Rules of the scan policy.
@@ -6124,9 +6124,9 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        * @return The rules.
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
         if (rulesBuilder_ == null) {
-          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         } else {
           return rulesBuilder_.getMessage();
         }
@@ -6138,7 +6138,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public Builder setRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder setRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6159,7 +6159,7 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
       public Builder setRules(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           rules_ = builderForValue.build();
           onChanged();
@@ -6176,11 +6176,11 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (rules_ != null) {
             rules_ =
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
           } else {
             rules_ = value;
           }
@@ -6216,7 +6216,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder getRulesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder getRulesBuilder() {
         
         onChanged();
         return getRulesFieldBuilder().getBuilder();
@@ -6228,12 +6228,12 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
         if (rulesBuilder_ != null) {
           return rulesBuilder_.getMessageOrBuilder();
         } else {
           return rules_ == null ?
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         }
       }
       /**
@@ -6244,11 +6244,11 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> 
           getRulesFieldBuilder() {
         if (rulesBuilder_ == null) {
           rulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder>(
                   getRules(),
                   getParentForChildren(),
                   isClean());
@@ -6470,7 +6470,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      * @return The rules.
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules();
     /**
      * <pre>
      * Rules of the scan policy.
@@ -6478,7 +6478,7 @@ public final class ScanPolicyServiceOuterClass {
      *
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      */
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder();
+    yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder();
 
     /**
      * <pre>
@@ -6575,11 +6575,11 @@ public final class ScanPolicyServiceOuterClass {
               break;
             }
             case 50: {
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder subBuilder = null;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder subBuilder = null;
               if (rules_ != null) {
                 subBuilder = rules_.toBuilder();
               }
-              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.parser(), extensionRegistry);
+              rules_ = input.readMessage(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rules_);
                 rules_ = subBuilder.buildPartial();
@@ -6816,7 +6816,7 @@ public final class ScanPolicyServiceOuterClass {
     }
 
     public static final int RULES_FIELD_NUMBER = 6;
-    private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+    private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
     /**
      * <pre>
      * Rules of the scan policy.
@@ -6838,8 +6838,8 @@ public final class ScanPolicyServiceOuterClass {
      * @return The rules.
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
-      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
+      return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
     }
     /**
      * <pre>
@@ -6849,7 +6849,7 @@ public final class ScanPolicyServiceOuterClass {
      * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
       return getRules();
     }
 
@@ -7786,9 +7786,9 @@ public final class ScanPolicyServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules rules_;
+      private yandex.cloud.api.cloudregistry.v1.PSP.ScanRules rules_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> rulesBuilder_;
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> rulesBuilder_;
       /**
        * <pre>
        * Rules of the scan policy.
@@ -7808,9 +7808,9 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        * @return The rules.
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules getRules() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules getRules() {
         if (rulesBuilder_ == null) {
-          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+          return rules_ == null ? yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         } else {
           return rulesBuilder_.getMessage();
         }
@@ -7822,7 +7822,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public Builder setRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder setRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7843,7 +7843,7 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
       public Builder setRules(
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder builderForValue) {
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder builderForValue) {
         if (rulesBuilder_ == null) {
           rules_ = builderForValue.build();
           onChanged();
@@ -7860,11 +7860,11 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules value) {
+      public Builder mergeRules(yandex.cloud.api.cloudregistry.v1.PSP.ScanRules value) {
         if (rulesBuilder_ == null) {
           if (rules_ != null) {
             rules_ =
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.newBuilder(rules_).mergeFrom(value).buildPartial();
           } else {
             rules_ = value;
           }
@@ -7900,7 +7900,7 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder getRulesBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder getRulesBuilder() {
         
         onChanged();
         return getRulesFieldBuilder().getBuilder();
@@ -7912,12 +7912,12 @@ public final class ScanPolicyServiceOuterClass {
        *
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
-      public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder getRulesOrBuilder() {
+      public yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder getRulesOrBuilder() {
         if (rulesBuilder_ != null) {
           return rulesBuilder_.getMessageOrBuilder();
         } else {
           return rules_ == null ?
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.getDefaultInstance() : rules_;
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.getDefaultInstance() : rules_;
         }
       }
       /**
@@ -7928,11 +7928,11 @@ public final class ScanPolicyServiceOuterClass {
        * <code>.yandex.cloud.cloudregistry.v1.ScanRules rules = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder> 
+          yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder> 
           getRulesFieldBuilder() {
         if (rulesBuilder_ == null) {
           rulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanRulesOrBuilder>(
+              yandex.cloud.api.cloudregistry.v1.PSP.ScanRules, yandex.cloud.api.cloudregistry.v1.PSP.ScanRules.Builder, yandex.cloud.api.cloudregistry.v1.PSP.ScanRulesOrBuilder>(
                   getRules(),
                   getParentForChildren(),
                   isClean());
@@ -8691,31 +8691,31 @@ public final class ScanPolicyServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n7yandex/cloud/cloudregistry/v1/scan_pol" +
       "icy_service.proto\022\035yandex.cloud.cloudreg" +
-      "istry.v1\032 yandex/cloud/api/operation.pro" +
-      "to\032\035yandex/cloud/validation.proto\032&yande" +
-      "x/cloud/operation/operation.proto\032/yande" +
-      "x/cloud/cloudregistry/v1/scan_policy.pro" +
-      "to\032 google/protobuf/field_mask.proto\032\034go" +
-      "ogle/api/annotations.proto\"<\n\024GetScanPol" +
-      "icyRequest\022$\n\016scan_policy_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"C\n\036GetScanPolicyByRegistryReque" +
-      "st\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\364\001" +
+      "istry.v1\032\034google/api/annotations.proto\032 " +
+      "google/protobuf/field_mask.proto\032 yandex" +
+      "/cloud/api/operation.proto\032/yandex/cloud" +
+      "/cloudregistry/v1/scan_policy.proto\032&yan" +
+      "dex/cloud/operation/operation.proto\032\035yan" +
+      "dex/cloud/validation.proto\"<\n\024GetScanPol" +
+      "icyRequest\022$\n\016scan_policy_id\030\001 \001(\tB\014\212\3101\004" +
+      "<=50\350\3071\001\"C\n\036GetScanPolicyByRegistryReque" +
+      "st\022!\n\013registry_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\"\364\001" +
       "\n\027CreateScanPolicyRequest\022!\n\013registry_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035" +
+      "\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022/\n\004name\030\002 \001(\tB!\362\3071\035" +
       "|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descrip" +
       "tion\030\003 \001(\tB\t\212\3101\005<=256\022\032\n\022scan_lang_packa" +
       "ges\030\004 \001(\010\0227\n\005rules\030\005 \001(\0132(.yandex.cloud." +
       "cloudregistry.v1.ScanRules\022\020\n\010disabled\030\006" +
       " \001(\010\"\250\002\n\027UpdateScanPolicyRequest\022$\n\016scan" +
-      "_policy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update" +
+      "_policy_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022/\n\013update" +
       "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
       "/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}" +
       "[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256" +
       "\022\032\n\022scan_lang_packages\030\005 \001(\010\0227\n\005rules\030\006 " +
       "\001(\0132(.yandex.cloud.cloudregistry.v1.Scan" +
       "Rules\022\020\n\010disabled\030\007 \001(\010\"?\n\027DeleteScanPol" +
-      "icyRequest\022$\n\016scan_policy_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"\271\001\n\030CreateScanPolicyMetadata\022\023\n" +
+      "icyRequest\022$\n\016scan_policy_id\030\001 \001(\tB\014\212\3101\004" +
+      "<=50\350\3071\001\"\271\001\n\030CreateScanPolicyMetadata\022\023\n" +
       "\013registry_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013desc" +
       "ription\030\003 \001(\t\022\032\n\022scan_lang_packages\030\004 \001(" +
       "\010\0227\n\005rules\030\005 \001(\0132(.yandex.cloud.cloudreg" +
@@ -8739,19 +8739,19 @@ public final class ScanPolicyServiceOuterClass {
       "istry_id}/scanPolicy\022\271\001\n\006Create\0226.yandex" +
       ".cloud.cloudregistry.v1.CreateScanPolicy" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"T\202\323\344\223\002$\"\037/cloud-registry/v1/scanPolic" +
-      "ies:\001*\262\322*&\n\030CreateScanPolicyMetadata\022\nSc" +
-      "anPolicy\022\312\001\n\006Update\0226.yandex.cloud.cloud" +
+      "on\"T\262\322*&\n\030CreateScanPolicyMetadata\022\nScan" +
+      "Policy\202\323\344\223\002$\"\037/cloud-registry/v1/scanPol" +
+      "icies:\001*\022\312\001\n\006Update\0226.yandex.cloud.cloud" +
       "registry.v1.UpdateScanPolicyRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"e\202\323\344\223\002520" +
-      "/cloud-registry/v1/scanPolicies/{scan_po" +
-      "licy_id}:\001*\262\322*&\n\030UpdateScanPolicyMetadat" +
-      "a\022\nScanPolicy\022\322\001\n\006Delete\0226.yandex.cloud." +
+      "ndex.cloud.operation.Operation\"e\262\322*&\n\030Up" +
+      "dateScanPolicyMetadata\022\nScanPolicy\202\323\344\223\0025" +
+      "20/cloud-registry/v1/scanPolicies/{scan_" +
+      "policy_id}:\001*\022\322\001\n\006Delete\0226.yandex.cloud." +
       "cloudregistry.v1.DeleteScanPolicyRequest" +
-      "\032!.yandex.cloud.operation.Operation\"m\202\323\344" +
-      "\223\0022*0/cloud-registry/v1/scanPolicies/{sc" +
-      "an_policy_id}\262\322*1\n\030DeleteScanPolicyMetad" +
-      "ata\022\025google.protobuf.EmptyBt\n!yandex.clo" +
+      "\032!.yandex.cloud.operation.Operation\"m\262\322*" +
+      "1\n\030DeleteScanPolicyMetadata\022\025google.prot" +
+      "obuf.Empty\202\323\344\223\0022*0/cloud-registry/v1/sca" +
+      "nPolicies/{scan_policy_id}Bt\n!yandex.clo" +
       "ud.api.cloudregistry.v1ZOgithub.com/yand" +
       "ex-cloud/go-genproto/yandex/cloud/cloudr" +
       "egistry/v1;cloudregistryb\006proto3"
@@ -8759,12 +8759,12 @@ public final class ScanPolicyServiceOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.cloudregistry.v1.PSP.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_cloudregistry_v1_GetScanPolicyRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -8823,12 +8823,12 @@ public final class ScanPolicyServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.cloudregistry.v1.PSP.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

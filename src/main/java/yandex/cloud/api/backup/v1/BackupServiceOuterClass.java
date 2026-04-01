@@ -12467,4782 +12467,6 @@ public final class BackupServiceOuterClass {
 
   }
 
-  public interface TargetPathOriginalOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.TargetPathOriginal)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.backup.v1.TargetPathOriginal}
-   */
-  public static final class TargetPathOriginal extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.TargetPathOriginal)
-      TargetPathOriginalOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TargetPathOriginal.newBuilder() to construct.
-    private TargetPathOriginal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TargetPathOriginal() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TargetPathOriginal();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TargetPathOriginal(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.backup.v1.TargetPathOriginal}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.TargetPathOriginal)
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getDefaultInstanceForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal build() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal buildPartial() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) {
-          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal other) {
-        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.TargetPathOriginal)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.TargetPathOriginal)
-    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal();
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TargetPathOriginal>
-        PARSER = new com.google.protobuf.AbstractParser<TargetPathOriginal>() {
-      @java.lang.Override
-      public TargetPathOriginal parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TargetPathOriginal(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TargetPathOriginal> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TargetPathOriginal> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TargetPathCustomOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.TargetPathCustom)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Custom folder for file recovery.
-     * </pre>
-     *
-     * <code>string path = 1;</code>
-     * @return The path.
-     */
-    java.lang.String getPath();
-    /**
-     * <pre>
-     * Custom folder for file recovery.
-     * </pre>
-     *
-     * <code>string path = 1;</code>
-     * @return The bytes for path.
-     */
-    com.google.protobuf.ByteString
-        getPathBytes();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.backup.v1.TargetPathCustom}
-   */
-  public static final class TargetPathCustom extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.TargetPathCustom)
-      TargetPathCustomOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TargetPathCustom.newBuilder() to construct.
-    private TargetPathCustom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TargetPathCustom() {
-      path_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TargetPathCustom();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TargetPathCustom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              path_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder.class);
-    }
-
-    public static final int PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object path_;
-    /**
-     * <pre>
-     * Custom folder for file recovery.
-     * </pre>
-     *
-     * <code>string path = 1;</code>
-     * @return The path.
-     */
-    @java.lang.Override
-    public java.lang.String getPath() {
-      java.lang.Object ref = path_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        path_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Custom folder for file recovery.
-     * </pre>
-     *
-     * <code>string path = 1;</code>
-     * @return The bytes for path.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPathBytes() {
-      java.lang.Object ref = path_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        path_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, path_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, path_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) obj;
-
-      if (!getPath()
-          .equals(other.getPath())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PATH_FIELD_NUMBER;
-      hash = (53 * hash) + getPath().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.backup.v1.TargetPathCustom}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.TargetPathCustom)
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        path_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getDefaultInstanceForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom build() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom buildPartial() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom(this);
-        result.path_ = path_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) {
-          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom other) {
-        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance()) return this;
-        if (!other.getPath().isEmpty()) {
-          path_ = other.path_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object path_ = "";
-      /**
-       * <pre>
-       * Custom folder for file recovery.
-       * </pre>
-       *
-       * <code>string path = 1;</code>
-       * @return The path.
-       */
-      public java.lang.String getPath() {
-        java.lang.Object ref = path_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          path_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Custom folder for file recovery.
-       * </pre>
-       *
-       * <code>string path = 1;</code>
-       * @return The bytes for path.
-       */
-      public com.google.protobuf.ByteString
-          getPathBytes() {
-        java.lang.Object ref = path_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          path_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Custom folder for file recovery.
-       * </pre>
-       *
-       * <code>string path = 1;</code>
-       * @param value The path to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPath(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        path_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Custom folder for file recovery.
-       * </pre>
-       *
-       * <code>string path = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPath() {
-        
-        path_ = getDefaultInstance().getPath();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Custom folder for file recovery.
-       * </pre>
-       *
-       * <code>string path = 1;</code>
-       * @param value The bytes for path to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPathBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        path_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.TargetPathCustom)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.TargetPathCustom)
-    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom();
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TargetPathCustom>
-        PARSER = new com.google.protobuf.AbstractParser<TargetPathCustom>() {
-      @java.lang.Override
-      public TargetPathCustom parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TargetPathCustom(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TargetPathCustom> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TargetPathCustom> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface FilesRecoveryOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.FilesRecoveryOptions)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Overwrite options declares the behavior for files that already exists on the file system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-     * @return The enum numeric value on the wire for overwrite.
-     */
-    int getOverwriteValue();
-    /**
-     * <pre>
-     * Overwrite options declares the behavior for files that already exists on the file system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-     * @return The overwrite.
-     */
-    yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite getOverwrite();
-
-    /**
-     * <pre>
-     * specifies whether the recovery plan is able to reboot host if needed.
-     * </pre>
-     *
-     * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
-     * @return The rebootIfNeeded.
-     */
-    boolean getRebootIfNeeded();
-
-    /**
-     * <pre>
-     * Keep original paths of files.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-     * @return Whether the original field is set.
-     */
-    boolean hasOriginal();
-    /**
-     * <pre>
-     * Keep original paths of files.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-     * @return The original.
-     */
-    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getOriginal();
-    /**
-     * <pre>
-     * Keep original paths of files.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-     */
-    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder getOriginalOrBuilder();
-
-    /**
-     * <pre>
-     * Set custom folder for file recovery.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-     * @return Whether the custom field is set.
-     */
-    boolean hasCustom();
-    /**
-     * <pre>
-     * Set custom folder for file recovery.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-     * @return The custom.
-     */
-    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getCustom();
-    /**
-     * <pre>
-     * Set custom folder for file recovery.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-     */
-    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder getCustomOrBuilder();
-
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.TypeCase getTypeCase();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.backup.v1.FilesRecoveryOptions}
-   */
-  public static final class FilesRecoveryOptions extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.FilesRecoveryOptions)
-      FilesRecoveryOptionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FilesRecoveryOptions.newBuilder() to construct.
-    private FilesRecoveryOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private FilesRecoveryOptions() {
-      overwrite_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FilesRecoveryOptions();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private FilesRecoveryOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              overwrite_ = rawValue;
-              break;
-            }
-            case 16: {
-
-              rebootIfNeeded_ = input.readBool();
-              break;
-            }
-            case 802: {
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder subBuilder = null;
-              if (typeCase_ == 100) {
-                subBuilder = ((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 100;
-              break;
-            }
-            case 810: {
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder subBuilder = null;
-              if (typeCase_ == 101) {
-                subBuilder = ((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 101;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite}
-     */
-    public enum Overwrite
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <pre>
-       * Unspecified value treated as Overwrite all
-       * </pre>
-       *
-       * <code>OVERWRITE_UNSPECIFIED = 0;</code>
-       */
-      OVERWRITE_UNSPECIFIED(0),
-      /**
-       * <pre>
-       * All overwrites all existing files by recovered ones.
-       * </pre>
-       *
-       * <code>OVERWRITE_ALL = 1;</code>
-       */
-      OVERWRITE_ALL(1),
-      /**
-       * <pre>
-       * Older overwrites older files only.
-       * </pre>
-       *
-       * <code>OVERWRITE_OLDER = 2;</code>
-       */
-      OVERWRITE_OLDER(2),
-      /**
-       * <pre>
-       * None does not overwrites files at all.
-       * </pre>
-       *
-       * <code>OVERWRITE_NONE = 3;</code>
-       */
-      OVERWRITE_NONE(3),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <pre>
-       * Unspecified value treated as Overwrite all
-       * </pre>
-       *
-       * <code>OVERWRITE_UNSPECIFIED = 0;</code>
-       */
-      public static final int OVERWRITE_UNSPECIFIED_VALUE = 0;
-      /**
-       * <pre>
-       * All overwrites all existing files by recovered ones.
-       * </pre>
-       *
-       * <code>OVERWRITE_ALL = 1;</code>
-       */
-      public static final int OVERWRITE_ALL_VALUE = 1;
-      /**
-       * <pre>
-       * Older overwrites older files only.
-       * </pre>
-       *
-       * <code>OVERWRITE_OLDER = 2;</code>
-       */
-      public static final int OVERWRITE_OLDER_VALUE = 2;
-      /**
-       * <pre>
-       * None does not overwrites files at all.
-       * </pre>
-       *
-       * <code>OVERWRITE_NONE = 3;</code>
-       */
-      public static final int OVERWRITE_NONE_VALUE = 3;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Overwrite valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static Overwrite forNumber(int value) {
-        switch (value) {
-          case 0: return OVERWRITE_UNSPECIFIED;
-          case 1: return OVERWRITE_ALL;
-          case 2: return OVERWRITE_OLDER;
-          case 3: return OVERWRITE_NONE;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Overwrite>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Overwrite> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Overwrite>() {
-              public Overwrite findValueByNumber(int number) {
-                return Overwrite.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Overwrite[] VALUES = values();
-
-      public static Overwrite valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Overwrite(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite)
-    }
-
-    private int typeCase_ = 0;
-    private java.lang.Object type_;
-    public enum TypeCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      ORIGINAL(100),
-      CUSTOM(101),
-      TYPE_NOT_SET(0);
-      private final int value;
-      private TypeCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static TypeCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static TypeCase forNumber(int value) {
-        switch (value) {
-          case 100: return ORIGINAL;
-          case 101: return CUSTOM;
-          case 0: return TYPE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public TypeCase
-    getTypeCase() {
-      return TypeCase.forNumber(
-          typeCase_);
-    }
-
-    public static final int OVERWRITE_FIELD_NUMBER = 1;
-    private int overwrite_;
-    /**
-     * <pre>
-     * Overwrite options declares the behavior for files that already exists on the file system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-     * @return The enum numeric value on the wire for overwrite.
-     */
-    @java.lang.Override public int getOverwriteValue() {
-      return overwrite_;
-    }
-    /**
-     * <pre>
-     * Overwrite options declares the behavior for files that already exists on the file system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-     * @return The overwrite.
-     */
-    @java.lang.Override public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite getOverwrite() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite result = yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.valueOf(overwrite_);
-      return result == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.UNRECOGNIZED : result;
-    }
-
-    public static final int REBOOT_IF_NEEDED_FIELD_NUMBER = 2;
-    private boolean rebootIfNeeded_;
-    /**
-     * <pre>
-     * specifies whether the recovery plan is able to reboot host if needed.
-     * </pre>
-     *
-     * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
-     * @return The rebootIfNeeded.
-     */
-    @java.lang.Override
-    public boolean getRebootIfNeeded() {
-      return rebootIfNeeded_;
-    }
-
-    public static final int ORIGINAL_FIELD_NUMBER = 100;
-    /**
-     * <pre>
-     * Keep original paths of files.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-     * @return Whether the original field is set.
-     */
-    @java.lang.Override
-    public boolean hasOriginal() {
-      return typeCase_ == 100;
-    }
-    /**
-     * <pre>
-     * Keep original paths of files.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-     * @return The original.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getOriginal() {
-      if (typeCase_ == 100) {
-         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
-      }
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Keep original paths of files.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder getOriginalOrBuilder() {
-      if (typeCase_ == 100) {
-         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
-      }
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
-    }
-
-    public static final int CUSTOM_FIELD_NUMBER = 101;
-    /**
-     * <pre>
-     * Set custom folder for file recovery.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-     * @return Whether the custom field is set.
-     */
-    @java.lang.Override
-    public boolean hasCustom() {
-      return typeCase_ == 101;
-    }
-    /**
-     * <pre>
-     * Set custom folder for file recovery.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-     * @return The custom.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getCustom() {
-      if (typeCase_ == 101) {
-         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
-      }
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Set custom folder for file recovery.
-     * </pre>
-     *
-     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder getCustomOrBuilder() {
-      if (typeCase_ == 101) {
-         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
-      }
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (overwrite_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.OVERWRITE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, overwrite_);
-      }
-      if (rebootIfNeeded_ != false) {
-        output.writeBool(2, rebootIfNeeded_);
-      }
-      if (typeCase_ == 100) {
-        output.writeMessage(100, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_);
-      }
-      if (typeCase_ == 101) {
-        output.writeMessage(101, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (overwrite_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.OVERWRITE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, overwrite_);
-      }
-      if (rebootIfNeeded_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, rebootIfNeeded_);
-      }
-      if (typeCase_ == 100) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(100, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_);
-      }
-      if (typeCase_ == 101) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(101, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions) obj;
-
-      if (overwrite_ != other.overwrite_) return false;
-      if (getRebootIfNeeded()
-          != other.getRebootIfNeeded()) return false;
-      if (!getTypeCase().equals(other.getTypeCase())) return false;
-      switch (typeCase_) {
-        case 100:
-          if (!getOriginal()
-              .equals(other.getOriginal())) return false;
-          break;
-        case 101:
-          if (!getCustom()
-              .equals(other.getCustom())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OVERWRITE_FIELD_NUMBER;
-      hash = (53 * hash) + overwrite_;
-      hash = (37 * hash) + REBOOT_IF_NEEDED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getRebootIfNeeded());
-      switch (typeCase_) {
-        case 100:
-          hash = (37 * hash) + ORIGINAL_FIELD_NUMBER;
-          hash = (53 * hash) + getOriginal().hashCode();
-          break;
-        case 101:
-          hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
-          hash = (53 * hash) + getCustom().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.backup.v1.FilesRecoveryOptions}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.FilesRecoveryOptions)
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        overwrite_ = 0;
-
-        rebootIfNeeded_ = false;
-
-        typeCase_ = 0;
-        type_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getDefaultInstanceForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions build() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions buildPartial() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions(this);
-        result.overwrite_ = overwrite_;
-        result.rebootIfNeeded_ = rebootIfNeeded_;
-        if (typeCase_ == 100) {
-          if (originalBuilder_ == null) {
-            result.type_ = type_;
-          } else {
-            result.type_ = originalBuilder_.build();
-          }
-        }
-        if (typeCase_ == 101) {
-          if (customBuilder_ == null) {
-            result.type_ = type_;
-          } else {
-            result.type_ = customBuilder_.build();
-          }
-        }
-        result.typeCase_ = typeCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions) {
-          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions other) {
-        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance()) return this;
-        if (other.overwrite_ != 0) {
-          setOverwriteValue(other.getOverwriteValue());
-        }
-        if (other.getRebootIfNeeded() != false) {
-          setRebootIfNeeded(other.getRebootIfNeeded());
-        }
-        switch (other.getTypeCase()) {
-          case ORIGINAL: {
-            mergeOriginal(other.getOriginal());
-            break;
-          }
-          case CUSTOM: {
-            mergeCustom(other.getCustom());
-            break;
-          }
-          case TYPE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int typeCase_ = 0;
-      private java.lang.Object type_;
-      public TypeCase
-          getTypeCase() {
-        return TypeCase.forNumber(
-            typeCase_);
-      }
-
-      public Builder clearType() {
-        typeCase_ = 0;
-        type_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private int overwrite_ = 0;
-      /**
-       * <pre>
-       * Overwrite options declares the behavior for files that already exists on the file system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-       * @return The enum numeric value on the wire for overwrite.
-       */
-      @java.lang.Override public int getOverwriteValue() {
-        return overwrite_;
-      }
-      /**
-       * <pre>
-       * Overwrite options declares the behavior for files that already exists on the file system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-       * @param value The enum numeric value on the wire for overwrite to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOverwriteValue(int value) {
-        
-        overwrite_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Overwrite options declares the behavior for files that already exists on the file system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-       * @return The overwrite.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite getOverwrite() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite result = yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.valueOf(overwrite_);
-        return result == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Overwrite options declares the behavior for files that already exists on the file system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-       * @param value The overwrite to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOverwrite(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        overwrite_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Overwrite options declares the behavior for files that already exists on the file system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOverwrite() {
-        
-        overwrite_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean rebootIfNeeded_ ;
-      /**
-       * <pre>
-       * specifies whether the recovery plan is able to reboot host if needed.
-       * </pre>
-       *
-       * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
-       * @return The rebootIfNeeded.
-       */
-      @java.lang.Override
-      public boolean getRebootIfNeeded() {
-        return rebootIfNeeded_;
-      }
-      /**
-       * <pre>
-       * specifies whether the recovery plan is able to reboot host if needed.
-       * </pre>
-       *
-       * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
-       * @param value The rebootIfNeeded to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRebootIfNeeded(boolean value) {
-        
-        rebootIfNeeded_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * specifies whether the recovery plan is able to reboot host if needed.
-       * </pre>
-       *
-       * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRebootIfNeeded() {
-        
-        rebootIfNeeded_ = false;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder> originalBuilder_;
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       * @return Whether the original field is set.
-       */
-      @java.lang.Override
-      public boolean hasOriginal() {
-        return typeCase_ == 100;
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       * @return The original.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getOriginal() {
-        if (originalBuilder_ == null) {
-          if (typeCase_ == 100) {
-            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
-          }
-          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
-        } else {
-          if (typeCase_ == 100) {
-            return originalBuilder_.getMessage();
-          }
-          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       */
-      public Builder setOriginal(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal value) {
-        if (originalBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          originalBuilder_.setMessage(value);
-        }
-        typeCase_ = 100;
-        return this;
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       */
-      public Builder setOriginal(
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder builderForValue) {
-        if (originalBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          originalBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 100;
-        return this;
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       */
-      public Builder mergeOriginal(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal value) {
-        if (originalBuilder_ == null) {
-          if (typeCase_ == 100 &&
-              type_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance()) {
-            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.newBuilder((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 100) {
-            originalBuilder_.mergeFrom(value);
-          }
-          originalBuilder_.setMessage(value);
-        }
-        typeCase_ = 100;
-        return this;
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       */
-      public Builder clearOriginal() {
-        if (originalBuilder_ == null) {
-          if (typeCase_ == 100) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 100) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          originalBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       */
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder getOriginalBuilder() {
-        return getOriginalFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder getOriginalOrBuilder() {
-        if ((typeCase_ == 100) && (originalBuilder_ != null)) {
-          return originalBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 100) {
-            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
-          }
-          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Keep original paths of files.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder> 
-          getOriginalFieldBuilder() {
-        if (originalBuilder_ == null) {
-          if (!(typeCase_ == 100)) {
-            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
-          }
-          originalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder>(
-                  (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 100;
-        onChanged();;
-        return originalBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder> customBuilder_;
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       * @return Whether the custom field is set.
-       */
-      @java.lang.Override
-      public boolean hasCustom() {
-        return typeCase_ == 101;
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       * @return The custom.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getCustom() {
-        if (customBuilder_ == null) {
-          if (typeCase_ == 101) {
-            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
-          }
-          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
-        } else {
-          if (typeCase_ == 101) {
-            return customBuilder_.getMessage();
-          }
-          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       */
-      public Builder setCustom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom value) {
-        if (customBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          customBuilder_.setMessage(value);
-        }
-        typeCase_ = 101;
-        return this;
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       */
-      public Builder setCustom(
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder builderForValue) {
-        if (customBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          customBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 101;
-        return this;
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       */
-      public Builder mergeCustom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom value) {
-        if (customBuilder_ == null) {
-          if (typeCase_ == 101 &&
-              type_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance()) {
-            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.newBuilder((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 101) {
-            customBuilder_.mergeFrom(value);
-          }
-          customBuilder_.setMessage(value);
-        }
-        typeCase_ = 101;
-        return this;
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       */
-      public Builder clearCustom() {
-        if (customBuilder_ == null) {
-          if (typeCase_ == 101) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 101) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          customBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       */
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder getCustomBuilder() {
-        return getCustomFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder getCustomOrBuilder() {
-        if ((typeCase_ == 101) && (customBuilder_ != null)) {
-          return customBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 101) {
-            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
-          }
-          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Set custom folder for file recovery.
-       * </pre>
-       *
-       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder> 
-          getCustomFieldBuilder() {
-        if (customBuilder_ == null) {
-          if (!(typeCase_ == 101)) {
-            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
-          }
-          customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder>(
-                  (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 101;
-        onChanged();;
-        return customBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.FilesRecoveryOptions)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.FilesRecoveryOptions)
-    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions();
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<FilesRecoveryOptions>
-        PARSER = new com.google.protobuf.AbstractParser<FilesRecoveryOptions>() {
-      @java.lang.Override
-      public FilesRecoveryOptions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FilesRecoveryOptions(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<FilesRecoveryOptions> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FilesRecoveryOptions> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface StartFilesRecoveryRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-     * @return The computeInstanceId.
-     */
-    java.lang.String getComputeInstanceId();
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for computeInstanceId.
-     */
-    com.google.protobuf.ByteString
-        getComputeInstanceIdBytes();
-
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The backupId.
-     */
-    java.lang.String getBackupId();
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for backupId.
-     */
-    com.google.protobuf.ByteString
-        getBackupIdBytes();
-
-    /**
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-     * @return Whether the opts field is set.
-     */
-    boolean hasOpts();
-    /**
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-     * @return The opts.
-     */
-    yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getOpts();
-    /**
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-     */
-    yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder getOptsOrBuilder();
-
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return A list containing the sourceIds.
-     */
-    java.util.List<java.lang.String>
-        getSourceIdsList();
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return The count of sourceIds.
-     */
-    int getSourceIdsCount();
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the element to return.
-     * @return The sourceIds at the given index.
-     */
-    java.lang.String getSourceIds(int index);
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the sourceIds at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSourceIdsBytes(int index);
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryRequest}
-   */
-  public static final class StartFilesRecoveryRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
-      StartFilesRecoveryRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StartFilesRecoveryRequest.newBuilder() to construct.
-    private StartFilesRecoveryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private StartFilesRecoveryRequest() {
-      computeInstanceId_ = "";
-      backupId_ = "";
-      sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StartFilesRecoveryRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private StartFilesRecoveryRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              computeInstanceId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              backupId_ = s;
-              break;
-            }
-            case 26: {
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder subBuilder = null;
-              if (opts_ != null) {
-                subBuilder = opts_.toBuilder();
-              }
-              opts_ = input.readMessage(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(opts_);
-                opts_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sourceIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              sourceIds_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sourceIds_ = sourceIds_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.Builder.class);
-    }
-
-    public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object computeInstanceId_;
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-     * @return The computeInstanceId.
-     */
-    @java.lang.Override
-    public java.lang.String getComputeInstanceId() {
-      java.lang.Object ref = computeInstanceId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        computeInstanceId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for computeInstanceId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getComputeInstanceIdBytes() {
-      java.lang.Object ref = computeInstanceId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        computeInstanceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BACKUP_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object backupId_;
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The backupId.
-     */
-    @java.lang.Override
-    public java.lang.String getBackupId() {
-      java.lang.Object ref = backupId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        backupId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for backupId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBackupIdBytes() {
-      java.lang.Object ref = backupId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        backupId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OPTS_FIELD_NUMBER = 3;
-    private yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions opts_;
-    /**
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-     * @return Whether the opts field is set.
-     */
-    @java.lang.Override
-    public boolean hasOpts() {
-      return opts_ != null;
-    }
-    /**
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-     * @return The opts.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getOpts() {
-      return opts_ == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance() : opts_;
-    }
-    /**
-     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder getOptsOrBuilder() {
-      return getOpts();
-    }
-
-    public static final int SOURCE_IDS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList sourceIds_;
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return A list containing the sourceIds.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSourceIdsList() {
-      return sourceIds_;
-    }
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return The count of sourceIds.
-     */
-    public int getSourceIdsCount() {
-      return sourceIds_.size();
-    }
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the element to return.
-     * @return The sourceIds at the given index.
-     */
-    public java.lang.String getSourceIds(int index) {
-      return sourceIds_.get(index);
-    }
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the sourceIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSourceIdsBytes(int index) {
-      return sourceIds_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, computeInstanceId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, backupId_);
-      }
-      if (opts_ != null) {
-        output.writeMessage(3, getOpts());
-      }
-      for (int i = 0; i < sourceIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceIds_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, computeInstanceId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, backupId_);
-      }
-      if (opts_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getOpts());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < sourceIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(sourceIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getSourceIdsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest) obj;
-
-      if (!getComputeInstanceId()
-          .equals(other.getComputeInstanceId())) return false;
-      if (!getBackupId()
-          .equals(other.getBackupId())) return false;
-      if (hasOpts() != other.hasOpts()) return false;
-      if (hasOpts()) {
-        if (!getOpts()
-            .equals(other.getOpts())) return false;
-      }
-      if (!getSourceIdsList()
-          .equals(other.getSourceIdsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getComputeInstanceId().hashCode();
-      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getBackupId().hashCode();
-      if (hasOpts()) {
-        hash = (37 * hash) + OPTS_FIELD_NUMBER;
-        hash = (53 * hash) + getOpts().hashCode();
-      }
-      if (getSourceIdsCount() > 0) {
-        hash = (37 * hash) + SOURCE_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getSourceIdsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        computeInstanceId_ = "";
-
-        backupId_ = "";
-
-        if (optsBuilder_ == null) {
-          opts_ = null;
-        } else {
-          opts_ = null;
-          optsBuilder_ = null;
-        }
-        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest build() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest buildPartial() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.computeInstanceId_ = computeInstanceId_;
-        result.backupId_ = backupId_;
-        if (optsBuilder_ == null) {
-          result.opts_ = opts_;
-        } else {
-          result.opts_ = optsBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sourceIds_ = sourceIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.sourceIds_ = sourceIds_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest) {
-          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest other) {
-        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.getDefaultInstance()) return this;
-        if (!other.getComputeInstanceId().isEmpty()) {
-          computeInstanceId_ = other.computeInstanceId_;
-          onChanged();
-        }
-        if (!other.getBackupId().isEmpty()) {
-          backupId_ = other.backupId_;
-          onChanged();
-        }
-        if (other.hasOpts()) {
-          mergeOpts(other.getOpts());
-        }
-        if (!other.sourceIds_.isEmpty()) {
-          if (sourceIds_.isEmpty()) {
-            sourceIds_ = other.sourceIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSourceIdsIsMutable();
-            sourceIds_.addAll(other.sourceIds_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object computeInstanceId_ = "";
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @return The computeInstanceId.
-       */
-      public java.lang.String getComputeInstanceId() {
-        java.lang.Object ref = computeInstanceId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          computeInstanceId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @return The bytes for computeInstanceId.
-       */
-      public com.google.protobuf.ByteString
-          getComputeInstanceIdBytes() {
-        java.lang.Object ref = computeInstanceId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          computeInstanceId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @param value The computeInstanceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setComputeInstanceId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        computeInstanceId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearComputeInstanceId() {
-        
-        computeInstanceId_ = getDefaultInstance().getComputeInstanceId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
-       * @param value The bytes for computeInstanceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setComputeInstanceIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        computeInstanceId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object backupId_ = "";
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The backupId.
-       */
-      public java.lang.String getBackupId() {
-        java.lang.Object ref = backupId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          backupId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The bytes for backupId.
-       */
-      public com.google.protobuf.ByteString
-          getBackupIdBytes() {
-        java.lang.Object ref = backupId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          backupId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @param value The backupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBackupId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        backupId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBackupId() {
-        
-        backupId_ = getDefaultInstance().getBackupId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @param value The bytes for backupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBackupIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        backupId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions opts_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder> optsBuilder_;
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       * @return Whether the opts field is set.
-       */
-      public boolean hasOpts() {
-        return optsBuilder_ != null || opts_ != null;
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       * @return The opts.
-       */
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getOpts() {
-        if (optsBuilder_ == null) {
-          return opts_ == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance() : opts_;
-        } else {
-          return optsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       */
-      public Builder setOpts(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions value) {
-        if (optsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          opts_ = value;
-          onChanged();
-        } else {
-          optsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       */
-      public Builder setOpts(
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder builderForValue) {
-        if (optsBuilder_ == null) {
-          opts_ = builderForValue.build();
-          onChanged();
-        } else {
-          optsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       */
-      public Builder mergeOpts(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions value) {
-        if (optsBuilder_ == null) {
-          if (opts_ != null) {
-            opts_ =
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.newBuilder(opts_).mergeFrom(value).buildPartial();
-          } else {
-            opts_ = value;
-          }
-          onChanged();
-        } else {
-          optsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       */
-      public Builder clearOpts() {
-        if (optsBuilder_ == null) {
-          opts_ = null;
-          onChanged();
-        } else {
-          opts_ = null;
-          optsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       */
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder getOptsBuilder() {
-        
-        onChanged();
-        return getOptsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       */
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder getOptsOrBuilder() {
-        if (optsBuilder_ != null) {
-          return optsBuilder_.getMessageOrBuilder();
-        } else {
-          return opts_ == null ?
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance() : opts_;
-        }
-      }
-      /**
-       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder> 
-          getOptsFieldBuilder() {
-        if (optsBuilder_ == null) {
-          optsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder>(
-                  getOpts(),
-                  getParentForChildren(),
-                  isClean());
-          opts_ = null;
-        }
-        return optsBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSourceIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sourceIds_ = new com.google.protobuf.LazyStringArrayList(sourceIds_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @return A list containing the sourceIds.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSourceIdsList() {
-        return sourceIds_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @return The count of sourceIds.
-       */
-      public int getSourceIdsCount() {
-        return sourceIds_.size();
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param index The index of the element to return.
-       * @return The sourceIds at the given index.
-       */
-      public java.lang.String getSourceIds(int index) {
-        return sourceIds_.get(index);
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the sourceIds at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSourceIdsBytes(int index) {
-        return sourceIds_.getByteString(index);
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param index The index to set the value at.
-       * @param value The sourceIds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSourceIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceIdsIsMutable();
-        sourceIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param value The sourceIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSourceIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceIdsIsMutable();
-        sourceIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param values The sourceIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSourceIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSourceIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, sourceIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSourceIds() {
-        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param value The bytes of the sourceIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSourceIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSourceIdsIsMutable();
-        sourceIds_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
-    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest();
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<StartFilesRecoveryRequest>
-        PARSER = new com.google.protobuf.AbstractParser<StartFilesRecoveryRequest>() {
-      @java.lang.Override
-      public StartFilesRecoveryRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new StartFilesRecoveryRequest(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<StartFilesRecoveryRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StartFilesRecoveryRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface StartFilesRecoveryMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>double progress_percentage = 1;</code>
-     * @return The progressPercentage.
-     */
-    double getProgressPercentage();
-
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The computeInstanceId.
-     */
-    java.lang.String getComputeInstanceId();
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for computeInstanceId.
-     */
-    com.google.protobuf.ByteString
-        getComputeInstanceIdBytes();
-
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-     * @return The backupId.
-     */
-    java.lang.String getBackupId();
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for backupId.
-     */
-    com.google.protobuf.ByteString
-        getBackupIdBytes();
-
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return A list containing the sourceIds.
-     */
-    java.util.List<java.lang.String>
-        getSourceIdsList();
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return The count of sourceIds.
-     */
-    int getSourceIdsCount();
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the element to return.
-     * @return The sourceIds at the given index.
-     */
-    java.lang.String getSourceIds(int index);
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the sourceIds at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSourceIdsBytes(int index);
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryMetadata}
-   */
-  public static final class StartFilesRecoveryMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
-      StartFilesRecoveryMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StartFilesRecoveryMetadata.newBuilder() to construct.
-    private StartFilesRecoveryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private StartFilesRecoveryMetadata() {
-      computeInstanceId_ = "";
-      backupId_ = "";
-      sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StartFilesRecoveryMetadata();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private StartFilesRecoveryMetadata(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 9: {
-
-              progressPercentage_ = input.readDouble();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              computeInstanceId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              backupId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sourceIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              sourceIds_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sourceIds_ = sourceIds_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.Builder.class);
-    }
-
-    public static final int PROGRESS_PERCENTAGE_FIELD_NUMBER = 1;
-    private double progressPercentage_;
-    /**
-     * <code>double progress_percentage = 1;</code>
-     * @return The progressPercentage.
-     */
-    @java.lang.Override
-    public double getProgressPercentage() {
-      return progressPercentage_;
-    }
-
-    public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object computeInstanceId_;
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The computeInstanceId.
-     */
-    @java.lang.Override
-    public java.lang.String getComputeInstanceId() {
-      java.lang.Object ref = computeInstanceId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        computeInstanceId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Destination instance ID.
-     * </pre>
-     *
-     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for computeInstanceId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getComputeInstanceIdBytes() {
-      java.lang.Object ref = computeInstanceId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        computeInstanceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BACKUP_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object backupId_;
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-     * @return The backupId.
-     */
-    @java.lang.Override
-    public java.lang.String getBackupId() {
-      java.lang.Object ref = backupId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        backupId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Backup ID.
-     * </pre>
-     *
-     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-     * @return The bytes for backupId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBackupIdBytes() {
-      java.lang.Object ref = backupId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        backupId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SOURCE_IDS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList sourceIds_;
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return A list containing the sourceIds.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSourceIdsList() {
-      return sourceIds_;
-    }
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @return The count of sourceIds.
-     */
-    public int getSourceIdsCount() {
-      return sourceIds_.size();
-    }
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the element to return.
-     * @return The sourceIds at the given index.
-     */
-    public java.lang.String getSourceIds(int index) {
-      return sourceIds_.get(index);
-    }
-    /**
-     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the sourceIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSourceIdsBytes(int index) {
-      return sourceIds_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (java.lang.Double.doubleToRawLongBits(progressPercentage_) != 0) {
-        output.writeDouble(1, progressPercentage_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, computeInstanceId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, backupId_);
-      }
-      for (int i = 0; i < sourceIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceIds_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (java.lang.Double.doubleToRawLongBits(progressPercentage_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(1, progressPercentage_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, computeInstanceId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, backupId_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < sourceIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(sourceIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getSourceIdsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata) obj;
-
-      if (java.lang.Double.doubleToLongBits(getProgressPercentage())
-          != java.lang.Double.doubleToLongBits(
-              other.getProgressPercentage())) return false;
-      if (!getComputeInstanceId()
-          .equals(other.getComputeInstanceId())) return false;
-      if (!getBackupId()
-          .equals(other.getBackupId())) return false;
-      if (!getSourceIdsList()
-          .equals(other.getSourceIdsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PROGRESS_PERCENTAGE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getProgressPercentage()));
-      hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getComputeInstanceId().hashCode();
-      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getBackupId().hashCode();
-      if (getSourceIdsCount() > 0) {
-        hash = (37 * hash) + SOURCE_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getSourceIdsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryMetadata}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        progressPercentage_ = 0D;
-
-        computeInstanceId_ = "";
-
-        backupId_ = "";
-
-        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata getDefaultInstanceForType() {
-        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata build() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata buildPartial() {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata(this);
-        int from_bitField0_ = bitField0_;
-        result.progressPercentage_ = progressPercentage_;
-        result.computeInstanceId_ = computeInstanceId_;
-        result.backupId_ = backupId_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sourceIds_ = sourceIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.sourceIds_ = sourceIds_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata) {
-          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata other) {
-        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.getDefaultInstance()) return this;
-        if (other.getProgressPercentage() != 0D) {
-          setProgressPercentage(other.getProgressPercentage());
-        }
-        if (!other.getComputeInstanceId().isEmpty()) {
-          computeInstanceId_ = other.computeInstanceId_;
-          onChanged();
-        }
-        if (!other.getBackupId().isEmpty()) {
-          backupId_ = other.backupId_;
-          onChanged();
-        }
-        if (!other.sourceIds_.isEmpty()) {
-          if (sourceIds_.isEmpty()) {
-            sourceIds_ = other.sourceIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSourceIdsIsMutable();
-            sourceIds_.addAll(other.sourceIds_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private double progressPercentage_ ;
-      /**
-       * <code>double progress_percentage = 1;</code>
-       * @return The progressPercentage.
-       */
-      @java.lang.Override
-      public double getProgressPercentage() {
-        return progressPercentage_;
-      }
-      /**
-       * <code>double progress_percentage = 1;</code>
-       * @param value The progressPercentage to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProgressPercentage(double value) {
-        
-        progressPercentage_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double progress_percentage = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProgressPercentage() {
-        
-        progressPercentage_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object computeInstanceId_ = "";
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The computeInstanceId.
-       */
-      public java.lang.String getComputeInstanceId() {
-        java.lang.Object ref = computeInstanceId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          computeInstanceId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The bytes for computeInstanceId.
-       */
-      public com.google.protobuf.ByteString
-          getComputeInstanceIdBytes() {
-        java.lang.Object ref = computeInstanceId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          computeInstanceId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @param value The computeInstanceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setComputeInstanceId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        computeInstanceId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearComputeInstanceId() {
-        
-        computeInstanceId_ = getDefaultInstance().getComputeInstanceId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Destination instance ID.
-       * </pre>
-       *
-       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
-       * @param value The bytes for computeInstanceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setComputeInstanceIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        computeInstanceId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object backupId_ = "";
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-       * @return The backupId.
-       */
-      public java.lang.String getBackupId() {
-        java.lang.Object ref = backupId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          backupId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-       * @return The bytes for backupId.
-       */
-      public com.google.protobuf.ByteString
-          getBackupIdBytes() {
-        java.lang.Object ref = backupId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          backupId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-       * @param value The backupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBackupId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        backupId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBackupId() {
-        
-        backupId_ = getDefaultInstance().getBackupId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Backup ID.
-       * </pre>
-       *
-       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
-       * @param value The bytes for backupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBackupIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        backupId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSourceIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sourceIds_ = new com.google.protobuf.LazyStringArrayList(sourceIds_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @return A list containing the sourceIds.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSourceIdsList() {
-        return sourceIds_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @return The count of sourceIds.
-       */
-      public int getSourceIdsCount() {
-        return sourceIds_.size();
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param index The index of the element to return.
-       * @return The sourceIds at the given index.
-       */
-      public java.lang.String getSourceIds(int index) {
-        return sourceIds_.get(index);
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the sourceIds at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSourceIdsBytes(int index) {
-        return sourceIds_.getByteString(index);
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param index The index to set the value at.
-       * @param value The sourceIds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSourceIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceIdsIsMutable();
-        sourceIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param value The sourceIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSourceIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceIdsIsMutable();
-        sourceIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param values The sourceIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSourceIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSourceIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, sourceIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSourceIds() {
-        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
-       * @param value The bytes of the sourceIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSourceIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSourceIdsIsMutable();
-        sourceIds_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
-    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata();
-    }
-
-    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<StartFilesRecoveryMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<StartFilesRecoveryMetadata>() {
-      @java.lang.Override
-      public StartFilesRecoveryMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new StartFilesRecoveryMetadata(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<StartFilesRecoveryMetadata> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StartFilesRecoveryMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface DeleteBackupRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.DeleteBackupRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -20785,6 +16009,4782 @@ public final class BackupServiceOuterClass {
 
   }
 
+  public interface TargetPathOriginalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.TargetPathOriginal)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.TargetPathOriginal}
+   */
+  public static final class TargetPathOriginal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.TargetPathOriginal)
+      TargetPathOriginalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TargetPathOriginal.newBuilder() to construct.
+    private TargetPathOriginal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TargetPathOriginal() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TargetPathOriginal();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TargetPathOriginal(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.TargetPathOriginal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.TargetPathOriginal)
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal build() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal buildPartial() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) {
+          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal other) {
+        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.TargetPathOriginal)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.TargetPathOriginal)
+    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal();
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TargetPathOriginal>
+        PARSER = new com.google.protobuf.AbstractParser<TargetPathOriginal>() {
+      @java.lang.Override
+      public TargetPathOriginal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TargetPathOriginal(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TargetPathOriginal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TargetPathOriginal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TargetPathCustomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.TargetPathCustom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
+     * <code>string path = 1;</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
+     * <code>string path = 1;</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.TargetPathCustom}
+   */
+  public static final class TargetPathCustom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.TargetPathCustom)
+      TargetPathCustomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TargetPathCustom.newBuilder() to construct.
+    private TargetPathCustom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TargetPathCustom() {
+      path_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TargetPathCustom();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TargetPathCustom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              path_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder.class);
+    }
+
+    public static final int PATH_FIELD_NUMBER = 1;
+    private volatile java.lang.Object path_;
+    /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
+     * <code>string path = 1;</code>
+     * @return The path.
+     */
+    @java.lang.Override
+    public java.lang.String getPath() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        path_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
+     * <code>string path = 1;</code>
+     * @return The bytes for path.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        path_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, path_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, path_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) obj;
+
+      if (!getPath()
+          .equals(other.getPath())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.TargetPathCustom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.TargetPathCustom)
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        path_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom build() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom buildPartial() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom(this);
+        result.path_ = path_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) {
+          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom other) {
+        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance()) return this;
+        if (!other.getPath().isEmpty()) {
+          path_ = other.path_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object path_ = "";
+      /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
+       * <code>string path = 1;</code>
+       * @return The path.
+       */
+      public java.lang.String getPath() {
+        java.lang.Object ref = path_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          path_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
+       * <code>string path = 1;</code>
+       * @return The bytes for path.
+       */
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
+       * <code>string path = 1;</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
+       * <code>string path = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        
+        path_ = getDefaultInstance().getPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
+       * <code>string path = 1;</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.TargetPathCustom)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.TargetPathCustom)
+    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom();
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TargetPathCustom>
+        PARSER = new com.google.protobuf.AbstractParser<TargetPathCustom>() {
+      @java.lang.Override
+      public TargetPathCustom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TargetPathCustom(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TargetPathCustom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TargetPathCustom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FilesRecoveryOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.FilesRecoveryOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Keep original paths of files.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+     * @return Whether the original field is set.
+     */
+    boolean hasOriginal();
+    /**
+     * <pre>
+     * Keep original paths of files.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+     * @return The original.
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getOriginal();
+    /**
+     * <pre>
+     * Keep original paths of files.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder getOriginalOrBuilder();
+
+    /**
+     * <pre>
+     * Set custom folder for file recovery.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+     * @return Whether the custom field is set.
+     */
+    boolean hasCustom();
+    /**
+     * <pre>
+     * Set custom folder for file recovery.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+     * @return The custom.
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getCustom();
+    /**
+     * <pre>
+     * Set custom folder for file recovery.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder getCustomOrBuilder();
+
+    /**
+     * <pre>
+     * Overwrite options declares the behavior for files that already exists on the file system.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The enum numeric value on the wire for overwrite.
+     */
+    int getOverwriteValue();
+    /**
+     * <pre>
+     * Overwrite options declares the behavior for files that already exists on the file system.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The overwrite.
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite getOverwrite();
+
+    /**
+     * <pre>
+     * specifies whether the recovery plan is able to reboot host if needed.
+     * </pre>
+     *
+     * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
+     * @return The rebootIfNeeded.
+     */
+    boolean getRebootIfNeeded();
+
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.FilesRecoveryOptions}
+   */
+  public static final class FilesRecoveryOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.FilesRecoveryOptions)
+      FilesRecoveryOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FilesRecoveryOptions.newBuilder() to construct.
+    private FilesRecoveryOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FilesRecoveryOptions() {
+      overwrite_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FilesRecoveryOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FilesRecoveryOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              overwrite_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              rebootIfNeeded_ = input.readBool();
+              break;
+            }
+            case 802: {
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder subBuilder = null;
+              if (typeCase_ == 100) {
+                subBuilder = ((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 100;
+              break;
+            }
+            case 810: {
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder subBuilder = null;
+              if (typeCase_ == 101) {
+                subBuilder = ((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 101;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite}
+     */
+    public enum Overwrite
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Unspecified value treated as Overwrite all
+       * </pre>
+       *
+       * <code>OVERWRITE_UNSPECIFIED = 0;</code>
+       */
+      OVERWRITE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * All overwrites all existing files by recovered ones.
+       * </pre>
+       *
+       * <code>OVERWRITE_ALL = 1;</code>
+       */
+      OVERWRITE_ALL(1),
+      /**
+       * <pre>
+       * Older overwrites older files only.
+       * </pre>
+       *
+       * <code>OVERWRITE_OLDER = 2;</code>
+       */
+      OVERWRITE_OLDER(2),
+      /**
+       * <pre>
+       * None does not overwrites files at all.
+       * </pre>
+       *
+       * <code>OVERWRITE_NONE = 3;</code>
+       */
+      OVERWRITE_NONE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Unspecified value treated as Overwrite all
+       * </pre>
+       *
+       * <code>OVERWRITE_UNSPECIFIED = 0;</code>
+       */
+      public static final int OVERWRITE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * All overwrites all existing files by recovered ones.
+       * </pre>
+       *
+       * <code>OVERWRITE_ALL = 1;</code>
+       */
+      public static final int OVERWRITE_ALL_VALUE = 1;
+      /**
+       * <pre>
+       * Older overwrites older files only.
+       * </pre>
+       *
+       * <code>OVERWRITE_OLDER = 2;</code>
+       */
+      public static final int OVERWRITE_OLDER_VALUE = 2;
+      /**
+       * <pre>
+       * None does not overwrites files at all.
+       * </pre>
+       *
+       * <code>OVERWRITE_NONE = 3;</code>
+       */
+      public static final int OVERWRITE_NONE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Overwrite valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Overwrite forNumber(int value) {
+        switch (value) {
+          case 0: return OVERWRITE_UNSPECIFIED;
+          case 1: return OVERWRITE_ALL;
+          case 2: return OVERWRITE_OLDER;
+          case 3: return OVERWRITE_NONE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Overwrite>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Overwrite> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Overwrite>() {
+              public Overwrite findValueByNumber(int number) {
+                return Overwrite.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Overwrite[] VALUES = values();
+
+      public static Overwrite valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Overwrite(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite)
+    }
+
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ORIGINAL(100),
+      CUSTOM(101),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 100: return ORIGINAL;
+          case 101: return CUSTOM;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int ORIGINAL_FIELD_NUMBER = 100;
+    /**
+     * <pre>
+     * Keep original paths of files.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+     * @return Whether the original field is set.
+     */
+    @java.lang.Override
+    public boolean hasOriginal() {
+      return typeCase_ == 100;
+    }
+    /**
+     * <pre>
+     * Keep original paths of files.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+     * @return The original.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getOriginal() {
+      if (typeCase_ == 100) {
+         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
+      }
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Keep original paths of files.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder getOriginalOrBuilder() {
+      if (typeCase_ == 100) {
+         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
+      }
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
+    }
+
+    public static final int CUSTOM_FIELD_NUMBER = 101;
+    /**
+     * <pre>
+     * Set custom folder for file recovery.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+     * @return Whether the custom field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustom() {
+      return typeCase_ == 101;
+    }
+    /**
+     * <pre>
+     * Set custom folder for file recovery.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+     * @return The custom.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getCustom() {
+      if (typeCase_ == 101) {
+         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
+      }
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Set custom folder for file recovery.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder getCustomOrBuilder() {
+      if (typeCase_ == 101) {
+         return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
+      }
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
+    }
+
+    public static final int OVERWRITE_FIELD_NUMBER = 1;
+    private int overwrite_;
+    /**
+     * <pre>
+     * Overwrite options declares the behavior for files that already exists on the file system.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The enum numeric value on the wire for overwrite.
+     */
+    @java.lang.Override public int getOverwriteValue() {
+      return overwrite_;
+    }
+    /**
+     * <pre>
+     * Overwrite options declares the behavior for files that already exists on the file system.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+     * @return The overwrite.
+     */
+    @java.lang.Override public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite getOverwrite() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite result = yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.valueOf(overwrite_);
+      return result == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.UNRECOGNIZED : result;
+    }
+
+    public static final int REBOOT_IF_NEEDED_FIELD_NUMBER = 2;
+    private boolean rebootIfNeeded_;
+    /**
+     * <pre>
+     * specifies whether the recovery plan is able to reboot host if needed.
+     * </pre>
+     *
+     * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
+     * @return The rebootIfNeeded.
+     */
+    @java.lang.Override
+    public boolean getRebootIfNeeded() {
+      return rebootIfNeeded_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (overwrite_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.OVERWRITE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, overwrite_);
+      }
+      if (rebootIfNeeded_ != false) {
+        output.writeBool(2, rebootIfNeeded_);
+      }
+      if (typeCase_ == 100) {
+        output.writeMessage(100, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_);
+      }
+      if (typeCase_ == 101) {
+        output.writeMessage(101, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (overwrite_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.OVERWRITE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, overwrite_);
+      }
+      if (rebootIfNeeded_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, rebootIfNeeded_);
+      }
+      if (typeCase_ == 100) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_);
+      }
+      if (typeCase_ == 101) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions) obj;
+
+      if (overwrite_ != other.overwrite_) return false;
+      if (getRebootIfNeeded()
+          != other.getRebootIfNeeded()) return false;
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
+      switch (typeCase_) {
+        case 100:
+          if (!getOriginal()
+              .equals(other.getOriginal())) return false;
+          break;
+        case 101:
+          if (!getCustom()
+              .equals(other.getCustom())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OVERWRITE_FIELD_NUMBER;
+      hash = (53 * hash) + overwrite_;
+      hash = (37 * hash) + REBOOT_IF_NEEDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRebootIfNeeded());
+      switch (typeCase_) {
+        case 100:
+          hash = (37 * hash) + ORIGINAL_FIELD_NUMBER;
+          hash = (53 * hash) + getOriginal().hashCode();
+          break;
+        case 101:
+          hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+          hash = (53 * hash) + getCustom().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.FilesRecoveryOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.FilesRecoveryOptions)
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        overwrite_ = 0;
+
+        rebootIfNeeded_ = false;
+
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions build() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions buildPartial() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions(this);
+        if (typeCase_ == 100) {
+          if (originalBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = originalBuilder_.build();
+          }
+        }
+        if (typeCase_ == 101) {
+          if (customBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = customBuilder_.build();
+          }
+        }
+        result.overwrite_ = overwrite_;
+        result.rebootIfNeeded_ = rebootIfNeeded_;
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions) {
+          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions other) {
+        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance()) return this;
+        if (other.overwrite_ != 0) {
+          setOverwriteValue(other.getOverwriteValue());
+        }
+        if (other.getRebootIfNeeded() != false) {
+          setRebootIfNeeded(other.getRebootIfNeeded());
+        }
+        switch (other.getTypeCase()) {
+          case ORIGINAL: {
+            mergeOriginal(other.getOriginal());
+            break;
+          }
+          case CUSTOM: {
+            mergeCustom(other.getCustom());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder> originalBuilder_;
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       * @return Whether the original field is set.
+       */
+      @java.lang.Override
+      public boolean hasOriginal() {
+        return typeCase_ == 100;
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       * @return The original.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal getOriginal() {
+        if (originalBuilder_ == null) {
+          if (typeCase_ == 100) {
+            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
+        } else {
+          if (typeCase_ == 100) {
+            return originalBuilder_.getMessage();
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       */
+      public Builder setOriginal(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal value) {
+        if (originalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          originalBuilder_.setMessage(value);
+        }
+        typeCase_ = 100;
+        return this;
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       */
+      public Builder setOriginal(
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder builderForValue) {
+        if (originalBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          originalBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 100;
+        return this;
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       */
+      public Builder mergeOriginal(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal value) {
+        if (originalBuilder_ == null) {
+          if (typeCase_ == 100 &&
+              type_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance()) {
+            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.newBuilder((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 100) {
+            originalBuilder_.mergeFrom(value);
+          }
+          originalBuilder_.setMessage(value);
+        }
+        typeCase_ = 100;
+        return this;
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       */
+      public Builder clearOriginal() {
+        if (originalBuilder_ == null) {
+          if (typeCase_ == 100) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 100) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          originalBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       */
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder getOriginalBuilder() {
+        return getOriginalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder getOriginalOrBuilder() {
+        if ((typeCase_ == 100) && (originalBuilder_ != null)) {
+          return originalBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 100) {
+            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_;
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Keep original paths of files.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathOriginal original = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder> 
+          getOriginalFieldBuilder() {
+        if (originalBuilder_ == null) {
+          if (!(typeCase_ == 100)) {
+            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.getDefaultInstance();
+          }
+          originalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginalOrBuilder>(
+                  (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathOriginal) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 100;
+        onChanged();;
+        return originalBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder> customBuilder_;
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       * @return Whether the custom field is set.
+       */
+      @java.lang.Override
+      public boolean hasCustom() {
+        return typeCase_ == 101;
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       * @return The custom.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom getCustom() {
+        if (customBuilder_ == null) {
+          if (typeCase_ == 101) {
+            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
+        } else {
+          if (typeCase_ == 101) {
+            return customBuilder_.getMessage();
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       */
+      public Builder setCustom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom value) {
+        if (customBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          customBuilder_.setMessage(value);
+        }
+        typeCase_ = 101;
+        return this;
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       */
+      public Builder setCustom(
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder builderForValue) {
+        if (customBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          customBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 101;
+        return this;
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       */
+      public Builder mergeCustom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom value) {
+        if (customBuilder_ == null) {
+          if (typeCase_ == 101 &&
+              type_ != yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance()) {
+            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.newBuilder((yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 101) {
+            customBuilder_.mergeFrom(value);
+          }
+          customBuilder_.setMessage(value);
+        }
+        typeCase_ = 101;
+        return this;
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       */
+      public Builder clearCustom() {
+        if (customBuilder_ == null) {
+          if (typeCase_ == 101) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 101) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          customBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       */
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder getCustomBuilder() {
+        return getCustomFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder getCustomOrBuilder() {
+        if ((typeCase_ == 101) && (customBuilder_ != null)) {
+          return customBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 101) {
+            return (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_;
+          }
+          return yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Set custom folder for file recovery.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TargetPathCustom custom = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder> 
+          getCustomFieldBuilder() {
+        if (customBuilder_ == null) {
+          if (!(typeCase_ == 101)) {
+            type_ = yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.getDefaultInstance();
+          }
+          customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustomOrBuilder>(
+                  (yandex.cloud.api.backup.v1.BackupServiceOuterClass.TargetPathCustom) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 101;
+        onChanged();;
+        return customBuilder_;
+      }
+
+      private int overwrite_ = 0;
+      /**
+       * <pre>
+       * Overwrite options declares the behavior for files that already exists on the file system.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+       * @return The enum numeric value on the wire for overwrite.
+       */
+      @java.lang.Override public int getOverwriteValue() {
+        return overwrite_;
+      }
+      /**
+       * <pre>
+       * Overwrite options declares the behavior for files that already exists on the file system.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+       * @param value The enum numeric value on the wire for overwrite to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOverwriteValue(int value) {
+        
+        overwrite_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Overwrite options declares the behavior for files that already exists on the file system.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+       * @return The overwrite.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite getOverwrite() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite result = yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.valueOf(overwrite_);
+        return result == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Overwrite options declares the behavior for files that already exists on the file system.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+       * @param value The overwrite to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOverwrite(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Overwrite value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        overwrite_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Overwrite options declares the behavior for files that already exists on the file system.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions.Overwrite overwrite = 1 [(.yandex.cloud.required) = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOverwrite() {
+        
+        overwrite_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean rebootIfNeeded_ ;
+      /**
+       * <pre>
+       * specifies whether the recovery plan is able to reboot host if needed.
+       * </pre>
+       *
+       * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
+       * @return The rebootIfNeeded.
+       */
+      @java.lang.Override
+      public boolean getRebootIfNeeded() {
+        return rebootIfNeeded_;
+      }
+      /**
+       * <pre>
+       * specifies whether the recovery plan is able to reboot host if needed.
+       * </pre>
+       *
+       * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
+       * @param value The rebootIfNeeded to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRebootIfNeeded(boolean value) {
+        
+        rebootIfNeeded_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * specifies whether the recovery plan is able to reboot host if needed.
+       * </pre>
+       *
+       * <code>bool reboot_if_needed = 2 [(.yandex.cloud.required) = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRebootIfNeeded() {
+        
+        rebootIfNeeded_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.FilesRecoveryOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.FilesRecoveryOptions)
+    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions();
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FilesRecoveryOptions>
+        PARSER = new com.google.protobuf.AbstractParser<FilesRecoveryOptions>() {
+      @java.lang.Override
+      public FilesRecoveryOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FilesRecoveryOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FilesRecoveryOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FilesRecoveryOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartFilesRecoveryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The computeInstanceId.
+     */
+    java.lang.String getComputeInstanceId();
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for computeInstanceId.
+     */
+    com.google.protobuf.ByteString
+        getComputeInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+
+    /**
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the opts field is set.
+     */
+    boolean hasOpts();
+    /**
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The opts.
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getOpts();
+    /**
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder getOptsOrBuilder();
+
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the sourceIds.
+     */
+    java.util.List<java.lang.String>
+        getSourceIdsList();
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of sourceIds.
+     */
+    int getSourceIdsCount();
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The sourceIds at the given index.
+     */
+    java.lang.String getSourceIds(int index);
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourceIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSourceIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryRequest}
+   */
+  public static final class StartFilesRecoveryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
+      StartFilesRecoveryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartFilesRecoveryRequest.newBuilder() to construct.
+    private StartFilesRecoveryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartFilesRecoveryRequest() {
+      computeInstanceId_ = "";
+      backupId_ = "";
+      sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartFilesRecoveryRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartFilesRecoveryRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              computeInstanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder subBuilder = null;
+              if (opts_ != null) {
+                subBuilder = opts_.toBuilder();
+              }
+              opts_ = input.readMessage(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(opts_);
+                opts_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sourceIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sourceIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sourceIds_ = sourceIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.Builder.class);
+    }
+
+    public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object computeInstanceId_;
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The computeInstanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getComputeInstanceId() {
+      java.lang.Object ref = computeInstanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        computeInstanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for computeInstanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComputeInstanceIdBytes() {
+      java.lang.Object ref = computeInstanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        computeInstanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
+     */
+    @java.lang.Override
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPTS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions opts_;
+    /**
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the opts field is set.
+     */
+    @java.lang.Override
+    public boolean hasOpts() {
+      return opts_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The opts.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getOpts() {
+      return opts_ == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance() : opts_;
+    }
+    /**
+     * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder getOptsOrBuilder() {
+      return getOpts();
+    }
+
+    public static final int SOURCE_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList sourceIds_;
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the sourceIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSourceIdsList() {
+      return sourceIds_;
+    }
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of sourceIds.
+     */
+    public int getSourceIdsCount() {
+      return sourceIds_.size();
+    }
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The sourceIds at the given index.
+     */
+    public java.lang.String getSourceIds(int index) {
+      return sourceIds_.get(index);
+    }
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourceIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSourceIdsBytes(int index) {
+      return sourceIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, computeInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, backupId_);
+      }
+      if (opts_ != null) {
+        output.writeMessage(3, getOpts());
+      }
+      for (int i = 0; i < sourceIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, computeInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, backupId_);
+      }
+      if (opts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOpts());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sourceIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(sourceIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSourceIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest) obj;
+
+      if (!getComputeInstanceId()
+          .equals(other.getComputeInstanceId())) return false;
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (hasOpts() != other.hasOpts()) return false;
+      if (hasOpts()) {
+        if (!getOpts()
+            .equals(other.getOpts())) return false;
+      }
+      if (!getSourceIdsList()
+          .equals(other.getSourceIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getComputeInstanceId().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      if (hasOpts()) {
+        hash = (37 * hash) + OPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOpts().hashCode();
+      }
+      if (getSourceIdsCount() > 0) {
+        hash = (37 * hash) + SOURCE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSourceIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        computeInstanceId_ = "";
+
+        backupId_ = "";
+
+        if (optsBuilder_ == null) {
+          opts_ = null;
+        } else {
+          opts_ = null;
+          optsBuilder_ = null;
+        }
+        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest build() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest buildPartial() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.computeInstanceId_ = computeInstanceId_;
+        result.backupId_ = backupId_;
+        if (optsBuilder_ == null) {
+          result.opts_ = opts_;
+        } else {
+          result.opts_ = optsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sourceIds_ = sourceIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sourceIds_ = sourceIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest) {
+          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest other) {
+        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest.getDefaultInstance()) return this;
+        if (!other.getComputeInstanceId().isEmpty()) {
+          computeInstanceId_ = other.computeInstanceId_;
+          onChanged();
+        }
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        if (other.hasOpts()) {
+          mergeOpts(other.getOpts());
+        }
+        if (!other.sourceIds_.isEmpty()) {
+          if (sourceIds_.isEmpty()) {
+            sourceIds_ = other.sourceIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSourceIdsIsMutable();
+            sourceIds_.addAll(other.sourceIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object computeInstanceId_ = "";
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The computeInstanceId.
+       */
+      public java.lang.String getComputeInstanceId() {
+        java.lang.Object ref = computeInstanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          computeInstanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for computeInstanceId.
+       */
+      public com.google.protobuf.ByteString
+          getComputeInstanceIdBytes() {
+        java.lang.Object ref = computeInstanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          computeInstanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The computeInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComputeInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        computeInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComputeInstanceId() {
+        
+        computeInstanceId_ = getDefaultInstance().getComputeInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for computeInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComputeInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        computeInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The backupId.
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backupId.
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions opts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder> optsBuilder_;
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the opts field is set.
+       */
+      public boolean hasOpts() {
+        return optsBuilder_ != null || opts_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The opts.
+       */
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions getOpts() {
+        if (optsBuilder_ == null) {
+          return opts_ == null ? yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance() : opts_;
+        } else {
+          return optsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setOpts(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions value) {
+        if (optsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opts_ = value;
+          onChanged();
+        } else {
+          optsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setOpts(
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder builderForValue) {
+        if (optsBuilder_ == null) {
+          opts_ = builderForValue.build();
+          onChanged();
+        } else {
+          optsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeOpts(yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions value) {
+        if (optsBuilder_ == null) {
+          if (opts_ != null) {
+            opts_ =
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.newBuilder(opts_).mergeFrom(value).buildPartial();
+          } else {
+            opts_ = value;
+          }
+          onChanged();
+        } else {
+          optsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearOpts() {
+        if (optsBuilder_ == null) {
+          opts_ = null;
+          onChanged();
+        } else {
+          opts_ = null;
+          optsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder getOptsBuilder() {
+        
+        onChanged();
+        return getOptsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder getOptsOrBuilder() {
+        if (optsBuilder_ != null) {
+          return optsBuilder_.getMessageOrBuilder();
+        } else {
+          return opts_ == null ?
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.getDefaultInstance() : opts_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.backup.v1.FilesRecoveryOptions opts = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder> 
+          getOptsFieldBuilder() {
+        if (optsBuilder_ == null) {
+          optsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptions.Builder, yandex.cloud.api.backup.v1.BackupServiceOuterClass.FilesRecoveryOptionsOrBuilder>(
+                  getOpts(),
+                  getParentForChildren(),
+                  isClean());
+          opts_ = null;
+        }
+        return optsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSourceIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sourceIds_ = new com.google.protobuf.LazyStringArrayList(sourceIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the sourceIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSourceIdsList() {
+        return sourceIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of sourceIds.
+       */
+      public int getSourceIdsCount() {
+        return sourceIds_.size();
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The sourceIds at the given index.
+       */
+      public java.lang.String getSourceIds(int index) {
+        return sourceIds_.get(index);
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sourceIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSourceIdsBytes(int index) {
+        return sourceIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The sourceIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSourceIdsIsMutable();
+        sourceIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The sourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSourceIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSourceIdsIsMutable();
+        sourceIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The sourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSourceIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSourceIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sourceIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceIds() {
+        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the sourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSourceIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSourceIdsIsMutable();
+        sourceIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.StartFilesRecoveryRequest)
+    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest();
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartFilesRecoveryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StartFilesRecoveryRequest>() {
+      @java.lang.Override
+      public StartFilesRecoveryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartFilesRecoveryRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartFilesRecoveryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartFilesRecoveryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartFilesRecoveryMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>double progress_percentage = 1;</code>
+     * @return The progressPercentage.
+     */
+    double getProgressPercentage();
+
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The computeInstanceId.
+     */
+    java.lang.String getComputeInstanceId();
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for computeInstanceId.
+     */
+    com.google.protobuf.ByteString
+        getComputeInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the sourceIds.
+     */
+    java.util.List<java.lang.String>
+        getSourceIdsList();
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of sourceIds.
+     */
+    int getSourceIdsCount();
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The sourceIds at the given index.
+     */
+    java.lang.String getSourceIds(int index);
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourceIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSourceIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryMetadata}
+   */
+  public static final class StartFilesRecoveryMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
+      StartFilesRecoveryMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartFilesRecoveryMetadata.newBuilder() to construct.
+    private StartFilesRecoveryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartFilesRecoveryMetadata() {
+      computeInstanceId_ = "";
+      backupId_ = "";
+      sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartFilesRecoveryMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartFilesRecoveryMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+
+              progressPercentage_ = input.readDouble();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              computeInstanceId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sourceIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sourceIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sourceIds_ = sourceIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.Builder.class);
+    }
+
+    public static final int PROGRESS_PERCENTAGE_FIELD_NUMBER = 1;
+    private double progressPercentage_;
+    /**
+     * <code>double progress_percentage = 1;</code>
+     * @return The progressPercentage.
+     */
+    @java.lang.Override
+    public double getProgressPercentage() {
+      return progressPercentage_;
+    }
+
+    public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object computeInstanceId_;
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The computeInstanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getComputeInstanceId() {
+      java.lang.Object ref = computeInstanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        computeInstanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
+     * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for computeInstanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComputeInstanceIdBytes() {
+      java.lang.Object ref = computeInstanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        computeInstanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
+     */
+    @java.lang.Override
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
+     * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SOURCE_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList sourceIds_;
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the sourceIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSourceIdsList() {
+      return sourceIds_;
+    }
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of sourceIds.
+     */
+    public int getSourceIdsCount() {
+      return sourceIds_.size();
+    }
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The sourceIds at the given index.
+     */
+    public java.lang.String getSourceIds(int index) {
+      return sourceIds_.get(index);
+    }
+    /**
+     * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourceIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSourceIdsBytes(int index) {
+      return sourceIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Double.doubleToRawLongBits(progressPercentage_) != 0) {
+        output.writeDouble(1, progressPercentage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, computeInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, backupId_);
+      }
+      for (int i = 0; i < sourceIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Double.doubleToRawLongBits(progressPercentage_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, progressPercentage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, computeInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, backupId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sourceIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(sourceIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSourceIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata other = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata) obj;
+
+      if (java.lang.Double.doubleToLongBits(getProgressPercentage())
+          != java.lang.Double.doubleToLongBits(
+              other.getProgressPercentage())) return false;
+      if (!getComputeInstanceId()
+          .equals(other.getComputeInstanceId())) return false;
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!getSourceIdsList()
+          .equals(other.getSourceIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROGRESS_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getProgressPercentage()));
+      hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getComputeInstanceId().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      if (getSourceIdsCount() > 0) {
+        hash = (37 * hash) + SOURCE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSourceIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.StartFilesRecoveryMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.class, yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        progressPercentage_ = 0D;
+
+        computeInstanceId_ = "";
+
+        backupId_ = "";
+
+        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata build() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata buildPartial() {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata result = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.progressPercentage_ = progressPercentage_;
+        result.computeInstanceId_ = computeInstanceId_;
+        result.backupId_ = backupId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sourceIds_ = sourceIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sourceIds_ = sourceIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata) {
+          return mergeFrom((yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata other) {
+        if (other == yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata.getDefaultInstance()) return this;
+        if (other.getProgressPercentage() != 0D) {
+          setProgressPercentage(other.getProgressPercentage());
+        }
+        if (!other.getComputeInstanceId().isEmpty()) {
+          computeInstanceId_ = other.computeInstanceId_;
+          onChanged();
+        }
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        if (!other.sourceIds_.isEmpty()) {
+          if (sourceIds_.isEmpty()) {
+            sourceIds_ = other.sourceIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSourceIdsIsMutable();
+            sourceIds_.addAll(other.sourceIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private double progressPercentage_ ;
+      /**
+       * <code>double progress_percentage = 1;</code>
+       * @return The progressPercentage.
+       */
+      @java.lang.Override
+      public double getProgressPercentage() {
+        return progressPercentage_;
+      }
+      /**
+       * <code>double progress_percentage = 1;</code>
+       * @param value The progressPercentage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgressPercentage(double value) {
+        
+        progressPercentage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double progress_percentage = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProgressPercentage() {
+        
+        progressPercentage_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object computeInstanceId_ = "";
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The computeInstanceId.
+       */
+      public java.lang.String getComputeInstanceId() {
+        java.lang.Object ref = computeInstanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          computeInstanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for computeInstanceId.
+       */
+      public com.google.protobuf.ByteString
+          getComputeInstanceIdBytes() {
+        java.lang.Object ref = computeInstanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          computeInstanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The computeInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComputeInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        computeInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComputeInstanceId() {
+        
+        computeInstanceId_ = getDefaultInstance().getComputeInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
+       * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for computeInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComputeInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        computeInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The backupId.
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backupId.
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
+       * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSourceIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sourceIds_ = new com.google.protobuf.LazyStringArrayList(sourceIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the sourceIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSourceIdsList() {
+        return sourceIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of sourceIds.
+       */
+      public int getSourceIdsCount() {
+        return sourceIds_.size();
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The sourceIds at the given index.
+       */
+      public java.lang.String getSourceIds(int index) {
+        return sourceIds_.get(index);
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sourceIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSourceIdsBytes(int index) {
+        return sourceIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The sourceIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSourceIdsIsMutable();
+        sourceIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The sourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSourceIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSourceIdsIsMutable();
+        sourceIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The sourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSourceIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSourceIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sourceIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceIds() {
+        sourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string source_ids = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the sourceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSourceIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSourceIdsIsMutable();
+        sourceIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.StartFilesRecoveryMetadata)
+    private static final yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata();
+    }
+
+    public static yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartFilesRecoveryMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<StartFilesRecoveryMetadata>() {
+      @java.lang.Override
+      public StartFilesRecoveryMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartFilesRecoveryMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartFilesRecoveryMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartFilesRecoveryMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.BackupServiceOuterClass.StartFilesRecoveryMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_ListArchivesRequest_descriptor;
   private static final 
@@ -20846,6 +20846,26 @@ public final class BackupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_StartRecoveryMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_DeleteBackupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_DeleteBackupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20870,26 +20890,6 @@ public final class BackupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_backup_v1_DeleteBackupRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_backup_v1_DeleteBackupRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20903,9 +20903,9 @@ public final class BackupServiceOuterClass {
       "proto\022\026yandex.cloud.backup.v1\032\034google/ap" +
       "i/annotations.proto\032 yandex/cloud/api/op" +
       "eration.proto\032#yandex/cloud/backup/v1/ba" +
-      "ckup.proto\032&yandex/cloud/operation/opera" +
-      "tion.proto\032%yandex/cloud/backup/v1/resou" +
-      "rce.proto\032\035yandex/cloud/validation.proto" +
+      "ckup.proto\032%yandex/cloud/backup/v1/resou" +
+      "rce.proto\032&yandex/cloud/operation/operat" +
+      "ion.proto\032\035yandex/cloud/validation.proto" +
       "\"U\n\023ListArchivesRequest\022\023\n\tfolder_id\030\001 \001" +
       "(\tH\000\022\035\n\023compute_instance_id\030\002 \001(\tH\000B\n\n\002i" +
       "d\022\004\300\3011\001\"I\n\024ListArchivesResponse\0221\n\010archi" +
@@ -20938,47 +20938,47 @@ public final class BackupServiceOuterClass {
       "D\n\020GetBackupRequest\022\027\n\tbackup_id\030\001 \001(\tB\004" +
       "\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\"Z\n\024StartRe" +
       "coveryRequest\022)\n\023compute_instance_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071" +
+      "(\tB\014\212\3101\004<=50\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071" +
       "\001\"l\n\025StartRecoveryMetadata\022\033\n\023progress_p" +
       "ercentage\030\001 \001(\001\022\025\n\rsrc_backup_id\030\002 \001(\t\022\037" +
-      "\n\027dst_compute_instance_id\030\003 \001(\t\"\024\n\022Targe" +
-      "tPathOriginal\" \n\020TargetPathCustom\022\014\n\004pat" +
-      "h\030\001 \001(\t\"\373\002\n\024FilesRecoveryOptions\022O\n\tover" +
-      "write\030\001 \001(\01626.yandex.cloud.backup.v1.Fil" +
-      "esRecoveryOptions.OverwriteB\004\350\3071\000\022\036\n\020reb" +
-      "oot_if_needed\030\002 \001(\010B\004\350\3071\000\022>\n\010original\030d " +
-      "\001(\0132*.yandex.cloud.backup.v1.TargetPathO" +
-      "riginalH\000\022:\n\006custom\030e \001(\0132(.yandex.cloud" +
-      ".backup.v1.TargetPathCustomH\000\"b\n\tOverwri" +
-      "te\022\031\n\025OVERWRITE_UNSPECIFIED\020\000\022\021\n\rOVERWRI" +
-      "TE_ALL\020\001\022\023\n\017OVERWRITE_OLDER\020\002\022\022\n\016OVERWRI" +
-      "TE_NONE\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d\"\265\001\n\031StartF" +
-      "ilesRecoveryRequest\022!\n\023compute_instance_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022" +
-      "@\n\004opts\030\003 \001(\0132,.yandex.cloud.backup.v1.F" +
-      "ilesRecoveryOptionsB\004\350\3071\001\022\032\n\nsource_ids\030" +
-      "\004 \003(\tB\006\202\3101\002>0\"\221\001\n\032StartFilesRecoveryMeta" +
-      "data\022\033\n\023progress_percentage\030\001 \001(\001\022!\n\023com" +
-      "pute_instance_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tbackup_i" +
-      "d\030\003 \001(\tB\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202\3101\002>" +
-      "0\"Y\n\023DeleteBackupRequest\022)\n\023compute_inst" +
-      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id" +
-      "\030\002 \001(\tB\004\350\3071\001\"F\n\024DeleteBackupMetadata\022\033\n\023" +
-      "compute_instance_id\030\001 \001(\t\022\021\n\tbackup_id\030\002" +
-      " \001(\t\"\225\001\n\024DeleteArchiveRequest\022\030\n\narchive" +
-      "_id\030\001 \001(\tB\004\350\3071\000\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\000" +
-      "\212\3101\004<=50\022!\n\013instance_id\030\003 \001(\tB\014\350\3071\000\212\3101\004<" +
-      "=50\022\037\n\tpolicy_id\030\004 \001(\tB\014\350\3071\000\212\3101\004<=50\">\n\025" +
-      "DeleteArchiveMetadata\022\022\n\narchive_id\030\001 \001(" +
-      "\t\022\021\n\tfolder_id\030\002 \001(\t2\222\n\n\rBackupService\022{" +
-      "\n\004List\022*.yandex.cloud.backup.v1.ListBack" +
-      "upsRequest\032+.yandex.cloud.backup.v1.List" +
-      "BackupsResponse\"\032\202\323\344\223\002\024\022\022/backup/v1/back" +
-      "ups\022\244\001\n\014ListArchives\022+.yandex.cloud.back" +
-      "up.v1.ListArchivesRequest\032,.yandex.cloud" +
-      ".backup.v1.ListArchivesResponse\"9\202\323\344\223\0023\022" +
-      "1/backup/v1/backups/{compute_instance_id" +
-      "}/archives\022\216\001\n\tListFiles\022(.yandex.cloud." +
+      "\n\027dst_compute_instance_id\030\003 \001(\t\"Y\n\023Delet" +
+      "eBackupRequest\022)\n\023compute_instance_id\030\001 " +
+      "\001(\tB\014\212\3101\004<=50\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\307" +
+      "1\001\"F\n\024DeleteBackupMetadata\022\033\n\023compute_in" +
+      "stance_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\225\001\n\024D" +
+      "eleteArchiveRequest\022\030\n\narchive_id\030\001 \001(\tB" +
+      "\004\350\3071\000\022\037\n\tfolder_id\030\002 \001(\tB\014\212\3101\004<=50\350\3071\000\022!" +
+      "\n\013instance_id\030\003 \001(\tB\014\212\3101\004<=50\350\3071\000\022\037\n\tpol" +
+      "icy_id\030\004 \001(\tB\014\212\3101\004<=50\350\3071\000\">\n\025DeleteArch" +
+      "iveMetadata\022\022\n\narchive_id\030\001 \001(\t\022\021\n\tfolde" +
+      "r_id\030\002 \001(\t\"\024\n\022TargetPathOriginal\" \n\020Targ" +
+      "etPathCustom\022\014\n\004path\030\001 \001(\t\"\373\002\n\024FilesReco" +
+      "veryOptions\022>\n\010original\030d \001(\0132*.yandex.c" +
+      "loud.backup.v1.TargetPathOriginalH\000\022:\n\006c" +
+      "ustom\030e \001(\0132(.yandex.cloud.backup.v1.Tar" +
+      "getPathCustomH\000\022O\n\toverwrite\030\001 \001(\01626.yan" +
+      "dex.cloud.backup.v1.FilesRecoveryOptions" +
+      ".OverwriteB\004\350\3071\000\022\036\n\020reboot_if_needed\030\002 \001" +
+      "(\010B\004\350\3071\000\"b\n\tOverwrite\022\031\n\025OVERWRITE_UNSPE" +
+      "CIFIED\020\000\022\021\n\rOVERWRITE_ALL\020\001\022\023\n\017OVERWRITE" +
+      "_OLDER\020\002\022\022\n\016OVERWRITE_NONE\020\003B\014\n\004type\022\004\300\301" +
+      "1\001J\004\010\003\020d\"\265\001\n\031StartFilesRecoveryRequest\022!" +
+      "\n\023compute_instance_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbac" +
+      "kup_id\030\002 \001(\tB\004\350\3071\001\022@\n\004opts\030\003 \001(\0132,.yande" +
+      "x.cloud.backup.v1.FilesRecoveryOptionsB\004" +
+      "\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202\3101\002>0\"\221\001\n\032Sta" +
+      "rtFilesRecoveryMetadata\022\033\n\023progress_perc" +
+      "entage\030\001 \001(\001\022!\n\023compute_instance_id\030\002 \001(" +
+      "\tB\004\350\3071\001\022\027\n\tbackup_id\030\003 \001(\tB\004\350\3071\001\022\032\n\nsour" +
+      "ce_ids\030\004 \003(\tB\006\202\3101\002>02\222\n\n\rBackupService\022\244" +
+      "\001\n\014ListArchives\022+.yandex.cloud.backup.v1" +
+      ".ListArchivesRequest\032,.yandex.cloud.back" +
+      "up.v1.ListArchivesResponse\"9\202\323\344\223\0023\0221/bac" +
+      "kup/v1/backups/{compute_instance_id}/arc" +
+      "hives\022{\n\004List\022*.yandex.cloud.backup.v1.L" +
+      "istBackupsRequest\032+.yandex.cloud.backup." +
+      "v1.ListBackupsResponse\"\032\202\323\344\223\002\024\022\022/backup/" +
+      "v1/backups\022\216\001\n\tListFiles\022(.yandex.cloud." +
       "backup.v1.ListFilesRequest\032).yandex.clou" +
       "d.backup.v1.ListFilesResponse\",\202\323\344\223\002&\022$/" +
       "backup/v1/backups/{backup_id}/files\022w\n\003G" +
@@ -20987,19 +20987,19 @@ public final class BackupServiceOuterClass {
       "\344\223\002 \022\036/backup/v1/backups/{backup_id}\022\313\001\n" +
       "\rStartRecovery\022,.yandex.cloud.backup.v1." +
       "StartRecoveryRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"i\202\323\344\223\0021\",/backup/v1/back" +
-      "ups/{backup_id}:startRecovery:\001*\262\322*.\n\025St" +
-      "artRecoveryMetadata\022\025google.protobuf.Emp" +
-      "ty\022\243\001\n\022StartFilesRecovery\0221.yandex.cloud" +
+      "ation.Operation\"i\262\322*.\n\025StartRecoveryMeta" +
+      "data\022\025google.protobuf.Empty\202\323\344\223\0021\",/back" +
+      "up/v1/backups/{backup_id}:startRecovery:" +
+      "\001*\022\243\001\n\022StartFilesRecovery\0221.yandex.cloud" +
       ".backup.v1.StartFilesRecoveryRequest\032!.y" +
       "andex.cloud.operation.Operation\"7\262\322*3\n\032S" +
       "tartFilesRecoveryMetadata\022\025google.protob" +
       "uf.Empty\022\307\001\n\006Delete\022+.yandex.cloud.backu" +
       "p.v1.DeleteBackupRequest\032!.yandex.cloud." +
-      "operation.Operation\"m\202\323\344\223\0026*4/backup/v1/" +
-      "backups/{compute_instance_id}/{backup_id" +
-      "}\262\322*-\n\024DeleteBackupMetadata\022\025google.prot" +
-      "obuf.Empty\022\224\001\n\rDeleteArchive\022,.yandex.cl" +
+      "operation.Operation\"m\262\322*-\n\024DeleteBackupM" +
+      "etadata\022\025google.protobuf.Empty\202\323\344\223\0026*4/b" +
+      "ackup/v1/backups/{compute_instance_id}/{" +
+      "backup_id}\022\224\001\n\rDeleteArchive\022,.yandex.cl" +
       "oud.backup.v1.DeleteArchiveRequest\032!.yan" +
       "dex.cloud.operation.Operation\"2\262\322*.\n\025Del" +
       "eteArchiveMetadata\022\025google.protobuf.Empt" +
@@ -21013,8 +21013,8 @@ public final class BackupServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.backup.v1.BackupOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.backup.v1.ResourceOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_backup_v1_ListArchivesRequest_descriptor =
@@ -21089,60 +21089,60 @@ public final class BackupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_StartRecoveryMetadata_descriptor,
         new java.lang.String[] { "ProgressPercentage", "SrcBackupId", "DstComputeInstanceId", });
-    internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_yandex_cloud_backup_v1_TargetPathOriginal_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor,
-        new java.lang.String[] { });
-    internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_yandex_cloud_backup_v1_TargetPathCustom_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor,
-        new java.lang.String[] { "Path", });
-    internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor,
-        new java.lang.String[] { "Overwrite", "RebootIfNeeded", "Original", "Custom", "Type", });
-    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "BackupId", "Opts", "SourceIds", });
-    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor,
-        new java.lang.String[] { "ProgressPercentage", "ComputeInstanceId", "BackupId", "SourceIds", });
     internal_static_yandex_cloud_backup_v1_DeleteBackupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_backup_v1_DeleteBackupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_DeleteBackupRequest_descriptor,
         new java.lang.String[] { "ComputeInstanceId", "BackupId", });
     internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_DeleteBackupMetadata_descriptor,
         new java.lang.String[] { "ComputeInstanceId", "BackupId", });
     internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_DeleteArchiveRequest_descriptor,
         new java.lang.String[] { "ArchiveId", "FolderId", "InstanceId", "PolicyId", });
     internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_DeleteArchiveMetadata_descriptor,
         new java.lang.String[] { "ArchiveId", "FolderId", });
+    internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_backup_v1_TargetPathOriginal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_TargetPathOriginal_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_backup_v1_TargetPathCustom_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_TargetPathCustom_descriptor,
+        new java.lang.String[] { "Path", });
+    internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_FilesRecoveryOptions_descriptor,
+        new java.lang.String[] { "Original", "Custom", "Overwrite", "RebootIfNeeded", "Type", });
+    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_StartFilesRecoveryRequest_descriptor,
+        new java.lang.String[] { "ComputeInstanceId", "BackupId", "Opts", "SourceIds", });
+    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_StartFilesRecoveryMetadata_descriptor,
+        new java.lang.String[] { "ProgressPercentage", "ComputeInstanceId", "BackupId", "SourceIds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -21157,8 +21157,8 @@ public final class BackupServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.backup.v1.BackupOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.backup.v1.ResourceOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

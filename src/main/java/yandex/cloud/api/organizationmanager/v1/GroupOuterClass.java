@@ -164,6 +164,60 @@ public final class GroupOuterClass {
      */
     com.google.protobuf.ByteString
         getExternalIdBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -211,6 +265,7 @@ public final class GroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -270,6 +325,19 @@ public final class GroupOuterClass {
               externalId_ = s;
               break;
             }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -294,6 +362,18 @@ public final class GroupOuterClass {
       return yandex.cloud.api.organizationmanager.v1.GroupOuterClass.internal_static_yandex_cloud_organizationmanager_v1_Group_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 8:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -616,6 +696,103 @@ public final class GroupOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 8;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.GroupOuterClass.internal_static_yandex_cloud_organizationmanager_v1_Group_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -651,6 +828,12 @@ public final class GroupOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, externalId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          8);
       unknownFields.writeTo(output);
     }
 
@@ -681,6 +864,16 @@ public final class GroupOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, externalId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -714,6 +907,8 @@ public final class GroupOuterClass {
           .equals(other.getSubjectContainerId())) return false;
       if (!getExternalId()
           .equals(other.getExternalId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -741,6 +936,10 @@ public final class GroupOuterClass {
       hash = (53 * hash) + getSubjectContainerId().hashCode();
       hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getExternalId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -853,6 +1052,28 @@ public final class GroupOuterClass {
         return yandex.cloud.api.organizationmanager.v1.GroupOuterClass.internal_static_yandex_cloud_organizationmanager_v1_Group_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 8:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 8:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -897,6 +1118,7 @@ public final class GroupOuterClass {
 
         externalId_ = "";
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -923,6 +1145,7 @@ public final class GroupOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group buildPartial() {
         yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group result = new yandex.cloud.api.organizationmanager.v1.GroupOuterClass.Group(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.organizationId_ = organizationId_;
         if (createdAtBuilder_ == null) {
@@ -934,6 +1157,8 @@ public final class GroupOuterClass {
         result.description_ = description_;
         result.subjectContainerId_ = subjectContainerId_;
         result.externalId_ = externalId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -1009,6 +1234,8 @@ public final class GroupOuterClass {
           externalId_ = other.externalId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1037,6 +1264,7 @@ public final class GroupOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1768,6 +1996,165 @@ public final class GroupOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1826,6 +2213,11 @@ public final class GroupOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_Group_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_Group_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_Group_LabelsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1838,15 +2230,18 @@ public final class GroupOuterClass {
       "\n/yandex/cloud/organizationmanager/v1/gr" +
       "oup.proto\022#yandex.cloud.organizationmana" +
       "ger.v1\032\037google/protobuf/timestamp.proto\"" +
-      "\262\001\n\005Group\022\n\n\002id\030\001 \001(\t\022\027\n\017organization_id" +
+      "\251\002\n\005Group\022\n\n\002id\030\001 \001(\t\022\027\n\017organization_id" +
       "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
       "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
       "ion\030\005 \001(\t\022\034\n\024subject_container_id\030\006 \001(\t\022" +
-      "\023\n\013external_id\030\007 \001(\tB\206\001\n\'yandex.cloud.ap" +
-      "i.organizationmanager.v1Z[github.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/organ" +
-      "izationmanager/v1;organizationmanagerb\006p" +
-      "roto3"
+      "\023\n\013external_id\030\007 \001(\t\022F\n\006labels\030\010 \003(\01326.y" +
+      "andex.cloud.organizationmanager.v1.Group" +
+      ".LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001B\206\001\n\'yandex.cloud.api" +
+      ".organizationmanager.v1Z[github.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/organi" +
+      "zationmanager/v1;organizationmanagerb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1858,7 +2253,13 @@ public final class GroupOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_Group_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_Group_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "CreatedAt", "Name", "Description", "SubjectContainerId", "ExternalId", });
+        new java.lang.String[] { "Id", "OrganizationId", "CreatedAt", "Name", "Description", "SubjectContainerId", "ExternalId", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_Group_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_Group_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_Group_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_Group_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

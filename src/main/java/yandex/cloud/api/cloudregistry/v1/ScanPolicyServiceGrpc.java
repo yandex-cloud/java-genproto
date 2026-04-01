@@ -19,28 +19,28 @@ public final class ScanPolicyServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest,
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> getGetMethod;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
       requestType = yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest.class,
-      responseType = yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.class,
+      responseType = yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest,
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> getGetMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> getGetMethod;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> getGetMethod;
     if ((getGetMethod = ScanPolicyServiceGrpc.getGetMethod) == null) {
       synchronized (ScanPolicyServiceGrpc.class) {
         if ((getGetMethod = ScanPolicyServiceGrpc.getGetMethod) == null) {
           ScanPolicyServiceGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.getDefaultInstance()))
+                  yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.getDefaultInstance()))
               .setSchemaDescriptor(new ScanPolicyServiceMethodDescriptorSupplier("Get"))
               .build();
         }
@@ -50,28 +50,28 @@ public final class ScanPolicyServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest,
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> getGetByRegistryMethod;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> getGetByRegistryMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetByRegistry",
       requestType = yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest.class,
-      responseType = yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.class,
+      responseType = yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest,
-      yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> getGetByRegistryMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> getGetByRegistryMethod;
+      yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> getGetByRegistryMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> getGetByRegistryMethod;
     if ((getGetByRegistryMethod = ScanPolicyServiceGrpc.getGetByRegistryMethod) == null) {
       synchronized (ScanPolicyServiceGrpc.class) {
         if ((getGetByRegistryMethod = ScanPolicyServiceGrpc.getGetByRegistryMethod) == null) {
           ScanPolicyServiceGrpc.getGetByRegistryMethod = getGetByRegistryMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest, yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest, yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetByRegistry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy.getDefaultInstance()))
+                  yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy.getDefaultInstance()))
               .setSchemaDescriptor(new ScanPolicyServiceMethodDescriptorSupplier("GetByRegistry"))
               .build();
         }
@@ -230,7 +230,7 @@ public final class ScanPolicyServiceGrpc {
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -240,7 +240,7 @@ public final class ScanPolicyServiceGrpc {
      * </pre>
      */
     public void getByRegistry(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetByRegistryMethod(), responseObserver);
     }
 
@@ -281,14 +281,14 @@ public final class ScanPolicyServiceGrpc {
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest,
-                yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy>(
+                yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy>(
                   this, METHODID_GET)))
           .addMethod(
             getGetByRegistryMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest,
-                yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy>(
+                yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy>(
                   this, METHODID_GET_BY_REGISTRY)))
           .addMethod(
             getCreateMethod(),
@@ -338,7 +338,7 @@ public final class ScanPolicyServiceGrpc {
      * </pre>
      */
     public void get(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -349,7 +349,7 @@ public final class ScanPolicyServiceGrpc {
      * </pre>
      */
     public void getByRegistry(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetByRegistryMethod(), getCallOptions()), request, responseObserver);
     }
@@ -410,7 +410,7 @@ public final class ScanPolicyServiceGrpc {
      * Returns the specified scan policy.
      * </pre>
      */
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy get(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest request) {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy get(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -420,7 +420,7 @@ public final class ScanPolicyServiceGrpc {
      * Returns scan policy for the registry if any exists.
      * </pre>
      */
-    public yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy getByRegistry(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest request) {
+    public yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy getByRegistry(yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetByRegistryMethod(), getCallOptions(), request);
     }
@@ -478,7 +478,7 @@ public final class ScanPolicyServiceGrpc {
      * Returns the specified scan policy.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> get(
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> get(
         yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
@@ -489,7 +489,7 @@ public final class ScanPolicyServiceGrpc {
      * Returns scan policy for the registry if any exists.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy> getByRegistry(
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy> getByRegistry(
         yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetByRegistryMethod(), getCallOptions()), request);
@@ -554,11 +554,11 @@ public final class ScanPolicyServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy>) responseObserver);
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy>) responseObserver);
           break;
         case METHODID_GET_BY_REGISTRY:
           serviceImpl.getByRegistry((yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.GetScanPolicyByRegistryRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.ScanPolicyOuterClass.ScanPolicy>) responseObserver);
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cloudregistry.v1.PSP.ScanPolicy>) responseObserver);
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.cloudregistry.v1.ScanPolicyServiceOuterClass.CreateScanPolicyRequest) request,
